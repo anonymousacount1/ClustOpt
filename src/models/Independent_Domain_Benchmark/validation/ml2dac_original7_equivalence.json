@@ -1,0 +1,257 @@
+{
+  "gate": "ml2dac_original7_upstream_equivalence",
+  "stage": "4B-3B3",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "reference_A": "vendored CVIHandler CVI.score_cvi -- an optimizer LOSS for every CVI (MAXIMIZE objectives are negated upstream); smaller is better",
+  "reference_B": "corrected Stage-4: canonical raw value + explicit direction from the frozen registry, oriented once; larger is better",
+  "equality_of_representation_required": false,
+  "ordering_equivalence_required": true,
+  "metrics": 7,
+  "fixtures": 6,
+  "tolerance": 1e-09,
+  "ordering_mismatches": 0,
+  "winner_mismatches": 0,
+  "rows": [
+    {
+      "metric": "calinski_harabasz",
+      "direction": "MAXIMIZE",
+      "upstream_abbrev": "CH",
+      "fixtures": [
+        "clean_3",
+        "scrambled_10",
+        "scrambled_30",
+        "scrambled_60",
+        "merged_2",
+        "split_4"
+      ],
+      "upstream_loss": [
+        -6136.368652343164,
+        -385.53056632242885,
+        -97.28918291169492,
+        -19.53566694746395,
+        -147.78648516117735,
+        -4071.063357323715
+      ],
+      "stage4_oriented": [
+        6136.368652343164,
+        385.53056632242885,
+        97.28918291169492,
+        19.53566694746395,
+        147.78648516117735,
+        4071.063357323715
+      ],
+      "pairs_compared": 15,
+      "ordering_mismatches": 0,
+      "winner_mismatch": 0,
+      "upstream_winner": "clean_3",
+      "stage4_winner": "clean_3"
+    },
+    {
+      "metric": "coggins_jain_index",
+      "direction": "MAXIMIZE",
+      "upstream_abbrev": "CJI",
+      "fixtures": [
+        "clean_3",
+        "scrambled_10",
+        "scrambled_30",
+        "scrambled_60",
+        "merged_2",
+        "split_4"
+      ],
+      "upstream_loss": [
+        -14.577949093745184,
+        -4.670636224304881,
+        -2.10058157231774,
+        -0.8435402266078746,
+        -1.591726725994465,
+        -0.11746012893548481
+      ],
+      "stage4_oriented": [
+        14.577949093745184,
+        4.670636224304881,
+        2.10058157231774,
+        0.8435402266078746,
+        1.591726725994465,
+        0.11746012893548481
+      ],
+      "pairs_compared": 15,
+      "ordering_mismatches": 0,
+      "winner_mismatch": 0,
+      "upstream_winner": "clean_3",
+      "stage4_winner": "clean_3"
+    },
+    {
+      "metric": "cop",
+      "direction": "MINIMIZE",
+      "upstream_abbrev": "COP",
+      "fixtures": [
+        "clean_3",
+        "scrambled_10",
+        "scrambled_30",
+        "scrambled_60",
+        "merged_2",
+        "split_4"
+      ],
+      "upstream_loss": [
+        0.08644322136993107,
+        24.998462557084487,
+        92.27209181481426,
+        196.35253398771783,
+        0.5399339779746941,
+        7.91631591553556
+      ],
+      "stage4_oriented": [
+        -0.08644322136993107,
+        -24.998462557084487,
+        -92.27209181481426,
+        -196.35253398771783,
+        -0.5399339779746941,
+        -7.91631591553556
+      ],
+      "pairs_compared": 15,
+      "ordering_mismatches": 0,
+      "winner_mismatch": 0,
+      "upstream_winner": "clean_3",
+      "stage4_winner": "clean_3"
+    },
+    {
+      "metric": "davies_bouldin",
+      "direction": "MINIMIZE",
+      "upstream_abbrev": "DBI",
+      "fixtures": [
+        "clean_3",
+        "scrambled_10",
+        "scrambled_30",
+        "scrambled_60",
+        "merged_2",
+        "split_4"
+      ],
+      "upstream_loss": [
+        0.1265609216404781,
+        0.34668362522604207,
+        0.8651311491821218,
+        2.30861287652044,
+        0.696169800151172,
+        8.407664935855715
+      ],
+      "stage4_oriented": [
+        -0.1265609216404781,
+        -0.34668362522604207,
+        -0.8651311491821218,
+        -2.30861287652044,
+        -0.696169800151172,
+        -8.407664935855715
+      ],
+      "pairs_compared": 15,
+      "ordering_mismatches": 0,
+      "winner_mismatch": 0,
+      "upstream_winner": "clean_3",
+      "stage4_winner": "clean_3"
+    },
+    {
+      "metric": "dbcv",
+      "direction": "MAXIMIZE",
+      "upstream_abbrev": "DBCV",
+      "fixtures": [
+        "clean_3",
+        "scrambled_10",
+        "scrambled_30",
+        "scrambled_60",
+        "merged_2",
+        "split_4"
+      ],
+      "upstream_loss": [
+        -0.9163307052762211,
+        0.340473812694253,
+        0.8898127335269204,
+        0.950156890776399,
+        -0.3406939974614363,
+        -0.4182268984882291
+      ],
+      "stage4_oriented": [
+        0.9163307052762211,
+        -0.340473812694253,
+        -0.8898127335269204,
+        -0.950156890776399,
+        0.3406939974614363,
+        0.4182268984882291
+      ],
+      "pairs_compared": 15,
+      "ordering_mismatches": 0,
+      "winner_mismatch": 0,
+      "upstream_winner": "clean_3",
+      "stage4_winner": "clean_3"
+    },
+    {
+      "metric": "dunn_index",
+      "direction": "MAXIMIZE",
+      "upstream_abbrev": "DI",
+      "fixtures": [
+        "clean_3",
+        "scrambled_10",
+        "scrambled_30",
+        "scrambled_60",
+        "merged_2",
+        "split_4"
+      ],
+      "upstream_loss": [
+        -2.2773741648813988,
+        -0.004160575809766049,
+        -0.0021507552467340068,
+        -0.0018428908473744226,
+        -0.5237653385508686,
+        -0.008013038846974572
+      ],
+      "stage4_oriented": [
+        2.2773741648813988,
+        0.004160575809766049,
+        0.0021507552467340068,
+        0.0018428908473744226,
+        0.5237653385508686,
+        0.008013038846974572
+      ],
+      "pairs_compared": 15,
+      "ordering_mismatches": 0,
+      "winner_mismatch": 0,
+      "upstream_winner": "clean_3",
+      "stage4_winner": "clean_3"
+    },
+    {
+      "metric": "silhouette",
+      "direction": "MAXIMIZE",
+      "upstream_abbrev": "SIL",
+      "fixtures": [
+        "clean_3",
+        "scrambled_10",
+        "scrambled_30",
+        "scrambled_60",
+        "merged_2",
+        "split_4"
+      ],
+      "upstream_loss": [
+        -0.9083280684149406,
+        -0.7371529746236599,
+        -0.4529461383542304,
+        -0.10587169640699877,
+        -0.583020717385171,
+        -0.5968294368093127
+      ],
+      "stage4_oriented": [
+        0.9083280684149406,
+        0.7371529746236599,
+        0.4529461383542304,
+        0.10587169640699877,
+        0.583020717385171,
+        0.5968294368093127
+      ],
+      "pairs_compared": 15,
+      "ordering_mismatches": 0,
+      "winner_mismatch": 0,
+      "upstream_winner": "clean_3",
+      "stage4_winner": "clean_3"
+    }
+  ],
+  "external_50_used": false,
+  "labels_used": false,
+  "verdict": "PASS"
+}

@@ -1,0 +1,20 @@
+{
+  "definition": "dataset-level BestView means; O=original, E=established additions (10), N=new46 (46 requested / 44 evaluable)",
+  "arm_means": {
+    "A0": 0.5810259338513559,
+    "A1": 0.6046506413643825,
+    "A2": 0.6062564939031047,
+    "A3": 0.6144995191007991
+  },
+  "Established_on_Original": 0.023624707513026588,
+  "New46_on_Original": 0.02523056005174873,
+  "New46_given_Established": 0.009848877736416628,
+  "Established_given_New46": 0.008243025197694487,
+  "Interaction": -0.015381682315332101,
+  "MainEffect_Established": 0.015933866355360538,
+  "MainEffect_New46": 0.01753971889408268,
+  "TotalShift_A3_minus_A0": 0.033473585249443216,
+  "identity_check_total_equals_sum_of_main_effects": 0.0,
+  "uncertainty_reported_in": "factorial_uncertainty.csv",
+  "causal_scope": "controlled metric-inventory ablation inside one frozen baseline's InDomain matched-search-space protocol; the result is specific to how THAT baseline consumes CVIs"
+}

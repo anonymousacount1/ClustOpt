@@ -1,0 +1,562 @@
+{
+  "check": "autoclust_historical_selection_replay",
+  "level": "LEVEL B - historical selection replay from persisted predicted_ari",
+  "method": "persisted config_history predicted_ari + valid_result fed into the NEW frozen select_final; compared with the persisted incumbent configuration",
+  "no_clustering_regenerated": true,
+  "no_cvi_recomputed": true,
+  "no_predicted_ari_recomputed": true,
+  "true_ari_inspected": false,
+  "selected_index_provenance": "INFERRED FROM ORDERED PERSISTED TRACE (the historical artifact stores the incumbent by configuration, not by index)",
+  "keys": 324,
+  "arm_level_cases": 1296,
+  "usable_cases": 1296,
+  "malformed": 0,
+  "exact_selected_config_matches": 1296,
+  "mismatches": 0,
+  "natural_exact_ties": 1296,
+  "non_finite_score_cases": 0,
+  "all_invalid_cases": 0,
+  "rows": [
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "x_only",
+      "arm": "A0",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "x_only",
+      "arm": "A1",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "x_only",
+      "arm": "A2",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "x_only",
+      "arm": "A3",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "xy_2d",
+      "arm": "A0",
+      "inferred_index": 3,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "xy_2d",
+      "arm": "A1",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "xy_2d",
+      "arm": "A2",
+      "inferred_index": 3,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "xy_2d",
+      "arm": "A3",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "y_only",
+      "arm": "A0",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "y_only",
+      "arm": "A1",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "y_only",
+      "arm": "A2",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000008_9cbad322",
+      "v": "y_only",
+      "arm": "A3",
+      "inferred_index": 11,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "x_only",
+      "arm": "A0",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "x_only",
+      "arm": "A1",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "x_only",
+      "arm": "A2",
+      "inferred_index": 28,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "x_only",
+      "arm": "A3",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "xy_2d",
+      "arm": "A0",
+      "inferred_index": 4,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "xy_2d",
+      "arm": "A1",
+      "inferred_index": 3,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "xy_2d",
+      "arm": "A2",
+      "inferred_index": 16,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "xy_2d",
+      "arm": "A3",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "y_only",
+      "arm": "A0",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "y_only",
+      "arm": "A1",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "y_only",
+      "arm": "A2",
+      "inferred_index": 16,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000208_04419bc6",
+      "v": "y_only",
+      "arm": "A3",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "x_only",
+      "arm": "A0",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "x_only",
+      "arm": "A1",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "x_only",
+      "arm": "A2",
+      "inferred_index": 5,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "x_only",
+      "arm": "A3",
+      "inferred_index": 6,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "xy_2d",
+      "arm": "A0",
+      "inferred_index": 4,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "xy_2d",
+      "arm": "A1",
+      "inferred_index": 4,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "xy_2d",
+      "arm": "A2",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "xy_2d",
+      "arm": "A3",
+      "inferred_index": 21,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "y_only",
+      "arm": "A0",
+      "inferred_index": 6,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "y_only",
+      "arm": "A1",
+      "inferred_index": 7,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "y_only",
+      "arm": "A2",
+      "inferred_index": 7,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000404_f0d2873b",
+      "v": "y_only",
+      "arm": "A3",
+      "inferred_index": 3,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "x_only",
+      "arm": "A0",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "x_only",
+      "arm": "A1",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "x_only",
+      "arm": "A2",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "x_only",
+      "arm": "A3",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "xy_2d",
+      "arm": "A0",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "xy_2d",
+      "arm": "A1",
+      "inferred_index": 4,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "xy_2d",
+      "arm": "A2",
+      "inferred_index": 1,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "xy_2d",
+      "arm": "A3",
+      "inferred_index": 25,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "y_only",
+      "arm": "A0",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "y_only",
+      "arm": "A1",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "y_only",
+      "arm": "A2",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_000808_1feb31de",
+      "v": "y_only",
+      "arm": "A3",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "x_only",
+      "arm": "A0",
+      "inferred_index": 10,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "x_only",
+      "arm": "A1",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "x_only",
+      "arm": "A2",
+      "inferred_index": 15,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "x_only",
+      "arm": "A3",
+      "inferred_index": 5,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "xy_2d",
+      "arm": "A0",
+      "inferred_index": 0,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "xy_2d",
+      "arm": "A1",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "xy_2d",
+      "arm": "A2",
+      "inferred_index": 8,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "xy_2d",
+      "arm": "A3",
+      "inferred_index": 12,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "y_only",
+      "arm": "A0",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "y_only",
+      "arm": "A1",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "y_only",
+      "arm": "A2",
+      "inferred_index": 2,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    },
+    {
+      "k": "c2e_001222_e9e1078b",
+      "v": "y_only",
+      "arm": "A3",
+      "inferred_index": 7,
+      "algo_match": true,
+      "config_match": true,
+      "status": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

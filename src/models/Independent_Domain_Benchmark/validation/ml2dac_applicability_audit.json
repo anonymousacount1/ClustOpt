@@ -1,0 +1,148 @@
+{
+  "audit": "ml2dac_applicability",
+  "stage": "4B-3B3 addendum",
+  "training_target_audit": {
+    "source": "derived/ml2dac_split1/<variant>/cvi_star.parquet, splits 2-16, frozen labels; CVI* NOT recomputed",
+    "per_arm": {
+      "M0": {
+        "records": 48039,
+        "per_view": {
+          "x_only": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          },
+          "xy_2d": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          },
+          "y_only": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          }
+        },
+        "targets_outside_classifier_classes": 0
+      },
+      "M1": {
+        "records": 48039,
+        "per_view": {
+          "x_only": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          },
+          "xy_2d": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          },
+          "y_only": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          }
+        },
+        "targets_outside_classifier_classes": 0
+      },
+      "M2": {
+        "records": 48039,
+        "per_view": {
+          "x_only": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          },
+          "xy_2d": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          },
+          "y_only": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          }
+        },
+        "targets_outside_classifier_classes": 0
+      },
+      "M3": {
+        "records": 48039,
+        "per_view": {
+          "x_only": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          },
+          "xy_2d": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          },
+          "y_only": {
+            "n": 16013,
+            "applicable": 16013,
+            "structurally_inapplicable": 0,
+            "not_in_registry": 0
+          }
+        },
+        "targets_outside_classifier_classes": 0
+      }
+    },
+    "total_structurally_inapplicable_targets": 0,
+    "verdict": "PASS"
+  },
+  "historical_split1_projection": {
+    "source": "persisted raw_result.selected_cvi_metric_id only",
+    "per_arm": {
+      "M0": {
+        "overall": "0/324",
+        "per_view": {
+          "x_only": "0/108",
+          "y_only": "0/108",
+          "xy_2d": "0/108"
+        }
+      },
+      "M1": {
+        "overall": "0/324",
+        "per_view": {
+          "x_only": "0/108",
+          "y_only": "0/108",
+          "xy_2d": "0/108"
+        }
+      },
+      "M2": {
+        "overall": "0/324",
+        "per_view": {
+          "x_only": "0/108",
+          "y_only": "0/108",
+          "xy_2d": "0/108"
+        }
+      },
+      "M3": {
+        "overall": "0/324",
+        "per_view": {
+          "x_only": "0/108",
+          "y_only": "0/108",
+          "xy_2d": "0/108"
+        }
+      }
+    },
+    "note": "supersedes the earlier projection (M1 43/324, M2 115/324, M3 120/324), which was produced with X_full wrongly set to the 1-D view and is withdrawn"
+  },
+  "true_ari_inspected": false,
+  "external_50_used": false,
+  "labels_used": false
+}

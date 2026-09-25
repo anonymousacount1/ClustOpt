@@ -1,0 +1,54 @@
+{
+  "run_id": "stage4c_v2_323194df26",
+  "amendment_id": "1a8d6de73b9c15fd",
+  "package": "phase_d_corrected",
+  "supersedes": "phase_d",
+  "original_package_preserved": true,
+  "utility_composition": {
+    "metrics_from_phase_c_v1": 61,
+    "metrics_from_phase_c_v2": 6,
+    "repaired_metrics": [
+      "cdbw",
+      "convexity_ratio_image_based",
+      "cvdd",
+      "cvnn",
+      "dcsi",
+      "hough_arc_circle_strength"
+    ]
+  },
+  "declared_inventory": {
+    "Original": 7,
+    "Established": 10,
+    "New46": 46,
+    "Modern": 4
+  },
+  "observed_inventory_with_usable_utility": {
+    "Established": 10,
+    "Modern": 4,
+    "New46": 46,
+    "Original": 7
+  },
+  "primary_total_declared": 67,
+  "primary_with_usable_utility": 67,
+  "zero_coverage_primary_metrics": [],
+  "method_track_recomputed": false,
+  "method_tables_authoritative_path": "phase_d/",
+  "aggregation_rules": {
+    "inferential_unit": "dataset",
+    "source_balanced_macro": "mean within FCPS / sklearn_shapes / real_pca, then the three means weighted equally",
+    "no_sentinel_ari": true,
+    "frozen_before_outcomes": true,
+    "unchanged_from_original_phase_d": true
+  },
+  "outputs": [
+    "generalist_core_external.csv",
+    "joint_pipeline_per_unit.csv.gz",
+    "joint_pipeline_summary.csv",
+    "metric_aggregate_summary.csv",
+    "metric_group_summary.csv",
+    "metric_specialisation_spread.csv",
+    "metric_top5_frequency.csv",
+    "metric_utility_per_dataset_view.csv.gz",
+    "modern_comparator_analysis.json"
+  ]
+}

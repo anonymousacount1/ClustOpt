@@ -1,0 +1,2 @@
+requested_n_trials_mode,requested_timeout_sec_mode,runs_below_requested_budget,frac_below_requested_budget,runs_at_requested_budget,runs_with_failed_trials,frac_with_failed_trials,mean_failed_trials,runs_with_zero_eligible,frac_with_zero_eligible,min_eligible,max_eligible,note
+50,150.0,9589,0.15148499210110586,53711,0,0.0,0.0,0,0.0,1,50,delivered trials below the requested 50 indicate the Optuna wall-clock timeout bound first; this does NOT invalidate a run

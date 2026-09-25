@@ -1,0 +1,41 @@
+{
+  "stage": "stage2b5a_final_models_and_split1_preparation",
+  "final_rerankers": 10,
+  "reranker_ids": [
+    "MLP_TOP1",
+    "MLP_TOP3",
+    "MLP_TOP5",
+    "MLP_TOP10",
+    "MLP_DYNAMIC",
+    "KNN_TOP1",
+    "KNN_TOP3",
+    "KNN_TOP5",
+    "KNN_TOP10",
+    "KNN_DYNAMIC"
+  ],
+  "context": "C2_LOCAL_UTIL",
+  "n_features": 347,
+  "model_config_hash": "8f488cecbc1d4ba5",
+  "target": "T2_SLATE_REGRET",
+  "eligibility": "ELIGIBLE_CANDIDATE.v1",
+  "training_rows_per_model": 1161522,
+  "total_fit_hours": 0.9941423334444214,
+  "policy_mapping_hash": "f8c3acc507d9a5e6",
+  "registry_semantics_hash": "beaccd4a0cb61c46",
+  "split1_expected_runs": 63300,
+  "split1_runs_found": 63300,
+  "split1_coverage_pct": 100.0,
+  "split1_runs_below_budget": 9589,
+  "split1_zero_eligible_runs": 0,
+  "split1_min_eligible": 1,
+  "autoclust_comparability": "NOT_DIRECTLY_COMPARABLE",
+  "integrity": {
+    "total": 48,
+    "passed": 48,
+    "failed": 0
+  },
+  "final_split1_evaluation_run": false,
+  "split_1_outcome_values_read": false,
+  "source_commit": "04e5be2e4703504bec6f6dd1d64cd62d7e7ed31f",
+  "runtime_sec": 0.07987236976623535
+}

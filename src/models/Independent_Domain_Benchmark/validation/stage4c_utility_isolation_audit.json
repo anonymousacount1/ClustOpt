@@ -1,0 +1,187 @@
+{
+  "audit": "stage4c_utility_isolation",
+  "run_id": "stage4c_v2_323194df26",
+  "amendment_id": "1a8d6de73b9c15fd",
+  "recomputed_science": {
+    "metric_values": false,
+    "candidate_ari": false,
+    "clustering": false,
+    "banks": false,
+    "methods": false
+  },
+  "frozen_utility_is_frame_relative": {
+    "k_top_and_k_bottom": "10 percent of len(frame)",
+    "eligibility_guard": "finite pairs < max(10, 0.2 * len(frame)) -> skipped",
+    "nan_handling": "a metric's invalid candidates are RANKED WORST, not dropped",
+    "consequence": "the candidate row basis is part of the measurement"
+  },
+  "basis_sizes": {
+    "units": 150,
+    "canonical_total": 4776,
+    "v1_total": 4384,
+    "candidates_only_in_canonical": 392
+  },
+  "root_cause_example": {
+    "dataset_id": "fcps_atom",
+    "view_id": "x_only",
+    "canonical_candidates": 32,
+    "v1_candidates": 28,
+    "candidates_only_in_canonical": [
+      23,
+      24,
+      25,
+      30
+    ],
+    "their_algorithms": [
+      "dbscan",
+      "dbscan",
+      "dbscan",
+      "dbscan"
+    ],
+    "their_cluster_counts": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "why_absent_from_v1": "every one of the 61 correctly-dispatched metrics is invalid on these candidates, so Phase C never created a row for them; the two repaired image-based New46 metrics ARE valid on them, which is why repairing those two changed the universe"
+  },
+  "isolation": {
+    "compared": 9998,
+    "status_mismatch": 0,
+    "count_mismatch": 0,
+    "component_mismatch": 0,
+    "utility_mismatch": 0
+  },
+  "isolation_failures": [],
+  "original_61_vs_canonical": {
+    "checked": 9102,
+    "exact": 1508,
+    "within_tol": 772,
+    "different": 6822,
+    "absent_in_canonical": 0
+  },
+  "difference_examples": [
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "alpha_shape_compactness",
+      "v1_utility": 0.3777357658142437,
+      "canonical_utility": 0.34341035344719417,
+      "delta": -0.0343254123670495
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "arc_circle_fit",
+      "v1_utility": 0.3246812669231478,
+      "canonical_utility": 0.35857603330846444,
+      "delta": 0.03389476638531663
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "avg_pca_isotropy",
+      "v1_utility": 0.3940123096258169,
+      "canonical_utility": 0.3534681753682264,
+      "delta": -0.040544134257590514
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "avg_within_cluster_dispersion",
+      "v1_utility": 0.4017373426046082,
+      "canonical_utility": 0.4072054630959441,
+      "delta": 0.005468120491335882
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "axial_symmetry",
+      "v1_utility": 0.2459777174118194,
+      "canonical_utility": 0.2508243793381733,
+      "delta": 0.004846661926353912
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "bimodality_anti_thickness",
+      "v1_utility": 0.3805698387344163,
+      "canonical_utility": 0.34362630843750935,
+      "delta": -0.036943530296906946
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "blobness_log_dog",
+      "v1_utility": 0.3463329853872144,
+      "canonical_utility": 0.3132709521115141,
+      "delta": -0.03306203327570029
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "calinski_harabasz",
+      "v1_utility": 0.5492873211284456,
+      "canonical_utility": 0.5102670499221179,
+      "delta": -0.03902027120632767
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "circularity_compactness",
+      "v1_utility": 0.3389096400649777,
+      "canonical_utility": 0.33301425154657455,
+      "delta": -0.005895388518403155
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "cluster_size_balance_entropy",
+      "v1_utility": 0.5284313874072345,
+      "canonical_utility": 0.5287011810211321,
+      "delta": 0.00026979361389756207
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "cluster_size_imbalance_entropy",
+      "v1_utility": 0.3544936525854166,
+      "canonical_utility": 0.31435232499248256,
+      "delta": -0.04014132759293404
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "coggins_jain_index",
+      "v1_utility": 0.4344405856975195,
+      "canonical_utility": 0.3962517479411803,
+      "delta": -0.03818883775633919
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "connected_components_count",
+      "v1_utility": 0.3757238395197226,
+      "canonical_utility": 0.37334719500344893,
+      "delta": -0.002376644516273674
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "connectivity_components",
+      "v1_utility": 0.3863001990107343,
+      "canonical_utility": 0.39329763969290293,
+      "delta": 0.006997440682168621
+    },
+    {
+      "dataset_id": "fcps_atom",
+      "view_id": "x_only",
+      "metric_id": "contour_graph_connectivity",
+      "v1_utility": 0.3842345470755427,
+      "canonical_utility": 0.33858670438635424,
+      "delta": -0.04564784268918848
+    }
+  ],
+  "tolerance": 1e-09
+}

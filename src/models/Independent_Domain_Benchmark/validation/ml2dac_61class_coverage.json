@@ -1,0 +1,1188 @@
+{
+  "gate": "ml2dac_61class_coverage",
+  "stage": "4B-3B3",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "classes": 61,
+  "explicit_directions": 61,
+  "intended_implementation_reached": 61,
+  "finite_on_at_least_one_fixture": 61,
+  "never_finite_classes": [],
+  "fixtures": [
+    "blobs_3",
+    "rings_3",
+    "grid_3",
+    "blobs_2",
+    "blobs_noise",
+    "dense_rings",
+    "dense_blobs"
+  ],
+  "legacy_selected_cvi_value_calls": 0,
+  "modern_comparator_calls": 0,
+  "generic_evaluator_calls": 406,
+  "ml2dac_only_calls": 21,
+  "finiteness_policy": "a metric may legitimately be undefined on a partition outside its domain, so finiteness is recorded, not required per fixture; a class finite on NO fixture is reported",
+  "rows": [
+    {
+      "metric": "alpha_shape_compactness",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.8404580755646858,
+        "rings_3": 0.0,
+        "grid_3": 0.5146162423537893,
+        "blobs_2": 0.7584549245735418,
+        "blobs_noise": 0.7749825289906742,
+        "dense_rings": 0.9447017466441571,
+        "dense_blobs": 0.7181412842791918
+      }
+    },
+    {
+      "metric": "arc_circle_fit",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.5806320571838378,
+        "rings_3": 0.8318927545456253,
+        "grid_3": 0.44416110124332514,
+        "blobs_2": 0.6870258812936547,
+        "blobs_noise": 0.578512123127123,
+        "dense_rings": 0.9700916732193491,
+        "dense_blobs": 0.5900288631995237
+      }
+    },
+    {
+      "metric": "avg_pca_isotropy",
+      "direction": "MAXIMIZE",
+      "group": "new46_structure",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.7659448979818985,
+        "rings_3": 0.07858548304753306,
+        "grid_3": 0.09650392623740979,
+        "blobs_2": 0.4167495687881803,
+        "blobs_noise": 0.7549074207302101,
+        "dense_rings": 0.9957325720128262,
+        "dense_blobs": 0.8567587182181641
+      }
+    },
+    {
+      "metric": "avg_within_cluster_dispersion",
+      "direction": "MINIMIZE",
+      "group": "new46_structure",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.38955158331701006,
+        "rings_3": 1.540657262510894,
+        "grid_3": 4.067816866904138,
+        "blobs_2": 1.8656437361103098,
+        "blobs_noise": 0.39128684439809397,
+        "dense_rings": 2.9994463109138656,
+        "dense_blobs": 0.6383947789982302
+      }
+    },
+    {
+      "metric": "axial_symmetry",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.0,
+        "rings_3": 0.0,
+        "grid_3": 0.0,
+        "blobs_2": 0.0,
+        "blobs_noise": 0.0,
+        "dense_rings": 0.912104493485698,
+        "dense_blobs": 0.6045753770405004
+      }
+    },
+    {
+      "metric": "bimodality_anti_thickness",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.4273024462761587,
+        "rings_3": 0.5170944406215852,
+        "grid_3": 0.6291344515054703,
+        "blobs_2": 0.5817841831783929,
+        "blobs_noise": 0.3742212632322904,
+        "dense_rings": 0.63961418384042,
+        "dense_blobs": 0.1253214912585634
+      }
+    },
+    {
+      "metric": "blobness_log_dog",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.17443552121499661,
+        "blobs_noise": NaN,
+        "dense_rings": 0.30039667369329226,
+        "dense_blobs": 0.4111183099622733
+      }
+    },
+    {
+      "metric": "calinski_harabasz",
+      "direction": "MAXIMIZE",
+      "group": "original_or_established",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 7181.191338266575,
+        "rings_3": 196.33054155752507,
+        "grid_3": 73.1235973734519,
+        "blobs_2": 175.05585588351997,
+        "blobs_noise": 6712.131296254455,
+        "dense_rings": 0.0009234974337595704,
+        "dense_blobs": 16313.338091137754
+      }
+    },
+    {
+      "metric": "circularity_compactness",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.16410361299834342,
+        "rings_3": 0.08385152197236483,
+        "grid_3": 0.7853981633974452,
+        "blobs_2": 0.1413728735100616,
+        "blobs_noise": 0.16510024950773924,
+        "dense_rings": 0.6878468999060885,
+        "dense_blobs": 0.17815137420979463
+      }
+    },
+    {
+      "metric": "cluster_size_balance_entropy",
+      "direction": "MAXIMIZE",
+      "group": "new46_structure",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.9999999999972689,
+        "rings_3": 0.9999999999972689,
+        "grid_3": 0.9999999999972689,
+        "blobs_2": 0.9182958340516068,
+        "blobs_noise": 0.9999765056742596,
+        "dense_rings": 0.9999999999972691,
+        "dense_blobs": 0.9999999999972691
+      }
+    },
+    {
+      "metric": "cluster_size_imbalance_entropy",
+      "direction": "MAXIMIZE",
+      "group": "new46_structure",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 2.731148640577885e-12,
+        "rings_3": 2.731148640577885e-12,
+        "grid_3": 2.731148640577885e-12,
+        "blobs_2": 0.08170416594839325,
+        "blobs_noise": 2.3494325740447408e-05,
+        "dense_rings": 2.73092659597296e-12,
+        "dense_blobs": 2.73092659597296e-12
+      }
+    },
+    {
+      "metric": "coggins_jain_index",
+      "direction": "MAXIMIZE",
+      "group": "original",
+      "expected_entrypoint": "ml2dac_only",
+      "reached": "ml2dac_only",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 14.028934431858445,
+        "rings_3": 1.7848194317360022,
+        "grid_3": 1.1029914247399228,
+        "blobs_2": 1.602517813261553,
+        "blobs_noise": 0.9379035804078274,
+        "dense_rings": 0.0013770860835157065,
+        "dense_blobs": 9.253725826918739
+      }
+    },
+    {
+      "metric": "connected_components_count",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.5488116360940265,
+        "blobs_noise": NaN,
+        "dense_rings": 1.0,
+        "dense_blobs": 0.8496038786980088
+      }
+    },
+    {
+      "metric": "connectivity_components",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 1.0,
+        "rings_3": 1.0,
+        "grid_3": 1.0,
+        "blobs_2": 0.6666666666666666,
+        "blobs_noise": 1.0,
+        "dense_rings": 1.0,
+        "dense_blobs": 1.0
+      }
+    },
+    {
+      "metric": "contour_graph_connectivity",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.19377634589249523,
+        "blobs_noise": NaN,
+        "dense_rings": 1.0,
+        "dense_blobs": 0.9948108698620783
+      }
+    },
+    {
+      "metric": "convexity_ratio",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.9618029660978985,
+        "rings_3": 0.0,
+        "grid_3": 0.9368639667705088,
+        "blobs_2": 0.4715740026526217,
+        "blobs_noise": 0.9092710804322441,
+        "dense_rings": 0.9831150496414096,
+        "dense_blobs": 0.8018823411340376
+      }
+    },
+    {
+      "metric": "cop",
+      "direction": "MINIMIZE",
+      "group": "original",
+      "expected_entrypoint": "ml2dac_only",
+      "reached": "ml2dac_only",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.08455511703239539,
+        "rings_3": 0.7694893320863357,
+        "grid_3": 4.067816866904139,
+        "blobs_2": 0.5467236876826012,
+        "blobs_noise": 24.90267673774645,
+        "dense_rings": 1.6915085159325782,
+        "dense_blobs": 0.22323804151116738
+      }
+    },
+    {
+      "metric": "corner_junction_density",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.972683060999159,
+        "blobs_noise": NaN,
+        "dense_rings": 0.9760745381989284,
+        "dense_blobs": 0.9636790839614833
+      }
+    },
+    {
+      "metric": "corner_sharpness",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.2620730796392021,
+        "rings_3": 0.06026068420862008,
+        "grid_3": 0.5558002550885246,
+        "blobs_2": 0.13281095054695785,
+        "blobs_noise": 0.26999128175577297,
+        "dense_rings": 0.0167128726082304,
+        "dense_blobs": 0.20707025441339438
+      }
+    },
+    {
+      "metric": "curvature_consistency",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.2411828542341102,
+        "rings_3": 0.6150246744392688,
+        "grid_3": 0.46376079671367315,
+        "blobs_2": 0.19242337408200724,
+        "blobs_noise": 0.24803250364287352,
+        "dense_rings": 0.1618739390533633,
+        "dense_blobs": 0.2428848047282125
+      }
+    },
+    {
+      "metric": "davies_bouldin",
+      "direction": "MINIMIZE",
+      "group": "original_or_established",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.1287057847935635,
+        "rings_3": 0.7023737514845815,
+        "grid_3": 1.763659390661368,
+        "blobs_2": 0.6928286114554613,
+        "blobs_noise": 0.12892693667410224,
+        "dense_rings": 1070.2288161242097,
+        "dense_blobs": 0.206974747842352
+      }
+    },
+    {
+      "metric": "dbcv",
+      "direction": "MAXIMIZE",
+      "group": "original_or_established",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.898947993961249,
+        "rings_3": 0.7833600355179218,
+        "grid_3": -0.12211552837394898,
+        "blobs_2": 0.27738769476642616,
+        "blobs_noise": 0.8966466826563116,
+        "dense_rings": 0.5246638418959173,
+        "dense_blobs": 0.8477474215632574
+      }
+    },
+    {
+      "metric": "direction_entropy",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.8617165497143426,
+        "rings_3": 0.6622352567484814,
+        "grid_3": 0.9558689860892671,
+        "blobs_2": 0.9046090461582706,
+        "blobs_noise": 0.8848033266967835,
+        "dense_rings": 0.9666801092166889,
+        "dense_blobs": 0.9475604221528315
+      }
+    },
+    {
+      "metric": "dunn_index",
+      "direction": "MAXIMIZE",
+      "group": "original",
+      "expected_entrypoint": "ml2dac_only",
+      "reached": "ml2dac_only",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 2.242388526868601,
+        "rings_3": 0.23237443976941347,
+        "grid_3": 0.06726727939963124,
+        "blobs_2": 0.5035404344728217,
+        "blobs_noise": 0.0026410797155818535,
+        "dense_rings": 0.17099746413137742,
+        "dense_blobs": 0.6845223338757344
+      }
+    },
+    {
+      "metric": "eccentricity_ratio",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.4363866179758832,
+        "rings_3": 0.8319688332440479,
+        "grid_3": 0.8001780125258119,
+        "blobs_2": 0.8040606310824735,
+        "blobs_noise": 0.4383109092280763,
+        "dense_rings": 0.39411831792422486,
+        "dense_blobs": 0.417738304195194
+      }
+    },
+    {
+      "metric": "edge_coherence",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.05133269460355387,
+        "rings_3": 0.2984528277576005,
+        "grid_3": 0.00409706470585312,
+        "blobs_2": 0.04984916313582576,
+        "blobs_noise": 0.058121058205052145,
+        "dense_rings": 0.0392718408772841,
+        "dense_blobs": 0.019059048350925232
+      }
+    },
+    {
+      "metric": "ellipse_fit_score",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.8992706921995822,
+        "rings_3": 0.557528881630678,
+        "grid_3": 1.0,
+        "blobs_2": 0.8854713139298119,
+        "blobs_noise": 0.8795584638048074,
+        "dense_rings": 0.998073217726397,
+        "dense_blobs": 0.8490840054641198
+      }
+    },
+    {
+      "metric": "euler_holes_count",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 2,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": NaN,
+        "blobs_noise": NaN,
+        "dense_rings": 0.7768698398515702,
+        "dense_blobs": 0.0
+      }
+    },
+    {
+      "metric": "fractal_dimension",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.6765142169682838,
+        "blobs_noise": NaN,
+        "dense_rings": 0.7354426865174459,
+        "dense_blobs": 0.46761055763509507
+      }
+    },
+    {
+      "metric": "glcm_haralick",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.9416517249047391,
+        "blobs_noise": NaN,
+        "dense_rings": 0.9102847283517242,
+        "dense_blobs": 0.9186849746431938
+      }
+    },
+    {
+      "metric": "gridness_2d",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.10164771663022999,
+        "rings_3": 0.10292031254174594,
+        "grid_3": 0.18413473473328532,
+        "blobs_2": 0.13841366688428564,
+        "blobs_noise": 0.10209262733346816,
+        "dense_rings": 0.09478679829542189,
+        "dense_blobs": 0.09687653445941985
+      }
+    },
+    {
+      "metric": "gridness_fft_acf",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.23897477879917178,
+        "rings_3": 0.10265151374634542,
+        "grid_3": 0.5383828637407961,
+        "blobs_2": 0.23678071186096644,
+        "blobs_noise": 0.23627704276508166,
+        "dense_rings": 0.11669928585155188,
+        "dense_blobs": 0.40151811602200055
+      }
+    },
+    {
+      "metric": "hollow_score",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.2513605442176848,
+        "rings_3": 0.2204081632653035,
+        "grid_3": 0.22095238095237843,
+        "blobs_2": 0.6415646258503352,
+        "blobs_noise": 0.26081431259095966,
+        "dense_rings": 0.44499999999999884,
+        "dense_blobs": 0.257845833333333
+      }
+    },
+    {
+      "metric": "hough_line_strength",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.0,
+        "rings_3": 0.0,
+        "grid_3": 0.0,
+        "blobs_2": 0.0,
+        "blobs_noise": 0.0,
+        "dense_rings": 0.011997131288231605,
+        "dense_blobs": 0.030688750682369155
+      }
+    },
+    {
+      "metric": "ladderness",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.10070709618667778,
+        "rings_3": 0.11564999084341612,
+        "grid_3": 0.36109580805541147,
+        "blobs_2": 0.10322535666300328,
+        "blobs_noise": 0.11412272809636223,
+        "dense_rings": 0.1984487713221513,
+        "dense_blobs": 0.10239392066663204
+      }
+    },
+    {
+      "metric": "lbp_stationarity",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 2,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": NaN,
+        "blobs_noise": NaN,
+        "dense_rings": 0.9201637576813361,
+        "dense_blobs": 0.8224255652950803
+      }
+    },
+    {
+      "metric": "line_straightness",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.49265440285006307,
+        "rings_3": 0.8413369335128255,
+        "grid_3": 0.822543570098818,
+        "blobs_2": 0.7914866137217272,
+        "blobs_noise": 0.49535995864929816,
+        "dense_rings": 0.4348677936221158,
+        "dense_blobs": 0.4678263856994607
+      }
+    },
+    {
+      "metric": "min_centroid_distance",
+      "direction": "MAXIMIZE",
+      "group": "new46_structure",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 5.965081362743918,
+        "rings_3": 2.982164743771507,
+        "grid_3": 4.6565731465733196,
+        "blobs_2": 5.385585136823535,
+        "blobs_noise": 5.990355485996065,
+        "dense_rings": 0.004129419645958185,
+        "dense_blobs": 6.003835134982442
+      }
+    },
+    {
+      "metric": "min_intercluster_distance",
+      "direction": "MAXIMIZE",
+      "group": "new46_structure",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 4.323932929718899,
+        "rings_3": 2.00067767606491,
+        "grid_3": 1.0,
+        "blobs_2": 4.323932929718899,
+        "blobs_noise": 4.323932929718899,
+        "dense_rings": 1.7541495102722124,
+        "dense_blobs": 2.5097873813727327
+      }
+    },
+    {
+      "metric": "morphological_band_count",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.0,
+        "blobs_noise": NaN,
+        "dense_rings": 0.0,
+        "dense_blobs": 0.29627194848941607
+      }
+    },
+    {
+      "metric": "mst_smoothness",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.5729220624621378,
+        "rings_3": 0.9956937799043062,
+        "grid_3": 0.6973782588648936,
+        "blobs_2": 0.5712605307988077,
+        "blobs_noise": 0.5783246164399953,
+        "dense_rings": 0.6068178997802414,
+        "dense_blobs": 0.5658807582659325
+      }
+    },
+    {
+      "metric": "neighborhood_purity",
+      "direction": "MAXIMIZE",
+      "group": "new46_structure",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 1.0,
+        "rings_3": 1.0,
+        "grid_3": 0.8752380952380953,
+        "blobs_2": 1.0,
+        "blobs_noise": 1.0,
+        "dense_rings": 1.0,
+        "dense_blobs": 1.0
+      }
+    },
+    {
+      "metric": "neighborhood_purity_multi_k",
+      "direction": "MAXIMIZE",
+      "group": "new46_structure",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 1.0,
+        "rings_3": 0.9983333333333334,
+        "grid_3": 0.8677777777777779,
+        "blobs_2": 1.0,
+        "blobs_noise": 1.0,
+        "dense_rings": 1.0,
+        "dense_blobs": 1.0
+      }
+    },
+    {
+      "metric": "noise_aware_silhouette",
+      "direction": "MAXIMIZE",
+      "group": "original_or_established",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.908497163148312,
+        "rings_3": 0.5135096117491127,
+        "grid_3": 0.21213490605183158,
+        "blobs_2": 0.5851286536503406,
+        "blobs_noise": 0.852221158718918,
+        "dense_rings": 0.06065760549491641,
+        "dense_blobs": 0.8529282365063637
+      }
+    },
+    {
+      "metric": "orientation_histogram_entropy",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.0430030936926646,
+        "rings_3": 0.28689896697948114,
+        "grid_3": 0.008798822938408498,
+        "blobs_2": 0.042832170954117454,
+        "blobs_noise": 0.037090878742974516,
+        "dense_rings": 0.02288308006177546,
+        "dense_blobs": 0.022442493480057935
+      }
+    },
+    {
+      "metric": "parabolicity",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.0662205896973071,
+        "rings_3": 0.9638454703435249,
+        "grid_3": 0.0,
+        "blobs_2": 0.38345088130098626,
+        "blobs_noise": 0.06545854025406939,
+        "dense_rings": 0.0,
+        "dense_blobs": 0.0
+      }
+    },
+    {
+      "metric": "parallel_bands",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 2,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": 0.40078929295843535,
+        "grid_3": 0.9994171946395323,
+        "blobs_2": NaN,
+        "blobs_noise": NaN,
+        "dense_rings": NaN,
+        "dense_blobs": NaN
+      }
+    },
+    {
+      "metric": "peak_to_background_hough",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.0,
+        "rings_3": 0.3732119013599191,
+        "grid_3": 0.0,
+        "blobs_2": 0.6666666666666666,
+        "blobs_noise": 0.0,
+        "dense_rings": 0.07309439264767575,
+        "dense_blobs": 0.0654264911517068
+      }
+    },
+    {
+      "metric": "periodicity_1d",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.3214391145170795,
+        "rings_3": 0.16680359278753087,
+        "grid_3": 0.15521541241855363,
+        "blobs_2": 0.25092703996214044,
+        "blobs_noise": 0.3321372987472779,
+        "dense_rings": 0.1622890874508074,
+        "dense_blobs": 0.3091196107179934
+      }
+    },
+    {
+      "metric": "piecewise_linearity",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.31068727925630213,
+        "rings_3": 0.5567590388841376,
+        "grid_3": 0.03946914874764392,
+        "blobs_2": 0.11261375542534845,
+        "blobs_noise": 0.23369719524810328,
+        "dense_rings": 0.00023975568368869572,
+        "dense_blobs": 0.0139394785154747
+      }
+    },
+    {
+      "metric": "polygonality",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.0,
+        "rings_3": 0.16416664924446162,
+        "grid_3": 0.8888888888888534,
+        "blobs_2": 0.0,
+        "blobs_noise": 0.025495983960543575,
+        "dense_rings": 0.41562346107275955,
+        "dense_blobs": 0.11967797920362354
+      }
+    },
+    {
+      "metric": "radial_uniformity",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.18073297444126224,
+        "rings_3": 0.02807713778285152,
+        "grid_3": 0.09262490740777073,
+        "blobs_2": 0.04090301280914508,
+        "blobs_noise": 0.16789494970262064,
+        "dense_rings": 0.0,
+        "dense_blobs": 0.21128466862350007
+      }
+    },
+    {
+      "metric": "rectangularity",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.48685057594386666,
+        "rings_3": 0.13893768463176207,
+        "grid_3": 0.9999999999999377,
+        "blobs_2": 0.47863451920028216,
+        "blobs_noise": 0.48418354117463,
+        "dense_rings": 0.7781635147638822,
+        "dense_blobs": 0.595001379638277
+      }
+    },
+    {
+      "metric": "ribbon_thickness",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.0,
+        "rings_3": 0.0,
+        "grid_3": 0.0,
+        "blobs_2": 0.4903217663837811,
+        "blobs_noise": 0.0,
+        "dense_rings": 0.2416633365305511,
+        "dense_blobs": 0.2981439758797641
+      }
+    },
+    {
+      "metric": "ridge_strength",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.9031694348342065,
+        "blobs_noise": NaN,
+        "dense_rings": 0.9997613267755034,
+        "dense_blobs": 0.7987364361201942
+      }
+    },
+    {
+      "metric": "s_dbw",
+      "direction": "MINIMIZE",
+      "group": "original_or_established",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.11930247098234219,
+        "rings_3": 1.58518972097438,
+        "grid_3": 2.0372737105973817,
+        "blobs_2": 1.3660160195465267,
+        "blobs_noise": 0.119422547692569,
+        "dense_rings": 3.74771951922204,
+        "dense_blobs": 0.18820519652132647
+      }
+    },
+    {
+      "metric": "silhouette",
+      "direction": "MAXIMIZE",
+      "group": "original_or_established",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.908497163148312,
+        "rings_3": 0.5135096117491127,
+        "grid_3": 0.21213490605183158,
+        "blobs_2": 0.5851286536503406,
+        "blobs_noise": 0.9084591032029076,
+        "dense_rings": 0.06065760549491641,
+        "dense_blobs": 0.8529282365063637
+      }
+    },
+    {
+      "metric": "skeleton_connectivity",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.2017987559965628,
+        "rings_3": 0.12098662346146317,
+        "grid_3": 5.137720901623972e-14,
+        "blobs_2": 0.09110726092559891,
+        "blobs_noise": 0.18786157029256445,
+        "dense_rings": 0.09095637585706387,
+        "dense_blobs": 0.0131911189303342
+      }
+    },
+    {
+      "metric": "symmetry_score",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 3,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": NaN,
+        "rings_3": NaN,
+        "grid_3": NaN,
+        "blobs_2": 0.0,
+        "blobs_noise": NaN,
+        "dense_rings": 0.3877567393535801,
+        "dense_blobs": 0.10747729142248073
+      }
+    },
+    {
+      "metric": "thickness_uniformity",
+      "direction": "MAXIMIZE",
+      "group": "new46_image",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.6360537740862419,
+        "rings_3": 0.8173105990892452,
+        "grid_3": 0.7341440678504585,
+        "blobs_2": 0.6327919483162772,
+        "blobs_noise": 0.6497084626241724,
+        "dense_rings": 0.8367464260562831,
+        "dense_blobs": 0.5793566582768324
+      }
+    },
+    {
+      "metric": "turning_points_count",
+      "direction": "MAXIMIZE",
+      "group": "new46_pattern",
+      "expected_entrypoint": "generic",
+      "reached": "generic",
+      "implementation_reached": true,
+      "finite_fixtures": 7,
+      "n_fixtures": 7,
+      "values": {
+        "blobs_3": 0.0,
+        "rings_3": 0.2841643861750448,
+        "grid_3": 0.0,
+        "blobs_2": 0.0,
+        "blobs_noise": 0.0,
+        "dense_rings": 0.0,
+        "dense_blobs": 0.0
+      }
+    }
+  ],
+  "external_50_used": false,
+  "labels_used": false,
+  "verdict": "PASS"
+}

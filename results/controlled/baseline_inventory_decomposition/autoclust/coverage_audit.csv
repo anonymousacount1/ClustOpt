@@ -1,0 +1,5 @@
+baseline,arm,semantic,method_id,n_rows,n_finite_bestview,n_datasets,requested_metrics,live_metrics,derived_variant
+autoclust,A0,Original,AutoClust_Original_InDomain_same_search_space,1055,1055,1055,7,7,original_cvis
+autoclust,A1,Original + Established,AutoClust_OriginalPlusEstablished_InDomain_same_search_space,1055,1055,1055,17,17,original_plus_established
+autoclust,A2,Original + New46,AutoClust_OriginalPlusNew46_InDomain_same_search_space,1055,1055,1055,53,51,original_plus_new46
+autoclust,A3,Extended,AutoClust_Extended_InDomain_same_search_space,1055,1055,1055,63,61,extended_cvis

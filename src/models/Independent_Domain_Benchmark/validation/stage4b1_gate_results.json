@@ -1,0 +1,483 @@
+{
+  "stage": "4B-1b",
+  "n_gates": 79,
+  "n_pass": 79,
+  "n_fail": 0,
+  "overall": "PASS",
+  "gates": [
+    {
+      "gate": "G01",
+      "description": "at least 13 deterministic fixtures exist",
+      "status": "PASS",
+      "detail": "14 fixtures"
+    },
+    {
+      "gate": "G02",
+      "description": "fixtures cover K=2, K=3 and K=4",
+      "status": "PASS",
+      "detail": "K present: [1, 2, 3, 4]"
+    },
+    {
+      "gate": "G03",
+      "description": "fixture seed and tolerances are frozen constants",
+      "status": "PASS",
+      "detail": "seed=20260911 metrics=['cdbw', 'cvdd', 'cvnn', 'dcsi']"
+    },
+    {
+      "gate": "G04",
+      "description": "CDbw validation artifact exists and passes",
+      "status": "PASS",
+      "detail": "overall=PASS"
+    },
+    {
+      "gate": "G05",
+      "description": "the CDbw diagnostic was compared on at least 10 fixtures",
+      "status": "PASS",
+      "detail": "cases=13"
+    },
+    {
+      "gate": "G06",
+      "description": "the CDbw diagnostic reproduces the raw package exactly",
+      "status": "PASS",
+      "detail": "max_abs_diff=0.0"
+    },
+    {
+      "gate": "G07",
+      "description": "CDbw label-order sensitivity is measured and recorded",
+      "status": "PASS",
+      "detail": "max spread 0.9311 over 13 fixtures"
+    },
+    {
+      "gate": "G08",
+      "description": "the PRIMARY CDbw uses no invented cluster-ordering convention",
+      "status": "PASS",
+      "detail": "policy=None"
+    },
+    {
+      "gate": "G09",
+      "description": "CDbw label-invariance regression test passes",
+      "status": "PASS",
+      "detail": "56 checks, 0 fail"
+    },
+    {
+      "gate": "G10",
+      "description": "label invariance exercises non-contiguous ids and a permutation",
+      "status": "PASS",
+      "detail": "schemes=['contiguous', 'non_contiguous', 'permuted'] ids=[17, 42, 103, 255]"
+    },
+    {
+      "gate": "G11",
+      "description": "every comparator is held to its declared invariance tolerance",
+      "status": "PASS",
+      "detail": "atol by metric = {'cdbw': 1e-12, 'cvdd': 1e-08, 'cvnn': 1e-09, 'dcsi': 1e-08}"
+    },
+    {
+      "gate": "G12",
+      "description": "CVNN validated against fpc on at least 39 comparisons",
+      "status": "PASS",
+      "detail": "PASS, 55 cases, max abs 4.88e-15"
+    },
+    {
+      "gate": "G13",
+      "description": "CVNN k is frozen at the documented fpc default",
+      "status": "PASS",
+      "detail": "k=5"
+    },
+    {
+      "gate": "G14",
+      "description": "CVNN set-relative semantics are recorded in the registry",
+      "status": "PASS",
+      "detail": "set_relative recorded"
+    },
+    {
+      "gate": "G15",
+      "description": "CVDD validated against the author implementation",
+      "status": "PASS",
+      "detail": "PASS_WITH_PREDECLARED_APPLICABILITY_CAVEAT, max abs 2.81e-11"
+    },
+    {
+      "gate": "G16",
+      "description": "the CVDD duplicate-point rule is frozen and metric-local",
+      "status": "PASS",
+      "detail": "rule frozen, scope metric-local"
+    },
+    {
+      "gate": "G17",
+      "description": "the duplicate fixture is INVALID as predeclared, not silently scored",
+      "status": "PASS",
+      "detail": "predeclared invalid present"
+    },
+    {
+      "gate": "G18",
+      "description": "DCSI component-level validation passes",
+      "status": "PASS",
+      "detail": "overall=PASS, 12 fixtures"
+    },
+    {
+      "gate": "G19",
+      "description": "DCSI core-point sets are identical to the reference on every fixture",
+      "status": "PASS",
+      "detail": "identical"
+    },
+    {
+      "gate": "G20",
+      "description": "DCSI connectedness is identical to the reference on every fixture",
+      "status": "PASS",
+      "detail": "identical"
+    },
+    {
+      "gate": "G21",
+      "description": "reference separation is exactly twice ours on every pair",
+      "status": "PASS",
+      "detail": "ratio 2.0 everywhere"
+    },
+    {
+      "gate": "G22",
+      "description": "AUTHOR_COMPAT reproduces the reference aggregate on every fixture",
+      "status": "PASS",
+      "detail": "exact"
+    },
+    {
+      "gate": "G23",
+      "description": "PAPER mode is genuinely distinct from the reference aggregate",
+      "status": "PASS",
+      "detail": "distinct on every fixture"
+    },
+    {
+      "gate": "G24",
+      "description": "DCSI comparison covers K=2, K=3 and K=4",
+      "status": "PASS",
+      "detail": "K=[2, 3, 4]"
+    },
+    {
+      "gate": "G25",
+      "description": "every input we call undefined is also undefined for the reference",
+      "status": "PASS",
+      "detail": "2 undefined inputs, all agreed"
+    },
+    {
+      "gate": "G26",
+      "description": "the DCSI definition audit is extracted from the paper, not from prose",
+      "status": "PASS",
+      "detail": "arXiv 2310.12806v4, MinPts 5"
+    },
+    {
+      "gate": "G27",
+      "description": "DCSI edge-case semantics are frozen, including the incomplete-pair case",
+      "status": "PASS",
+      "detail": "9 edge cases frozen"
+    },
+    {
+      "gate": "G28",
+      "description": "the paper-vs-reference discrepancy is recorded as resolved",
+      "status": "PASS",
+      "detail": "RESOLVED -- decision frozen by the project_lead"
+    },
+    {
+      "gate": "G29",
+      "description": "the withdrawn ranking-equivalence claim is not asserted anywhere",
+      "status": "PASS",
+      "detail": "unqualified occurrences: none"
+    },
+    {
+      "gate": "G30",
+      "description": "the multiclass ranking counterexample is a passing regression test",
+      "status": "PASS",
+      "detail": "paper A>B / compat A<B"
+    },
+    {
+      "gate": "G31",
+      "description": "the reversal also occurs through the shipped implementation",
+      "status": "PASS",
+      "detail": "found over 400 candidates"
+    },
+    {
+      "gate": "G32",
+      "description": "published DCSI values reproduce under the frozen primary mode",
+      "status": "PASS",
+      "detail": "verdict=PAPER, 2 cases, max abs 1.11e-16"
+    },
+    {
+      "gate": "G33",
+      "description": "PAPER and AUTHOR_COMPAT share one implementation behind a frozen switch",
+      "status": "PASS",
+      "detail": "single dcsi/dcsi_pair with sep_mode switch"
+    },
+    {
+      "gate": "G34",
+      "description": "dcsi_author_compat is NOT one of the primary comparators",
+      "status": "PASS",
+      "detail": "primary ids=['cdbw', 'cvnn', 'cvdd', 'dcsi']"
+    },
+    {
+      "gate": "G35",
+      "description": "dcsi_author_compat is excluded from every FDR family and headline claim",
+      "status": "PASS",
+      "detail": "5 exclusions recorded"
+    },
+    {
+      "gate": "G36",
+      "description": "a DCSI sensitivity analysis is predeclared before any external result",
+      "status": "PASS",
+      "detail": "plan frozen with a decision rule"
+    },
+    {
+      "gate": "G37",
+      "description": "the primary comparator set is exactly the four audited in Stage 4A",
+      "status": "PASS",
+      "detail": "['cdbw', 'cvnn', 'cvdd', 'dcsi']"
+    },
+    {
+      "gate": "G38",
+      "description": "no author source is committed to this repository",
+      "status": "PASS",
+      "detail": "R/MATLAB files: none | definitions: none"
+    },
+    {
+      "gate": "G39",
+      "description": "no author data is committed to this repository",
+      "status": "PASS",
+      "detail": "tracked author-data files: none"
+    },
+    {
+      "gate": "G40",
+      "description": "the DCSI licence finding and oracle-only relationship are recorded",
+      "status": "PASS",
+      "detail": "licence=None, oracle-only"
+    },
+    {
+      "gate": "G41",
+      "description": "CVNN is oracle-only so no GPL obligation is incorporated",
+      "status": "PASS",
+      "detail": "EXTERNAL VALIDATION ORACLE ONLY -- no fpc source is copied o"
+    },
+    {
+      "gate": "G42",
+      "description": "the reference runtimes are pinned by digest and live outside Git",
+      "status": "PASS",
+      "detail": "3 runtimes pinned"
+    },
+    {
+      "gate": "G43",
+      "description": "the project runtime that produced the values is recorded",
+      "status": "PASS",
+      "detail": "python 3.12.2 / numpy 2.1.3"
+    },
+    {
+      "gate": "G44",
+      "description": "no external runtime was installed inside a Git-controlled path",
+      "status": "PASS",
+      "detail": "tracked runtime files: none"
+    },
+    {
+      "gate": "G45",
+      "description": "the modern comparators are not added to any learned inventory",
+      "status": "PASS",
+      "detail": "inventory references: none"
+    },
+    {
+      "gate": "G46",
+      "description": "the existing metric inventory is unchanged",
+      "status": "PASS",
+      "detail": "7 / 10 / 46 (44 live) / 61"
+    },
+    {
+      "gate": "G47",
+      "description": "the Stage 4B-1 report exists",
+      "status": "PASS",
+      "detail": "docs\\internal_reports\\stage4\\STAGE4B_MODERN_CVI_VALIDATION.md"
+    },
+    {
+      "gate": "G48",
+      "description": "the report has a dedicated DCSI discrepancy section",
+      "status": "PASS",
+      "detail": "section present"
+    },
+    {
+      "gate": "G49",
+      "description": "the report states the diagnostic variant is not a fifth CVI",
+      "status": "PASS",
+      "detail": "stated"
+    },
+    {
+      "gate": "G50",
+      "description": "the report records the K>=3 ranking caveat rather than equivalence",
+      "status": "PASS",
+      "detail": "caveat present"
+    },
+    {
+      "gate": "G51",
+      "description": "the report avoids accusatory characterisation of the authors' work",
+      "status": "PASS",
+      "detail": "flagged phrases: none"
+    },
+    {
+      "gate": "G52",
+      "description": "the CDbw paper semantics were audited from the publication",
+      "status": "PASS",
+      "detail": "3 definitional statements recovered"
+    },
+    {
+      "gate": "G53",
+      "description": "the limits of the CDbw source evidence are disclosed, not implied",
+      "status": "PASS",
+      "detail": "per-correction evidence levels recorded"
+    },
+    {
+      "gate": "G54",
+      "description": "the published CDbw is established to be permutation-invariant",
+      "status": "PASS",
+      "detail": "YES"
+    },
+    {
+      "gate": "G55",
+      "description": "the discrepancy is classified, and as a package defect",
+      "status": "PASS",
+      "detail": "A -- PACKAGE IMPLEMENTATION DEFECT"
+    },
+    {
+      "gate": "G56",
+      "description": "the root cause names the first internal quantity to diverge",
+      "status": "PASS",
+      "detail": "stdev, returned by prep()"
+    },
+    {
+      "gate": "G57",
+      "description": "the ranking impact of the package defect was measured",
+      "status": "PASS",
+      "detail": "MATERIAL -- arbitrary cluster naming can change which candid"
+    },
+    {
+      "gate": "G58",
+      "description": "the ranking-impact study used no frozen-corpus data",
+      "status": "PASS",
+      "detail": "non-scientific deterministic fixtures; the frozen external c"
+    },
+    {
+      "gate": "G59",
+      "description": "the primary CDbw is NOT the raw package under a convention",
+      "status": "PASS",
+      "detail": "3 aggregations corrected"
+    },
+    {
+      "gate": "G60",
+      "description": "package code is reused with attribution rather than rewritten",
+      "status": "PASS",
+      "detail": "7 package functions reused"
+    },
+    {
+      "gate": "G61",
+      "description": "CDbw permutation invariance passes at scale",
+      "status": "PASS",
+      "detail": "8 geometries x 20, max diff 6.66e-16"
+    },
+    {
+      "gate": "G62",
+      "description": "invariance covers contiguous, 1-based and sparse namings too",
+      "status": "PASS",
+      "detail": "['contiguous', 'one_based', 'sparse', 'random_perm x20']"
+    },
+    {
+      "gate": "G63",
+      "description": "the correction is checked against the package where the delta is exact",
+      "status": "PASS",
+      "detail": "compactness/cohesion identical; K=2 separation ratio exactly 2"
+    },
+    {
+      "gate": "G64",
+      "description": "an independent implementation corroborates the invariance claim",
+      "status": "PASS",
+      "detail": "fpc invariant over 3 fixtures"
+    },
+    {
+      "gate": "G65",
+      "description": "cdbw_package_compat is a diagnostic, not a comparator",
+      "status": "PASS",
+      "detail": "6 exclusions recorded"
+    },
+    {
+      "gate": "G66",
+      "description": "the primary comparator count is still exactly 4",
+      "status": "PASS",
+      "detail": "4 primary, 2 diagnostics"
+    },
+    {
+      "gate": "G67",
+      "description": "the CDbw frozen parameters were not changed by the correction",
+      "status": "PASS",
+      "detail": "s=3, euclidean, comb"
+    },
+    {
+      "gate": "G68",
+      "description": "CDbw comparability limits are stated in the report",
+      "status": "PASS",
+      "detail": "section present, 644 chars"
+    },
+    {
+      "gate": "G69",
+      "description": "the report does not claim comparability with arbitrary package runs",
+      "status": "PASS",
+      "detail": "flagged phrases: none"
+    },
+    {
+      "gate": "G70",
+      "description": "the PP artifact provenance record is frozen",
+      "status": "PASS",
+      "detail": "V1 aa977443caa97bda | V2 4a668514b93f237e"
+    },
+    {
+      "gate": "G71",
+      "description": "both PP arms reproduced their historical selections exactly",
+      "status": "PASS",
+      "detail": "0/3165 mismatches on both arms"
+    },
+    {
+      "gate": "G72",
+      "description": "PP inference is frozen at n_jobs=1",
+      "status": "PASS",
+      "detail": "n_jobs=1"
+    },
+    {
+      "gate": "G73",
+      "description": "prediction magnitudes drive no downstream decision",
+      "status": "PASS",
+      "detail": "no magnitude-dependent consumer"
+    },
+    {
+      "gate": "G74",
+      "description": "PP artifacts were materialised, not retrained on new data",
+      "status": "PASS",
+      "detail": "no external data; split 1 held out"
+    },
+    {
+      "gate": "G75",
+      "description": "the PP model binaries are NOT in version control",
+      "status": "PASS",
+      "detail": "tracked binaries: none"
+    },
+    {
+      "gate": "G76",
+      "description": "the PP determinism audit is committed alongside the pointer record",
+      "status": "PASS",
+      "detail": "models/Independent_Domain_Benchmark/configs/pp_inference_determinism_audit.json"
+    },
+    {
+      "gate": "G77",
+      "description": "no scientific external execution has taken place",
+      "status": "PASS",
+      "detail": "fixed32 not executed; no results tree in the component"
+    },
+    {
+      "gate": "G78",
+      "description": "the frozen corpus manifest hash is unchanged",
+      "status": "PASS",
+      "detail": "709712107424ad4e"
+    },
+    {
+      "gate": "G79",
+      "description": "no comparator parameter was tuned in this stage",
+      "status": "PASS",
+      "detail": "k=5 / MinPts=5 / K=7 / s=3 unchanged"
+    }
+  ]
+}

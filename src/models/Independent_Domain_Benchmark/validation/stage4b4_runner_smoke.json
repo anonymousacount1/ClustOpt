@@ -1,0 +1,172 @@
+{
+  "smoke": "stage4b4_common_runner",
+  "stage": "4B-4",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "budget_is_non_scientific": true,
+  "families_exercised": [
+    "AutoClust",
+    "ML2DAC",
+    "ClustOpt"
+  ],
+  "arms_per_view": 14,
+  "groups_per_view": 6,
+  "views": [
+    "x_only",
+    "y_only",
+    "xy_2d"
+  ],
+  "first_run_counters": {
+    "physical_built": 18,
+    "physical_reused": 0,
+    "arms_scored": 42,
+    "arms_reused": 0
+  },
+  "second_run_counters": {
+    "physical_built": 0,
+    "physical_reused": 18,
+    "arms_scored": 0,
+    "arms_reused": 42
+  },
+  "thread_controls": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "PYTHONHASHSEED": "0",
+    "cv2_num_threads": "1",
+    "threadpoolctl": "1"
+  },
+  "external_50_used": false,
+  "labels_used": false,
+  "n": 25,
+  "n_fail": 0,
+  "rows": [
+    {
+      "test": "view_object_is_label_free",
+      "status": "PASS",
+      "detail": "no ground-truth attribute reachable"
+    },
+    {
+      "test": "x_full_is_2d_for_every_view",
+      "status": "PASS",
+      "detail": "[[210, 1], [210, 1], [210, 2]]"
+    },
+    {
+      "test": "first_run_scored_every_arm",
+      "status": "PASS",
+      "detail": "{'x_only': 14, 'y_only': 14, 'xy_2d': 14}"
+    },
+    {
+      "test": "first_run_built_each_group_once",
+      "status": "PASS",
+      "detail": "{'physical_built': 18, 'physical_reused': 0, 'arms_scored': 42, 'arms_reused': 0}"
+    },
+    {
+      "test": "physical_records_complete",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "scientific_records_complete",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "one_physical_trace_per_group",
+      "status": "PASS",
+      "detail": "18 group-view combinations"
+    },
+    {
+      "test": "runtime_fields_present",
+      "status": "PASS",
+      "detail": "['actual_wall_clock_runtime', 'arm_scoring_runtime', 'metafeature_runtime', 'model_init_runtime', 'persistence_runtime', 'physical_trace_runtime', 'preparation_runtime']"
+    },
+    {
+      "test": "shared_cost_not_divided",
+      "status": "PASS",
+      "detail": "each of 4 arms pays the full 0.244s physical cost"
+    },
+    {
+      "test": "resume_zero_physical_recomputation",
+      "status": "PASS",
+      "detail": "{'physical_built': 0, 'physical_reused': 18, 'arms_scored': 0, 'arms_reused': 42}"
+    },
+    {
+      "test": "resume_zero_scientific_recomputation",
+      "status": "PASS",
+      "detail": "{'physical_built': 0, 'physical_reused': 18, 'arms_scored': 0, 'arms_reused': 42}"
+    },
+    {
+      "test": "resume_reused_everything",
+      "status": "PASS",
+      "detail": "{'physical_built': 0, 'physical_reused': 18, 'arms_scored': 0, 'arms_reused': 42}"
+    },
+    {
+      "test": "incomplete_arm_recovers_only_itself",
+      "status": "PASS",
+      "detail": "arms_scored=1 physical_built=1"
+    },
+    {
+      "test": "incomplete_trace_recovers_without_touching_valid_arms",
+      "status": "PASS",
+      "detail": "physical_built=1 arms_scored=0"
+    },
+    {
+      "test": "corrupted_complete_arm_stops",
+      "status": "PASS",
+      "detail": "IntegrityError"
+    },
+    {
+      "test": "malformed_record_detected",
+      "status": "PASS",
+      "detail": "IntegrityError"
+    },
+    {
+      "test": "stale_provenance_refused",
+      "status": "PASS",
+      "detail": "ProvenanceMismatch"
+    },
+    {
+      "test": "no_temporary_files_left",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "label_isolation_method_phase",
+      "status": "PASS",
+      "detail": "loader calls=0 "
+    },
+    {
+      "test": "no_evaluation_fields_in_arm_records",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "all_14_methods_executed",
+      "status": "PASS",
+      "detail": "14 arms per view"
+    },
+    {
+      "test": "all_6_physical_groups_executed",
+      "status": "PASS",
+      "detail": "6 groups per view"
+    },
+    {
+      "test": "family_arm_counts",
+      "status": "PASS",
+      "detail": "{'AutoClust': 4, 'ClustOpt': 6, 'ML2DAC': 4}"
+    },
+    {
+      "test": "plan_counts_1_dataset_3_views",
+      "status": "PASS",
+      "detail": "18 / 42"
+    },
+    {
+      "test": "plan_counts_50_datasets_3_views",
+      "status": "PASS",
+      "detail": "900 / 2100"
+    }
+  ],
+  "status": "PASS"
+}

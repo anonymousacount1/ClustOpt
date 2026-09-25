@@ -1,0 +1,99 @@
+{
+  "family_id": "arcs_circles_rings",
+  "family_name": "Arcs / circles / rings",
+  "family_seed": 40119003,
+  "n_features": 2,
+  "feature_names": ["x", "y"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "clean_arcs",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "circle", "components_per_cluster": 1},
+      "parameter_ranges": {"radius": [0.06, 0.12], "thickness": [0.004, 0.012], "angle_high": [2.0, 3.5]}
+    },
+    {
+      "subfamily_id": "nested_arcs",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "circle", "components_per_cluster": 2},
+      "parameter_ranges": {"radius": [0.04, 0.10], "thickness": [0.003, 0.010], "angle_high": [3.0, 6.28]}
+    },
+    {
+      "subfamily_id": "partial_circles",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "circle", "components_per_cluster": 1},
+      "parameter_ranges": {"radius": [0.06, 0.13], "thickness": [0.004, 0.012], "angle_high": [1.0, 2.5]}
+    },
+    {
+      "subfamily_id": "full_rings",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "ring_annulus", "components_per_cluster": 1},
+      "parameter_ranges": {"inner_radius": [0.04, 0.08], "thickness": [0.012, 0.03], "ellipse_ratio": [0.85, 1.0], "angle_high": [6.0, 6.283]}
+    },
+    {
+      "subfamily_id": "annuli_variable_thickness",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "ring_annulus", "components_per_cluster": 1},
+      "parameter_ranges": {"inner_radius": [0.03, 0.08], "thickness": [0.020, 0.05], "ellipse_ratio": [0.65, 1.0], "angle_high": [5.0, 6.283]}
+    },
+    {
+      "subfamily_id": "broken_rings",
+      "cluster_budget": {"2": 44, "3": 66, "4": 66, "5": 44},
+      "component_strategy": {"component_type": "ring_annulus", "components_per_cluster": 1},
+      "parameter_ranges": {"inner_radius": [0.04, 0.08], "thickness": [0.012, 0.03], "ellipse_ratio": [0.7, 1.0], "angle_high": [2.5, 5.0]}
+    },
+    {
+      "subfamily_id": "noisy_overlapping_arcs",
+      "cluster_budget": {"2": 56, "3": 84, "4": 84, "5": 56},
+      "component_strategy": {"component_type": "circle", "components_per_cluster": 1},
+      "parameter_ranges": {"radius": [0.07, 0.14], "thickness": [0.008, 0.020], "angle_high": [1.5, 3.5]}
+    },
+    {
+      "subfamily_id": "nested_overlapping_arc_pairs",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {
+        "component_type": "ellipse",
+        "components_per_cluster": 1,
+        "cluster_placement": {
+          "mode": "nested",
+          "center_jitter_frac": [0.0, 0.06],
+          "radius_decay": [0.55, 0.78],
+          "shared_param_keys": ["rotation", "ry_ratio", "angle_low", "angle_high"]
+        }
+      },
+      "parameter_ranges": {
+        "rx": [0.30, 0.42],
+        "ry_ratio": [0.55, 1.0],
+        "rotation": [-3.14159, 3.14159],
+        "thickness": [0.005, 0.018],
+        "angle_low": [0.0, 0.0],
+        "angle_high": [3.0, 3.28]
+      }
+    }
+  ]
+}

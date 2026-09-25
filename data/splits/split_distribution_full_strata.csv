@@ -1,0 +1,1377 @@
+family,subfamily,difficulty,cluster_count,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,total
+Arcs / circles / rings,annuli_variable_thickness,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,8.0
+Arcs / circles / rings,annuli_variable_thickness,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,annuli_variable_thickness,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,12.0
+Arcs / circles / rings,annuli_variable_thickness,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,8.0
+Arcs / circles / rings,annuli_variable_thickness,hard,2,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,annuli_variable_thickness,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,annuli_variable_thickness,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,annuli_variable_thickness,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,annuli_variable_thickness,medium,2,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Arcs / circles / rings,annuli_variable_thickness,medium,3,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,21.0
+Arcs / circles / rings,annuli_variable_thickness,medium,4,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Arcs / circles / rings,annuli_variable_thickness,medium,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,14.0
+Arcs / circles / rings,annuli_variable_thickness,very_hard,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,6.0
+Arcs / circles / rings,annuli_variable_thickness,very_hard,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,9.0
+Arcs / circles / rings,annuli_variable_thickness,very_hard,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,9.0
+Arcs / circles / rings,annuli_variable_thickness,very_hard,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6.0
+Arcs / circles / rings,broken_rings,easy,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,9.0
+Arcs / circles / rings,broken_rings,easy,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,13.0
+Arcs / circles / rings,broken_rings,easy,4,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Arcs / circles / rings,broken_rings,easy,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,9.0
+Arcs / circles / rings,broken_rings,hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Arcs / circles / rings,broken_rings,hard,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Arcs / circles / rings,broken_rings,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Arcs / circles / rings,broken_rings,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,13.0
+Arcs / circles / rings,broken_rings,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,15.0
+Arcs / circles / rings,broken_rings,medium,3,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Arcs / circles / rings,broken_rings,medium,4,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,23.0
+Arcs / circles / rings,broken_rings,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Arcs / circles / rings,broken_rings,very_hard,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,7.0
+Arcs / circles / rings,broken_rings,very_hard,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,10.0
+Arcs / circles / rings,broken_rings,very_hard,4,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Arcs / circles / rings,broken_rings,very_hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,7.0
+Arcs / circles / rings,clean_arcs,easy,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Arcs / circles / rings,clean_arcs,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,clean_arcs,easy,4,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,clean_arcs,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Arcs / circles / rings,clean_arcs,hard,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,12.0
+Arcs / circles / rings,clean_arcs,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,clean_arcs,hard,4,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,clean_arcs,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,clean_arcs,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Arcs / circles / rings,clean_arcs,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,21.0
+Arcs / circles / rings,clean_arcs,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,21.0
+Arcs / circles / rings,clean_arcs,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,14.0
+Arcs / circles / rings,clean_arcs,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,6.0
+Arcs / circles / rings,clean_arcs,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,9.0
+Arcs / circles / rings,clean_arcs,very_hard,4,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Arcs / circles / rings,clean_arcs,very_hard,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,6.0
+Arcs / circles / rings,full_rings,easy,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,8.0
+Arcs / circles / rings,full_rings,easy,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,full_rings,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,full_rings,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,8.0
+Arcs / circles / rings,full_rings,hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,full_rings,hard,3,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,full_rings,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,full_rings,hard,5,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,full_rings,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Arcs / circles / rings,full_rings,medium,3,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,21.0
+Arcs / circles / rings,full_rings,medium,4,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Arcs / circles / rings,full_rings,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Arcs / circles / rings,full_rings,very_hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,6.0
+Arcs / circles / rings,full_rings,very_hard,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,9.0
+Arcs / circles / rings,full_rings,very_hard,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Arcs / circles / rings,full_rings,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,6.0
+Arcs / circles / rings,nested_arcs,easy,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Arcs / circles / rings,nested_arcs,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,nested_arcs,easy,4,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,nested_arcs,easy,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Arcs / circles / rings,nested_arcs,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,nested_arcs,hard,3,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,nested_arcs,hard,4,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,18.0
+Arcs / circles / rings,nested_arcs,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,12.0
+Arcs / circles / rings,nested_arcs,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,14.0
+Arcs / circles / rings,nested_arcs,medium,3,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Arcs / circles / rings,nested_arcs,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,21.0
+Arcs / circles / rings,nested_arcs,medium,5,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Arcs / circles / rings,nested_arcs,very_hard,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,6.0
+Arcs / circles / rings,nested_arcs,very_hard,3,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Arcs / circles / rings,nested_arcs,very_hard,4,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,9.0
+Arcs / circles / rings,nested_arcs,very_hard,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,12.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,easy,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,12.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,18.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,hard,4,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,12.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,medium,2,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,medium,3,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,medium,4,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,medium,5,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,very_hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,very_hard,3,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,9.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,very_hard,4,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,9.0
+Arcs / circles / rings,nested_overlapping_arc_pairs,very_hard,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,6.0
+Arcs / circles / rings,noisy_overlapping_arcs,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Arcs / circles / rings,noisy_overlapping_arcs,easy,3,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Arcs / circles / rings,noisy_overlapping_arcs,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,17.0
+Arcs / circles / rings,noisy_overlapping_arcs,easy,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Arcs / circles / rings,noisy_overlapping_arcs,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,17.0
+Arcs / circles / rings,noisy_overlapping_arcs,hard,3,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,25.0
+Arcs / circles / rings,noisy_overlapping_arcs,hard,4,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,25.0
+Arcs / circles / rings,noisy_overlapping_arcs,hard,5,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Arcs / circles / rings,noisy_overlapping_arcs,medium,2,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Arcs / circles / rings,noisy_overlapping_arcs,medium,3,2.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,29.0
+Arcs / circles / rings,noisy_overlapping_arcs,medium,4,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,29.0
+Arcs / circles / rings,noisy_overlapping_arcs,medium,5,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Arcs / circles / rings,noisy_overlapping_arcs,very_hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Arcs / circles / rings,noisy_overlapping_arcs,very_hard,3,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Arcs / circles / rings,noisy_overlapping_arcs,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Arcs / circles / rings,noisy_overlapping_arcs,very_hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Arcs / circles / rings,partial_circles,easy,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Arcs / circles / rings,partial_circles,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,partial_circles,easy,4,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Arcs / circles / rings,partial_circles,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Arcs / circles / rings,partial_circles,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,12.0
+Arcs / circles / rings,partial_circles,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,partial_circles,hard,4,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Arcs / circles / rings,partial_circles,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,12.0
+Arcs / circles / rings,partial_circles,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,14.0
+Arcs / circles / rings,partial_circles,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,21.0
+Arcs / circles / rings,partial_circles,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,21.0
+Arcs / circles / rings,partial_circles,medium,5,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Arcs / circles / rings,partial_circles,very_hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Arcs / circles / rings,partial_circles,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,9.0
+Arcs / circles / rings,partial_circles,very_hard,4,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Arcs / circles / rings,partial_circles,very_hard,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,15.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,easy,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,23.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,23.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,15.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,26.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,medium,4,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,26.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,medium,5,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,very_hard,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),amp_arc_trends,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,easy,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,easy,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,hard,3,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,24.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,hard,4,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,24.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,medium,3,2.0,2.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,27.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,medium,4,2.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,27.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,18.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,very_hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,8.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,12.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Deinterleaving (PRI / TOA / AMP-like),hybrid_deinterleaving_scene,very_hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,8.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,easy,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,easy,4,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,easy,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,hard,3,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,22.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,22.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,hard,5,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,medium,2,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,medium,3,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,25.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,25.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,17.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,very_hard,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,very_hard,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),missing_pulses,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,easy,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,easy,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,hard,3,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,23.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,hard,4,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,23.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,medium,2,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,medium,3,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,27.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,medium,4,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,27.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,medium,5,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,very_hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,12.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,12.0
+Deinterleaving (PRI / TOA / AMP-like),pri_amp_coupled,very_hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,easy,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,easy,3,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,easy,4,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,easy,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,hard,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,22.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,22.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,17.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,medium,3,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,25.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,medium,4,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,25.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,medium,5,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,very_hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,very_hard,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),pri_parallel_trains,very_hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,easy,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,easy,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,easy,4,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,22.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,hard,4,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,22.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,medium,3,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,25.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,medium,4,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,25.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,17.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,very_hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,very_hard,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),pri_with_jitter,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,easy,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,10.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,22.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,hard,4,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,22.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,hard,5,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,17.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,medium,3,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,25.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,medium,4,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,25.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,medium,5,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,very_hard,3,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,very_hard,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Deinterleaving (PRI / TOA / AMP-like),spurious_pulses_noise,very_hard,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Hollow / topological components,bridged_components,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Hollow / topological components,bridged_components,easy,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,12.0
+Hollow / topological components,bridged_components,easy,4,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,bridged_components,easy,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Hollow / topological components,bridged_components,hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,bridged_components,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hollow / topological components,bridged_components,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hollow / topological components,bridged_components,hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,bridged_components,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,14.0
+Hollow / topological components,bridged_components,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,21.0
+Hollow / topological components,bridged_components,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,21.0
+Hollow / topological components,bridged_components,medium,5,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Hollow / topological components,bridged_components,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,6.0
+Hollow / topological components,bridged_components,very_hard,3,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Hollow / topological components,bridged_components,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,9.0
+Hollow / topological components,bridged_components,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Hollow / topological components,broken_hollow_shapes,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Hollow / topological components,broken_hollow_shapes,easy,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,12.0
+Hollow / topological components,broken_hollow_shapes,easy,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,broken_hollow_shapes,easy,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,8.0
+Hollow / topological components,broken_hollow_shapes,hard,2,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,broken_hollow_shapes,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,18.0
+Hollow / topological components,broken_hollow_shapes,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,18.0
+Hollow / topological components,broken_hollow_shapes,hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,12.0
+Hollow / topological components,broken_hollow_shapes,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,14.0
+Hollow / topological components,broken_hollow_shapes,medium,3,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,21.0
+Hollow / topological components,broken_hollow_shapes,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,21.0
+Hollow / topological components,broken_hollow_shapes,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,14.0
+Hollow / topological components,broken_hollow_shapes,very_hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,6.0
+Hollow / topological components,broken_hollow_shapes,very_hard,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Hollow / topological components,broken_hollow_shapes,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Hollow / topological components,broken_hollow_shapes,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,6.0
+Hollow / topological components,disconnected_components,easy,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,8.0
+Hollow / topological components,disconnected_components,easy,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,disconnected_components,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,disconnected_components,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,8.0
+Hollow / topological components,disconnected_components,hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,disconnected_components,hard,3,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hollow / topological components,disconnected_components,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Hollow / topological components,disconnected_components,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,12.0
+Hollow / topological components,disconnected_components,medium,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Hollow / topological components,disconnected_components,medium,3,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Hollow / topological components,disconnected_components,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,21.0
+Hollow / topological components,disconnected_components,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,14.0
+Hollow / topological components,disconnected_components,very_hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Hollow / topological components,disconnected_components,very_hard,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Hollow / topological components,disconnected_components,very_hard,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,9.0
+Hollow / topological components,disconnected_components,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Hollow / topological components,hollow_mixed_shapes,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Hollow / topological components,hollow_mixed_shapes,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,13.0
+Hollow / topological components,hollow_mixed_shapes,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Hollow / topological components,hollow_mixed_shapes,easy,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,8.0
+Hollow / topological components,hollow_mixed_shapes,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,13.0
+Hollow / topological components,hollow_mixed_shapes,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,19.0
+Hollow / topological components,hollow_mixed_shapes,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,19.0
+Hollow / topological components,hollow_mixed_shapes,hard,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Hollow / topological components,hollow_mixed_shapes,medium,2,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hollow / topological components,hollow_mixed_shapes,medium,3,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,22.0
+Hollow / topological components,hollow_mixed_shapes,medium,4,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,22.0
+Hollow / topological components,hollow_mixed_shapes,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,15.0
+Hollow / topological components,hollow_mixed_shapes,very_hard,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,6.0
+Hollow / topological components,hollow_mixed_shapes,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Hollow / topological components,hollow_mixed_shapes,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,9.0
+Hollow / topological components,hollow_mixed_shapes,very_hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6.0
+Hollow / topological components,multi_hole_shapes,easy,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Hollow / topological components,multi_hole_shapes,easy,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,multi_hole_shapes,easy,4,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,multi_hole_shapes,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Hollow / topological components,multi_hole_shapes,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,multi_hole_shapes,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,18.0
+Hollow / topological components,multi_hole_shapes,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,18.0
+Hollow / topological components,multi_hole_shapes,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,12.0
+Hollow / topological components,multi_hole_shapes,medium,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Hollow / topological components,multi_hole_shapes,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,21.0
+Hollow / topological components,multi_hole_shapes,medium,4,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Hollow / topological components,multi_hole_shapes,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,14.0
+Hollow / topological components,multi_hole_shapes,very_hard,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,6.0
+Hollow / topological components,multi_hole_shapes,very_hard,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,9.0
+Hollow / topological components,multi_hole_shapes,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Hollow / topological components,multi_hole_shapes,very_hard,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,6.0
+Hollow / topological components,single_hole_rings,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Hollow / topological components,single_hole_rings,easy,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Hollow / topological components,single_hole_rings,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Hollow / topological components,single_hole_rings,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Hollow / topological components,single_hole_rings,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Hollow / topological components,single_hole_rings,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,17.0
+Hollow / topological components,single_hole_rings,hard,4,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Hollow / topological components,single_hole_rings,hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Hollow / topological components,single_hole_rings,medium,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Hollow / topological components,single_hole_rings,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,20.0
+Hollow / topological components,single_hole_rings,medium,4,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Hollow / topological components,single_hole_rings,medium,5,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Hollow / topological components,single_hole_rings,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,6.0
+Hollow / topological components,single_hole_rings,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,9.0
+Hollow / topological components,single_hole_rings,very_hard,4,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Hollow / topological components,single_hole_rings,very_hard,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Hollow / topological components,topological_noise,easy,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Hollow / topological components,topological_noise,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12.0
+Hollow / topological components,topological_noise,easy,4,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,topological_noise,easy,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,8.0
+Hollow / topological components,topological_noise,hard,2,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hollow / topological components,topological_noise,hard,3,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,18.0
+Hollow / topological components,topological_noise,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hollow / topological components,topological_noise,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,12.0
+Hollow / topological components,topological_noise,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,14.0
+Hollow / topological components,topological_noise,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,21.0
+Hollow / topological components,topological_noise,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,21.0
+Hollow / topological components,topological_noise,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,14.0
+Hollow / topological components,topological_noise,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,6.0
+Hollow / topological components,topological_noise,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Hollow / topological components,topological_noise,very_hard,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,9.0
+Hollow / topological components,topological_noise,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,6.0
+Hybrid / mixed geometry,arcs_plus_blobs,easy,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Hybrid / mixed geometry,arcs_plus_blobs,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,arcs_plus_blobs,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,arcs_plus_blobs,easy,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,10.0
+Hybrid / mixed geometry,arcs_plus_blobs,hard,2,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,arcs_plus_blobs,hard,3,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Hybrid / mixed geometry,arcs_plus_blobs,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,23.0
+Hybrid / mixed geometry,arcs_plus_blobs,hard,5,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,arcs_plus_blobs,medium,2,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,arcs_plus_blobs,medium,3,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,26.0
+Hybrid / mixed geometry,arcs_plus_blobs,medium,4,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,26.0
+Hybrid / mixed geometry,arcs_plus_blobs,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,arcs_plus_blobs,very_hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,7.0
+Hybrid / mixed geometry,arcs_plus_blobs,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Hybrid / mixed geometry,arcs_plus_blobs,very_hard,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Hybrid / mixed geometry,arcs_plus_blobs,very_hard,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,7.0
+Hybrid / mixed geometry,bands_plus_arcs,easy,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Hybrid / mixed geometry,bands_plus_arcs,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,bands_plus_arcs,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,bands_plus_arcs,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,11.0
+Hybrid / mixed geometry,bands_plus_arcs,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,bands_plus_arcs,hard,3,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,24.0
+Hybrid / mixed geometry,bands_plus_arcs,hard,4,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,24.0
+Hybrid / mixed geometry,bands_plus_arcs,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,bands_plus_arcs,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,19.0
+Hybrid / mixed geometry,bands_plus_arcs,medium,3,2.0,2.0,2.0,2.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,29.0
+Hybrid / mixed geometry,bands_plus_arcs,medium,4,2.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,29.0
+Hybrid / mixed geometry,bands_plus_arcs,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,19.0
+Hybrid / mixed geometry,bands_plus_arcs,very_hard,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Hybrid / mixed geometry,bands_plus_arcs,very_hard,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,12.0
+Hybrid / mixed geometry,bands_plus_arcs,very_hard,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,12.0
+Hybrid / mixed geometry,bands_plus_arcs,very_hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Hybrid / mixed geometry,bands_plus_blobs,easy,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Hybrid / mixed geometry,bands_plus_blobs,easy,3,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,bands_plus_blobs,easy,4,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,bands_plus_blobs,easy,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,10.0
+Hybrid / mixed geometry,bands_plus_blobs,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,15.0
+Hybrid / mixed geometry,bands_plus_blobs,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,23.0
+Hybrid / mixed geometry,bands_plus_blobs,hard,4,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Hybrid / mixed geometry,bands_plus_blobs,hard,5,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,bands_plus_blobs,medium,2,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,bands_plus_blobs,medium,3,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,26.0
+Hybrid / mixed geometry,bands_plus_blobs,medium,4,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,26.0
+Hybrid / mixed geometry,bands_plus_blobs,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,18.0
+Hybrid / mixed geometry,bands_plus_blobs,very_hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,7.0
+Hybrid / mixed geometry,bands_plus_blobs,very_hard,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Hybrid / mixed geometry,bands_plus_blobs,very_hard,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Hybrid / mixed geometry,bands_plus_blobs,very_hard,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Hybrid / mixed geometry,curves_plus_ladders,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Hybrid / mixed geometry,curves_plus_ladders,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,curves_plus_ladders,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,curves_plus_ladders,easy,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Hybrid / mixed geometry,curves_plus_ladders,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,curves_plus_ladders,hard,3,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Hybrid / mixed geometry,curves_plus_ladders,hard,4,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Hybrid / mixed geometry,curves_plus_ladders,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,curves_plus_ladders,medium,2,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,curves_plus_ladders,medium,3,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,27.0
+Hybrid / mixed geometry,curves_plus_ladders,medium,4,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,27.0
+Hybrid / mixed geometry,curves_plus_ladders,medium,5,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,curves_plus_ladders,very_hard,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Hybrid / mixed geometry,curves_plus_ladders,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,12.0
+Hybrid / mixed geometry,curves_plus_ladders,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hybrid / mixed geometry,curves_plus_ladders,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,12.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,easy,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,hard,4,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,12.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,21.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,21.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,medium,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,very_hard,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,6.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,very_hard,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,very_hard,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,9.0
+Hybrid / mixed geometry,fragmented_band_with_overlapping_clouds,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Hybrid / mixed geometry,full_mixed_scene,easy,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Hybrid / mixed geometry,full_mixed_scene,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Hybrid / mixed geometry,full_mixed_scene,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,17.0
+Hybrid / mixed geometry,full_mixed_scene,easy,5,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Hybrid / mixed geometry,full_mixed_scene,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,17.0
+Hybrid / mixed geometry,full_mixed_scene,hard,3,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,25.0
+Hybrid / mixed geometry,full_mixed_scene,hard,4,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,25.0
+Hybrid / mixed geometry,full_mixed_scene,hard,5,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Hybrid / mixed geometry,full_mixed_scene,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,20.0
+Hybrid / mixed geometry,full_mixed_scene,medium,3,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,2.0,30.0
+Hybrid / mixed geometry,full_mixed_scene,medium,4,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,30.0
+Hybrid / mixed geometry,full_mixed_scene,medium,5,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,20.0
+Hybrid / mixed geometry,full_mixed_scene,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,9.0
+Hybrid / mixed geometry,full_mixed_scene,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Hybrid / mixed geometry,full_mixed_scene,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13.0
+Hybrid / mixed geometry,full_mixed_scene,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Hybrid / mixed geometry,polygons_plus_rings,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,10.0
+Hybrid / mixed geometry,polygons_plus_rings,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,polygons_plus_rings,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,polygons_plus_rings,easy,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,10.0
+Hybrid / mixed geometry,polygons_plus_rings,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,15.0
+Hybrid / mixed geometry,polygons_plus_rings,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,23.0
+Hybrid / mixed geometry,polygons_plus_rings,hard,4,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,23.0
+Hybrid / mixed geometry,polygons_plus_rings,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Hybrid / mixed geometry,polygons_plus_rings,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,polygons_plus_rings,medium,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,26.0
+Hybrid / mixed geometry,polygons_plus_rings,medium,4,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,26.0
+Hybrid / mixed geometry,polygons_plus_rings,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Hybrid / mixed geometry,polygons_plus_rings,very_hard,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,7.0
+Hybrid / mixed geometry,polygons_plus_rings,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,11.0
+Hybrid / mixed geometry,polygons_plus_rings,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Hybrid / mixed geometry,polygons_plus_rings,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,7.0
+Hybrid / mixed geometry,topology_plus_texture,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,11.0
+Hybrid / mixed geometry,topology_plus_texture,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,topology_plus_texture,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,topology_plus_texture,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Hybrid / mixed geometry,topology_plus_texture,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,topology_plus_texture,hard,3,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,24.0
+Hybrid / mixed geometry,topology_plus_texture,hard,4,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,24.0
+Hybrid / mixed geometry,topology_plus_texture,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Hybrid / mixed geometry,topology_plus_texture,medium,2,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,19.0
+Hybrid / mixed geometry,topology_plus_texture,medium,3,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,2.0,2.0,29.0
+Hybrid / mixed geometry,topology_plus_texture,medium,4,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,29.0
+Hybrid / mixed geometry,topology_plus_texture,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Hybrid / mixed geometry,topology_plus_texture,very_hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,8.0
+Hybrid / mixed geometry,topology_plus_texture,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Hybrid / mixed geometry,topology_plus_texture,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12.0
+Hybrid / mixed geometry,topology_plus_texture,very_hard,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Ladder / grid / lattice,distorted_grid,easy,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Ladder / grid / lattice,distorted_grid,easy,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Ladder / grid / lattice,distorted_grid,easy,4,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Ladder / grid / lattice,distorted_grid,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Ladder / grid / lattice,distorted_grid,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,12.0
+Ladder / grid / lattice,distorted_grid,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Ladder / grid / lattice,distorted_grid,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,18.0
+Ladder / grid / lattice,distorted_grid,hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Ladder / grid / lattice,distorted_grid,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,14.0
+Ladder / grid / lattice,distorted_grid,medium,3,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Ladder / grid / lattice,distorted_grid,medium,4,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Ladder / grid / lattice,distorted_grid,medium,5,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Ladder / grid / lattice,distorted_grid,very_hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Ladder / grid / lattice,distorted_grid,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,9.0
+Ladder / grid / lattice,distorted_grid,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Ladder / grid / lattice,distorted_grid,very_hard,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,easy,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,easy,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,easy,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,easy,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,12.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,medium,3,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,20.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,medium,5,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,very_hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,6.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Ladder / grid / lattice,grid_with_noise_and_gaps,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Ladder / grid / lattice,missing_rungs_ladder,easy,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Ladder / grid / lattice,missing_rungs_ladder,easy,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Ladder / grid / lattice,missing_rungs_ladder,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,12.0
+Ladder / grid / lattice,missing_rungs_ladder,easy,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,8.0
+Ladder / grid / lattice,missing_rungs_ladder,hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,12.0
+Ladder / grid / lattice,missing_rungs_ladder,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,18.0
+Ladder / grid / lattice,missing_rungs_ladder,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Ladder / grid / lattice,missing_rungs_ladder,hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,12.0
+Ladder / grid / lattice,missing_rungs_ladder,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,14.0
+Ladder / grid / lattice,missing_rungs_ladder,medium,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Ladder / grid / lattice,missing_rungs_ladder,medium,4,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,21.0
+Ladder / grid / lattice,missing_rungs_ladder,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,14.0
+Ladder / grid / lattice,missing_rungs_ladder,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,6.0
+Ladder / grid / lattice,missing_rungs_ladder,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Ladder / grid / lattice,missing_rungs_ladder,very_hard,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,9.0
+Ladder / grid / lattice,missing_rungs_ladder,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,6.0
+Ladder / grid / lattice,regular_grid,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Ladder / grid / lattice,regular_grid,easy,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Ladder / grid / lattice,regular_grid,easy,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Ladder / grid / lattice,regular_grid,easy,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Ladder / grid / lattice,regular_grid,hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Ladder / grid / lattice,regular_grid,hard,3,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Ladder / grid / lattice,regular_grid,hard,4,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Ladder / grid / lattice,regular_grid,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Ladder / grid / lattice,regular_grid,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13.0
+Ladder / grid / lattice,regular_grid,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,20.0
+Ladder / grid / lattice,regular_grid,medium,4,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Ladder / grid / lattice,regular_grid,medium,5,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Ladder / grid / lattice,regular_grid,very_hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Ladder / grid / lattice,regular_grid,very_hard,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,9.0
+Ladder / grid / lattice,regular_grid,very_hard,4,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Ladder / grid / lattice,regular_grid,very_hard,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,6.0
+Ladder / grid / lattice,rotated_ladder,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,7.0
+Ladder / grid / lattice,rotated_ladder,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Ladder / grid / lattice,rotated_ladder,easy,4,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Ladder / grid / lattice,rotated_ladder,easy,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,7.0
+Ladder / grid / lattice,rotated_ladder,hard,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Ladder / grid / lattice,rotated_ladder,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Ladder / grid / lattice,rotated_ladder,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Ladder / grid / lattice,rotated_ladder,hard,5,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Ladder / grid / lattice,rotated_ladder,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,13.0
+Ladder / grid / lattice,rotated_ladder,medium,3,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Ladder / grid / lattice,rotated_ladder,medium,4,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Ladder / grid / lattice,rotated_ladder,medium,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Ladder / grid / lattice,rotated_ladder,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,5.0
+Ladder / grid / lattice,rotated_ladder,very_hard,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,8.0
+Ladder / grid / lattice,rotated_ladder,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,8.0
+Ladder / grid / lattice,rotated_ladder,very_hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Ladder / grid / lattice,simple_ladder,easy,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Ladder / grid / lattice,simple_ladder,easy,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Ladder / grid / lattice,simple_ladder,easy,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Ladder / grid / lattice,simple_ladder,easy,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Ladder / grid / lattice,simple_ladder,hard,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Ladder / grid / lattice,simple_ladder,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,17.0
+Ladder / grid / lattice,simple_ladder,hard,4,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Ladder / grid / lattice,simple_ladder,hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Ladder / grid / lattice,simple_ladder,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Ladder / grid / lattice,simple_ladder,medium,3,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,20.0
+Ladder / grid / lattice,simple_ladder,medium,4,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,20.0
+Ladder / grid / lattice,simple_ladder,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,13.0
+Ladder / grid / lattice,simple_ladder,very_hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Ladder / grid / lattice,simple_ladder,very_hard,3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Ladder / grid / lattice,simple_ladder,very_hard,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,9.0
+Ladder / grid / lattice,simple_ladder,very_hard,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Ladder / grid / lattice,sparse_lattice,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,7.0
+Ladder / grid / lattice,sparse_lattice,easy,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Ladder / grid / lattice,sparse_lattice,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,11.0
+Ladder / grid / lattice,sparse_lattice,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Ladder / grid / lattice,sparse_lattice,hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Ladder / grid / lattice,sparse_lattice,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Ladder / grid / lattice,sparse_lattice,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Ladder / grid / lattice,sparse_lattice,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,11.0
+Ladder / grid / lattice,sparse_lattice,medium,2,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Ladder / grid / lattice,sparse_lattice,medium,3,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Ladder / grid / lattice,sparse_lattice,medium,4,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,19.0
+Ladder / grid / lattice,sparse_lattice,medium,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Ladder / grid / lattice,sparse_lattice,very_hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,5.0
+Ladder / grid / lattice,sparse_lattice,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Ladder / grid / lattice,sparse_lattice,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Ladder / grid / lattice,sparse_lattice,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,5.0
+Linear bands / parallel stripes,clean_parallel_bands,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Linear bands / parallel stripes,clean_parallel_bands,easy,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,13.0
+Linear bands / parallel stripes,clean_parallel_bands,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,13.0
+Linear bands / parallel stripes,clean_parallel_bands,easy,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,9.0
+Linear bands / parallel stripes,clean_parallel_bands,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,13.0
+Linear bands / parallel stripes,clean_parallel_bands,hard,3,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Linear bands / parallel stripes,clean_parallel_bands,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Linear bands / parallel stripes,clean_parallel_bands,hard,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Linear bands / parallel stripes,clean_parallel_bands,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,15.0
+Linear bands / parallel stripes,clean_parallel_bands,medium,3,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Linear bands / parallel stripes,clean_parallel_bands,medium,4,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,23.0
+Linear bands / parallel stripes,clean_parallel_bands,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,15.0
+Linear bands / parallel stripes,clean_parallel_bands,very_hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Linear bands / parallel stripes,clean_parallel_bands,very_hard,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Linear bands / parallel stripes,clean_parallel_bands,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Linear bands / parallel stripes,clean_parallel_bands,very_hard,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,9.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,13.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,easy,4,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,easy,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,hard,2,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,hard,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,20.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,hard,5,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,15.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,medium,3,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,23.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,medium,4,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,23.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,medium,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,very_hard,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,7.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,10.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Linear bands / parallel stripes,crossing_or_near_crossing_bands,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,7.0
+Linear bands / parallel stripes,fragmented_bands,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Linear bands / parallel stripes,fragmented_bands,easy,3,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Linear bands / parallel stripes,fragmented_bands,easy,4,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Linear bands / parallel stripes,fragmented_bands,easy,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Linear bands / parallel stripes,fragmented_bands,hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Linear bands / parallel stripes,fragmented_bands,hard,3,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,20.0
+Linear bands / parallel stripes,fragmented_bands,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,20.0
+Linear bands / parallel stripes,fragmented_bands,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,13.0
+Linear bands / parallel stripes,fragmented_bands,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,15.0
+Linear bands / parallel stripes,fragmented_bands,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,23.0
+Linear bands / parallel stripes,fragmented_bands,medium,4,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Linear bands / parallel stripes,fragmented_bands,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,15.0
+Linear bands / parallel stripes,fragmented_bands,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,7.0
+Linear bands / parallel stripes,fragmented_bands,very_hard,3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Linear bands / parallel stripes,fragmented_bands,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,10.0
+Linear bands / parallel stripes,fragmented_bands,very_hard,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,7.0
+Linear bands / parallel stripes,noisy_interleaved_bands,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,10.0
+Linear bands / parallel stripes,noisy_interleaved_bands,easy,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,14.0
+Linear bands / parallel stripes,noisy_interleaved_bands,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Linear bands / parallel stripes,noisy_interleaved_bands,easy,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,10.0
+Linear bands / parallel stripes,noisy_interleaved_bands,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,14.0
+Linear bands / parallel stripes,noisy_interleaved_bands,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,22.0
+Linear bands / parallel stripes,noisy_interleaved_bands,hard,4,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,22.0
+Linear bands / parallel stripes,noisy_interleaved_bands,hard,5,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Linear bands / parallel stripes,noisy_interleaved_bands,medium,2,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Linear bands / parallel stripes,noisy_interleaved_bands,medium,3,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,25.0
+Linear bands / parallel stripes,noisy_interleaved_bands,medium,4,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,25.0
+Linear bands / parallel stripes,noisy_interleaved_bands,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,17.0
+Linear bands / parallel stripes,noisy_interleaved_bands,very_hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,7.0
+Linear bands / parallel stripes,noisy_interleaved_bands,very_hard,3,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Linear bands / parallel stripes,noisy_interleaved_bands,very_hard,4,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Linear bands / parallel stripes,noisy_interleaved_bands,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Linear bands / parallel stripes,rotated_parallel_bands,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Linear bands / parallel stripes,rotated_parallel_bands,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Linear bands / parallel stripes,rotated_parallel_bands,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12.0
+Linear bands / parallel stripes,rotated_parallel_bands,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Linear bands / parallel stripes,rotated_parallel_bands,hard,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Linear bands / parallel stripes,rotated_parallel_bands,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Linear bands / parallel stripes,rotated_parallel_bands,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Linear bands / parallel stripes,rotated_parallel_bands,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Linear bands / parallel stripes,rotated_parallel_bands,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,14.0
+Linear bands / parallel stripes,rotated_parallel_bands,medium,3,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Linear bands / parallel stripes,rotated_parallel_bands,medium,4,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Linear bands / parallel stripes,rotated_parallel_bands,medium,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,14.0
+Linear bands / parallel stripes,rotated_parallel_bands,very_hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,6.0
+Linear bands / parallel stripes,rotated_parallel_bands,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,9.0
+Linear bands / parallel stripes,rotated_parallel_bands,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Linear bands / parallel stripes,rotated_parallel_bands,very_hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Linear bands / parallel stripes,thick_ribbons,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Linear bands / parallel stripes,thick_ribbons,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Linear bands / parallel stripes,thick_ribbons,easy,4,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,12.0
+Linear bands / parallel stripes,thick_ribbons,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Linear bands / parallel stripes,thick_ribbons,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,12.0
+Linear bands / parallel stripes,thick_ribbons,hard,3,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Linear bands / parallel stripes,thick_ribbons,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,18.0
+Linear bands / parallel stripes,thick_ribbons,hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Linear bands / parallel stripes,thick_ribbons,medium,2,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Linear bands / parallel stripes,thick_ribbons,medium,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Linear bands / parallel stripes,thick_ribbons,medium,4,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,21.0
+Linear bands / parallel stripes,thick_ribbons,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,14.0
+Linear bands / parallel stripes,thick_ribbons,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,6.0
+Linear bands / parallel stripes,thick_ribbons,very_hard,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Linear bands / parallel stripes,thick_ribbons,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Linear bands / parallel stripes,thick_ribbons,very_hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6.0
+Linear bands / parallel stripes,variable_spacing_bands,easy,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Linear bands / parallel stripes,variable_spacing_bands,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,12.0
+Linear bands / parallel stripes,variable_spacing_bands,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Linear bands / parallel stripes,variable_spacing_bands,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Linear bands / parallel stripes,variable_spacing_bands,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,12.0
+Linear bands / parallel stripes,variable_spacing_bands,hard,3,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Linear bands / parallel stripes,variable_spacing_bands,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,18.0
+Linear bands / parallel stripes,variable_spacing_bands,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,12.0
+Linear bands / parallel stripes,variable_spacing_bands,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Linear bands / parallel stripes,variable_spacing_bands,medium,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Linear bands / parallel stripes,variable_spacing_bands,medium,4,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,21.0
+Linear bands / parallel stripes,variable_spacing_bands,medium,5,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Linear bands / parallel stripes,variable_spacing_bands,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,6.0
+Linear bands / parallel stripes,variable_spacing_bands,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Linear bands / parallel stripes,variable_spacing_bands,very_hard,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Linear bands / parallel stripes,variable_spacing_bands,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Parabolic / curved chains,arc_parabola_mixture,easy,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Parabolic / curved chains,arc_parabola_mixture,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,arc_parabola_mixture,easy,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Parabolic / curved chains,arc_parabola_mixture,easy,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Parabolic / curved chains,arc_parabola_mixture,hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Parabolic / curved chains,arc_parabola_mixture,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,arc_parabola_mixture,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,arc_parabola_mixture,hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,arc_parabola_mixture,medium,2,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Parabolic / curved chains,arc_parabola_mixture,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,19.0
+Parabolic / curved chains,arc_parabola_mixture,medium,4,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,19.0
+Parabolic / curved chains,arc_parabola_mixture,medium,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Parabolic / curved chains,arc_parabola_mixture,very_hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Parabolic / curved chains,arc_parabola_mixture,very_hard,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,8.0
+Parabolic / curved chains,arc_parabola_mixture,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Parabolic / curved chains,arc_parabola_mixture,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,5.0
+Parabolic / curved chains,clean_parabolas,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Parabolic / curved chains,clean_parabolas,easy,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,clean_parabolas,easy,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Parabolic / curved chains,clean_parabolas,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Parabolic / curved chains,clean_parabolas,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,clean_parabolas,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,clean_parabolas,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,clean_parabolas,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,clean_parabolas,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,13.0
+Parabolic / curved chains,clean_parabolas,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,19.0
+Parabolic / curved chains,clean_parabolas,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,19.0
+Parabolic / curved chains,clean_parabolas,medium,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,13.0
+Parabolic / curved chains,clean_parabolas,very_hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0
+Parabolic / curved chains,clean_parabolas,very_hard,3,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,8.0
+Parabolic / curved chains,clean_parabolas,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Parabolic / curved chains,clean_parabolas,very_hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5.0
+Parabolic / curved chains,curves_with_density_drift,easy,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Parabolic / curved chains,curves_with_density_drift,easy,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,curves_with_density_drift,easy,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Parabolic / curved chains,curves_with_density_drift,easy,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,7.0
+Parabolic / curved chains,curves_with_density_drift,hard,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,curves_with_density_drift,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,curves_with_density_drift,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,curves_with_density_drift,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Parabolic / curved chains,curves_with_density_drift,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,13.0
+Parabolic / curved chains,curves_with_density_drift,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Parabolic / curved chains,curves_with_density_drift,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Parabolic / curved chains,curves_with_density_drift,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,12.0
+Parabolic / curved chains,curves_with_density_drift,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,5.0
+Parabolic / curved chains,curves_with_density_drift,very_hard,3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Parabolic / curved chains,curves_with_density_drift,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Parabolic / curved chains,curves_with_density_drift,very_hard,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Parabolic / curved chains,fragmented_curves,easy,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Parabolic / curved chains,fragmented_curves,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,fragmented_curves,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,fragmented_curves,easy,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Parabolic / curved chains,fragmented_curves,hard,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,fragmented_curves,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,fragmented_curves,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,fragmented_curves,hard,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Parabolic / curved chains,fragmented_curves,medium,2,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Parabolic / curved chains,fragmented_curves,medium,3,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Parabolic / curved chains,fragmented_curves,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,19.0
+Parabolic / curved chains,fragmented_curves,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Parabolic / curved chains,fragmented_curves,very_hard,2,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Parabolic / curved chains,fragmented_curves,very_hard,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Parabolic / curved chains,fragmented_curves,very_hard,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,8.0
+Parabolic / curved chains,fragmented_curves,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,5.0
+Parabolic / curved chains,noisy_curved_ribbons,easy,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Parabolic / curved chains,noisy_curved_ribbons,easy,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Parabolic / curved chains,noisy_curved_ribbons,easy,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,noisy_curved_ribbons,easy,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Parabolic / curved chains,noisy_curved_ribbons,hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Parabolic / curved chains,noisy_curved_ribbons,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,17.0
+Parabolic / curved chains,noisy_curved_ribbons,hard,4,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Parabolic / curved chains,noisy_curved_ribbons,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,noisy_curved_ribbons,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Parabolic / curved chains,noisy_curved_ribbons,medium,3,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Parabolic / curved chains,noisy_curved_ribbons,medium,4,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Parabolic / curved chains,noisy_curved_ribbons,medium,5,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Parabolic / curved chains,noisy_curved_ribbons,very_hard,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Parabolic / curved chains,noisy_curved_ribbons,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,9.0
+Parabolic / curved chains,noisy_curved_ribbons,very_hard,4,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Parabolic / curved chains,noisy_curved_ribbons,very_hard,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Parabolic / curved chains,opposite_direction_parabolas,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,7.0
+Parabolic / curved chains,opposite_direction_parabolas,easy,3,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,opposite_direction_parabolas,easy,4,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,opposite_direction_parabolas,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,7.0
+Parabolic / curved chains,opposite_direction_parabolas,hard,2,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,opposite_direction_parabolas,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,opposite_direction_parabolas,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,opposite_direction_parabolas,hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,opposite_direction_parabolas,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13.0
+Parabolic / curved chains,opposite_direction_parabolas,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Parabolic / curved chains,opposite_direction_parabolas,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,19.0
+Parabolic / curved chains,opposite_direction_parabolas,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13.0
+Parabolic / curved chains,opposite_direction_parabolas,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,5.0
+Parabolic / curved chains,opposite_direction_parabolas,very_hard,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Parabolic / curved chains,opposite_direction_parabolas,very_hard,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,8.0
+Parabolic / curved chains,opposite_direction_parabolas,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,5.0
+Parabolic / curved chains,variable_curvature_chains,easy,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Parabolic / curved chains,variable_curvature_chains,easy,3,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,variable_curvature_chains,easy,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,variable_curvature_chains,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Parabolic / curved chains,variable_curvature_chains,hard,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,variable_curvature_chains,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,variable_curvature_chains,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Parabolic / curved chains,variable_curvature_chains,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,11.0
+Parabolic / curved chains,variable_curvature_chains,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Parabolic / curved chains,variable_curvature_chains,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,19.0
+Parabolic / curved chains,variable_curvature_chains,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,19.0
+Parabolic / curved chains,variable_curvature_chains,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,13.0
+Parabolic / curved chains,variable_curvature_chains,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,5.0
+Parabolic / curved chains,variable_curvature_chains,very_hard,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,8.0
+Parabolic / curved chains,variable_curvature_chains,very_hard,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,8.0
+Parabolic / curved chains,variable_curvature_chains,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,5.0
+Piecewise polylines / corners,branching_trees,easy,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Piecewise polylines / corners,branching_trees,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13.0
+Piecewise polylines / corners,branching_trees,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,13.0
+Piecewise polylines / corners,branching_trees,easy,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,9.0
+Piecewise polylines / corners,branching_trees,hard,2,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Piecewise polylines / corners,branching_trees,hard,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Piecewise polylines / corners,branching_trees,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,20.0
+Piecewise polylines / corners,branching_trees,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,13.0
+Piecewise polylines / corners,branching_trees,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,15.0
+Piecewise polylines / corners,branching_trees,medium,3,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Piecewise polylines / corners,branching_trees,medium,4,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,23.0
+Piecewise polylines / corners,branching_trees,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,15.0
+Piecewise polylines / corners,branching_trees,very_hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,7.0
+Piecewise polylines / corners,branching_trees,very_hard,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,10.0
+Piecewise polylines / corners,branching_trees,very_hard,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,10.0
+Piecewise polylines / corners,branching_trees,very_hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Piecewise polylines / corners,broken_piecewise_lines,easy,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Piecewise polylines / corners,broken_piecewise_lines,easy,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,12.0
+Piecewise polylines / corners,broken_piecewise_lines,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,broken_piecewise_lines,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Piecewise polylines / corners,broken_piecewise_lines,hard,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,12.0
+Piecewise polylines / corners,broken_piecewise_lines,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,18.0
+Piecewise polylines / corners,broken_piecewise_lines,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,18.0
+Piecewise polylines / corners,broken_piecewise_lines,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,broken_piecewise_lines,medium,2,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Piecewise polylines / corners,broken_piecewise_lines,medium,3,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Piecewise polylines / corners,broken_piecewise_lines,medium,4,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,21.0
+Piecewise polylines / corners,broken_piecewise_lines,medium,5,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Piecewise polylines / corners,broken_piecewise_lines,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,6.0
+Piecewise polylines / corners,broken_piecewise_lines,very_hard,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Piecewise polylines / corners,broken_piecewise_lines,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Piecewise polylines / corners,broken_piecewise_lines,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,6.0
+Piecewise polylines / corners,multi_segment_polylines,easy,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Piecewise polylines / corners,multi_segment_polylines,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,multi_segment_polylines,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,12.0
+Piecewise polylines / corners,multi_segment_polylines,easy,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Piecewise polylines / corners,multi_segment_polylines,hard,2,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,multi_segment_polylines,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,18.0
+Piecewise polylines / corners,multi_segment_polylines,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Piecewise polylines / corners,multi_segment_polylines,hard,5,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,multi_segment_polylines,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,14.0
+Piecewise polylines / corners,multi_segment_polylines,medium,3,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,21.0
+Piecewise polylines / corners,multi_segment_polylines,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,2.0,21.0
+Piecewise polylines / corners,multi_segment_polylines,medium,5,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Piecewise polylines / corners,multi_segment_polylines,very_hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Piecewise polylines / corners,multi_segment_polylines,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,9.0
+Piecewise polylines / corners,multi_segment_polylines,very_hard,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,9.0
+Piecewise polylines / corners,multi_segment_polylines,very_hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6.0
+Piecewise polylines / corners,noisy_corner_junctions,easy,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Piecewise polylines / corners,noisy_corner_junctions,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,12.0
+Piecewise polylines / corners,noisy_corner_junctions,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,12.0
+Piecewise polylines / corners,noisy_corner_junctions,easy,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Piecewise polylines / corners,noisy_corner_junctions,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,noisy_corner_junctions,hard,3,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Piecewise polylines / corners,noisy_corner_junctions,hard,4,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Piecewise polylines / corners,noisy_corner_junctions,hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,noisy_corner_junctions,medium,2,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Piecewise polylines / corners,noisy_corner_junctions,medium,3,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Piecewise polylines / corners,noisy_corner_junctions,medium,4,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,21.0
+Piecewise polylines / corners,noisy_corner_junctions,medium,5,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Piecewise polylines / corners,noisy_corner_junctions,very_hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Piecewise polylines / corners,noisy_corner_junctions,very_hard,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Piecewise polylines / corners,noisy_corner_junctions,very_hard,4,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Piecewise polylines / corners,noisy_corner_junctions,very_hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,6.0
+Piecewise polylines / corners,sharp_corners,easy,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Piecewise polylines / corners,sharp_corners,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,11.0
+Piecewise polylines / corners,sharp_corners,easy,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Piecewise polylines / corners,sharp_corners,easy,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Piecewise polylines / corners,sharp_corners,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,11.0
+Piecewise polylines / corners,sharp_corners,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,17.0
+Piecewise polylines / corners,sharp_corners,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,17.0
+Piecewise polylines / corners,sharp_corners,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Piecewise polylines / corners,sharp_corners,medium,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Piecewise polylines / corners,sharp_corners,medium,3,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Piecewise polylines / corners,sharp_corners,medium,4,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,20.0
+Piecewise polylines / corners,sharp_corners,medium,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Piecewise polylines / corners,sharp_corners,very_hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Piecewise polylines / corners,sharp_corners,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,9.0
+Piecewise polylines / corners,sharp_corners,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Piecewise polylines / corners,sharp_corners,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Piecewise polylines / corners,two_segment_polylines,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Piecewise polylines / corners,two_segment_polylines,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,11.0
+Piecewise polylines / corners,two_segment_polylines,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Piecewise polylines / corners,two_segment_polylines,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Piecewise polylines / corners,two_segment_polylines,hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Piecewise polylines / corners,two_segment_polylines,hard,3,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Piecewise polylines / corners,two_segment_polylines,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,17.0
+Piecewise polylines / corners,two_segment_polylines,hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Piecewise polylines / corners,two_segment_polylines,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,13.0
+Piecewise polylines / corners,two_segment_polylines,medium,3,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,20.0
+Piecewise polylines / corners,two_segment_polylines,medium,4,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Piecewise polylines / corners,two_segment_polylines,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13.0
+Piecewise polylines / corners,two_segment_polylines,very_hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Piecewise polylines / corners,two_segment_polylines,very_hard,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,9.0
+Piecewise polylines / corners,two_segment_polylines,very_hard,4,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,9.0
+Piecewise polylines / corners,two_segment_polylines,very_hard,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,6.0
+Piecewise polylines / corners,y_junctions,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Piecewise polylines / corners,y_junctions,easy,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,12.0
+Piecewise polylines / corners,y_junctions,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,y_junctions,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Piecewise polylines / corners,y_junctions,hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,y_junctions,hard,3,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Piecewise polylines / corners,y_junctions,hard,4,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Piecewise polylines / corners,y_junctions,hard,5,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Piecewise polylines / corners,y_junctions,medium,2,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Piecewise polylines / corners,y_junctions,medium,3,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Piecewise polylines / corners,y_junctions,medium,4,1.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,21.0
+Piecewise polylines / corners,y_junctions,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Piecewise polylines / corners,y_junctions,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,6.0
+Piecewise polylines / corners,y_junctions,very_hard,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Piecewise polylines / corners,y_junctions,very_hard,4,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Piecewise polylines / corners,y_junctions,very_hard,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Polygons / rectangles / frames,noisy_polygons,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,noisy_polygons,easy,3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,noisy_polygons,easy,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,10.0
+Polygons / rectangles / frames,noisy_polygons,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,7.0
+Polygons / rectangles / frames,noisy_polygons,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,10.0
+Polygons / rectangles / frames,noisy_polygons,hard,3,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Polygons / rectangles / frames,noisy_polygons,hard,4,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Polygons / rectangles / frames,noisy_polygons,hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,noisy_polygons,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,12.0
+Polygons / rectangles / frames,noisy_polygons,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,18.0
+Polygons / rectangles / frames,noisy_polygons,medium,4,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Polygons / rectangles / frames,noisy_polygons,medium,5,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Polygons / rectangles / frames,noisy_polygons,very_hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,noisy_polygons,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Polygons / rectangles / frames,noisy_polygons,very_hard,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,8.0
+Polygons / rectangles / frames,noisy_polygons,very_hard,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,open_frames,easy,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,open_frames,easy,3,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,10.0
+Polygons / rectangles / frames,open_frames,easy,4,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,10.0
+Polygons / rectangles / frames,open_frames,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Polygons / rectangles / frames,open_frames,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,10.0
+Polygons / rectangles / frames,open_frames,hard,3,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Polygons / rectangles / frames,open_frames,hard,4,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Polygons / rectangles / frames,open_frames,hard,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,open_frames,medium,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Polygons / rectangles / frames,open_frames,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Polygons / rectangles / frames,open_frames,medium,4,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,18.0
+Polygons / rectangles / frames,open_frames,medium,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Polygons / rectangles / frames,open_frames,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,open_frames,very_hard,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Polygons / rectangles / frames,open_frames,very_hard,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Polygons / rectangles / frames,open_frames,very_hard,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,overlapping_polygons,easy,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Polygons / rectangles / frames,overlapping_polygons,easy,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,10.0
+Polygons / rectangles / frames,overlapping_polygons,easy,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,10.0
+Polygons / rectangles / frames,overlapping_polygons,easy,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,overlapping_polygons,hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,overlapping_polygons,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,15.0
+Polygons / rectangles / frames,overlapping_polygons,hard,4,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,15.0
+Polygons / rectangles / frames,overlapping_polygons,hard,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,overlapping_polygons,medium,2,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Polygons / rectangles / frames,overlapping_polygons,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,18.0
+Polygons / rectangles / frames,overlapping_polygons,medium,4,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,18.0
+Polygons / rectangles / frames,overlapping_polygons,medium,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Polygons / rectangles / frames,overlapping_polygons,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,5.0
+Polygons / rectangles / frames,overlapping_polygons,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Polygons / rectangles / frames,overlapping_polygons,very_hard,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Polygons / rectangles / frames,overlapping_polygons,very_hard,5,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,polygon_blob_mixture,easy,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,polygon_blob_mixture,easy,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Polygons / rectangles / frames,polygon_blob_mixture,easy,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Polygons / rectangles / frames,polygon_blob_mixture,easy,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Polygons / rectangles / frames,polygon_blob_mixture,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Polygons / rectangles / frames,polygon_blob_mixture,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Polygons / rectangles / frames,polygon_blob_mixture,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Polygons / rectangles / frames,polygon_blob_mixture,hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Polygons / rectangles / frames,polygon_blob_mixture,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,13.0
+Polygons / rectangles / frames,polygon_blob_mixture,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,18.0
+Polygons / rectangles / frames,polygon_blob_mixture,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,18.0
+Polygons / rectangles / frames,polygon_blob_mixture,medium,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0
+Polygons / rectangles / frames,polygon_blob_mixture,very_hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0
+Polygons / rectangles / frames,polygon_blob_mixture,very_hard,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Polygons / rectangles / frames,polygon_blob_mixture,very_hard,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,8.0
+Polygons / rectangles / frames,polygon_blob_mixture,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,rectangles,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,6.0
+Polygons / rectangles / frames,rectangles,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,10.0
+Polygons / rectangles / frames,rectangles,easy,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,rectangles,easy,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Polygons / rectangles / frames,rectangles,hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,rectangles,hard,3,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Polygons / rectangles / frames,rectangles,hard,4,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Polygons / rectangles / frames,rectangles,hard,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,10.0
+Polygons / rectangles / frames,rectangles,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,11.0
+Polygons / rectangles / frames,rectangles,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,17.0
+Polygons / rectangles / frames,rectangles,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,17.0
+Polygons / rectangles / frames,rectangles,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Polygons / rectangles / frames,rectangles,very_hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,rectangles,very_hard,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,rectangles,very_hard,4,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,rectangles,very_hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,rotated_rectangles,easy,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6.0
+Polygons / rectangles / frames,rotated_rectangles,easy,3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,rotated_rectangles,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,rotated_rectangles,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Polygons / rectangles / frames,rotated_rectangles,hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,10.0
+Polygons / rectangles / frames,rotated_rectangles,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,14.0
+Polygons / rectangles / frames,rotated_rectangles,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,14.0
+Polygons / rectangles / frames,rotated_rectangles,hard,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,10.0
+Polygons / rectangles / frames,rotated_rectangles,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Polygons / rectangles / frames,rotated_rectangles,medium,3,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Polygons / rectangles / frames,rotated_rectangles,medium,4,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Polygons / rectangles / frames,rotated_rectangles,medium,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Polygons / rectangles / frames,rotated_rectangles,very_hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0
+Polygons / rectangles / frames,rotated_rectangles,very_hard,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,rotated_rectangles,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,7.0
+Polygons / rectangles / frames,rotated_rectangles,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,easy,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,easy,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,10.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,6.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,hard,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,10.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,hard,3,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,14.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,10.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,medium,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,medium,3,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,17.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,very_hard,2,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,very_hard,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,7.0
+Polygons / rectangles / frames,triangles_and_quadrilaterals,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,5.0
+Radial / spiral / meander,broken_spirals,easy,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,7.0
+Radial / spiral / meander,broken_spirals,easy,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,broken_spirals,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,broken_spirals,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,7.0
+Radial / spiral / meander,broken_spirals,hard,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Radial / spiral / meander,broken_spirals,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,broken_spirals,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,broken_spirals,hard,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,broken_spirals,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Radial / spiral / meander,broken_spirals,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,broken_spirals,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,broken_spirals,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,13.0
+Radial / spiral / meander,broken_spirals,very_hard,2,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Radial / spiral / meander,broken_spirals,very_hard,3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Radial / spiral / meander,broken_spirals,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Radial / spiral / meander,broken_spirals,very_hard,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,5.0
+Radial / spiral / meander,clean_spirals,easy,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Radial / spiral / meander,clean_spirals,easy,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Radial / spiral / meander,clean_spirals,easy,4,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,clean_spirals,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,7.0
+Radial / spiral / meander,clean_spirals,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,clean_spirals,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,clean_spirals,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,clean_spirals,hard,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Radial / spiral / meander,clean_spirals,medium,2,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,clean_spirals,medium,3,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,clean_spirals,medium,4,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,clean_spirals,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,clean_spirals,very_hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Radial / spiral / meander,clean_spirals,very_hard,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Radial / spiral / meander,clean_spirals,very_hard,4,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Radial / spiral / meander,clean_spirals,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,5.0
+Radial / spiral / meander,meander_curves,easy,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Radial / spiral / meander,meander_curves,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,meander_curves,easy,4,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Radial / spiral / meander,meander_curves,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Radial / spiral / meander,meander_curves,hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Radial / spiral / meander,meander_curves,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,meander_curves,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,meander_curves,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,11.0
+Radial / spiral / meander,meander_curves,medium,2,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,meander_curves,medium,3,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,meander_curves,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,meander_curves,medium,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,meander_curves,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,5.0
+Radial / spiral / meander,meander_curves,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Radial / spiral / meander,meander_curves,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Radial / spiral / meander,meander_curves,very_hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Radial / spiral / meander,noisy_meanders,easy,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,8.0
+Radial / spiral / meander,noisy_meanders,easy,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Radial / spiral / meander,noisy_meanders,easy,4,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,noisy_meanders,easy,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Radial / spiral / meander,noisy_meanders,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Radial / spiral / meander,noisy_meanders,hard,3,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Radial / spiral / meander,noisy_meanders,hard,4,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Radial / spiral / meander,noisy_meanders,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Radial / spiral / meander,noisy_meanders,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,noisy_meanders,medium,3,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Radial / spiral / meander,noisy_meanders,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,20.0
+Radial / spiral / meander,noisy_meanders,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,noisy_meanders,very_hard,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,6.0
+Radial / spiral / meander,noisy_meanders,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Radial / spiral / meander,noisy_meanders,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Radial / spiral / meander,noisy_meanders,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,6.0
+Radial / spiral / meander,radial_arc_mixture,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Radial / spiral / meander,radial_arc_mixture,easy,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Radial / spiral / meander,radial_arc_mixture,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,radial_arc_mixture,easy,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Radial / spiral / meander,radial_arc_mixture,hard,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Radial / spiral / meander,radial_arc_mixture,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,radial_arc_mixture,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,radial_arc_mixture,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,radial_arc_mixture,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,13.0
+Radial / spiral / meander,radial_arc_mixture,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,19.0
+Radial / spiral / meander,radial_arc_mixture,medium,4,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,19.0
+Radial / spiral / meander,radial_arc_mixture,medium,5,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,radial_arc_mixture,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,5.0
+Radial / spiral / meander,radial_arc_mixture,very_hard,3,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Radial / spiral / meander,radial_arc_mixture,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Radial / spiral / meander,radial_arc_mixture,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,5.0
+Radial / spiral / meander,radial_spokes,easy,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Radial / spiral / meander,radial_spokes,easy,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,radial_spokes,easy,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Radial / spiral / meander,radial_spokes,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,7.0
+Radial / spiral / meander,radial_spokes,hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,radial_spokes,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,radial_spokes,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,radial_spokes,hard,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,radial_spokes,medium,2,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,radial_spokes,medium,3,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,radial_spokes,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,radial_spokes,medium,5,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,radial_spokes,very_hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,5.0
+Radial / spiral / meander,radial_spokes,very_hard,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,8.0
+Radial / spiral / meander,radial_spokes,very_hard,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,8.0
+Radial / spiral / meander,radial_spokes,very_hard,5,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Radial / spiral / meander,rotational_symmetry_patterns,easy,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Radial / spiral / meander,rotational_symmetry_patterns,easy,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,rotational_symmetry_patterns,easy,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Radial / spiral / meander,rotational_symmetry_patterns,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Radial / spiral / meander,rotational_symmetry_patterns,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Radial / spiral / meander,rotational_symmetry_patterns,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,rotational_symmetry_patterns,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Radial / spiral / meander,rotational_symmetry_patterns,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Radial / spiral / meander,rotational_symmetry_patterns,medium,2,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Radial / spiral / meander,rotational_symmetry_patterns,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,rotational_symmetry_patterns,medium,4,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Radial / spiral / meander,rotational_symmetry_patterns,medium,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Radial / spiral / meander,rotational_symmetry_patterns,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,5.0
+Radial / spiral / meander,rotational_symmetry_patterns,very_hard,3,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,8.0
+Radial / spiral / meander,rotational_symmetry_patterns,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Radial / spiral / meander,rotational_symmetry_patterns,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,5.0
+Standard clustering blobs,anisotropic_ellipses,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,6.0
+Standard clustering blobs,anisotropic_ellipses,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,anisotropic_ellipses,easy,4,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,9.0
+Standard clustering blobs,anisotropic_ellipses,easy,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,6.0
+Standard clustering blobs,anisotropic_ellipses,hard,2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,9.0
+Standard clustering blobs,anisotropic_ellipses,hard,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,13.0
+Standard clustering blobs,anisotropic_ellipses,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,13.0
+Standard clustering blobs,anisotropic_ellipses,hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,anisotropic_ellipses,medium,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Standard clustering blobs,anisotropic_ellipses,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,anisotropic_ellipses,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,anisotropic_ellipses,medium,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Standard clustering blobs,anisotropic_ellipses,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,4.0
+Standard clustering blobs,anisotropic_ellipses,very_hard,3,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,7.0
+Standard clustering blobs,anisotropic_ellipses,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Standard clustering blobs,anisotropic_ellipses,very_hard,5,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0
+Standard clustering blobs,density_imbalanced_blobs,easy,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,6.0
+Standard clustering blobs,density_imbalanced_blobs,easy,3,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,density_imbalanced_blobs,easy,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,density_imbalanced_blobs,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,6.0
+Standard clustering blobs,density_imbalanced_blobs,hard,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,density_imbalanced_blobs,hard,3,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Standard clustering blobs,density_imbalanced_blobs,hard,4,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Standard clustering blobs,density_imbalanced_blobs,hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,density_imbalanced_blobs,medium,2,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Standard clustering blobs,density_imbalanced_blobs,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,density_imbalanced_blobs,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,density_imbalanced_blobs,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,11.0
+Standard clustering blobs,density_imbalanced_blobs,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,4.0
+Standard clustering blobs,density_imbalanced_blobs,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,7.0
+Standard clustering blobs,density_imbalanced_blobs,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,7.0
+Standard clustering blobs,density_imbalanced_blobs,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,4.0
+Standard clustering blobs,imbalanced_cluster_sizes,easy,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Standard clustering blobs,imbalanced_cluster_sizes,easy,3,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,imbalanced_cluster_sizes,easy,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,imbalanced_cluster_sizes,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,6.0
+Standard clustering blobs,imbalanced_cluster_sizes,hard,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,imbalanced_cluster_sizes,hard,3,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Standard clustering blobs,imbalanced_cluster_sizes,hard,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,13.0
+Standard clustering blobs,imbalanced_cluster_sizes,hard,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,imbalanced_cluster_sizes,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Standard clustering blobs,imbalanced_cluster_sizes,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,imbalanced_cluster_sizes,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,imbalanced_cluster_sizes,medium,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Standard clustering blobs,imbalanced_cluster_sizes,very_hard,2,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0
+Standard clustering blobs,imbalanced_cluster_sizes,very_hard,3,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Standard clustering blobs,imbalanced_cluster_sizes,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Standard clustering blobs,imbalanced_cluster_sizes,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,4.0
+Standard clustering blobs,isotropic_blobs,easy,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0
+Standard clustering blobs,isotropic_blobs,easy,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,isotropic_blobs,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,isotropic_blobs,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,6.0
+Standard clustering blobs,isotropic_blobs,hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,isotropic_blobs,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Standard clustering blobs,isotropic_blobs,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,13.0
+Standard clustering blobs,isotropic_blobs,hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,isotropic_blobs,medium,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Standard clustering blobs,isotropic_blobs,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,isotropic_blobs,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,isotropic_blobs,medium,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Standard clustering blobs,isotropic_blobs,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,4.0
+Standard clustering blobs,isotropic_blobs,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,7.0
+Standard clustering blobs,isotropic_blobs,very_hard,4,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Standard clustering blobs,isotropic_blobs,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,4.0
+Standard clustering blobs,mixed_blob_ellipse,easy,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4.0
+Standard clustering blobs,mixed_blob_ellipse,easy,3,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,6.0
+Standard clustering blobs,mixed_blob_ellipse,easy,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,6.0
+Standard clustering blobs,mixed_blob_ellipse,easy,5,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0
+Standard clustering blobs,mixed_blob_ellipse,hard,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,6.0
+Standard clustering blobs,mixed_blob_ellipse,hard,3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,mixed_blob_ellipse,hard,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,mixed_blob_ellipse,hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,6.0
+Standard clustering blobs,mixed_blob_ellipse,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,7.0
+Standard clustering blobs,mixed_blob_ellipse,medium,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Standard clustering blobs,mixed_blob_ellipse,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,11.0
+Standard clustering blobs,mixed_blob_ellipse,medium,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,7.0
+Standard clustering blobs,mixed_blob_ellipse,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,3.0
+Standard clustering blobs,mixed_blob_ellipse,very_hard,3,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0
+Standard clustering blobs,mixed_blob_ellipse,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,4.0
+Standard clustering blobs,mixed_blob_ellipse,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0
+Standard clustering blobs,outliers_and_noise_blobs,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,6.0
+Standard clustering blobs,outliers_and_noise_blobs,easy,3,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,9.0
+Standard clustering blobs,outliers_and_noise_blobs,easy,4,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,outliers_and_noise_blobs,easy,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,6.0
+Standard clustering blobs,outliers_and_noise_blobs,hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,outliers_and_noise_blobs,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,13.0
+Standard clustering blobs,outliers_and_noise_blobs,hard,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,13.0
+Standard clustering blobs,outliers_and_noise_blobs,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,outliers_and_noise_blobs,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,11.0
+Standard clustering blobs,outliers_and_noise_blobs,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,outliers_and_noise_blobs,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,outliers_and_noise_blobs,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,11.0
+Standard clustering blobs,outliers_and_noise_blobs,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,4.0
+Standard clustering blobs,outliers_and_noise_blobs,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,7.0
+Standard clustering blobs,outliers_and_noise_blobs,very_hard,4,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,7.0
+Standard clustering blobs,outliers_and_noise_blobs,very_hard,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0
+Standard clustering blobs,overlapping_blobs,easy,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,6.0
+Standard clustering blobs,overlapping_blobs,easy,3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,9.0
+Standard clustering blobs,overlapping_blobs,easy,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,overlapping_blobs,easy,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,6.0
+Standard clustering blobs,overlapping_blobs,hard,2,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,overlapping_blobs,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,13.0
+Standard clustering blobs,overlapping_blobs,hard,4,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Standard clustering blobs,overlapping_blobs,hard,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,9.0
+Standard clustering blobs,overlapping_blobs,medium,2,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Standard clustering blobs,overlapping_blobs,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,overlapping_blobs,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Standard clustering blobs,overlapping_blobs,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Standard clustering blobs,overlapping_blobs,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,4.0
+Standard clustering blobs,overlapping_blobs,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,7.0
+Standard clustering blobs,overlapping_blobs,very_hard,4,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Standard clustering blobs,overlapping_blobs,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,4.0
+Texture / density fields,anisotropic_grain,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,7.0
+Texture / density fields,anisotropic_grain,easy,3,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,anisotropic_grain,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,anisotropic_grain,easy,5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,7.0
+Texture / density fields,anisotropic_grain,hard,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,anisotropic_grain,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,anisotropic_grain,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,anisotropic_grain,hard,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Texture / density fields,anisotropic_grain,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,anisotropic_grain,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,19.0
+Texture / density fields,anisotropic_grain,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,19.0
+Texture / density fields,anisotropic_grain,medium,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,anisotropic_grain,very_hard,2,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Texture / density fields,anisotropic_grain,very_hard,3,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Texture / density fields,anisotropic_grain,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+Texture / density fields,anisotropic_grain,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Texture / density fields,density_patchwork,easy,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,8.0
+Texture / density fields,density_patchwork,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,density_patchwork,easy,4,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Texture / density fields,density_patchwork,easy,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,7.0
+Texture / density fields,density_patchwork,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Texture / density fields,density_patchwork,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,17.0
+Texture / density fields,density_patchwork,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,17.0
+Texture / density fields,density_patchwork,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Texture / density fields,density_patchwork,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,density_patchwork,medium,3,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,20.0
+Texture / density fields,density_patchwork,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,20.0
+Texture / density fields,density_patchwork,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,density_patchwork,very_hard,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,6.0
+Texture / density fields,density_patchwork,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Texture / density fields,density_patchwork,very_hard,4,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,8.0
+Texture / density fields,density_patchwork,very_hard,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6.0
+Texture / density fields,fractal_dust,easy,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Texture / density fields,fractal_dust,easy,3,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,fractal_dust,easy,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,11.0
+Texture / density fields,fractal_dust,easy,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Texture / density fields,fractal_dust,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,fractal_dust,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,fractal_dust,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,fractal_dust,hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,11.0
+Texture / density fields,fractal_dust,medium,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,fractal_dust,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,19.0
+Texture / density fields,fractal_dust,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,19.0
+Texture / density fields,fractal_dust,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,13.0
+Texture / density fields,fractal_dust,very_hard,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,5.0
+Texture / density fields,fractal_dust,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,8.0
+Texture / density fields,fractal_dust,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Texture / density fields,fractal_dust,very_hard,5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0
+Texture / density fields,micro_blobs_texture,easy,2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Texture / density fields,micro_blobs_texture,easy,3,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,micro_blobs_texture,easy,4,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,micro_blobs_texture,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Texture / density fields,micro_blobs_texture,hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,micro_blobs_texture,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,micro_blobs_texture,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,micro_blobs_texture,hard,5,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,micro_blobs_texture,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,micro_blobs_texture,medium,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,19.0
+Texture / density fields,micro_blobs_texture,medium,4,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Texture / density fields,micro_blobs_texture,medium,5,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,micro_blobs_texture,very_hard,2,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Texture / density fields,micro_blobs_texture,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Texture / density fields,micro_blobs_texture,very_hard,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,8.0
+Texture / density fields,micro_blobs_texture,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,5.0
+Texture / density fields,oriented_texture,easy,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,7.0
+Texture / density fields,oriented_texture,easy,3,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Texture / density fields,oriented_texture,easy,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Texture / density fields,oriented_texture,easy,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,7.0
+Texture / density fields,oriented_texture,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Texture / density fields,oriented_texture,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,oriented_texture,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,oriented_texture,hard,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,11.0
+Texture / density fields,oriented_texture,medium,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13.0
+Texture / density fields,oriented_texture,medium,3,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Texture / density fields,oriented_texture,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,19.0
+Texture / density fields,oriented_texture,medium,5,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,oriented_texture,very_hard,2,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5.0
+Texture / density fields,oriented_texture,very_hard,3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,8.0
+Texture / density fields,oriented_texture,very_hard,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,8.0
+Texture / density fields,oriented_texture,very_hard,5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5.0
+Texture / density fields,speckle_fields,easy,2,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Texture / density fields,speckle_fields,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11.0
+Texture / density fields,speckle_fields,easy,4,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,11.0
+Texture / density fields,speckle_fields,easy,5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,7.0
+Texture / density fields,speckle_fields,hard,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,speckle_fields,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,speckle_fields,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,speckle_fields,hard,5,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,11.0
+Texture / density fields,speckle_fields,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Texture / density fields,speckle_fields,medium,3,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Texture / density fields,speckle_fields,medium,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Texture / density fields,speckle_fields,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,13.0
+Texture / density fields,speckle_fields,very_hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Texture / density fields,speckle_fields,very_hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,8.0
+Texture / density fields,speckle_fields,very_hard,4,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,8.0
+Texture / density fields,speckle_fields,very_hard,5,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Texture / density fields,texture_plus_structure,easy,2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,7.0
+Texture / density fields,texture_plus_structure,easy,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,11.0
+Texture / density fields,texture_plus_structure,easy,4,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,texture_plus_structure,easy,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0
+Texture / density fields,texture_plus_structure,hard,2,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,11.0
+Texture / density fields,texture_plus_structure,hard,3,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,texture_plus_structure,hard,4,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,16.0
+Texture / density fields,texture_plus_structure,hard,5,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,11.0
+Texture / density fields,texture_plus_structure,medium,2,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,13.0
+Texture / density fields,texture_plus_structure,medium,3,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Texture / density fields,texture_plus_structure,medium,4,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,19.0
+Texture / density fields,texture_plus_structure,medium,5,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,13.0
+Texture / density fields,texture_plus_structure,very_hard,2,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0
+Texture / density fields,texture_plus_structure,very_hard,3,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0
+Texture / density fields,texture_plus_structure,very_hard,4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,8.0
+Texture / density fields,texture_plus_structure,very_hard,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,5.0

@@ -1,0 +1,17 @@
+{
+  "amendment_id": "1a8d6de73b9c15fd",
+  "run_id": "stage4c_v2_323194df26",
+  "repair_set": [
+    "cdbw",
+    "convexity_ratio_image_based",
+    "cvdd",
+    "cvnn",
+    "dcsi",
+    "hough_arc_circle_strength"
+  ],
+  "banks_repaired": 148,
+  "failures": [],
+  "wall_clock_seconds": 7874.9,
+  "clustering_reruns": 0,
+  "banks_regenerated": 0
+}

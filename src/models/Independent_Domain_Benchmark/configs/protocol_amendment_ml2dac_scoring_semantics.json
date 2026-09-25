@@ -1,0 +1,68 @@
+{
+  "amendment": "ML2DAC CORRECTED SELECTED-CVI SCORING SEMANTICS",
+  "date": "2026-09-10",
+  "authorised_by": "supervisor (Stage 4B-3B3 decision, OPTION 2)",
+  "stage": "4B-3B3",
+  "scoring_semantics_id": "ml2dac_corrected_cvi_scoring_v1",
+  "pre_scientific_execution": true,
+  "no_external_result_inspected_before_amendment": true,
+  "outcome_driven": false,
+  "is_a_stage3_correction_replay": false,
+  "applies_to": [
+    "IDB_ML2DAC_M0_original_cvis",
+    "IDB_ML2DAC_M1_original_plus_established",
+    "IDB_ML2DAC_M2_original_plus_new46",
+    "IDB_ML2DAC_M3_extended_cvis"
+  ],
+  "old_legacy_stage3a": {
+    "status": "LEGACY_DEFECTIVE_REFERENCE - preserved, auditable, never modified",
+    "source": "experiments/external_baselines/ML2DAC/indomain/phase.py (_selected_cvi_value, _oriented)",
+    "selected_cvi_evaluation": "gated on 7 CVIs; NaN for the other 54 of 61 classifier classes",
+    "direction": "CVI_DIRECTION covers 7 CVIs; every other class silently defaults to MINIMIZE",
+    "ml2dac_only_values": "dunn_index and coggins_jain_index double/sign inverted",
+    "consequence": "for an unevaluable predicted CVI every candidate tied at -inf and the incumbent remained the first valid candidate, i.e. the top-ranked warmstart"
+  },
+  "new_stage4": {
+    "status": "ml2dac_corrected_cvi_scoring_v1",
+    "module": "models/Independent_Domain_Benchmark/methods/ml2dac_scoring.py",
+    "selected_cvi_evaluation": "all 61 classifier classes evaluated through their frozen canonical implementation",
+    "direction": "explicit for every class from the frozen direction registry; no default, no inference",
+    "ml2dac_only_values": "upstream MetricObjective read from the vendored CVICollection; score_cvi's optimizer-loss convention inverted exactly once to recover the canonical raw value, and the 2147483647 NaN sentinel mapped back to NaN",
+    "direction_registry": "configs/ml2dac_direction_registry.json",
+    "direction_registry_sha256_16": "d1c205de3a5ab054",
+    "direction_registry_content_hash": "c657145a89d9d2d1",
+    "classes": 61,
+    "maximize": 57,
+    "minimize": 4,
+    "unresolved": 0
+  },
+  "changed": [
+    "selected-CVI evaluation coverage",
+    "selected-CVI orientation",
+    "ML2DAC-only raw-value convention"
+  ],
+  "explicitly_unchanged": [
+    "model artifacts",
+    "the four frozen CVI classifiers",
+    "the imputer",
+    "the nearest-neighbour index",
+    "meta-features and their 52-feature schema",
+    "neighbour lookup",
+    "warmstart repository and warmstart selection",
+    "candidate generation",
+    "candidate partitions",
+    "the common seed identity ml2dac_shared_candidate_slate",
+    "search space and budget",
+    "training (none occurred)",
+    "METHOD_IDs",
+    "corpus 709712107424ad4e",
+    "fingerprint 8ddf86c79888ebe9"
+  ],
+  "historical_policy": {
+    "stage3_replay": false,
+    "historical_results_modified": false,
+    "historical_scorer_modified": false,
+    "downstream_stage3_claims": "Stage-3 claims that rest on M0-M3 FINAL SELECTED clustering performance are confounded by the legacy scoring defects and must not be used as evidence that a richer CVI inventory harms or fails to help ML2DAC. Upstream classifier analyses that occur before the scoring stage remain valid."
+  },
+  "reporting_requirement": "every Stage-4 ML2DAC result carries scoring_semantics_id = ml2dac_corrected_cvi_scoring_v1 and must not be presented as a byte-for-byte reproduction of the Stage-3A execution"
+}

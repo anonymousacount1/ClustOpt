@@ -1,0 +1,141 @@
+# Comparison Suite 5 - Portfolio VBS and policy-selection headroom.
+#
+# The central result of the paper narrative: strong candidate solutions exist;
+# the remaining bottleneck is choosing between them.
+comparison_id: comparison_05
+title: Portfolio VBS and policy-selection headroom
+section: 06_comparison_05_vbs_headroom
+
+portfolios:
+  source: frozen_portfolio_manifest
+  # Renamed in the pre-run amendment: the 12-variant MLP/KNN sets include the
+  # Dynamic Real-K variants, which take the metric COUNT from the real utility
+  # vector, so they must not be named "deployable".
+  primary: [knn_all_variants_vbs, knn_strict_deployable_vbs,
+            mlp_all_variants_vbs, mlp_strict_deployable_vbs,
+            real_utility_vbs, learned_source_all_variants_vbs,
+            strict_deployable_clustopt_vbs, all_variant_clustopt_vbs,
+            ml2dac_vbs, autoclust_vbs]
+  supplementary: [fixed_baseline_vbs]
+
+references:
+  source: frozen_selection_manifest
+  best_observed_single_variants:
+    best_observed_mlp_fixed: c4_best_observed_mlp_fixed
+    best_observed_knn_fixed: c4_best_observed_knn_fixed
+    best_observed_real_fixed_raw: c1_best_observed_real_fixed_raw
+  external_leaders: [AutoClust_Extended_InDomain_same_search_space,
+                     ML2DAC_Extended_InDomain_same_search_space]
+
+research_questions:
+  RQ5-A:
+    question: Which framework has the strongest available solution envelope?
+    kind: portfolio_summary
+    metric: best_view_mean_ari
+    caveat: >-
+      Portfolio sizes differ by an order of magnitude (34 ClustOpt variants vs 2
+      external variants), so the raw full-VBS comparison is size-confounded.
+      RQ5-D's matched-size analysis is the fair version and must be read with it.
+  RQ5-B:
+    question: How much headroom exists over the best observed single variant?
+    kind: headroom
+    definition: vbs_best_view_mean_ari - representative_best_view_mean_ari
+    report_both: [headroom_unpaired, headroom_paired_mean]
+    preferred: headroom_paired_mean
+  RQ5-C:
+    question: Which variants provide unique coverage?
+    kind: winner_coverage
+    by: [winning_method_name, family, winning_k_policy, winning_utility_source,
+         winning_weighting_mode]
+    also: unique_coverage
+    note: >-
+      unique_coverage counts datasets where a variant is the SOLE member reaching
+      the portfolio best -- i.e. removing it would strictly lower the VBS. This
+      separates "wins often" from "is irreplaceable".
+  RQ5-D:
+    question: How much of the VBS gain requires a large portfolio?
+    kind: portfolio_size_sensitivity
+    sizes: [1, 2, 3, 5, 10]
+    include_full_size: true
+    gain_shares: [0.90, 0.95]
+    methods: [greedy_forward, random_matched_subset]
+    random_subset:
+      n_samples: 500
+      confidence: 0.95
+      seed: 20260725
+    report: [mean_vbs_at_matched_size, confidence_interval,
+             marginal_gain_per_added_variant,
+             min_size_reaching_90pct_of_achievable_gain,
+             min_size_reaching_95pct_of_achievable_gain]
+    log_dropped_sizes: true
+    headline_matched_comparison:
+      size: 2
+      portfolios: [strict_deployable_clustopt_vbs, autoclust_vbs, ml2dac_vbs]
+      question: >-
+        Is the ClustOpt VBS advantage caused only by a larger portfolio, or does
+        a small ClustOpt portfolio remain competitive at matched size?
+    note: >-
+      Sizes above a portfolio's own membership are SKIPPED and logged, never
+      clipped silently. Both greedy forward construction (deterministic, ordered
+      by marginal gain) and random matched-size subsets (with percentile CIs) are
+      computed.
+  RQ5-E:
+    question: What is the future policy-selection opportunity?
+    kind: headroom
+    portfolio: all_variant_clustopt_vbs
+    reference: "@representative:c4_best_observed_mlp_fixed"
+    also_reference: "@representative:c4_best_observed_knn_fixed"
+    headline: true
+    note: >-
+      THE central policy-selection headroom result. Phrase as: strong candidate
+      solutions already exist in the portfolio; the gap to the VBS is what a
+      better per-dataset selection policy could recover. It is an oracle upper
+      bound, not an achievable target.
+
+grouping_levels: [global, family, subfamily]
+primary_metrics: [best_view_mean_ari, best_view_median_ari, best_view_std_ari,
+                  best_view_k_accuracy]
+runtime_metrics: [selected_member_total_all_views_runtime_median_sec,
+                  portfolio_total_execution_runtime_median_sec,
+                  portfolio_total_execution_runtime_total_sec]
+
+required_capabilities: [primary_ari, best_view, vbs]
+optional_capabilities: [k_analysis, runtime_total_all_views]
+
+runtime_disclosure_required: true
+runtime_disclosure_text: >-
+  A VBS is not a single executable method. portfolio_total_execution_runtime is
+  the cost of evaluating the FULL portfolio and is the only quantity that may be
+  described as the cost of the VBS; selected_member_* runtimes describe the
+  method the oracle picked and are diagnostics. No VBS point appears in an
+  operational accuracy-runtime Pareto plot.
+
+tables:
+  - {name: comparison_05_portfolio_summary.csv, importance: paper_main}
+  - {name: comparison_05_dataset_winners.csv, importance: appendix}
+  - {name: comparison_05_headroom.csv, importance: paper_main}
+  - {name: comparison_05_winner_coverage.csv, importance: paper_main}
+  - {name: comparison_05_family_summary.csv, importance: paper_main}
+  - {name: comparison_05_portfolio_size_curve.csv, importance: paper_main}
+  - {name: comparison_05_matched_size_vbs.csv, importance: paper_main}
+  - {name: comparison_05_greedy_portfolio.csv, importance: paper_main}
+  - {name: comparison_05_greedy_portfolio_membership.csv, importance: paper_main}
+  - {name: comparison_05_random_subset_summary.csv, importance: paper_main}
+  - {name: comparison_05_minimum_portfolio_size.csv, importance: paper_main}
+  - {name: comparison_05_runtime_diagnostics.csv, importance: paper_supplement}
+  - {name: comparison_05_capability_warnings.csv, importance: appendix}
+  - {name: comparison_05_research_questions.csv, importance: paper_main}
+
+plots:
+  - {name: comparison_05_vbs_ari_bar, kind: bar, importance: paper_main}
+  - {name: comparison_05_headroom_bar, kind: bar, importance: paper_main}
+  - {name: comparison_05_winner_composition, kind: stacked_bar, importance: paper_main}
+  - {name: comparison_05_family_heatmap, kind: heatmap, importance: paper_main}
+  - {name: comparison_05_portfolio_size_curve, kind: line, importance: paper_main}
+  - {name: comparison_05_marginal_gain_curve, kind: line, importance: paper_main}
+  - {name: comparison_05_dataset_winner_matrix, kind: heatmap, importance: paper_supplement}
+  - {name: comparison_05_full_cost_runtime, kind: boxplot_log, importance: paper_main}
+
+reports: [README.md, METHODS_AND_DEFINITIONS.md, RESULTS.md, LIMITATIONS.md,
+          PAPER_CANDIDATES.md]
+workbook: 06_comparison_05_vbs_headroom.xlsx

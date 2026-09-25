@@ -1,0 +1,80 @@
+gate,description,status,detail
+G01,at least 13 deterministic fixtures exist,PASS,14 fixtures
+G02,"fixtures cover K=2, K=3 and K=4",PASS,"K present: [1, 2, 3, 4]"
+G03,fixture seed and tolerances are frozen constants,PASS,"seed=20260911 metrics=['cdbw', 'cvdd', 'cvnn', 'dcsi']"
+G04,CDbw validation artifact exists and passes,PASS,overall=PASS
+G05,the CDbw diagnostic was compared on at least 10 fixtures,PASS,cases=13
+G06,the CDbw diagnostic reproduces the raw package exactly,PASS,max_abs_diff=0.0
+G07,CDbw label-order sensitivity is measured and recorded,PASS,max spread 0.9311 over 13 fixtures
+G08,the PRIMARY CDbw uses no invented cluster-ordering convention,PASS,policy=None
+G09,CDbw label-invariance regression test passes,PASS,"56 checks, 0 fail"
+G10,label invariance exercises non-contiguous ids and a permutation,PASS,"schemes=['contiguous', 'non_contiguous', 'permuted'] ids=[17, 42, 103, 255]"
+G11,every comparator is held to its declared invariance tolerance,PASS,"atol by metric = {'cdbw': 1e-12, 'cvdd': 1e-08, 'cvnn': 1e-09, 'dcsi': 1e-08}"
+G12,CVNN validated against fpc on at least 39 comparisons,PASS,"PASS, 55 cases, max abs 4.88e-15"
+G13,CVNN k is frozen at the documented fpc default,PASS,k=5
+G14,CVNN set-relative semantics are recorded in the registry,PASS,set_relative recorded
+G15,CVDD validated against the author implementation,PASS,"PASS_WITH_PREDECLARED_APPLICABILITY_CAVEAT, max abs 2.81e-11"
+G16,the CVDD duplicate-point rule is frozen and metric-local,PASS,"rule frozen, scope metric-local"
+G17,"the duplicate fixture is INVALID as predeclared, not silently scored",PASS,predeclared invalid present
+G18,DCSI component-level validation passes,PASS,"overall=PASS, 12 fixtures"
+G19,DCSI core-point sets are identical to the reference on every fixture,PASS,identical
+G20,DCSI connectedness is identical to the reference on every fixture,PASS,identical
+G21,reference separation is exactly twice ours on every pair,PASS,ratio 2.0 everywhere
+G22,AUTHOR_COMPAT reproduces the reference aggregate on every fixture,PASS,exact
+G23,PAPER mode is genuinely distinct from the reference aggregate,PASS,distinct on every fixture
+G24,"DCSI comparison covers K=2, K=3 and K=4",PASS,"K=[2, 3, 4]"
+G25,every input we call undefined is also undefined for the reference,PASS,"2 undefined inputs, all agreed"
+G26,"the DCSI definition audit is extracted from the paper, not from prose",PASS,"arXiv 2310.12806v4, MinPts 5"
+G27,"DCSI edge-case semantics are frozen, including the incomplete-pair case",PASS,9 edge cases frozen
+G28,the paper-vs-reference discrepancy is recorded as resolved,PASS,RESOLVED -- decision frozen by the project_lead
+G29,the withdrawn ranking-equivalence claim is not asserted anywhere,PASS,unqualified occurrences: none
+G30,the multiclass ranking counterexample is a passing regression test,PASS,paper A>B / compat A<B
+G31,the reversal also occurs through the shipped implementation,PASS,found over 400 candidates
+G32,published DCSI values reproduce under the frozen primary mode,PASS,"verdict=PAPER, 2 cases, max abs 1.11e-16"
+G33,PAPER and AUTHOR_COMPAT share one implementation behind a frozen switch,PASS,single dcsi/dcsi_pair with sep_mode switch
+G34,dcsi_author_compat is NOT one of the primary comparators,PASS,"primary ids=['cdbw', 'cvnn', 'cvdd', 'dcsi']"
+G35,dcsi_author_compat is excluded from every FDR family and headline claim,PASS,5 exclusions recorded
+G36,a DCSI sensitivity analysis is predeclared before any external result,PASS,plan frozen with a decision rule
+G37,the primary comparator set is exactly the four audited in Stage 4A,PASS,"['cdbw', 'cvnn', 'cvdd', 'dcsi']"
+G38,no author source is committed to this repository,PASS,R/MATLAB files: none | definitions: none
+G39,no author data is committed to this repository,PASS,tracked author-data files: none
+G40,the DCSI licence finding and oracle-only relationship are recorded,PASS,"licence=None, oracle-only"
+G41,CVNN is oracle-only so no GPL obligation is incorporated,PASS,EXTERNAL VALIDATION ORACLE ONLY -- no fpc source is copied o
+G42,the reference runtimes are pinned by digest and live outside Git,PASS,3 runtimes pinned
+G43,the project runtime that produced the values is recorded,PASS,python 3.12.2 / numpy 2.1.3
+G44,no external runtime was installed inside a Git-controlled path,PASS,tracked runtime files: none
+G45,the modern comparators are not added to any learned inventory,PASS,inventory references: none
+G46,the existing metric inventory is unchanged,PASS,7 / 10 / 46 (44 live) / 61
+G47,the Stage 4B-1 report exists,PASS,docs\internal_reports\stage4\STAGE4B_MODERN_CVI_VALIDATION.md
+G48,the report has a dedicated DCSI discrepancy section,PASS,section present
+G49,the report states the diagnostic variant is not a fifth CVI,PASS,stated
+G50,the report records the K>=3 ranking caveat rather than equivalence,PASS,caveat present
+G51,the report avoids accusatory characterisation of the authors' work,PASS,flagged phrases: none
+G52,the CDbw paper semantics were audited from the publication,PASS,3 definitional statements recovered
+G53,"the limits of the CDbw source evidence are disclosed, not implied",PASS,per-correction evidence levels recorded
+G54,the published CDbw is established to be permutation-invariant,PASS,YES
+G55,"the discrepancy is classified, and as a package defect",PASS,A -- PACKAGE IMPLEMENTATION DEFECT
+G56,the root cause names the first internal quantity to diverge,PASS,"stdev, returned by prep()"
+G57,the ranking impact of the package defect was measured,PASS,MATERIAL -- arbitrary cluster naming can change which candid
+G58,the ranking-impact study used no frozen-corpus data,PASS,non-scientific deterministic fixtures; the frozen external c
+G59,the primary CDbw is NOT the raw package under a convention,PASS,3 aggregations corrected
+G60,package code is reused with attribution rather than rewritten,PASS,7 package functions reused
+G61,CDbw permutation invariance passes at scale,PASS,"8 geometries x 20, max diff 6.66e-16"
+G62,"invariance covers contiguous, 1-based and sparse namings too",PASS,"['contiguous', 'one_based', 'sparse', 'random_perm x20']"
+G63,the correction is checked against the package where the delta is exact,PASS,compactness/cohesion identical; K=2 separation ratio exactly 2
+G64,an independent implementation corroborates the invariance claim,PASS,fpc invariant over 3 fixtures
+G65,"cdbw_package_compat is a diagnostic, not a comparator",PASS,6 exclusions recorded
+G66,the primary comparator count is still exactly 4,PASS,"4 primary, 2 diagnostics"
+G67,the CDbw frozen parameters were not changed by the correction,PASS,"s=3, euclidean, comb"
+G68,CDbw comparability limits are stated in the report,PASS,"section present, 644 chars"
+G69,the report does not claim comparability with arbitrary package runs,PASS,flagged phrases: none
+G70,the PP artifact provenance record is frozen,PASS,V1 aa977443caa97bda | V2 4a668514b93f237e
+G71,both PP arms reproduced their historical selections exactly,PASS,0/3165 mismatches on both arms
+G72,PP inference is frozen at n_jobs=1,PASS,n_jobs=1
+G73,prediction magnitudes drive no downstream decision,PASS,no magnitude-dependent consumer
+G74,"PP artifacts were materialised, not retrained on new data",PASS,no external data; split 1 held out
+G75,the PP model binaries are NOT in version control,PASS,tracked binaries: none
+G76,the PP determinism audit is committed alongside the pointer record,PASS,models/Independent_Domain_Benchmark/configs/pp_inference_determinism_audit.json
+G77,no scientific external execution has taken place,PASS,fixed32 not executed; no results tree in the component
+G78,the frozen corpus manifest hash is unchanged,PASS,709712107424ad4e
+G79,no comparator parameter was tuned in this stage,PASS,k=5 / MinPts=5 / K=7 / s=3 unchanged

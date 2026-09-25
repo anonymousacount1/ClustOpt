@@ -1,0 +1,14 @@
+{
+  "source": "results_analysis\\clustering_repository\\stage1_2x3_aggregation\\online_fixed50\\online_2x3_dataset_results.csv",
+  "regime": "online fixed-50 (deployed regime)",
+  "arms": {
+    "high": "FP = stage1_full60_mlp_top5_raw_fixed50",
+    "low": "HP = stage1_head14_mlp_top5_raw_fixed50"
+  },
+  "why_online": "both arms deployable, complete per-dataset outputs, and it is the regime the deployed system actually runs; the offline fixed-32 table is NOT mixed in",
+  "population": "Split 1, 1,055 datasets",
+  "paired": true,
+  "n_paired": 1055,
+  "overall_mean_delta": 0.026634112325806533,
+  "stage1_rerun": false
+}

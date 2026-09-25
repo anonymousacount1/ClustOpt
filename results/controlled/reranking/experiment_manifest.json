@@ -1,0 +1,19 @@
+{
+  "experiment_id": "split_01_candidate_reranker_online_final",
+  "mode": "wet",
+  "n_subfamilies": 86,
+  "n_datasets": 1055,
+  "n_runs": 63300,
+  "hashes": {
+    "experiment_id": "split_01_candidate_reranker_online_final",
+    "policy_mapping_hash": "f8c3acc507d9a5e6",
+    "registry_semantics_hash": "beaccd4a0cb61c46",
+    "feature_schema_hash": "C2_LOCAL_UTIL/347",
+    "model_config_hash": "8f488cecbc1d4ba5",
+    "metric_order_hash": "8e548d63a9271a7a",
+    "knn_context_sha": "bcea5895df452891"
+  },
+  "workers": 8,
+  "runtime_sec": 2785.8645980358124,
+  "source_commit": "b08f1307405558793f21a6d8d6504680930f9b6a"
+}

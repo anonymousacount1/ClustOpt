@@ -1,0 +1,120 @@
+{
+  "hypothesis": "shared global core + family/subfamily-specific specialists",
+  "verdict": "SUPPORTED",
+  "decided_by": "predeclared quantities only; no narrative adjustment",
+  "core": {
+    "definition": {
+      "top_k": 5,
+      "min_families": 6,
+      "requires": "Top-5 by TRUE utility AND Top-5 by selection frequency",
+      "frozen_before_computation": true,
+      "note": "operational descriptive label, not a natural-law threshold"
+    },
+    "metrics": [
+      "gridness_fft_acf",
+      "noise_aware_silhouette",
+      "silhouette"
+    ],
+    "n": 3,
+    "sensitivity": {
+      "threshold_5_of_12": {
+        "n_core": 3,
+        "metrics": [
+          "gridness_fft_acf",
+          "noise_aware_silhouette",
+          "silhouette"
+        ],
+        "by_group": {
+          "New46": 1,
+          "Established": 1,
+          "Original": 1
+        }
+      },
+      "threshold_6_of_12": {
+        "n_core": 3,
+        "metrics": [
+          "gridness_fft_acf",
+          "noise_aware_silhouette",
+          "silhouette"
+        ],
+        "by_group": {
+          "New46": 1,
+          "Established": 1,
+          "Original": 1
+        }
+      },
+      "threshold_7_of_12": {
+        "n_core": 3,
+        "metrics": [
+          "gridness_fft_acf",
+          "noise_aware_silhouette",
+          "silhouette"
+        ],
+        "by_group": {
+          "New46": 1,
+          "Established": 1,
+          "Original": 1
+        }
+      }
+    }
+  },
+  "family": {
+    "n_families": 12,
+    "tier_a_pairs": 14,
+    "tier_a_unique_pairs": 10,
+    "tier_b_pairs": 5,
+    "families_with_tier_a_unique": 8,
+    "families_with_tier_b": 5,
+    "median_specialists_per_family": 1.0,
+    "families_without_any_new46_specialist": 0
+  },
+  "subfamily": {
+    "n_subfamilies": 86,
+    "eligible": 86,
+    "tier_a_pairs": 42,
+    "tier_b_pairs": 36,
+    "subfamilies_with_tier_a": 32,
+    "subfamilies_with_tier_b": 30,
+    "subfamily_only_tier_a": 27
+  },
+  "selection_composition": {
+    "core_share": 0.27675343475663233,
+    "unique_specialist_share": 0.04568550198576021,
+    "new46_share": 0.4751700557710646
+  },
+  "alignment": {
+    "family_mean_spearman_all": 0.8280150969696983,
+    "family_mean_spearman_new46": 0.8092817827544548
+  },
+  "downstream_association": {
+    "new46_selection_share_vs_full60_gain": 0.09090909090909093,
+    "n_families": 12,
+    "evidence_level": "2 (association, descriptive)"
+  },
+  "jaccard": {
+    "utility_top5": {
+      "mean": 0.49699374699374704,
+      "median": 0.42857142857142855,
+      "min": 0.1111111111111111,
+      "max": 1.0,
+      "n_pairs": 66
+    },
+    "selection_top5": {
+      "mean": 0.5889249639249639,
+      "median": 0.6666666666666666,
+      "min": 0.25,
+      "max": 1.0,
+      "n_pairs": 66
+    },
+    "specialist_sets": {
+      "mean": 0.15404040404040403,
+      "median": 0.0,
+      "n_pairs": 66
+    }
+  },
+  "evidence_levels": {
+    "1_causal_bundle": "Full60 vs Head14; AutoClust/ML2DAC A-arm contrasts",
+    "2_association": "everything computed in Stage 3C",
+    "3_single_metric_causal": "NOT AVAILABLE"
+  }
+}

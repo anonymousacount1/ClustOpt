@@ -1,0 +1,4 @@
+policy_family,arm_without_reranker,bestview_mean_without_reranker,arm_with_reranker,bestview_mean_with_reranker,reranker_delta,note
+MLP_TOP5_RAW,C0,0.31272202330565513,C3,0.3488347159942083,0.036112692688553175,"C2 is PPv1 and C5 is PPv2, so the PolicyPredictor row mixes a policy change with the reranker and is not a clean reranker contrast"
+KNN_TOP10_RAW,C1,0.3076146283756157,C4,0.3906186571331341,0.0830040287575182,"C2 is PPv1 and C5 is PPv2, so the PolicyPredictor row mixes a policy change with the reranker and is not a clean reranker contrast"
+PolicyPredictor,C2,0.3173904646644763,C5,0.39896712199904855,0.08157665733457221,"C2 is PPv1 and C5 is PPv2, so the PolicyPredictor row mixes a policy change with the reranker and is not a clean reranker contrast"

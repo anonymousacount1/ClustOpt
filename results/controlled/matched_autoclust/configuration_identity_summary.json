@@ -1,0 +1,70 @@
+{
+  "AutoClust_Extended_InDomain": {
+    "n_records_paired": 3165,
+    "n_records_native": 3165,
+    "n_records_ss": 3165,
+    "algorithm_selection_identical_records": 3165,
+    "algorithm_selection_identical_fraction": 1.0,
+    "ari_identical_records": 1148,
+    "ari_differs_records": 2017,
+    "mean_runtime_native": 281.5864488868244,
+    "mean_runtime_ss": 195.50920665096368,
+    "native_algorithms": {
+      "kmeans": 790,
+      "minibatch_kmeans": 1023,
+      "agglomerative": 577,
+      "gmm": 706,
+      "hdbscan": 61,
+      "dbscan": 1,
+      "birch": 7
+    },
+    "ss_algorithms": {
+      "kmeans": 790,
+      "minibatch_kmeans": 1023,
+      "agglomerative": 577,
+      "gmm": 706,
+      "hdbscan": 61,
+      "dbscan": 1,
+      "birch": 7
+    }
+  },
+  "AutoClust_Original_InDomain": {
+    "n_records_paired": 3165,
+    "n_records_native": 3165,
+    "n_records_ss": 3165,
+    "algorithm_selection_identical_records": 3165,
+    "algorithm_selection_identical_fraction": 1.0,
+    "ari_identical_records": 1176,
+    "ari_differs_records": 1989,
+    "mean_runtime_native": 152.87963247308068,
+    "mean_runtime_ss": 132.60386841238545,
+    "native_algorithms": {
+      "kmeans": 790,
+      "minibatch_kmeans": 1023,
+      "agglomerative": 577,
+      "gmm": 706,
+      "hdbscan": 61,
+      "dbscan": 1,
+      "birch": 7
+    },
+    "ss_algorithms": {
+      "kmeans": 790,
+      "minibatch_kmeans": 1023,
+      "agglomerative": 577,
+      "gmm": 706,
+      "hdbscan": 61,
+      "dbscan": 1,
+      "birch": 7
+    }
+  },
+  "extended_pair_bestview": {
+    "mean_native": 0.6170597383643214,
+    "mean_same_search_space": 0.6144995191007991,
+    "mean_delta": 0.0025602192635222664,
+    "n_datasets": 1055,
+    "n_datasets_identical": 427,
+    "n_native_better": 334,
+    "n_ss_better": 294
+  },
+  "runtime_sec": 8.821780443191528
+}

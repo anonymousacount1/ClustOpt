@@ -1,0 +1,411 @@
+{
+  "repeatability": {
+    "algorithms_tested": 7,
+    "repeats_each": 3,
+    "status_mismatches": 0,
+    "raw_label_mismatches": 0,
+    "canonical_partition_mismatches": 0,
+    "all_deterministic": true,
+    "rows": [
+      {
+        "algorithm": "agglomerative",
+        "config": {
+          "n_clusters": 5,
+          "linkage": "complete"
+        },
+        "repeats": 3,
+        "status": "valid",
+        "failure_kind": null,
+        "status_identical": true,
+        "raw_labels_identical": true,
+        "canonical_partition_identical": true,
+        "raw_labels_hash": "b9a956571885f184",
+        "canonical_partition_hash": "d0eb048dcc215e53",
+        "permutation_only_difference": false,
+        "verdict": "DETERMINISTIC"
+      },
+      {
+        "algorithm": "birch",
+        "config": {
+          "n_clusters": 5,
+          "threshold": 0.5,
+          "branching_factor": 100
+        },
+        "repeats": 3,
+        "status": "valid",
+        "failure_kind": null,
+        "status_identical": true,
+        "raw_labels_identical": true,
+        "canonical_partition_identical": true,
+        "raw_labels_hash": "e67f78c8e3a5d1fb",
+        "canonical_partition_hash": "20e61a2c8ef54979",
+        "permutation_only_difference": false,
+        "verdict": "DETERMINISTIC"
+      },
+      {
+        "algorithm": "dbscan",
+        "config": {
+          "eps": 0.8,
+          "min_samples": 10
+        },
+        "repeats": 3,
+        "status": "valid",
+        "failure_kind": null,
+        "status_identical": true,
+        "raw_labels_identical": true,
+        "canonical_partition_identical": true,
+        "raw_labels_hash": "bc973826d17353cf",
+        "canonical_partition_hash": "bc973826d17353cf",
+        "permutation_only_difference": false,
+        "verdict": "DETERMINISTIC"
+      },
+      {
+        "algorithm": "gmm",
+        "config": {
+          "n_components": 5,
+          "covariance_type": "diag",
+          "random_state": 42
+        },
+        "repeats": 3,
+        "status": "valid",
+        "failure_kind": null,
+        "status_identical": true,
+        "raw_labels_identical": true,
+        "canonical_partition_identical": true,
+        "raw_labels_hash": "7a6d9a4b05375225",
+        "canonical_partition_hash": "98565a1ce309d62e",
+        "permutation_only_difference": false,
+        "verdict": "DETERMINISTIC"
+      },
+      {
+        "algorithm": "hdbscan",
+        "config": {
+          "min_cluster_size": 100,
+          "min_samples": 10
+        },
+        "repeats": 3,
+        "status": "valid",
+        "failure_kind": null,
+        "status_identical": true,
+        "raw_labels_identical": true,
+        "canonical_partition_identical": true,
+        "raw_labels_hash": "fc4c6166911fdd50",
+        "canonical_partition_hash": "bc973826d17353cf",
+        "permutation_only_difference": false,
+        "verdict": "DETERMINISTIC"
+      },
+      {
+        "algorithm": "kmeans",
+        "config": {
+          "n_clusters": 5,
+          "init": "k-means++",
+          "n_init": 10,
+          "random_state": 42
+        },
+        "repeats": 3,
+        "status": "valid",
+        "failure_kind": null,
+        "status_identical": true,
+        "raw_labels_identical": true,
+        "canonical_partition_identical": true,
+        "raw_labels_hash": "1133dfe969204ca6",
+        "canonical_partition_hash": "0a39d7b44cd035ce",
+        "permutation_only_difference": false,
+        "verdict": "DETERMINISTIC"
+      },
+      {
+        "algorithm": "minibatch_kmeans",
+        "config": {
+          "n_clusters": 5,
+          "init": "k-means++",
+          "batch_size": 256,
+          "random_state": 42
+        },
+        "repeats": 3,
+        "status": "valid",
+        "failure_kind": null,
+        "status_identical": true,
+        "raw_labels_identical": true,
+        "canonical_partition_identical": true,
+        "raw_labels_hash": "9e877ee83e25f1d4",
+        "canonical_partition_hash": "0daec1c9a5c5409f",
+        "permutation_only_difference": false,
+        "verdict": "DETERMINISTIC"
+      }
+    ]
+  },
+  "physical_trace": {
+    "traces": 9,
+    "algorithms_covered": [
+      "agglomerative",
+      "gmm",
+      "kmeans",
+      "minibatch_kmeans"
+    ],
+    "views_covered": [
+      "x_only",
+      "xy_2d",
+      "y_only"
+    ],
+    "families_covered": [
+      "arcs_circles_rings",
+      "deinterleaving_pri_toa_amp_like",
+      "hollow_topological_components"
+    ],
+    "candidates_executed": 1800,
+    "production_seed_mismatches": 0,
+    "config_mismatches": 0,
+    "status_mismatches": 0,
+    "raw_label_mismatches": 0,
+    "canonical_partition_mismatches": 0,
+    "rows": [
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "x_only",
+        "family": "arcs_circles_rings",
+        "selected_algorithm": "kmeans",
+        "seed": 2027164142,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "xy_2d",
+        "family": "arcs_circles_rings",
+        "selected_algorithm": "kmeans",
+        "seed": 2039839658,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "y_only",
+        "family": "arcs_circles_rings",
+        "selected_algorithm": "gmm",
+        "seed": 2031451061,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "x_only",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "selected_algorithm": "gmm",
+        "seed": 1137392187,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "xy_2d",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "selected_algorithm": "minibatch_kmeans",
+        "seed": 203566624,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "y_only",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "selected_algorithm": "gmm",
+        "seed": 1644547959,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000196_74549b8b",
+        "view": "x_only",
+        "family": "hollow_topological_components",
+        "selected_algorithm": "kmeans",
+        "seed": 330044172,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000196_74549b8b",
+        "view": "xy_2d",
+        "family": "hollow_topological_components",
+        "selected_algorithm": "agglomerative",
+        "seed": 1894279773,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000196_74549b8b",
+        "view": "y_only",
+        "family": "hollow_topological_components",
+        "selected_algorithm": "kmeans",
+        "seed": 882664663,
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      }
+    ]
+  },
+  "canonical_partition_hash_source": "models/Independent_Domain_Benchmark/methods/clustopt_trace.py::partition_hash (reused, not redefined)",
+  "search_space_fingerprint": "8ddf86c79888ebe9",
+  "data": "INTERNAL / NON_SCIENTIFIC only; the frozen external 50 were not touched",
+  "verdict": "AutoClust Stage-4 physical trace reuse: VALIDATED",
+  "physical_trace_coverage_extension": {
+    "purpose": "close the 4/7 algorithm-coverage gap",
+    "targets": [
+      "birch",
+      "dbscan",
+      "hdbscan"
+    ],
+    "traces": 6,
+    "algorithms_covered": [
+      "birch",
+      "dbscan",
+      "hdbscan"
+    ],
+    "candidates_executed": 1200,
+    "production_seed_mismatches": 0,
+    "config_mismatches": 0,
+    "status_mismatches": 0,
+    "raw_label_mismatches": 0,
+    "canonical_partition_mismatches": 0,
+    "rows": [
+      {
+        "dataset_id": "c2m_000495_76ecfaa9",
+        "view": "x_only",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "target_algorithm": "birch",
+        "selected_algorithm": "birch",
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2m_000499_03d3238c",
+        "view": "x_only",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "target_algorithm": "birch",
+        "selected_algorithm": "birch",
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c3e_001012_14024e70",
+        "view": "xy_2d",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "target_algorithm": "dbscan",
+        "selected_algorithm": "dbscan",
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c3e_001016_7c5d1faa",
+        "view": "xy_2d",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "target_algorithm": "dbscan",
+        "selected_algorithm": "dbscan",
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000801_4af09ce7",
+        "view": "xy_2d",
+        "family": "arcs_circles_rings",
+        "target_algorithm": "hdbscan",
+        "selected_algorithm": "hdbscan",
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000804_345fa8ff",
+        "view": "xy_2d",
+        "family": "arcs_circles_rings",
+        "target_algorithm": "hdbscan",
+        "selected_algorithm": "hdbscan",
+        "seeds_equal": true,
+        "n_candidates": 50,
+        "config_mismatches": 0,
+        "status_mismatches": 0,
+        "raw_label_mismatches": 0,
+        "partition_mismatches": 0,
+        "status": "PASS"
+      }
+    ]
+  },
+  "physical_trace_algorithms_covered_total": [
+    "agglomerative",
+    "birch",
+    "dbscan",
+    "gmm",
+    "hdbscan",
+    "kmeans",
+    "minibatch_kmeans"
+  ],
+  "physical_trace_all_seven_covered": true,
+  "physical_trace_total_candidates": 3000
+}

@@ -1,0 +1,2 @@
+variant_a,variant_b,n_a,n_b,only_in_a,only_in_b,common,identical_population
+AutoClust_Extended_InDomain,AutoClust_Extended_InDomain_same_search_space,1055,1055,0,0,1055,True

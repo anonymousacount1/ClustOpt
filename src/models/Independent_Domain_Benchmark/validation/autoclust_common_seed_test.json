@@ -1,0 +1,102 @@
+{
+  "check": "autoclust_common_seed_identity",
+  "resolver": "the real Stage-4 protocol.derive_seed; no seed injected by the harness",
+  "seed_identity": "autoclust_shared_candidate_slate",
+  "keys_tested": 7,
+  "arm_seed_mismatches": 0,
+  "distinct_seeds_across_keys": 7,
+  "keys": 7,
+  "no_global_collapse": true,
+  "views_covered": [
+    "x_only",
+    "xy_2d",
+    "y_only"
+  ],
+  "rows": [
+    {
+      "dataset_id": "c2e_000008_9cbad322",
+      "view_id": "x_only",
+      "seeds": {
+        "IDB_AutoClust_A0_original_cvis": 2027164142,
+        "IDB_AutoClust_A1_original_plus_established": 2027164142,
+        "IDB_AutoClust_A2_original_plus_new46": 2027164142,
+        "IDB_AutoClust_A3_extended_cvis": 2027164142
+      },
+      "all_equal": true,
+      "seed": 2027164142
+    },
+    {
+      "dataset_id": "c2e_000008_9cbad322",
+      "view_id": "y_only",
+      "seeds": {
+        "IDB_AutoClust_A0_original_cvis": 2031451061,
+        "IDB_AutoClust_A1_original_plus_established": 2031451061,
+        "IDB_AutoClust_A2_original_plus_new46": 2031451061,
+        "IDB_AutoClust_A3_extended_cvis": 2031451061
+      },
+      "all_equal": true,
+      "seed": 2031451061
+    },
+    {
+      "dataset_id": "c2e_000008_9cbad322",
+      "view_id": "xy_2d",
+      "seeds": {
+        "IDB_AutoClust_A0_original_cvis": 2039839658,
+        "IDB_AutoClust_A1_original_plus_established": 2039839658,
+        "IDB_AutoClust_A2_original_plus_new46": 2039839658,
+        "IDB_AutoClust_A3_extended_cvis": 2039839658
+      },
+      "all_equal": true,
+      "seed": 2039839658
+    },
+    {
+      "dataset_id": "c2e_000483_47d48091",
+      "view_id": "x_only",
+      "seeds": {
+        "IDB_AutoClust_A0_original_cvis": 1137392187,
+        "IDB_AutoClust_A1_original_plus_established": 1137392187,
+        "IDB_AutoClust_A2_original_plus_new46": 1137392187,
+        "IDB_AutoClust_A3_extended_cvis": 1137392187
+      },
+      "all_equal": true,
+      "seed": 1137392187
+    },
+    {
+      "dataset_id": "c2e_000483_47d48091",
+      "view_id": "y_only",
+      "seeds": {
+        "IDB_AutoClust_A0_original_cvis": 1644547959,
+        "IDB_AutoClust_A1_original_plus_established": 1644547959,
+        "IDB_AutoClust_A2_original_plus_new46": 1644547959,
+        "IDB_AutoClust_A3_extended_cvis": 1644547959
+      },
+      "all_equal": true,
+      "seed": 1644547959
+    },
+    {
+      "dataset_id": "c2e_000483_47d48091",
+      "view_id": "xy_2d",
+      "seeds": {
+        "IDB_AutoClust_A0_original_cvis": 203566624,
+        "IDB_AutoClust_A1_original_plus_established": 203566624,
+        "IDB_AutoClust_A2_original_plus_new46": 203566624,
+        "IDB_AutoClust_A3_extended_cvis": 203566624
+      },
+      "all_equal": true,
+      "seed": 203566624
+    },
+    {
+      "dataset_id": "c2e_000255_b996994a",
+      "view_id": "xy_2d",
+      "seeds": {
+        "IDB_AutoClust_A0_original_cvis": 695100843,
+        "IDB_AutoClust_A1_original_plus_established": 695100843,
+        "IDB_AutoClust_A2_original_plus_new46": 695100843,
+        "IDB_AutoClust_A3_extended_cvis": 695100843
+      },
+      "all_equal": true,
+      "seed": 695100843
+    }
+  ],
+  "overall": "PASS"
+}

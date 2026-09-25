@@ -1,0 +1,978 @@
+{
+  "proof": "ml2dac_physical_trace_identity",
+  "stage": "4B-3B2",
+  "method": "each arm replayed through ITS OWN imputer, KDTree, warmstart parquet and METHOD_ID; nothing shared during the proof",
+  "budget": 50,
+  "keys": 30,
+  "arms": [
+    "IDB_ML2DAC_M0_original_cvis",
+    "IDB_ML2DAC_M1_original_plus_established",
+    "IDB_ML2DAC_M2_original_plus_new46",
+    "IDB_ML2DAC_M3_extended_cvis"
+  ],
+  "views_covered": [
+    "x_only",
+    "xy_2d",
+    "y_only"
+  ],
+  "families_covered": [
+    "arcs_circles_rings",
+    "deinterleaving_pri_toa_amp_like",
+    "hollow_topological_components",
+    "hybrid_mixed_geometry",
+    "ladder_grid_lattice",
+    "linear_bands_parallel_stripes",
+    "parabolic_curved_chains",
+    "piecewise_polylines_corners",
+    "polygons_rectangles_frames",
+    "radial_spiral_meander"
+  ],
+  "algorithms_covered": [
+    "agglomerative",
+    "birch",
+    "dbscan",
+    "gmm",
+    "hdbscan",
+    "kmeans",
+    "minibatch_kmeans"
+  ],
+  "reachable_algorithms": [
+    "agglomerative",
+    "birch",
+    "dbscan",
+    "gmm",
+    "hdbscan",
+    "kmeans",
+    "minibatch_kmeans"
+  ],
+  "algorithms_not_covered": [],
+  "candidate_executions": 6000,
+  "mismatches": {
+    "seed": 0,
+    "neighbour": 0,
+    "warmstart": 0,
+    "configuration": 0,
+    "status": 0,
+    "raw_label": 0,
+    "partition": 0,
+    "metafeature": 0
+  },
+  "total_mismatches": 0,
+  "metafeature_regression_vs_master": {
+    "n": 30,
+    "exact": 30,
+    "max_abs": 0.0
+  },
+  "natural_coverage_ws_algorithm_sets": 1,
+  "ws_algorithm_set_population": "the frozen warmstart repository contains exactly two sets across 48,039 neighbour records: the full seven (47,974) and a six-algorithm set without hdbscan (65, 0.14%). Natural internal coverage reaches only the first; the second is covered by the targeted fixture below.",
+  "targeted_fixture": {
+    "coverage_kind": "TARGETED_DETERMINISTIC_FIXTURE",
+    "not_natural_trace_coverage": true,
+    "pinned_neighbour": "c2e_000227_10944891__x_only",
+    "dataset_id": "INVENTED_NON_SCIENTIFIC_TARGETED_FIXTURE",
+    "view_id": "xy_2d",
+    "ws_algorithms": [
+      "agglomerative",
+      "birch",
+      "dbscan",
+      "gmm",
+      "kmeans",
+      "minibatch_kmeans"
+    ],
+    "n_candidates": 50,
+    "candidate_executions": 200,
+    "algorithms": [
+      "agglomerative",
+      "birch",
+      "dbscan",
+      "gmm",
+      "kmeans",
+      "minibatch_kmeans"
+    ],
+    "mismatches": {
+      "seed": 0,
+      "warmstart": 0,
+      "configuration": 0,
+      "status": 0,
+      "raw_label": 0,
+      "partition": 0
+    },
+    "total_mismatches": 0,
+    "verdict": "PASS"
+  },
+  "rows": [
+    {
+      "dataset_id": "c2e_000008_9cbad322",
+      "view_id": "x_only",
+      "family": "arcs_circles_rings",
+      "n_samples": 2632,
+      "seed": 999322446,
+      "nearest_neighbor": "c3m_000838_5d9e04ed__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000008_9cbad322",
+      "view_id": "y_only",
+      "family": "arcs_circles_rings",
+      "n_samples": 2632,
+      "seed": 748538643,
+      "nearest_neighbor": "c3m_001314_3f5c0baf__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000008_9cbad322",
+      "view_id": "xy_2d",
+      "family": "arcs_circles_rings",
+      "n_samples": 2632,
+      "seed": 8881127,
+      "nearest_neighbor": "c3m_001314_3f5c0baf__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000483_47d48091",
+      "view_id": "x_only",
+      "family": "deinterleaving_pri_toa_amp_like",
+      "n_samples": 2908,
+      "seed": 79323798,
+      "nearest_neighbor": "c4m_001642_9643296c__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000483_47d48091",
+      "view_id": "y_only",
+      "family": "deinterleaving_pri_toa_amp_like",
+      "n_samples": 2908,
+      "seed": 1445329585,
+      "nearest_neighbor": "c2m_000590_75ccc081__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000483_47d48091",
+      "view_id": "xy_2d",
+      "family": "deinterleaving_pri_toa_amp_like",
+      "n_samples": 2908,
+      "seed": 964243854,
+      "nearest_neighbor": "c4m_001642_9643296c__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000196_74549b8b",
+      "view_id": "x_only",
+      "family": "hollow_topological_components",
+      "n_samples": 2921,
+      "seed": 1730440104,
+      "nearest_neighbor": "c2e_000003_990a50b7__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000196_74549b8b",
+      "view_id": "y_only",
+      "family": "hollow_topological_components",
+      "n_samples": 2921,
+      "seed": 1472804518,
+      "nearest_neighbor": "c2m_000614_9535a4bd__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000196_74549b8b",
+      "view_id": "xy_2d",
+      "family": "hollow_topological_components",
+      "n_samples": 2921,
+      "seed": 740443677,
+      "nearest_neighbor": "c2e_000003_990a50b7__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000010_fb97ad60",
+      "view_id": "x_only",
+      "family": "hybrid_mixed_geometry",
+      "n_samples": 2469,
+      "seed": 329097469,
+      "nearest_neighbor": "c3m_000537_9abceccc__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000010_fb97ad60",
+      "view_id": "y_only",
+      "family": "hybrid_mixed_geometry",
+      "n_samples": 2469,
+      "seed": 948985882,
+      "nearest_neighbor": "c3m_000263_739984c5__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000010_fb97ad60",
+      "view_id": "xy_2d",
+      "family": "hybrid_mixed_geometry",
+      "n_samples": 2469,
+      "seed": 1554240484,
+      "nearest_neighbor": "c3m_000537_9abceccc__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000576_049c6e6c",
+      "view_id": "x_only",
+      "family": "ladder_grid_lattice",
+      "n_samples": 2540,
+      "seed": 1640191911,
+      "nearest_neighbor": "c4vh_001228_98e305da__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000576_049c6e6c",
+      "view_id": "y_only",
+      "family": "ladder_grid_lattice",
+      "n_samples": 2540,
+      "seed": 1227738852,
+      "nearest_neighbor": "c5e_001237_d24ed0a7__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000576_049c6e6c",
+      "view_id": "xy_2d",
+      "family": "ladder_grid_lattice",
+      "n_samples": 2540,
+      "seed": 1050378964,
+      "nearest_neighbor": "c4vh_001228_98e305da__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000427_0809463a",
+      "view_id": "x_only",
+      "family": "linear_bands_parallel_stripes",
+      "n_samples": 2515,
+      "seed": 334755825,
+      "nearest_neighbor": "c5m_000171_edb779af__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000427_0809463a",
+      "view_id": "y_only",
+      "family": "linear_bands_parallel_stripes",
+      "n_samples": 2515,
+      "seed": 436867437,
+      "nearest_neighbor": "c2vh_000286_3ccab1c4__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000427_0809463a",
+      "view_id": "xy_2d",
+      "family": "linear_bands_parallel_stripes",
+      "n_samples": 2515,
+      "seed": 1218641277,
+      "nearest_neighbor": "c2vh_000286_3ccab1c4__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000001_a19f7a09",
+      "view_id": "x_only",
+      "family": "parabolic_curved_chains",
+      "n_samples": 2962,
+      "seed": 1006021717,
+      "nearest_neighbor": "c5h_000719_df1d0670__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000001_a19f7a09",
+      "view_id": "y_only",
+      "family": "parabolic_curved_chains",
+      "n_samples": 2962,
+      "seed": 2104441507,
+      "nearest_neighbor": "c4e_001154_853de434__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000001_a19f7a09",
+      "view_id": "xy_2d",
+      "family": "parabolic_curved_chains",
+      "n_samples": 2962,
+      "seed": 929019440,
+      "nearest_neighbor": "c2e_000194_cfd5facc__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000193_57b8ebe3",
+      "view_id": "x_only",
+      "family": "piecewise_polylines_corners",
+      "n_samples": 2505,
+      "seed": 367447494,
+      "nearest_neighbor": "c4h_000687_f040632c__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000193_57b8ebe3",
+      "view_id": "y_only",
+      "family": "piecewise_polylines_corners",
+      "n_samples": 2505,
+      "seed": 405521030,
+      "nearest_neighbor": "c2h_000029_ac772eee__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000193_57b8ebe3",
+      "view_id": "xy_2d",
+      "family": "piecewise_polylines_corners",
+      "n_samples": 2505,
+      "seed": 442880746,
+      "nearest_neighbor": "c3m_001371_edbcbd54__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000001_43ffb990",
+      "view_id": "x_only",
+      "family": "polygons_rectangles_frames",
+      "n_samples": 2866,
+      "seed": 1254318172,
+      "nearest_neighbor": "c2m_000267_e81e5c7c__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000001_43ffb990",
+      "view_id": "y_only",
+      "family": "polygons_rectangles_frames",
+      "n_samples": 2866,
+      "seed": 1382108086,
+      "nearest_neighbor": "c4e_001112_f97b4127__x_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000001_43ffb990",
+      "view_id": "xy_2d",
+      "family": "polygons_rectangles_frames",
+      "n_samples": 2866,
+      "seed": 1836661347,
+      "nearest_neighbor": "c2m_000267_e81e5c7c__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000364_2cfe9e46",
+      "view_id": "x_only",
+      "family": "radial_spiral_meander",
+      "n_samples": 2606,
+      "seed": 535015281,
+      "nearest_neighbor": "c3e_000631_25d9529d__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000364_2cfe9e46",
+      "view_id": "y_only",
+      "family": "radial_spiral_meander",
+      "n_samples": 2606,
+      "seed": 1361932180,
+      "nearest_neighbor": "c4m_000318_65c6c0e7__y_only",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    },
+    {
+      "dataset_id": "c2e_000364_2cfe9e46",
+      "view_id": "xy_2d",
+      "family": "radial_spiral_meander",
+      "n_samples": 2606,
+      "seed": 121407487,
+      "nearest_neighbor": "c2h_000032_70ae80e8__xy_2d",
+      "n_candidates": 50,
+      "ws_algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "algorithms": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "valid": 50,
+      "all_arms_identical": true
+    }
+  ],
+  "external_50_used": false,
+  "labels_used": false,
+  "verdict": "PASS"
+}

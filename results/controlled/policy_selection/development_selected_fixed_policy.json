@@ -1,0 +1,10 @@
+{
+  "policy_id": "knn_top10_raw",
+  "policy_index": 16,
+  "regime_id": "KNN_TOP10",
+  "development_bestview_mean": 0.6196177489460544,
+  "selection_population": "Splits 2-16 Stage-2C1 reranker-aware OOF targets; dataset-level BestView mean",
+  "tie_rule": "frozen Stage-2A policy order, lowest index",
+  "split_1_used": false,
+  "note": "this is the deployable Fixed+R baseline; the Stage-2B5 'best fixed on Split 1' is hindsight and is reported separately as a diagnostic"
+}

@@ -1,0 +1,55 @@
+{
+  "definition": {
+    "top_k": 5,
+    "min_families": 6,
+    "requires": "Top-5 by TRUE utility AND Top-5 by selection frequency",
+    "frozen_before_computation": true,
+    "note": "operational descriptive label, not a natural-law threshold"
+  },
+  "core_candidates": [
+    "gridness_fft_acf",
+    "noise_aware_silhouette",
+    "silhouette"
+  ],
+  "sensitivity": {
+    "threshold_5_of_12": {
+      "n_core": 3,
+      "metrics": [
+        "gridness_fft_acf",
+        "noise_aware_silhouette",
+        "silhouette"
+      ],
+      "by_group": {
+        "New46": 1,
+        "Established": 1,
+        "Original": 1
+      }
+    },
+    "threshold_6_of_12": {
+      "n_core": 3,
+      "metrics": [
+        "gridness_fft_acf",
+        "noise_aware_silhouette",
+        "silhouette"
+      ],
+      "by_group": {
+        "New46": 1,
+        "Established": 1,
+        "Original": 1
+      }
+    },
+    "threshold_7_of_12": {
+      "n_core": 3,
+      "metrics": [
+        "gridness_fft_acf",
+        "noise_aware_silhouette",
+        "silhouette"
+      ],
+      "by_group": {
+        "New46": 1,
+        "Established": 1,
+        "Original": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+quadrant,units,mean_ari,mean_best_available_utility
+A_strong_metric_strong_ari,53,0.5394002185582177,0.849219024060706
+B_strong_metric_weak_ari,22,0.017151253749656203,0.8320448089049838
+C_weak_metric_weak_ari,53,0.009890111523192654,0.6198802157505426
+D_weak_metric_strong_ari,22,0.37322561126829257,0.717789129355658

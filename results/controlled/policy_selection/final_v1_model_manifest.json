@@ -1,0 +1,39 @@
+{
+  "config_id": "EXTRATREES__UNIFIED__META_UTILITIES__CENTERED",
+  "config_hash": "a9e92d5fcfab1271",
+  "model_config": {
+    "n_estimators": 400,
+    "min_samples_leaf": 8,
+    "min_samples_leaf_recommended": 2,
+    "deviation_reason": "400 trees x min_samples_leaf=2 on 44.9k x 370 with 20 multi-outputs measured 3.4 GB per forest; only 6.1 GB RAM free. msl=8 gives 742 MB at ~40 s fit.",
+    "max_features": "sqrt",
+    "random_state": 42,
+    "requires_scaling": false
+  },
+  "seed": 42,
+  "target_semantics": "CENTERED original policy ARI (Stage-2A semantics)",
+  "training_splits": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "n_train_rows": 48039,
+  "input_dim": 373,
+  "output_dim": 20,
+  "fit_sec": 55.46300920005888,
+  "split_1_used": false,
+  "reused_existing_final_model": false,
+  "source_commit": "7a4fd7dc852a81486bb22ed45832e835ae6c9df8"
+}

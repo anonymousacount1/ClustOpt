@@ -1,0 +1,30 @@
+{
+  "method": "AutoClust",
+  "implementation": "ML2DAC_RelatedWork_Reimplementation",
+  "mode": "original_paper_budget",
+  "use_landmarking_metafeatures": true,
+  "landmarking_algorithm": "MeanShift",
+  "use_kdtree_algorithm_selection": true,
+  "use_mlp_cvi_to_external_index_objective": true,
+  "use_bayesian_optimization": true,
+  "optimizer": "SMAC",
+  "optimizer_evaluations": 40,
+  "smac_wallclock_limit_sec": null,
+  "random_state": 42,
+  "normalize_input": true,
+  "k_range": null,
+  "record_types": ["1d_x", "1d_y", "2d"],
+  "artifact_policy": "require_pretrained_or_train_once_if_paper_faithful",
+  "fail_on_missing_core_artifacts": true,
+  "fail_on_invalid_clustering": false,
+  "n_jobs": 1,
+  "_notes": {
+    "intent": "Paper-faithful AutoClust: identical to autoclust_full_ml2dac_reimplementation.json EXCEPT the Bayesian-optimization budget is set to the ORIGINAL AutoClust paper's value (40 trials) instead of the ML2DAC reimplementation's 100. Same online phase: MeanShift landmarking -> KD-tree algorithm selection -> SMAC HPO with the learned MLP(CVIs->ARI) objective, using the shipped trained artifacts (no offline phase, no training).",
+    "optimizer_evaluations": "40 = the original AutoClust paper's optimization budget. SOURCE: Poulakis, Doulkeridis, Kyriazis, 'AutoClust: A Framework for Automated Clustering based on Cluster Validity Indices', IEEE ICDM 2020 -- evaluation section: 'The evaluation budget set for the Bayesian optimization procedure of the framework is set to 40 trials' (the paper's '100' refers to MLP training EPOCHS, not optimization trials). This maps to SMAC's runcount-limit = 40.",
+    "why_more_faithful": "The 100-evaluation value comes from the ML2DAC reimplementation, where the authors standardized ALL baselines to 100 optimizer loops for THEIR comparison -- it is not AutoClust's own published budget. Running 40 trials reproduces the budget the AutoClust authors actually used and report, and is therefore the more faithful reproduction of the AutoClust methodology. It also cuts SMAC work by ~60% per record (fewer expensive 7-CVI evaluations), substantially reducing runtime, with NO change to the algorithm or any early stopping.",
+    "budget": "AutoClust's budget is an evaluation COUNT, not a wall-clock timeout (no timeout in the paper or the implementation). 'smac_wallclock_limit_sec': null = SMAC's native 7200s ceiling + 300s per-config cutoff are the only time bounds. No hard timeout is imposed.",
+    "relationship_to_other_config": "Both configs coexist. Use this (40 trials) for the paper-faithful AutoClust benchmark; autoclust_full_ml2dac_reimplementation.json (100 trials) reproduces the ML2DAC-standardized budget and is kept for reference / sensitivity comparison.",
+    "fairness": "AutoClust receives ONLY the partition space. No true labels, true K, family metadata, or ClustOpt utilities. true_labels is NOT passed to SMAC. True labels are used only for external evaluation after prediction.",
+    "selection_quirks": "The online algorithm-selection code in the ML2DAC reimplementation has known quirks (positional distance mapping + descending SMAC-negated ARI sort). Replicated verbatim for faithfulness; see AUTOCLUST_REPOSITORY_AUDIT.md."
+  }
+}

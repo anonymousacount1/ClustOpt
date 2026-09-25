@@ -1,0 +1,113 @@
+{
+  "status": "RESOLVED -- decision frozen by the project_lead",
+  "metric": "DCSI",
+  "found_during": "Stage 4B-1 DCSI validation",
+  "summary": "The author repository contains two DCSI routines. The two-class routine matches the published Definition 3.2 and produced the published values we were able to recompute. The multiclass real-world routine doubles every separation entry through a symmetrisation step. Our primary comparator follows the definition; a diagnostic variant reproduces the multiclass routine so the difference stays auditable.",
+
+  "paper": {
+    "source": "arXiv:2310.12806v4 (CC BY 4.0)",
+    "definition_3_2_latex": "\\Sep_{\\DCSI}=\\min_{x\\in\\mathcal{C}_{1},x^{\\prime}\\in\\mathcal{C}_{2}}d(x,x^{\\prime})",
+    "plain": "separation is THE MINIMUM distance between core points of the two classes",
+    "index": "DCSI = q/(1+q), q = Sep/Conn"
+  },
+
+  "reference_implementation": {
+    "repository": "JanaGauss/dcsi",
+    "commit": "15ba6f7bd89151e64b009dc4329f678f416ddc6c",
+    "file": "code/functions/separability_functions.R",
+    "two_routines_exist": {
+      "calc_DCSI": {
+        "lines": "241-278",
+        "scope": "two-class; used by the synthetic experiments and by the per-dataset measure table",
+        "separation": "min over clusters of the minimum distance from that cluster's core points to core points outside it",
+        "agrees_with_definition_3_2": true,
+        "returns": "DCSI, Sep_DCSI, Conn_DCSI -- the exact names stored in the shipped result tables"
+      },
+      "calc_DCSI_RW": {
+        "lines": "449-556",
+        "scope": "multiclass real-world; returns a pairwise matrix",
+        "what_happens": [
+          "the inner loop runs `for(j in 1:K) if(i != j)`, so it assigns BOTH Sep_matrix[i,j] AND Sep_matrix[j,i] with the same min distance",
+          "line 515 then executes `Sep_matrix <- Sep_matrix + t(Sep_matrix)`",
+          "because both triangles were already populated, this doubles every separation entry"
+        ],
+        "effective_formula": "Sep_effective = 2 * min distance between core points",
+        "agrees_with_definition_3_2": false,
+        "contrast_within_the_same_function": "the pairwise dcsi_matrix immediately below uses `for(j in i:K)` (upper triangle only), so ITS `+ t()` symmetrisation is correct. Only Sep is doubled."
+      }
+    },
+    "characterisation": "a localised symmetrisation slip in one of the two routines, not a disagreement about the mathematics: the definition, the two-class routine and the published values all agree with each other"
+  },
+
+  "component_level_evidence": {
+    "artifact": "validation/dcsi_reference_validation.json",
+    "level": "core points, connectedness, separation, pairwise index and aggregate compared separately, because a matching total can hide two compensating component errors",
+    "fixtures_compared": 12,
+    "K_values_covered": [2, 3, 4],
+    "core_points_identical_everywhere": true,
+    "connectedness_identical_everywhere": true,
+    "separation_exactly_double_everywhere": true,
+    "author_compat_reproduces_calc_DCSI_RW_everywhere": true,
+    "validity_agreement": "every input we declare undefined is also undefined for the reference"
+  },
+
+  "publication_value_reproduction": {
+    "artifact": "validation/dcsi_published_value_reproduction.json",
+    "question": "which mode do the authors' own published numbers correspond to?",
+    "method": "the repository stores each synthetic experiment's raw data together with its computed measure table, so a published value can be recomputed end to end",
+    "cases": ["E1_572", "E3_42"],
+    "verdict": "PAPER",
+    "max_abs_diff_paper_mode": 1.11e-16,
+    "abs_diff_author_compat_mode": [0.0848, 0.0197],
+    "also_reproduced": "the published Sep_DCSI and Conn_DCSI components, not only the index",
+    "scope_limit": "two synthetic K=2 cases were recomputable end to end; the real-world multiclass tables were not reproduced, so no claim is made about which routine produced those",
+    "correction_to_earlier_note": "an earlier version of this file assumed the published numbers had been produced by calc_DCSI_RW and therefore corresponded to the doubled variant. That assumption was wrong: the checkable published values reproduce exactly under the paper-faithful definition."
+  },
+
+  "ranking_equivalence": {
+    "earlier_claim": "rankings are unaffected, therefore no conclusion depends on the choice",
+    "status": "WITHDRAWN -- the claim is false in general",
+    "what_is_actually_true": "the pairwise score is strictly increasing in q under both modes, so for K=2 the two modes order candidates identically",
+    "what_is_false": "for K>=3 the multiclass value is the MEAN of a nonlinear transform, and mean(q/(1+q)) and mean(2q/(1+2q)) can order two candidates differently",
+    "regression_test": "validation/test_dcsi_variant_ranking.py",
+    "evidence": "validation/dcsi_variant_ranking_evidence.json",
+    "analytic_counterexample": {
+      "q_A": [0.05, 0.05, 0.5], "q_B": [0.1, 0.2, 0.2],
+      "paper_means": {"A": 0.14285714285714285, "B": 0.1414141414141414, "order": "A>B"},
+      "author_compat_means": {"A": 0.2272727272727273, "B": 0.24603174603174605, "order": "A<B"}
+    },
+    "empirical_counterexample": "also produced through the shipped implementation on random K=3 configurations, so the reversal is not an artifact of hand-chosen q values"
+  },
+
+  "frozen_decision": {
+    "primary_comparator": {
+      "metric_id": "dcsi",
+      "separation_mode": "PAPER",
+      "definition": "Sep = min distance between core points (Definition 3.2)",
+      "role": "one of exactly four modern comparators (CDbw, CVNN, CVDD, DCSI)",
+      "justification": "it is what the paper defines and what the authors' own published values reproduce"
+    },
+    "diagnostic_variant": {
+      "metric_id": "dcsi_author_compat",
+      "separation_mode": "AUTHOR_COMPAT",
+      "definition": "Sep = 2 x the above, reproducing calc_DCSI_RW",
+      "role": "AUTHOR-IMPLEMENTATION-COMPATIBILITY diagnostic and predeclared sensitivity variant",
+      "is_a_fifth_cvi": false,
+      "never_enters": [
+        "the primary metric registry",
+        "primary comparator counts",
+        "primary FDR test families",
+        "headline comparisons",
+        "ClustOpt / AutoClust / ML2DAC learned inventories"
+      ]
+    },
+    "implementation": "ONE shared implementation with an explicit frozen `sep_mode` switch, so the exact difference is a single auditable line rather than a duplicated code path",
+    "primary_comparator_set_unchanged": ["cdbw", "cvnn", "cvdd", "dcsi"]
+  },
+
+  "wording_guidance": "Describe this as a localised implementation discrepancy between one routine and the published definition, evidenced at component level and by reproduction of the authors' own published values. Do not characterise the metric or the authors' work as wrong: the definition is unambiguous, the two-class routine implements it correctly, and the published values we could check are paper-faithful.",
+
+  "no_author_source_copied": true,
+  "no_author_source_committed": true,
+  "no_author_data_committed": true
+}

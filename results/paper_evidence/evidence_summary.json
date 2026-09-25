@@ -1,0 +1,417 @@
+{
+ "repository": {
+  "n_datasets": 17068,
+  "n_families": 12,
+  "n_subfamilies": 86,
+  "n_records": 51204,
+  "n_points_min": 1273,
+  "n_points_max": 3552,
+  "n_points_median": 2576.0,
+  "k_values": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "difficulty_levels": [
+   "easy",
+   "medium",
+   "hard",
+   "very_hard"
+  ],
+  "generator": "HYBRID_SCM_V2",
+  "bounds": "unit square [0,1]^2"
+ },
+ "controlled_families": {
+  "n_families": 12,
+  "n_within_0.01_v2_vs_autoclust": 6,
+  "n_outside_0.01": 6,
+  "largest_positive": {
+   "family": "Bands & stripes",
+   "delta": 0.030867053743121986
+  },
+  "largest_negative": {
+   "family": "Isotropic blobs",
+   "delta": -0.024623980450748983
+  },
+  "n_clustopt_ahead": 5,
+  "n_autoclust_ahead": 7,
+  "deinterleaving_delta": 0.0006512983597204425,
+  "max_abs_delta": 0.030867053743121986
+ },
+ "controlled_progression": {
+  "pre_reranker_available": true,
+  "pre_reranker_policy": "knn_top10_raw",
+  "pre_reranker_mean": 0.5581028603027632,
+  "pre_reranker_gain": 0.0579279214045286,
+  "pre_reranker_gain_ci": [
+   0.0503305167809731,
+   0.0662205703907068
+  ],
+  "pre_reranker_improved": 530,
+  "pre_reranker_unchanged": 320,
+  "pre_reranker_worsened": 205,
+  "slate_oracle": 0.6527899568273388,
+  "recovery_aggregate": 0.6117826349178819,
+  "autoclust_matched": 0.6144995191007991,
+  "comparability_note": "same Split-1 replay, same policy, same frozen protocol: the reranked column reproduces four-level level A to machine precision"
+ },
+ "stage3": {
+  "verdict": "SUPPORTED",
+  "core_metrics": [
+   "gridness_fft_acf",
+   "noise_aware_silhouette",
+   "silhouette"
+  ],
+  "core_definition": {
+   "top_k": 5,
+   "min_families": 6,
+   "requires": "Top-5 by TRUE utility AND Top-5 by selection frequency",
+   "frozen_before_computation": true,
+   "note": "operational descriptive label, not a natural-law threshold"
+  },
+  "family": {
+   "n_families": 12,
+   "tier_a_pairs": 14,
+   "tier_a_unique_pairs": 10,
+   "tier_b_pairs": 5,
+   "families_with_tier_a_unique": 8,
+   "families_with_tier_b": 5,
+   "median_specialists_per_family": 1.0,
+   "families_without_any_new46_specialist": 0
+  },
+  "subfamily": {
+   "n_subfamilies": 86,
+   "eligible": 86,
+   "tier_a_pairs": 42,
+   "tier_b_pairs": 36,
+   "subfamilies_with_tier_a": 32,
+   "subfamilies_with_tier_b": 30,
+   "subfamily_only_tier_a": 27
+  },
+  "alignment": {
+   "family_mean_spearman_all": 0.8280150969696983,
+   "family_mean_spearman_new46": 0.8092817827544548
+  },
+  "selection_composition": {
+   "core_share": 0.27675343475663233,
+   "unique_specialist_share": 0.04568550198576021,
+   "new46_share": 0.4751700557710646
+  },
+  "jaccard": {
+   "utility_top5": {
+    "mean": 0.49699374699374704,
+    "median": 0.42857142857142855,
+    "min": 0.1111111111111111,
+    "max": 1.0,
+    "n_pairs": 66
+   },
+   "selection_top5": {
+    "mean": 0.5889249639249639,
+    "median": 0.6666666666666666,
+    "min": 0.25,
+    "max": 1.0,
+    "n_pairs": 66
+   },
+   "specialist_sets": {
+    "mean": 0.15404040404040403,
+    "median": 0.0,
+    "n_pairs": 66
+   }
+  },
+  "new46_true_top5_recall_mean": 0.47678465761396516,
+  "true_top5_recall_mean": 0.577693225661093,
+  "true_top1_hit_mean": 0.7242655820007454,
+  "new46_selection_precision_mean": 0.5576733433690451,
+  "alignment_min": 0.7262976558953909,
+  "alignment_max": 0.8818029024796868,
+  "n_tierA_family_rows": 14,
+  "n_tierA_subfamily_rows": 42,
+  "tierA_unique_metrics": [
+   "axial_symmetry",
+   "connected_components_count",
+   "contour_graph_connectivity",
+   "gridness_fft_acf",
+   "ribbon_thickness"
+  ],
+  "tierA_subfamily_unique_metrics": [
+   "axial_symmetry",
+   "connected_components_count",
+   "contour_graph_connectivity",
+   "convexity_ratio",
+   "curvature_consistency",
+   "fractal_dimension",
+   "glcm_haralick",
+   "gridness_fft_acf",
+   "parallel_bands",
+   "ribbon_thickness"
+  ],
+  "pattern_vs_image": [
+   {
+    "subgroup": "New46-Image",
+    "mean_utility": 0.4631766938801967,
+    "selection_share": 0.24957663294943297,
+    "n_tier_a": 8,
+    "top5_count": 17
+   },
+   {
+    "subgroup": "New46-Pattern",
+    "mean_utility": 0.45341345588817733,
+    "selection_share": 0.2255934228216315,
+    "n_tier_a": 6,
+    "top5_count": 7
+   }
+  ]
+ },
+ "tailoring": {
+  "selection_rule": "stable generalist core (Top-5 by true utility AND by selection frequency in >=6 of 12 families) followed by every metric with Tier-A or Tier-B family-level specialisation evidence; no manual choice",
+  "metrics": [
+   "gridness_fft_acf",
+   "noise_aware_silhouette",
+   "silhouette",
+   "axial_symmetry",
+   "connected_components_count",
+   "contour_graph_connectivity",
+   "convexity_ratio",
+   "corner_junction_density",
+   "parallel_bands",
+   "ribbon_thickness"
+  ],
+  "core": [
+   "gridness_fft_acf",
+   "noise_aware_silhouette",
+   "silhouette"
+  ],
+  "n_specialists": 7,
+  "n_families": 12
+ },
+ "external_corpus": {
+  "n_datasets": 50,
+  "by_source": {
+   "real_pca": 28,
+   "sklearn_shapes": 15,
+   "fcps": 7
+  },
+  "manifest_hash": "709712107424ad4e",
+  "checksums_match": 50,
+  "pca_reduced": 29,
+  "redistribution": {
+   "REDISTRIBUTION_RESTRICTED": 28,
+   "REDISTRIBUTION_ALLOWED": 22
+  },
+  "n_samples_min": 208,
+  "n_samples_max": 5000,
+  "view_definitions": {
+   "x_only": "X_full[:, [0]]",
+   "y_only": "X_full[:, [1]]",
+   "xy_2d": "X_full"
+  }
+ },
+ "external_by_source": [
+  {
+   "source": "fcps",
+   "C5": 0.6334053594755622,
+   "C4": 0.6849699091876668,
+   "A0": 0.6659442635251887,
+   "M1": 0.52626508037266,
+   "d_C5_A0": -0.03253890404962641,
+   "d_C5_M1": 0.10714027910290229
+  },
+  {
+   "source": "real_pca",
+   "C5": 0.1395486267508153,
+   "C4": 0.1227680569870284,
+   "A0": 0.15657062058357799,
+   "M1": 0.10752260352217578,
+   "d_C5_A0": -0.017021993832762688,
+   "d_C5_M1": 0.032026023228639525
+  },
+  {
+   "source": "sklearn_shapes",
+   "C5": 0.7738104689733775,
+   "C4": 0.7532425264470823,
+   "A0": 0.5756979001433443,
+   "M1": 0.6333363508352101,
+   "d_C5_A0": 0.19811256883003323,
+   "d_C5_M1": 0.14047411813816732
+  }
+ ],
+ "policy_set": {
+  "n_policies": 20,
+  "n_rerankers": 10
+ },
+ "reranker": {
+  "n_rerankers": 10,
+  "n_features": 347,
+  "n_training_rows": 1161522,
+  "regimes": [
+   "MLP_TOP1",
+   "MLP_TOP3",
+   "MLP_TOP5",
+   "MLP_TOP10",
+   "MLP_DYNAMIC",
+   "KNN_TOP1",
+   "KNN_TOP3",
+   "KNN_TOP5",
+   "KNN_TOP10",
+   "KNN_DYNAMIC"
+  ]
+ },
+ "predictor": {
+  "mlp": {
+   "input_dim": 250,
+   "output_dim": 60,
+   "hidden": [
+    512,
+    512,
+    256,
+    256
+   ],
+   "dropout": [
+    0.15,
+    0.15,
+    0.1,
+    0.1
+   ],
+   "activation": "gelu",
+   "batch_norm": true,
+   "head_hidden": 128,
+   "head_dropout": 0.05,
+   "loss": {
+    "mode": "combined",
+    "mse_weight": 0.6,
+    "pairwise_rank_weight": 0.25,
+    "topk_mse_weight": 0.15,
+    "topk": 10,
+    "pairwise_margin": 0.05,
+    "max_pairs_per_sample": 256,
+    "tie_epsilon": 0.0001,
+    "topk_extra_weight": 2.0
+   },
+   "training": {
+    "n_splits": 5,
+    "inner_val_ratio": 0.15,
+    "batch_size": 512,
+    "epochs": 300,
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "reduce_on_plateau",
+    "scheduler_factor": 0.5,
+    "scheduler_patience": 8,
+    "scheduler_min_lr": 1e-06,
+    "early_stopping_patience": 25,
+    "gradient_clip_norm": 1.0,
+    "seed": 42,
+    "device": "auto",
+    "num_workers": 0,
+    "folds_to_run": null
+   },
+   "n_eval_records": 3165
+  },
+  "knn": {
+   "config": {
+    "config_id": "n015__standard__euclidean__inverse_distance",
+    "n_neighbors": 15,
+    "scaler": "standard",
+    "distance": "euclidean",
+    "neighbor_weighting": "inverse_distance",
+    "mean_composite_score": 0.8536789209054835,
+    "std_composite_score": 0.03471175371424277,
+    "standard_error": 0.00896253627019438,
+    "worst_fold_score": 0.8147591991341991,
+    "best_fold_score": 0.9347647794913421
+   },
+   "rule": "within one SE of best mean composite; then smallest n_neighbors, then lower query time, then simplicity (standard/euclidean/uniform)",
+   "one_se_threshold": 0.8447163846352891,
+   "n_candidates_within_one_se": 2,
+   "candidates": [
+    "n015__standard__euclidean__inverse_distance",
+    "n020__standard__euclidean__inverse_distance"
+   ],
+   "dynamic_topk": "dynamic_topk_relsoft_a092_k5_ceil",
+   "n_features": 250,
+   "n_metrics": 60,
+   "per_view_train": {
+    "x_only": 16013,
+    "y_only": 16013,
+    "xy_2d": 16013
+   }
+  }
+ },
+ "policy_predictor": {
+  "v2": {
+   "config_id": "EXTRATREES__UNIFIED__META_UTILITIES__CENTERED",
+   "model_config": {
+    "n_estimators": 400,
+    "min_samples_leaf": 8,
+    "min_samples_leaf_recommended": 2,
+    "deviation_reason": "400 trees x min_samples_leaf=2 on 44.9k x 370 with 20 multi-outputs measured 3.4 GB per forest; only 6.1 GB RAM free. msl=8 gives 742 MB at ~40 s fit.",
+    "max_features": "sqrt",
+    "random_state": 42,
+    "requires_scaling": false
+   },
+   "seed": 42,
+   "target_semantics": "CENTERED reranker-aware (Stage-2C1 single-exclusion OOF)",
+   "n_train_rows": 48039,
+   "input_dim": 373,
+   "output_dim": 20,
+   "split_1_used": false
+  },
+  "v1_target_semantics": "CENTERED original policy ARI (Stage-2A semantics)",
+  "v1_config_id": "EXTRATREES__UNIFIED__META_UTILITIES__CENTERED"
+ },
+ "search": {
+  "budget_evaluations": 50,
+  "sampler": "Optuna TPE",
+  "early_stopping": false,
+  "k_range": [
+   2,
+   5
+  ],
+  "base_seed": 1234,
+  "algorithms": [
+   "agglomerative",
+   "birch",
+   "dbscan",
+   "gmm",
+   "hdbscan",
+   "hdbscan_constrained",
+   "kmeans",
+   "minibatch_kmeans",
+   "optics",
+   "spectral"
+  ],
+  "n_algorithm_blocks": {
+   "x_only": 12,
+   "y_only": 12,
+   "xy_2d": 13
+  }
+ },
+ "metrics": {
+  "n_primary": 67,
+  "columns": [
+   "metric_id",
+   "metric_group",
+   "available_case_utility_macro",
+   "available_case_utility_median",
+   "units_with_valid_utility",
+   "available_case_utility_source_balanced",
+   "units_total",
+   "coverage",
+   "available_case_macro_rank",
+   "available_case_source_balanced_rank",
+   "full_coverage",
+   "repaired_metric",
+   "ranking_basis",
+   "top5_count",
+   "top10_count",
+   "orientation",
+   "metric_space",
+   "stage3_internal_comparable_field",
+   "utility_fcps",
+   "utility_sklearn_shapes",
+   "utility_real_pca"
+  ]
+ }
+}

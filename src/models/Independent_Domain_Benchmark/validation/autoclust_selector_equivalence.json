@@ -1,0 +1,145 @@
+{
+  "check": "autoclust_algorithm_selector_structural_equivalence",
+  "fields_compared": [
+    "pipeline_types",
+    "imputer_strategy",
+    "imputer_fill",
+    "imputer_statistics_hash",
+    "imputer_n_features_in",
+    "clf_type",
+    "n_neighbors",
+    "metric",
+    "weights",
+    "classes_",
+    "n_features_in",
+    "fit_X_shape",
+    "fit_X_hash",
+    "fit_y_hash"
+  ],
+  "per_arm_state": {
+    "A0": {
+      "pipeline_types": [
+        "SimpleImputer",
+        "KNeighborsClassifier"
+      ],
+      "imputer_strategy": "constant",
+      "imputer_fill": 0.0,
+      "imputer_statistics_hash": "d4817aa5497628e7",
+      "imputer_n_features_in": 7,
+      "clf_type": "KNeighborsClassifier",
+      "n_neighbors": 1,
+      "metric": "minkowski",
+      "weights": "uniform",
+      "classes_": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "n_features_in": 7,
+      "fit_X_shape": [
+        48039,
+        7
+      ],
+      "fit_X_hash": "95675427a2ec0ce0",
+      "fit_y_hash": "a0830575c3f47260"
+    },
+    "A1": {
+      "pipeline_types": [
+        "SimpleImputer",
+        "KNeighborsClassifier"
+      ],
+      "imputer_strategy": "constant",
+      "imputer_fill": 0.0,
+      "imputer_statistics_hash": "d4817aa5497628e7",
+      "imputer_n_features_in": 7,
+      "clf_type": "KNeighborsClassifier",
+      "n_neighbors": 1,
+      "metric": "minkowski",
+      "weights": "uniform",
+      "classes_": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "n_features_in": 7,
+      "fit_X_shape": [
+        48039,
+        7
+      ],
+      "fit_X_hash": "95675427a2ec0ce0",
+      "fit_y_hash": "a0830575c3f47260"
+    },
+    "A2": {
+      "pipeline_types": [
+        "SimpleImputer",
+        "KNeighborsClassifier"
+      ],
+      "imputer_strategy": "constant",
+      "imputer_fill": 0.0,
+      "imputer_statistics_hash": "d4817aa5497628e7",
+      "imputer_n_features_in": 7,
+      "clf_type": "KNeighborsClassifier",
+      "n_neighbors": 1,
+      "metric": "minkowski",
+      "weights": "uniform",
+      "classes_": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "n_features_in": 7,
+      "fit_X_shape": [
+        48039,
+        7
+      ],
+      "fit_X_hash": "95675427a2ec0ce0",
+      "fit_y_hash": "a0830575c3f47260"
+    },
+    "A3": {
+      "pipeline_types": [
+        "SimpleImputer",
+        "KNeighborsClassifier"
+      ],
+      "imputer_strategy": "constant",
+      "imputer_fill": 0.0,
+      "imputer_statistics_hash": "d4817aa5497628e7",
+      "imputer_n_features_in": 7,
+      "clf_type": "KNeighborsClassifier",
+      "n_neighbors": 1,
+      "metric": "minkowski",
+      "weights": "uniform",
+      "classes_": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "n_features_in": 7,
+      "fit_X_shape": [
+        48039,
+        7
+      ],
+      "fit_X_hash": "95675427a2ec0ce0",
+      "fit_y_hash": "a0830575c3f47260"
+    }
+  },
+  "differing_fields": {},
+  "all_scientifically_relevant_state_identical": true,
+  "verdict": "SERIALIZATION-ONLY DIFFERENCE",
+  "note": "the fitted training matrix, training labels, class set, imputer statistics, neighbour count and metric are compared by canonical array hash, so equivalence is established on the model state itself rather than on a sample of predictions"
+}

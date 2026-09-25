@@ -1,0 +1,30 @@
+{
+  "suite": "autoclust_sampler_guard",
+  "n": 5,
+  "n_fail": 0,
+  "required_sampler": "sample_optimizer_configs_constrained",
+  "forbidden_sampler": "sample_optimizer_configs (native; randomises random_state per candidate)",
+  "rows": [
+    {
+      "test": "test_native_sampler_randomises_random_state",
+      "status": "PASS"
+    },
+    {
+      "test": "test_constrained_sampler_avoids_the_randomising_helper",
+      "status": "PASS"
+    },
+    {
+      "test": "test_constrained_sampler_does_not_randomise_random_state",
+      "status": "PASS"
+    },
+    {
+      "test": "test_constrained_sampler_is_deterministic_given_seed",
+      "status": "PASS"
+    },
+    {
+      "test": "test_grid_random_state_is_pinned_not_sampled",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

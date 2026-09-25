@@ -1,0 +1,49 @@
+pair,property,native,same_search_space,identical
+AutoClust_Extended_InDomain,top__method,AutoClust,AutoClust,True
+AutoClust_Extended_InDomain,top__implementation,ML2DAC_RelatedWork_Reimplementation,ML2DAC_RelatedWork_Reimplementation,True
+AutoClust_Extended_InDomain,top__split_id,1,1,True
+AutoClust_Extended_InDomain,top__algorithm_selection_method,landmarking_meanshift_kdtree_indomain(k=1 NN),landmarking_meanshift_kdtree_indomain(k=1 NN),True
+AutoClust_Extended_InDomain,top__optimizer,in_domain_random_search_mlp_objective,in_domain_random_search_mlp_objective,True
+AutoClust_Extended_InDomain,top__optimizer_evaluations,50,50,True
+AutoClust_Extended_InDomain,top__mlp_objective_used,True,True,True
+AutoClust_Extended_InDomain,top__selected_cvis,['MLP(learned over 61 CVIs) [in-domain]'],['MLP(learned over 61 CVIs) [in-domain]'],True
+AutoClust_Extended_InDomain,top__model_variant,<absent>,<absent>,True
+AutoClust_Extended_InDomain,top__meta_knowledge_repository,<absent>,<absent>,True
+AutoClust_Extended_InDomain,top__train_splits,<absent>,<absent>,True
+AutoClust_Extended_InDomain,top__seed,<absent>,<absent>,True
+AutoClust_Extended_InDomain,top__random_seed,<absent>,<absent>,True
+AutoClust_Extended_InDomain,det__implementation,in_domain_autoclust_compatible,in_domain_autoclust_compatible,True
+AutoClust_Extended_InDomain,det__landmarking_algorithm,MeanShift,MeanShift,True
+AutoClust_Extended_InDomain,det__algorithm_selection_method,landmarking_meanshift_kdtree_indomain(k=1 NN),landmarking_meanshift_kdtree_indomain(k=1 NN),True
+AutoClust_Extended_InDomain,det__objective,in-domain MLP (CVI vector -> predicted ARI),in-domain MLP (CVI vector -> predicted ARI),True
+AutoClust_Extended_InDomain,det__optimizer,in_domain_random_search_mlp_objective,in_domain_random_search_mlp_objective,True
+AutoClust_Extended_InDomain,det__total_evaluations,50,50,True
+AutoClust_Extended_InDomain,det__k_range_for_k_based_algorithms,"[2, 5]","[2, 5]",True
+AutoClust_Extended_InDomain,det__non_k_algorithms_unrestricted,True,True,True
+AutoClust_Extended_InDomain,det__constrain_search_space,<absent>,True,False
+AutoClust_Extended_InDomain,det__search_space_source,<absent>,clustopt_phaseE2_map,False
+AutoClust_Extended_InDomain,det__fairness_note,ground truth never used in selection/optimization; MLP objective uses only CVIs.,ground truth never used in selection/optimization; MLP objective uses only CVIs.,True
+AutoClust_Original_InDomain,top__method,AutoClust,AutoClust,True
+AutoClust_Original_InDomain,top__implementation,ML2DAC_RelatedWork_Reimplementation,ML2DAC_RelatedWork_Reimplementation,True
+AutoClust_Original_InDomain,top__split_id,1,1,True
+AutoClust_Original_InDomain,top__algorithm_selection_method,landmarking_meanshift_kdtree_indomain(k=1 NN),landmarking_meanshift_kdtree_indomain(k=1 NN),True
+AutoClust_Original_InDomain,top__optimizer,in_domain_random_search_mlp_objective,in_domain_random_search_mlp_objective,True
+AutoClust_Original_InDomain,top__optimizer_evaluations,50,50,True
+AutoClust_Original_InDomain,top__mlp_objective_used,True,True,True
+AutoClust_Original_InDomain,top__selected_cvis,['MLP(learned over 7 CVIs) [in-domain]'],['MLP(learned over 7 CVIs) [in-domain]'],True
+AutoClust_Original_InDomain,top__model_variant,<absent>,<absent>,True
+AutoClust_Original_InDomain,top__meta_knowledge_repository,<absent>,<absent>,True
+AutoClust_Original_InDomain,top__train_splits,<absent>,<absent>,True
+AutoClust_Original_InDomain,top__seed,<absent>,<absent>,True
+AutoClust_Original_InDomain,top__random_seed,<absent>,<absent>,True
+AutoClust_Original_InDomain,det__implementation,in_domain_autoclust_compatible,in_domain_autoclust_compatible,True
+AutoClust_Original_InDomain,det__landmarking_algorithm,MeanShift,MeanShift,True
+AutoClust_Original_InDomain,det__algorithm_selection_method,landmarking_meanshift_kdtree_indomain(k=1 NN),landmarking_meanshift_kdtree_indomain(k=1 NN),True
+AutoClust_Original_InDomain,det__objective,in-domain MLP (CVI vector -> predicted ARI),in-domain MLP (CVI vector -> predicted ARI),True
+AutoClust_Original_InDomain,det__optimizer,in_domain_random_search_mlp_objective,in_domain_random_search_mlp_objective,True
+AutoClust_Original_InDomain,det__total_evaluations,50,50,True
+AutoClust_Original_InDomain,det__k_range_for_k_based_algorithms,"[2, 5]","[2, 5]",True
+AutoClust_Original_InDomain,det__non_k_algorithms_unrestricted,True,True,True
+AutoClust_Original_InDomain,det__constrain_search_space,<absent>,True,False
+AutoClust_Original_InDomain,det__search_space_source,<absent>,clustopt_phaseE2_map,False
+AutoClust_Original_InDomain,det__fairness_note,ground truth never used in selection/optimization; MLP objective uses only CVIs.,ground truth never used in selection/optimization; MLP objective uses only CVIs.,True

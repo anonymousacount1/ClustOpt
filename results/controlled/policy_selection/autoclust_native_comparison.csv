@@ -1,0 +1,2 @@
+comparison,arm_a,arm_b,n,mean_a,mean_b,mean_delta,median_delta,ci_lo,ci_hi,wins_a,wins_b,ties,cohens_dz,wilcoxon_p,autoclust_reference_value,reconstruction_abs_diff,interpretation,search_space_role
+v2_minus_AutoClust_Extended_InDomain,v2+R,AutoClust_Extended_InDomain,1055,0.6170763693848712,0.6170597383643214,1.6631020549668203e-05,0.0,-0.0050045761377139645,0.005249193739636258,446,456,153,0.0001942156367988785,0.508036121809502,0.6170597383643214,0.0,numerically exceeds but is statistically indistinguishable,native (secondary)

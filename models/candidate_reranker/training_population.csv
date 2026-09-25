@@ -1,0 +1,2 @@
+n_datasets,n_slates,n_candidate_rows,n_eligible_training_rows,splits,split_1_used,utility_semantics,mask_source
+16013,48039,1537248,1161522,"2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",False,stage2a1 single-exclusion OOF (per-split held out),stage2b0 final_training_mask_manifest.csv.gz

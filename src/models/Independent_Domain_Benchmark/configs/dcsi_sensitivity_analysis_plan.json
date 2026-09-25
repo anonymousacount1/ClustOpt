@@ -1,0 +1,37 @@
+{
+  "plan": "PREDECLARED DCSI SEPARATION-MODE SENSITIVITY ANALYSIS",
+  "declared_at": "Stage 4B-1",
+  "declared_before_any_external_corpus_result_exists": true,
+  "why_predeclared": "the analysis is fixed now so that it cannot later be shaped by which mode produces the more convenient answer",
+
+  "background": "DCSI is frozen as PAPER-faithful. A diagnostic variant, dcsi_author_compat, reproduces the author's multiclass routine, whose separation is exactly twice the published definition. The two modes rank candidates identically for K=2 but can rank them differently for K>=3, because the multiclass value is the mean of a nonlinear transform of q. The primary analysis therefore cannot simply assert mode-independence; it must be shown.",
+
+  "what_will_be_recomputed": {
+    "trigger": "once external-corpus DCSI results exist",
+    "quantity": "every endpoint in which DCSI appears as a comparator, recomputed with sep_mode=AUTHOR_COMPAT and with everything else -- corpus, protocol, candidate bank, utility definition, tests -- held fixed",
+    "endpoints": [
+      "best_modern_comparator_difference",
+      "per-index vs modern comparator pool tests",
+      "oracle_win_frequency where DCSI is the winning comparator",
+      "complementarity_unique_win_coverage attributable to DCSI"
+    ]
+  },
+
+  "what_will_be_reported": [
+    "the primary result under sep_mode=PAPER",
+    "the same result under sep_mode=AUTHOR_COMPAT",
+    "the fraction of (dataset, view) units whose DCSI-based comparison changes sign",
+    "the fraction of K>=3 units, since K=2 units cannot change by construction",
+    "whether any BH-adjusted conclusion changes status at the frozen threshold"
+  ],
+
+  "decision_rule": {
+    "if_no_conclusion_changes": "report the sensitivity analysis as a robustness check and keep the PAPER-mode result as primary",
+    "if_any_conclusion_changes": "report BOTH modes side by side in the results, state plainly which conclusions are mode-dependent, and do not present the mode-dependent conclusion as established",
+    "what_is_never_permitted": "selecting the mode that produces the preferred conclusion, or reporting only the mode that does"
+  },
+
+  "primary_result_definition_is_fixed_now": "the PAPER mode is primary regardless of the sensitivity outcome, because it is what the paper defines and what the authors' own published values reproduce (validation/dcsi_published_value_reproduction.json). The sensitivity analysis can qualify a conclusion; it cannot promote the diagnostic variant to primary.",
+
+  "k_distribution_note": "the frozen candidate bank (fixed32) contains K>=2 partitions; only the K>=3 subset can exhibit a mode-dependent ordering, so the size of that subset bounds the possible impact and will be reported alongside the result"
+}

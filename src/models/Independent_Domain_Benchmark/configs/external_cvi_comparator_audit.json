@@ -1,0 +1,68 @@
+{
+  "audit_date": "stage 4A",
+  "implemented_in_stage4a": false,
+  "policy": "audit only; implementation is authorised in Stage 4B ONLY for comparators whose definition and numerics are fully resolved. No missing comparator may be silently substituted.",
+  "already_available_in_inventory": [
+    "dbcv",
+    "s_dbw",
+    "silhouette",
+    "noise_aware_silhouette",
+    "calinski_harabasz",
+    "davies_bouldin",
+    "dunn_index",
+    "cop",
+    "coggins_jain_index"
+  ],
+  "installed_packages_checked": {
+    "validclust": "NOT installed",
+    "s_dbw": "NOT installed (metric already native)",
+    "clusteval": "NOT installed",
+    "cdbw": "NOT installed",
+    "pyclustering": "NOT installed"
+  },
+  "CDbw": {
+    "reference": "Halkidi & Vazirgiannis (2008), 'A density-based cluster validity approach using multi-representatives'",
+    "direction": "maximize",
+    "inputs": "X + labels; needs multiple representatives per cluster",
+    "k_assumption": "K>=2; undefined for K=1",
+    "noise_handling": "no native noise class; DBSCAN/HDBSCAN noise must be handled by an explicit, declared rule",
+    "python_in_repo": false,
+    "external_package": "PyPI 'cdbw' v0.2, MIT",
+    "edge_cases": "shrinking factor s and representative count r are free parameters; results vary with them",
+    "status": "AVAILABLE BUT UNVERIFIED \u2014 parameters must be pinned and the implementation numerically checked before use"
+  },
+  "CVNN": {
+    "reference": "Liu, Li, Xiong, Gao, Wu (2013), 'Understanding and Enhancement of Internal Clustering Validation Measures'",
+    "direction": "minimize",
+    "inputs": "X + labels + neighbourhood size k_nn",
+    "k_assumption": "K>=2",
+    "noise_handling": "undeclared in the source; needs an explicit rule",
+    "python_in_repo": false,
+    "external_package": "no trustworthy pinned PyPI implementation confirmed",
+    "edge_cases": "separation term is normalised across the compared partition set, so values are comparable only within a fixed candidate bank \u2014 which fixed32 provides",
+    "status": "NEEDS IMPLEMENTATION in Stage 4B from the paper, with the k_nn value pinned in advance"
+  },
+  "CVDD": {
+    "reference": "Hu & Zhong (2019), 'Internal validity index for fuzzy/density-involved clustering (CVDD)'",
+    "direction": "maximize",
+    "inputs": "X + labels; density-aware path/relative distances",
+    "k_assumption": "K>=2",
+    "noise_handling": "not specified for an explicit noise label",
+    "python_in_repo": false,
+    "external_package": "no trustworthy pinned implementation confirmed",
+    "edge_cases": "requires a path-based distance whose complexity can be superlinear; cost must be measured before adoption",
+    "status": "NEEDS IMPLEMENTATION in Stage 4B; correctness NOT yet resolved"
+  },
+  "DCSI": {
+    "reference": "Gauss, Scheipl, Herrmann (2024), 'DCSI - An improved measure of cluster separability based on separation and connectedness'",
+    "direction": "maximize",
+    "inputs": "X + labels; density-based separation and connectedness",
+    "k_assumption": "K>=2",
+    "noise_handling": "paper discusses noise explicitly",
+    "python_in_repo": false,
+    "external_package": "reference implementation published with the paper; licence must be checked before vendoring",
+    "edge_cases": "depends on a minPts-like parameter that must be pinned",
+    "status": "NEEDS LICENCE CHECK + IMPLEMENTATION in Stage 4B"
+  },
+  "consequence_if_unresolved": "any comparator not implemented and verified cannot be claimed against; the metrics-paper criterion that requires comparison against modern CVIs would then remain unmet"
+}

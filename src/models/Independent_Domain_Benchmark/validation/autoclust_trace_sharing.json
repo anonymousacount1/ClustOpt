@@ -1,0 +1,182 @@
+{
+  "candidate_generation_audit": {
+    "authoritative_path": "experiments/external_baselines/ML2DAC/indomain/search.py::sample_optimizer_configs_constrained",
+    "called_from": "AutoClust/indomain/phase.py::run_view, once, BEFORE the scoring loop",
+    "verdict": "PRE-SAMPLED / NON-ADAPTIVE",
+    "source_evidence": [
+      "the function returns the complete list of n_iter configurations before any candidate is fitted or scored",
+      "its only inputs are algorithms, space, n_iter, k_range, seed and an optional avoid set",
+      "randomness comes from a local np.random.default_rng(seed); no CVI value, ARI prediction, objective or prior-candidate outcome is in scope",
+      "the seen set filters duplicate CONFIGURATIONS, never results",
+      "run_view iterates the materialised list to completion; there is no early stopping and no re-sampling"
+    ],
+    "dependencies": [
+      "selected algorithm",
+      "frozen grid/search space",
+      "n_iter (budget)",
+      "k_range",
+      "seed"
+    ],
+    "independent_of": [
+      "CVI inventory",
+      "CVI values",
+      "ARI-predictor scores",
+      "prior candidate validity or score",
+      "search history"
+    ]
+  },
+  "trace_identity": {
+    "traces_tested": 6,
+    "candidates_per_trace": [
+      50,
+      50,
+      50,
+      50,
+      50,
+      50
+    ],
+    "algorithms_agree_everywhere": true,
+    "config_mismatches": 0,
+    "distinct_algorithms_exercised": [
+      "gmm",
+      "kmeans",
+      "minibatch_kmeans"
+    ],
+    "verdict": "A0-A3 SHARE ONE PHYSICAL CANDIDATE TRACE",
+    "rows": [
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "x_only",
+        "family": "arcs_circles_rings",
+        "selected_algorithm": {
+          "A0": "kmeans",
+          "A1": "kmeans",
+          "A2": "kmeans",
+          "A3": "kmeans"
+        },
+        "algorithms_agree": true,
+        "n_candidates": 50,
+        "config_list_hash": {
+          "A0": "ab78e062677719f6",
+          "A1": "ab78e062677719f6",
+          "A2": "ab78e062677719f6",
+          "A3": "ab78e062677719f6"
+        },
+        "hashes_identical": true,
+        "config_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "xy_2d",
+        "family": "arcs_circles_rings",
+        "selected_algorithm": {
+          "A0": "kmeans",
+          "A1": "kmeans",
+          "A2": "kmeans",
+          "A3": "kmeans"
+        },
+        "algorithms_agree": true,
+        "n_candidates": 50,
+        "config_list_hash": {
+          "A0": "8d76867432b20a07",
+          "A1": "8d76867432b20a07",
+          "A2": "8d76867432b20a07",
+          "A3": "8d76867432b20a07"
+        },
+        "hashes_identical": true,
+        "config_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "y_only",
+        "family": "arcs_circles_rings",
+        "selected_algorithm": {
+          "A0": "gmm",
+          "A1": "gmm",
+          "A2": "gmm",
+          "A3": "gmm"
+        },
+        "algorithms_agree": true,
+        "n_candidates": 50,
+        "config_list_hash": {
+          "A0": "f851becef4df3f51",
+          "A1": "f851becef4df3f51",
+          "A2": "f851becef4df3f51",
+          "A3": "f851becef4df3f51"
+        },
+        "hashes_identical": true,
+        "config_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "x_only",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "selected_algorithm": {
+          "A0": "gmm",
+          "A1": "gmm",
+          "A2": "gmm",
+          "A3": "gmm"
+        },
+        "algorithms_agree": true,
+        "n_candidates": 50,
+        "config_list_hash": {
+          "A0": "4c58ead478b14845",
+          "A1": "4c58ead478b14845",
+          "A2": "4c58ead478b14845",
+          "A3": "4c58ead478b14845"
+        },
+        "hashes_identical": true,
+        "config_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "xy_2d",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "selected_algorithm": {
+          "A0": "minibatch_kmeans",
+          "A1": "minibatch_kmeans",
+          "A2": "minibatch_kmeans",
+          "A3": "minibatch_kmeans"
+        },
+        "algorithms_agree": true,
+        "n_candidates": 50,
+        "config_list_hash": {
+          "A0": "57fd3956e59903c8",
+          "A1": "57fd3956e59903c8",
+          "A2": "57fd3956e59903c8",
+          "A3": "57fd3956e59903c8"
+        },
+        "hashes_identical": true,
+        "config_mismatches": 0,
+        "status": "PASS"
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "y_only",
+        "family": "deinterleaving_pri_toa_amp_like",
+        "selected_algorithm": {
+          "A0": "gmm",
+          "A1": "gmm",
+          "A2": "gmm",
+          "A3": "gmm"
+        },
+        "algorithms_agree": true,
+        "n_candidates": 50,
+        "config_list_hash": {
+          "A0": "701ab25db3998cd4",
+          "A1": "701ab25db3998cd4",
+          "A2": "701ab25db3998cd4",
+          "A3": "701ab25db3998cd4"
+        },
+        "hashes_identical": true,
+        "config_mismatches": 0,
+        "status": "PASS"
+      }
+    ]
+  },
+  "note": "configuration-list identity only; each arm still computes its own CVI vector, predictor scores and final selection"
+}

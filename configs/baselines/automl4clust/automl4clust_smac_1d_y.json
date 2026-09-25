@@ -1,0 +1,21 @@
+{
+  "method": "AutoML4Clust",
+  "optimizer": "SMAC",
+  "time_budget_sec": 120,
+  "n_loops": 100,
+  "max_iterations": null,
+  "metric": "silhouette",
+  "random_state": 42,
+  "use_warmstarting": false,
+  "fail_on_invalid_clustering": false,
+  "enforce_wallclock_timeout": false,
+  "n_jobs": 1,
+  "normalize_input": true,
+  "k_range": null,
+  "algorithms": null,
+  "record_types": ["1d_y"],
+  "_notes": {
+    "budget": "Enforced budget is n_loops (SMAC runcount-limit); time_budget_sec is provenance only.",
+    "record": "Clustering is performed on the 1-D y partition space; the full 2-D evaluation space is still recorded."
+  }
+}

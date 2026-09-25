@@ -1,0 +1,77 @@
+{
+  "search_config_root": "models\\ClustOpt\\configs\\utilities_maps",
+  "views": {
+    "x_only": {
+      "max_samples_per_param": 1,
+      "enumerated_total": 32,
+      "pre_replacement": {
+        "HDBSCAN_CONSTRAINED": 4,
+        "agglomerative": 4,
+        "birch": 4,
+        "dbscan": 4,
+        "gmm": 6,
+        "hdbscan": 2,
+        "kmeans": 4,
+        "minibatch_kmeans": 4
+      },
+      "resolved_total": 32,
+      "post_replacement": {
+        "agglomerative": 5,
+        "birch": 5,
+        "dbscan": 5,
+        "gmm": 7,
+        "hdbscan": 2,
+        "kmeans": 4,
+        "minibatch_kmeans": 4
+      }
+    },
+    "y_only": {
+      "max_samples_per_param": 1,
+      "enumerated_total": 32,
+      "pre_replacement": {
+        "HDBSCAN_CONSTRAINED": 4,
+        "agglomerative": 4,
+        "birch": 4,
+        "dbscan": 4,
+        "gmm": 6,
+        "hdbscan": 2,
+        "kmeans": 4,
+        "minibatch_kmeans": 4
+      },
+      "resolved_total": 32,
+      "post_replacement": {
+        "agglomerative": 5,
+        "birch": 5,
+        "dbscan": 5,
+        "gmm": 7,
+        "hdbscan": 2,
+        "kmeans": 4,
+        "minibatch_kmeans": 4
+      }
+    },
+    "xy_2d": {
+      "max_samples_per_param": 1,
+      "enumerated_total": 32,
+      "pre_replacement": {
+        "HDBSCAN_CONSTRAINED": 4,
+        "agglomerative": 4,
+        "birch": 4,
+        "dbscan": 4,
+        "gmm": 6,
+        "hdbscan": 2,
+        "kmeans": 4,
+        "minibatch_kmeans": 4
+      },
+      "resolved_total": 32,
+      "post_replacement": {
+        "agglomerative": 5,
+        "birch": 5,
+        "dbscan": 5,
+        "gmm": 7,
+        "hdbscan": 2,
+        "kmeans": 4,
+        "minibatch_kmeans": 4
+      }
+    }
+  }
+}

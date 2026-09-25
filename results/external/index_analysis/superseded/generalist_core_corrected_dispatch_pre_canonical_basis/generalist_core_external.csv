@@ -1,0 +1,4 @@
+metric_id,metric_group,utility_macro,utility_median,n_units,utility_source_balanced,units_total,units_valid,valid_fraction,repaired,rank_macro,rank_source_balanced,hypothesis
+gridness_fft_acf,New46,0.49316777268384415,0.517313084800409,150,0.5324304701165736,150,150,1.0,False,7.0,7.0,internal_generalist_core
+noise_aware_silhouette,Established,0.5067259780531174,0.4849483045939451,150,0.5544883924349713,150,150,1.0,False,3.0,3.0,internal_generalist_core
+silhouette,Original,0.5190185108065585,0.4928490824344285,150,0.5687789508412907,150,150,1.0,False,2.0,1.0,internal_generalist_core

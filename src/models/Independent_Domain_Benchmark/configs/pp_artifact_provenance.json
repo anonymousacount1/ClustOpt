@@ -1,0 +1,123 @@
+{
+  "record": "POLICY PREDICTOR ARTIFACT PROVENANCE",
+  "stage_frozen": "4B-1b",
+  "purpose": "pointer record so Stage 4B-2 adapters can locate and verify the frozen PP artifacts without those artifacts entering version control",
+  "scientific_status": "deterministic materialisation of a previously frozen specification. NOT retraining, model selection, tuning, architecture development, recalibration or external-data training.",
+  "external_data_used": false,
+  "retrained_in_this_stage": false,
+  "materialisation_commit": "ed9e999d787b0a22355127a3af844c8b8ae6abc4",
+  "materialisation_source": "models/ClustOpt_Policy_Predictor/stage2c/materialise_final_pp_artifacts.py",
+  "reproduction_criterion": {
+    "columns": [
+      "dataset_id",
+      "view_id",
+      "selected_policy_index",
+      "selected_policy_id",
+      "selected_regime_id",
+      "weighting_mode",
+      "raw_softmax_tie"
+    ],
+    "canonical_sort_key": [
+      "dataset_id",
+      "view_id"
+    ],
+    "rule": "every Split-1 record, both arms, must agree on the row set, the ordering after a canonical sort, the selected policy index and id, the selected regime, the weighting mode and the tie flag"
+  },
+  "arms": {
+    "V1": {
+      "artifact_id": "PP_V1",
+      "target_semantics": "CENTERED original policy ARI (Stage-2A semantics)",
+      "model_file": "results_analysis\\clustopt_policy_predictor\\stage4b_materialised_final_models\\PP_V1\\model.joblib",
+      "model_sha256": "aa977443caa97bda43efd527d6afc405662cbb4bdbf69728f08dfef3532f6e2a",
+      "model_sha256_16": "aa977443caa97bda",
+      "metadata_file": "results_analysis/clustopt_policy_predictor/stage4b_materialised_final_models/PP_V1/artifact_metadata.json",
+      "metadata_sha256_16": "fee7ef2069c621c1",
+      "estimator": "ExtraTreesRegressor",
+      "random_state": 42,
+      "config_id": "EXTRATREES__UNIFIED__META_UTILITIES__CENTERED",
+      "config_hash": "a9e92d5fcfab1271",
+      "training_matrix_sha256_16": "ce0eb8190c904191",
+      "training_splits": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "split_1_used_in_training": false,
+      "n_train_rows": 48039,
+      "rows_compared": 3165,
+      "policy_mismatches": 0,
+      "bit_exact_on_criterion": true,
+      "replay_self_deterministic_n_jobs_1": true,
+      "external_data_used": false
+    },
+    "V2": {
+      "artifact_id": "PP_V2",
+      "target_semantics": "CENTERED reranker-aware (Stage-2C1 single-exclusion OOF)",
+      "model_file": "results_analysis\\clustopt_policy_predictor\\stage4b_materialised_final_models\\PP_V2\\model.joblib",
+      "model_sha256": "4a668514b93f237e04ba895fb9110fffa1f81c4672bdd1d4bf94a905bb225926",
+      "model_sha256_16": "4a668514b93f237e",
+      "metadata_file": "results_analysis/clustopt_policy_predictor/stage4b_materialised_final_models/PP_V2/artifact_metadata.json",
+      "metadata_sha256_16": "0917897130c767a0",
+      "estimator": "ExtraTreesRegressor",
+      "random_state": 42,
+      "config_id": "EXTRATREES__UNIFIED__META_UTILITIES__CENTERED",
+      "config_hash": "a9e92d5fcfab1271",
+      "training_matrix_sha256_16": "ce0eb8190c904191",
+      "training_splits": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "split_1_used_in_training": false,
+      "n_train_rows": 48039,
+      "rows_compared": 3165,
+      "policy_mismatches": 0,
+      "bit_exact_on_criterion": true,
+      "replay_self_deterministic_n_jobs_1": true,
+      "external_data_used": false
+    }
+  },
+  "diagnostic_not_in_the_criterion": {
+    "column": "score_vector_hash",
+    "why_excluded": "it encodes float64 low bits from scikit-learn's threaded forest prediction, which is non-associative and therefore not reproducible even by the historical process itself",
+    "measured": "3143/3165 rows differ between two consecutive predict() calls on the SAME model object at n_jobs=4, max |diff| 2.78e-17; 0/3165 at n_jobs=1",
+    "magnitudes_affect_downstream_behaviour": false,
+    "audit": "configs/pp_inference_determinism_audit.json"
+  },
+  "frozen_inference_policy": {
+    "n_jobs": 1,
+    "why": "serial prediction is bit-stable and gives an identical argmax, so freezing it removes the nondeterminism at no scientific cost",
+    "applies_to": [
+      "IDB_ClustOpt_C2_PPv1_noR",
+      "IDB_ClustOpt_C5_PPv2_R"
+    ],
+    "outer_benchmark_workers_unchanged": 8
+  },
+  "binaries_in_version_control": false,
+  "binary_location": "results_analysis/clustopt_policy_predictor/stage4b_materialised_final_models",
+  "binary_location_is_git_ignored_scope": "results_analysis/** is never staged"
+}

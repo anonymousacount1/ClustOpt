@@ -1,0 +1,18 @@
+{
+  "method_success": 2100,
+  "method_failed": 0,
+  "method_ari": 2100,
+  "fixed32_candidates": 4800,
+  "fixed32_ari": 4776,
+  "utility_valid": 9102,
+  "utility_insufficient": 948,
+  "utility_errors": 0,
+  "success_without_usable_labels": 0,
+  "execution_calls_during_phase_c": 0,
+  "wall_clock_seconds": 25.2,
+  "run_id": "stage4c_v2_323194df26",
+  "unknown_metric_ids": [],
+  "utility_error_detail": [],
+  "utility_value_column": "utility_score",
+  "utility_source_hash": "7f65fa2b1a794b26"
+}

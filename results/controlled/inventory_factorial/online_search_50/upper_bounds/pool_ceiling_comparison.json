@@ -1,0 +1,19 @@
+{
+  "n_dataset_views": 3165,
+  "offline_grid_ceiling_mean": 0.49791672681546156,
+  "online_optuna_ceiling_mean_HU": 0.4892297564948509,
+  "online_ceiling_by_arm": {
+    "HU": 0.4892297564948509,
+    "HP": 0.4925544770139979,
+    "HO": 0.492096067643054,
+    "FU": 0.4895360357157305,
+    "FP": 0.49313710531352584,
+    "FO": 0.49325562508734067
+  },
+  "mean_delta_online_minus_offline": -0.008686970320610608,
+  "ci_lo": -0.009987789756964918,
+  "ci_hi": -0.007407773037997815,
+  "wilcoxon_p": 9.111381499355155e-74,
+  "online_ceiling_higher_rate": 0.2619273301737757,
+  "offline_ceiling_higher_rate": 0.5014218009478673
+}

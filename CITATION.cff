@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper."
+title: "CLUSTOPT: utility-guided validity-index selection and candidate reranking"
+type: software
+authors:
+  - name: "Anonymous authors (under double-blind review)"
+version: "1.0.0"
+license: BSD-3-Clause
+preferred-citation:
+  type: conference-paper
+  title: "Tailoring the Clustering Objective to the Data: Utility-Guided Validity-Index Selection and Candidate Reranking"
+  authors:
+    - name: "Anonymous authors"
+  collection-title: "Under review"
+  year: 2026

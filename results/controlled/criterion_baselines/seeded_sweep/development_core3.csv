@@ -1,0 +1,10 @@
+view,metric,registry_key,weight,dev_mean_utility,dev_rank
+x_only,silhouette,silhouette,1.0,0.6786765753316119,1
+x_only,noise_aware_silhouette,noise_aware_silhouette,1.0,0.6561591484069987,2
+x_only,gridness_fft_acf,gridness_fft_acf,1.0,0.6488909484301043,4
+y_only,silhouette,silhouette,1.0,0.714447694440517,2
+y_only,noise_aware_silhouette,noise_aware_silhouette,1.0,0.7187829631448822,1
+y_only,gridness_fft_acf,gridness_fft_acf,1.0,0.6951353151887841,3
+xy_2d,silhouette,silhouette,1.0,0.5937085073771311,6
+xy_2d,noise_aware_silhouette,noise_aware_silhouette,1.0,0.6167355804508836,3
+xy_2d,gridness_fft_acf,gridness_fft_acf,1.0,0.5734145219415475,11

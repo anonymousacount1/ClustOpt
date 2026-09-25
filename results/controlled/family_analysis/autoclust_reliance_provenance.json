@@ -1,0 +1,51 @@
+{
+  "model": "experiments\\external_baselines\\Unified_MKR\\derived\\autoclust_split1\\extended_cvis\\ari_predictor.pkl",
+  "model_retrained": false,
+  "model_tuned": false,
+  "architecture": {
+    "hidden_layer_sizes": [
+      60,
+      30,
+      10
+    ],
+    "activation": "relu",
+    "note": "matches AutoClust MLPRegressor((60,30,10), relu)"
+  },
+  "trained_on_splits": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "evaluation_population": {
+    "source": "master evaluations.parquet, split_id == 1",
+    "never_seen_in_training": true,
+    "dataset_disjoint_from_training": true,
+    "n_rows": 101274,
+    "n_datasets": 1055,
+    "rationale": "Split 1 is a genuinely held-out, dataset-grouped population; sklearn's internal validation_fraction split is row-level and would leak configurations of the same dataset across the boundary"
+  },
+  "permutation": {
+    "n_repeats": 5,
+    "seed": 1234,
+    "family_level_repeats": 2
+  },
+  "baseline_scores": {
+    "rmse": 0.06390703471021551,
+    "mae": 0.039412693570983155,
+    "r2": 0.9391455619486365,
+    "spearman": 0.960609309974421
+  },
+  "interpretation": "Predictive reliance of the already-trained ARI predictor. NOT a causal single-metric ARI contribution. CVIs are correlated, so a low individual score may indicate redundancy rather than uselessness."
+}

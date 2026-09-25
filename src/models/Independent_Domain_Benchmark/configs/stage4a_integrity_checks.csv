@@ -1,0 +1,87 @@
+gate,group,name,passed,status,detail
+G001,prior,stage3c_86_of_86,True,PASS,86/86
+G002,prior,stage3b_70_of_70,True,PASS,70/70
+G003,prior,stage3c_committed,True,PASS,e481db10597e4aee8776537003fb79c0147fc09a Stage 3C:
+G004,prior,existing_domain_analysis_closed,True,PASS,Stage 3A/3B/3C all committed and gate-clean
+G005,prior,external_submodule_clean,True,PASS,HEAD=c946b9eaf58d dirty=''
+G006,arch,benchmark_root_exists,True,PASS,models\Independent_Domain_Benchmark
+G007,arch,not_nested_under_old_components,True,PASS,top-level component parallel to Clustering_Repository_Builder
+G008,arch,result_root_frozen,True,PASS,results_analysis/independent_domain_benchmark
+G009,arch,old_synthetic_root_not_reused,True,PASS,results_analysis/clustering_repository/analyzed_data
+G010,arch,result_hierarchy_documented,True,PASS,4 layout keys
+G011,corpus,total_within_hard_cap,True,PASS,50 <= 60
+G012,corpus,preferred_target_50,True,PASS,50
+G013,corpus,source_groups_fixed,True,PASS,"{'fcps': 7, 'sklearn_shapes': 15, 'real_pca': 28}"
+G014,corpus,fcps_metadata_verified,True,PASS,K and dimensions counted from the retrieved ARFF files
+G015,corpus,sklearn_15_configs_frozen,True,PASS,5 generators x 3 difficulties
+G016,corpus,real_eligibility_frozen,True,PASS,"2<=K<=5, 200-5000 rows, min class 10, missing<=20%"
+G017,corpus,candidate_audit_complete,True,PASS,76 candidates audited
+G018,corpus,no_outcome_based_rejection,True,PASS,"reasons: ['ground_truth_K_outside_2_5', 'sample_size_outside_eligibility', 'surplus_to_frozen_target_28_deterministic_name_order']"
+G019,corpus,checksums_and_provenance,True,PASS,every accepted dataset carries a representation checksum
+G020,corpus,duplicate_audit_complete,True,PASS,representation-checksum duplicate check executed
+G021,labels,labels_isolated_from_execution,True,PASS,ExecutionInput has no label field
+G022,labels,ground_truth_k_not_exposed,True,PASS,adapter contract forbids K
+G023,labels,pca_label_free,True,PASS,"imputation, scaling and PCA fitted on X alone"
+G024,labels,evaluation_offline_only,True,PASS,label gate refuses until predictions are persisted
+G025,methods,six_clustopt_outputs,True,PASS,6
+G026,methods,clustopt_artifact_hashes,True,PASS,utility model hashed for all six
+G027,methods,pp_noR_version_verified,True,PASS,CENTERED original policy ARI (Stage-2A semantics)
+G028,methods,pp_R_version_verified,True,PASS,CENTERED reranker-aware (Stage-2C1 single-exclusion OOF)
+G029,methods,reranker_hashes_verified,True,PASS,"MLP_TOP5=27c57c20a71f6390, KNN_TOP10=ad7b0d07a0d86cf6, 10 regimes for C5"
+G030,methods,no_retraining_declared,True,PASS,all 14
+G031,methods,four_ml2dac_arms,True,PASS,4
+G032,methods,ml2dac_hashes,True,PASS,classifier/imputer/kdtree/warmstart hashed; candidate set frozen
+G033,methods,four_autoclust_arms,True,PASS,4
+G034,methods,autoclust_hashes,True,PASS,ARI predictor + selector hashed for all four
+G035,methods,total_method_count_14,True,PASS,14
+G036,search,budget_50,True,PASS,50
+G037,search,k_range_2_5,True,PASS,2..5
+G038,search,matched_search_space,True,PASS,clustopt_phaseE2_map
+G039,search,no_external_tuning,True,PASS,False
+G040,search,portfolio_differences_documented,True,PASS,ClustOpt / AutoClust / ML2DAC reachable portfolios recorded
+G041,search,seed_derivation_frozen,True,PASS,"SHA256-based, reusing the project convention"
+G042,search,trace_sharing_semantics_frozen,True,PASS,C0/C3 and C1/C4 share; 4 physical traces
+G043,runtime,T0_defined,True,PASS,defined
+G044,runtime,T1_defined,True,PASS,defined
+G045,runtime,preparation_excluded,True,PASS,excluded
+G046,runtime,online_inference_included,True,PASS,included lists for all three frameworks
+G047,runtime,model_init_separate,True,PASS,measured separately
+G048,runtime,workers_8_frozen,True,PASS,8
+G049,runtime,thread_policy_frozen,True,PASS,OMP/MKL/OPENBLAS/NUMEXPR = 1
+G050,runtime,common_watchdog_proposed,True,PASS,"1800 s per (dataset, view), emergency only"
+G051,metrics,fixed32_reuse_audited,True,PASS,"32 candidates per (dataset, view)"
+G052,metrics,all_46_new_metrics_planned,True,PASS,46
+G053,metrics,dead_metrics_retained_externally,True,PASS,both attempted as analysis metrics only
+G054,metrics,cdbw_audit_complete,True,PASS,AVAILABLE BUT UNVERIFIED — parameters must be pinned and
+G055,metrics,cvnn_audit_complete,True,PASS,"NEEDS IMPLEMENTATION in Stage 4B from the paper, with th"
+G056,metrics,cvdd_audit_complete,True,PASS,NEEDS IMPLEMENTATION in Stage 4B; correctness NOT yet re
+G057,metrics,dcsi_audit_complete,True,PASS,NEEDS LICENCE CHECK + IMPLEMENTATION in Stage 4B
+G058,metrics,no_silent_comparator_substitution,True,PASS,nothing implemented in 4A; unresolved comparators cannot be claimed
+G059,metrics,canonical_utility_reused,True,PASS,Stage-3B compute_metric_utilities reused verbatim
+G060,metrics,bh_fdr_plan_frozen,True,PASS,4 predeclared test families
+G061,hypotheses,internal_core_frozen,True,PASS,3 core metrics
+G062,hypotheses,specialists_frozen,True,PASS,9 named
+G063,hypotheses,fine_resolution_frozen,True,PASS,64% of specialists were subfamily-only internally
+G064,hypotheses,image_vs_pattern_frozen,True,PASS,frozen
+G065,hypotheses,ladder_counterexample_retained,True,PASS,retained
+G066,hypotheses,capture_vs_existence_frozen,True,PASS,frozen
+G067,stats,bestview_endpoint_frozen,True,PASS,BestView ARI (historical continuity)
+G068,stats,xy2d_endpoint_frozen,True,PASS,xy_2d ARI (deployable external representation)
+G069,stats,primary_comparisons_frozen,True,PASS,2 headline + 3 mechanism + 5 + 5 transfer
+G070,stats,source_reporting_frozen,True,PASS,fcps / sklearn_shapes / real_pca
+G071,stats,source_balanced_macro_frozen,True,PASS,(mean_fcps + mean_sklearn + mean_real)/3
+G072,stats,dataset_inferential_unit,True,PASS,dataset
+G073,stats,no_exhaustive_pairwise_primary,True,PASS,False
+G074,safety,zero_external_searches,True,PASS,no result.json anywhere
+G075,safety,zero_model_training,True,PASS,none
+G076,safety,zero_fixed32_execution,True,PASS,not executed
+G077,safety,zero_outcome_driven_design,True,PASS,"no method has been executed, so no design input could exist"
+G078,safety,no_generated_results_staged,True,PASS,"0 staged, 0 generated"
+G079,repo,domain_shift_single_score,True,PASS,standardized_nn_distance
+G080,repo,domain_shift_never_affects_design,True,PASS,analysis only
+G081,repo,result_schemas_frozen,True,PASS,execution schema carries no labels and no ARI
+G082,repo,resume_semantics_frozen,True,PASS,11 completion conditions
+G083,repo,config_set_complete,True,PASS,16 config json files
+G084,repo,readme_present,True,PASS,README.md
+G085,repo,stage4a_report_present,True,PASS,STAGE4A_INDEPENDENT_DOMAIN_FREEZE_AND_AUDIT.md
+G086,repo,pp_blocker_declared_not_hidden,True,PASS,PP v1/v2 binaries not persisted -- declared on both PP arms

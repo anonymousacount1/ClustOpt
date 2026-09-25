@@ -1,0 +1,22 @@
+{
+  "method": "AutoClust",
+  "implementation": "ML2DAC_RelatedWork_Reimplementation",
+  "mode": "smoke_test",
+  "use_landmarking_metafeatures": true,
+  "landmarking_algorithm": "MeanShift",
+  "use_kdtree_algorithm_selection": true,
+  "use_mlp_cvi_to_external_index_objective": true,
+  "use_bayesian_optimization": true,
+  "optimizer": "SMAC",
+  "optimizer_evaluations": 12,
+  "smac_wallclock_limit_sec": null,
+  "random_state": 42,
+  "normalize_input": true,
+  "k_range": null,
+  "record_types": ["2d"],
+  "artifact_policy": "require_pretrained_or_train_once_if_paper_faithful",
+  "fail_on_missing_core_artifacts": true,
+  "fail_on_invalid_clustering": false,
+  "n_jobs": 1,
+  "_notes": {"intent": "Tiny, fast end-to-end check ONLY (small synthetic dataset, 12 SMAC evals, 60s soft / 120s hard). Do NOT use for the final comparison."}
+}

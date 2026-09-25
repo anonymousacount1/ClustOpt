@@ -1,0 +1,3 @@
+metric_id,canonical_name,group,subgroup,head_group,implementation_subpackage,implementation_source,direction,is_live,used_by_ml2dac,used_by_autoclust,used_by_clustopt,has_clustopt_utility,clustopt_utility_na_reason,requires_ground_truth,dead_reason,retained_in_contribution_count
+convexity_ratio_image_based,convexity_ratio_image_based,New46,New46-Image,NA,image_base,clustopt,clustopt_utility,False,False,False,True,False,dead: all-NaN on the training repository,False,100% NaN on the training repository (deterministic),True
+hough_arc_circle_strength,hough_arc_circle_strength,New46,New46-Image,NA,image_base,clustopt,clustopt_utility,False,False,False,True,False,dead: all-NaN on the training repository,False,100% NaN on the training repository (deterministic),True

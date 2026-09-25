@@ -1,0 +1,50 @@
+{
+  "manuscript_0.6145": [
+    {
+      "method": "AutoClust_Extended_InDomain_same_search_space",
+      "aggregation": "A_dataset_bestview_mean",
+      "value": 0.6144995191007991
+    },
+    {
+      "method": "AutoClust_Extended_InDomain_same_search_space",
+      "aggregation": "H_bestview_complete_only",
+      "value": 0.6144995191007991
+    }
+  ],
+  "stage2b5_0.61706": [
+    {
+      "method": "AutoClust_Extended_InDomain",
+      "aggregation": "A_dataset_bestview_mean",
+      "value": 0.6170597383643214
+    },
+    {
+      "method": "AutoClust_Extended_InDomain",
+      "aggregation": "H_bestview_complete_only",
+      "value": 0.6170597383643214
+    }
+  ],
+  "manuscript_orig_0.5810": [
+    {
+      "method": "AutoClust_Original_InDomain_same_search_space",
+      "aggregation": "A_dataset_bestview_mean",
+      "value": 0.5810259338513559
+    },
+    {
+      "method": "AutoClust_Original_InDomain_same_search_space",
+      "aggregation": "H_bestview_complete_only",
+      "value": 0.5810259338513559
+    }
+  ],
+  "stage2b5_orig_0.57795": [
+    {
+      "method": "AutoClust_Original_InDomain",
+      "aggregation": "A_dataset_bestview_mean",
+      "value": 0.5779473952731331
+    },
+    {
+      "method": "AutoClust_Original_InDomain",
+      "aggregation": "H_bestview_complete_only",
+      "value": 0.5779473952731331
+    }
+  ]
+}

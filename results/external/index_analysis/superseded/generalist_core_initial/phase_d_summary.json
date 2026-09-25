@@ -1,0 +1,38 @@
+{
+  "run_id": "stage4c_v2_323194df26",
+  "method_rows": 2100,
+  "method_successful": 2100,
+  "datasets": 50,
+  "methods": 14,
+  "fixed32_candidate_ari_rows": 4776,
+  "metric_utility_rows": 10050,
+  "metric_utility_valid": 9102,
+  "primary_metrics_with_any_utility": 61,
+  "aggregation_rules": {
+    "inferential_unit": "dataset",
+    "dataset_macro": "equal weight per dataset",
+    "source_balanced_macro": "mean within FCPS / sklearn_shapes / real_pca, then the three means weighted equally",
+    "bestview": "max over SUCCESSFUL views; all-view failure stays FAILURE",
+    "no_sentinel_ari": true,
+    "frozen_before_outcomes": true
+  },
+  "outputs": [
+    "fixed32_candidate_ari.csv.gz",
+    "fixed32_candidate_validity.csv",
+    "generalist_core_external.csv",
+    "joint_pipeline_per_unit.csv.gz",
+    "joint_pipeline_summary.csv",
+    "method_aggregate_summary.csv",
+    "method_bestview_per_dataset.csv.gz",
+    "method_failure_summary.csv",
+    "method_per_dataset_view.csv.gz",
+    "method_runtime_summary.csv",
+    "method_xy2d_per_dataset.csv.gz",
+    "metric_aggregate_summary.csv",
+    "metric_group_summary.csv",
+    "metric_specialisation_spread.csv",
+    "metric_top5_frequency.csv",
+    "metric_utility_per_dataset_view.csv.gz",
+    "modern_comparator_analysis.json"
+  ]
+}

@@ -1,0 +1,538 @@
+{
+  "source_tree": {
+    "pattern_base": [
+      "alpha_shape_compactness",
+      "arc_circle_fit",
+      "axial_symmetry",
+      "bimodality_anti_thickness",
+      "connectivity_components",
+      "convexity_ratio",
+      "corner_sharpness",
+      "curvature_consistency",
+      "direction_entropy",
+      "eccentricity_ratio",
+      "gridness_2d",
+      "hollow_score",
+      "ladderness",
+      "line_straightness",
+      "mst_smoothness",
+      "parabolicity",
+      "parallel_bands",
+      "periodicity_1d",
+      "piecewise_linearity",
+      "radial_uniformity",
+      "ribbon_thickness",
+      "turning_points_count"
+    ],
+    "image_base": [
+      "blobness_log_dog",
+      "circularity_compactness",
+      "connected_components_count",
+      "contour_graph_connectivity",
+      "convexity_ratio_image_based",
+      "corner_junction_density",
+      "edge_coherence",
+      "ellipse_fit_score",
+      "euler_holes_count",
+      "fractal_dimension",
+      "glcm_haralick",
+      "gridness_fft_acf",
+      "hough_arc_circle_strength",
+      "hough_line_strength",
+      "lbp_stationarity",
+      "morphological_band_count",
+      "orientation_histogram_entropy",
+      "peak_to_background_line_ratio",
+      "polygonality",
+      "rectangularity",
+      "ridge_strength",
+      "skeleton_connectivity",
+      "symmetry_score",
+      "thickness_uniformity"
+    ],
+    "n_pattern_modules": 22,
+    "n_image_modules": 24
+  },
+  "registry_size": 60,
+  "registry_by_source_family": {
+    "core": [
+      "calinski_harabasz",
+      "davies_bouldin",
+      "dbcv",
+      "noise_aware_silhouette",
+      "s_dbw",
+      "silhouette"
+    ],
+    "structure": [
+      "avg_pca_isotropy",
+      "avg_within_cluster_dispersion",
+      "cluster_size_balance_entropy",
+      "cluster_size_imbalance_entropy",
+      "min_centroid_distance",
+      "min_intercluster_distance",
+      "neighborhood_purity",
+      "neighborhood_purity_multi_k"
+    ],
+    "pattern": [
+      "alpha_shape_compactness",
+      "arc_circle_fit",
+      "axial_symmetry",
+      "bimodality_anti_thickness",
+      "connectivity_components",
+      "convexity_ratio",
+      "corner_sharpness",
+      "curvature_consistency",
+      "direction_entropy",
+      "eccentricity_ratio",
+      "gridness_2d",
+      "hollow_score",
+      "ladderness",
+      "line_straightness",
+      "mst_smoothness",
+      "parabolicity",
+      "parallel_bands",
+      "periodicity_1d",
+      "piecewise_linearity",
+      "radial_uniformity",
+      "ribbon_thickness",
+      "turning_points_count"
+    ],
+    "image": [
+      "blobness_log_dog",
+      "circularity_compactness",
+      "connected_components_count",
+      "contour_graph_connectivity",
+      "convexity_ratio_image_based",
+      "corner_junction_density",
+      "edge_coherence",
+      "ellipse_fit_score",
+      "euler_holes_count",
+      "fractal_dimension",
+      "glcm_haralick",
+      "gridness_fft_acf",
+      "hough_arc_circle_strength",
+      "hough_line_strength",
+      "lbp_stationarity",
+      "morphological_band_count",
+      "orientation_histogram_entropy",
+      "peak_to_background_hough",
+      "polygonality",
+      "rectangularity",
+      "ridge_strength",
+      "skeleton_connectivity",
+      "symmetry_score",
+      "thickness_uniformity"
+    ]
+  },
+  "new46_metric_ids": [
+    "alpha_shape_compactness",
+    "arc_circle_fit",
+    "axial_symmetry",
+    "bimodality_anti_thickness",
+    "blobness_log_dog",
+    "circularity_compactness",
+    "connected_components_count",
+    "connectivity_components",
+    "contour_graph_connectivity",
+    "convexity_ratio",
+    "convexity_ratio_image_based",
+    "corner_junction_density",
+    "corner_sharpness",
+    "curvature_consistency",
+    "direction_entropy",
+    "eccentricity_ratio",
+    "edge_coherence",
+    "ellipse_fit_score",
+    "euler_holes_count",
+    "fractal_dimension",
+    "glcm_haralick",
+    "gridness_2d",
+    "gridness_fft_acf",
+    "hollow_score",
+    "hough_arc_circle_strength",
+    "hough_line_strength",
+    "ladderness",
+    "lbp_stationarity",
+    "line_straightness",
+    "morphological_band_count",
+    "mst_smoothness",
+    "orientation_histogram_entropy",
+    "parabolicity",
+    "parallel_bands",
+    "peak_to_background_hough",
+    "periodicity_1d",
+    "piecewise_linearity",
+    "polygonality",
+    "radial_uniformity",
+    "rectangularity",
+    "ribbon_thickness",
+    "ridge_strength",
+    "skeleton_connectivity",
+    "symmetry_score",
+    "thickness_uniformity",
+    "turning_points_count"
+  ],
+  "n_new46": 46,
+  "metric_detail": {
+    "silhouette": {
+      "class": "SilhouetteMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.Silhouette",
+      "leaf": "Silhouette",
+      "family": "core"
+    },
+    "calinski_harabasz": {
+      "class": "CalinskiHarabaszMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.calinski_harabasz",
+      "leaf": "calinski_harabasz",
+      "family": "core"
+    },
+    "davies_bouldin": {
+      "class": "DaviesBouldinMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.davies_bouldin",
+      "leaf": "davies_bouldin",
+      "family": "core"
+    },
+    "dbcv": {
+      "class": "DBCVMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.Density_Based_Clustering_Validation_Index",
+      "leaf": "Density_Based_Clustering_Validation_Index",
+      "family": "core"
+    },
+    "s_dbw": {
+      "class": "SDbwMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.S_Dbw_Index",
+      "leaf": "S_Dbw_Index",
+      "family": "core"
+    },
+    "noise_aware_silhouette": {
+      "class": "NoiseAwareSilhouetteMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.Noise_Aware_Silhouette",
+      "leaf": "Noise_Aware_Silhouette",
+      "family": "core"
+    },
+    "avg_pca_isotropy": {
+      "class": "AvgPCAIsotropyMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Average_cluster_compactness",
+      "leaf": "Average_cluster_compactness",
+      "family": "structure"
+    },
+    "cluster_size_balance_entropy": {
+      "class": "ClusterSizeBalanceEntropyMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Entropy_cluster_sizes",
+      "leaf": "Entropy_cluster_sizes",
+      "family": "structure"
+    },
+    "cluster_size_imbalance_entropy": {
+      "class": "ClusterSizeImbalanceEntropyMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Entropy_cluster_sizes",
+      "leaf": "Entropy_cluster_sizes",
+      "family": "structure"
+    },
+    "neighborhood_purity": {
+      "class": "NeighborhoodPurityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Local_Neighborhood_Purity",
+      "leaf": "Local_Neighborhood_Purity",
+      "family": "structure"
+    },
+    "neighborhood_purity_multi_k": {
+      "class": "NeighborhoodPurityMultiKMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Local_Neighborhood_Purity",
+      "leaf": "Local_Neighborhood_Purity",
+      "family": "structure"
+    },
+    "min_intercluster_distance": {
+      "class": "MinInterclusterDistanceMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.min_intercluster_distance",
+      "leaf": "min_intercluster_distance",
+      "family": "structure"
+    },
+    "avg_within_cluster_dispersion": {
+      "class": "AvgWithinClusterDispersionMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.avg_within_cluster_dispersion",
+      "leaf": "avg_within_cluster_dispersion",
+      "family": "structure"
+    },
+    "min_centroid_distance": {
+      "class": "MinCentroidDistanceMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.min_centroid_distance",
+      "leaf": "min_centroid_distance",
+      "family": "structure"
+    },
+    "arc_circle_fit": {
+      "class": "ArcCircleFitMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.arc_circle_fit",
+      "leaf": "arc_circle_fit",
+      "family": "pattern"
+    },
+    "ladderness": {
+      "class": "LaddernessMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.ladderness",
+      "leaf": "ladderness",
+      "family": "pattern"
+    },
+    "parallel_bands": {
+      "class": "ParallelBandsMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.parallel_bands",
+      "leaf": "parallel_bands",
+      "family": "pattern"
+    },
+    "parabolicity": {
+      "class": "ParabolicityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.parabolicity",
+      "leaf": "parabolicity",
+      "family": "pattern"
+    },
+    "periodicity_1d": {
+      "class": "Periodicity1DMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.periodicity_1d",
+      "leaf": "periodicity_1d",
+      "family": "pattern"
+    },
+    "line_straightness": {
+      "class": "LineStraightnessMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.line_straightness",
+      "leaf": "line_straightness",
+      "family": "pattern"
+    },
+    "piecewise_linearity": {
+      "class": "PiecewiseLinearityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.piecewise_linearity",
+      "leaf": "piecewise_linearity",
+      "family": "pattern"
+    },
+    "alpha_shape_compactness": {
+      "class": "AlphaShapeCompactnessMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.alpha_shape_compactness",
+      "leaf": "alpha_shape_compactness",
+      "family": "pattern"
+    },
+    "bimodality_anti_thickness": {
+      "class": "BimodalityAntiThicknessMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.bimodality_anti_thickness",
+      "leaf": "bimodality_anti_thickness",
+      "family": "pattern"
+    },
+    "convexity_ratio": {
+      "class": "ConvexityRatioMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.convexity_ratio",
+      "leaf": "convexity_ratio",
+      "family": "pattern"
+    },
+    "curvature_consistency": {
+      "class": "CurvatureConsistencyMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.curvature_consistency",
+      "leaf": "curvature_consistency",
+      "family": "pattern"
+    },
+    "turning_points_count": {
+      "class": "TurningPointsCountMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.turning_points_count",
+      "leaf": "turning_points_count",
+      "family": "pattern"
+    },
+    "direction_entropy": {
+      "class": "DirectionEntropyMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.direction_entropy",
+      "leaf": "direction_entropy",
+      "family": "pattern"
+    },
+    "gridness_2d": {
+      "class": "Gridness2DMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.gridness_2d",
+      "leaf": "gridness_2d",
+      "family": "pattern"
+    },
+    "mst_smoothness": {
+      "class": "MSTSmoothnessMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.mst_smoothness",
+      "leaf": "mst_smoothness",
+      "family": "pattern"
+    },
+    "ribbon_thickness": {
+      "class": "RibbonThicknessMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.ribbon_thickness",
+      "leaf": "ribbon_thickness",
+      "family": "pattern"
+    },
+    "axial_symmetry": {
+      "class": "AxialSymmetryMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.axial_symmetry",
+      "leaf": "axial_symmetry",
+      "family": "pattern"
+    },
+    "connectivity_components": {
+      "class": "ConnectivityComponentsMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.connectivity_components",
+      "leaf": "connectivity_components",
+      "family": "pattern"
+    },
+    "corner_sharpness": {
+      "class": "CornerSharpnessMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.corner_sharpness",
+      "leaf": "corner_sharpness",
+      "family": "pattern"
+    },
+    "eccentricity_ratio": {
+      "class": "EccentricityRatioMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.eccentricity_ratio",
+      "leaf": "eccentricity_ratio",
+      "family": "pattern"
+    },
+    "hollow_score": {
+      "class": "HollowScoreMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.hollow_score",
+      "leaf": "hollow_score",
+      "family": "pattern"
+    },
+    "radial_uniformity": {
+      "class": "RadialUniformityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.radial_uniformity",
+      "leaf": "radial_uniformity",
+      "family": "pattern"
+    },
+    "hough_line_strength": {
+      "class": "HoughLineStrengthMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.hough_line_strength",
+      "leaf": "hough_line_strength",
+      "family": "image"
+    },
+    "peak_to_background_hough": {
+      "class": "PeakToBackgroundHoughMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.peak_to_background_line_ratio",
+      "leaf": "peak_to_background_line_ratio",
+      "family": "image"
+    },
+    "orientation_histogram_entropy": {
+      "class": "OrientationHistogramEntropyMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.orientation_histogram_entropy",
+      "leaf": "orientation_histogram_entropy",
+      "family": "image"
+    },
+    "edge_coherence": {
+      "class": "EdgeCoherenceStructureTensorMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.edge_coherence",
+      "leaf": "edge_coherence",
+      "family": "image"
+    },
+    "hough_arc_circle_strength": {
+      "class": "HoughCircleArcStrengthMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.hough_arc_circle_strength",
+      "leaf": "hough_arc_circle_strength",
+      "family": "image"
+    },
+    "convexity_ratio_image_based": {
+      "class": "ConvexitySolidityImageMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.convexity_ratio_image_based",
+      "leaf": "convexity_ratio_image_based",
+      "family": "image"
+    },
+    "ellipse_fit_score": {
+      "class": "EllipseFitScoreMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.ellipse_fit_score",
+      "leaf": "ellipse_fit_score",
+      "family": "image"
+    },
+    "circularity_compactness": {
+      "class": "CircularityCompactnessMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.circularity_compactness",
+      "leaf": "circularity_compactness",
+      "family": "image"
+    },
+    "polygonality": {
+      "class": "PolygonalityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.polygonality",
+      "leaf": "polygonality",
+      "family": "image"
+    },
+    "rectangularity": {
+      "class": "RectangularityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.rectangularity",
+      "leaf": "rectangularity",
+      "family": "image"
+    },
+    "morphological_band_count": {
+      "class": "MorphologicalBandCountMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.morphological_band_count",
+      "leaf": "morphological_band_count",
+      "family": "image"
+    },
+    "skeleton_connectivity": {
+      "class": "SkeletonConnectivityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.skeleton_connectivity",
+      "leaf": "skeleton_connectivity",
+      "family": "image"
+    },
+    "contour_graph_connectivity": {
+      "class": "ContourGraphConnectivityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.contour_graph_connectivity",
+      "leaf": "contour_graph_connectivity",
+      "family": "image"
+    },
+    "ridge_strength": {
+      "class": "RidgeStrengthMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.ridge_strength",
+      "leaf": "ridge_strength",
+      "family": "image"
+    },
+    "thickness_uniformity": {
+      "class": "ThicknessUniformityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.thickness_uniformity",
+      "leaf": "thickness_uniformity",
+      "family": "image"
+    },
+    "glcm_haralick": {
+      "class": "GLCMHaralickMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.glcm_haralick",
+      "leaf": "glcm_haralick",
+      "family": "image"
+    },
+    "lbp_stationarity": {
+      "class": "LBPStationarityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.lbp_stationarity",
+      "leaf": "lbp_stationarity",
+      "family": "image"
+    },
+    "fractal_dimension": {
+      "class": "FractalDimensionMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.fractal_dimension",
+      "leaf": "fractal_dimension",
+      "family": "image"
+    },
+    "gridness_fft_acf": {
+      "class": "GridnessFFTACFMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.gridness_fft_acf",
+      "leaf": "gridness_fft_acf",
+      "family": "image"
+    },
+    "symmetry_score": {
+      "class": "SymmetryScoreMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.symmetry_score",
+      "leaf": "symmetry_score",
+      "family": "image"
+    },
+    "euler_holes_count": {
+      "class": "EulerHolesCountMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.euler_holes_count",
+      "leaf": "euler_holes_count",
+      "family": "image"
+    },
+    "connected_components_count": {
+      "class": "ConnectedComponentsCountMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.connected_components_count",
+      "leaf": "connected_components_count",
+      "family": "image"
+    },
+    "blobness_log_dog": {
+      "class": "BlobnessLogDogMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.blobness_log_dog",
+      "leaf": "blobness_log_dog",
+      "family": "image"
+    },
+    "corner_junction_density": {
+      "class": "CornerJunctionDensityMetric",
+      "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.corner_junction_density",
+      "leaf": "corner_junction_density",
+      "family": "image"
+    }
+  }
+}

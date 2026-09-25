@@ -1,0 +1,5 @@
+scope,view,metric,registry_key,mean_utility,runner_up,runner_up_mean_utility,margin
+per_view,x_only,silhouette,silhouette,0.6786765753316119,noise_aware_silhouette,0.6561591484069987,0.022517426924613115
+per_view,y_only,noise_aware_silhouette,noise_aware_silhouette,0.7187829631448822,silhouette,0.714447694440517,0.0043352687043651805
+per_view,xy_2d,calinski_harabasz,calinski_harabasz,0.6615148439173172,cluster_size_balance_entropy,0.6260908319234372,0.03542401199388001
+global_all_views,ALL,noise_aware_silhouette,noise_aware_silhouette,0.6638925640009216,silhouette,0.6622775923830867,0.0016149716178348594

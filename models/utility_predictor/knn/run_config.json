@@ -1,0 +1,59 @@
+{
+  "phase": "E1",
+  "unified_csv": "results_analysis\\clustering_repository\\analyzed_data\\unified_training_dataset\\unified_training_dataset.csv",
+  "split_assignments_csv": "results_analysis\\clustering_repository\\analyzed_data\\experiment_splits\\dataset_split_assignments.csv",
+  "mlp_reference_dir": "results_analysis\\mlp\\20260615_231715__metric_utility_mlp_split1_holdout",
+  "dev_splits": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "locked_holdout_split": 1,
+  "n_neighbors_grid": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    10,
+    15,
+    20,
+    30,
+    50,
+    75,
+    100
+  ],
+  "scalers": [
+    "standard",
+    "robust"
+  ],
+  "distances": [
+    "euclidean",
+    "cosine"
+  ],
+  "weightings": [
+    "uniform",
+    "inverse_distance"
+  ],
+  "n_configurations": 96,
+  "max_neighbors": 100,
+  "dynamic_topk_heuristic": "dynamic_topk_relsoft_a092_k5_ceil",
+  "runtime_summary": {
+    "total_fit_time_sec": 1402.5849264004792,
+    "total_query_time_sec": 852.4066199994413,
+    "total_prediction_time_sec": 26.855264800098666,
+    "mean_records_per_second": 598103.6861862337
+  }
+}

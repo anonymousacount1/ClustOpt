@@ -1,0 +1,10 @@
+{
+  "v2_raw_softmax_tie_rate": 1.0,
+  "rows_where_chosen_beats_twin": 1010,
+  "rows_where_twin_beats_chosen": 1022,
+  "rows_tied": 1133,
+  "mean_abs_online_difference": 0.023141237782318087,
+  "hypothetical_weighting_mode_oracle_gain_bestview": 0.01178806175235414,
+  "selection_altered_by_this_diagnostic": false,
+  "note": "diagnostic only; the weighting-mode oracle is NOT deployable because fixed-32 supervision cannot distinguish RAW from SOFTMAX"
+}

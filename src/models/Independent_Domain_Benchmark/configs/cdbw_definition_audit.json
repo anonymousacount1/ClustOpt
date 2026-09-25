@@ -1,0 +1,147 @@
+{
+  "metric": "CDbw",
+  "full_name": "Composed Density Between and Within clusters",
+  "scientific_source": {
+    "citation": "Halkidi, M. & Vazirgiannis, M. (2008), 'A density-based cluster validity approach using multi-representatives', Pattern Recognition Letters 29(6), 773-786",
+    "earlier_version": "Halkidi & Vazirgiannis, 'Clustering validity assessment using multi representatives', SETN 2002",
+    "authoritative_restatement": "Halkidi, Vazirgiannis & Hennig (2015), 'Method-independent indices for cluster validation', Handbook of Cluster Analysis, CRC Press",
+    "primary_pdf_obtained": false,
+    "extraction_limitation": "The article is paywalled and no open-access copy of the full text was reachable, so the complete equation set could not be quoted verbatim from the source PDF as was done for DCSI. The definitions below are therefore assembled from: (a) verbatim definitional sentences recovered from the literature, (b) the reference package's own docstrings, which state the intended semantics, and (c) CRAN fpc::cdbw, an independent implementation maintained by Christian Hennig, co-author of the 2015 restatement. Where a definition rests on (c) alone this is stated explicitly."
+  },
+
+  "definition": {
+    "input": "X (n x d numeric) and a partition into clusters C_1..C_K; Euclidean distance by default",
+    "representatives": {
+      "role": "each cluster is represented by several points rather than one centroid, which is what lets the index handle arbitrarily shaped clusters",
+      "package_construction": "the convex-hull vertices of the cluster (PyPI cdbw 0.2); clusters with fewer than 4 points use all their points",
+      "fpc_construction": "r=10 border representatives chosen by a farthest-point heuristic",
+      "note": "the two implementations differ here, so their numeric values are not comparable; this is a parameterisation difference, not a correctness question"
+    },
+    "shrunk_representatives": {
+      "definition": "each representative is moved toward the cluster centroid by a shrink factor s, giving a family of shells that probe density at different depths",
+      "package": "shell k of s uses (1 - k/s) * representative + (k/s) * centroid, k = 0..s-1",
+      "frozen_s": 3
+    },
+    "neighbourhood_radius": {
+      "symbol": "stdev",
+      "verbatim": "the neighborhood of a data point is defined to be a hypersphere centered at it with a radius equal to the average standard deviation of the considered clusters, stdev",
+      "aggregation": "AVERAGE over the considered clusters",
+      "per_cluster_spread": "sqrt( (1/d) * sum_j var_j(C_i) ), i.e. the package's own per-cluster scalar",
+      "evidence": "paper text + the package's own prep() docstring + fpc (mean(sqrt(wvar)))"
+    },
+    "intra_cluster_density": {
+      "definition": "for each shrink factor s, the proportion of a cluster's points lying within stdev of its shrunk representatives, averaged over representatives and clusters and divided by stdev",
+      "evidence": "package implementation + fpc, which agree"
+    },
+    "compactness": {
+      "formula": "Compactness(C) = sum_s Intra_dens(C, s) / n_s",
+      "evidence": "verbatim definitional sentence recovered from the literature"
+    },
+    "intra_density_change": {
+      "formula": "Intra_change(C) = sum_i |Intra_dens(C, s_i) - Intra_dens(C, s_{i-1})| / (n_s - 1)",
+      "evidence": "verbatim definitional sentence recovered from the literature",
+      "note": "the absolute value matters. PyPI cdbw 0.2 uses it; fpc::cdbw sums the signed differences instead. This is one place where the Python package is the more faithful of the two, and it is why the corrected implementation reuses the package's compactness/cohesion rather than cloning fpc."
+    },
+    "cohesion": {
+      "formula": "Cohesion(C) = Compactness(C) / (1 + Intra_change(C))",
+      "evidence": "package + fpc, which agree"
+    },
+    "inter_cluster_density": {
+      "formula": "Inter_dens(C) = (1/K) * sum_i max_{j != i} dens(i, j)",
+      "dens_pair": "computed at the midpoints of the mutually closest representative pairs of clusters i and j, weighted by their distance and normalised by stdev and by |C_i| + |C_j|",
+      "evidence": "the per-pair quantity is the package's own; the OUTER aggregation rests on fpc alone, because the primary equation could not be quoted. Flagged for supervisor review. It does not affect permutation invariance."
+    },
+    "separation": {
+      "formula": "Sep(C) = ( (1/K) * sum_i min_{j != i} d(i, j) ) / (1 + Inter_dens(C))",
+      "d_pair": "the mean distance over the mutually closest representative pairs of clusters i and j",
+      "evidence": "required by permutation invariance (a minimum over an arbitrary index subset cannot be a property of an unordered partition) + fpc, which computes min over all j != i"
+    },
+    "composition": {
+      "formula": "CDbw = Compactness * Cohesion * Separation",
+      "evidence": "the package README, the package docstring and fpc all agree"
+    },
+    "direction": "maximize",
+    "range": "not bounded above by the definition"
+  },
+
+  "permutation_invariance": {
+    "question": "is the published CDbw invariant to a bijective renaming of clusters?",
+    "answer": "YES",
+    "argument": "every quantity is either per-cluster or defined on an UNORDERED pair of clusters, and every aggregation is a sum, a mean, a minimum over all other clusters, or a maximum over all other clusters. All of these are symmetric under renaming, so the index is a function of the partition alone.",
+    "corroboration": "fpc::cdbw implements exactly these symmetric aggregations and is empirically invariant (spread 0.0 over cluster-order permutations)",
+    "no_ordering_is_defined_anywhere": "neither the definition, nor the package, nor its documentation refers to any meaningful ordering of clusters"
+  },
+
+  "package_discrepancy": {
+    "package": "PyPI cdbw==0.2 (MIT), sha256_16 4b4be00dfae7911b",
+    "classification": "A -- PACKAGE IMPLEMENTATION DEFECT",
+    "defects": {
+      "C1_stdev": {
+        "where": "prep()",
+        "what": "`stdev` is assigned inside `for i: for j:` without accumulating, so only the final iteration survives and the function returns the standard deviation of the highest-indexed cluster",
+        "should_be": "the average standard deviation over the considered clusters",
+        "order_dependent": true,
+        "components_affected": ["compactness", "cohesion", "separation"],
+        "is_the_first_quantity_to_diverge": true
+      },
+      "C2_separation_distance": {
+        "where": "separation()",
+        "what": "the minimum distance to another cluster is taken over lower-indexed clusters only, so cluster 0 contributes 0 to a sum divided by K",
+        "should_be": "for each cluster, the minimum over ALL other clusters",
+        "order_dependent": true,
+        "components_affected": ["separation"]
+      },
+      "C3_inter_density": {
+        "where": "separation()",
+        "what": "a single global maximum over all pairs, divided by K",
+        "should_be": "the mean over clusters of each cluster's maximum pairwise inter-density",
+        "order_dependent": false,
+        "components_affected": ["separation"],
+        "evidence_level": "fpc only -- flagged for supervisor review"
+      }
+    },
+    "self_contradiction": "prep()'s own docstring states the intended semantics that its code does not implement, so this is a slip rather than a deliberate variant",
+    "measured_effect": {
+      "max_absolute_spread_over_orderings": 0.9310579578451365,
+      "changes_only_calibration": false,
+      "changes_which_candidate_scores_best": true,
+      "evidence": "validation/cdbw_paper_semantics_audit.json"
+    }
+  },
+
+  "frozen_implementation": {
+    "primary_metric_id": "cdbw",
+    "approach": "paper-faithful correction layer over the MIT package",
+    "package_code_reused": ["prep (cluster extraction)", "rep (convex-hull representatives)", "art_rep (shrunk representatives)", "closest_rep (mutually closest representative pairs)", "compactness (intra-density, compactness, cohesion)", "comb_noise_lab", "gen_dist_func"],
+    "package_code_replaced": ["the stdev aggregation", "the separation distance aggregation", "the inter-density aggregation"],
+    "attribution": "PyPI cdbw 0.2, MIT, Sergey Rubinsky / Alexander Lashkov / Polina Eistrikh-Heller",
+    "label_ordering_convention": null,
+    "why_no_convention": "the corrected index is permutation-invariant by construction. Labels are made contiguous only so the reused helpers can index by label, and that step is provably neutral.",
+    "floating_point_determinism": "our own reductions run over sorted per-cluster values, so their summation order is a function of the values rather than of the labelling. One reduction inside the reused compactness function still sums in label order, leaving a residual of ~1e-16, four orders below the frozen tolerance.",
+    "diagnostic_metric_id": "cdbw_package_compat",
+    "diagnostic_role": "reproduces the raw package under a canonical centroid-lexicographic ordering, purely so the comparison is reproducible. NOT a comparator and not in the primary registry."
+  },
+
+  "frozen_parameters": {
+    "metric": "euclidean",
+    "alg_noise": "comb",
+    "intra_dens_inf": false,
+    "s": 3,
+    "tuning_on_external_corpus": false,
+    "frozen_before_any_external_result": true,
+    "unchanged_in_stage_4b_1b": true
+  },
+
+  "edge_case_policy": {
+    "fewer_than_two_clusters": "INVALID(fewer_than_two_clusters)",
+    "cluster_with_a_single_representative": "INVALID(cdbw_cluster_with_single_representative) -- the shrunk-representative construction is undefined. The package silently returns 0 here, which our contract forbids: an unscoreable input must not be reported as a score of zero.",
+    "pair_with_no_mutually_closest_representatives": "INVALID(cdbw_no_mutual_representative_pair)",
+    "non_finite_density": "INVALID(cdbw_non_finite_density) -- again reported explicitly rather than as 0",
+    "noise_label": "label -1 is combined into a single noise cluster (frozen alg_noise='comb'), identically however the real clusters are named"
+  },
+
+  "comparability": {
+    "with_other_published_cdbw_values": "NOT comparable in general. Values produced by the raw PyPI package depend on cluster numbering, which published work does not report, and values produced by fpc::cdbw use a different representative construction and shrink set. Any comparison must state which implementation and which cluster ordering produced the numbers.",
+    "known_usage_of_the_raw_package": "at least one published comparison of clustering validity indices used the PyPI package for CDbw; such values inherit the ordering dependence described here. This is stated as a limitation on comparability, not as a claim about that study's conclusions."
+  }
+}

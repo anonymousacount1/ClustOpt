@@ -1,0 +1,611 @@
+{
+  "audit": "CLUSTOPT ADAPTER SOURCE AUDIT",
+  "stage": "4B-2",
+  "principle": "the adapter calls these components; it reimplements none of them",
+  "entrypoints": [
+    {
+      "component": "dataset/view meta-feature extraction",
+      "module": "models.Clustering_Repository_Builder.features_extraction.feature_extractor",
+      "callable": "extract_features_for_view",
+      "role": "the only meta-feature extractor; produces the record whose columns the utility predictors consume",
+      "importable": true
+    },
+    {
+      "component": "view construction",
+      "module": "models.Clustering_Repository_Builder.features_extraction.view_builder",
+      "callable": "*",
+      "role": "x_only / y_only / xy_2d view construction",
+      "importable": true
+    },
+    {
+      "component": "meta-feature vector loading",
+      "module": "models.ClustOpt.cluster_validity_indices.dynamic_metric_selection.loaders",
+      "callable": "load_feature_vector",
+      "role": "reads <dataset_dir>/features/features_records.csv and aligns it to a predictor's own feature_columns order",
+      "importable": true
+    },
+    {
+      "component": "MLP Full60 utility inference",
+      "module": "models.ClustOpt.cluster_validity_indices.dynamic_metric_selection.regressor_predictor",
+      "callable": "get_regressor_predictor / RegressorPredictor",
+      "role": "frozen fold-ensemble MLP utility predictor",
+      "importable": true
+    },
+    {
+      "component": "KNN utility inference",
+      "module": "models.ClustOpt.cluster_validity_indices.dynamic_metric_selection.knn_predictor_provider",
+      "callable": "get_knn_provider / KNNUtilityProvider",
+      "role": "frozen Phase-E1 KNN utility mechanism (per-view models)",
+      "importable": true
+    },
+    {
+      "component": "metric Top-K construction",
+      "module": "models.ClustOpt.cluster_validity_indices.dynamic_metric_selection.weighting",
+      "callable": "select_top_k",
+      "role": "descending utility, ties broken by metric name",
+      "importable": true
+    },
+    {
+      "component": "RAW weighting",
+      "module": "models.ClustOpt.cluster_validity_indices.dynamic_metric_selection.weighting",
+      "callable": "compute_weights(weighting='normalized_positive')",
+      "role": "clip negatives to 0 and normalise to sum 1",
+      "importable": true
+    },
+    {
+      "component": "utility -> weights resolution",
+      "module": "models.ClustOpt.cluster_validity_indices.dynamic_metric_selection.resolvers",
+      "callable": "resolve_regressor_weights / resolve_knn_weights",
+      "role": "the authoritative composition of load -> predict -> top-k -> weight",
+      "importable": true
+    },
+    {
+      "component": "PP v1 / v2 policy inference",
+      "module": "models.ClustOpt_Policy_Predictor.stage2c.run_final_v2_split1_replay",
+      "callable": "build_X / split1_features (+ target_transforms.select_policy)",
+      "role": "373-dim feature construction and argmax policy selection",
+      "importable": true
+    },
+    {
+      "component": "policy set / policy -> regime resolution",
+      "module": "models.Clustering_Repository_Builder.experiments.experiment_execution.oof_policy_replay",
+      "callable": "build_policy_set",
+      "role": "the frozen 20 production policies with source, top_k, weighting",
+      "importable": true
+    },
+    {
+      "component": "policy -> reranker mapping",
+      "module": "models.ClustOpt_Candidate_Reranker.training.final_models.policy_mapping",
+      "callable": "build_mapping / reranker_id",
+      "role": "20 policies -> 10 frozen rerankers",
+      "importable": true
+    },
+    {
+      "component": "clustering search space",
+      "module": "models.ClustOpt.configs.experiments.generate_experiment_configs",
+      "callable": "build_search_space",
+      "role": "the per-view algorithm/hyper-parameter space shared by every arm",
+      "importable": true
+    },
+    {
+      "component": "online clustering search",
+      "module": "models.Clustering_Repository_Builder.experiments.experiment_execution.clustopt_execution",
+      "callable": "run_experiment_clustopt",
+      "role": "builds the ClustOpt pipeline, resolves dynamic CVI, runs Optuna, returns the trial log",
+      "importable": true
+    },
+    {
+      "component": "search objective",
+      "module": "models.ClustOpt.search_algorithm.Base_Search_Algorithm",
+      "callable": "BaseSearchAlgorithm.evaluate_config",
+      "role": "aggregate CVI score; ground truth never enters it",
+      "importable": true
+    },
+    {
+      "component": "candidate persistence",
+      "module": "models.ClustOpt.Search_Results_Logger",
+      "callable": "get_search_log_df",
+      "role": "one row per evaluated candidate, with per-metric normalised values",
+      "importable": true
+    },
+    {
+      "component": "final J selection",
+      "module": "models.Clustering_Repository_Builder.experiments.experiment_execution.clustopt_execution",
+      "callable": "_best_row / _predict_best_labels",
+      "role": "highest aggregate_score candidate, re-instantiated for labels",
+      "importable": true
+    },
+    {
+      "component": "reranker feature construction",
+      "module": "models.ClustOpt_Candidate_Reranker.split1_preparation.online_feature_builder",
+      "callable": "build_online_X",
+      "role": "the frozen 347-dim online candidate representation",
+      "importable": true
+    },
+    {
+      "component": "reranker inference + final selection",
+      "module": "models.ClustOpt_Candidate_Reranker.split1_preparation.evaluate_split1_final",
+      "callable": "eligible_mask / select_reranked",
+      "role": "argmin predicted regret over eligible candidates, ties to lowest index",
+      "importable": true
+    }
+  ],
+  "all_entrypoints_importable": true,
+  "artifacts": {
+    "mlp_full60": {
+      "role": "utility source for C0, C3 (and the PP feature context)",
+      "run_dir": "results_analysis/mlp/20260615_231715__metric_utility_mlp_split1_holdout",
+      "exists": true,
+      "config_sha256_16": "4ec3295471487c7e",
+      "n_fold_checkpoints": 1,
+      "fold0_model_sha256_16": "7d44a48dcd7a3f4a",
+      "checkpoint_policy": "fold_ensemble",
+      "training_splits": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "heldout_split": 1
+    },
+    "knn_utility": {
+      "role": "utility source for C1, C4",
+      "model_dir": "results_analysis/metric_utility_knn/phase_e1/models",
+      "declared_in_frozen_config_generator": "results_analysis/metric_utility_knn/phase_e1/models",
+      "declaration_matches": true,
+      "exists": true,
+      "per_view_model_dirs": [
+        "x_only",
+        "xy_2d",
+        "y_only"
+      ],
+      "feature_schema_sha256_16": "7445f74cc50d3f24",
+      "utility_metric_schema_sha256_16": "53969e52fb663fc9",
+      "final_metadata_sha256_16": "b9c8389727952315",
+      "models_dir_sha256_16": "9e1ccc42c5ff8bce",
+      "registry_field_points_at": "results_analysis/metric_utility_knn/phase_e2",
+      "registry_field_contains_models": false
+    },
+    "policy_predictor": {
+      "V1": {
+        "dir": "results_analysis/clustopt_policy_predictor/stage4b_materialised_final_models/PP_V1",
+        "exists": true,
+        "model_file": "results_analysis/clustopt_policy_predictor/stage4b_materialised_final_models/PP_V1/model.joblib",
+        "model_sha256_16": "aa977443caa97bda",
+        "metadata_sha256_16": "fee7ef2069c621c1",
+        "estimator": "ExtraTreesRegressor",
+        "random_state": 42,
+        "config_hash": "a9e92d5fcfab1271",
+        "input_dim": 373,
+        "output_dim": 20,
+        "training_splits": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "split_1_used": false,
+        "target_semantics": "CENTERED original policy ARI (Stage-2A semantics)",
+        "external_data_used": false
+      },
+      "V2": {
+        "dir": "results_analysis/clustopt_policy_predictor/stage4b_materialised_final_models/PP_V2",
+        "exists": true,
+        "model_file": "results_analysis/clustopt_policy_predictor/stage4b_materialised_final_models/PP_V2/model.joblib",
+        "model_sha256_16": "4a668514b93f237e",
+        "metadata_sha256_16": "0917897130c767a0",
+        "estimator": "ExtraTreesRegressor",
+        "random_state": 42,
+        "config_hash": "a9e92d5fcfab1271",
+        "input_dim": 373,
+        "output_dim": 20,
+        "training_splits": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "split_1_used": false,
+        "target_semantics": "CENTERED reranker-aware (Stage-2C1 single-exclusion OOF)",
+        "external_data_used": false
+      }
+    },
+    "rerankers": {
+      "root": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models",
+      "n_expected": 10,
+      "n_found": 10,
+      "final_deployment_artifacts_only": true,
+      "oof_fold_models_excluded": true,
+      "models": {
+        "MLP_TOP1": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/MLP_TOP1/model.joblib",
+          "sha256_16": "76d06d41e3fc4675"
+        },
+        "MLP_TOP3": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/MLP_TOP3/model.joblib",
+          "sha256_16": "c603cbfd814e8c77"
+        },
+        "MLP_TOP5": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/MLP_TOP5/model.joblib",
+          "sha256_16": "27c57c20a71f6390"
+        },
+        "MLP_TOP10": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/MLP_TOP10/model.joblib",
+          "sha256_16": "544241d31d2b1e10"
+        },
+        "MLP_DYNAMIC": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/MLP_DYNAMIC/model.joblib",
+          "sha256_16": "e1f19cf0c6d48479"
+        },
+        "KNN_TOP1": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/KNN_TOP1/model.joblib",
+          "sha256_16": "acd9e4ffe3042a4b"
+        },
+        "KNN_TOP3": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/KNN_TOP3/model.joblib",
+          "sha256_16": "59ab060f3413e060"
+        },
+        "KNN_TOP5": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/KNN_TOP5/model.joblib",
+          "sha256_16": "a3d6b5688f795d1b"
+        },
+        "KNN_TOP10": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/KNN_TOP10/model.joblib",
+          "sha256_16": "ad7b0d07a0d86cf6"
+        },
+        "KNN_DYNAMIC": {
+          "model_file": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models/KNN_DYNAMIC/model.joblib",
+          "sha256_16": "8b56204b9ae22fc0"
+        }
+      }
+    },
+    "ambiguities": []
+  },
+  "search_space": {
+    "source": "generate_experiment_configs.build_search_space",
+    "views": [
+      "x_only",
+      "xy_2d",
+      "y_only"
+    ],
+    "algorithms_per_view": {
+      "x_only": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "hdbscan_constrained-2",
+        "hdbscan_constrained-3",
+        "hdbscan_constrained-4",
+        "hdbscan_constrained-5",
+        "kmeans",
+        "minibatch_kmeans",
+        "optics"
+      ],
+      "y_only": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "hdbscan_constrained-2",
+        "hdbscan_constrained-3",
+        "hdbscan_constrained-4",
+        "hdbscan_constrained-5",
+        "kmeans",
+        "minibatch_kmeans",
+        "optics"
+      ],
+      "xy_2d": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "hdbscan_constrained-2",
+        "hdbscan_constrained-3",
+        "hdbscan_constrained-4",
+        "hdbscan_constrained-5",
+        "kmeans",
+        "minibatch_kmeans",
+        "optics",
+        "spectral"
+      ]
+    },
+    "n_algorithms_per_view": {
+      "x_only": 12,
+      "y_only": 12,
+      "xy_2d": 13
+    },
+    "space_sha256_16": "8ddf86c79888ebe9",
+    "note": "Stage 4A froze the search space by SOURCE ('clustopt_phaseE2_map'), not by hash. This hash is computed here from that source so the space is pinned numerically as well; it is a new record, not a reproduction of any previously stored value."
+  },
+  "policies": {
+    "n": 20,
+    "semantics_hash": "beaccd4a0cb61c46",
+    "rows": [
+      {
+        "policy_id": "regressor_top1_raw",
+        "short_label": "MLP T1-R",
+        "source": "mlp",
+        "top_k": 1,
+        "weighting": "normalized_positive",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top1_softmax_t05",
+        "short_label": "MLP T1-S",
+        "source": "mlp",
+        "top_k": 1,
+        "weighting": "softmax",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top3_raw",
+        "short_label": "MLP T3-R",
+        "source": "mlp",
+        "top_k": 3,
+        "weighting": "normalized_positive",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top3_softmax_t05",
+        "short_label": "MLP T3-S",
+        "source": "mlp",
+        "top_k": 3,
+        "weighting": "softmax",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top5_raw",
+        "short_label": "MLP T5-R",
+        "source": "mlp",
+        "top_k": 5,
+        "weighting": "normalized_positive",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top5_softmax_t05",
+        "short_label": "MLP T5-S",
+        "source": "mlp",
+        "top_k": 5,
+        "weighting": "softmax",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top10_raw",
+        "short_label": "MLP T10-R",
+        "source": "mlp",
+        "top_k": 10,
+        "weighting": "normalized_positive",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top10_softmax_t05",
+        "short_label": "MLP T10-S",
+        "source": "mlp",
+        "top_k": 10,
+        "weighting": "softmax",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top_dynamic_predictK_raw",
+        "short_label": "MLP Dyn-R",
+        "source": "mlp",
+        "top_k": "dynamic",
+        "weighting": "normalized_positive",
+        "k_policy": "dynamic_predict",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "regressor_top_dynamic_predictK_softmax_t05",
+        "short_label": "MLP Dyn-S",
+        "source": "mlp",
+        "top_k": "dynamic",
+        "weighting": "softmax",
+        "k_policy": "dynamic_predict",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top1_raw",
+        "short_label": "KNN T1-R",
+        "source": "knn",
+        "top_k": 1,
+        "weighting": "normalized_positive",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top1_softmax_t05",
+        "short_label": "KNN T1-S",
+        "source": "knn",
+        "top_k": 1,
+        "weighting": "softmax",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top3_raw",
+        "short_label": "KNN T3-R",
+        "source": "knn",
+        "top_k": 3,
+        "weighting": "normalized_positive",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top3_softmax_t05",
+        "short_label": "KNN T3-S",
+        "source": "knn",
+        "top_k": 3,
+        "weighting": "softmax",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top5_raw",
+        "short_label": "KNN T5-R",
+        "source": "knn",
+        "top_k": 5,
+        "weighting": "normalized_positive",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top5_softmax_t05",
+        "short_label": "KNN T5-S",
+        "source": "knn",
+        "top_k": 5,
+        "weighting": "softmax",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top10_raw",
+        "short_label": "KNN T10-R",
+        "source": "knn",
+        "top_k": 10,
+        "weighting": "normalized_positive",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top10_softmax_t05",
+        "short_label": "KNN T10-S",
+        "source": "knn",
+        "top_k": 10,
+        "weighting": "softmax",
+        "k_policy": "fixed",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top_dynamic_predictK_raw",
+        "short_label": "KNN Dyn-R",
+        "source": "knn",
+        "top_k": "dynamic",
+        "weighting": "normalized_positive",
+        "k_policy": "dynamic_predict",
+        "softmax_temperature": 0.5
+      },
+      {
+        "policy_id": "knn_top_dynamic_predictK_softmax_t05",
+        "short_label": "KNN Dyn-S",
+        "source": "knn",
+        "top_k": "dynamic",
+        "weighting": "softmax",
+        "k_policy": "dynamic_predict",
+        "softmax_temperature": 0.5
+      }
+    ]
+  },
+  "label_safety": {
+    "search_objective": "BaseSearchAlgorithm.evaluate_config returns the aggregated CVI score; ground truth is never an input to it",
+    "ground_truth_role": "set_ground_truth attaches an ExternalEvaluator whose only effect is an ARI column in the search log; with no ground truth attached the field is simply absent",
+    "consequence": "the search runs unchanged without labels, so the external adapter can and does omit them"
+  },
+  "registry_disagreements": [
+    {
+      "method_id": "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+      "field": "utility_model_run_dir",
+      "recorded": "results_analysis/metric_utility_knn/phase_e2",
+      "problem": "points at the Phase-E2 ablation RUN directory, which contains no model artifacts",
+      "authoritative": "results_analysis/metric_utility_knn/phase_e1/models",
+      "authority": "the frozen Phase-E2 config generator hard-codes KNN_MODEL_DIR = 'results_analysis/metric_utility_knn/phase_e1/models'",
+      "ambiguous": false,
+      "severity": "documentation defect -- exactly one KNN model directory exists, so nothing is scientifically ambiguous"
+    },
+    {
+      "method_id": "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+      "field": "utility_model_config_sha256_16 / utility_model_fold0_sha256_16",
+      "problem": "carries the MLP predictor's hashes, not the KNN mechanism's",
+      "authoritative": {
+        "knn_feature_schema_sha256_16": "7445f74cc50d3f24",
+        "knn_models_dir_sha256_16": "9e1ccc42c5ff8bce"
+      },
+      "ambiguous": false,
+      "severity": "documentation defect"
+    },
+    {
+      "method_id": "IDB_ClustOpt_C4_KNN_TOP10_RAW_R",
+      "field": "utility_model_run_dir",
+      "recorded": "results_analysis/metric_utility_knn/phase_e2",
+      "problem": "points at the Phase-E2 ablation RUN directory, which contains no model artifacts",
+      "authoritative": "results_analysis/metric_utility_knn/phase_e1/models",
+      "authority": "the frozen Phase-E2 config generator hard-codes KNN_MODEL_DIR = 'results_analysis/metric_utility_knn/phase_e1/models'",
+      "ambiguous": false,
+      "severity": "documentation defect -- exactly one KNN model directory exists, so nothing is scientifically ambiguous"
+    },
+    {
+      "method_id": "IDB_ClustOpt_C4_KNN_TOP10_RAW_R",
+      "field": "utility_model_config_sha256_16 / utility_model_fold0_sha256_16",
+      "problem": "carries the MLP predictor's hashes, not the KNN mechanism's",
+      "authoritative": {
+        "knn_feature_schema_sha256_16": "7445f74cc50d3f24",
+        "knn_models_dir_sha256_16": "9e1ccc42c5ff8bce"
+      },
+      "ambiguous": false,
+      "severity": "documentation defect"
+    },
+    {
+      "method_id": "IDB_ClustOpt_C2_PPv1_noR",
+      "field": "pp_model_binary_persisted / pp_blocker",
+      "problem": "records the pre-Stage-4B-1 state, when the PP binary had never been dumped",
+      "authoritative": "materialised in Stage 4B-1 and frozen in configs/pp_artifact_provenance.json",
+      "ambiguous": false,
+      "severity": "stale field -- the blocker is resolved"
+    },
+    {
+      "method_id": "IDB_ClustOpt_C5_PPv2_R",
+      "field": "pp_model_binary_persisted / pp_blocker",
+      "problem": "records the pre-Stage-4B-1 state, when the PP binary had never been dumped",
+      "authoritative": "materialised in Stage 4B-1 and frozen in configs/pp_artifact_provenance.json",
+      "ambiguous": false,
+      "severity": "stale field -- the blocker is resolved"
+    }
+  ],
+  "n_registry_disagreements": 6,
+  "blocking_ambiguities": [],
+  "status": "PASS"
+}

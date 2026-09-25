@@ -1,0 +1,369 @@
+{
+  "search_space": {
+    "kmeans": {
+      "n_clusters": {
+        "type": "categorical",
+        "choices": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "init": {
+        "type": "categorical",
+        "choices": [
+          "k-means++"
+        ]
+      },
+      "random_state": {
+        "type": "categorical",
+        "choices": [
+          123
+        ]
+      }
+    },
+    "minibatch_kmeans": {
+      "n_clusters": {
+        "type": "categorical",
+        "choices": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "init": {
+        "type": "categorical",
+        "choices": [
+          "k-means++"
+        ]
+      },
+      "batch_size": {
+        "type": "categorical",
+        "choices": [
+          100
+        ]
+      },
+      "random_state": {
+        "type": "categorical",
+        "choices": [
+          123
+        ]
+      }
+    },
+    "gmm": {
+      "n_components": {
+        "type": "categorical",
+        "choices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "covariance_type": {
+        "type": "categorical",
+        "choices": [
+          "full"
+        ]
+      },
+      "random_state": {
+        "type": "categorical",
+        "choices": [
+          123
+        ]
+      }
+    },
+    "agglomerative": {
+      "n_clusters": {
+        "type": "categorical",
+        "choices": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "linkage": {
+        "type": "categorical",
+        "choices": [
+          "ward"
+        ]
+      }
+    },
+    "birch": {
+      "n_clusters": {
+        "type": "categorical",
+        "choices": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "threshold": {
+        "type": "categorical",
+        "choices": [
+          0.5
+        ]
+      },
+      "branching_factor": {
+        "type": "categorical",
+        "choices": [
+          50
+        ]
+      }
+    },
+    "dbscan": {
+      "eps": {
+        "type": "categorical",
+        "choices": [
+          0.1,
+          0.3,
+          0.5,
+          0.8
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          5
+        ]
+      }
+    },
+    "hdbscan": {
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          100
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          5
+        ]
+      }
+    },
+    "hdbscan_constrained-2": {
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          30
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          5
+        ]
+      },
+      "n_components": {
+        "type": "categorical",
+        "choices": [
+          2
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.05
+        ]
+      }
+    },
+    "hdbscan_constrained-3": {
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          30
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          5
+        ]
+      },
+      "n_components": {
+        "type": "categorical",
+        "choices": [
+          3
+        ]
+      },
+      "persistence_thresh_1": {
+        "type": "categorical",
+        "choices": [
+          0.02
+        ]
+      },
+      "persistence_thresh_2": {
+        "type": "categorical",
+        "choices": [
+          0.07
+        ]
+      }
+    },
+    "hdbscan_constrained-4": {
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          30
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          5
+        ]
+      },
+      "n_components": {
+        "type": "categorical",
+        "choices": [
+          4
+        ]
+      },
+      "persistence_thresh_1": {
+        "type": "categorical",
+        "choices": [
+          0.02
+        ]
+      },
+      "persistence_thresh_2": {
+        "type": "categorical",
+        "choices": [
+          0.05
+        ]
+      },
+      "persistence_thresh_3": {
+        "type": "categorical",
+        "choices": [
+          0.1
+        ]
+      }
+    },
+    "hdbscan_constrained-5": {
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          30
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          5
+        ]
+      },
+      "n_components": {
+        "type": "categorical",
+        "choices": [
+          5
+        ]
+      },
+      "persistence_thresh_1": {
+        "type": "categorical",
+        "choices": [
+          0.02
+        ]
+      },
+      "persistence_thresh_2": {
+        "type": "categorical",
+        "choices": [
+          0.05
+        ]
+      },
+      "persistence_thresh_3": {
+        "type": "categorical",
+        "choices": [
+          0.1
+        ]
+      },
+      "persistence_thresh_4": {
+        "type": "categorical",
+        "choices": [
+          0.15
+        ]
+      }
+    }
+  },
+  "search_algorithm": {
+    "type": "brute_force",
+    "params": {
+      "max_samples_per_param": 1
+    }
+  },
+  "cvi": {
+    "type": "generic",
+    "metrics": {
+      "alpha_shape_compactness": 1.0,
+      "arc_circle_fit": 1.0,
+      "avg_pca_isotropy": 1.0,
+      "avg_within_cluster_dispersion": 1.0,
+      "axial_symmetry": 1.0,
+      "bimodality_anti_thickness": 1.0,
+      "blobness_log_dog": 1.0,
+      "calinski_harabasz": 1.0,
+      "circularity_compactness": 1.0,
+      "cluster_size_balance_entropy": 1.0,
+      "cluster_size_imbalance_entropy": 1.0,
+      "connected_components_count": 1.0,
+      "connectivity_components": 1.0,
+      "contour_graph_connectivity": 1.0,
+      "convexity_ratio": 1.0,
+      "convexity_ratio_image_based": 1.0,
+      "corner_junction_density": 1.0,
+      "corner_sharpness": 1.0,
+      "curvature_consistency": 1.0,
+      "davies_bouldin": 1.0,
+      "dbcv": 1.0,
+      "direction_entropy": 1.0,
+      "eccentricity_ratio": 1.0,
+      "edge_coherence": 1.0,
+      "ellipse_fit_score": 1.0,
+      "euler_holes_count": 1.0,
+      "fractal_dimension": 1.0,
+      "glcm_haralick": 1.0,
+      "gridness_2d": 1.0,
+      "gridness_fft_acf": 1.0,
+      "hollow_score": 1.0,
+      "hough_arc_circle_strength": 1.0,
+      "hough_line_strength": 1.0,
+      "ladderness": 1.0,
+      "lbp_stationarity": 1.0,
+      "line_straightness": 1.0,
+      "min_centroid_distance": 1.0,
+      "min_intercluster_distance": 1.0,
+      "morphological_band_count": 1.0,
+      "mst_smoothness": 1.0,
+      "neighborhood_purity": 1.0,
+      "neighborhood_purity_multi_k": 1.0,
+      "noise_aware_silhouette": 1.0,
+      "orientation_histogram_entropy": 1.0,
+      "parabolicity": 1.0,
+      "parallel_bands": 1.0,
+      "peak_to_background_hough": 1.0,
+      "periodicity_1d": 1.0,
+      "piecewise_linearity": 1.0,
+      "polygonality": 1.0,
+      "radial_uniformity": 1.0,
+      "rectangularity": 1.0,
+      "ribbon_thickness": 1.0,
+      "ridge_strength": 1.0,
+      "s_dbw": 1.0,
+      "silhouette": 1.0,
+      "skeleton_connectivity": 1.0,
+      "symmetry_score": 1.0,
+      "thickness_uniformity": 1.0,
+      "turning_points_count": 1.0
+    },
+    "params": {
+      "remove_noise": true,
+      "noise_label": -1,
+      "min_clusters": 2
+    }
+  }
+}

@@ -1,0 +1,15 @@
+method_id,units,method_ari_mean,best_available_metric_utility_mean,note
+IDB_AutoClust_A0_original_cvis,150,0.2585502077546963,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_AutoClust_A1_original_plus_established,150,0.2192102242101511,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_AutoClust_A2_original_plus_new46,150,0.2542510022896729,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_AutoClust_A3_extended_cvis,150,0.2488571511449951,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ClustOpt_C0_MLP_TOP5_RAW_noR,150,0.1960882556543378,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ClustOpt_C1_KNN_TOP10_RAW_noR,150,0.1795630619256271,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ClustOpt_C2_PPv1_noR,150,0.187362699023389,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ClustOpt_C3_MLP_TOP5_RAW_R,150,0.2350419891212799,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ClustOpt_C4_KNN_TOP10_RAW_R,150,0.2500066989072091,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ClustOpt_C5_PPv2_R,150,0.2513378568313975,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ML2DAC_M0_original_cvis,150,0.1754878365038901,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ML2DAC_M1_original_plus_established,150,0.200508645523833,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ML2DAC_M2_original_plus_new46,150,0.1752039210386494,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track
+IDB_ML2DAC_M3_extended_cvis,150,0.1828872851855105,0.7463907090115353,metric availability vs method capture; the method columns are reused unchanged from the authoritative method track

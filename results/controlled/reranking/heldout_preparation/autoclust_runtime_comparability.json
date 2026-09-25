@@ -1,0 +1,28 @@
+{
+  "autoclust_runtime_field": "result.json -> runtime_sec",
+  "autoclust_source": "experiments/external_baselines/AutoClust/adapters/autoclust_adapter.py",
+  "autoclust_measurement": "t0 at adapter entry; runtime = perf_counter() - t0 at successful completion",
+  "autoclust_INCLUDES": [
+    "meta-feature extraction",
+    "landmarking algorithm selection",
+    "SMAC / in-domain random search HPO with the learned MLP objective",
+    "label extraction / incumbent reconstruction"
+  ],
+  "autoclust_budget": "optimizer_evaluations = 50 (Extended In-Domain)",
+  "autoclust_wallclock_cap": "none imposed by the adapter unless smac_wallclock_limit_sec is configured",
+  "clustopt_budget": "n_trials = 50 with a 150 s wall-clock timeout",
+  "clustopt_runtime_covers": "search only (see original_runtime_semantics)",
+  "same_hardware_and_datasets": true,
+  "same_nominal_evaluation_budget": true,
+  "classification": "NOT_DIRECTLY_COMPARABLE",
+  "reasons": [
+    "different accounting boundaries: AutoClust runtime is end-to-end while ClustOpt runtime_sec is search-only",
+    "different wall-clock regimes: ClustOpt is capped at 150 s per run, AutoClust is uncapped, so a ClustOpt run can be truncated by time while an AutoClust run is not"
+  ],
+  "what_can_safely_be_said": [
+    "both used a nominal budget of 50 evaluations on the same datasets and hardware",
+    "ClustOpt search-only runtime and AutoClust end-to-end runtime may be reported side by side ONLY with the boundary difference stated"
+  ],
+  "path_to_a_fair_comparison": "add ClustOpt feature-extraction and utility-prediction time to produce an end-to-end figure; those components are not currently recorded per run and would need instrumentation",
+  "future_tables_prepared": false
+}

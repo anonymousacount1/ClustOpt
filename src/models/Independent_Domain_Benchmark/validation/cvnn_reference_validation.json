@@ -1,0 +1,21 @@
+{
+  "metric": "cvnn",
+  "reference": "CRAN fpc::cvnn",
+  "reference_runtime": "docker idb-r-oracle:1 (r-base:4.4.2 + fpc 2.2.15)",
+  "variant": "Liu et al. 2013 with the fpc-documented correction",
+  "k": 5,
+  "tolerance": {
+    "atol": 1e-09,
+    "rtol": 1e-09
+  },
+  "cases_compared": 55,
+  "n_pass": 55,
+  "n_fail": 0,
+  "max_abs_diff": 4.884981308350689e-15,
+  "max_rel_diff": 4.598346168725458e-15,
+  "invalid_cases": {
+    "OUR_INVALID:fewer_than_two_clusters": 1
+  },
+  "source_copied_from_reference": false,
+  "overall": "PASS"
+}

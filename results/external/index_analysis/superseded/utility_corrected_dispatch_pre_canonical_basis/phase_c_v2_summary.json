@@ -1,0 +1,25 @@
+{
+  "units": 150,
+  "utility_valid": 842,
+  "utility_insufficient": 58,
+  "utility_errors": 0,
+  "row_set_differs": 120,
+  "untouched_compared": 9102,
+  "untouched_identical": 9102,
+  "untouched_deviating": 0,
+  "candidates_outside_v1_row_set": 392,
+  "amendment_id": "1a8d6de73b9c15fd",
+  "repair_set": [
+    "cdbw",
+    "convexity_ratio_image_based",
+    "cvdd",
+    "cvnn",
+    "dcsi",
+    "hough_arc_circle_strength"
+  ],
+  "candidate_ari_recomputed": false,
+  "ground_truth_reloaded": false,
+  "utility_source_hash": "7f65fa2b1a794b26",
+  "untouched_deviation_examples": [],
+  "errors": []
+}

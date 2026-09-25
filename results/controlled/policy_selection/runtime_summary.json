@@ -1,0 +1,15 @@
+{
+  "policy_predictor_v2": {
+    "predict_ms_per_dataset_view": 0.07439895733855488,
+    "argmax_ms_per_dataset_view": 5.178513979365664e-05,
+    "total_ms_per_dataset_view": 0.07445074247834854,
+    "n_rows": 3165
+  },
+  "policy_predictor_v1": {
+    "total_ms_per_dataset_view": 0.055215797772539835
+  },
+  "candidate_reranker_context_ms_per_run": 19.642636224303445,
+  "excludes": "outcome-table lookup, ARI evaluation, report generation",
+  "autoclust_comparability": "NOT_DIRECTLY_COMPARABLE",
+  "note": "the Policy Predictor selects ONE policy per dataset/view, so its cost is per dataset/view; the reranker figure is per dataset-view-POLICY run and the two are not additive without stating the deployment configuration"
+}

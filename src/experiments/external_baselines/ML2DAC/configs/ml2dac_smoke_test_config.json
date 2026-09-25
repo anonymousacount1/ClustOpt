@@ -1,0 +1,25 @@
+{
+  "method": "ML2DAC",
+  "mode": "full_meta_learning",
+  "use_meta_cvi_selection": true,
+  "use_warmstarting": true,
+  "use_algorithm_reduction": true,
+  "optimizer": "SMAC",
+  "time_budget_sec": 60,
+  "n_optimizer_loops": 10,
+  "n_warmstarts": 5,
+  "n_similar_datasets": 1,
+  "mf_set_index": 4,
+  "random_state": 42,
+  "normalize_input": true,
+  "record_types": ["1d_x", "1d_y", "2d"],
+  "mkr_path": null,
+  "artifact_policy": "require_pretrained_or_fail",
+  "fail_on_missing_mkr": true,
+  "fail_on_invalid_clustering": false,
+  "enforce_wallclock_timeout": false,
+  "n_jobs": 1,
+  "_notes": {
+    "purpose": "Tiny, fast configuration for the smoke test and quick local validation (5 warmstarts, 10 loops, 60s cap). NOT for the paper-level comparison (use ml2dac_full_meta_learning.json for that)."
+  }
+}

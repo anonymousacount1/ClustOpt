@@ -1,0 +1,8 @@
+{
+  "n_rows": 3165,
+  "predict_sec": 0.2354726999765262,
+  "argmax_sec": 0.00016389996744692326,
+  "predict_ms_per_row": 0.07439895733855488,
+  "argmax_ms_per_row": 5.178513979365664e-05,
+  "excludes": "outcome lookup, ARI evaluation, reporting"
+}

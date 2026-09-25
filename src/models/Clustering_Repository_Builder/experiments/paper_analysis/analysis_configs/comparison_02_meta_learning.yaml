@@ -1,0 +1,141 @@
+# Comparison Suite 2 - Real utility vs MLP meta-learning vs KNN meta-learning.
+#
+# The 15-cell grid: 3 utility sources x 5 metric-count policies. Each cell's
+# raw-vs-softmax representative is READ from the frozen preliminary selection
+# manifest -- this suite never reselects.
+comparison_id: comparison_02
+title: Real utility vs MLP meta-learning vs KNN meta-learning
+section: 03_comparison_02_meta_learning
+
+representatives:
+  source: frozen_selection_manifest
+  representative_id_prefix: c2_rep
+  # 3 sources x 5 policies. For MLP/KNN Dynamic the eligible arms are
+  # dynamic_predictK_{raw,softmax} only.
+  grid:
+    sources: [real, mlp, knn]
+    policies: [top1, top3, top5, top10, dynamic]
+  diagnostic_cells: [mlp_dynamic_realK, knn_dynamic_realK]
+
+source_labels:
+  real: Real Utility
+  mlp: MLP
+  knn: KNN
+policy_labels:
+  top1: Top-1
+  top3: Top-3
+  top5: Top-5
+  top10: Top-10
+  dynamic: Dynamic
+
+research_questions:
+  RQ2-A:
+    question: How much downstream performance is lost when real utility is
+              replaced by a learned utility predictor?
+    kind: matched_source_delta
+    reference_source: real
+    comparison_sources: [mlp, knn]
+    match_on: [policy]
+    gap_type: utility_prediction_gap
+    note: >-
+      The real arm is a utility ORACLE, so this is the cost of prediction error,
+      not a comparison of two deployable systems.
+  RQ2-B:
+    question: Which learned predictor transfers utility information better
+              downstream?
+    kind: matched_source_delta
+    reference_source: mlp
+    comparison_sources: [knn]
+    match_on: [policy]
+    note: >-
+      Both arms are deployable-source; this is the one fully operational
+      comparison in the suite. Still post-selection exploratory because both arms
+      are retrospectively selected representatives.
+  RQ2-C:
+    question: How does predictor quality vary across structural families?
+    kind: family_breakdown
+    apply: globally_selected_representatives
+    note: >-
+      Uses the 15 GLOBALLY selected representatives and reports them per family.
+      It does not re-pick per family.
+  RQ2-D:
+    question: What is the family-reselection headroom?
+    kind: family_reselection_headroom
+    note: >-
+      Family-level raw/softmax reselection is a family-level retrospective policy
+      ORACLE. Reported in its own section and never merged into the primary
+      fixed-global representative results.
+  RQ2-E:
+    question: How much of the Dynamic loss is caused by metric-count prediction?
+    kind: matched_pair
+    pairs:
+      - {a: regressor_top_dynamic_realK_raw, b: regressor_top_dynamic_predictK_raw}
+      - {a: regressor_top_dynamic_realK_softmax_t05,
+         b: regressor_top_dynamic_predictK_softmax_t05}
+      - {a: knn_top_dynamic_realK_raw, b: knn_top_dynamic_predictK_raw}
+      - {a: knn_top_dynamic_realK_softmax_t05,
+         b: knn_top_dynamic_predictK_softmax_t05}
+    gap_type: metric_count_gap
+    note: >-
+      The Real-K arms are ORACLE-ASSISTED (metric count from the real utility
+      vector) and must be labelled as such in every table and caption.
+
+metric_selection_analysis:
+  apply_to: all_15_primary_representatives
+  measures: [individual_metrics, metric_category_usage, top_metric_frequency,
+             total_weight_mass, selection_coverage, entropy, new_metric_usage,
+             family_specific_preferences]
+
+grouping_levels: [global, family, subfamily, difficulty, cluster_count]
+primary_metrics: [best_view_mean_ari, best_view_median_ari, best_view_std_ari,
+                  best_view_k_accuracy, total_runtime_all_views_median_sec]
+secondary_metrics: [all_views_mean_ari, view_gap, success_rate,
+                    mean_selected_metric_count, mean_metric_weight_entropy]
+
+pairwise_hypotheses:
+  primary:
+    kind: matched_mlp_vs_knn
+    family: comparison_02_mlp_vs_knn
+    direction: two-sided
+    rationale: RQ2-B, one predeclared test per metric-count policy
+  exploratory:
+    - {kind: matched_real_vs_learned, family: comparison_02_prediction_loss}
+    - {kind: dynamic_predict_vs_realK, family: comparison_02_metric_count}
+
+required_capabilities: [primary_ari, best_view, k_analysis,
+                        runtime_total_all_views]
+optional_capabilities: [metric_selection, metric_category_usage,
+                        new_metric_usage, metric_entropy, trace_best_gap]
+
+tables:
+  - {name: comparison_02_representative_map.csv, importance: paper_main}
+  - {name: comparison_02_global_summary.csv, importance: paper_main}
+  - {name: comparison_02_family_summary.csv, importance: paper_main}
+  - {name: comparison_02_matched_source_deltas.csv, importance: paper_main}
+  - {name: comparison_02_family_reselection_headroom.csv, importance: paper_supplement}
+  - {name: comparison_02_dynamic_predict_vs_realK.csv, importance: paper_main}
+  - {name: comparison_02_metric_usage.csv, importance: paper_supplement}
+  - {name: comparison_02_metric_category_usage.csv, importance: paper_main}
+  - {name: comparison_02_gap_decomposition.csv, importance: paper_main}
+  - {name: comparison_02_runtime_summary.csv, importance: paper_supplement}
+  - {name: comparison_02_capability_warnings.csv, importance: appendix}
+  - {name: comparison_02_research_questions.csv, importance: paper_main}
+
+plots:
+  - {name: comparison_02_source_by_policy_grouped_bar, kind: grouped_bar,
+     importance: paper_main}
+  - {name: comparison_02_source_by_policy_boxplots, kind: boxplot, importance: paper_main}
+  - {name: comparison_02_family_heatmap, kind: heatmap, importance: paper_main}
+  - {name: comparison_02_mlp_vs_knn_paired_delta, kind: paired_delta_boxplot,
+     importance: paper_main}
+  - {name: comparison_02_real_vs_predicted_gap, kind: bar, importance: paper_main}
+  - {name: comparison_02_dynamic_predict_vs_realK, kind: bar, importance: paper_main}
+  - {name: comparison_02_metric_category_stack, kind: stacked_bar, importance: paper_main}
+  - {name: comparison_02_metric_selection_heatmap, kind: heatmap,
+     importance: paper_supplement}
+  - {name: comparison_02_runtime_boxplot, kind: boxplot_log, importance: paper_supplement}
+  - {name: comparison_02_k_accuracy, kind: bar, importance: paper_supplement}
+
+reports: [README.md, METHODS_AND_DEFINITIONS.md, RESULTS.md, LIMITATIONS.md,
+          PAPER_CANDIDATES.md]
+workbook: 03_comparison_02_meta_learning.xlsx

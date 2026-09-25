@@ -1,0 +1,118 @@
+{
+  "config": "ml2dac_metafeature_schema",
+  "stage": "4B-3B1",
+  "version": 1,
+  "purpose": "Frozen input schema of the ML2DAC CVI classifiers. Any Stage-4 ML2DAC adapter MUST build exactly this vector, in exactly this order.",
+  "n_features": 52,
+  "ordered_schema_hash_sha256_16": "f33a72e081fff983",
+  "identical_across_arms": true,
+  "arms": [
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "feature_columns": [
+    "ml2dac_attr_conc.mean",
+    "ml2dac_attr_conc.sd",
+    "ml2dac_attr_ent.mean",
+    "ml2dac_attr_ent.sd",
+    "ml2dac_attr_to_inst",
+    "ml2dac_cat_to_num",
+    "ml2dac_cor.mean",
+    "ml2dac_cor.sd",
+    "ml2dac_cov.mean",
+    "ml2dac_cov.sd",
+    "ml2dac_eigenvalues.mean",
+    "ml2dac_eigenvalues.sd",
+    "ml2dac_g_mean.mean",
+    "ml2dac_g_mean.sd",
+    "ml2dac_h_mean.mean",
+    "ml2dac_h_mean.sd",
+    "ml2dac_inst_to_attr",
+    "ml2dac_iq_range.mean",
+    "ml2dac_iq_range.sd",
+    "ml2dac_kurtosis.mean",
+    "ml2dac_kurtosis.sd",
+    "ml2dac_mad.mean",
+    "ml2dac_mad.sd",
+    "ml2dac_max.mean",
+    "ml2dac_max.sd",
+    "ml2dac_mean.mean",
+    "ml2dac_mean.sd",
+    "ml2dac_median.mean",
+    "ml2dac_median.sd",
+    "ml2dac_min.mean",
+    "ml2dac_min.sd",
+    "ml2dac_nr_attr",
+    "ml2dac_nr_bin",
+    "ml2dac_nr_cat",
+    "ml2dac_nr_cor_attr",
+    "ml2dac_nr_inst",
+    "ml2dac_nr_norm",
+    "ml2dac_nr_num",
+    "ml2dac_nr_outliers",
+    "ml2dac_num_to_cat",
+    "ml2dac_range.mean",
+    "ml2dac_range.sd",
+    "ml2dac_sd.mean",
+    "ml2dac_sd.sd",
+    "ml2dac_skewness.mean",
+    "ml2dac_skewness.sd",
+    "ml2dac_sparsity.mean",
+    "ml2dac_sparsity.sd",
+    "ml2dac_t_mean.mean",
+    "ml2dac_t_mean.sd",
+    "ml2dac_var.mean",
+    "ml2dac_var.sd"
+  ],
+  "authoritative_extractor": {
+    "module": "experiments/external_baselines/Unified_MKR/unified_mkr/pymfe_worker.py",
+    "functions": [
+      "_build_decision_X",
+      "_extract"
+    ],
+    "driver": "experiments/external_baselines/Unified_MKR/unified_mkr/pymfe_pass.py",
+    "interpreter": "experiments/external_baselines/Unified_MKR/.mfenv (isolated venv)",
+    "call": "MFE(groups=['statistical','info-theory','general']).fit(X).extract(), then numpy.nan_to_num",
+    "note": "unified_mkr/metafeatures.py::extract_ml2dac is a FALLBACK path that calls the vendored ML2DAC MetaFeatureExtractor; it did NOT produce the master parquet. The master parquet was produced by pymfe_worker.py.",
+    "environment": {
+      "python": "3.12.2",
+      "pymfe": "0.4.4",
+      "numpy": "2.4.6",
+      "pandas": "3.0.3"
+    }
+  },
+  "label_free": {
+    "static": "X-only. _build_decision_X drops the columns ('cluster_id','label','labels','y_true') before building the decision-space matrix; MFE.fit is called with X only (no y). None of the 52 columns is a pymfe label-dependent descriptor (no class_ent, mut_inf, joint_ent, ns_ratio, eq_num_attr, can_cor, gravity, nr_class, freq_class, class_conc).",
+    "behavioural": "the real extraction path was executed with MFE.fit wrapped to raise on any target argument, and with the ground-truth label column first randomly permuted and then deleted entirely; all 52 features were bitwise unchanged in every case.",
+    "supervised_fit_attempts": 0,
+    "label_permutation_max_abs_diff": 0.0,
+    "label_removal_max_abs_diff": 0.0
+  },
+  "repeatability": {
+    "max_abs_diff_rerun": 0.0,
+    "classification": "bitwise reproducible"
+  },
+  "historical_regression": {
+    "n_records": 30,
+    "views": [
+      "x_only",
+      "y_only",
+      "xy_2d"
+    ],
+    "bitwise_exact_records": 30,
+    "max_abs_diff": 0.0,
+    "predeclared_tolerance": 1e-12,
+    "worst": null
+  },
+  "downstream_nan_policy": "pymfe NaN -> 0.0 at extraction (numpy.nan_to_num in pymfe_worker._extract), then the frozen SimpleImputer.transform before the classifier. The adapter must reproduce BOTH steps in this order.",
+  "classifier_input_contract": {
+    "order": "feature_columns as listed",
+    "transform": "frozen imputer.transform",
+    "predict": "frozen RandomForestClassifier.predict",
+    "output": "raw class = metric_id; raw_result.selected_cvi is its CVI_ABBREV projection"
+  },
+  "true_ari_inspected": false,
+  "external_50_used": false
+}

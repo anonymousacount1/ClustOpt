@@ -1,0 +1,2 @@
+comparison,arm_a,arm_b,n,mean_a,mean_b,mean_delta,median_delta,ci_lo,ci_hi,wins_a,wins_b,ties,cohens_dz,wilcoxon_p,autoclust_reference_value,reconstruction_abs_diff,interpretation,search_space_role
+v2_minus_AutoClust_Extended_InDomain_same_search_space,v2+R,AutoClust_Extended_InDomain_same_search_space,1055,0.6170763693848712,0.6144995191007991,0.0025768502840719334,0.0,-0.002403713579938044,0.007826662982116633,433,427,195,0.030823761095613755,0.7502971309416729,0.6144995191007991,0.0,numerically exceeds but is statistically indistinguishable,matched (PRIMARY)

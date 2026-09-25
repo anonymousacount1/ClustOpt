@@ -1,0 +1,161 @@
+{
+  "finding": "PyPI cdbw 0.2 is NOT invariant to the integer ordering of cluster labels",
+  "status": "ROOT-CAUSED AND CORRECTED in Stage 4B-1b",
+  "root_cause": "validation/cdbw_paper_semantics_audit.json",
+  "classification": "A -- package implementation defect",
+  "is_it_randomness": false,
+  "determinism_evidence": "repeated calls with an identical label vector return bit-identical values",
+  "affected_components": "compactness, cohesion and separation, all via the mis-aggregated neighbourhood radius; separation additionally via a minimum taken over lower-indexed clusters only",
+  "max_spread_abs": 0.9310579578451365,
+  "max_spread_rel": 1.07046342974933,
+  "per_fixture": [
+    {
+      "fixture_id": "separated_3",
+      "K": 3,
+      "n_orderings": 6,
+      "min": 1.4253926191579214,
+      "max": 1.4750532852341032,
+      "canonical": 1.4439100330275965,
+      "spread_abs": 0.0496606660761818,
+      "spread_rel": 0.034293230199051075,
+      "n_distinct": 3
+    },
+    {
+      "fixture_id": "overlapping_3",
+      "K": 3,
+      "n_orderings": 6,
+      "min": 0.009684720234793503,
+      "max": 0.010088971302565919,
+      "canonical": 0.010088971302565919,
+      "spread_abs": 0.0004042510677724157,
+      "spread_rel": 0.04091526209446424,
+      "n_distinct": 3
+    },
+    {
+      "fixture_id": "anisotropic_2",
+      "K": 2,
+      "n_orderings": 2,
+      "min": 0.054898401086133794,
+      "max": 0.057292464079889235,
+      "canonical": 0.054898401086133794,
+      "spread_abs": 0.0023940629937554414,
+      "spread_rel": 0.0426783943632602,
+      "n_distinct": 2
+    },
+    {
+      "fixture_id": "unequal_density_2",
+      "K": 2,
+      "n_orderings": 2,
+      "min": 0.28444703479487077,
+      "max": 0.30227462072292194,
+      "canonical": 0.28444703479487077,
+      "spread_abs": 0.01782758592805117,
+      "spread_rel": 0.0607701650702427,
+      "n_distinct": 2
+    },
+    {
+      "fixture_id": "ring_and_core",
+      "K": 2,
+      "n_orderings": 2,
+      "min": 0.030168016676098558,
+      "max": 0.09965158436644285,
+      "canonical": 0.030168016676098558,
+      "spread_abs": 0.06948356769034429,
+      "spread_rel": 1.07046342974933,
+      "n_distinct": 2
+    },
+    {
+      "fixture_id": "duplicates_2",
+      "K": 2,
+      "n_orderings": 2,
+      "min": 1.1365335529644385,
+      "max": 1.1378002696071208,
+      "canonical": 1.1365335529644385,
+      "spread_abs": 0.0012667166426822973,
+      "spread_rel": 0.0011139232333537013,
+      "n_distinct": 2
+    },
+    {
+      "fixture_id": "singleton_3",
+      "K": 3,
+      "n_orderings": 6,
+      "min": 0.0,
+      "max": 0.0,
+      "canonical": 0.0,
+      "spread_abs": 0.0,
+      "spread_rel": 0.0,
+      "n_distinct": 1
+    },
+    {
+      "fixture_id": "separated_4",
+      "K": 4,
+      "n_orderings": 24,
+      "min": 1.1129316337428943,
+      "max": 1.4673111408983917,
+      "canonical": 1.1129316337428943,
+      "spread_abs": 0.3543795071554974,
+      "spread_rel": 0.28481365188310703,
+      "n_distinct": 8
+    },
+    {
+      "fixture_id": "touching_2",
+      "K": 2,
+      "n_orderings": 2,
+      "min": 0.01896431632748375,
+      "max": 0.019139114429070698,
+      "canonical": 0.019139114429070698,
+      "spread_abs": 0.0001747981015869475,
+      "spread_rel": 0.009174927197697504,
+      "n_distinct": 2
+    },
+    {
+      "fixture_id": "elongated_3",
+      "K": 3,
+      "n_orderings": 6,
+      "min": 0.03761657570205181,
+      "max": 0.05685685509404884,
+      "canonical": 0.05685685509404884,
+      "spread_abs": 0.01924027939199703,
+      "spread_rel": 0.4362371131282194,
+      "n_distinct": 3
+    },
+    {
+      "fixture_id": "nested_rings_3",
+      "K": 3,
+      "n_orderings": 6,
+      "min": 0.016866323979167354,
+      "max": 0.04057885577118754,
+      "canonical": 0.04057885577118754,
+      "spread_abs": 0.023712531792020188,
+      "spread_rel": 0.9371570362744149,
+      "n_distinct": 3
+    },
+    {
+      "fixture_id": "mixed_density_4",
+      "K": 4,
+      "n_orderings": 24,
+      "min": 0.6017190131903921,
+      "max": 1.5327769710355286,
+      "canonical": 1.2974021592992149,
+      "spread_abs": 0.9310579578451365,
+      "spread_rel": 0.811554763089425,
+      "n_distinct": 8
+    },
+    {
+      "fixture_id": "two_moons_2",
+      "K": 2,
+      "n_orderings": 2,
+      "min": 0.06779174992456305,
+      "max": 0.06906966436011916,
+      "canonical": 0.06779174992456305,
+      "spread_abs": 0.00127791443555611,
+      "spread_rel": 0.01867457591659765,
+      "n_distinct": 2
+    }
+  ],
+  "resolution": {
+    "primary": "the aggregations are corrected, so CDbw is permutation-invariant by construction and no ordering convention is used",
+    "diagnostic": "the raw package remains available as cdbw_package_compat under a canonical ordering, purely so this comparison stays reproducible"
+  },
+  "reporting_requirement": "CDbw values produced by the raw package without a stated cluster ordering are not comparable to ours, and are not comparable to each other either"
+}

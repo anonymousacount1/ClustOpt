@@ -1,0 +1,273 @@
+{
+  "stage": "4B-2",
+  "n_gates": 44,
+  "n_pass": 44,
+  "n_fail": 0,
+  "overall": "PASS",
+  "gates": [
+    {
+      "gate": "S01",
+      "description": "Stage 4B-1 gates still pass",
+      "status": "PASS",
+      "detail": "79/79"
+    },
+    {
+      "gate": "S02",
+      "description": "the modern-CVI comparator set is untouched",
+      "status": "PASS",
+      "detail": "['cdbw', 'cvnn', 'cvdd', 'dcsi']"
+    },
+    {
+      "gate": "S03",
+      "description": "modern-CVI configs are byte-identical to their frozen hashes",
+      "status": "PASS",
+      "detail": "changed: none"
+    },
+    {
+      "gate": "S04",
+      "description": "the ClustOpt source audit resolves every entrypoint",
+      "status": "PASS",
+      "detail": "18 entrypoints"
+    },
+    {
+      "gate": "S05",
+      "description": "no frozen artifact is ambiguous",
+      "status": "PASS",
+      "detail": "ambiguities: none"
+    },
+    {
+      "gate": "S06",
+      "description": "registry pointer defects are recorded, not silently reinterpreted",
+      "status": "PASS",
+      "detail": "6 disagreements, amendment recorded"
+    },
+    {
+      "gate": "S07",
+      "description": "the KNN artifact directory is the one the frozen config names",
+      "status": "PASS",
+      "detail": "results_analysis/metric_utility_knn/phase_e1/models"
+    },
+    {
+      "gate": "S08",
+      "description": "exactly six ClustOpt METHOD_IDs, matching the registry",
+      "status": "PASS",
+      "detail": "6 arms"
+    },
+    {
+      "gate": "S09",
+      "description": "every arm resolves its artifacts and their hashes",
+      "status": "PASS",
+      "detail": "17 artifact hashes"
+    },
+    {
+      "gate": "S10",
+      "description": "the frozen PP artifact hashes are the ones in use",
+      "status": "PASS",
+      "detail": "aa977443caa97bda / 4a668514b93f237e"
+    },
+    {
+      "gate": "S11",
+      "description": "all ten final rerankers resolve; no OOF fold model is used",
+      "status": "PASS",
+      "detail": "10 rerankers"
+    },
+    {
+      "gate": "S12",
+      "description": "MLP, KNN, PP and reranker feature schemas are exact",
+      "status": "PASS",
+      "detail": "mlp 250->60 | pp 373 | reranker 347"
+    },
+    {
+      "gate": "S13",
+      "description": "all 20 policies resolve to a source, K, weighting and reranker",
+      "status": "PASS",
+      "detail": "20 policies, 0 unresolved"
+    },
+    {
+      "gate": "S14",
+      "description": "both PP arms still replay their history exactly",
+      "status": "PASS",
+      "detail": "0/3165 both arms"
+    },
+    {
+      "gate": "S15",
+      "description": "PP inference is pinned to n_jobs=1",
+      "status": "PASS",
+      "detail": "n_jobs=1"
+    },
+    {
+      "gate": "S16",
+      "description": "MLP Top-5 RAW reproduces the historical metric selection",
+      "status": "PASS",
+      "detail": "12 records, 0 fail, views ['x_only', 'xy_2d', 'y_only']"
+    },
+    {
+      "gate": "S17",
+      "description": "KNN Top-10 RAW reproduces the historical metric selection",
+      "status": "PASS",
+      "detail": "12 records, 0 fail, views ['x_only', 'xy_2d', 'y_only']"
+    },
+    {
+      "gate": "S18",
+      "description": "the regression set spans several families and all three views",
+      "status": "PASS",
+      "detail": "MLP families 4 | views ['x_only', 'xy_2d', 'y_only']"
+    },
+    {
+      "gate": "S19",
+      "description": "KNN utilities equal the persisted split-1 context",
+      "status": "PASS",
+      "detail": "6 records, max abs diff 1.1102230246251565e-16"
+    },
+    {
+      "gate": "S20",
+      "description": "C0 and C3 execute one identical candidate trace",
+      "status": "PASS",
+      "detail": "8 candidates, mismatches {0}"
+    },
+    {
+      "gate": "S21",
+      "description": "C1 and C4 execute one identical candidate trace",
+      "status": "PASS",
+      "detail": "8 candidates, mismatches {0}"
+    },
+    {
+      "gate": "S22",
+      "description": "only the FINAL selection differs within a shared pair",
+      "status": "PASS",
+      "detail": "selector-only"
+    },
+    {
+      "gate": "S23",
+      "description": "C2 and C5 are kept as separate traces",
+      "status": "PASS",
+      "detail": "separate"
+    },
+    {
+      "gate": "S24",
+      "description": "the reranker scores a persisted historical trace at 347 dims",
+      "status": "PASS",
+      "detail": "6 traces scored"
+    },
+    {
+      "gate": "S25",
+      "description": "the reranker only ever selects an eligible candidate",
+      "status": "PASS",
+      "detail": "6 selections"
+    },
+    {
+      "gate": "S26",
+      "description": "the reranker consults no ARI",
+      "status": "PASS",
+      "detail": "no ARI in the selection path"
+    },
+    {
+      "gate": "S27",
+      "description": "the adapter API carries no evaluation label",
+      "status": "PASS",
+      "detail": "run(X, seed, k_min, k_max, budget, dataset_id, view_id, dataset_dir)"
+    },
+    {
+      "gate": "S28",
+      "description": "the adapter never attaches ground truth to the search",
+      "status": "PASS",
+      "detail": "y_true=None"
+    },
+    {
+      "gate": "S29",
+      "description": "the search objective is documented as CVI-only",
+      "status": "PASS",
+      "detail": "objective is CVI-only"
+    },
+    {
+      "gate": "S30",
+      "description": "all six arms emit a valid output schema",
+      "status": "PASS",
+      "detail": "6 arms, 0 fail"
+    },
+    {
+      "gate": "S31",
+      "description": "no output carries a ground-truth field",
+      "status": "PASS",
+      "detail": "forbidden fields: none"
+    },
+    {
+      "gate": "S32",
+      "description": "every failure kind is an explicit enum, with no silent fallback",
+      "status": "PASS",
+      "detail": "10 failure kinds"
+    },
+    {
+      "gate": "S33",
+      "description": "the seed function matches the frozen formula",
+      "status": "PASS",
+      "detail": "base_seed=1234"
+    },
+    {
+      "gate": "S34",
+      "description": "shared arms share a seed identity; PP arms do not",
+      "status": "PASS",
+      "detail": "3 pairs"
+    },
+    {
+      "gate": "S35",
+      "description": "the frozen search protocol is unchanged",
+      "status": "PASS",
+      "detail": "budget 50, K 2..5, not externally tuned"
+    },
+    {
+      "gate": "S36",
+      "description": "the search space is pinned by hash as well as by source",
+      "status": "PASS",
+      "detail": "8ddf86c79888ebe9 over 3 views"
+    },
+    {
+      "gate": "S37",
+      "description": "the external corpus manifest is unchanged",
+      "status": "PASS",
+      "detail": "709712107424ad4e"
+    },
+    {
+      "gate": "S38",
+      "description": "no external scientific execution took place",
+      "status": "PASS",
+      "detail": "smoke marked non-scientific"
+    },
+    {
+      "gate": "S39",
+      "description": "the internal regression set is not the external corpus",
+      "status": "PASS",
+      "detail": "INTERNAL synthetic domain only"
+    },
+    {
+      "gate": "S40",
+      "description": "nothing was trained, tuned or retrained",
+      "status": "PASS",
+      "detail": "6 arms, none retrained"
+    },
+    {
+      "gate": "S41",
+      "description": "no PP or reranker binary is tracked, and none is staged here",
+      "status": "PASS",
+      "detail": "tracked pre-existing: 3 | forbidden: none | staged: none"
+    },
+    {
+      "gate": "S41b",
+      "description": "results_analysis is not staged",
+      "status": "PASS",
+      "detail": "staged under results_analysis: none"
+    },
+    {
+      "gate": "S42",
+      "description": "the Stage 4B-2 report exists with its required sections",
+      "status": "PASS",
+      "detail": "missing sections: none"
+    },
+    {
+      "gate": "S43",
+      "description": "the report does not present smoke results as scientific",
+      "status": "PASS",
+      "detail": "flagged: none"
+    }
+  ]
+}

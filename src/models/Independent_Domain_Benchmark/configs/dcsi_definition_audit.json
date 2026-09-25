@@ -1,0 +1,92 @@
+{
+  "metric": "DCSI",
+  "full_name": "Density Cluster Separability Index",
+  "scientific_source": {
+    "citation": "Gauss J., Scheipl F., Herrmann M., 'DCSI -- An improved measure of cluster separability based on separation and connectedness'",
+    "arxiv": "2310.12806v4",
+    "arxiv_date": "10 Apr 2025",
+    "paper_licence": "CC BY 4.0",
+    "extraction_method": "MathML alttext (LaTeX) parsed directly from the arXiv HTML rendering; definitions were NOT reconstructed from prose or recollection"
+  },
+  "definition": {
+    "input": "X (n x d numeric) and a partition into classes C_1..C_K; a distance metric d (Euclidean by default)",
+    "hyperparameters": {
+      "MinPts": {"symbol": "MinPts", "domain": "natural number", "default": 5,
+                  "paper_quote": "In this paper - unless otherwise stated - MinPts = 5 is always used, similar to DBSCAN",
+                  "interpretation": "minimal cluster size: an isolated set of at least this many close points is not discarded as noise"},
+      "epsilon_i": {"symbol": "eps_i", "per_class": true,
+                     "formula_latex": "\\varepsilon_{i}=\\operatorname{median}_{x_{j}\\in C_{i}}d(x_{j},x_{(j,\\textit{MinPts}\\cdot 2)})",
+                     "plain": "for each class i, the MEDIAN over its points of the distance to that point's (2*MinPts)-th nearest neighbour WITHIN the same class",
+                     "why_per_class": "densities differ between classes, so a single global epsilon can leave low-density classes with no core points at all"}
+    },
+    "core_points": {
+      "definition_number": "Definition 3.1",
+      "formula_latex": "\\mathcal{C}_{i}=\\{x\\in C_{i}:|\\mathcal{N}_{\\varepsilon_{i}}(x)|\\geq\\textit{MinPts}\\}",
+      "neighbourhood_latex": "\\mathcal{N}_{\\varepsilon_{i}}(x)=\\{x^{\\prime}\\in C_{i}\\setminus\\{x\\}:d(x,x^{\\prime})\\leq\\varepsilon_{i}\\}",
+      "key_differences_from_dbscan": [
+        "core points are computed SEPARATELY for each class",
+        "the epsilon-neighbourhood contains ONLY observations from the same class",
+        "the point itself is excluded from its own neighbourhood",
+        "the comparison is >= MinPts on the neighbourhood EXCLUDING self"
+      ]
+    },
+    "separation": {
+      "definition_number": "Definition 3.2",
+      "formula_latex": "\\Sep_{\\DCSI}=\\min_{x\\in\\mathcal{C}_{1},x^{\\prime}\\in\\mathcal{C}_{2}}d(x,x^{\\prime})",
+      "plain": "minimum distance between the CORE points of the two classes",
+      "rationale": "robust to outliers by construction and unchanged by observations irrelevant to separability"
+    },
+    "connectedness": {
+      "definition_number": "Definition 3.3",
+      "formula_latex": "\\Conn_{\\DCSI}(C_{i})=\\max_{(x,x^{\\prime})\\in V_{i}}d(x,x^{\\prime})",
+      "aggregate_latex": "\\Conn_{\\DCSI}=\\max\\{\\Conn_{\\DCSI}(C_{1}),\\Conn_{\\DCSI}(C_{2})\\}",
+      "plain": "the LARGEST edge weight in a minimum spanning tree built only on the CORE points of a class; then the maximum over the two classes",
+      "rationale": "distinguishes connectedness from compactness, so non-compact shapes such as rings are not penalised"
+    },
+    "pairwise_index": {
+      "formula_latex": "\\DCSI=\\frac{q}{1+q},\\text{ where }q=\\frac{\\Sep_{\\DCSI}}{\\Conn_{\\DCSI}}",
+      "limits": ["DCSI -> 0 when Sep -> 0 or Conn -> infinity",
+                  "DCSI -> 1 when Sep >> Conn",
+                  "DCSI = 0.5 when Sep = Conn"],
+      "range": "[0, 1)"
+    },
+    "multi_class_aggregation": {
+      "formula_latex": "\\DCSI(X)=\\frac{2}{K\\cdot(K-1)}\\sum_{i=1}^{K-1}\\sum_{j=i+1}^{K}\\DCSI(C_{i},C_{j})",
+      "plain": "unweighted MEAN of all K(K-1)/2 pairwise DCSI values",
+      "authors_recommendation": "the mean pairwise DCSI is the authors' recommended multi-class summary (Appendix C.2)"
+    },
+    "direction": "maximize",
+    "complexity": "O(n_i log n_i) per class"
+  },
+  "frozen_parameters": {
+    "MinPts": 5,
+    "epsilon_rule": "per-class median distance to the (2*MinPts)-th within-class nearest neighbour",
+    "distance": "euclidean",
+    "multi_class": "mean pairwise",
+    "tuning_on_external_corpus": false,
+    "frozen_before_any_external_result": true
+  },
+  "edge_case_policy": {
+    "one_cluster_partition": "INVALID(fewer_than_two_clusters) -- no pair exists, so the aggregation is undefined",
+    "class_with_zero_core_points": "INVALID(dcsi_no_core_points) for the affected PAIR -- Sep and Conn are both undefined without core points",
+    "class_with_one_core_point": "MST over a single vertex has no edges, so Conn(C_i) is defined as 0 for that class; if the resulting Conn (max over the pair) is 0 see zero_connectedness",
+    "zero_connectedness": "if Conn == 0 while Sep > 0 then q -> infinity and DCSI -> 1; reported as VALID 1.0 (the supremum), which is the mathematical limit",
+    "zero_separation": "if Sep == 0 then q = 0 and DCSI = 0; VALID",
+    "both_zero": "INVALID(dcsi_indeterminate_zero_over_zero) -- q = 0/0 is undefined",
+    "duplicate_observations": "permitted; unlike CVDD, DCSI's MST enters only through its MAXIMUM edge weight, which is identical for every minimum spanning tree even when the MST itself is non-unique, so duplicates do not create ambiguity",
+    "noise_labels": "the paper defines DCSI over a partition into classes; a negative/noise label is treated as its own class only if the caller supplies it as such. Our wrapper EXCLUDES label -1 from the class set and records it, because a noise label is not a class in the paper's sense",
+    "insufficient_points_for_epsilon": "if a class has fewer than 2*MinPts+1 members, the (2*MinPts)-th within-class neighbour does not exist; the largest available neighbour distance is used, which is the natural continuous extension and is documented rather than silently imputed"
+  },
+  "implementation_relationship": {
+    "python_implementation": "models/Independent_Domain_Benchmark/metric_validation/external_cvis.py :: dcsi",
+    "derived_from": "the published mathematical definition above",
+    "author_source_copied": false,
+    "author_source_vendored": false,
+    "author_source_translated_line_by_line": false,
+    "author_repository_role": "external numerical oracle only, fetched to a temporary location outside the repository and never committed",
+    "author_repository": "github.com/JanaGauss/dcsi",
+    "author_repository_commit": "15ba6f7bd89151e64b009dc4329f678f416ddc6c",
+    "author_repository_licence": null,
+    "licence_consequence": "no explicit licence, therefore no code reuse of any kind is permitted"
+  }
+}

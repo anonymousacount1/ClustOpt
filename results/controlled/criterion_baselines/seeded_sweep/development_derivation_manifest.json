@@ -1,0 +1,245 @@
+{
+  "derivation": "E1 development-only criterion baselines",
+  "population": "controlled repository splits 2-16 ONLY",
+  "split_1_used": false,
+  "source": "results_analysis/clustering_repository/stage2/oof_utility_splits2_16/combined/oof_mlp_utilities.csv.gz",
+  "registry_size": 60,
+  "aliased_metrics_in_live_registry": {
+    "convexity_ratio_image_based": "convexity_solidity_image",
+    "hough_arc_circle_strength": "hough_circle_arc_strength"
+  },
+  "development_records": 48039,
+  "development_datasets": 16013,
+  "development_splits": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "n_utility_targets": 60,
+  "meanprof": {
+    "rule": "mean TRUE FULL60 utility over splits 2-16, per view; rank; take top-10; RAW positive-normalised weights (identical rule to C4)",
+    "weight_formula": "w_j = max(u_j,0) / sum_{l in S} max(u_l,0)",
+    "per_view_selected": {
+      "x_only": [
+        "silhouette",
+        "noise_aware_silhouette",
+        "neighborhood_purity_multi_k",
+        "gridness_fft_acf",
+        "neighborhood_purity",
+        "min_centroid_distance",
+        "axial_symmetry",
+        "min_intercluster_distance",
+        "cluster_size_balance_entropy",
+        "connected_components_count"
+      ],
+      "y_only": [
+        "noise_aware_silhouette",
+        "silhouette",
+        "gridness_fft_acf",
+        "neighborhood_purity_multi_k",
+        "neighborhood_purity",
+        "min_centroid_distance",
+        "cluster_size_balance_entropy",
+        "axial_symmetry",
+        "connectivity_components",
+        "min_intercluster_distance"
+      ],
+      "xy_2d": [
+        "calinski_harabasz",
+        "cluster_size_balance_entropy",
+        "noise_aware_silhouette",
+        "connected_components_count",
+        "contour_graph_connectivity",
+        "silhouette",
+        "convexity_ratio",
+        "corner_junction_density",
+        "s_dbw",
+        "glcm_haralick"
+      ]
+    },
+    "per_view_weights": {
+      "x_only": {
+        "silhouette": 0.10784295,
+        "noise_aware_silhouette": 0.10426489,
+        "neighborhood_purity_multi_k": 0.10311737,
+        "gridness_fft_acf": 0.10310996,
+        "neighborhood_purity": 0.10239799,
+        "min_centroid_distance": 0.10015481,
+        "axial_symmetry": 0.09712145,
+        "min_intercluster_distance": 0.09448541,
+        "cluster_size_balance_entropy": 0.09423732,
+        "connected_components_count": 0.09326785
+      },
+      "y_only": {
+        "noise_aware_silhouette": 0.10732056,
+        "silhouette": 0.10667326,
+        "gridness_fft_acf": 0.10378976,
+        "neighborhood_purity_multi_k": 0.10212853,
+        "neighborhood_purity": 0.10147484,
+        "min_centroid_distance": 0.09753443,
+        "cluster_size_balance_entropy": 0.09654737,
+        "axial_symmetry": 0.09558368,
+        "connectivity_components": 0.09471469,
+        "min_intercluster_distance": 0.0942329
+      },
+      "xy_2d": {
+        "calinski_harabasz": 0.10975783,
+        "cluster_size_balance_entropy": 0.10388032,
+        "noise_aware_silhouette": 0.10232811,
+        "connected_components_count": 0.10008246,
+        "contour_graph_connectivity": 0.09933686,
+        "silhouette": 0.09850748,
+        "convexity_ratio": 0.09826611,
+        "corner_junction_density": 0.09713997,
+        "s_dbw": 0.0954285,
+        "glcm_haralick": 0.09527236
+      }
+    },
+    "weight_sum_check": {
+      "x_only": 0.9999999999999999,
+      "y_only": 0.9999999999999999,
+      "xy_2d": 1.0
+    }
+  },
+  "best1": {
+    "rule": "single metric with the highest mean TRUE utility on splits 2-16",
+    "per_view": {
+      "x_only": "silhouette",
+      "y_only": "noise_aware_silhouette",
+      "xy_2d": "calinski_harabasz"
+    },
+    "global": "noise_aware_silhouette",
+    "per_view_agrees_with_global": false,
+    "deployed_choice": "per-view, because C4's subset rule is per-view (view_aware=true); the global winner is recorded too",
+    "top10_global": [
+      {
+        "metric": "noise_aware_silhouette",
+        "mean_utility": 0.6638925640009216
+      },
+      {
+        "metric": "silhouette",
+        "mean_utility": 0.6622775923830867
+      },
+      {
+        "metric": "gridness_fft_acf",
+        "mean_utility": 0.6391469285201452
+      },
+      {
+        "metric": "cluster_size_balance_entropy",
+        "mean_utility": 0.6219245643643256
+      },
+      {
+        "metric": "neighborhood_purity_multi_k",
+        "mean_utility": 0.6135187367927142
+      },
+      {
+        "metric": "neighborhood_purity",
+        "mean_utility": 0.6106184979773329
+      },
+      {
+        "metric": "connected_components_count",
+        "mean_utility": 0.6027385092449424
+      },
+      {
+        "metric": "axial_symmetry",
+        "mean_utility": 0.6002928790634534
+      },
+      {
+        "metric": "min_centroid_distance",
+        "mean_utility": 0.5897290958412394
+      },
+      {
+        "metric": "contour_graph_connectivity",
+        "mean_utility": 0.5881464134362859
+      }
+    ]
+  },
+  "core3": {
+    "members": [
+      "silhouette",
+      "noise_aware_silhouette",
+      "gridness_fft_acf"
+    ],
+    "membership_source": "frozen generalist core, metric_analysis_existing_domain/family_subfamily_specialization/core_definition.json (top-5 by TRUE utility AND by selection frequency in >=6 of 12 families; stable at 5/6/7)",
+    "weighting_rule": "UNIFORM weights (1.0 each)",
+    "weighting_rule_authority": "the project_lead plan's own wording -- 'Static core: uniform weights over the three generalist indices' (clustopt_revised.tex, Appendix 'Criterion baselines', arm (iii))",
+    "note": "uniform, NOT development-utility-weighted; a utility-weighted core would be a different (partly conditioned) arm"
+  },
+  "step8_gate": [
+    {
+      "arm": "E1-MEANPROF/x_only",
+      "n_metrics": 10,
+      "aliased_metrics_present": [],
+      "uniform_weights": false,
+      "safe_for_generic_cvi_config": true,
+      "reason": "no aliased metric selected"
+    },
+    {
+      "arm": "E1-BEST1/x_only",
+      "n_metrics": 1,
+      "aliased_metrics_present": [],
+      "uniform_weights": true,
+      "safe_for_generic_cvi_config": true,
+      "reason": "no aliased metric selected"
+    },
+    {
+      "arm": "E1-MEANPROF/y_only",
+      "n_metrics": 10,
+      "aliased_metrics_present": [],
+      "uniform_weights": false,
+      "safe_for_generic_cvi_config": true,
+      "reason": "no aliased metric selected"
+    },
+    {
+      "arm": "E1-BEST1/y_only",
+      "n_metrics": 1,
+      "aliased_metrics_present": [],
+      "uniform_weights": true,
+      "safe_for_generic_cvi_config": true,
+      "reason": "no aliased metric selected"
+    },
+    {
+      "arm": "E1-MEANPROF/xy_2d",
+      "n_metrics": 10,
+      "aliased_metrics_present": [],
+      "uniform_weights": false,
+      "safe_for_generic_cvi_config": true,
+      "reason": "no aliased metric selected"
+    },
+    {
+      "arm": "E1-BEST1/xy_2d",
+      "n_metrics": 1,
+      "aliased_metrics_present": [],
+      "uniform_weights": true,
+      "safe_for_generic_cvi_config": true,
+      "reason": "no aliased metric selected"
+    },
+    {
+      "arm": "E1-CORE3",
+      "n_metrics": 3,
+      "aliased_metrics_present": [],
+      "uniform_weights": true,
+      "safe_for_generic_cvi_config": true,
+      "reason": "no aliased metric selected"
+    }
+  ],
+  "step8_verdict": "PASS -- no arm requires a non-uniform weight on an aliased metric",
+  "step8_full60_completeness": {
+    "n_utility_targets": 60,
+    "all_60_resolve_to_live_registry_keys": true,
+    "includes_both_aliased_metrics": true,
+    "note": "C4's FULL60 predictor targets contain all 60 intended ClustOpt metrics, including the two that the baseline MKR lookup lost. The broken Unified-MKR lookup path is not used anywhere in E1."
+  }
+}

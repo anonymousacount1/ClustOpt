@@ -1,0 +1,89 @@
+{
+  "b5_knn_config": {
+    "config_id": "n015__standard__euclidean__inverse_distance",
+    "n_neighbors": 15,
+    "neighbor_weighting": "inverse_distance",
+    "n_features": 250,
+    "n_metrics": 60,
+    "train_splits": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "locked_holdout_split": 1,
+    "split1_in_training": false,
+    "per_view_train_counts": {
+      "x_only": 16013,
+      "y_only": 16013,
+      "xy_2d": 16013
+    }
+  },
+  "b5_manuscript_cited_triple": {
+    "cited": {
+      "spearman": 0.762,
+      "pairwise": 0.8,
+      "ndcg": 0.971
+    },
+    "knn_full60": {
+      "spearman": 0.7125094165616481,
+      "pairwise": 0.7758891357636153,
+      "ndcg_all": 0.9651372526210228
+    },
+    "mlp_full60": {
+      "spearman": 0.7619908812655087,
+      "pairwise": 0.8004489283799276,
+      "ndcg_all": 0.9711154073228248
+    },
+    "verdict": "the cited triple is the FULL60 MLP row, not the deployed KNN"
+  },
+  "b6_reverse_validation": {
+    "hypothesis": "the manuscript's alignment statistics describe the MLP predictor with a TOP-5 subset rule, at DATASET level (views averaged), on splits 2-16",
+    "max_abs_residual_vs_frozen_stage3b": {
+      "DATASET-level true_top5_recall": 5.551115123125783e-17,
+      "DATASET-level true_top1_hit": 0.0,
+      "DATASET-level new46_true_top5_recall": 0.0,
+      "VIEW-level spearman_all": 0.0006241449530630661,
+      "VIEW-level spearman_New46": 0.0009741607646934769,
+      "DATASET-level spearman_all (wrong level, for contrast)": 0.15285700426255255
+    },
+    "verdict": "REPRODUCED. The frozen Stage-3B statistics are a MIXED-level estimator: the recall / top-1 quantities are DATASET level (views averaged, 16,013 datasets) and reproduce exactly; the Spearman alignment is VIEW level (48,039 records) and reproduces to ~1e-3 per family. Both use the MLP predictor with a TOP-5 subset rule on splits 2-16.",
+    "frozen_family_means": {
+      "spearman_util_sel_all": 0.8280150969696983,
+      "spearman_util_sel_New46": 0.8092817827544548,
+      "true_top1_hit": 0.7242655820007454,
+      "true_top5_recall": 0.577693225661093,
+      "new46_true_top5_recall": 0.47678465761396516
+    }
+  },
+  "b6_deployed_selection_audit": {
+    "n_records": 3165,
+    "n_records_without_a_persisted_selection": 0,
+    "selected_metric_count_distribution": {
+      "10": 3165
+    },
+    "note": "`selected_metrics` is the subset S that the deployed knn_top10_raw run actually used on Split 1"
+  },
+  "sources": {
+    "knn_split1_metrics": "results_analysis/metric_utility_knn/phase_e1/tables/split1_locked_metrics.csv",
+    "mlp_full60_metrics": "results_analysis/mlp/20260615_231715__metric_utility_mlp_split1_holdout/overall_results.csv",
+    "mlp_head14_metrics": "results_analysis/mlp/20260823_195830__metric_utility_mlp_head14_split1_holdout/overall_results.csv",
+    "oof_true_utilities": "results_analysis/clustering_repository/stage2/oof_utility_splits2_16/combined/oof_mlp_utilities.csv.gz",
+    "knn_oof_predictions": "results_analysis/metric_utility_knn/phase_e1/predictions/out_of_fold_predictions.parquet",
+    "knn_split1_predictions": "results_analysis/metric_utility_knn/phase_e1/predictions/split1_locked_predictions.parquet",
+    "deployed_selections": "results_analysis/clustering_repository/paper_analysis_v2/13_raw_and_reproducibility/canonical_run_frame.parquet",
+    "frozen_stage3b_alignment": "results_analysis/clustering_repository/metric_analysis_existing_domain/family_subfamily_specialization/family_utility_selection_alignment.csv",
+    "frozen_stage3b_recall": "results_analysis/clustering_repository/metric_analysis_existing_domain/family_subfamily_specialization/family_true_topk_recall.csv"
+  }
+}

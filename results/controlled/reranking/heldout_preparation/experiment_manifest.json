@@ -1,0 +1,11 @@
+{
+  "stage": "stage2b5a",
+  "final_test_root": "results_analysis/clustopt_candidate_reranker/stage2b5_split1_online_final",
+  "model_root": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/final_models",
+  "context": "C2_LOCAL_UTIL",
+  "model": "HistGradientBoostingRegressor",
+  "target": "T2_SLATE_REGRET",
+  "eligibility": "ELIGIBLE_CANDIDATE.v1",
+  "split_1_evaluated": false,
+  "source_commit": "04e5be2e4703504bec6f6dd1d64cd62d7e7ed31f"
+}

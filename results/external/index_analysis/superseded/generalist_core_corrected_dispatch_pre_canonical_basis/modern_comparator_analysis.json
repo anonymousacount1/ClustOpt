@@ -1,0 +1,66 @@
+{
+  "amendment_id": "1a8d6de73b9c15fd",
+  "modern_primary": [
+    {
+      "metric_id": "cdbw",
+      "utility_macro": 0.38710723225069105,
+      "utility_source_balanced": 0.40915143396304604,
+      "valid_fraction": 0.98,
+      "rank_macro": 44.0,
+      "n_units": 147
+    },
+    {
+      "metric_id": "cvdd",
+      "utility_macro": 0.5623519235383537,
+      "utility_source_balanced": 0.5647329533949947,
+      "valid_fraction": 0.68,
+      "rank_macro": 1.0,
+      "n_units": 102
+    },
+    {
+      "metric_id": "cvnn",
+      "utility_macro": 0.4869977905391124,
+      "utility_source_balanced": 0.5082843459436012,
+      "valid_fraction": 0.9866666666666667,
+      "rank_macro": 9.0,
+      "n_units": 148
+    },
+    {
+      "metric_id": "dcsi",
+      "utility_macro": 0.3917406945472089,
+      "utility_source_balanced": 0.4045448020724862,
+      "valid_fraction": 0.9666666666666667,
+      "rank_macro": 43.0,
+      "n_units": 145
+    }
+  ],
+  "comparison_groups": {
+    "Established": {
+      "n": 10,
+      "utility_macro_mean": 0.44415501308249083,
+      "best_metric": [
+        "noise_aware_silhouette"
+      ]
+    },
+    "New46": {
+      "n": 46,
+      "utility_macro_mean": 0.4076176904053812,
+      "best_metric": [
+        "gridness_fft_acf"
+      ]
+    },
+    "Original": {
+      "n": 7,
+      "utility_macro_mean": 0.4356907085955172,
+      "best_metric": [
+        "silhouette"
+      ]
+    }
+  },
+  "diagnostics_excluded": [
+    "cdbw_package_compat",
+    "dcsi_author_compat"
+  ],
+  "mode_shopping": false,
+  "note": "primary remains the paper-faithful dcsi and cdbw; the compatibility variants are sensitivity diagnostics and never enter this comparison. CVNN is normalised across each fixed32 bank, which is the comparison set fpc assumes, so its value is bank-relative by construction."
+}

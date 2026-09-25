@@ -1,0 +1,11 @@
+{
+  "stage": "3B",
+  "part": 2,
+  "created_at": "2026-09-09T09:44:35",
+  "source_commit": "cd9c7f44d579a1af78ac8232a04ece01daeb3c0b",
+  "analysis_only": true,
+  "models_trained": 0,
+  "clustering_runs": 0,
+  "ml2dac": "stored selected_cvi + frozen compute_cvi_star on stored Split-1 evaluations",
+  "autoclust": "existing A3 ari_predictor.pkl, inference only"
+}

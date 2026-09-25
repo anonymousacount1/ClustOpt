@@ -1,0 +1,137 @@
+# Paper labels.
+#
+# The authoritative short_label / paper_label for every method lives in
+# method_registry.py (one MethodSpec per method) and is exported to
+# 00_protocol_and_definitions/method_label_map.{csv,json} on every run.
+#
+# This file records the LABELLING SCHEME so the naming convention is reviewable,
+# and holds the shared axis titles and caption fragments. Plotting code never
+# hardcodes a method label; it reads short_label from the registry.
+
+labelling_scheme:
+  pattern: "<SOURCE> <POLICY>-<WEIGHTING>"
+  sources:
+    real: Real
+    mlp: MLP
+    knn: KNN
+  policies:
+    top1: T1
+    top3: T3
+    top5: T5
+    top10: T10
+    dynamic_predict: Dyn
+    dynamic_real: DynRK
+  weightings:
+    raw: R
+    softmax_t05: S
+  examples:
+    - {method: regressor_top5_raw, short_label: MLP T5-R}
+    - {method: knn_top_dynamic_predictK_softmax_t05, short_label: KNN Dyn-S}
+    - {method: regressor_top_dynamic_realK_raw, short_label: MLP DynRK-R}
+    - {method: real_top_dynamic_softmax_t05, short_label: Real Dyn-S}
+  note: >-
+    DynRK marks the ORACLE-ASSISTED Dynamic Real-K variants (metric count taken
+    from the real utility vector). Keeping them visually distinct from Dyn
+    (Predict-K) prevents an oracle-assisted diagnostic from being read as an
+    operational method.
+
+baseline_labels:
+  all_metrics_uniform: All Uniform
+  uniform_classic_cvi: Classic Uniform
+  silhouette_single: Silhouette
+  dbcv_single: DBCV
+  davies_bouldin_single: DB
+  calinski_harabasz_single: CH
+
+external_labels:
+  AutoClust_Original_InDomain_same_search_space: AC-Orig
+  AutoClust_Extended_InDomain_same_search_space: AC-Ext
+  ML2DAC_Original_InDomain_same_search_space: ML2DAC-Orig
+  ML2DAC_Extended_InDomain_same_search_space: ML2DAC-Ext
+  # Supplementary, not paper methods. A trailing '~' marks an unmatched search
+  # space; '-Paper' marks the original authors' code at an unmatched budget.
+  AutoClust_Original_InDomain: AC-Orig~
+  AutoClust_Extended_InDomain: AC-Ext~
+  ML2DAC_Original_InDomain: ML2DAC-Orig~
+  ML2DAC_Extended_InDomain: ML2DAC-Ext~
+  AutoClust_phase_B: AC-Paper
+  ML2DAC_phase_B: ML2DAC-Paper
+  AutoML4Clust_phase_B: AML4C
+
+# Portfolio labels. A label must never imply deployability the membership does
+# not have: the 12-variant MLP/KNN sets include Dynamic Real-K (metric count from
+# the real utility vector) and are therefore "All", not "Deploy".
+portfolio_labels:
+  knn_all_variants_vbs: KNN All VBS
+  knn_strict_deployable_vbs: KNN Strict VBS
+  mlp_all_variants_vbs: MLP All VBS
+  mlp_strict_deployable_vbs: MLP Strict VBS
+  real_utility_vbs: Real VBS
+  learned_source_all_variants_vbs: Learned All VBS
+  strict_deployable_clustopt_vbs: Strict VBS
+  all_variant_clustopt_vbs: All VBS
+  ml2dac_vbs: ML2DAC VBS
+  autoclust_vbs: AC VBS
+  raw_only_vbs: Raw VBS
+  softmax_only_vbs: Softmax VBS
+  raw_softmax_union_vbs: Union VBS
+  deployable_raw_vbs: Strict Raw
+  deployable_softmax_vbs: Strict Sm
+  deployable_raw_softmax_union_vbs: Strict Union
+  fixed_baseline_vbs: Baseline VBS
+
+# Deprecated portfolio ids, retained so older manifests resolve.
+deprecated_portfolio_ids:
+  mlp_vbs: mlp_all_variants_vbs
+  knn_vbs: knn_all_variants_vbs
+  deployable_source_clustopt_vbs: learned_source_all_variants_vbs
+
+axis_titles:
+  best_view_mean_ari: Mean Best-View ARI
+  best_view_median_ari: Median Best-View ARI
+  best_view_std_ari: Best-View ARI std. dev.
+  best_view_k_accuracy: K accuracy (share of datasets)
+  total_runtime_all_views_sec: Total runtime, all three views (s)
+  median_total_runtime_all_views_sec: Median total runtime, all three views (s)
+  mean_total_runtime_all_views_sec: Mean total runtime, all three views (s)
+  p90_total_runtime_all_views_sec: P90 total runtime, all three views (s)
+  median_selected_best_view_runtime_sec: Median selected-view runtime (s, diagnostic)
+  portfolio_total_execution_runtime_sec: Full portfolio execution runtime (s)
+  selected_member_total_all_views_runtime_sec: Selected member runtime (s, diagnostic)
+  view_gap: View gap (Best-View ARI - mean view ARI)
+  search_selection_gap: Search-selection gap (trace best - selected ARI)
+  weight_mass_share: Share of objective weight mass
+  selection_rate_per_run: Selection rate per run
+  vbs_best_view_mean_ari: VBS Mean Best-View ARI (oracle upper bound)
+  headroom_paired_mean: Paired VBS headroom (ARI)
+
+caption_fragments:
+  view_oracle: >-
+    Best-View selects the highest-ARI of the three representations using external
+    ARI (a view oracle); the matching cost is the runtime of all three views.
+  retrospective: >-
+    ClustOpt representatives were selected retrospectively on Split 1 from an
+    explicit candidate pool and are not independently preselected deployment
+    policies.
+  vbs: >-
+    The VBS selects the highest-ARI candidate separately for each dataset and is
+    therefore a non-deployable oracle upper bound.
+  utility_oracle: >-
+    real_* methods weight their objective using the REAL utility vector and are
+    utility oracles, not deployable methods.
+  dynamic_realk: >-
+    Dynamic Real-K variants rank metrics with the learned predictor but take the
+    metric count from the real utility vector; they are oracle-assisted
+    diagnostics.
+  candidate_asymmetry: >-
+    Each ClustOpt row is the best of several evaluated variants while each
+    external row is one predefined method; the search space and budget are
+    matched but the selection freedom is not.
+
+figure_conventions:
+  formats: [png, svg]
+  always_write_plotted_data_csv: true
+  colour_blind_safe_palette: okabe_ito
+  never_colour_alone: true
+  deterministic_ordering: true
+  importance_levels: [paper_main, paper_supplement, appendix, exploratory]

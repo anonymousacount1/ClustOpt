@@ -1,0 +1,113 @@
+{
+  "smoke": "stage4b5_fixed32_track",
+  "stage": "4B-5",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "banks": 3,
+  "candidate_slots": 96,
+  "primary_metrics_evaluated": 67,
+  "diagnostics_evaluated": 2,
+  "ground_truth_loads_before_offline_phase": 0,
+  "candidate_ari_rows": 95,
+  "utility_rows": 55,
+  "valid_slots_per_view": {
+    "x_only": 32,
+    "y_only": 32,
+    "xy_2d": 31
+  },
+  "external_50_used": false,
+  "n": 18,
+  "n_fail": 0,
+  "rows": [
+    {
+      "test": "registry_67_primary_2_diagnostics",
+      "status": "PASS",
+      "detail": "67 primary / 2 diagnostics"
+    },
+    {
+      "test": "registry_groups_7_10_46_4",
+      "status": "PASS",
+      "detail": "{\"Original\": 7, \"Established\": 10, \"New46\": 46, \"Modern\": 4}"
+    },
+    {
+      "test": "both_historically_dead_new46_retained",
+      "status": "PASS",
+      "detail": "['convexity_ratio_image_based', 'hough_arc_circle_strength']"
+    },
+    {
+      "test": "fixed32_banks_built_label_free",
+      "status": "PASS",
+      "detail": "3 banks, 0 ground-truth loads. "
+    },
+    {
+      "test": "three_banks_96_slots",
+      "status": "PASS",
+      "detail": "96 slots"
+    },
+    {
+      "test": "every_bank_has_32_slots",
+      "status": "PASS",
+      "detail": "{'x_only': 32, 'y_only': 32, 'xy_2d': 32}"
+    },
+    {
+      "test": "failed_slots_preserved_not_resampled",
+      "status": "PASS",
+      "detail": "{'x_only': 0, 'y_only': 0, 'xy_2d': 1}"
+    },
+    {
+      "test": "bank_carries_no_ari_or_cvi",
+      "status": "PASS",
+      "detail": "['bank_id', 'candidate_count', 'candidates', 'dataset_id', 'decision_hash', 'fixed32_config_hash']"
+    },
+    {
+      "test": "fixed32_composition_recorded_both_sides",
+      "status": "PASS",
+      "detail": "pre {\"agglomerative\": 4, \"birch\": 4, \"constrained\": 4, \"dbscan\": 4, \"gmm\": 6, \"hdbscan\": 2, \"kmeans\": 4, \"minibatch_kmeans\": 4} -> post {\"agglomerative\": 5, \"birch\": 5, \"dbscan\": 5, \"gmm\": 7, \"hdbscan\": 2, \"kmeans\": 4, \"minibatch_kmeans\": 4}"
+    },
+    {
+      "test": "all_metrics_scored_the_same_candidates",
+      "status": "PASS",
+      "detail": "{\"x_only\": true, \"y_only\": true, \"xy_2d\": true}"
+    },
+    {
+      "test": "all_67_primary_evaluated",
+      "status": "PASS",
+      "detail": "67 primary"
+    },
+    {
+      "test": "diagnostics_evaluated_separately",
+      "status": "PASS",
+      "detail": "2 diagnostics, flagged primary=False"
+    },
+    {
+      "test": "v2_routing_recorded_per_metric",
+      "status": "PASS",
+      "detail": "54 full-space, 15 decision-space"
+    },
+    {
+      "test": "metric_records_carry_no_ground_truth",
+      "status": "PASS",
+      "detail": "no ARI/y_true/true_k/utility in metric records"
+    },
+    {
+      "test": "offline_ari_computed_after_completion",
+      "status": "PASS",
+      "detail": "95 candidate ARIs over 3 views"
+    },
+    {
+      "test": "canonical_stage3b_utility_computed",
+      "status": "PASS",
+      "detail": "55 metric utilities over 31 valid candidates"
+    },
+    {
+      "test": "utility_implementation_is_the_frozen_one",
+      "status": "PASS",
+      "detail": "models/ClustOpt/external_evaluation/compute_metric_utility.py"
+    },
+    {
+      "test": "bestview_is_method_track_only",
+      "status": "PASS",
+      "detail": "utility stays per dataset x view x metric"
+    }
+  ],
+  "status": "PASS"
+}

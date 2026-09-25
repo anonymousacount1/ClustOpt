@@ -1,0 +1,72 @@
+{
+  "utility_table": "results_analysis/clustering_repository/stage2/oof_utility_splits2_16/combined/oof_mlp_utilities.csv.gz",
+  "population": "Splits 2-16 (Split 1 absent)",
+  "n_datasets": 16013,
+  "n_view_records": 48039,
+  "n_metrics_utility_space": 60,
+  "n_live_metrics": 61,
+  "live_without_clustopt_utility": [
+    "coggins_jain_index",
+    "cop",
+    "dunn_index"
+  ],
+  "aggregation": {
+    "utility": "mean over the dataset's valid views",
+    "predicted_utility": "mean over the dataset's valid views",
+    "selection": "fraction of the dataset's views in which the metric is in the Top-5 by predicted utility"
+  },
+  "selection_semantics": {
+    "mechanism": "Full60 MLP Top-5, normalised-positive (RAW) weighting",
+    "frozen_arm": "stage1_full60_mlp_top5_raw_fixed50",
+    "K": 5,
+    "prediction_artifact": "results_analysis/clustering_repository/stage2/oof_utility_splits2_16/combined/oof_mlp_utilities.csv.gz",
+    "utility_artifact": "results_analysis/clustering_repository/stage2/oof_utility_splits2_16/combined/oof_mlp_utilities.csv.gz",
+    "rule": "argsort of stored predicted utility; no model executed",
+    "verified_against": "stage1_2x3_aggregation/online_fixed50/online_2x3_dataset_results.csv (resolver_top_k=5, arm FP)"
+  },
+  "inferential_unit": "dataset",
+  "view_level_use": "descriptive only (view-specificity section)",
+  "stage": "3C",
+  "created_at": "2026-09-09T14:00:03",
+  "source_commit": "67ea3f2a5a82e8283332bf07fbc147b1086e57fb",
+  "analysis_only": true,
+  "clustering_runs": 0,
+  "models_trained": 0,
+  "mkr_rebuilds": 0,
+  "external_datasets": 0,
+  "metric_inventory_modified": false,
+  "stage3b_outputs_overwritten": false,
+  "downstream": {
+    "source": "results_analysis\\clustering_repository\\stage1_2x3_aggregation\\online_fixed50\\online_2x3_dataset_results.csv",
+    "regime": "online fixed-50 (deployed regime)",
+    "arms": {
+      "high": "FP = stage1_full60_mlp_top5_raw_fixed50",
+      "low": "HP = stage1_head14_mlp_top5_raw_fixed50"
+    },
+    "why_online": "both arms deployable, complete per-dataset outputs, and it is the regime the deployed system actually runs; the offline fixed-32 table is NOT mixed in",
+    "population": "Split 1, 1,055 datasets",
+    "paired": true,
+    "n_paired": 1055,
+    "overall_mean_delta": 0.026634112325806533,
+    "stage1_rerun": false
+  },
+  "bootstrap": {
+    "family_B": 1000,
+    "subfamily_B": 500,
+    "seed": 20260910
+  },
+  "permutation": {
+    "family": 2000,
+    "subfamily": 1000,
+    "seed": 20260910,
+    "family_scheme": "shuffle family labels across datasets, sizes preserved",
+    "subfamily_scheme": "shuffle subfamily labels WITHIN each parent family only"
+  },
+  "min_n_subfamily_inference": 8,
+  "population_note": "specialisation is measured on Splits 2-16 (OOF utility population); the Full60-vs-Head14 downstream gain is measured on Split 1. The two signals are therefore independent by construction, and their association is a family/subfamily-level statement, never per-dataset.",
+  "evidence_levels": {
+    "1_causal_bundle": "Full60 vs Head14; AutoClust/ML2DAC A-arm contrasts",
+    "2_association": "everything computed in Stage 3C",
+    "3_single_metric_causal": "NOT AVAILABLE"
+  }
+}

@@ -1,0 +1,477 @@
+{
+  "audit": "ml2dac_reachable_algorithms",
+  "stage": "4B-3B2",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "repeats_per_algorithm": 3,
+  "reachability": {
+    "warmstart_repository_algorithms": [
+      "agglomerative",
+      "birch",
+      "dbscan",
+      "gmm",
+      "hdbscan",
+      "kmeans",
+      "minibatch_kmeans"
+    ],
+    "clustopt_space_algorithms": {
+      "x_only": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "hdbscan_constrained-2",
+        "hdbscan_constrained-3",
+        "hdbscan_constrained-4",
+        "hdbscan_constrained-5",
+        "kmeans",
+        "minibatch_kmeans",
+        "optics"
+      ],
+      "y_only": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "hdbscan_constrained-2",
+        "hdbscan_constrained-3",
+        "hdbscan_constrained-4",
+        "hdbscan_constrained-5",
+        "kmeans",
+        "minibatch_kmeans",
+        "optics"
+      ],
+      "xy_2d": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "hdbscan_constrained-2",
+        "hdbscan_constrained-3",
+        "hdbscan_constrained-4",
+        "hdbscan_constrained-5",
+        "kmeans",
+        "minibatch_kmeans",
+        "optics",
+        "spectral"
+      ]
+    },
+    "reachable_per_view": {
+      "x_only": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "y_only": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ],
+      "xy_2d": [
+        "agglomerative",
+        "birch",
+        "dbscan",
+        "gmm",
+        "hdbscan",
+        "kmeans",
+        "minibatch_kmeans"
+      ]
+    },
+    "reachable": [
+      "agglomerative",
+      "birch",
+      "dbscan",
+      "gmm",
+      "hdbscan",
+      "kmeans",
+      "minibatch_kmeans"
+    ],
+    "in_space_but_unreachable": [
+      "hdbscan_constrained-2",
+      "hdbscan_constrained-3",
+      "hdbscan_constrained-4",
+      "hdbscan_constrained-5",
+      "optics",
+      "spectral"
+    ]
+  },
+  "reachability_rule": "ML2DAC samples only over ws_algorithms, which is the frozen warmstart repository's algorithm set projected onto the ClustOpt phaseE2 space via snap_to_space. An algorithm present in the space but absent from the repository can never be generated.",
+  "determinism": {
+    "x_only": {
+      "view": "x_only",
+      "rows": [
+        {
+          "algorithm": "agglomerative",
+          "view": "x_only",
+          "configuration": {
+            "n_clusters": 5,
+            "linkage": "average"
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "c25e4c5c6c1f4060",
+          "canonical_partition_hash": "bf44790b073c91a0"
+        },
+        {
+          "algorithm": "birch",
+          "view": "x_only",
+          "configuration": {
+            "n_clusters": 5,
+            "threshold": 0.2,
+            "branching_factor": 50
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "33e724c10e026593",
+          "canonical_partition_hash": "ed3419d0cc22bdaa"
+        },
+        {
+          "algorithm": "dbscan",
+          "view": "x_only",
+          "configuration": {
+            "eps": 0.2,
+            "min_samples": 5
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "6fba10cc8888af4d",
+          "canonical_partition_hash": "6fba10cc8888af4d"
+        },
+        {
+          "algorithm": "gmm",
+          "view": "x_only",
+          "configuration": {
+            "n_components": 5,
+            "covariance_type": "diag",
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "2b81d280355b8e39",
+          "canonical_partition_hash": "1e4894e986017b40"
+        },
+        {
+          "algorithm": "hdbscan",
+          "view": "x_only",
+          "configuration": {
+            "min_cluster_size": 100,
+            "min_samples": 5
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "invalid",
+          "raw_labels_hash": "38fb6b0bbebd27d4",
+          "canonical_partition_hash": "38fb6b0bbebd27d4"
+        },
+        {
+          "algorithm": "kmeans",
+          "view": "x_only",
+          "configuration": {
+            "n_clusters": 5,
+            "init": "k-means++",
+            "n_init": 10,
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "851bef89fac52d5f",
+          "canonical_partition_hash": "44439ad6fdc8559a"
+        },
+        {
+          "algorithm": "minibatch_kmeans",
+          "view": "x_only",
+          "configuration": {
+            "n_clusters": 5,
+            "init": "k-means++",
+            "batch_size": 256,
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "b44b8ca07c690fdc",
+          "canonical_partition_hash": "e45a02748902fc81"
+        }
+      ],
+      "status_mismatches": 0,
+      "raw_label_mismatches": 0,
+      "partition_mismatches": 0,
+      "no_config": []
+    },
+    "y_only": {
+      "view": "y_only",
+      "rows": [
+        {
+          "algorithm": "agglomerative",
+          "view": "y_only",
+          "configuration": {
+            "n_clusters": 5,
+            "linkage": "average"
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "0207176522bb2fd6",
+          "canonical_partition_hash": "59c78d95ec235929"
+        },
+        {
+          "algorithm": "birch",
+          "view": "y_only",
+          "configuration": {
+            "n_clusters": 5,
+            "threshold": 0.35,
+            "branching_factor": 50
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "f48320eb06255404",
+          "canonical_partition_hash": "f48320eb06255404"
+        },
+        {
+          "algorithm": "dbscan",
+          "view": "y_only",
+          "configuration": {
+            "eps": 0.5,
+            "min_samples": 5
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "4f612271ba5cdff6",
+          "canonical_partition_hash": "4f612271ba5cdff6"
+        },
+        {
+          "algorithm": "gmm",
+          "view": "y_only",
+          "configuration": {
+            "n_components": 5,
+            "covariance_type": "diag",
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "371d597e260f054f",
+          "canonical_partition_hash": "b7981007181f78da"
+        },
+        {
+          "algorithm": "hdbscan",
+          "view": "y_only",
+          "configuration": {
+            "min_cluster_size": 120,
+            "min_samples": 5
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "invalid",
+          "raw_labels_hash": "38fb6b0bbebd27d4",
+          "canonical_partition_hash": "38fb6b0bbebd27d4"
+        },
+        {
+          "algorithm": "kmeans",
+          "view": "y_only",
+          "configuration": {
+            "n_clusters": 5,
+            "init": "k-means++",
+            "n_init": 10,
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "6ba3341aa5492cd9",
+          "canonical_partition_hash": "6e0c5d3074828078"
+        },
+        {
+          "algorithm": "minibatch_kmeans",
+          "view": "y_only",
+          "configuration": {
+            "n_clusters": 5,
+            "init": "k-means++",
+            "batch_size": 256,
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "53ecfbd547923866",
+          "canonical_partition_hash": "0978bcb3e4f84e81"
+        }
+      ],
+      "status_mismatches": 0,
+      "raw_label_mismatches": 0,
+      "partition_mismatches": 0,
+      "no_config": []
+    },
+    "xy_2d": {
+      "view": "xy_2d",
+      "rows": [
+        {
+          "algorithm": "agglomerative",
+          "view": "xy_2d",
+          "configuration": {
+            "n_clusters": 5,
+            "linkage": "complete"
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "8c892c587f0e1d34",
+          "canonical_partition_hash": "c3d789294c0d3064"
+        },
+        {
+          "algorithm": "birch",
+          "view": "xy_2d",
+          "configuration": {
+            "n_clusters": 5,
+            "threshold": 0.5,
+            "branching_factor": 100
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "ad327bd6ae2416b5",
+          "canonical_partition_hash": "853801054cc69a13"
+        },
+        {
+          "algorithm": "dbscan",
+          "view": "xy_2d",
+          "configuration": {
+            "eps": 0.8,
+            "min_samples": 10
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "7b0d3c10c58a02be",
+          "canonical_partition_hash": "7b0d3c10c58a02be"
+        },
+        {
+          "algorithm": "gmm",
+          "view": "xy_2d",
+          "configuration": {
+            "n_components": 5,
+            "covariance_type": "diag",
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "43af50be8191ee14",
+          "canonical_partition_hash": "ee77abe586256fae"
+        },
+        {
+          "algorithm": "hdbscan",
+          "view": "xy_2d",
+          "configuration": {
+            "min_cluster_size": 100,
+            "min_samples": 10
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "invalid",
+          "raw_labels_hash": "38fb6b0bbebd27d4",
+          "canonical_partition_hash": "38fb6b0bbebd27d4"
+        },
+        {
+          "algorithm": "kmeans",
+          "view": "xy_2d",
+          "configuration": {
+            "n_clusters": 5,
+            "init": "k-means++",
+            "n_init": 10,
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "0448d5cf49599133",
+          "canonical_partition_hash": "f7c0e9271b2603ad"
+        },
+        {
+          "algorithm": "minibatch_kmeans",
+          "view": "xy_2d",
+          "configuration": {
+            "n_clusters": 5,
+            "init": "k-means++",
+            "batch_size": 256,
+            "random_state": 42
+          },
+          "repeats": 3,
+          "status_mismatches": 0,
+          "raw_label_mismatches": 0,
+          "partition_mismatches": 0,
+          "status": "valid",
+          "raw_labels_hash": "a2aa8bdabc31e42c",
+          "canonical_partition_hash": "409106025e2252a6"
+        }
+      ],
+      "status_mismatches": 0,
+      "raw_label_mismatches": 0,
+      "partition_mismatches": 0,
+      "no_config": []
+    }
+  },
+  "total_mismatches": 0,
+  "raw_labels_compared": true,
+  "relabelling_tolerated": false,
+  "external_50_used": false,
+  "labels_used": false,
+  "verdict": "PASS"
+}

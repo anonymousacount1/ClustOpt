@@ -1,0 +1,95 @@
+{
+  "audit": "AUTOCLUST ADAPTER SOURCE AUDIT (partial, Stage 4B-3)",
+  "status": "IN PROGRESS",
+  "landmarking": {
+    "authoritative_extractor": "experiments/external_baselines/Unified_MKR/unified_mkr/metafeatures.py::extract_autoclust",
+    "label_free": true,
+    "signature": "extract_autoclust(X, *, repo_root, prefix=\"autoclust_\", max_samples=1500, seed=1234)",
+    "landmark_partition": "sklearn MeanShift().fit_predict on the (optionally subsampled) view; no K, default params",
+    "subsample": "<=1500 rows, seed 1234",
+    "cvis": "ML2DAC CVICollection.internal_cvis, scored via metric.score_cvi(Xs, labels)",
+    "invalid_handling": "single-cluster or non-finite -> 0.0",
+    "reuse_decision": "REUSE -- no reimplementation needed; the extractor already takes X only",
+    "brief_name_correction": "the brief lists autoclust_calinski_harabasz etc; the artifacts actually use abbreviations",
+    "actual_feature_order": [
+      "autoclust_CH",
+      "autoclust_DBI",
+      "autoclust_SIL",
+      "autoclust_DBCV",
+      "autoclust_DI",
+      "autoclust_CJI",
+      "autoclust_COP"
+    ]
+  },
+  "arms": {
+    "A0": {
+      "variant_dir": "experiments/external_baselines/Unified_MKR/derived/autoclust_split1/original_cvis",
+      "selector_sha256_16": "5efade154b6f76d8",
+      "ari_predictor_sha256_16": "c1f4e857e0a7a7ad",
+      "feature_columns_sha256_16": "e07ad6605ff15652",
+      "n_landmark_features": 7,
+      "n_cvi_predictor_features": 7
+    },
+    "A1": {
+      "variant_dir": "experiments/external_baselines/Unified_MKR/derived/autoclust_split1/original_plus_established",
+      "selector_sha256_16": "b4a0d76bc9b97218",
+      "ari_predictor_sha256_16": "6c0975fb360c3481",
+      "feature_columns_sha256_16": "6a3d5f0b2ad4f96d",
+      "n_landmark_features": 7,
+      "n_cvi_predictor_features": 17
+    },
+    "A2": {
+      "variant_dir": "experiments/external_baselines/Unified_MKR/derived/autoclust_split1/original_plus_new46",
+      "selector_sha256_16": "b4a0d76bc9b97218",
+      "ari_predictor_sha256_16": "751aaec7d687ccb4",
+      "feature_columns_sha256_16": "448d0502f7862831",
+      "n_landmark_features": 7,
+      "n_cvi_predictor_features": 51
+    },
+    "A3": {
+      "variant_dir": "experiments/external_baselines/Unified_MKR/derived/autoclust_split1/extended_cvis",
+      "selector_sha256_16": "5efade154b6f76d8",
+      "ari_predictor_sha256_16": "252e4fca8d7399b9",
+      "feature_columns_sha256_16": "ac32fe0d95bfae06",
+      "n_landmark_features": 7,
+      "n_cvi_predictor_features": 61
+    }
+  },
+  "selector_equivalence": {
+    "distinct_artifact_hashes": 2,
+    "A0_hash": "5efade154b6f76d8",
+    "A1_A2_A3_hash": "b4a0d76bc9b97218",
+    "feature_order_identical": true,
+    "rows_tested": 400,
+    "agreement_with_A0": {
+      "A0": 400,
+      "A1": 400,
+      "A2": 400,
+      "A3": 400
+    },
+    "behaviourally_identical": true,
+    "verdict": "NOT a STOP condition: A0 serialises to different bytes than A1/A2/A3 but all four predict identically on every tested row, so the difference is serialisation, not science"
+  },
+  "cvi_feature_counts": {
+    "A0": 7,
+    "A1": 17,
+    "A2": 51,
+    "A3": 61
+  },
+  "cvi_feature_counts_match_expected": {
+    "A0": 7,
+    "A1": 17,
+    "A2": 51,
+    "A3": 61
+  },
+  "not_yet_done": [
+    "landmarking regression against stored master meta-features",
+    "candidate-by-candidate trace-sharing proof",
+    "ARI predictor regression",
+    "adapter implementation",
+    "ML2DAC audit and adapters",
+    "test suite",
+    "verifier",
+    "report"
+  ]
+}

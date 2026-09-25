@@ -1,0 +1,1386 @@
+[
+  {
+    "metric_id": "alpha_shape_compactness",
+    "subgroup": "Pattern",
+    "class": "AlphaShapeCompactnessMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.alpha_shape_compactness",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/alpha_shape_compactness.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "alpha": null,
+      "alpha_scale": 1.5,
+      "min_cluster_points": 10,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_auto_alpha",
+      "_circumradius",
+      "_alpha_shape_polygon",
+      "_isoperimetric_quotient",
+      "_cluster_score_legacy",
+      "_cluster_score_with_ctx",
+      "_evaluate_core",
+      "evaluate",
+      "evaluate_ctx",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf",
+      "inf"
+    ],
+    "third_party": [
+      "scipy.spatial"
+    ],
+    "n_source_lines": 204
+  },
+  {
+    "metric_id": "arc_circle_fit",
+    "subgroup": "Pattern",
+    "class": "ArcCircleFitMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.arc_circle_fit",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/arc_circle_fit.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "radial_clip": 2.0,
+      "min_cluster_points": 5,
+      "use_ellipse": true,
+      "ellipse_fallback": 1.0,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 167
+  },
+  {
+    "metric_id": "axial_symmetry",
+    "subgroup": "Pattern",
+    "class": "AxialSymmetryMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.axial_symmetry",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/axial_symmetry.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 40,
+      "n_bins": 16,
+      "min_bin_points": 8,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 99
+  },
+  {
+    "metric_id": "bimodality_anti_thickness",
+    "subgroup": "Pattern",
+    "class": "BimodalityAntiThicknessMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.bimodality_anti_thickness",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/bimodality_anti_thickness.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 20,
+      "bins": 80,
+      "adaptive_bins": true,
+      "min_bins_occupied": 10,
+      "smooth_kernel": "(1, 2, 3, 2, 1)",
+      "min_peak_rel_height": 0.15,
+      "min_peak_distance_bins": 6,
+      "sep_r0": 1.0,
+      "w_valley": 0.55,
+      "w_sep": 0.45,
+      "w_elon": 0.3,
+      "elong_r0": 2.0,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_choose_bins",
+      "_smooth",
+      "_fit_perp_distances",
+      "_find_two_peaks",
+      "_bimodality_score_from_d",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 256
+  },
+  {
+    "metric_id": "blobness_log_dog",
+    "subgroup": "Image",
+    "class": "BlobnessLogDogMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.blobness_log_dog",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/blobness_log_dog.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 80,
+      "grid_size": 256,
+      "raster_mode": "density",
+      "blur_ksize": 0,
+      "dilate_iters": 0,
+      "sigmas": "(1.2, 2.0, 3.2)",
+      "dog_ratio": 1.6,
+      "top_q": 0.03,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 145
+  },
+  {
+    "metric_id": "circularity_compactness",
+    "subgroup": "Image",
+    "class": "CircularityCompactnessMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.circularity_compactness",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/circularity_compactness.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 60,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "eps": 1e-09
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 79
+  },
+  {
+    "metric_id": "connected_components_count",
+    "subgroup": "Image",
+    "class": "ConnectedComponentsCountMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.connected_components_count",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/connected_components_count.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 120,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 2,
+      "a_comp": 0.85,
+      "min_foreground": 60
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 87
+  },
+  {
+    "metric_id": "connectivity_components",
+    "subgroup": "Pattern",
+    "class": "ConnectivityComponentsMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.connectivity_components",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/connectivity_components.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 25,
+      "knn_k": 8,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_count_components_knn",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [
+      "sklearn.neighbors"
+    ],
+    "n_source_lines": 91
+  },
+  {
+    "metric_id": "contour_graph_connectivity",
+    "subgroup": "Image",
+    "class": "ContourGraphConnectivityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.contour_graph_connectivity",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/contour_graph_connectivity.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 80,
+      "grid_size": 256,
+      "raster_mode": "density",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "canny_low": 50,
+      "canny_high": 150,
+      "a_comp": 0.05,
+      "min_edges": 40
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 106
+  },
+  {
+    "metric_id": "convexity_ratio",
+    "subgroup": "Pattern",
+    "class": "ConvexityRatioMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.convexity_ratio",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/convexity_ratio.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "alpha": null,
+      "alpha_scale": 1.5,
+      "min_cluster_points": 10,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_auto_alpha",
+      "_circumradius",
+      "_alpha_shape_area_legacy",
+      "_convex_hull_area_legacy",
+      "_cluster_score_legacy",
+      "_cluster_score_with_ctx",
+      "_evaluate_core",
+      "evaluate",
+      "evaluate_ctx",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf",
+      "inf"
+    ],
+    "third_party": [
+      "scipy.spatial"
+    ],
+    "n_source_lines": 192
+  },
+  {
+    "metric_id": "convexity_ratio_image_based",
+    "subgroup": "Image",
+    "class": "ConvexitySolidityImageMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.convexity_ratio_image_based",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/convexity_ratio_image_based.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 60,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "eps": 1e-09
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 82
+  },
+  {
+    "metric_id": "corner_junction_density",
+    "subgroup": "Image",
+    "class": "CornerJunctionDensityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.corner_junction_density",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/corner_junction_density.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 80,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "canny_low": 50,
+      "canny_high": 150,
+      "max_corners": 120,
+      "quality_level": 0.01,
+      "min_distance": 6,
+      "block_size": 3,
+      "use_harris": false,
+      "sat_c": 10.0,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 123
+  },
+  {
+    "metric_id": "corner_sharpness",
+    "subgroup": "Pattern",
+    "class": "CornerSharpnessMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.corner_sharpness",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/corner_sharpness.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 30,
+      "angle_threshold_deg": 130.0,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [
+      "scipy.spatial"
+    ],
+    "n_source_lines": 96
+  },
+  {
+    "metric_id": "curvature_consistency",
+    "subgroup": "Pattern",
+    "class": "CurvatureConsistencyMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.curvature_consistency",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/curvature_consistency.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 18,
+      "min_triplets": 8,
+      "eps": 1e-12,
+      "w_sign": 0.6,
+      "w_var": 0.4,
+      "var_scale": 1.0,
+      "w_elon": 0.3,
+      "elong_r0": 2.0
+    },
+    "methods": [
+      "_to_2d",
+      "_elongation_score",
+      "_signed_curvature_samples",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 180
+  },
+  {
+    "metric_id": "direction_entropy",
+    "subgroup": "Pattern",
+    "class": "DirectionEntropyMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.direction_entropy",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/direction_entropy.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "bins": 24,
+      "min_cluster_points": 18,
+      "min_steps": 12,
+      "step_eps": 1e-08,
+      "eps": 1e-12,
+      "w_elon": 0.25,
+      "elong_r0": 2.0
+    },
+    "methods": [
+      "_to_2d",
+      "_elongation_score",
+      "_entropy_norm",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [
+      "sklearn.neighbors"
+    ],
+    "n_source_lines": 165
+  },
+  {
+    "metric_id": "eccentricity_ratio",
+    "subgroup": "Pattern",
+    "class": "EccentricityRatioMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.eccentricity_ratio",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/eccentricity_ratio.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 12,
+      "r0": 2.0,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 57
+  },
+  {
+    "metric_id": "edge_coherence",
+    "subgroup": "Image",
+    "class": "EdgeCoherenceStructureTensorMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.edge_coherence",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/edge_coherence.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 50,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "smooth_sigma": 1.2,
+      "mag_thr_quantile": 0.6,
+      "eps": 1e-09
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 104
+  },
+  {
+    "metric_id": "ellipse_fit_score",
+    "subgroup": "Image",
+    "class": "EllipseFitScoreMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.ellipse_fit_score",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/ellipse_fit_score.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 80,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "canny_low": 60,
+      "canny_high": 160,
+      "support_tol": 2,
+      "support_samples": 240
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 127
+  },
+  {
+    "metric_id": "euler_holes_count",
+    "subgroup": "Image",
+    "class": "EulerHolesCountMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.euler_holes_count",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/euler_holes_count.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 150,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 2,
+      "close_iters": 1
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 99
+  },
+  {
+    "metric_id": "fractal_dimension",
+    "subgroup": "Image",
+    "class": "FractalDimensionMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.fractal_dimension",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/fractal_dimension.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 120,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 2,
+      "canny_low": 50,
+      "canny_high": 150
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 109
+  },
+  {
+    "metric_id": "glcm_haralick",
+    "subgroup": "Image",
+    "class": "GLCMHaralickMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.glcm_haralick",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/glcm_haralick.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 120,
+      "grid_size": 256,
+      "raster_mode": "density",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "levels": 16,
+      "offsets": null
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 118
+  },
+  {
+    "metric_id": "gridness_2d",
+    "subgroup": "Pattern",
+    "class": "Gridness2DMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.gridness_2d",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/gridness_2d.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "grid_size": 32,
+      "min_cluster_points": 40,
+      "min_occupied_rows": 3,
+      "min_occupied_cols": 3,
+      "rowcol_presence_thresh": 2,
+      "eps": 1e-12,
+      "w_elon": 0.0,
+      "elong_r0": 2.0
+    },
+    "methods": [
+      "_to_2d",
+      "_minmax01",
+      "_occupancy_grid",
+      "_peaky_strength",
+      "_fft_periodicity",
+      "_elongation_score",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 198
+  },
+  {
+    "metric_id": "gridness_fft_acf",
+    "subgroup": "Image",
+    "class": "GridnessFFTACFMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.gridness_fft_acf",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/gridness_fft_acf.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 150,
+      "grid_size": 256,
+      "raster_mode": "density",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "peak_k": 10,
+      "suppress": 10,
+      "min_peak_val": 0.12,
+      "orth_tol_deg": 25.0
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 160
+  },
+  {
+    "metric_id": "hollow_score",
+    "subgroup": "Pattern",
+    "class": "HollowScoreMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.hollow_score",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/hollow_score.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 40,
+      "n_radial_bins": 20,
+      "inner_frac": 0.25,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 88
+  },
+  {
+    "metric_id": "hough_arc_circle_strength",
+    "subgroup": "Image",
+    "class": "HoughCircleArcStrengthMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.hough_arc_circle_strength",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/hough_arc_circle_strength.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 60,
+      "grid_size": 256,
+      "raster_mode": "density",
+      "blur_ksize": 5,
+      "dilate_iters": 2,
+      "canny_low": null,
+      "canny_high": null,
+      "dp": 1.2,
+      "minDist_frac": 0.3,
+      "param1": 140.0,
+      "param2": 22.0,
+      "minRadius_frac": 0.08,
+      "maxRadius_frac": 0.55,
+      "support_tol": 2.0,
+      "support_samples": 240,
+      "min_point_inlier": 0.12,
+      "min_angle_coverage": 0.08,
+      "min_edge_recall": 0.01,
+      "angle_bins": 36
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 330
+  },
+  {
+    "metric_id": "hough_line_strength",
+    "subgroup": "Image",
+    "class": "HoughLineStrengthMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.hough_line_strength",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/hough_line_strength.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 30,
+      "raster": "RasterParams(grid_size=256, mode='binary', blur_ksize=3, dilate_iters=1)",
+      "canny_low": 50,
+      "canny_high": 150,
+      "rho": 1.0,
+      "theta": 0.017453292519943295,
+      "threshold": 50,
+      "min_line_length": 30,
+      "max_line_gap": 5,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [],
+    "third_party": [],
+    "n_source_lines": 81
+  },
+  {
+    "metric_id": "ladderness",
+    "subgroup": "Pattern",
+    "class": "LaddernessMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.ladderness",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/ladderness.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "bins": 64,
+      "min_rel_height": 0.05,
+      "peak_distance_bins": 2,
+      "tau_peaks": 3.0,
+      "elong_r0": 2.0,
+      "fallback_weight": 0.25,
+      "min_cluster_points": 8,
+      "eps": 1e-12,
+      "adaptive_bins": true
+    },
+    "methods": [
+      "_pca_rotate_2d",
+      "_smooth_hist",
+      "_choose_bins",
+      "_band_strength",
+      "_elongation_score",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [
+      "scipy.signal"
+    ],
+    "n_source_lines": 153
+  },
+  {
+    "metric_id": "lbp_stationarity",
+    "subgroup": "Image",
+    "class": "LBPStationarityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.lbp_stationarity",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/lbp_stationarity.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 150,
+      "grid_size": 256,
+      "raster_mode": "density",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "tiles": 4,
+      "min_foreground_frac": 0.02
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 116
+  },
+  {
+    "metric_id": "line_straightness",
+    "subgroup": "Pattern",
+    "class": "LineStraightnessMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.line_straightness",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/line_straightness.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 3,
+      "eps": 1e-08,
+      "w_energy": 0.5,
+      "w_thickness": 0.5
+    },
+    "methods": [
+      "_to_2d",
+      "_fitline_geometry",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 138
+  },
+  {
+    "metric_id": "morphological_band_count",
+    "subgroup": "Image",
+    "class": "MorphologicalBandCountMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.morphological_band_count",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/morphological_band_count.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 80,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 2,
+      "line_kernel_frac": 0.12,
+      "profile_smooth_k": 11,
+      "peak_min_dist": 10,
+      "peak_min_prom": 0.06
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 188
+  },
+  {
+    "metric_id": "mst_smoothness",
+    "subgroup": "Pattern",
+    "class": "MSTSmoothnessMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.mst_smoothness",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/mst_smoothness.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 20,
+      "knn_k": 10,
+      "w_angle": 0.75,
+      "branch_scale": 1.0,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_build_knn_graph",
+      "_mst_edges",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [
+      "scipy.sparse",
+      "scipy.sparse.csgraph",
+      "sklearn.neighbors"
+    ],
+    "n_source_lines": 190
+  },
+  {
+    "metric_id": "orientation_histogram_entropy",
+    "subgroup": "Image",
+    "class": "OrientationHistogramEntropyMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.orientation_histogram_entropy",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/orientation_histogram_entropy.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 40,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "n_bins": 18,
+      "mag_thr_quantile": 0.6,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 101
+  },
+  {
+    "metric_id": "parabolicity",
+    "subgroup": "Pattern",
+    "class": "ParabolicityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.parabolicity",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/parabolicity.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "a_scale": 0.1,
+      "a_clip": 5.0,
+      "r2_min": 0.2,
+      "min_cluster_points": 5,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_fit_quad_r2",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 146
+  },
+  {
+    "metric_id": "parallel_bands",
+    "subgroup": "Pattern",
+    "class": "ParallelBandsMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.parallel_bands",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/parallel_bands.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "straightness_floor": 0.6,
+      "w_angle": 0.5,
+      "w_spacing": 0.5,
+      "min_cluster_points": 8,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_fit_line_stats",
+      "_line_orientation_score",
+      "_global_normal_from_u",
+      "_regular_spacing_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 194
+  },
+  {
+    "metric_id": "peak_to_background_hough",
+    "subgroup": "Image",
+    "class": "PeakToBackgroundHoughMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.peak_to_background_line_ratio",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/peak_to_background_line_ratio.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 30,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "canny_low": 50,
+      "canny_high": 150,
+      "hough_thresh": 40,
+      "min_line_len_frac": 0.12,
+      "max_line_gap_frac": 0.03,
+      "eps": 1e-09
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 112
+  },
+  {
+    "metric_id": "periodicity_1d",
+    "subgroup": "Pattern",
+    "class": "Periodicity1DMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.periodicity_1d",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/periodicity_1d.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "bins": 128,
+      "adaptive_bins": true,
+      "min_bins_occupied": 8,
+      "ignore_low_freq_frac": 0.02,
+      "w_elon": 0.3,
+      "elong_r0": 2.0,
+      "min_cluster_points": 8,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_choose_bins",
+      "_pca_rotate_2d",
+      "_elongation_score",
+      "_periodicity_hist_score",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [
+      "scipy.fft"
+    ],
+    "n_source_lines": 161
+  },
+  {
+    "metric_id": "piecewise_linearity",
+    "subgroup": "Pattern",
+    "class": "PiecewiseLinearityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.piecewise_linearity",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/piecewise_linearity.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "max_segments": 3,
+      "min_cluster_points": 12,
+      "min_seg_points": 6,
+      "max_candidates": 60,
+      "imp_scale": 0.2,
+      "min_seg_r2": 0.2,
+      "w_elon": 0.35,
+      "elong_r0": 2.0,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_elongation_score",
+      "_prefix_sums",
+      "_seg_stats",
+      "_candidate_splits",
+      "_best_two_segments",
+      "_best_three_segments_greedy",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf",
+      "inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 294
+  },
+  {
+    "metric_id": "polygonality",
+    "subgroup": "Image",
+    "class": "PolygonalityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.polygonality",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/polygonality.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 120,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "approx_eps_frac": 0.02,
+      "max_vertices": 12,
+      "eps": 1e-09
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 116
+  },
+  {
+    "metric_id": "radial_uniformity",
+    "subgroup": "Pattern",
+    "class": "RadialUniformityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.radial_uniformity",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/radial_uniformity.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 50,
+      "n_bins": 20,
+      "inner_frac": 0.2,
+      "eps": 1e-12
+    },
+    "methods": [
+      "_to_2d",
+      "_entropy_norm",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 85
+  },
+  {
+    "metric_id": "rectangularity",
+    "subgroup": "Image",
+    "class": "RectangularityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.rectangularity",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/rectangularity.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 80,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "eps": 1e-09
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 83
+  },
+  {
+    "metric_id": "ribbon_thickness",
+    "subgroup": "Pattern",
+    "class": "RibbonThicknessMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.ribbon_thickness",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/ribbon_thickness.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 30,
+      "n_bins": 20,
+      "min_bin_points": 8,
+      "q_low": 10.0,
+      "q_high": 90.0,
+      "eps": 1e-12,
+      "w_thin": 0.5,
+      "w_cons": 0.5,
+      "elong_r0": 2.0
+    },
+    "methods": [
+      "_to_2d_and_basis",
+      "_elongation_score",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 181
+  },
+  {
+    "metric_id": "ridge_strength",
+    "subgroup": "Image",
+    "class": "RidgeStrengthMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.ridge_strength",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/ridge_strength.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 80,
+      "grid_size": 256,
+      "raster_mode": "density",
+      "blur_ksize": 3,
+      "dilate_iters": 1,
+      "sigmas": null,
+      "top_quantile": 0.95,
+      "beta": 0.5,
+      "c": 15.0
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 145
+  },
+  {
+    "metric_id": "skeleton_connectivity",
+    "subgroup": "Image",
+    "class": "SkeletonConnectivityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.skeleton_connectivity",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/skeleton_connectivity.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 80,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 2,
+      "thinning_max_iter": 80,
+      "a_comp": 0.4,
+      "b_end": 0.005,
+      "c_junc": 0.01,
+      "close_ksize": 3,
+      "close_iter": 1
+    },
+    "methods": [
+      "_score_from_skeleton",
+      "_cluster_score",
+      "_cluster_score_ctx",
+      "evaluate_ctx",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [
+      "scipy.ndimage"
+    ],
+    "n_source_lines": 187
+  },
+  {
+    "metric_id": "symmetry_score",
+    "subgroup": "Image",
+    "class": "SymmetryScoreMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.symmetry_score",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/symmetry_score.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 120,
+      "grid_size": 256,
+      "raster_mode": "density",
+      "blur_ksize": 3,
+      "dilate_iters": 1
+    },
+    "methods": [
+      "_cluster_score",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 65
+  },
+  {
+    "metric_id": "thickness_uniformity",
+    "subgroup": "Image",
+    "class": "ThicknessUniformityMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.thickness_uniformity",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/image_base/thickness_uniformity.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 120,
+      "grid_size": 256,
+      "raster_mode": "binary",
+      "blur_ksize": 3,
+      "dilate_iters": 2,
+      "thinning_max_iter": 80,
+      "min_skeleton_pixels": 30,
+      "close_ksize": 5,
+      "close_iter": 1
+    },
+    "methods": [
+      "_score_from_mask_and_skel",
+      "_cluster_score",
+      "_cluster_score_ctx",
+      "evaluate_ctx",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 155
+  },
+  {
+    "metric_id": "turning_points_count",
+    "subgroup": "Pattern",
+    "class": "TurningPointsCountMetric",
+    "module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.turning_points_count",
+    "file": "models/ClustOpt/cluster_validity_indices/metrics/pattern_base/turning_points_count.py",
+    "space": "full",
+    "higher_is_better": true,
+    "params": {
+      "min_cluster_points": 18,
+      "min_samples": 10,
+      "eps": 1e-12,
+      "near_zero_percentile": 25.0,
+      "w_elon": 0.3,
+      "elong_r0": 2.0
+    },
+    "methods": [
+      "_to_2d",
+      "_elongation_score",
+      "_signed_curvature",
+      "_count_sign_changes",
+      "_cluster_score",
+      "evaluate",
+      "normalize"
+    ],
+    "guard_returns": [
+      "-inf"
+    ],
+    "third_party": [],
+    "n_source_lines": 178
+  }
+]

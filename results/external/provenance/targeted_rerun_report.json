@@ -1,0 +1,10 @@
+{
+  "amended_run_id": "stage4c_v2_323194df26",
+  "units": 84,
+  "arms_rerun": 219,
+  "selected_config_differs_from_parent": [],
+  "n_differs": 0,
+  "note": "a difference is provenance only. The documented floating-point limitation permits a near-tie to resolve differently; the rerun result is authoritative for that arm and was never repeated or chosen by outcome.",
+  "repeated_runs": 0,
+  "seed_shopping": false
+}

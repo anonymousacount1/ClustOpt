@@ -1,0 +1,165 @@
+{
+  "stage": "4B-3A1",
+  "n_gates": 26,
+  "n_pass": 26,
+  "n_fail": 0,
+  "overall": "PASS",
+  "gates": [
+    {
+      "gate": "P01",
+      "description": "the common AutoClust seed identity is frozen in the protocol",
+      "status": "PASS",
+      "detail": "{'autoclust_shared_candidate_slate'}"
+    },
+    {
+      "gate": "P02",
+      "description": "all four METHOD_IDs resolve to one seed per dataset/view",
+      "status": "PASS",
+      "detail": "0 mismatches over 6 keys"
+    },
+    {
+      "gate": "P03",
+      "description": "the amendment provenance record exists and is pre-run",
+      "status": "PASS",
+      "detail": "autoclust_shared_candidate_slate"
+    },
+    {
+      "gate": "S01",
+      "description": "the search-space fingerprint is unchanged",
+      "status": "PASS",
+      "detail": "8ddf86c79888ebe9"
+    },
+    {
+      "gate": "S02",
+      "description": "BEHAVIOURAL: the native sampler is never invoked",
+      "status": "PASS",
+      "detail": "constrained=1 native=0 helper=0"
+    },
+    {
+      "gate": "S03",
+      "description": "secondary: the physical path names no native sampler in code",
+      "status": "PASS",
+      "detail": "comment-stripped code checked"
+    },
+    {
+      "gate": "E01",
+      "description": "seven-algorithm repeatability evidence is complete and clean",
+      "status": "PASS",
+      "detail": "7 algos x 3 repeats"
+    },
+    {
+      "gate": "E02",
+      "description": "the A0-A3 physical proof covers all seven algorithms",
+      "status": "PASS",
+      "detail": "['agglomerative', 'birch', 'dbscan', 'gmm', 'hdbscan', 'kmeans', 'minibatch_kmeans']"
+    },
+    {
+      "gate": "E03",
+      "description": "the physical proof has zero mismatches of every class",
+      "status": "PASS",
+      "detail": "15 traces, 3000 candidates, 0 mismatches"
+    },
+    {
+      "gate": "A01",
+      "description": "the public physical API takes no ground-truth argument",
+      "status": "PASS",
+      "detail": "(X, dataset_id, view_id, repo, budget)"
+    },
+    {
+      "gate": "A02",
+      "description": "an invented dataset id works: no repository membership needed",
+      "status": "PASS",
+      "detail": "INVENTED_NON_SCIENTIFIC_SMOKE_TEST_DS"
+    },
+    {
+      "gate": "T01",
+      "description": "trace_id does not depend on the arm METHOD_ID",
+      "status": "PASS",
+      "detail": "arm-independent"
+    },
+    {
+      "gate": "T02",
+      "description": "the trace resists metadata, collection, config and label mutation",
+      "status": "PASS",
+      "detail": "{'metadata': 'FrozenInstanceError', 'collection': 'AttributeError', 'configuration': 'TypeError', 'labels': 'ValueError'}"
+    },
+    {
+      "gate": "T03",
+      "description": "four arms consume one trace without changing it",
+      "status": "PASS",
+      "detail": "{'arms': 4, 'hash_stable': True, 'availability_identical': True}"
+    },
+    {
+      "gate": "T04",
+      "description": "the scientific budget is the protocol value, 50",
+      "status": "PASS",
+      "detail": "default = protocol 50"
+    },
+    {
+      "gate": "T05",
+      "description": "candidate failures are kept, indices contiguous, nothing resampled",
+      "status": "PASS",
+      "detail": "{'budget': 8, 'candidates': 8, 'failed_kept': 0}"
+    },
+    {
+      "gate": "T06",
+      "description": "explicit failure kinds are frozen, with no fallback",
+      "status": "PASS",
+      "detail": "10 kinds"
+    },
+    {
+      "gate": "F01",
+      "description": "no ground-truth field appears anywhere in the trace",
+      "status": "PASS",
+      "detail": "none found"
+    },
+    {
+      "gate": "F02",
+      "description": "the smoke used internal data, no labels, no external corpus",
+      "status": "PASS",
+      "detail": "NON_SCIENTIFIC_SMOKE_TEST"
+    },
+    {
+      "gate": "F03",
+      "description": "the sampler-guard suite passes",
+      "status": "PASS",
+      "detail": "5 tests"
+    },
+    {
+      "gate": "F04",
+      "description": "the physical-layer suite passes",
+      "status": "PASS",
+      "detail": "9 tests, 0 fail"
+    },
+    {
+      "gate": "I01",
+      "description": "the external corpus manifest is unchanged",
+      "status": "PASS",
+      "detail": "709712107424ad4e"
+    },
+    {
+      "gate": "I02",
+      "description": "Stage 4B-1 still passes",
+      "status": "PASS",
+      "detail": "79/79"
+    },
+    {
+      "gate": "I03",
+      "description": "Stage 4B-2 still passes 44/44",
+      "status": "PASS",
+      "detail": "44/44"
+    },
+    {
+      "gate": "I04",
+      "description": "the ml2dac submodule is clean at c946b9e",
+      "status": "PASS",
+      "detail": "status=' ' c946b9eaf58d9e7a566e95f785303da850747653 extern"
+    },
+    {
+      "gate": "I05",
+      "description": "no training or tuning in this layer",
+      "status": "PASS",
+      "detail": "flagged: none"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "stage": "3B",
+  "part": 1,
+  "created_at": "2026-09-09T09:23:57",
+  "source_commit": "cd9c7f44d579a1af78ac8232a04ece01daeb3c0b",
+  "analysis_only": true,
+  "population": {
+    "utility_table": "results_analysis/clustering_repository/stage2/oof_utility_splits2_16/combined/oof_mlp_utilities.csv.gz",
+    "splits": "2-16",
+    "datasets": 16013,
+    "records": 48039,
+    "split_1_present": false
+  },
+  "inferential_unit": "dataset (views averaged)",
+  "bootstrap": {
+    "B": 1000,
+    "seed": 20260909,
+    "type": "percentile"
+  },
+  "multiplicity": "Benjamini-Hochberg within each predeclared test family",
+  "clustopt_selection_semantics": {
+    "top_k": 5,
+    "weighting": "normalized_positive",
+    "frozen_arm": "stage1_full60_mlp_top5_raw_fixed50",
+    "reconstructed_from": "stored OOF predicted utilities; no model run"
+  }
+}

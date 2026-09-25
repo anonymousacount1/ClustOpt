@@ -1,0 +1,270 @@
+{
+  "generated_for": "E1 conditioning decision",
+  "search_space_inherited_verbatim_from": "models/ClustOpt/configs/experiments/phaseE2_knn/knn_top10_raw",
+  "search_algorithm": {
+    "type": "optuna",
+    "n_trials": 50,
+    "seed": "auto",
+    "base_seed": 42,
+    "timeout": "REMOVED (historical C4 used 150 s)"
+  },
+  "seed_derivation": "models/Clustering_Repository_Builder/experiments/experiment_execution/seeding.py :: derive_seed -- int.from_bytes(sha256('<base_seed>|<dataset_id>|<view_id>')[:4],'big') %% 2**31; the arm id is NOT part of the payload",
+  "design_statement": "shared sampler initialisation / paired dataset-view seed -- NOT a shared candidate slate: TPE is adaptive, so a different objective produces a different trajectory from the same seed",
+  "step8": {
+    "full60_equals_live_registry": true,
+    "aliased_metrics": {
+      "convexity_ratio_image_based": "convexity_solidity_image",
+      "hough_arc_circle_strength": "hough_circle_arc_strength"
+    },
+    "broken_unified_mkr_lookup_used": false,
+    "arms": {
+      "E1_C4_SEED": {
+        "x_only": {
+          "uniform_weights": null,
+          "aliased_present": [],
+          "note": "dynamic knn CVI resolves weights per record through cvi_dynamic._build_delegate, which maps .name -> registry key correctly; not affected by the generic weight-lookup hazard"
+        },
+        "y_only": {
+          "uniform_weights": null,
+          "aliased_present": [],
+          "note": "dynamic knn CVI resolves weights per record through cvi_dynamic._build_delegate, which maps .name -> registry key correctly; not affected by the generic weight-lookup hazard"
+        },
+        "xy_2d": {
+          "uniform_weights": null,
+          "aliased_present": [],
+          "note": "dynamic knn CVI resolves weights per record through cvi_dynamic._build_delegate, which maps .name -> registry key correctly; not affected by the generic weight-lookup hazard"
+        }
+      },
+      "E1_MEANPROF": {
+        "x_only": {
+          "uniform_weights": false,
+          "aliased_present": []
+        },
+        "y_only": {
+          "uniform_weights": false,
+          "aliased_present": []
+        },
+        "xy_2d": {
+          "uniform_weights": false,
+          "aliased_present": []
+        }
+      },
+      "E1_CORE3": {
+        "x_only": {
+          "uniform_weights": true,
+          "aliased_present": []
+        },
+        "y_only": {
+          "uniform_weights": true,
+          "aliased_present": []
+        },
+        "xy_2d": {
+          "uniform_weights": true,
+          "aliased_present": []
+        }
+      },
+      "E1_BEST1": {
+        "x_only": {
+          "uniform_weights": true,
+          "aliased_present": []
+        },
+        "y_only": {
+          "uniform_weights": true,
+          "aliased_present": []
+        },
+        "xy_2d": {
+          "uniform_weights": true,
+          "aliased_present": []
+        }
+      },
+      "E1_RANDOM": {
+        "x_only": {
+          "uniform_weights": true,
+          "aliased_present": []
+        },
+        "y_only": {
+          "uniform_weights": true,
+          "aliased_present": []
+        },
+        "xy_2d": {
+          "uniform_weights": true,
+          "aliased_present": []
+        }
+      }
+    }
+  },
+  "arms": {
+    "E1_C4_SEED": {
+      "x_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_c4_seed/x_only.json",
+        "cvi_type": "knn_dynamic",
+        "n_metrics": 60,
+        "metrics": null,
+        "sampler": "tpe"
+      },
+      "y_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_c4_seed/y_only.json",
+        "cvi_type": "knn_dynamic",
+        "n_metrics": 60,
+        "metrics": null,
+        "sampler": "tpe"
+      },
+      "xy_2d": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_c4_seed/xy_2d.json",
+        "cvi_type": "knn_dynamic",
+        "n_metrics": 60,
+        "metrics": null,
+        "sampler": "tpe"
+      }
+    },
+    "E1_MEANPROF": {
+      "x_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_meanprof/x_only.json",
+        "cvi_type": "generic",
+        "n_metrics": 10,
+        "metrics": [
+          "axial_symmetry",
+          "cluster_size_balance_entropy",
+          "connected_components_count",
+          "gridness_fft_acf",
+          "min_centroid_distance",
+          "min_intercluster_distance",
+          "neighborhood_purity",
+          "neighborhood_purity_multi_k",
+          "noise_aware_silhouette",
+          "silhouette"
+        ],
+        "sampler": "tpe"
+      },
+      "y_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_meanprof/y_only.json",
+        "cvi_type": "generic",
+        "n_metrics": 10,
+        "metrics": [
+          "axial_symmetry",
+          "cluster_size_balance_entropy",
+          "connectivity_components",
+          "gridness_fft_acf",
+          "min_centroid_distance",
+          "min_intercluster_distance",
+          "neighborhood_purity",
+          "neighborhood_purity_multi_k",
+          "noise_aware_silhouette",
+          "silhouette"
+        ],
+        "sampler": "tpe"
+      },
+      "xy_2d": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_meanprof/xy_2d.json",
+        "cvi_type": "generic",
+        "n_metrics": 10,
+        "metrics": [
+          "calinski_harabasz",
+          "cluster_size_balance_entropy",
+          "connected_components_count",
+          "contour_graph_connectivity",
+          "convexity_ratio",
+          "corner_junction_density",
+          "glcm_haralick",
+          "noise_aware_silhouette",
+          "s_dbw",
+          "silhouette"
+        ],
+        "sampler": "tpe"
+      }
+    },
+    "E1_CORE3": {
+      "x_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_core3/x_only.json",
+        "cvi_type": "generic",
+        "n_metrics": 3,
+        "metrics": [
+          "gridness_fft_acf",
+          "noise_aware_silhouette",
+          "silhouette"
+        ],
+        "sampler": "tpe"
+      },
+      "y_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_core3/y_only.json",
+        "cvi_type": "generic",
+        "n_metrics": 3,
+        "metrics": [
+          "gridness_fft_acf",
+          "noise_aware_silhouette",
+          "silhouette"
+        ],
+        "sampler": "tpe"
+      },
+      "xy_2d": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_core3/xy_2d.json",
+        "cvi_type": "generic",
+        "n_metrics": 3,
+        "metrics": [
+          "gridness_fft_acf",
+          "noise_aware_silhouette",
+          "silhouette"
+        ],
+        "sampler": "tpe"
+      }
+    },
+    "E1_BEST1": {
+      "x_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_best1/x_only.json",
+        "cvi_type": "generic",
+        "n_metrics": 1,
+        "metrics": [
+          "silhouette"
+        ],
+        "sampler": "tpe"
+      },
+      "y_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_best1/y_only.json",
+        "cvi_type": "generic",
+        "n_metrics": 1,
+        "metrics": [
+          "noise_aware_silhouette"
+        ],
+        "sampler": "tpe"
+      },
+      "xy_2d": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_best1/xy_2d.json",
+        "cvi_type": "generic",
+        "n_metrics": 1,
+        "metrics": [
+          "calinski_harabasz"
+        ],
+        "sampler": "tpe"
+      }
+    },
+    "E1_RANDOM": {
+      "x_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_random/x_only.json",
+        "cvi_type": "generic",
+        "n_metrics": 1,
+        "metrics": [
+          "silhouette"
+        ],
+        "sampler": "random"
+      },
+      "y_only": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_random/y_only.json",
+        "cvi_type": "generic",
+        "n_metrics": 1,
+        "metrics": [
+          "silhouette"
+        ],
+        "sampler": "random"
+      },
+      "xy_2d": {
+        "config": "models/ClustOpt/configs/experiments/e1_conditioning/e1_random/xy_2d.json",
+        "cvi_type": "generic",
+        "n_metrics": 1,
+        "metrics": [
+          "silhouette"
+        ],
+        "sampler": "random"
+      }
+    }
+  }
+}

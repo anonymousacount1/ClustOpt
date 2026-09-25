@@ -1,0 +1,13 @@
+family_dir,n_datasets,n_subfamilies,n_points_min,n_points_max,n_points_median,k_min,k_max,family
+arcs_circles_rings,1700,8,1422,3535,2562.0,2,5,Arcs & rings
+deinterleaving_pri_toa_amp_like,1733,7,1325,3494,2567.0,2,5,De-interleaving
+hollow_topological_components,1400,7,1355,3493,2576.5,2,5,Hollow shapes
+hybrid_mixed_geometry,2033,8,1599,3536,2585.0,2,5,Hybrid mixed
+ladder_grid_lattice,1334,7,1382,3448,2584.0,2,5,Ladder & grid
+linear_bands_parallel_stripes,1500,7,1469,3445,2580.0,2,5,Bands & stripes
+parabolic_curved_chains,1267,7,1706,3392,2582.0,2,5,Curved chains
+piecewise_polylines_corners,1400,7,1480,3552,2565.0,2,5,Polylines
+polygons_rectangles_frames,1167,7,1440,3379,2584.0,2,5,Polygons
+radial_spiral_meander,1267,7,1466,3432,2571.0,2,5,Radial & spiral
+standard_clustering_blobs,1000,7,1454,3509,2610.5,2,5,Isotropic blobs
+texture_density_fields,1267,7,1273,3435,2579.0,2,5,Texture fields

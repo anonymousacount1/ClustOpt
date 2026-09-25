@@ -1,0 +1,344 @@
+{
+  "search_space": {
+    "kmeans": {
+      "n_clusters": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "init": {
+        "type": "categorical",
+        "choices": [
+          "k-means++"
+        ]
+      },
+      "n_init": {
+        "type": "int",
+        "low": 10,
+        "high": 10
+      },
+      "random_state": {
+        "type": "int",
+        "low": 42,
+        "high": 42
+      }
+    },
+    "minibatch_kmeans": {
+      "n_clusters": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "init": {
+        "type": "categorical",
+        "choices": [
+          "k-means++"
+        ]
+      },
+      "batch_size": {
+        "type": "categorical",
+        "choices": [
+          100,
+          256
+        ]
+      },
+      "random_state": {
+        "type": "int",
+        "low": 42,
+        "high": 42
+      }
+    },
+    "gmm": {
+      "n_components": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "covariance_type": {
+        "type": "categorical",
+        "choices": [
+          "full",
+          "diag"
+        ]
+      },
+      "random_state": {
+        "type": "int",
+        "low": 42,
+        "high": 42
+      }
+    },
+    "agglomerative": {
+      "n_clusters": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "linkage": {
+        "type": "categorical",
+        "choices": [
+          "ward",
+          "average",
+          "complete"
+        ]
+      }
+    },
+    "birch": {
+      "n_clusters": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "threshold": {
+        "type": "categorical",
+        "choices": [
+          0.05,
+          0.1,
+          0.2,
+          0.35
+        ]
+      },
+      "branching_factor": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      }
+    },
+    "dbscan": {
+      "eps": {
+        "type": "categorical",
+        "choices": [
+          0.03,
+          0.05,
+          0.08,
+          0.12,
+          0.2
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      }
+    },
+    "hdbscan": {
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          10,
+          25,
+          50,
+          100
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      }
+    },
+    "optics": {
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "xi": {
+        "type": "categorical",
+        "choices": [
+          0.03,
+          0.05,
+          0.1
+        ]
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          0.02,
+          0.05,
+          0.1
+        ]
+      }
+    },
+    "hdbscan_constrained-2": {
+      "n_components": {
+        "type": "int",
+        "low": 2,
+        "high": 2
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.0,
+          0.02,
+          0.05
+        ]
+      }
+    },
+    "hdbscan_constrained-3": {
+      "n_components": {
+        "type": "int",
+        "low": 3,
+        "high": 3
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.0,
+          0.02,
+          0.05
+        ]
+      }
+    },
+    "hdbscan_constrained-4": {
+      "n_components": {
+        "type": "int",
+        "low": 4,
+        "high": 4
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.0,
+          0.02,
+          0.05
+        ]
+      }
+    },
+    "hdbscan_constrained-5": {
+      "n_components": {
+        "type": "int",
+        "low": 5,
+        "high": 5
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.0,
+          0.02,
+          0.05
+        ]
+      }
+    }
+  },
+  "search_algorithm": {
+    "type": "optuna",
+    "params": {
+      "n_trials": 50,
+      "seed": "auto",
+      "base_seed": 42
+    }
+  },
+  "cvi": {
+    "type": "generic",
+    "metrics": {
+      "silhouette": 0.1078429539679954,
+      "noise_aware_silhouette": 0.10426489348444,
+      "neighborhood_purity_multi_k": 0.1031173663198893,
+      "gridness_fft_acf": 0.103109963162651,
+      "neighborhood_purity": 0.1023979934880504,
+      "min_centroid_distance": 0.1001548077563482,
+      "axial_symmetry": 0.0971214478243649,
+      "min_intercluster_distance": 0.0944854077715197,
+      "cluster_size_balance_entropy": 0.09423732114342,
+      "connected_components_count": 0.0932678450813205
+    },
+    "params": {
+      "remove_noise": true,
+      "noise_label": -1,
+      "min_clusters": 2
+    }
+  },
+  "e1": {
+    "experiment": "E1_conditioning_decision",
+    "arm": "E1_MEANPROF",
+    "view_id": "x_only",
+    "objective_note": "development-only mean TRUE utility profile (splits 2-16), FULL60, top-10, identical RAW normalized weighting",
+    "n_trials": 50,
+    "timeout": null,
+    "seed_rule": "auto (per dataset|view, arm-independent)",
+    "base_seed": 42,
+    "selected_metrics": [
+      "axial_symmetry",
+      "cluster_size_balance_entropy",
+      "connected_components_count",
+      "gridness_fft_acf",
+      "min_centroid_distance",
+      "min_intercluster_distance",
+      "neighborhood_purity",
+      "neighborhood_purity_multi_k",
+      "noise_aware_silhouette",
+      "silhouette"
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "suite": "stage4c_pre_phase_c_structural_gate",
+  "run_id": "stage4c_v2_323194df26",
+  "ground_truth_loaded": false,
+  "external_ari_inspected": false,
+  "n_gates": 22,
+  "n_fail": 0,
+  "gates": [
+    {
+      "gate": "S01",
+      "name": "phase A arm records present",
+      "status": "PASS",
+      "detail": "2100 records"
+    },
+    {
+      "gate": "S02",
+      "name": "phase A records COMPLETE",
+      "status": "PASS",
+      "detail": "0 not COMPLETE"
+    },
+    {
+      "gate": "S03",
+      "name": "phase A store integrity",
+      "status": "PASS",
+      "detail": "0 integrity failures"
+    },
+    {
+      "gate": "S04",
+      "name": "phase A method coverage 14 x 150",
+      "status": "PASS",
+      "detail": "14 methods; counts [150]"
+    },
+    {
+      "gate": "S05",
+      "name": "phase A unit coverage 50 x 3",
+      "status": "PASS",
+      "detail": "150 units"
+    },
+    {
+      "gate": "S06",
+      "name": "every phase A success carries final labels",
+      "status": "PASS",
+      "detail": "2100 successes, 0 without labels, 0 wrong length"
+    },
+    {
+      "gate": "S07",
+      "name": "phase A records carry this run id",
+      "status": "PASS",
+      "detail": "0 stale"
+    },
+    {
+      "gate": "S08",
+      "name": "phase B bank records present",
+      "status": "PASS",
+      "detail": "150 / 150"
+    },
+    {
+      "gate": "S09",
+      "name": "phase B metric records present",
+      "status": "PASS",
+      "detail": "150 / 150"
+    },
+    {
+      "gate": "S10",
+      "name": "phase B records COMPLETE and integral",
+      "status": "PASS",
+      "detail": "0 bad over 150 banks"
+    },
+    {
+      "gate": "S11",
+      "name": "every bank keeps all 32 slots",
+      "status": "PASS",
+      "detail": "0 bad; 4800 / 4800 slots"
+    },
+    {
+      "gate": "S12",
+      "name": "metric rows == valid candidates x 69",
+      "status": "PASS",
+      "detail": "0 bad of 150; 329544 rows total"
+    },
+    {
+      "gate": "S12b",
+      "name": "metric rows cover exactly the valid candidates",
+      "status": "PASS",
+      "detail": "0 records with wrong coverage"
+    },
+    {
+      "gate": "S13",
+      "name": "metric registry hash pinned in provenance",
+      "status": "PASS",
+      "detail": "0 mismatched of 150; 8d6b44f45f9cf240"
+    },
+    {
+      "gate": "S14",
+      "name": "bank and metric record agree on bank_id",
+      "status": "PASS",
+      "detail": "0 disagreements over 150 banks"
+    },
+    {
+      "gate": "S15",
+      "name": "phase B unit coverage 50 x 3",
+      "status": "PASS",
+      "detail": "150 units"
+    },
+    {
+      "gate": "S16",
+      "name": "label file present for every bank",
+      "status": "PASS",
+      "detail": "0 missing of 150"
+    },
+    {
+      "gate": "S17",
+      "name": "stored labels reproduce their raw hash",
+      "status": "PASS",
+      "detail": "0 mismatches over 4776 valid candidates in 150 banks"
+    },
+    {
+      "gate": "S18",
+      "name": "67 primary + 2 diagnostic metrics evaluated",
+      "status": "PASS",
+      "detail": "primary 67/67 diagnostics 2/2"
+    },
+    {
+      "gate": "S19",
+      "name": "no ground truth in any stored record",
+      "status": "PASS",
+      "detail": "0 leaks []"
+    },
+    {
+      "gate": "S20",
+      "name": "phase C has not yet run",
+      "status": "PASS",
+      "detail": "phase_c dir absent"
+    },
+    {
+      "gate": "S21",
+      "name": "consolidation admitted every record",
+      "status": "PASS",
+      "detail": "applied=True outcomes {\"CONSOLIDATED\": 150}"
+    }
+  ],
+  "wall_clock_seconds": 10.5,
+  "status": "PASS"
+}

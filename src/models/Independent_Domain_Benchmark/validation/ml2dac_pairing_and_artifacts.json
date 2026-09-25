@@ -1,0 +1,1218 @@
+{
+  "gate_B_historical_pairing": {
+    "keys": 324,
+    "all_four_arm_keys": 324,
+    "identical_config_traces": 0,
+    "differing_config_traces": 324,
+    "missing": 0,
+    "classification": "H3_NOT_PAIRED",
+    "true_ari_inspected": false,
+    "method": "persisted config_history compared directly; nominal seeds NOT used",
+    "rows": [
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "avg_pca_isotropy",
+          "M2": "arc_circle_fit",
+          "M3": "arc_circle_fit"
+        }
+      },
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "neighborhood_purity_multi_k",
+          "M2": "blobness_log_dog",
+          "M3": "blobness_log_dog"
+        }
+      },
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "SIL"
+        }
+      },
+      {
+        "dataset_id": "c2e_000208_04419bc6",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "avg_pca_isotropy",
+          "M2": "gridness_fft_acf",
+          "M3": "ladderness"
+        }
+      },
+      {
+        "dataset_id": "c2e_000208_04419bc6",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "neighborhood_purity",
+          "M2": "gridness_fft_acf",
+          "M3": "gridness_fft_acf"
+        }
+      },
+      {
+        "dataset_id": "c2e_000208_04419bc6",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "avg_pca_isotropy",
+          "M2": "gridness_fft_acf",
+          "M3": "arc_circle_fit"
+        }
+      },
+      {
+        "dataset_id": "c2e_000404_f0d2873b",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "gridness_fft_acf",
+          "M3": "gridness_fft_acf"
+        }
+      },
+      {
+        "dataset_id": "c2e_000404_f0d2873b",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "DBCV",
+          "M1": "neighborhood_purity",
+          "M2": "blobness_log_dog",
+          "M3": "blobness_log_dog"
+        }
+      },
+      {
+        "dataset_id": "c2e_000404_f0d2873b",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "SIL"
+        }
+      },
+      {
+        "dataset_id": "c2e_000808_1feb31de",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "avg_pca_isotropy",
+          "M2": "SIL",
+          "M3": "avg_pca_isotropy"
+        }
+      },
+      {
+        "dataset_id": "c2e_000808_1feb31de",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "neighborhood_purity",
+          "M2": "gridness_fft_acf",
+          "M3": "neighborhood_purity_multi_k"
+        }
+      },
+      {
+        "dataset_id": "c2e_000808_1feb31de",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "gridness_fft_acf",
+          "M3": "gridness_fft_acf"
+        }
+      },
+      {
+        "dataset_id": "c2e_001222_e9e1078b",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "SIL"
+        }
+      },
+      {
+        "dataset_id": "c2e_001222_e9e1078b",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "neighborhood_purity_multi_k",
+          "M2": "blobness_log_dog",
+          "M3": "neighborhood_purity"
+        }
+      },
+      {
+        "dataset_id": "c2e_001222_e9e1078b",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "gridness_fft_acf"
+        }
+      },
+      {
+        "dataset_id": "c2h_000227_45f85815",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "avg_pca_isotropy",
+          "M2": "SIL",
+          "M3": "avg_pca_isotropy"
+        }
+      },
+      {
+        "dataset_id": "c2h_000227_45f85815",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "CH",
+          "M1": "neighborhood_purity",
+          "M2": "blobness_log_dog",
+          "M3": "neighborhood_purity"
+        }
+      },
+      {
+        "dataset_id": "c2h_000227_45f85815",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "SIL"
+        }
+      },
+      {
+        "dataset_id": "c2h_000431_2ef3fca2",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "arc_circle_fit",
+          "M3": "arc_circle_fit"
+        }
+      },
+      {
+        "dataset_id": "c2h_000431_2ef3fca2",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "neighborhood_purity_multi_k",
+          "M2": "gridness_fft_acf",
+          "M3": "neighborhood_purity_multi_k"
+        }
+      },
+      {
+        "dataset_id": "c2h_000431_2ef3fca2",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "gridness_fft_acf",
+          "M3": "avg_pca_isotropy"
+        }
+      },
+      {
+        "dataset_id": "c2h_000631_6d0d4791",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "SIL"
+        }
+      },
+      {
+        "dataset_id": "c2h_000631_6d0d4791",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "min_centroid_distance",
+          "M2": "gridness_fft_acf",
+          "M3": "gridness_fft_acf"
+        }
+      },
+      {
+        "dataset_id": "c2h_000631_6d0d4791",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "SIL"
+        }
+      },
+      {
+        "dataset_id": "c2h_000827_30b7ac26",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "gridness_fft_acf"
+        }
+      },
+      {
+        "dataset_id": "c2h_000827_30b7ac26",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "CH",
+          "M1": "neighborhood_purity_multi_k",
+          "M2": "gridness_fft_acf",
+          "M3": "blobness_log_dog"
+        }
+      },
+      {
+        "dataset_id": "c2h_000827_30b7ac26",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "gridness_fft_acf"
+        }
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "neighborhood_purity_multi_k",
+          "M2": "lbp_stationarity",
+          "M3": "lbp_stationarity"
+        }
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "DBCV",
+          "M1": "DBCV",
+          "M2": "curvature_consistency",
+          "M3": "curvature_consistency"
+        }
+      },
+      {
+        "dataset_id": "c2e_000483_47d48091",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "SIL"
+        }
+      },
+      {
+        "dataset_id": "c2e_000964_248a4c07",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "avg_pca_isotropy",
+          "M2": "axial_symmetry",
+          "M3": "avg_pca_isotropy"
+        }
+      },
+      {
+        "dataset_id": "c2e_000964_248a4c07",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "CH",
+          "M1": "CH",
+          "M2": "CH",
+          "M3": "CH"
+        }
+      },
+      {
+        "dataset_id": "c2e_000964_248a4c07",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "avg_pca_isotropy",
+          "M2": "SIL",
+          "M3": "avg_pca_isotropy"
+        }
+      },
+      {
+        "dataset_id": "c2e_001220_0a1eb8be",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "CH",
+          "M1": "noise_aware_silhouette",
+          "M2": "blobness_log_dog",
+          "M3": "connected_components_count"
+        }
+      },
+      {
+        "dataset_id": "c2e_001220_0a1eb8be",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "DBCV",
+          "M1": "avg_pca_isotropy",
+          "M2": "blobness_log_dog",
+          "M3": "blobness_log_dog"
+        }
+      },
+      {
+        "dataset_id": "c2e_001220_0a1eb8be",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "SIL",
+          "M2": "SIL",
+          "M3": "SIL"
+        }
+      },
+      {
+        "dataset_id": "c2h_000030_265f365b",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "DI",
+          "M1": "DI",
+          "M2": "parallel_bands",
+          "M3": "parallel_bands"
+        }
+      },
+      {
+        "dataset_id": "c2h_000030_265f365b",
+        "view": "xy_2d",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "DBCV",
+          "M1": "DBCV",
+          "M2": "curvature_consistency",
+          "M3": "curvature_consistency"
+        }
+      },
+      {
+        "dataset_id": "c2h_000030_265f365b",
+        "view": "y_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "SIL",
+          "M1": "avg_pca_isotropy",
+          "M2": "SIL",
+          "M3": "avg_pca_isotropy"
+        }
+      },
+      {
+        "dataset_id": "c2h_000751_cc2d926b",
+        "view": "x_only",
+        "identical": false,
+        "n": 50,
+        "selected_cvi": {
+          "M0": "DI",
+          "M1": "DBI",
+          "M2": "parallel_bands",
+          "M3": "convexity_ratio"
+        }
+      }
+    ]
+  },
+  "classifier_artifacts": {
+    "M0": {
+      "n_classes": 7,
+      "classes": [
+        "calinski_harabasz",
+        "coggins_jain_index",
+        "cop",
+        "davies_bouldin",
+        "dbcv",
+        "dunn_index",
+        "silhouette"
+      ],
+      "class_order_hash": "7b0daa610d2a5f5f",
+      "rf_params": {
+        "n_estimators": 100,
+        "criterion": "gini",
+        "max_depth": null,
+        "random_state": 1234
+      }
+    },
+    "M1": {
+      "n_classes": 17,
+      "classes": [
+        "avg_pca_isotropy",
+        "avg_within_cluster_dispersion",
+        "calinski_harabasz",
+        "cluster_size_balance_entropy",
+        "cluster_size_imbalance_entropy",
+        "coggins_jain_index",
+        "cop",
+        "davies_bouldin",
+        "dbcv",
+        "dunn_index",
+        "min_centroid_distance",
+        "min_intercluster_distance",
+        "neighborhood_purity",
+        "neighborhood_purity_multi_k",
+        "noise_aware_silhouette",
+        "s_dbw",
+        "silhouette"
+      ],
+      "class_order_hash": "c0e369a91883a564",
+      "rf_params": {
+        "n_estimators": 100,
+        "criterion": "gini",
+        "max_depth": null,
+        "random_state": 1234
+      }
+    },
+    "M2": {
+      "n_classes": 51,
+      "classes": [
+        "alpha_shape_compactness",
+        "arc_circle_fit",
+        "axial_symmetry",
+        "bimodality_anti_thickness",
+        "blobness_log_dog",
+        "calinski_harabasz",
+        "circularity_compactness",
+        "coggins_jain_index",
+        "connected_components_count",
+        "connectivity_components",
+        "contour_graph_connectivity",
+        "convexity_ratio",
+        "cop",
+        "corner_junction_density",
+        "corner_sharpness",
+        "curvature_consistency",
+        "davies_bouldin",
+        "dbcv",
+        "direction_entropy",
+        "dunn_index",
+        "eccentricity_ratio",
+        "edge_coherence",
+        "ellipse_fit_score",
+        "euler_holes_count",
+        "fractal_dimension",
+        "glcm_haralick",
+        "gridness_2d",
+        "gridness_fft_acf",
+        "hollow_score",
+        "hough_line_strength",
+        "ladderness",
+        "lbp_stationarity",
+        "line_straightness",
+        "morphological_band_count",
+        "mst_smoothness",
+        "orientation_histogram_entropy",
+        "parabolicity",
+        "parallel_bands",
+        "peak_to_background_hough",
+        "periodicity_1d",
+        "piecewise_linearity",
+        "polygonality",
+        "radial_uniformity",
+        "rectangularity",
+        "ribbon_thickness",
+        "ridge_strength",
+        "silhouette",
+        "skeleton_connectivity",
+        "symmetry_score",
+        "thickness_uniformity",
+        "turning_points_count"
+      ],
+      "class_order_hash": "2801ec530d76e9d1",
+      "rf_params": {
+        "n_estimators": 100,
+        "criterion": "gini",
+        "max_depth": null,
+        "random_state": 1234
+      }
+    },
+    "M3": {
+      "n_classes": 61,
+      "classes": [
+        "alpha_shape_compactness",
+        "arc_circle_fit",
+        "avg_pca_isotropy",
+        "avg_within_cluster_dispersion",
+        "axial_symmetry",
+        "bimodality_anti_thickness",
+        "blobness_log_dog",
+        "calinski_harabasz",
+        "circularity_compactness",
+        "cluster_size_balance_entropy",
+        "cluster_size_imbalance_entropy",
+        "coggins_jain_index",
+        "connected_components_count",
+        "connectivity_components",
+        "contour_graph_connectivity",
+        "convexity_ratio",
+        "cop",
+        "corner_junction_density",
+        "corner_sharpness",
+        "curvature_consistency",
+        "davies_bouldin",
+        "dbcv",
+        "direction_entropy",
+        "dunn_index",
+        "eccentricity_ratio",
+        "edge_coherence",
+        "ellipse_fit_score",
+        "euler_holes_count",
+        "fractal_dimension",
+        "glcm_haralick",
+        "gridness_2d",
+        "gridness_fft_acf",
+        "hollow_score",
+        "hough_line_strength",
+        "ladderness",
+        "lbp_stationarity",
+        "line_straightness",
+        "min_centroid_distance",
+        "min_intercluster_distance",
+        "morphological_band_count",
+        "mst_smoothness",
+        "neighborhood_purity",
+        "neighborhood_purity_multi_k",
+        "noise_aware_silhouette",
+        "orientation_histogram_entropy",
+        "parabolicity",
+        "parallel_bands",
+        "peak_to_background_hough",
+        "periodicity_1d",
+        "piecewise_linearity",
+        "polygonality",
+        "radial_uniformity",
+        "rectangularity",
+        "ribbon_thickness",
+        "ridge_strength",
+        "s_dbw",
+        "silhouette",
+        "skeleton_connectivity",
+        "symmetry_score",
+        "thickness_uniformity",
+        "turning_points_count"
+      ],
+      "class_order_hash": "aeff6e959ba31cf7",
+      "rf_params": {
+        "n_estimators": 100,
+        "criterion": "gini",
+        "max_depth": null,
+        "random_state": 1234
+      }
+    }
+  },
+  "meta_feature_columns": {
+    "count": 52,
+    "identical_across_arms": true,
+    "schema_hash": "b297098e31d96285",
+    "ordered_names": [
+      "ml2dac_attr_conc.mean",
+      "ml2dac_attr_conc.sd",
+      "ml2dac_attr_ent.mean",
+      "ml2dac_attr_ent.sd",
+      "ml2dac_attr_to_inst",
+      "ml2dac_cat_to_num",
+      "ml2dac_cor.mean",
+      "ml2dac_cor.sd",
+      "ml2dac_cov.mean",
+      "ml2dac_cov.sd",
+      "ml2dac_eigenvalues.mean",
+      "ml2dac_eigenvalues.sd",
+      "ml2dac_g_mean.mean",
+      "ml2dac_g_mean.sd",
+      "ml2dac_h_mean.mean",
+      "ml2dac_h_mean.sd",
+      "ml2dac_inst_to_attr",
+      "ml2dac_iq_range.mean",
+      "ml2dac_iq_range.sd",
+      "ml2dac_kurtosis.mean",
+      "ml2dac_kurtosis.sd",
+      "ml2dac_mad.mean",
+      "ml2dac_mad.sd",
+      "ml2dac_max.mean",
+      "ml2dac_max.sd",
+      "ml2dac_mean.mean",
+      "ml2dac_mean.sd",
+      "ml2dac_median.mean",
+      "ml2dac_median.sd",
+      "ml2dac_min.mean",
+      "ml2dac_min.sd",
+      "ml2dac_nr_attr",
+      "ml2dac_nr_bin",
+      "ml2dac_nr_cat",
+      "ml2dac_nr_cor_attr",
+      "ml2dac_nr_inst",
+      "ml2dac_nr_norm",
+      "ml2dac_nr_num",
+      "ml2dac_nr_outliers",
+      "ml2dac_num_to_cat",
+      "ml2dac_range.mean",
+      "ml2dac_range.sd",
+      "ml2dac_sd.mean",
+      "ml2dac_sd.sd",
+      "ml2dac_skewness.mean",
+      "ml2dac_skewness.sd",
+      "ml2dac_sparsity.mean",
+      "ml2dac_sparsity.sd",
+      "ml2dac_t_mean.mean",
+      "ml2dac_t_mean.sd",
+      "ml2dac_var.mean",
+      "ml2dac_var.sd"
+    ]
+  },
+  "gate_neighbour_warmstart_identity": {
+    "source": "persisted raw_result.json nearest_neighbor_record_id and warmstart_configs_used",
+    "cases": 324,
+    "nearest_neighbour_disagreements": 0,
+    "warmstart_config_disagreements": 0,
+    "cases_with_different_predicted_cvi": 248,
+    "interpretation": "neighbours and warmstarts are identical across M0-M3 on historical data even where the predicted CVI differs, confirming from PERSISTED EVIDENCE (not only source reading) that neither depends on the arm",
+    "attribution_of_H3": "the historical candidate slates differ while every arm-independent generation input agrees, so the divergence is attributable to the process-salted seed rather than to arm-specific generation state",
+    "true_ari_inspected": false
+  },
+  "meta_feature_schema": {
+    "count": 52,
+    "identical_across_arms": true
+  },
+  "classifier_classes": {
+    "M0": 7,
+    "M1": 17,
+    "M2": 51,
+    "M3": 61
+  },
+  "rf_params": {
+    "n_estimators": 100,
+    "criterion": "gini",
+    "max_depth": null,
+    "random_state": 1234
+  },
+  "gate_C_predicted_cvi_regression": {
+    "method": "stored master meta-features -> frozen imputer.transform -> frozen classifier.predict, compared against persisted raw_result.selected_cvi_metric_id",
+    "note": "raw_result.selected_cvi is the CVI_ABBREV projection of selected_cvi_metric_id (e.g. silhouette->SIL); the metric_id field is the raw classifier class and is the correct oracle",
+    "record_id_convention": "<dataset_id>__<view_id>",
+    "per_arm": {
+      "M0": {
+        "n": 324,
+        "exact_matches": 324,
+        "mismatches": [],
+        "distinct_predicted_classes": 6
+      },
+      "M1": {
+        "n": 324,
+        "exact_matches": 324,
+        "mismatches": [],
+        "distinct_predicted_classes": 15
+      },
+      "M2": {
+        "n": 324,
+        "exact_matches": 324,
+        "mismatches": [],
+        "distinct_predicted_classes": 21
+      },
+      "M3": {
+        "n": 324,
+        "exact_matches": 324,
+        "mismatches": [],
+        "distinct_predicted_classes": 29
+      }
+    },
+    "per_arm_view": {
+      "M0|x_only": {
+        "n": 108,
+        "exact": 108
+      },
+      "M0|xy_2d": {
+        "n": 108,
+        "exact": 108
+      },
+      "M0|y_only": {
+        "n": 108,
+        "exact": 108
+      },
+      "M1|x_only": {
+        "n": 108,
+        "exact": 108
+      },
+      "M1|xy_2d": {
+        "n": 108,
+        "exact": 108
+      },
+      "M1|y_only": {
+        "n": 108,
+        "exact": 108
+      },
+      "M2|x_only": {
+        "n": 108,
+        "exact": 108
+      },
+      "M2|xy_2d": {
+        "n": 108,
+        "exact": 108
+      },
+      "M2|y_only": {
+        "n": 108,
+        "exact": 108
+      },
+      "M3|x_only": {
+        "n": 108,
+        "exact": 108
+      },
+      "M3|xy_2d": {
+        "n": 108,
+        "exact": 108
+      },
+      "M3|y_only": {
+        "n": 108,
+        "exact": 108
+      }
+    },
+    "abbrev_projection_consistent": true,
+    "nearest_neighbour_replay_M0": {
+      "n": 324,
+      "exact": 324
+    },
+    "criterion": "exact class equality",
+    "total_cases": 1296,
+    "total_mismatches": 0,
+    "behavioural_no_training": {
+      "stubbed": [
+        "RandomForestClassifier.fit",
+        "SimpleImputer.fit",
+        "SimpleImputer.fit_transform"
+      ],
+      "invocations": 0
+    },
+    "labels_used": false,
+    "external_50_used": false,
+    "verdict": "PASS"
+  },
+  "gate_A_metafeature_fidelity": {
+    "authoritative_extractor": "experiments/external_baselines/Unified_MKR/unified_mkr/pymfe_worker.py :: _build_decision_X + _extract, executed by the isolated .mfenv interpreter (unified_mkr/pymfe_pass.py). unified_mkr/metafeatures.py::extract_ml2dac is the fallback path and was NOT used for the master parquet.",
+    "extraction_env": {
+      "python": "3.12.2",
+      "pymfe": "0.4.4",
+      "numpy": "2.4.6",
+      "pandas": "3.0.3"
+    },
+    "schema": {
+      "n_features": 52,
+      "ordered_schema_hash": "f33a72e081fff983",
+      "identical_across_arms": true,
+      "extractor_emits": 52,
+      "classifier_consumes": 52,
+      "sets_identical": true
+    },
+    "static_label_audit": {
+      "pymfe_groups": [
+        "statistical",
+        "info-theory",
+        "general"
+      ],
+      "fit_call": "MFE(groups=...).fit(X) - no y argument",
+      "decision_X_builder_excludes": [
+        "cluster_id",
+        "label",
+        "labels",
+        "y_true"
+      ],
+      "label_requiring_pymfe_features_present": [],
+      "result": "no feature in the frozen schema requires class labels"
+    },
+    "behavioural_label_audit": {
+      "supervised_fit_attempts": 0,
+      "label_column_reads": 0,
+      "fit_calls": 30,
+      "label_permutation_max_abs_diff": 0.0,
+      "label_removal_max_abs_diff": 0.0,
+      "interpretation": "randomly permuting and then entirely deleting the ground-truth label column left every one of the 52 meta-features bitwise unchanged"
+    },
+    "repeatability": {
+      "max_abs_diff_rerun": 0.0,
+      "classification": "bitwise reproducible"
+    },
+    "historical_regression": {
+      "n_records": 30,
+      "views": [
+        "x_only",
+        "y_only",
+        "xy_2d"
+      ],
+      "bitwise_exact_records": 30,
+      "max_abs_diff": 0.0,
+      "predeclared_tolerance": 1e-12,
+      "worst": null
+    },
+    "classifier_stability": {
+      "M0": {
+        "n": 30,
+        "same_class": 30
+      },
+      "M1": {
+        "n": 30,
+        "same_class": 30
+      },
+      "M2": {
+        "n": 30,
+        "same_class": 30
+      },
+      "M3": {
+        "n": 30,
+        "same_class": 30
+      }
+    },
+    "labels_used": false,
+    "external_50_used": false,
+    "verdict": "PASS"
+  },
+  "section15_common_seed_dry_proof": {
+    "test_seed": 999983,
+    "protocol_changed": false,
+    "method": "real InDomainMKR + real search.select_warmstarts/snap_to_space/sample_optimizer_configs_constrained, one common seed for all four arms",
+    "n_records": 15,
+    "identical_plan": 15,
+    "identical_neighbour": 15,
+    "records_with_arm_specific_predicted_cvi": 11,
+    "rows": [
+      {
+        "record": "c2e_000801_4af09ce7__x_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "c79b49164f0a4350",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "avg_pca_isotropy",
+          "M2": "silhouette",
+          "M3": "avg_pca_isotropy"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000801_4af09ce7__y_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "111356f049331519",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "avg_pca_isotropy",
+          "M2": "gridness_fft_acf",
+          "M3": "avg_pca_isotropy"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000801_4af09ce7__xy_2d",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "633f8f28fe499e0b",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "avg_pca_isotropy",
+          "M2": "hollow_score",
+          "M3": "hollow_score"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000802_118db1ad__x_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "4d9376c059c697f1",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "silhouette",
+          "M2": "silhouette",
+          "M3": "silhouette"
+        },
+        "predicted_cvi_differs_across_arms": false
+      },
+      {
+        "record": "c2e_000802_118db1ad__y_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "0ab57abdfbd7f877",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "silhouette",
+          "M2": "silhouette",
+          "M3": "silhouette"
+        },
+        "predicted_cvi_differs_across_arms": false
+      },
+      {
+        "record": "c2e_000802_118db1ad__xy_2d",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "4a89bffd4793bba9",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "dbcv",
+          "M1": "min_centroid_distance",
+          "M2": "blobness_log_dog",
+          "M3": "min_centroid_distance"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000803_1622907f__x_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "6b8a728c6aeec99d",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "davies_bouldin",
+          "M1": "davies_bouldin",
+          "M2": "curvature_consistency",
+          "M3": "curvature_consistency"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000803_1622907f__y_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "47db42b4e8dbc2c8",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "silhouette",
+          "M2": "silhouette",
+          "M3": "silhouette"
+        },
+        "predicted_cvi_differs_across_arms": false
+      },
+      {
+        "record": "c2e_000803_1622907f__xy_2d",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "a74f636658b386ad",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "dbcv",
+          "M1": "neighborhood_purity_multi_k",
+          "M2": "blobness_log_dog",
+          "M3": "blobness_log_dog"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000804_345fa8ff__x_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "0d802a8efdbf878a",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "cluster_size_balance_entropy",
+          "M2": "axial_symmetry",
+          "M3": "axial_symmetry"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000804_345fa8ff__y_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "febda10d118bd089",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "min_centroid_distance",
+          "M2": "gridness_fft_acf",
+          "M3": "gridness_fft_acf"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000804_345fa8ff__xy_2d",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "676751c566cca216",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "avg_pca_isotropy",
+          "M2": "hollow_score",
+          "M3": "hollow_score"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000805_0c4585ad__x_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "e39e2ffefb65cba5",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "silhouette",
+          "M1": "min_centroid_distance",
+          "M2": "ladderness",
+          "M3": "ladderness"
+        },
+        "predicted_cvi_differs_across_arms": true
+      },
+      {
+        "record": "c2e_000805_0c4585ad__y_only",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "a432ca1826420475",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "davies_bouldin",
+          "M1": "davies_bouldin",
+          "M2": "davies_bouldin",
+          "M3": "davies_bouldin"
+        },
+        "predicted_cvi_differs_across_arms": false
+      },
+      {
+        "record": "c2e_000805_0c4585ad__xy_2d",
+        "identical_plan": true,
+        "identical_neighbour": true,
+        "plan_hash": "2235495a8a729bae",
+        "plan_length": 50,
+        "predicted_cvis": {
+          "M0": "dbcv",
+          "M1": "neighborhood_purity_multi_k",
+          "M2": "blobness_log_dog",
+          "M3": "blobness_log_dog"
+        },
+        "predicted_cvi_differs_across_arms": true
+      }
+    ],
+    "verdict": "PASS",
+    "interpretation": "under a single common seed the four ML2DAC arms produce ONE identical physical candidate slate while the predicted CVI (and therefore the selection) stays arm-specific"
+  },
+  "section1_warmstart_provenance": {
+    "frozen_convention": "ml2dac_warmstart_semantic_content_hash_v1",
+    "definition": "columns sorted by name; each row rendered as the ASCII-0x1F join of repr() of its values and hashed with SHA-256; the resulting MULTISET of row hashes is sorted (duplicate multiplicity preserved, no de-duplication) and joined with '\n'; the sorted-column-name list is appended after '|'; SHA-256 of that, first 16 hex chars.",
+    "per_arm": {
+      "M0": {
+        "raw_file_hash": "a80195e383770bf5",
+        "semantic_content_hash_v1": "bb3a1306b4562217",
+        "rows": 1537248,
+        "distinct_rows": 1537248,
+        "cross_check_pandas_multiset": "86c551552c19c439",
+        "cross_check_pandas_multiset_colsorted": "304a805e49bf5d3a",
+        "cross_check_pandas_rowsorted": "65e20d080cce88f3"
+      },
+      "M1": {
+        "raw_file_hash": "842ef0ccd66d4539",
+        "semantic_content_hash_v1": "bb3a1306b4562217",
+        "rows": 1537248,
+        "distinct_rows": 1537248,
+        "cross_check_pandas_multiset": "86c551552c19c439",
+        "cross_check_pandas_multiset_colsorted": "304a805e49bf5d3a",
+        "cross_check_pandas_rowsorted": "65e20d080cce88f3"
+      },
+      "M2": {
+        "raw_file_hash": "842ef0ccd66d4539",
+        "semantic_content_hash_v1": "bb3a1306b4562217",
+        "rows": 1537248,
+        "distinct_rows": 1537248,
+        "cross_check_pandas_multiset": "86c551552c19c439",
+        "cross_check_pandas_multiset_colsorted": "304a805e49bf5d3a",
+        "cross_check_pandas_rowsorted": "65e20d080cce88f3"
+      },
+      "M3": {
+        "raw_file_hash": "a80195e383770bf5",
+        "semantic_content_hash_v1": "bb3a1306b4562217",
+        "rows": 1537248,
+        "distinct_rows": 1537248,
+        "cross_check_pandas_multiset": "86c551552c19c439",
+        "cross_check_pandas_multiset_colsorted": "304a805e49bf5d3a",
+        "cross_check_pandas_rowsorted": "65e20d080cce88f3"
+      }
+    },
+    "distinct_raw_file_hashes": 2,
+    "distinct_semantic_content_hashes": 1,
+    "conclusion": "the warmstart repository is content-identical across M0-M3; the two distinct raw file hashes (M0+M3 vs M1+M2) are a parquet serialisation artefact.",
+    "correction_to_earlier_evidence": {
+      "earlier_value": "d1865d9c7006bd37 (reported in this file as order_invariant_content_hash at commit 5f0b055)",
+      "status": "NOT REPRODUCIBLE - the hashing convention behind that number was never persisted alongside it, and three independent reconstructions of a plausible convention produced 86c551552c19c439, 304a805e49bf5d3a and 65e20d080cce88f3 instead.",
+      "impact_on_the_finding": "none - every convention tried, including the frozen v1 above, yields a single identical value across all four arms, so the content-identity conclusion is independently confirmed four times over. Only the specific digit string is retired.",
+      "action": "the earlier number is superseded by semantic_content_hash_v1 under the frozen convention; do not cite d1865d9c7006bd37 in the report."
+    },
+    "note": "an interim value 344b188dcb7dfc5f computed during this session used a NaN-special-cased row rendering and is NOT the frozen convention; cite bb3a1306b4562217 only."
+  }
+}

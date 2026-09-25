@@ -1,0 +1,69 @@
+{
+  "amendment": "STAGE-4C FINAL-LABEL PERSISTENCE (RECOVERY / MIGRATION)",
+  "version": 1,
+  "date": "2026-09-11",
+  "authorised_by": "supervisor (recovery/migration amendment decision)",
+  "parent_run_id": "stage4c_62ed0d75d565",
+  "amended_run_id": "stage4c_v2_323194df26",
+  "defect": {
+    "id": "FINAL_LABEL_VECTOR_NOT_PERSISTED",
+    "where": "Stage-4B-4 scientific arm result contract",
+    "description": "successful arm records persisted final_labels_hash, selected_algorithm and selected_configuration but not the final label vector, so the pre-frozen offline evaluation phase could not compute ARI from a finished run",
+    "classification": "RESULT/STORAGE CONTRACT OMISSION",
+    "not_evidence_of": [
+      "incorrect search",
+      "incorrect model inference",
+      "incorrect metric scoring",
+      "incorrect candidate selection"
+    ]
+  },
+  "discovery": {
+    "label_boundary_opened": false,
+    "external_ari_inspected": false,
+    "ground_truth_outcomes_inspected": false,
+    "note": "discovered during Phase-C preparation, before any ground truth was loaded"
+  },
+  "scientific_semantics_changed": false,
+  "result_storage_contract_changed": true,
+  "new_contract_version": "scientific_arm_result_v2",
+  "contract_invariants": [
+    "final_labels present for every successful arm",
+    "len(final_labels) == sample_count",
+    "sha256 of the stored vector == final_labels_raw_hash",
+    "partition_hash(final_labels) == canonical_partition_hash",
+    "no successful arm may reach COMPLETE without the vector"
+  ],
+  "recovery_rule": "re-instantiate only the configuration the parent arm already selected; no search, policy resolution, CVI scoring, ranking or reranking is repeated. This is FINAL-PARTITION MATERIALIZATION, not scientific re-selection.",
+  "cryptographic_acceptance_rule": "a reconstruction is migrated only if it reproduces the parent hash under the convention that arm recorded: raw label identity, or canonical partition identity where cluster ids may permute. Canonical equality is sufficient for ARI because relabelling does not change a partition. Approximate agreement and equal cluster count are rejected.",
+  "targeted_rerun_rule": "reconstruct, verify, and fall back to a single frozen scientific execution only where verification fails or the parent produced no record. Algorithm names are never the rule. Outcomes and ARI play no part in choosing the set.",
+  "rerun_execution_policy": {
+    "one_execution_per_arm": true,
+    "repeat_until_match": false,
+    "seed_shopping": false,
+    "parent_configuration_forced": false,
+    "selection_difference_from_parent": "recorded as provenance only; permitted by the frozen numerical policy"
+  },
+  "parent_run_immutable": true,
+  "parent_records_overwritten": false,
+  "git_commit_of_fix": "a6ccb933f79da884bdbf616af2a5c760faabcd47",
+  "frozen_identities_unchanged": {
+    "corpus": "709712107424ad4e",
+    "search_space_fingerprint": "8ddf86c79888ebe9",
+    "plan_hash": "6275e89ac18cb431",
+    "metric_registry": "8d6b44f45f9cf240",
+    "numerical_policy": "353a3777e9f8400e"
+  },
+  "phase_a_parent_events": [
+    {
+      "dataset": "real_churn",
+      "event": "WATCHDOG_TIMEOUT on clustopt_ppv2 after 1800s",
+      "classification": "type A execution"
+    },
+    {
+      "dataset": "real_madelon",
+      "event": "representation checksum mismatch during concurrent fetch",
+      "classification": "type A transient retrieval; the dataset was re-verified afterwards and reproduces the frozen checksum 32c52259eeace2fc deterministically, so the frozen corpus is intact and the provenance gate correctly refused corrupted input"
+    }
+  ],
+  "lesson": "the Stage-4B-4 contract proved storage integrity but never proved that the downstream offline evaluator's required payload was persisted. A property-based gate now requires that every successful scientific result be directly evaluable offline with no scientific re-execution."
+}

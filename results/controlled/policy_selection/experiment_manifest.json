@@ -1,0 +1,24 @@
+{
+  "stage": "2C-3",
+  "kind": "FROZEN DEVELOPMENT-INFORMED ONLINE REPLAY",
+  "not_a": [
+    "untouched final held-out validation of the hybrid"
+  ],
+  "why_development_informed": "Stage-2B Split-1 results informed the decision to pursue reranker-aware policy selection and the knowledge of remaining policy headroom",
+  "what_was_frozen_first": "v2 architecture, hyperparameters and target semantics were frozen before its own Split-1 policy outcomes were inspected",
+  "replay_semantics": "selector chooses p, then lookup frozen RerankedARI(d,v,p); no clustering, Optuna, CVI or reranker inference",
+  "pre_outcome_manifest": {
+    "phase": "PRE_OUTCOME_FREEZE",
+    "final_v2_model_manifest_hash": "00ab095bfd0e8dc7",
+    "final_v1_model_manifest_hash": "ec2725e8af70c32a",
+    "split1_feature_hash": "eebbe4040e7495b0",
+    "split1_v1_selections_hash": "fd669bbff5b11cef",
+    "split1_v2_selections_hash": "3f5130b11cd1f674",
+    "development_fixed_policy_hash": "1bf264180a077d4f",
+    "stage2b5_outcomes_read": false,
+    "assertion": "no Stage-2B5 outcome file was opened during phase 1",
+    "source_commit": "7a4fd7dc852a81486bb22ed45832e835ae6c9df8",
+    "runtime_sec": 120.55229473114014
+  },
+  "source_commit": "7a4fd7dc852a81486bb22ed45832e835ae6c9df8"
+}

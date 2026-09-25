@@ -1,0 +1,48 @@
+{
+  "source_stage": "3C",
+  "status": "HYPOTHESES, not truths",
+  "H1_core_reproduction": {
+    "internal_core": [
+      "noise_aware_silhouette",
+      "silhouette",
+      "gridness_fft_acf"
+    ],
+    "internal_evidence": "Top-5 by utility AND selection in >=6/12 families; identical at 5/12, 6/12, 7/12",
+    "external_test": "do these remain broadly useful on the external corpus?"
+  },
+  "H2_specialist_reproduction": {
+    "named_candidates": [
+      "connected_components_count",
+      "contour_graph_connectivity",
+      "axial_symmetry",
+      "ribbon_thickness",
+      "fractal_dimension",
+      "parallel_bands",
+      "convexity_ratio",
+      "corner_junction_density",
+      "gridness_fft_acf"
+    ],
+    "rule": "carried forward in full; none may be deleted after outcomes"
+  },
+  "H3_fine_resolution": {
+    "internal_evidence": "27 of 42 Tier-A subfamily specialists (64%) were invisible at family level",
+    "external_requirement": "do not rely on a single global average"
+  },
+  "H4_image_vs_pattern": {
+    "internal": "Image 8 family / 26 subfamily Tier-A vs Pattern 6 / 16",
+    "external_test": "does the Image>Pattern ordering survive?"
+  },
+  "H5_gridness_interpretation": {
+    "warning": "do NOT assume gridness_fft_acf is only a grid detector",
+    "internal_evidence": "it is a core metric (9/12 families) and led on texture and radial/spiral families",
+    "treat_as": "broadly useful frequency/periodicity-derived signal"
+  },
+  "H6_ladder_counterexample": {
+    "internal": "gridness_fft_acf was a Tier-A specialist in ladder/grid, yet that family had the lowest New46 oracle-win rate (0.370) and the only negative Full60-Head14 gain (-0.0156)",
+    "principle": "metric usefulness != guaranteed end-to-end gain"
+  },
+  "H7_capture_vs_existence": {
+    "internal": "ML2DAC Tier-A specialist recall <=0.40 and exactly 0.000 in two families where those metrics were the offline optimum",
+    "external_requirement": "record not only whether a locally useful metric exists but whether each method can capture it"
+  }
+}

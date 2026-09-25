@@ -1,0 +1,10 @@
+quantity,value,note
+overall_mean_delta_C4_minus_A0_50ds,0.0369975426698006,
+circles_moons_contribution_to_50ds_mean,0.06661477438557184,sum(delta over the 6 circle/moon datasets) / 50
+mean_delta_on_remaining_44,-0.03365594513155822,
+C4_mean_on_remaining_44,0.3343330687661912,
+A0_mean_on_remaining_44,0.36798901389774935,
+C5_minus_A0_mean_on_remaining_44,-0.0241690532384735,
+n_circle_moon_datasets,6.0,
+n_circle_moon_dependence_groups,2.0,
+decomposition_check_overall_equals_contrib_plus_rest,0.0,

@@ -1,0 +1,244 @@
+{
+  "source_commit": "e481db10597e4aee8776537003fb79c0147fc09a",
+  "external_submodule_commit": "c946b9eaf58d9e7a566e95f785303da850747653",
+  "hashes": {
+    "method_registry.json": "4db39c8bdbc847a6",
+    "benchmark_protocol.json": "8a448110cd99aa09",
+    "runtime_protocol.json": "fc5fb9b12c6ccf11",
+    "domain_shift_protocol.json": "de1bbdd8d7eb9b04",
+    "external_metric_hypotheses.json": "7d4d8c6e662f802d",
+    "metric_registry.json": "f2cffb9336bfe470",
+    "external_cvi_comparator_audit.json": "5594213942c44799",
+    "result_hierarchy.json": "bd9f98c1b1b156cb",
+    "result_schemas.json": "5c90a1b015b27e9d",
+    "resume_semantics.json": "10c522173bc954ce",
+    "modern_cvi_registry.json": "0dc467ba458e1980",
+    "reference_runtime_manifest.json": "adaea439e8fbe3b7",
+    "dcsi_sensitivity_analysis_plan.json": "98e55f4f7a50e05d",
+    "dcsi_definition_audit.json": "8adea6f6480a5f73",
+    "modern_cvi_provenance.json": "4f0f2514e74cd59d",
+    "cdbw_definition_audit.json": "bc1ac29e07c26cf9",
+    "pp_artifact_provenance.json": "3f8d8714fc8cda66",
+    "pp_inference_determinism_audit.json": "c43ac0a8334d1c32",
+    "clustopt_adapter_source_audit.json": "b40caa460445d17a",
+    "protocol_amendment_autoclust_common_seed.json": "270de0a86f13fd10",
+    "protocol_amendment_ml2dac_common_seed.json": "8b75f5c950101dcd",
+    "ml2dac_direction_registry.json": "c657145a89d9d2d1",
+    "protocol_amendment_ml2dac_scoring_semantics.json": "aa20567a242499ea",
+    "ml2dac_legacy_scoring_defects.json": "3e19df9eb8c4d598",
+    "ml2dac_cvi_applicability_policy.json": "adadf84fa5e2f5a8",
+    "numerical_reproducibility_policy.json": "353a3777e9f8400e",
+    "metric_analysis_registry.json": "8d6b44f45f9cf240",
+    "stage4c_execution_plan.json": "6275e89ac18cb431",
+    "stage4c_final_labels_persistence_amendment.json": "ea8cd1c15c41de4a"
+  },
+  "amendments": [
+    {
+      "stage": "4B-1",
+      "file": "metric_registry.json",
+      "previous_sha256_16": "5a9483c63e76fe71",
+      "new_sha256_16": "f2cffb9336bfe470",
+      "change": "added a `modern_comparators` block pointing at the frozen modern-CVI registry, naming the four primary comparator ids, declaring the set closed, and excluding the dcsi_author_compat diagnostic from every FDR family",
+      "what_did_not_change": [
+        "the existing metric inventory (7 / 10 / 46 designed, 44 live / 61 extended)",
+        "the utility definition",
+        "the fixed32 candidate-bank specification",
+        "the endpoint list",
+        "the multiplicity method"
+      ],
+      "why_recorded": "metric_registry.json is covered by the Stage-4A hash freeze. The amendment is declared here rather than silently invalidating the frozen hash.",
+      "configs_added_in_this_stage": [
+        "modern_cvi_registry.json",
+        "reference_runtime_manifest.json",
+        "dcsi_sensitivity_analysis_plan.json",
+        "dcsi_definition_audit.json",
+        "modern_cvi_provenance.json"
+      ]
+    },
+    {
+      "stage": "4B-1b",
+      "files": [
+        "modern_cvi_registry.json (CDbw entry rewritten; cdbw_package_compat diagnostic added)",
+        "modern_cvi_provenance.json (CDbw status, root cause, validation evidence)"
+      ],
+      "files_added": [
+        "cdbw_definition_audit.json",
+        "pp_artifact_provenance.json",
+        "pp_inference_determinism_audit.json"
+      ],
+      "previous_sha256_16": {
+        "modern_cvi_registry.json": "01b0ef2e62932637",
+        "modern_cvi_provenance.json": "b75b87d0837abf38"
+      },
+      "new_sha256_16": {
+        "modern_cvi_registry.json": "0dc467ba458e1980",
+        "modern_cvi_provenance.json": "4f0f2514e74cd59d"
+      },
+      "change": "the CDbw entry now describes a paper-faithful correction layer rather than a wrapper under a canonical ordering, and records the package defect that made the correction necessary",
+      "what_did_not_change": [
+        "the primary comparator set and its count",
+        "the CDbw frozen parameters (euclidean, comb, s=3)",
+        "the CVNN, CVDD and DCSI entries",
+        "the existing metric inventory",
+        "the frozen corpus manifest hash 709712107424ad4e"
+      ]
+    },
+    {
+      "stage": "4B-2",
+      "file": "method_registry.json",
+      "previous_sha256_16": "a8a36609e55fe916",
+      "new_sha256_16": "4db39c8bdbc847a6",
+      "change": "recorded the authoritative KNN artifact directory, flagged the MLP hashes carried on the KNN entries, and cleared the resolved PP binary blocker",
+      "what_did_not_change": [
+        "the six ClustOpt METHOD_IDs and their bindings",
+        "the frozen search protocol",
+        "the frozen corpus manifest hash 709712107424ad4e"
+      ],
+      "configs_added_in_this_stage": [
+        "clustopt_adapter_source_audit.json"
+      ]
+    },
+    {
+      "stage": "4B-3A1",
+      "type": "AUTHORISED PRE-RUN SCIENTIFIC PROTOCOL AMENDMENT",
+      "file": "benchmark_protocol.json",
+      "previous_sha256_16": "be6865e2dc20e504",
+      "new_sha256_16": "5ec678d649fcf57f",
+      "change": "AutoClust A0-A3 moved from per-arm seed identity to the common identity autoclust_shared_candidate_slate; added seed_groups and an explicit physical_reuse_status that keeps SEED IDENTITY separate from PHYSICAL REUSE",
+      "also_changed": "models/Independent_Domain_Benchmark/search/protocol.py TRACE_IDENTITY (four AutoClust entries added)",
+      "authorised": "supervisor, Option 2, 2026-09-09",
+      "outcome_driven": false,
+      "no_external_scientific_result_inspected_before_amendment": true,
+      "record": "docs/supervisor_revision/stage4/STAGE4_PROTOCOL_AMENDMENT_AUTOCLUST_COMMON_SEED.md",
+      "what_did_not_change": [
+        "corpus manifest 709712107424ad4e",
+        "search-space fingerprint 8ddf86c79888ebe9",
+        "the four scientific METHOD_IDs",
+        "model artifacts",
+        "metric registries",
+        "budget 50",
+        "K range 2..5",
+        "ClustOpt and ML2DAC seed identities"
+      ],
+      "hashing_convention_note": "config_hashes.json mixes conventions: files frozen in Stage 4A hash their LF-normalised bytes, while files rewritten later by tooling hash raw working-tree bytes. benchmark_protocol.json follows the Stage-4A LF convention, so the LF value is recorded here (raw working-tree value: 61208638cbcd74de). This pre-existing inconsistency is reported, not silently normalised."
+    },
+    {
+      "stage": "4B-3B2",
+      "type": "AUTHORISED PRE-RUN SCIENTIFIC PROTOCOL AMENDMENT",
+      "file": "benchmark_protocol.json",
+      "previous_sha256_16": "5ec678d649fcf57f",
+      "new_sha256_16": "138a3ec8a7db2f02",
+      "change": "ML2DAC M0-M3 moved from per-arm seed identity to the common identity ml2dac_shared_candidate_slate; trace_reuse.physical_reuse_status.ml2dac set to SEED IDENTITY AUTHORISED / PHYSICAL EXECUTION REUSE PENDING EMPIRICAL VALIDATION",
+      "also_changed": "models/Independent_Domain_Benchmark/search/protocol.py TRACE_IDENTITY (four ML2DAC entries added); raw a19f8e5e01a02e60 -> 7ccf1d0f8bdc9929, canonical 21ee2a7bbcfa0028 -> 491abecfab1ad319",
+      "authorised": "supervisor, Stage 4B-3B2 brief section 6, 2026-09-10",
+      "outcome_driven": false,
+      "no_external_scientific_result_inspected_before_amendment": true,
+      "record": "docs/supervisor_revision/stage4/STAGE4_PROTOCOL_AMENDMENT_ML2DAC_COMMON_SEED.md",
+      "manifest": "configs/protocol_amendment_ml2dac_common_seed.json",
+      "what_did_not_change": [
+        "corpus manifest 709712107424ad4e",
+        "search-space fingerprint 8ddf86c79888ebe9",
+        "the four scientific METHOD_IDs",
+        "method_registry.json (4db39c8bdbc847a6 raw, unchanged)",
+        "model artifacts",
+        "metric registries",
+        "budget 50",
+        "K range 2..5",
+        "ClustOpt and AutoClust seed identities",
+        "derive_seed formula and BASE_SEED",
+        "runners/freeze_stage4a_configs.py, deliberately left showing the ORIGINAL Stage-4A per-arm groups so the provenance chain stays honest"
+      ],
+      "configs_added_in_this_stage": [
+        "protocol_amendment_ml2dac_common_seed.json"
+      ],
+      "hashing_convention_note": "both conventions are recorded in the manifest; the value here is the LF-normalised one, matching the rest of this file (raw working-tree value: 6d3f7f4db95dae04)"
+    },
+    {
+      "stage": "4B-3B3",
+      "type": "STATUS / PROVENANCE METADATA RECONCILIATION (NOT a protocol amendment)",
+      "file": "benchmark_protocol.json",
+      "previous_sha256_16": "138a3ec8a7db2f02",
+      "new_sha256_16": "8a448110cd99aa09",
+      "previous_raw_sha256_16": "6d3f7f4db95dae04",
+      "new_raw_sha256_16": "b1e04b2826587481",
+      "change": "trace_reuse.physical_reuse_status for AutoClust and ML2DAC updated from PENDING to VALIDATED to match the executed evidence; trace_reuse.shared extended with the two validated four-arm groups; the frozen physical candidate-trace plan (6 per dataset/view, 900 total) recorded",
+      "classification": {
+        "execution_semantics_changed": false,
+        "status_provenance_metadata_updated": true,
+        "unchanged": [
+          "METHOD_IDs",
+          "TRACE_IDENTITY mappings",
+          "seed identities",
+          "derive_seed behaviour",
+          "budgets",
+          "search space",
+          "algorithms",
+          "model artifacts",
+          "corpus 709712107424ad4e",
+          "search-space fingerprint 8ddf86c79888ebe9"
+        ]
+      },
+      "authorised": "supervisor, Stage 4B-3B3 brief section 2, 2026-09-10",
+      "outcome_driven": false,
+      "no_external_scientific_result_inspected_before_amendment": true
+    },
+    {
+      "stage": "4B-3B3",
+      "type": "AUTHORISED PRE-RUN SCIENTIFIC PROTOCOL AMENDMENT",
+      "file": "protocol_amendment_ml2dac_scoring_semantics.json",
+      "scoring_semantics_id": "ml2dac_corrected_cvi_scoring_v1",
+      "change": "Stage-4 ML2DAC evaluates every predicted CVI through its frozen canonical implementation with an explicit direction; the legacy Stage-3A 7-CVI gate, the implicit MINIMIZE default and the Dunn/Coggins-Jain sign inversion are not reproduced",
+      "authorised": "supervisor, Stage 4B-3B3 decision OPTION 2, 2026-09-10",
+      "outcome_driven": false,
+      "no_external_scientific_result_inspected_before_amendment": true,
+      "is_a_stage3_correction_replay": false,
+      "record": "docs/supervisor_revision/stage4/STAGE4_PROTOCOL_AMENDMENT_ML2DAC_SCORING_SEMANTICS.md",
+      "configs_added_in_this_stage": [
+        "ml2dac_direction_registry.json",
+        "protocol_amendment_ml2dac_scoring_semantics.json"
+      ],
+      "execution_components_unchanged": true
+    },
+    {
+      "stage": "4B-3B3 addendum",
+      "type": "APPLICABILITY / FAILURE-REPORTING POLICY (not a model or execution change)",
+      "file": "ml2dac_cvi_applicability_policy.json",
+      "policy": "NO CVI FALLBACK",
+      "change": "structural applicability frozen for all 61 classes (61/61 on 1-D and 2-D); PREDICTED_CVI_INAPPLICABLE_FOR_VIEW separated from NO_ELIGIBLE_CANDIDATE; X_full made a required scorer argument",
+      "correction": "the earlier 16/61 1-D applicability figure and the projected failure table are WITHDRAWN - they came from passing the 1-D view as X_full, which starves the 46 space=\"full\" metrics of the second dimension",
+      "authorised": "supervisor, applicability addendum, 2026-09-10",
+      "outcome_driven": false,
+      "no_external_scientific_result_inspected": true,
+      "retraining": false,
+      "tuning": false,
+      "inventory_change": false,
+      "physical_search_change": false,
+      "record": "docs/supervisor_revision/stage4/STAGE4_ML2DAC_CVI_APPLICABILITY_POLICY.md"
+    },
+    {
+      "stage": "4B-4",
+      "type": "NUMERICAL REPRODUCIBILITY POLICY (not a model or scoring change)",
+      "file": "numerical_reproducibility_policy.json",
+      "version": 1,
+      "change": "COMPLETE persisted outputs are authoritative and are never recomputed on resume; the bit-exact-recomputation requirement is withdrawn; orientation_histogram_entropy jitter is recorded as a documented numerical limitation with the metric left unmodified",
+      "authorised": "supervisor, Stage 4B-4 decision, 2026-09-10",
+      "outcome_driven": false,
+      "no_external_scientific_result_inspected": true,
+      "metric_implementations_changed": false,
+      "inventories_changed": false,
+      "retraining": false,
+      "record": "docs/supervisor_revision/stage4/STAGE4B4_COMMON_RUNNER.md"
+    },
+    {
+      "stage": "4C",
+      "type": "RESULT/STORAGE CONTRACT CORRECTION (recovery/migration)",
+      "file": "stage4c_final_labels_persistence_amendment.json",
+      "parent_run_id": "stage4c_62ed0d75d565",
+      "amended_run_id": "stage4c_v2_323194df26",
+      "scientific_semantics_changed": false,
+      "label_boundary_opened_before_amendment": false,
+      "external_ari_inspected": false,
+      "change": "successful scientific arm records now persist the final label vector (scientific_arm_result_v2)"
+    }
+  ]
+}

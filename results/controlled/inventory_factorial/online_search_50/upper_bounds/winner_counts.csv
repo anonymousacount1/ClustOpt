@@ -1,0 +1,4 @@
+scope,n_datasets,n_datasets_with_tied_win,HU_win_or_tie,HU_unique_win,HP_win_or_tie,HP_unique_win,HO_win_or_tie,HO_unique_win,FU_win_or_tie,FU_unique_win,FP_win_or_tie,FP_unique_win,FO_win_or_tie,FO_unique_win
+A_all_six_arms,1055,496,154.0,24.0,395,47,409.0,43.0,84.0,42.0,455,134,627.0,269.0
+B_deployable,1055,374,192.0,45.0,558,209,,,128.0,86.0,683,341,,
+C_predicted_selective,1055,361,,,635,274,,,,,781,420,,

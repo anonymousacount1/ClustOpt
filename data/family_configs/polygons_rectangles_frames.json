@@ -1,0 +1,82 @@
+{
+  "family_id": "polygons_rectangles_frames",
+  "family_name": "Polygons / rectangles / frames",
+  "family_seed": 70435006,
+  "n_features": 2,
+  "feature_names": ["x", "y"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "triangles_and_quadrilaterals",
+      "cluster_budget": {"2": 32, "3": 48, "4": 48, "5": 32},
+      "component_strategy": {"component_type": "polygon", "components_per_cluster": 1},
+      "parameter_ranges": {"n_sides": [3, 4], "radius": [0.06, 0.11], "corner_rounding": [0.0, 0.2], "boundary_thickness": [0.005, 0.012]}
+    },
+    {
+      "subfamily_id": "rectangles",
+      "cluster_budget": {"2": 32, "3": 48, "4": 48, "5": 32},
+      "component_strategy": {"component_type": "rectangle_frame", "components_per_cluster": 1},
+      "parameter_ranges": {"width": [0.10, 0.20], "height_ratio": [0.5, 0.95], "rotation": [-0.2, 0.2], "frame_thickness": [0.004, 0.011]}
+    },
+    {
+      "subfamily_id": "rotated_rectangles",
+      "cluster_budget": {"2": 32, "3": 48, "4": 48, "5": 32},
+      "component_strategy": {"component_type": "rectangle_frame", "components_per_cluster": 1},
+      "parameter_ranges": {"width": [0.10, 0.20], "height_ratio": [0.45, 1.0], "rotation": [-1.5, 1.5], "frame_thickness": [0.004, 0.012]}
+    },
+    {
+      "subfamily_id": "open_frames",
+      "cluster_budget": {"2": 34, "3": 51, "4": 51, "5": 34},
+      "component_strategy": {"component_type": "rectangle_frame", "components_per_cluster": 1},
+      "parameter_ranges": {"width": [0.10, 0.20], "height_ratio": [0.5, 0.95], "rotation": [-0.6, 0.6], "frame_thickness": [0.004, 0.011]}
+    },
+    {
+      "subfamily_id": "noisy_polygons",
+      "cluster_budget": {"2": 34, "3": 51, "4": 51, "5": 34},
+      "component_strategy": {"component_type": "polygon", "components_per_cluster": 1},
+      "parameter_ranges": {"n_sides": [3, 6], "radius": [0.06, 0.12], "corner_rounding": [0.0, 0.4], "boundary_thickness": [0.008, 0.020]}
+    },
+    {
+      "subfamily_id": "overlapping_polygons",
+      "cluster_budget": {"2": 34, "3": 51, "4": 51, "5": 34},
+      "component_strategy": {"component_type": "polygon", "components_per_cluster": 1},
+      "parameter_ranges": {"n_sides": [3, 6], "radius": [0.08, 0.14], "corner_rounding": [0.0, 0.3], "boundary_thickness": [0.005, 0.013]}
+    },
+    {
+      "subfamily_id": "polygon_blob_mixture",
+      "cluster_budget": {"2": 36, "3": 53, "4": 53, "5": 35},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "polygon", "weight": 1.0, "parameter_ranges": {"n_sides": [3, 6], "radius": [0.06, 0.12], "boundary_thickness": [0.005, 0.013]}},
+          {"type": "blob",    "weight": 1.0, "parameter_ranges": {"sigma_min": 0.035, "sigma_max": 0.08}}
+        ]
+      }
+    }
+  ]
+}

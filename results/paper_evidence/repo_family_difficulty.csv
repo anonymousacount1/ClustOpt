@@ -1,0 +1,13 @@
+family_dir,easy,hard,medium,very_hard
+arcs_circles_rings,340,510,594,256
+deinterleaving_pri_toa_amp_like,347,522,604,260
+hollow_topological_components,280,420,490,210
+hybrid_mixed_geometry,406,610,716,301
+ladder_grid_lattice,268,398,466,202
+linear_bands_parallel_stripes,300,450,522,228
+parabolic_curved_chains,254,380,447,186
+piecewise_polylines_corners,280,418,488,214
+polygons_rectangles_frames,234,348,409,176
+radial_spiral_meander,253,380,450,184
+standard_clustering_blobs,200,294,360,146
+texture_density_fields,253,380,450,184

@@ -1,0 +1,32 @@
+{
+  "modern_primary": [],
+  "comparison_groups": {
+    "Established": {
+      "n": 10,
+      "utility_macro_mean": 0.44415501308249083,
+      "best_metric": [
+        "noise_aware_silhouette"
+      ]
+    },
+    "New46": {
+      "n": 44,
+      "utility_macro_mean": 0.40896078898543675,
+      "best_metric": [
+        "gridness_fft_acf"
+      ]
+    },
+    "Original": {
+      "n": 7,
+      "utility_macro_mean": 0.4356907085955172,
+      "best_metric": [
+        "silhouette"
+      ]
+    }
+  },
+  "diagnostics_excluded": [
+    "cdbw_package_compat",
+    "dcsi_author_compat"
+  ],
+  "mode_shopping": false,
+  "note": "primary remains the paper-faithful dcsi and cdbw; the compatibility variants are sensitivity diagnostics and never enter this comparison"
+}

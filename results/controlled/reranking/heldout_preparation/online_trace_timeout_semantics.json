@@ -1,0 +1,21 @@
+{
+  "source": "config_snapshot.json search_algorithm.params on every Split-1 online run, and Optuna_Search.optimize",
+  "requested_n_trials": 50,
+  "wall_clock_timeout_sec": 150,
+  "optuna_call": "study.optimize(objective, n_trials=self.n_trials, timeout=self.timeout, callbacks=callbacks)",
+  "stopping_rule": "Optuna stops at whichever bound is reached FIRST -- 50 delivered trials or 150 seconds of wall clock",
+  "failed_trials_consume_budget": true,
+  "failed_trials_evidence": "clustopt_execution: 'a candidate that raises still consumes a trial, so delivered == valid + failed'",
+  "invalid_but_completed_trials_stored": true,
+  "invalid_definition": "Search_Results_Logger._label_stats: valid = >= 2 non-noise clusters",
+  "legacy_field_availability": {
+    "n_trials_completed": "present on Split-1 runs",
+    "requested_trials": "None on Split-1 runs (additive block added after these runs were produced)",
+    "delivered_trials": "None",
+    "valid_trials": "None",
+    "failed_trials": "None",
+    "search_seed": "None (unseeded TPE)"
+  },
+  "authoritative_counts_for_evaluation": "derived from the per-trial clustopt_results.csv: delivered = row count; eligible = rows with valid == True",
+  "REQUIRED_STATEMENT": "50 is a requested maximum/budget; the final evaluation uses the ACTUAL visited candidate slate. Runs with fewer than 50 trials are fully evaluable and must not be extrapolated, synthesised, re-run or dropped."
+}

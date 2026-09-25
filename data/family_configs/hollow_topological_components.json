@@ -1,0 +1,82 @@
+{
+  "family_id": "hollow_topological_components",
+  "family_name": "Hollow / topological components",
+  "family_seed": 80647007,
+  "n_features": 2,
+  "feature_names": ["x", "y"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "single_hole_rings",
+      "cluster_budget": {"2": 38, "3": 57, "4": 57, "5": 38},
+      "component_strategy": {"component_type": "ring_annulus", "components_per_cluster": 1},
+      "parameter_ranges": {"inner_radius": [0.05, 0.10], "thickness": [0.015, 0.035], "ellipse_ratio": [0.85, 1.0], "angle_high": [6.0, 6.283]}
+    },
+    {
+      "subfamily_id": "multi_hole_shapes",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "ring_annulus", "components_per_cluster": 2},
+      "parameter_ranges": {"inner_radius": [0.03, 0.07], "thickness": [0.010, 0.025], "ellipse_ratio": [0.8, 1.0], "angle_high": [6.0, 6.283]}
+    },
+    {
+      "subfamily_id": "broken_hollow_shapes",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "ring_annulus", "components_per_cluster": 1},
+      "parameter_ranges": {"inner_radius": [0.04, 0.09], "thickness": [0.012, 0.030], "ellipse_ratio": [0.7, 1.0], "angle_high": [2.0, 4.5]}
+    },
+    {
+      "subfamily_id": "bridged_components",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "blob", "components_per_cluster": 1},
+      "parameter_ranges": {"sigma_min": 0.035, "sigma_max": 0.075, "anisotropy": 0.3}
+    },
+    {
+      "subfamily_id": "disconnected_components",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "blob", "components_per_cluster": 1},
+      "parameter_ranges": {"sigma_min": 0.030, "sigma_max": 0.06, "anisotropy": 0.2}
+    },
+    {
+      "subfamily_id": "topological_noise",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "ring_annulus", "components_per_cluster": 1},
+      "parameter_ranges": {"inner_radius": [0.04, 0.09], "thickness": [0.020, 0.045], "ellipse_ratio": [0.7, 1.0], "angle_high": [4.0, 6.283]}
+    },
+    {
+      "subfamily_id": "hollow_mixed_shapes",
+      "cluster_budget": {"2": 42, "3": 63, "4": 63, "5": 42},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "ring_annulus", "weight": 1.0},
+          {"type": "polygon",      "weight": 1.0, "parameter_ranges": {"n_sides": [3, 6], "radius": [0.07, 0.12], "boundary_thickness": [0.005, 0.014]}}
+        ]
+      }
+    }
+  ]
+}

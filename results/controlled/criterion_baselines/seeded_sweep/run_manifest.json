@@ -1,0 +1,78 @@
+{
+  "experiment": "E1 conditioning decision",
+  "generated_at_utc": "2026-09-24T01:14:23.453730+00:00",
+  "run_id": "e1_20260922T165734Z",
+  "split_dir_suffix": "e1_conditioning",
+  "output_split_dir": "split_01_e1_conditioning",
+  "isolation": "new split dir; split_01, split_01_online_fixed50 and split_01_offline_fixed32 are untouched",
+  "arms": [
+    "e1_c4_seed",
+    "e1_meanprof",
+    "e1_core3",
+    "e1_best1",
+    "e1_random"
+  ],
+  "reused_arms": {
+    "stage1_full60_uniform_fixed50": "E1-UNIF60, reused from split_01_online_fixed50 (identical seeded protocol, verified)"
+  },
+  "budget": {
+    "n_trials": 50,
+    "timeout_sec": null,
+    "note": "the historical end-to-end arms carried a 150 s per-view timeout and therefore did NOT deliver equal budgets (measured mean delivered trials: 48.4 for knn_top10_raw vs 24.2 for all_metrics_uniform); the E1 arms remove it so the budget binds on trials"
+  },
+  "views": [
+    "x_only",
+    "y_only",
+    "xy_2d"
+  ],
+  "search_space": "inherited verbatim from phaseE2_knn/knn_top10_raw; per-view hashes verified identical across every arm",
+  "config_sha256_16": {
+    "e1_c4_seed/x_only": "e1e77ba7781840a9",
+    "e1_c4_seed/y_only": "7330f7704933132c",
+    "e1_c4_seed/xy_2d": "4557426a49e6ad0f",
+    "e1_meanprof/x_only": "84aeb5fcc787b841",
+    "e1_meanprof/y_only": "45650b9d739d2439",
+    "e1_meanprof/xy_2d": "956320f1c008721a",
+    "e1_core3/x_only": "035137fc93633bec",
+    "e1_core3/y_only": "87632a4de77d22d1",
+    "e1_core3/xy_2d": "53d11a41cc18b77d",
+    "e1_best1/x_only": "8e6f137076e07cd2",
+    "e1_best1/y_only": "ea7818576b3fdfa6",
+    "e1_best1/xy_2d": "470ea0a26625d943",
+    "e1_random/x_only": "dbdd97785c1122b4",
+    "e1_random/y_only": "e834ec129783804c",
+    "e1_random/xy_2d": "d54cb74a065017de"
+  },
+  "git": {
+    "branch": "release",
+    "head": "5ba907d17350328d0f8b3c657242d2a356f71d5d"
+  },
+  "environment": {
+    "interpreter": ".venv_clustopt (Python 3.12.2)",
+    "numpy": "2.1.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.6.0",
+    "optuna": "4.1.0",
+    "shapely": "2.0.6",
+    "opencv": "4.10.0",
+    "note": "matches the recorded scientific environment (paper_analysis_v2 run_config: Python 3.12, NumPy 2.1.3, SciPy 1.14.1, scikit-learn 1.6.0)",
+    "host_platform": "Windows-11-10.0.26200-SP0"
+  },
+  "source_change": {
+    "file": "models/ClustOpt/search_algorithm/search_algorithm_implementations/Optuna_Search.py",
+    "change": "additive optional `sampler` parameter ('tpe' | 'random'); omitting it reproduces every historical path byte-for-byte",
+    "why": "E1-RANDOM needs Optuna's uniform RandomSampler over the same search space"
+  },
+  "progress": {
+    "subfamilies_complete": 78,
+    "subfamilies_total": 86,
+    "datasets_with_any_run": 1055,
+    "runs_persisted": 15825,
+    "runs_expected_full": 15825
+  },
+  "runtime": {
+    "total_runtime_hours_persisted": 128.96405972186102,
+    "workers": 7,
+    "parallelism": "record"
+  }
+}

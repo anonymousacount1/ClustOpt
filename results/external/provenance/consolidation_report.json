@@ -1,0 +1,1516 @@
+{
+  "contract": "stage4c_run_namespace_consolidation_v1",
+  "source_run_id": "stage4c_ee84f305a6d8",
+  "target_run_id": "stage4c_v2_323194df26",
+  "applied": true,
+  "reason": "run_id_for hashes git_commit; committing runner code between phases opened a second namespace while every frozen scientific identity stayed equal and preflight-verified",
+  "acceptance_rule": "COMPLETE + store integrity + provenance rebuilt from the archived corpus + per-candidate raw and canonical label-hash reproduction + bank_id agreement + hash-preserving re-finalisation",
+  "ground_truth_loaded": false,
+  "banks_examined": 150,
+  "outcomes": {
+    "CONSOLIDATED": 150
+  },
+  "rows": [
+    {
+      "key": "fixed32__fcps_atom__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "a69edcffdbbe7cd2",
+      "metrics_content_hash": "c58579a20532667f",
+      "provenance_hash": "3193191bef08c47c",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_atom__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "eb4b7416a3af5a28",
+      "metrics_content_hash": "fbeb0884cec95e4c",
+      "provenance_hash": "efdc6aff46d33155",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_atom__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "086351923571aa01",
+      "metrics_content_hash": "57e7c3924c9f3c99",
+      "provenance_hash": "0520702f872b364e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_chainlink__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "5ace6d9ac78d024a",
+      "metrics_content_hash": "f8b864a7196f0f75",
+      "provenance_hash": "5a407eec8ac5401e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_chainlink__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "db22ef33818e2719",
+      "metrics_content_hash": "aacfe6c99e72abc8",
+      "provenance_hash": "7c7d57ac7a5f00c4",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_chainlink__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "507944fc70a387d5",
+      "metrics_content_hash": "8ba41160236f7561",
+      "provenance_hash": "3d1ad7bc1102bc40",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_engytime__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "335997a3d8224add",
+      "metrics_content_hash": "e00c328faa95b224",
+      "provenance_hash": "9bef5218d40fa77a",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_engytime__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "aab8bb20ba540eb5",
+      "metrics_content_hash": "4b9ca6e6ad9092f5",
+      "provenance_hash": "f4ac001107088dc1",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_engytime__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "1b59087b833118e2",
+      "metrics_content_hash": "fa98721b4910933e",
+      "provenance_hash": "bac77513fef04e42",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_lsun__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "0413fc86b9d2308f",
+      "metrics_content_hash": "fe457852726bc136",
+      "provenance_hash": "52af5d2c0f9c9674",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_lsun__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "43589b8b5a080f26",
+      "metrics_content_hash": "b51b7c7f5f36ac1b",
+      "provenance_hash": "3628d836bea92f1e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_lsun__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "5e374c64af0b8a6c",
+      "metrics_content_hash": "6fe36e6d87b59204",
+      "provenance_hash": "7b528c6eaf0c7f16",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_tetra__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "e00d84024de0a07e",
+      "metrics_content_hash": "83ea3e3bc60bff15",
+      "provenance_hash": "21bb22617e045295",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_tetra__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "e4bc89e275d0965e",
+      "metrics_content_hash": "3f0ebbbb522902e1",
+      "provenance_hash": "1cb562b279502a7d",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_tetra__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "6e55e14dd09cf420",
+      "metrics_content_hash": "eb1af8273c803081",
+      "provenance_hash": "9f28dd95dc4c4de9",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_twodiamonds__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "df5e9d90dff35a2b",
+      "metrics_content_hash": "60fea431bd6582f5",
+      "provenance_hash": "7eb659feafc24907",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_twodiamonds__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "05d77294462afec2",
+      "metrics_content_hash": "b7a4d4b848cdb25b",
+      "provenance_hash": "0648cf713fc88925",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_twodiamonds__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "061a38d48a714658",
+      "metrics_content_hash": "ad6a87568913c25f",
+      "provenance_hash": "6918b032ff847037",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_wingnut__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "1772f3dff5fdfdb2",
+      "metrics_content_hash": "f6b3420965dc72fe",
+      "provenance_hash": "869121c440148d11",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_wingnut__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "510dd2941e0d55f4",
+      "metrics_content_hash": "62c10f7b31556419",
+      "provenance_hash": "cb868be24d41d77c",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__fcps_wingnut__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "098762a17d98c6e1",
+      "metrics_content_hash": "80161ca8c8687ed2",
+      "provenance_hash": "1a6da8066d448e50",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_analcatdata_authorship__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "786b62c063f27334",
+      "metrics_content_hash": "12986d1310b9a5fe",
+      "provenance_hash": "bce9d4bd1db3f9de",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_analcatdata_authorship__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "c5d5513312f0fe8d",
+      "metrics_content_hash": "a46954b82039e03d",
+      "provenance_hash": "97f02291586724b5",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_analcatdata_authorship__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "d9ace31ae4153869",
+      "metrics_content_hash": "a7b4d3afc30f518c",
+      "provenance_hash": "df39556401923ea2",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_balance_scale__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "de38bfb84afc379e",
+      "metrics_content_hash": "66c211b2fa5251d0",
+      "provenance_hash": "994be4fccf434031",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_balance_scale__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "a504dd46925e701b",
+      "metrics_content_hash": "248da73278e54b71",
+      "provenance_hash": "b1857afd127f9a4e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_balance_scale__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "f1377c80282e4471",
+      "metrics_content_hash": "bf302d83dc5873ce",
+      "provenance_hash": "e9399c2049ac821f",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_banknote__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "e34dbf17cde923a8",
+      "metrics_content_hash": "ef422ad06b8dae5a",
+      "provenance_hash": "b68d57b25ec4fa7c",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_banknote__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "acc8bb9e2d5488ce",
+      "metrics_content_hash": "65dcf1c16feb788e",
+      "provenance_hash": "a9b4443184b9ecab",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_banknote__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "c33c12e375b17303",
+      "metrics_content_hash": "77c43305a2566e51",
+      "provenance_hash": "01a1309a797ae1fb",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_blood_transfusion__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "a38bc13229c77f6b",
+      "metrics_content_hash": "cbb290532f3f319b",
+      "provenance_hash": "e74c20e132b60a55",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_blood_transfusion__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "62cedcdc271474ee",
+      "metrics_content_hash": "66388748c7ba072c",
+      "provenance_hash": "9f6324ace3647565",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_blood_transfusion__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "a139de3aeaf966f5",
+      "metrics_content_hash": "99a373a1e20db000",
+      "provenance_hash": "7fa9b852f934ee9c",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_breast_cancer_wdbc__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "4137fc4eb5846807",
+      "metrics_content_hash": "29339610bc04386d",
+      "provenance_hash": "779a02341aadf7e8",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_breast_cancer_wdbc__xy_2d",
+      "candidates_verified": 30,
+      "bank_content_hash": "7ae5f056a0b9cae5",
+      "metrics_content_hash": "cc1fece64335140f",
+      "provenance_hash": "8e29ac859c46dac0",
+      "metric_rows": 2070,
+      "valid_candidates": 30,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_breast_cancer_wdbc__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "9337a40102187894",
+      "metrics_content_hash": "905a4014c58b620b",
+      "provenance_hash": "8735b0b31bafb609",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_car_evaluation__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "15c5e793876cccb3",
+      "metrics_content_hash": "ee10a6fdcea5cb16",
+      "provenance_hash": "6258ff4183e06744",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_car_evaluation__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "fe3fd0641fb3ccee",
+      "metrics_content_hash": "86c4ac7b69e3b493",
+      "provenance_hash": "a1cd7fce7b2e10b8",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_car_evaluation__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "45181ba1f6771b44",
+      "metrics_content_hash": "b4ae539a54c86032",
+      "provenance_hash": "8ed4266a87b467e9",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_cardiotocography_3c__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "b2276310c6b4f06d",
+      "metrics_content_hash": "769ef2ab7416a160",
+      "provenance_hash": "fcadd7157b444ff5",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_cardiotocography_3c__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "39e72afd17062b76",
+      "metrics_content_hash": "0bc86d28f47d6121",
+      "provenance_hash": "679ba49f10dcaf91",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_cardiotocography_3c__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "284ceab75483c519",
+      "metrics_content_hash": "38deaf62442d1685",
+      "provenance_hash": "76f96163f521b4e0",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_churn__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "9166a0d37ce4294c",
+      "metrics_content_hash": "a356b70a78b74521",
+      "provenance_hash": "ee8bcbeff61142d0",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_churn__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "914e9a79cdc50498",
+      "metrics_content_hash": "4159a75a2098b603",
+      "provenance_hash": "186264a4d4ad6511",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_churn__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "33ab1224ec2849eb",
+      "metrics_content_hash": "ad8c42a165399f42",
+      "provenance_hash": "7631dd244861acec",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_climate_model_crashes__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "e4ec1a042e946cbc",
+      "metrics_content_hash": "9a911ab40696a358",
+      "provenance_hash": "b27f958f388e490c",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_climate_model_crashes__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "93aad23c7187c1b6",
+      "metrics_content_hash": "edc3cb22bf9b712e",
+      "provenance_hash": "41cae7d463654d40",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_climate_model_crashes__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "3a6bb2d90a091403",
+      "metrics_content_hash": "2d72e0e2c2b31a94",
+      "provenance_hash": "65b063aab85b4ded",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_cmc__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "2e93ae87ce0650d4",
+      "metrics_content_hash": "accd74e4ab9bbd41",
+      "provenance_hash": "48cc875f70ee0a76",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_cmc__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "97e346695544fb0d",
+      "metrics_content_hash": "c39d14c3379ce899",
+      "provenance_hash": "41b7a6a4878cd979",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_cmc__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "a05f44ab87a4bb3b",
+      "metrics_content_hash": "759818c29b88cfe8",
+      "provenance_hash": "993e0c36511e8cb8",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_credit_approval__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "dac48e49ef28713d",
+      "metrics_content_hash": "6d82d35331f528ef",
+      "provenance_hash": "e1de8b0e549b4742",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_credit_approval__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "4aa5467ef7c451cb",
+      "metrics_content_hash": "150ffb34f2871289",
+      "provenance_hash": "f3912664723e3a75",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_credit_approval__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "97e505706c4f4685",
+      "metrics_content_hash": "4ca3745be33c227c",
+      "provenance_hash": "3c89cb5d22ade932",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_diabetes_pima__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "308ea3375488d7d8",
+      "metrics_content_hash": "702af8dfc3f30fce",
+      "provenance_hash": "8c090ec55865ab95",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_diabetes_pima__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "e55f457f3b6f76ad",
+      "metrics_content_hash": "1686d020a0ff5b6c",
+      "provenance_hash": "58f75a9f8c7be00e",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_diabetes_pima__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "c74ae9a29fbeca2e",
+      "metrics_content_hash": "817fd81d8b3834c0",
+      "provenance_hash": "6de0493c55b964b7",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_german_credit__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "fd372d1c692e0b04",
+      "metrics_content_hash": "df51a42cb2ca4131",
+      "provenance_hash": "ec947b67131675a5",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_german_credit__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "926ae712159436bb",
+      "metrics_content_hash": "f8ed1b2081188115",
+      "provenance_hash": "72d808e92978dddd",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_german_credit__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "8422763b055a7971",
+      "metrics_content_hash": "b770df5da451e40e",
+      "provenance_hash": "76ddae85483fca3e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_haberman__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "d52450905ac58812",
+      "metrics_content_hash": "b05224c8ad4ec0f7",
+      "provenance_hash": "898a5ed4cd625af9",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_haberman__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "dd223ff18d914886",
+      "metrics_content_hash": "8ed59c39c73a243e",
+      "provenance_hash": "8ee6297fea4a4b16",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_haberman__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "47f5cacdd4040fad",
+      "metrics_content_hash": "3f422d48744f88cb",
+      "provenance_hash": "5ed906f2fab644f2",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_hill_valley__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "e115dc90c549b538",
+      "metrics_content_hash": "015df97082752731",
+      "provenance_hash": "4b3f34a855de2461",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_hill_valley__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "f0c838576a570e90",
+      "metrics_content_hash": "c76ddb83bad42e94",
+      "provenance_hash": "e36cd0d07cf425f1",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_hill_valley__y_only",
+      "candidates_verified": 31,
+      "bank_content_hash": "dfd10622bae82989",
+      "metrics_content_hash": "4d864632340c4342",
+      "provenance_hash": "d0982207b9298f17",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ilpd_liver__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "842313e4d66deda0",
+      "metrics_content_hash": "0c78ae7b6c036ba7",
+      "provenance_hash": "8b5f5bed87f855cf",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ilpd_liver__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "857195fdd1a8ad45",
+      "metrics_content_hash": "d9ed57e3ebc43095",
+      "provenance_hash": "2e34bb2e0d6b3a56",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ilpd_liver__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "997b66b1eee5ecc8",
+      "metrics_content_hash": "c4cd3f2f2b2f7fdc",
+      "provenance_hash": "7b8b84001d8b8e5a",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ionosphere__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "d80936a0881d7122",
+      "metrics_content_hash": "685c5ec8a52fd372",
+      "provenance_hash": "c74975e2736690bf",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ionosphere__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "eb901c9bcce460f9",
+      "metrics_content_hash": "7636906585eb09af",
+      "provenance_hash": "8c335f4390ff592d",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ionosphere__y_only",
+      "candidates_verified": 31,
+      "bank_content_hash": "1ee7166aafac71a1",
+      "metrics_content_hash": "fa9bd9d6b4831270",
+      "provenance_hash": "8c76477d70c51295",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_kc1_software__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "5e7003d710341a74",
+      "metrics_content_hash": "6b848ae6208c5cb1",
+      "provenance_hash": "eb4170ffc8475b5d",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_kc1_software__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "60e74075efcbfd95",
+      "metrics_content_hash": "ef38ceeb30fc0c44",
+      "provenance_hash": "66b38fb9db362082",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_kc1_software__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "2352f4387125f35f",
+      "metrics_content_hash": "b0e7d0c33871d49c",
+      "provenance_hash": "4144de666bcba34e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_kc2_software__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "e26b288af379be79",
+      "metrics_content_hash": "9b8960b8f8fcbdd9",
+      "provenance_hash": "add3b48677e45d00",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_kc2_software__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "2c482e10063d5951",
+      "metrics_content_hash": "821f25a8f71a63b1",
+      "provenance_hash": "686f6e8cec958aa1",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_kc2_software__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "9e70dab844fd03af",
+      "metrics_content_hash": "51e027939f0f8cf0",
+      "provenance_hash": "07fdf88d6cbbd762",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_madelon__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "d1e78a8f1b4a03ac",
+      "metrics_content_hash": "f2a716621373a589",
+      "provenance_hash": "5fc2b8161bc158a2",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_madelon__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "42680b587bf56f64",
+      "metrics_content_hash": "4165218e3afddd2a",
+      "provenance_hash": "768b00d2957d1d70",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_madelon__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "67b930d596e4ba44",
+      "metrics_content_hash": "289ab799417cb36a",
+      "provenance_hash": "320472fb4978f177",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ozone_level_8hr__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "b05f32f54a53cbfd",
+      "metrics_content_hash": "5f094d9858e5c7c6",
+      "provenance_hash": "4c826077c48f355f",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ozone_level_8hr__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "67062b56c86bdc43",
+      "metrics_content_hash": "dea2c3c8052edfb6",
+      "provenance_hash": "7675856b859e0685",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_ozone_level_8hr__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "9bd3a32b603637fc",
+      "metrics_content_hash": "af508db3769b1b3f",
+      "provenance_hash": "dcbcca251c34518d",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc1_software__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "da72c3000bf69415",
+      "metrics_content_hash": "f984faa2609c1642",
+      "provenance_hash": "01f6fb90a3f67dfd",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc1_software__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "780c03bf0e3be674",
+      "metrics_content_hash": "c247cd71b1d20177",
+      "provenance_hash": "e0dfedf5a0350ea7",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc1_software__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "8d5b264cf1bc685a",
+      "metrics_content_hash": "021a2d78e3e210ab",
+      "provenance_hash": "6e9048557f9fdb89",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc3_software__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "1f0e4c9f633f69dd",
+      "metrics_content_hash": "cce305d7888597a2",
+      "provenance_hash": "ff949ee81b4d5060",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc3_software__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "67327adac3a94397",
+      "metrics_content_hash": "ec8ae21f53945b1c",
+      "provenance_hash": "e64fd3a2f491039e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc3_software__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "9f78300841540607",
+      "metrics_content_hash": "3be10ba93699a761",
+      "provenance_hash": "b6b2ce4fda117deb",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc4_software__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "0b02660cae331617",
+      "metrics_content_hash": "2884c625eed6f5b9",
+      "provenance_hash": "81d6c31a9f68275f",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc4_software__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "10aaca731edcc146",
+      "metrics_content_hash": "1ca1acf989c3e3d2",
+      "provenance_hash": "8b88ed095f82c74a",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pc4_software__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "c034d65f3261989a",
+      "metrics_content_hash": "1c9ee45fc91955cf",
+      "provenance_hash": "8ee49a7831fe2780",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pollen__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "7288167de31483db",
+      "metrics_content_hash": "01ce06eae99a4804",
+      "provenance_hash": "0cc0017005485958",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pollen__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "9947f37099495439",
+      "metrics_content_hash": "342141499df2cdbe",
+      "provenance_hash": "fb41350eb954feac",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_pollen__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "1450c9230342ba6e",
+      "metrics_content_hash": "e8ac46fd1f3ff870",
+      "provenance_hash": "8688cfdf053d69b4",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_qsar_biodeg__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "b0ec924fb907b8d9",
+      "metrics_content_hash": "191e3b3ee66d1c6e",
+      "provenance_hash": "0604396cf0bb692b",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_qsar_biodeg__xy_2d",
+      "candidates_verified": 31,
+      "bank_content_hash": "972549054832f35a",
+      "metrics_content_hash": "a38097bc3fd98b9f",
+      "provenance_hash": "9959dccded465f72",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_qsar_biodeg__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "d821e99ba47c61ae",
+      "metrics_content_hash": "bd9c4312a8666d76",
+      "provenance_hash": "6e5b07bc5cef9068",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_seeds__x_only",
+      "candidates_verified": 31,
+      "bank_content_hash": "5d4d7d13d0803d87",
+      "metrics_content_hash": "1c1accaba10a1e1d",
+      "provenance_hash": "036d3ca5f8b6f304",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_seeds__xy_2d",
+      "candidates_verified": 30,
+      "bank_content_hash": "5158cc769e774d36",
+      "metrics_content_hash": "fa785fadce3e330c",
+      "provenance_hash": "359f5293600e8739",
+      "metric_rows": 2070,
+      "valid_candidates": 30,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_seeds__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "accbe69e7393e66e",
+      "metrics_content_hash": "453286e89e2a0a84",
+      "provenance_hash": "2a66b6d4b14dbb44",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_sonar__x_only",
+      "candidates_verified": 31,
+      "bank_content_hash": "e81c5b8b031a4885",
+      "metrics_content_hash": "3121ae5afb4884b7",
+      "provenance_hash": "b15ac8b77a8050bc",
+      "metric_rows": 2139,
+      "valid_candidates": 31,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_sonar__xy_2d",
+      "candidates_verified": 29,
+      "bank_content_hash": "2d6ea8b083b17adb",
+      "metrics_content_hash": "2ecf0f4552f670f3",
+      "provenance_hash": "c85a69488002e9d2",
+      "metric_rows": 2001,
+      "valid_candidates": 29,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__real_sonar__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "0d69b3f6467fc2cd",
+      "metrics_content_hash": "7746f9a2edd0f2ca",
+      "provenance_hash": "0c9e0c42f4403778",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_easy__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "40a67f99c8f34ffc",
+      "metrics_content_hash": "1349046c8ed66c8d",
+      "provenance_hash": "f337aa54e967543c",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_easy__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "f58153816d6325c7",
+      "metrics_content_hash": "755f896589a9c2c1",
+      "provenance_hash": "f7d6b770022f623e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_easy__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "f9d234d29c1c4f0a",
+      "metrics_content_hash": "0b2958d417a64127",
+      "provenance_hash": "2138d9b7d0369689",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_hard__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "eba6dbef0c5415e2",
+      "metrics_content_hash": "e39eee08ff0d3216",
+      "provenance_hash": "807bd7068b72b340",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_hard__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "c9574ad89b43c905",
+      "metrics_content_hash": "3e988400848a8b6c",
+      "provenance_hash": "f932856bdfa2ec61",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_hard__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "636114c0249bfa2b",
+      "metrics_content_hash": "dc85faaf7484971c",
+      "provenance_hash": "b211aa90635e3532",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_medium__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "aaf87e0c74388dc3",
+      "metrics_content_hash": "c377d12d0ab63287",
+      "provenance_hash": "d41d0688ea17b1fa",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_medium__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "a9c791c7d4d12665",
+      "metrics_content_hash": "062600b46e7c3259",
+      "provenance_hash": "f571e9fdb3a5518f",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_aniso_blobs_medium__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "e8821ea027bd4617",
+      "metrics_content_hash": "e96d9df5e7592dfe",
+      "provenance_hash": "4d467881a0a4eb72",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_easy__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "689abf2c5056db3d",
+      "metrics_content_hash": "e6cf2a3ebc8bec3c",
+      "provenance_hash": "83001c65edb69b77",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_easy__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "37f7201228417625",
+      "metrics_content_hash": "4216e42ecf1f65e3",
+      "provenance_hash": "564718fc602d1494",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_easy__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "1fb223c66f21b354",
+      "metrics_content_hash": "f0ba7bb1daa8d055",
+      "provenance_hash": "3e318c9e5fa84858",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_hard__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "c8ca796ee74576e1",
+      "metrics_content_hash": "c00c37e4499a3e90",
+      "provenance_hash": "38b308c05215f160",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_hard__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "6e3c68d0df61359e",
+      "metrics_content_hash": "2ac66f803e265bc3",
+      "provenance_hash": "e0ceddbb81df6627",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_hard__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "f36cae7e821f44d2",
+      "metrics_content_hash": "1c40502e2ffdb006",
+      "provenance_hash": "41007c3daa8dfc53",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_medium__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "ce046bc895f65ce0",
+      "metrics_content_hash": "e01a56f5aa248c21",
+      "provenance_hash": "58ba1ac42c8515ad",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_medium__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "e4d6ac54bb690bfc",
+      "metrics_content_hash": "877ee0ff0001b7ed",
+      "provenance_hash": "a665369b0195298b",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_blobs_medium__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "ee3b2cf6e14ccc96",
+      "metrics_content_hash": "8d4c436007c324cb",
+      "provenance_hash": "1c62adc35f00754b",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_easy__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "5180de4037e7c244",
+      "metrics_content_hash": "f61d9b8b9add7aa2",
+      "provenance_hash": "1c07839c604b09fc",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_easy__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "cbed7f6cd5f4ad04",
+      "metrics_content_hash": "1cc97a0adfee4deb",
+      "provenance_hash": "6a5846be4bc16f16",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_easy__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "2dc787a629262eb4",
+      "metrics_content_hash": "b307bd28b6c3c169",
+      "provenance_hash": "943ac3bcdb4cd3d7",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_hard__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "078db1438e6f4d4b",
+      "metrics_content_hash": "c06cf8d18682b340",
+      "provenance_hash": "c2ebe8fcef0dc713",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_hard__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "dac3e97153d28a6f",
+      "metrics_content_hash": "328df41d9ac3b84a",
+      "provenance_hash": "f24b46cf71a1f92d",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_hard__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "6da4f04cc53d733d",
+      "metrics_content_hash": "4b6a269c01136a8c",
+      "provenance_hash": "678983b10d6bc55b",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_medium__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "0bb2de11bc4aed6b",
+      "metrics_content_hash": "079128c107b8cb14",
+      "provenance_hash": "ce671405a1c02aca",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_medium__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "c4c3568477832890",
+      "metrics_content_hash": "ec7b5962492b2276",
+      "provenance_hash": "b98ee7b31aed4ef5",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_circles_medium__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "99f77dde8b21b481",
+      "metrics_content_hash": "e03354b62f7389ed",
+      "provenance_hash": "22a6dffe0faf958b",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_easy__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "0b57eaa437afc46a",
+      "metrics_content_hash": "54157e9d105027a1",
+      "provenance_hash": "ecde8e6d2a05a8a5",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_easy__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "282f0d02a0d17a9c",
+      "metrics_content_hash": "d07f64cc02cc3bcb",
+      "provenance_hash": "b3948dd7e638a3b6",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_easy__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "d8fd6389ea510484",
+      "metrics_content_hash": "412527489a06fa81",
+      "provenance_hash": "5c471648bdb6a572",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_hard__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "c0308b75f69cfeb0",
+      "metrics_content_hash": "a7d6ad646159194d",
+      "provenance_hash": "a6455a5b3deec662",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_hard__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "f6fb1e84b29714d9",
+      "metrics_content_hash": "4c52705c70bd29f0",
+      "provenance_hash": "a9a6825a38876074",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_hard__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "d345785d05d025cb",
+      "metrics_content_hash": "6dffb04e06b9f048",
+      "provenance_hash": "28817f58355959ab",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_medium__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "2c7bdebc56fb8852",
+      "metrics_content_hash": "8990fc4ad1575a54",
+      "provenance_hash": "91438bfe823b7f19",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_medium__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "9ba8db5ab6df5e3d",
+      "metrics_content_hash": "7008029f9ed8ce11",
+      "provenance_hash": "73f0c378a4496935",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_moons_medium__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "246609af3a98c675",
+      "metrics_content_hash": "416ab557b9fd629d",
+      "provenance_hash": "feb6a30b5f592a41",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_easy__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "eb8892130d18afe0",
+      "metrics_content_hash": "007c3d7abe480778",
+      "provenance_hash": "64199c17d471fba4",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_easy__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "48e8342b695604fc",
+      "metrics_content_hash": "bebd7dc05cb612fb",
+      "provenance_hash": "c9e243b515741576",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_easy__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "2db65e6a9436a81a",
+      "metrics_content_hash": "78d4b5b089234500",
+      "provenance_hash": "a6317c927c398d5a",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_hard__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "6679c9073bbe5527",
+      "metrics_content_hash": "668688dc6146292f",
+      "provenance_hash": "98c28f3e5fa7a089",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_hard__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "8affa32c440febbd",
+      "metrics_content_hash": "eba61a23c8c77452",
+      "provenance_hash": "64db106902eb07ef",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_hard__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "fef1018d7fb26556",
+      "metrics_content_hash": "50fc442cfbc83edd",
+      "provenance_hash": "f90421b043f2667e",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_medium__x_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "cbc78dafd39fe043",
+      "metrics_content_hash": "958dccf8946241a3",
+      "provenance_hash": "8b5f9bf5b0a4fbbd",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_medium__xy_2d",
+      "candidates_verified": 32,
+      "bank_content_hash": "893b59164f09af6a",
+      "metrics_content_hash": "9dfe4faf0dc5efd2",
+      "provenance_hash": "c6520718a0a10bd6",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    },
+    {
+      "key": "fixed32__sk_varied_blobs_medium__y_only",
+      "candidates_verified": 32,
+      "bank_content_hash": "20aa26481225761c",
+      "metrics_content_hash": "18946ec63602a3ab",
+      "provenance_hash": "dbc8dea6f9cb6445",
+      "metric_rows": 2208,
+      "valid_candidates": 32,
+      "outcome": "CONSOLIDATED"
+    }
+  ],
+  "wall_clock_seconds": 21.4
+}

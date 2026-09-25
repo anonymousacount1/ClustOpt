@@ -1,0 +1,151 @@
+# Comparison Suite 4 - Best-observed fixed ClustOpt vs external competitors.
+#
+# The two ClustOpt rows are READ from the frozen selection manifest. Every table
+# and report in this suite must carry the candidate-pool asymmetry disclosure.
+comparison_id: comparison_04
+title: Best observed fixed ClustOpt variants vs external operational competitors
+section: 05_comparison_04_operational_benchmarks
+
+candidates:
+  clustopt:
+    source: frozen_selection_manifest
+    representative_ids: [c4_best_observed_mlp_fixed, c4_best_observed_knn_fixed]
+  external:
+    - AutoClust_Original_InDomain_same_search_space
+    - AutoClust_Extended_InDomain_same_search_space
+    - ML2DAC_Original_InDomain_same_search_space
+    - ML2DAC_Extended_InDomain_same_search_space
+  display_order:
+    - c4_best_observed_mlp_fixed
+    - c4_best_observed_knn_fixed
+    - AutoClust_Original_InDomain_same_search_space
+    - AutoClust_Extended_InDomain_same_search_space
+    - ML2DAC_Original_InDomain_same_search_space
+    - ML2DAC_Extended_InDomain_same_search_space
+
+# Required on EVERY table, plot caption and report section in this suite.
+required_disclosure: >-
+  The ClustOpt rows are retrospective global representatives selected as the
+  highest-performing fixed variants on Split 1, whereas each external row
+  represents one predefined external method. The clustering search space and the
+  50-evaluation search budget are matched across all rows, but the selection
+  freedom is not: the ClustOpt representative was chosen from 8 evaluated
+  variants. Results should therefore be interpreted as a benchmark summary rather
+  than an independently selected deployment comparison.
+required_columns: [selection_type, candidate_pool_size, selected_concrete_method]
+
+research_questions:
+  RQ4-A:
+    question: How competitive are the strongest observed fixed ClustOpt MLP and
+              KNN configurations?
+    kind: primary_summary
+    metrics: [best_view_mean_ari, best_view_median_ari, best_view_std_ari,
+              best_view_k_accuracy]
+  RQ4-B:
+    question: What is the accuracy-runtime trade-off?
+    kind: pareto
+    x: total_runtime_all_views_median_sec
+    y: best_view_mean_ari
+    x_objective: minimise
+    y_objective: maximise
+    forbid_composite_score: true
+    note: >-
+      The primary Best-View cost is the runtime of all three views. No composite
+      ARI-per-second score is reported as a main result: the trade-off is shown as
+      a Pareto frontier, not collapsed into one number.
+  RQ4-C:
+    question: Do the extended metric repositories improve the external methods?
+    kind: matched_pair
+    pairs:
+      - {a: AutoClust_Extended_InDomain_same_search_space,
+         b: AutoClust_Original_InDomain_same_search_space}
+      - {a: ML2DAC_Extended_InDomain_same_search_space,
+         b: ML2DAC_Original_InDomain_same_search_space}
+    note: >-
+      Fully clean: within each pair the only difference is the metric repository
+      the external method's own meta-learning draws on.
+  RQ4-D:
+    question: Where does ClustOpt win or lose by family?
+    kind: family_paired_deltas_and_winrates
+    grouping: [family, subfamily]
+
+grouping_levels: [global, family, subfamily, difficulty, cluster_count]
+primary_metrics: [best_view_mean_ari, best_view_median_ari, best_view_std_ari,
+                  best_view_k_accuracy, total_runtime_all_views_median_sec,
+                  success_rate]
+
+pairwise_hypotheses:
+  primary:
+    - {id: c4_mlp_vs_autoclust_extended,
+       a: "@representative:c4_best_observed_mlp_fixed",
+       b: AutoClust_Extended_InDomain_same_search_space,
+       family: comparison_04_vs_autoclust, direction: two-sided,
+       rationale: predeclared primary comparison against the strongest external}
+    - {id: c4_knn_vs_autoclust_extended,
+       a: "@representative:c4_best_observed_knn_fixed",
+       b: AutoClust_Extended_InDomain_same_search_space,
+       family: comparison_04_vs_autoclust, direction: two-sided,
+       rationale: predeclared primary comparison against the strongest external}
+    - {id: c4_autoclust_ext_vs_orig,
+       a: AutoClust_Extended_InDomain_same_search_space,
+       b: AutoClust_Original_InDomain_same_search_space,
+       family: comparison_04_repository, direction: two-sided,
+       rationale: RQ4-C, clean repository effect}
+    - {id: c4_ml2dac_ext_vs_orig,
+       a: ML2DAC_Extended_InDomain_same_search_space,
+       b: ML2DAC_Original_InDomain_same_search_space,
+       family: comparison_04_repository, direction: two-sided,
+       rationale: RQ4-C, clean repository effect}
+  exploratory_grid:
+    methods: ["@representative:c4_best_observed_mlp_fixed",
+              "@representative:c4_best_observed_knn_fixed"]
+    references: [ML2DAC_Original_InDomain_same_search_space,
+                 ML2DAC_Extended_InDomain_same_search_space,
+                 AutoClust_Original_InDomain_same_search_space]
+
+selection_aware_bootstrap:
+  enabled: true
+  note: >-
+    Every ClustOpt-vs-external test is post-selection exploratory. The
+    selection-aware bootstrap (which re-picks the representative inside each
+    resample) is the defensible uncertainty estimate and is reported beside the
+    naive paired interval.
+
+required_capabilities: [primary_ari, best_view, k_analysis,
+                        runtime_total_all_views]
+# Deliberately optional: the external adapters expose neither a per-candidate
+# search trace nor a metric-selection record, so these sub-analyses are skipped
+# for them with a recorded warning rather than null-filled.
+optional_capabilities: [trace_best_gap, metric_selection, runtime_components]
+unsupported_note: >-
+  Trace-best (search-selection) gap and metric-selection analyses are unavailable
+  for AutoClust and ML2DAC because the original implementations do not expose a
+  compatible per-candidate search trace. Those sections include ClustOpt methods
+  only, and the omission is stated explicitly.
+
+tables:
+  - {name: comparison_04_candidate_map.csv, importance: paper_main}
+  - {name: comparison_04_global_summary.csv, importance: paper_main}
+  - {name: comparison_04_family_summary.csv, importance: paper_main}
+  - {name: comparison_04_pairwise_deltas.csv, importance: paper_main}
+  - {name: comparison_04_winrates.csv, importance: paper_main}
+  - {name: comparison_04_runtime_summary.csv, importance: paper_main}
+  - {name: comparison_04_pareto_frontier.csv, importance: paper_main}
+  - {name: comparison_04_capability_warnings.csv, importance: paper_supplement}
+  - {name: comparison_04_research_questions.csv, importance: paper_main}
+
+plots:
+  - {name: comparison_04_best_view_ari_bar, kind: bar, importance: paper_main}
+  - {name: comparison_04_best_view_ari_boxplot, kind: boxplot, importance: paper_main}
+  - {name: comparison_04_family_heatmap, kind: heatmap, importance: paper_main}
+  - {name: comparison_04_pairwise_delta_boxplots, kind: paired_delta_boxplot,
+     importance: paper_main}
+  - {name: comparison_04_winrate_heatmap, kind: heatmap, importance: paper_main}
+  - {name: comparison_04_k_accuracy, kind: bar, importance: paper_supplement}
+  - {name: comparison_04_runtime_boxplot, kind: boxplot_log, importance: paper_main}
+  - {name: comparison_04_accuracy_runtime_pareto, kind: pareto, importance: paper_main}
+  - {name: comparison_04_success_rate, kind: bar, importance: paper_supplement}
+
+reports: [README.md, METHODS_AND_DEFINITIONS.md, RESULTS.md, LIMITATIONS.md,
+          PAPER_CANDIDATES.md]
+workbook: 05_comparison_04_operational_benchmarks.xlsx

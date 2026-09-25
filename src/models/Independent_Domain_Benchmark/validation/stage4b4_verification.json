@@ -1,0 +1,233 @@
+{
+  "verifier": "stage4b4_common_runner",
+  "stage": "4B-4",
+  "n": 37,
+  "n_pass": 37,
+  "n_fail": 0,
+  "gates": [
+    {
+      "gate": "R01",
+      "description": "the numerical reproducibility policy is frozen and pre-outcome",
+      "status": "PASS",
+      "detail": "v1, limitation: orientation_histogram_entropy"
+    },
+    {
+      "gate": "R02",
+      "description": "no metric implementation, inventory or model was changed",
+      "status": "PASS",
+      "detail": "no tracked metric/model change; 7 untracked pre-existing paths ignored"
+    },
+    {
+      "gate": "R03",
+      "description": "the bit-exact recomputation requirement is absent from the gates",
+      "status": "PASS",
+      "detail": "resume rests on immutable COMPLETE records, not recomputation"
+    },
+    {
+      "gate": "R04",
+      "description": "exactly the 14 frozen scientific METHOD_IDs",
+      "status": "PASS",
+      "detail": "{\"ClustOpt\": 6, \"AutoClust\": 4, \"ML2DAC\": 4}"
+    },
+    {
+      "gate": "R05",
+      "description": "exactly 6 physical groups, read from the frozen protocol",
+      "status": "PASS",
+      "detail": "{\"ClustOpt\": 4, \"AutoClust\": 1, \"ML2DAC\": 1}"
+    },
+    {
+      "gate": "R06",
+      "description": "the smoke executed all 14 arms and all 6 groups per view",
+      "status": "PASS",
+      "detail": "14 arms / 6 groups over 3 views"
+    },
+    {
+      "gate": "R07",
+      "description": "structural counts 18/42 internally and 900/2100 externally",
+      "status": "PASS",
+      "detail": "18/42 and 900/2100"
+    },
+    {
+      "gate": "R08",
+      "description": "the runner owns X_decision and X_full; neither scorer may default",
+      "status": "PASS",
+      "detail": "X_full required in all four scorer entry points"
+    },
+    {
+      "gate": "R09",
+      "description": "the view object carries no ground-truth field",
+      "status": "PASS",
+      "detail": "no y_true field exists, not even as None"
+    },
+    {
+      "gate": "R10",
+      "description": "row and sample identity are guaranteed by construction",
+      "status": "PASS",
+      "detail": "projection from one X_full; label metadata refused"
+    },
+    {
+      "gate": "R11",
+      "description": "algorithm input is writable so valid candidates are not lost",
+      "status": "PASS",
+      "detail": "stored matrices read-only; algorithm input a writable copy"
+    },
+    {
+      "gate": "R12",
+      "description": "storage keeps the five layers separate",
+      "status": "PASS",
+      "detail": "evaluation, physical, preparation, run, scientific"
+    },
+    {
+      "gate": "R13",
+      "description": "COMPLETE is reached only by atomic replace",
+      "status": "PASS",
+      "detail": "temp write, fsync, atomic replace"
+    },
+    {
+      "gate": "R14",
+      "description": "the state model is explicit and only COMPLETE is reusable",
+      "status": "PASS",
+      "detail": "COMPLETE, FAILED, PENDING, RUNNING"
+    },
+    {
+      "gate": "R15",
+      "description": "scientific records reference the physical trace, never copy it",
+      "status": "PASS",
+      "detail": "arm records store physical_trace_id"
+    },
+    {
+      "gate": "R16",
+      "description": "a second identical run performs zero scientific recomputation",
+      "status": "PASS",
+      "detail": "{\"physical_built\": 0, \"physical_reused\": 18, \"arms_scored\": 0, \"arms_reused\": 42}"
+    },
+    {
+      "gate": "R17",
+      "description": "a valid COMPLETE result is reused, never recomputed",
+      "status": "PASS",
+      "detail": "{\"physical_built\": 0, \"physical_reused\": 18, \"arms_scored\": 0, \"arms_reused\": 42}"
+    },
+    {
+      "gate": "R18",
+      "description": "an incomplete arm recovers without touching its siblings",
+      "status": "PASS",
+      "detail": "arms_scored=1 physical_built=1"
+    },
+    {
+      "gate": "R19",
+      "description": "an incomplete physical trace recovers without invalidating arms",
+      "status": "PASS",
+      "detail": "physical_built=1 arms_scored=0"
+    },
+    {
+      "gate": "R20",
+      "description": "a corrupted COMPLETE record stops the run and is never replaced",
+      "status": "PASS",
+      "detail": "IntegrityError raised; no automatic regeneration"
+    },
+    {
+      "gate": "R21",
+      "description": "stale provenance is refused rather than silently reused",
+      "status": "PASS",
+      "detail": "ProvenanceMismatch"
+    },
+    {
+      "gate": "R22",
+      "description": "the method phase completes with zero ground-truth loads",
+      "status": "PASS",
+      "detail": "loader calls=0 "
+    },
+    {
+      "gate": "R23",
+      "description": "arm records contain no offline evaluation field",
+      "status": "PASS",
+      "detail": "no ARI/NMI/AMI/FMI/y_true/true_k"
+    },
+    {
+      "gate": "R24",
+      "description": "the offline evaluator is a physically separate boundary",
+      "status": "PASS",
+      "detail": "GroundTruth is a separate object; no sentinel ARI"
+    },
+    {
+      "gate": "R25",
+      "description": "T0/T1 and the separate timing fields are frozen",
+      "status": "PASS",
+      "detail": "7 timing fields"
+    },
+    {
+      "gate": "R26",
+      "description": "shared physical cost is charged in full, never divided",
+      "status": "PASS",
+      "detail": "4 arms on a 10s trace each pay 10s, not 2.5s"
+    },
+    {
+      "gate": "R27",
+      "description": "actual wall-clock is recorded separately from equivalent runtime",
+      "status": "PASS",
+      "detail": "kept distinct"
+    },
+    {
+      "gate": "R28",
+      "description": "concurrency, thread caps and the watchdog are frozen",
+      "status": "PASS",
+      "detail": "8 workers, 1 thread per worker, 1800s watchdog"
+    },
+    {
+      "gate": "R29",
+      "description": "watchdog termination is distinct from a scientific failure",
+      "status": "PASS",
+      "detail": "WATCHDOG_TIMEOUT declared infrastructure, distinct from method failure"
+    },
+    {
+      "gate": "R30",
+      "description": "nested parallelism is actually pinned at runtime",
+      "status": "PASS",
+      "detail": "{\"OMP_NUM_THREADS\": \"1\", \"OPENBLAS_NUM_THREADS\": \"1\", \"MKL_NUM_THREADS\": \"1\", \"NUMEXPR_NUM_THREADS\": \"1\", \"VECLIB_MAXIMUM_THREADS\": \"1\", \"PYTHONHASHSEED\": \"0\", \"cv2_num_threads\": \"1\", \"threadpoolctl\": \"1\"}"
+    },
+    {
+      "gate": "R31",
+      "description": "canonical hashing v1 with LF/CRLF equivalence",
+      "status": "PASS",
+      "detail": "canonical equal, raw differs, every hash labelled"
+    },
+    {
+      "gate": "R32",
+      "description": "hash conventions are never conflated",
+      "status": "PASS",
+      "detail": "4 distinct named conventions"
+    },
+    {
+      "gate": "R33",
+      "description": "the run manifest captures the environment and the .mfenv",
+      "status": "PASS",
+      "detail": "15 fields; .mfenv 3.12.2"
+    },
+    {
+      "gate": "R34",
+      "description": "the internal smoke passes in full",
+      "status": "PASS",
+      "detail": "25 checks"
+    },
+    {
+      "gate": "R35",
+      "description": "no external scientific dataset was executed",
+      "status": "PASS",
+      "detail": "internal fixtures only"
+    },
+    {
+      "gate": "R36",
+      "description": "corpus and search fingerprint unchanged",
+      "status": "PASS",
+      "detail": "709712107424ad4e"
+    },
+    {
+      "gate": "R37",
+      "description": "every previously closed verifier still passes",
+      "status": "PASS",
+      "detail": "gates=0; clustopt=0; autoclust=0; ml2dac=0"
+    }
+  ],
+  "bit_exact_recomputation_required": false,
+  "status": "PASS"
+}

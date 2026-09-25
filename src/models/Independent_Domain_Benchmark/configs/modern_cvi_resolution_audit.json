@@ -1,0 +1,72 @@
+{
+  "stage": "4B",
+  "purpose": "resolve whether each modern comparator CVI can be implemented AND independently validated, per the rule that a new implementation must never be validated only against itself",
+  "validation_rule": "correctness tests must use an official/reference implementation, an author-provided example, a published toy example, or an independent known-good implementation",
+  "implemented_in_stage4b": ["none"],
+  "evidence_gathered": {
+    "pypi_checked": ["validclust", "cdbw", "s-dbw", "clusteval", "pyclustering"],
+    "validclust_contents_inspected": true,
+    "validclust_provides": ["dunn", "cop", "silhouette", "davies_bouldin", "calinski_harabaz"],
+    "validclust_provides_cvnn": false,
+    "validclust_note": "every index it provides is already native to our inventory, so it adds no modern comparator",
+    "github_search_performed": true
+  },
+  "CDbw": {
+    "reference": "Halkidi & Vazirgiannis (2008), density-based cluster validity using multi-representatives",
+    "direction": "maximize",
+    "independent_implementation": "PyPI package `cdbw` v0.2, MIT licence, single module (8 KB)",
+    "licence_ok": true,
+    "free_parameters": ["number of representatives r", "shrinking factor s"],
+    "parameter_policy": "must be pinned to the package defaults BEFORE any external outcome is seen",
+    "validation_route": "wrap the MIT package rather than rewrite; verify on deterministic toy partitions and edge cases",
+    "status": "RESOLVABLE",
+    "blocked": false
+  },
+  "CVNN": {
+    "reference": "Liu, Li, Xiong, Gao, Wu (2013), Understanding and Enhancement of Internal Clustering Validation Measures",
+    "direction": "minimize",
+    "independent_implementation": null,
+    "pypi": "none found",
+    "github_search_hits": 0,
+    "why_blocked": "no packaged or reference implementation is available in this environment, so any implementation written from the paper could only be validated against itself, which the validation rule forbids",
+    "additional_risk": "the separation term is normalised across the compared partition set, so an unverified variant would silently change every reported value",
+    "status": "BLOCKED",
+    "blocked": true
+  },
+  "CVDD": {
+    "reference": "Hu & Zhong (2019), internal validity index involving density and path-based relative distances",
+    "direction": "maximize",
+    "independent_implementation": null,
+    "pypi": "none found",
+    "github_search_hits": 0,
+    "why_blocked": "no reference implementation and no way to disambiguate between similarly named published variants; the brief requires STOP rather than implementing an uncertain metric",
+    "status": "BLOCKED",
+    "blocked": true
+  },
+  "DCSI": {
+    "reference": "Gauss, Scheipl, Herrmann (2024), DCSI - An improved measure of cluster separability based on separation and connectedness",
+    "direction": "maximize",
+    "independent_implementation": "github.com/JanaGauss/dcsi (paper's first author)",
+    "github_search_hits": 1,
+    "licence": null,
+    "licence_ok": false,
+    "why_blocked": "the author repository declares NO licence, so it cannot be vendored or redistributed; without it there is no independent reference to validate against",
+    "possible_unblock": "obtain explicit permission from the authors, or find a licensed reimplementation",
+    "status": "BLOCKED",
+    "blocked": true
+  },
+  "summary": {
+    "resolvable": ["CDbw"],
+    "blocked": ["CVNN", "CVDD", "DCSI"],
+    "stop_condition_triggered": true,
+    "stop_rule_cited": "STOP immediately if any modern CVI cannot be validated against an independent reference; STOP Stage 4B rather than implementing an uncertain metric",
+    "what_was_NOT_done": "no CVI was implemented from the literature without a validation reference; nothing was guessed",
+    "consequence": "until resolved, no claim may be made against CVNN, CVDD or DCSI, and the metrics-paper criterion that requires comparison against modern CVIs remains unmet",
+    "options_for_project_lead": [
+      "A. proceed with CDbw only, and state explicitly in the paper that CVNN/CVDD/DCSI were not evaluated",
+      "B. obtain the DCSI authors' permission and/or a licensed reference, then implement and validate DCSI",
+      "C. supply trusted reference implementations or published worked examples for CVNN and CVDD, which would unblock them under the existing validation rule",
+      "D. drop the modern-comparator requirement and rely on the established comparators already in the inventory (DBCV, S_Dbw, silhouette, CH, DB, Dunn, COP, Coggins-Jain)"
+    ]
+  }
+}

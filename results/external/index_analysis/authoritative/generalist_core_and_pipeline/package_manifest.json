@@ -1,0 +1,66 @@
+{
+  "package": "phase_d_canonical_utility",
+  "publication_authoritative_for": "metric utility analysis",
+  "run_id": "stage4c_v2_323194df26",
+  "amendment_id": "6d59078460ec24d3",
+  "candidate_basis_version": "canonical_fixed32_candidate_basis_v1",
+  "dispatch_amendment_id": "1a8d6de73b9c15fd",
+  "utility_source_hash": "7f65fa2b1a794b26",
+  "utility_definition_changed": false,
+  "canonical_candidates": 4776,
+  "logical_candidate_metric_combinations": 319992,
+  "utility_cells": 10050,
+  "utility_valid": 9944,
+  "utility_insufficient": 106,
+  "declared_inventory": {
+    "Original": 7,
+    "Established": 10,
+    "New46": 46,
+    "Modern": 4
+  },
+  "observed_inventory_with_usable_utility": {
+    "Established": 10,
+    "Modern": 4,
+    "New46": 46,
+    "Original": 7
+  },
+  "primary_total": 67,
+  "primary_with_usable_utility": 67,
+  "zero_coverage_primary_metrics": [],
+  "method_track": {
+    "recomputed": false,
+    "authoritative_path": "phase_d/",
+    "tables": [
+      "method_aggregate_summary.csv",
+      "method_bestview_per_dataset.csv.gz",
+      "method_xy2d_per_dataset.csv.gz",
+      "method_runtime_summary.csv",
+      "method_failure_summary.csv"
+    ]
+  },
+  "superseded_packages": {
+    "phase_d": "original; 61/67 metrics, modern comparators empty",
+    "phase_d_corrected": "dispatch repaired but on the non-canonical basis"
+  },
+  "unchanged_layers": {
+    "fixed32_banks": "physical/fixed32__*",
+    "candidate_ari": "phase_c/fixed32_candidate_ari.csv.gz",
+    "metric_values_61": "evaluation/metrics__*",
+    "metric_values_6": "evaluation/metrics_v2__*"
+  },
+  "coverage_axis": "reported separately; never folded into utility",
+  "outputs": [
+    "generalist_core_external.csv",
+    "joint_pipeline_per_unit.csv.gz",
+    "joint_pipeline_summary.csv",
+    "metric_aggregate_summary.csv",
+    "metric_group_summary.csv",
+    "metric_rank_table.csv",
+    "metric_rank_table_full_coverage_only.csv",
+    "metric_source_summary.csv",
+    "metric_specialisation_spread.csv",
+    "metric_top5_frequency.csv",
+    "metric_utility_per_dataset_view.csv.gz",
+    "modern_comparator_analysis.json"
+  ]
+}

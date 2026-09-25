@@ -1,0 +1,82 @@
+{
+  "family_id": "texture_density_fields",
+  "family_name": "Texture / density fields",
+  "family_seed": 90753008,
+  "n_features": 2,
+  "feature_names": ["x", "y"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "micro_blobs_texture",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "micro_blob_texture", "components_per_cluster": 1},
+      "parameter_ranges": {"width": [0.16, 0.30], "height": [0.16, 0.30], "n_micro_blobs": [10, 24], "blob_sigma_min": [0.005, 0.012], "blob_sigma_max": [0.015, 0.030]}
+    },
+    {
+      "subfamily_id": "oriented_texture",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "oriented_texture_field", "components_per_cluster": 1},
+      "parameter_ranges": {"width": [0.18, 0.32], "height": [0.18, 0.32], "n_ridges": [4, 8], "ridge_spacing": [0.03, 0.07]}
+    },
+    {
+      "subfamily_id": "speckle_fields",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "speckle_texture", "components_per_cluster": 1},
+      "parameter_ranges": {"width": [0.18, 0.32], "height": [0.18, 0.32], "speckle_rate": [0.3, 0.8]}
+    },
+    {
+      "subfamily_id": "anisotropic_grain",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "anisotropic_grain_field", "components_per_cluster": 1},
+      "parameter_ranges": {"width": [0.18, 0.32], "height": [0.18, 0.32], "n_grains": [12, 24], "grain_sigma_long": [0.015, 0.030], "grain_sigma_short": [0.004, 0.010]}
+    },
+    {
+      "subfamily_id": "fractal_dust",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "fractal_dust", "components_per_cluster": 1},
+      "parameter_ranges": {"base_scale": [0.10, 0.20], "depth": [2, 3], "children_per_level": [3, 5], "decay": [0.4, 0.7]}
+    },
+    {
+      "subfamily_id": "texture_plus_structure",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "micro_blob_texture", "weight": 1.0},
+          {"type": "ellipse",            "weight": 1.0, "parameter_ranges": {"rx": [0.06, 0.10], "ry_ratio": [0.5, 0.95], "thickness": [0.004, 0.012], "fill": true}}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "density_patchwork",
+      "cluster_budget": {"2": 38, "3": 56, "4": 56, "5": 37},
+      "component_strategy": {"component_type": "blob_field", "components_per_cluster": 1},
+      "parameter_ranges": {"width": [0.18, 0.32], "height": [0.18, 0.32], "n_blobs": [4, 8]}
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "stage": "4B-1b",
+  "scope": "EXTERNAL METRIC-VALIDATION COMPARATORS ONLY",
+  "must_not_be_added_to": [
+    "ClustOpt learned inventory",
+    "AutoClust learned inventories",
+    "ML2DAC learned CVI classes"
+  ],
+  "CDbw": {
+    "scientific_definition_source": "Halkidi & Vazirgiannis (2008), 'A density-based cluster validity approach using multi-representatives', Pattern Recognition Letters 29, 773-786",
+    "reference_implementation_source": "PyPI package `cdbw`",
+    "reference_version": "0.2",
+    "reference_artifact_sha256_16": "4b4be00dfae7911b",
+    "reference_license": "MIT",
+    "code_relationship": "PAPER-FAITHFUL CORRECTION LAYER over the MIT package (geometry reused with attribution; three aggregations replaced)",
+    "attribution_required": true,
+    "direction": "maximize",
+    "decomposition": "CDbw = compactness * cohesion * separation",
+    "frozen_parameters": {
+      "metric": "euclidean",
+      "alg_noise": "comb",
+      "intra_dens_inf": false,
+      "s": 3,
+      "multipliers": false
+    },
+    "parameter_policy": "package defaults, pinned before any external outcome was seen; never tuned",
+    "environment_compatibility": "VERIFIED in .venv_clustopt (python 3.12, numpy 2.1.3, scipy 1.14.1)",
+    "smoke_evidence": {
+      "well_separated_3_gaussians": 0.634224,
+      "overlapping_3_gaussians": 0.008718,
+      "multipliers_well_separated": [
+        0.55386,
+        0.39374,
+        2.90822,
+        0.63422
+      ],
+      "product_check": "0.55386 * 0.39374 * 2.90822 = 0.63422, matches the returned index",
+      "direction_behaviour": "separated >> overlapping, consistent with maximize"
+    },
+    "status": "VALIDATED",
+    "remaining_work": null,
+    "validation": {
+      "primary_is_not_validated_by_agreeing_with_the_package": true,
+      "algebraic_identities_against_the_package": {
+        "compactness_and_cohesion_identical_on_equal_spread_clusters": true,
+        "separation_ratio_K2_isolated": 2.0,
+        "separation_ratio_K3_chain": 1.5,
+        "note": "both ratios are predicted in advance by the two defects and observed exactly"
+      },
+      "independent_cross_check": "CRAN fpc::cdbw is permutation-invariant (spread 0.0 over cluster-order permutations); it uses a different representative construction so it is not a numeric oracle for our value",
+      "permutation_invariance": {
+        "geometries": 8,
+        "relabellings_each": 23,
+        "evaluations": 207,
+        "max_abs_diff": 6.661338147750939e-16,
+        "tolerance": 1e-12,
+        "result": "PASS"
+      },
+      "diagnostic_fidelity": {
+        "cases": 13,
+        "max_abs_diff": 0.0,
+        "result": "PASS"
+      }
+    },
+    "label_order_finding": {
+      "finding": "the package is NOT invariant to the integer ordering of cluster labels, although the published index is defined over an unordered set of clusters",
+      "classification": "A -- package implementation defect",
+      "root_cause": "prep() returns the highest-indexed cluster standard deviation instead of the average over clusters, contradicting its own docstring; separation() additionally minimises over lower-indexed clusters only",
+      "max_abs_spread_over_orderings": 0.9310579578451365,
+      "changes_only_calibration": false,
+      "changes_which_candidate_scores_best": true,
+      "is_it_randomness": false,
+      "resolution": "the aggregations were corrected, so CDbw is now permutation-invariant by construction and no ordering convention is used",
+      "found_by": "validation/test_cdbw_label_invariance.py",
+      "root_caused_by": "runners/audit_cdbw_paper_semantics.py",
+      "evidence": [
+        "validation/cdbw_paper_semantics_audit.json",
+        "validation/cdbw_label_order_sensitivity.json",
+        "validation/cdbw_permutation_invariance_evidence.json"
+      ],
+      "reporting_requirement": "CDbw values produced by the raw package without a stated cluster ordering are not comparable to ours, nor to each other"
+    },
+    "definition_audit": "configs/cdbw_definition_audit.json"
+  },
+  "CVNN": {
+    "scientific_definition_source": "Liu, Li, Xiong, Gao, Wu (2013), 'Understanding and enhancement of internal clustering validation measures', IEEE Transactions on Cybernetics 43(3), 982-994",
+    "reference_implementation_source": "CRAN package `fpc`, function `cvnn`",
+    "documented_variant": "CVNN as defined in Liu et al. (2013) with the correction described in Halkidi et al. (2015), per the fpc documentation",
+    "reference_license": "GPL (CRAN fpc)",
+    "code_relationship": "EXTERNAL VALIDATION ORACLE ONLY -- no fpc source is copied or ported, to avoid incorporating GPL obligations",
+    "direction": "minimize (lower is better)",
+    "frozen_parameters": {
+      "k": 5
+    },
+    "parameter_policy": "fpc documented default k=5, frozen before any external outcome",
+    "why_the_earlier_search_missed_it": "the Stage-4A/first-4B search queried PyPI and GitHub only. CVNN's maintained reference lives on CRAN, an R repository that neither query covers, and the one Python package inspected (validclust) provides dunn/cop/silhouette/DB/CH but NOT cvnn. The conclusion 'no reference exists' was therefore drawn from an incomplete search space, not from evidence of absence.",
+    "status": "VALIDATED",
+    "validation": {
+      "oracle": "fpc 2.2.15 in idb-r-oracle:1",
+      "cases": 55,
+      "max_abs_diff": 4.884981308350689e-15,
+      "max_rel_diff": 4.598346168725458e-15,
+      "tolerance": {
+        "atol": 1e-09,
+        "rtol": 1e-09
+      },
+      "result": "PASS"
+    },
+    "bug_found_and_fixed_before_any_scientific_run": "K=1 candidate partitions were being excluded before the component normalisers were computed. fpc includes them in max(sep)/max(comp), so excluding them shifted every other candidate's value. Fixed; the oracle is what surfaced it."
+  },
+  "CVDD": {
+    "scientific_definition_source": "Hu & Zhong (2019), 'An Internal Validity Index Based on Density-Involved Distance', IEEE Access 7, 40038-40051, DOI 10.1109/ACCESS.2019.2906949",
+    "reference_implementation_source": "github.com/hulianyu/CVDD",
+    "reference_commit": "32cabe0cf876ccd4e04e44dda84b0ad96be88bbc",
+    "reference_commit_date": "2025-01-14T15:22:16Z",
+    "reference_license": "MIT",
+    "reference_files_of_interest": [
+      "CVDD.m",
+      "CVDDIndex.m",
+      "CA.m",
+      "CI.m",
+      "DDDE.m"
+    ],
+    "reference_bundled_data": "Datasets_all30/ -- 30 labelled datasets with ground truth, usable as author-provided validation examples",
+    "code_relationship": "PORT UNDER LICENCE with attribution (MIT permits this)",
+    "direction": "maximize",
+    "parameter_policy": "authors state no parameter tuning is required",
+    "why_the_earlier_search_missed_it": "the GitHub query used was 'CVDD+cluster+validity', which returned 0 hits; the repository is named simply 'CVDD' and its description does not contain that phrase. The search was too narrow, and absence of hits was wrongly treated as absence of a reference.",
+    "status": "VALIDATED_WITH_PREDECLARED_APPLICABILITY_CAVEAT",
+    "validation": {
+      "oracle": "author MATLAB via gnuoctave/octave:9.2.0",
+      "cases_compared": 12,
+      "max_abs_diff": 2.808064891723916e-11,
+      "tolerance": {
+        "atol": 1e-08,
+        "rtol": 1e-08
+      },
+      "result": "PASS",
+      "expected_invalid_cases": [
+        "duplicates_2 -> CVDD_DUPLICATE_POINT_MST_AMBIGUITY",
+        "one_cluster -> fewer_than_two_clusters"
+      ]
+    },
+    "frozen_applicability_rule": {
+      "rule": "if X contains two or more EXACTLY identical rows, CVDD is INVALID with reason CVDD_DUPLICATE_POINT_MST_AMBIGUITY",
+      "duplicate_definition": "exact row equality; deliberately no epsilon, which would add an arbitrary metric parameter",
+      "rationale": "the density-involved distance rests on a minimax path distance from a minimum spanning tree; exact duplicates create zero-weight edges, the MST is then non-unique, and the published procedure defines no implementation-independent tie-break, so no canonical CVDD value exists for such an input",
+      "evidence": "duplicates_2 fixture: 80 points, 60 unique, 40 zero off-diagonal distances; Prim and Kruskal select different equally-minimal trees",
+      "scope": "invalidates CVDD ONLY -- never the dataset, view, another CVI, a method run, or fixed32 candidate generation",
+      "frozen_before_external_prevalence_inspected": true
+    }
+  },
+  "DCSI": {
+    "scientific_definition_source": "Gauss, Scheipl & Herrmann, 'DCSI - An improved measure of cluster separability based on separation and connectedness'",
+    "paper": "arXiv:2310.12806v4 (CC BY 4.0)",
+    "reference_implementation_source": "github.com/JanaGauss/dcsi",
+    "reference_commit": "15ba6f7bd89151e64b009dc4329f678f416ddc6c",
+    "reference_license": null,
+    "license_finding": "NO explicit licence declared in the repository",
+    "code_relationship": "INDEPENDENT REIMPLEMENTATION FROM THE PAPER ONLY. No source line copied, vendored or adapted. The repository is used solely as an external numerical oracle in a temporary checkout that is never committed, and no author data is committed either.",
+    "direction": "maximize",
+    "separation_mode_frozen": "PAPER",
+    "diagnostic_variant": "dcsi_author_compat (AUTHOR_COMPAT) -- not a comparator, not a fifth CVI",
+    "definition_audit": "configs/dcsi_definition_audit.json",
+    "frozen_parameters": {
+      "MinPts": 5,
+      "distance": "euclidean",
+      "multi_class": "mean pairwise"
+    },
+    "parameter_policy": "no tuning on the external corpus",
+    "status": "VALIDATED",
+    "validation": {
+      "oracle": "author R via idb-dcsi-oracle:2",
+      "level": "component-wise (core points, connectedness, separation, pairwise index, aggregate)",
+      "fixtures_compared": 12,
+      "K_values_covered": [
+        2,
+        3,
+        4
+      ],
+      "core_points_identical_everywhere": true,
+      "connectedness_identical_everywhere": true,
+      "separation_exactly_double_everywhere": true,
+      "author_compat_reproduces_reference_everywhere": true,
+      "validity_agreement": true,
+      "result": "PASS"
+    },
+    "paper_vs_reference_discrepancy": {
+      "artifact": "validation/dcsi_paper_vs_reference_discrepancy.json",
+      "summary": "the repository holds two DCSI routines; the two-class routine matches Definition 3.2 and produced the published values we recomputed, while the multiclass real-world routine doubles every separation entry via its symmetrisation step",
+      "publication_value_reproduction": "PAPER (max abs diff 1.11e-16 on two end-to-end recomputable cases)",
+      "ranking_equivalence": "holds for K=2 only; refuted for K>=3 analytically and empirically"
+    }
+  },
+  "blocking_tooling": {
+    "problem": "three of the four comparators require an external runtime as a validation oracle, and none is executable on this machine",
+    "R": {
+      "needed_for": [
+        "CVNN via fpc::cvnn",
+        "DCSI via the author's R code"
+      ],
+      "present": false,
+      "install_attempted": true,
+      "install_result": "winget install RProject.R -> 'You cancelled the installation', exit code 2; the R installer requires UAC elevation and there is no interactive session to approve it. --scope user fails with 'No applicable installer found' because R ships no per-user installer."
+    },
+    "MATLAB": {
+      "needed_for": [
+        "CVDD via CVDD.m"
+      ],
+      "present": false,
+      "finding": "C:/Program Files/MATLAB/R2024a exists but the installation is INCOMPLETE -- it contains support DLLs, the uninstaller and licence tools, but no matlab.exe anywhere under the tree"
+    },
+    "Octave": {
+      "needed_for": [
+        "CVDD as a MATLAB-compatible fallback"
+      ],
+      "present": false,
+      "install_attempted": true,
+      "install_result": "winget install GNU.Octave -> 0x800704c7 'The operation was canceled by the user' -- same elevation problem"
+    },
+    "resolution_required_from_user": "run the installers from an elevated shell; each is a single command (see MODERN_CVI_IMPLEMENTATION_NOTES.md)",
+    "resolution": "RESOLVED -- all three external runtimes were provided as pinned Docker containers outside any Git-controlled path, so no elevated installation was required"
+  },
+  "summary": {
+    "resolved": [
+      "CDbw",
+      "CVNN",
+      "CVDD",
+      "DCSI"
+    ],
+    "remaining": [],
+    "all_four_remain_required": true,
+    "downgrade_to_cdbw_only": "NOT permitted",
+    "registry": "configs/modern_cvi_registry.json"
+  },
+  "reference_runtimes": {
+    "R_oracle": {
+      "image": "idb-r-oracle:1",
+      "base": "r-base:4.4.2",
+      "fpc": "2.2.15",
+      "image_id": "sha256:b9f758c864e0f97fd5cfcae79df7eda99d4d239c5bf2bde2c70b5e791e683ec7",
+      "isolated": true,
+      "outside_repository": true,
+      "used_for": [
+        "CVNN",
+        "DCSI"
+      ]
+    },
+    "Octave_oracle": {
+      "image": "gnuoctave/octave:9.2.0",
+      "digest": "gnuoctave/octave@sha256:100d394c57b86469748d26ddafcf73a1074338a66dabcababe2e4e05146772b9sha256:4d7ae3029bcf30a58cf35e0872d375e38adb02c5b7b77ffa45d9463db8ec0834",
+      "isolated": true,
+      "outside_repository": true,
+      "used_for": [
+        "CVDD"
+      ]
+    },
+    "note": "containers were used because R and Octave installers require UAC elevation unavailable in a non-interactive session"
+  }
+}

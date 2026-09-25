@@ -1,0 +1,143 @@
+{
+  "suite": "autoclust_scoring_layer",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "trace_id": "0fe1d29d4636df32",
+  "budget": 6,
+  "external_50_used": false,
+  "labels_used": false,
+  "arm_results": {
+    "IDB_AutoClust_A0_original_cvis": {
+      "selected": 3,
+      "algorithm": "agglomerative",
+      "n_eligible": 6,
+      "schema_hash": "0576a13b924c605b",
+      "predictor_hash": "c1f4e857e0a7a7ad",
+      "inventory": "original"
+    },
+    "IDB_AutoClust_A1_original_plus_established": {
+      "selected": 2,
+      "algorithm": "agglomerative",
+      "n_eligible": 6,
+      "schema_hash": "8a3e4a246f6cd171",
+      "predictor_hash": "6c0975fb360c3481",
+      "inventory": "original_plus_established"
+    },
+    "IDB_AutoClust_A2_original_plus_new46": {
+      "selected": 2,
+      "algorithm": "agglomerative",
+      "n_eligible": 6,
+      "schema_hash": "1812c0b2c2d8ff8f",
+      "predictor_hash": "751aaec7d687ccb4",
+      "inventory": "original_plus_new46_live"
+    },
+    "IDB_AutoClust_A3_extended_cvis": {
+      "selected": 5,
+      "algorithm": "agglomerative",
+      "n_eligible": 6,
+      "schema_hash": "e8b8b9d579265d2a",
+      "predictor_hash": "252e4fca8d7399b9",
+      "inventory": "extended_live"
+    }
+  },
+  "selection_rule": "maximise predicted ARI over eligible candidates; strict improvement only, so an exact tie is won by the lowest candidate index",
+  "n": 19,
+  "n_fail": 0,
+  "rows": [
+    {
+      "test": "schemas_7_17_51_61_no_duplicates",
+      "status": "PASS",
+      "detail": "{'IDB_AutoClust_A0_original_cvis': 7, 'IDB_AutoClust_A1_original_plus_established': 17, 'IDB_AutoClust_A2_original_plus_new46': 51, 'IDB_AutoClust_A3_extended_cvis': 61}"
+    },
+    {
+      "test": "predictor_artifact_hashes_exact",
+      "status": "PASS",
+      "detail": "{'IDB_AutoClust_A0_original_cvis': 'c1f4e857e0a7a7ad', 'IDB_AutoClust_A1_original_plus_established': '6c0975fb360c3481', 'IDB_AutoClust_A2_original_plus_new46': '751aaec7d687ccb4', 'IDB_AutoClust_A3_extended_cvis': '252e4fca8d7399b9'}"
+    },
+    {
+      "test": "no_modern_comparator_in_schema",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "scoring_executes_under_guards",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "behavioural_no_training",
+      "status": "PASS",
+      "detail": "fit=0 predict=24"
+    },
+    {
+      "test": "behavioural_no_modern_comparator",
+      "status": "PASS",
+      "detail": "modern=0"
+    },
+    {
+      "test": "trace_unchanged_after_four_arms",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "four_arm_results",
+      "status": "PASS",
+      "detail": "{'IDB_AutoClust_A0_original_cvis': 3, 'IDB_AutoClust_A1_original_plus_established': 2, 'IDB_AutoClust_A2_original_plus_new46': 2, 'IDB_AutoClust_A3_extended_cvis': 5}"
+    },
+    {
+      "test": "one_shared_trace_id",
+      "status": "PASS",
+      "detail": "0fe1d29d4636df32"
+    },
+    {
+      "test": "scoring_api_label_free",
+      "status": "PASS",
+      "detail": "(trace, method_id, X_decision, X_full, repo, arm)"
+    },
+    {
+      "test": "x_full_required_no_silent_alias",
+      "status": "PASS",
+      "detail": "X_full is a required keyword"
+    },
+    {
+      "test": "no_ground_truth_in_results",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "selection_unique_max",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_tie_lowest_index",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_skips_ineligible",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_skips_nan",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_all_invalid_none",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "nan_not_pre_zeroed",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "failure_kinds_frozen",
+      "status": "PASS",
+      "detail": "8 kinds"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,136 @@
+# Preliminary retrospective representative-selection study (Split 1).
+#
+# Freezes every representative and portfolio that comparison suites 1-5 consume.
+# It performs NO comparison of its own.
+#
+# Terminology reminder: nothing selected here is an independently preselected
+# deployment policy. Split 1 is the only split with downstream clustering
+# experiments, so all selections are retrospective. See terminology.md.
+comparison_id: preliminary
+title: Preliminary retrospective representative-selection study (Split 1)
+section: 01_preliminary_selection
+
+selection_policy:
+  selection_metric: best_view_mean_ari
+  selection_split: 1
+  ari_tie_tolerance: 1.0e-6
+  practical_ari_tolerance: 0.001
+  report_practical_equivalence: true
+  # Applied in order; a later key is consulted only when every earlier key ties
+  # within ari_tie_tolerance.
+  tie_break_rules:
+    - {column: best_view_mean_ari, direction: higher}
+    - {column: best_view_median_ari, direction: higher}
+    - {column: best_view_std_ari, direction: lower}
+    - {column: best_view_k_accuracy, direction: higher}
+    - {column: total_runtime_all_views_median_sec, direction: lower}
+    - {column: method_name, direction: lexicographic}
+
+# ---------------------------------------------------------------------------
+# 11.1 Comparison 1 helper selection
+# ---------------------------------------------------------------------------
+comparison_01_helper:
+  representative_id: c1_best_observed_real_fixed_raw
+  candidate_pool_id: real_fixed_topk_raw
+  scopes: [global, family]
+  # Recorded separately; deliberately NOT a pool member, so RQ1-D compares the
+  # dynamic count against the best FIXED count rather than against itself.
+  record_separately: [real_top_dynamic_raw]
+
+# ---------------------------------------------------------------------------
+# 11.2 Comparison 2 raw-vs-softmax representatives
+# ---------------------------------------------------------------------------
+comparison_02_representatives:
+  # One representative per (utility source x metric-count policy) cell. Pools are
+  # generated from method_registry.VARIANT_FAMILIES so the 15 primary cells and
+  # the 2 oracle-assisted diagnostic cells cannot drift apart from the registry.
+  representative_id_prefix: c2_rep
+  primary_cells_only_for_headline: true
+  scopes: [global, family]
+  diagnostic_cells:
+    - mlp_dynamic_realK
+    - knn_dynamic_realK
+  notes: >-
+    For the MLP/KNN primary Dynamic cells only dynamic_predictK_* is eligible.
+    dynamic_realK_* is oracle-assisted (the metric count comes from the real
+    utility vector) and is selected separately as a labelled diagnostic.
+
+# ---------------------------------------------------------------------------
+# 11.3 Comparison 4 fixed representatives
+# ---------------------------------------------------------------------------
+comparison_04_representatives:
+  primary:
+    - {representative_id: c4_best_observed_mlp_fixed, candidate_pool_id: mlp_fixed_all}
+    - {representative_id: c4_best_observed_knn_fixed, candidate_pool_id: knn_fixed_all}
+  supplemental:
+    - {representative_id: c4_best_observed_mlp_incl_dynamic,
+       candidate_pool_id: mlp_fixed_plus_dynamic_predict}
+    - {representative_id: c4_best_observed_knn_incl_dynamic,
+       candidate_pool_id: knn_fixed_plus_dynamic_predict}
+  scopes: [global]
+  notes: >-
+    The supplemental pools add the operational Dynamic Predict-K variants. They
+    are recorded but do NOT replace the fixed representatives Comparison 4
+    requires.
+
+# ---------------------------------------------------------------------------
+# 11.4 VBS portfolios to freeze (membership lives in portfolio_registry.py)
+# ---------------------------------------------------------------------------
+portfolios:
+  freeze_all_registered: true
+  comparison_05: [knn_all_variants_vbs, knn_strict_deployable_vbs,
+                  mlp_all_variants_vbs, mlp_strict_deployable_vbs,
+                  real_utility_vbs, learned_source_all_variants_vbs,
+                  strict_deployable_clustopt_vbs, all_variant_clustopt_vbs,
+                  ml2dac_vbs, autoclust_vbs]
+  comparison_03: [raw_only_vbs, softmax_only_vbs, raw_softmax_union_vbs]
+  optional_matched: [deployable_raw_vbs, deployable_softmax_vbs,
+                     deployable_raw_softmax_union_vbs]
+  supplementary: [fixed_baseline_vbs]
+
+# ---------------------------------------------------------------------------
+# Selection-aware uncertainty
+# ---------------------------------------------------------------------------
+selection_aware_bootstrap:
+  enabled: true
+  n_samples: 1000
+  confidence: 0.95
+  seed: 20260725
+  comparisons:
+    - {label: best_observed_mlp_fixed_vs_autoclust_extended,
+       candidate_pool_id: mlp_fixed_all,
+       competitor: AutoClust_Extended_InDomain_same_search_space}
+    - {label: best_observed_knn_fixed_vs_autoclust_extended,
+       candidate_pool_id: knn_fixed_all,
+       competitor: AutoClust_Extended_InDomain_same_search_space}
+    - {label: best_observed_mlp_fixed_vs_ml2dac_extended,
+       candidate_pool_id: mlp_fixed_all,
+       competitor: ML2DAC_Extended_InDomain_same_search_space}
+    - {label: best_observed_knn_fixed_vs_ml2dac_extended,
+       candidate_pool_id: knn_fixed_all,
+       competitor: ML2DAC_Extended_InDomain_same_search_space}
+    - {label: best_observed_real_fixed_raw_vs_all_metrics_uniform,
+       candidate_pool_id: real_fixed_topk_raw,
+       competitor: all_metrics_uniform}
+
+outputs:
+  tables:
+    - selection_manifest.csv
+    - observed_representative_map.csv
+    - global_representatives.csv
+    - family_representatives.csv
+    - candidate_rankings.csv
+    - family_candidate_rankings.csv
+    - family_divergence.csv
+    - comparison_01_helper_selections.csv
+    - comparison_02_global_representatives.csv
+    - comparison_02_family_representatives.csv
+    - comparison_04_fixed_representatives.csv
+    - portfolio_manifest.csv
+    - preliminary_selection_summary.csv
+    - selection_aware_bootstrap_summary.csv
+  workbooks: [01_preliminary_selection.xlsx]
+  reports:
+    - PRELIMINARY_SELECTION_REPORT.md
+    - selection_manifest.md
+    - portfolio_manifest.md

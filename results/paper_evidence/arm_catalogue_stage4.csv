@@ -1,0 +1,15 @@
+stage,code,method_id,framework,label,utility_source,top_k,weighting,policy,reranker,status
+4 (external),C0,IDB_ClustOpt_C0_MLP_TOP5_RAW_noR,ClustOpt,"C0 MLP Top-5 RAW, no reranker",mlp,5,normalized_positive,--,no,deployable
+4 (external),C1,IDB_ClustOpt_C1_KNN_TOP10_RAW_noR,ClustOpt,"C1 KNN Top-10 RAW, no reranker",knn,10,normalized_positive,--,no,deployable
+4 (external),C2,IDB_ClustOpt_C2_PPv1_noR,ClustOpt,"C2 Policy Predictor v1, no reranker",policy,--,policy_selected,PP_v1,no,deployable
+4 (external),C3,IDB_ClustOpt_C3_MLP_TOP5_RAW_R,ClustOpt,C3 MLP Top-5 RAW + reranker,mlp,5,normalized_positive,--,MLP_TOP5,deployable
+4 (external),C4,IDB_ClustOpt_C4_KNN_TOP10_RAW_R,ClustOpt,C4 KNN Top-10 RAW + reranker,knn,10,normalized_positive,--,KNN_TOP10,deployable
+4 (external),C5,IDB_ClustOpt_C5_PPv2_R,ClustOpt,C5 Policy Predictor v2 + reranker,policy,--,policy_selected,PP_v2,per_policy,deployable
+4 (external),M0,IDB_ML2DAC_M0_original_cvis,ML2DAC,IDB_ML2DAC_M0_original_cvis,--,--,--,--,no,deployable
+4 (external),M1,IDB_ML2DAC_M1_original_plus_established,ML2DAC,IDB_ML2DAC_M1_original_plus_established,--,--,--,--,no,deployable
+4 (external),M2,IDB_ML2DAC_M2_original_plus_new46,ML2DAC,IDB_ML2DAC_M2_original_plus_new46,--,--,--,--,no,deployable
+4 (external),M3,IDB_ML2DAC_M3_extended_cvis,ML2DAC,IDB_ML2DAC_M3_extended_cvis,--,--,--,--,no,deployable
+4 (external),A0,IDB_AutoClust_A0_original_cvis,AutoClust,IDB_AutoClust_A0_original_cvis,--,--,--,--,no,deployable
+4 (external),A1,IDB_AutoClust_A1_original_plus_established,AutoClust,IDB_AutoClust_A1_original_plus_established,--,--,--,--,no,deployable
+4 (external),A2,IDB_AutoClust_A2_original_plus_new46,AutoClust,IDB_AutoClust_A2_original_plus_new46,--,--,--,--,no,deployable
+4 (external),A3,IDB_AutoClust_A3_extended_cvis,AutoClust,IDB_AutoClust_A3_extended_cvis,--,--,--,--,no,deployable

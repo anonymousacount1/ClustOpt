@@ -1,0 +1,67 @@
+{
+  "config": {
+    "config_id": "n015__standard__euclidean__inverse_distance",
+    "n_neighbors": 15,
+    "scaler": "standard",
+    "distance": "euclidean",
+    "neighbor_weighting": "inverse_distance"
+  },
+  "dynamic_topk_heuristic": "dynamic_topk_relsoft_a092_k5_ceil",
+  "train_splits": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "locked_holdout_split": 1,
+  "split1_in_training": false,
+  "per_view_train_counts": {
+    "x_only": 16013,
+    "y_only": 16013,
+    "xy_2d": 16013
+  },
+  "n_features": 250,
+  "n_metrics": 60,
+  "artifact_sha256": {
+    "feature_schema.json": "7445f74cc50d3f2489ec98d5df08c269ba0c3de0b5dd1df818d0b2c91dff6095",
+    "training_manifest.parquet": "c0425fdf168defbc6686cb7e6fd9e1627cb89b4a7870e74e282c68f41990d1e7",
+    "utility_metric_schema.json": "53969e52fb663fc92ae0a6355a1a78211da949e45d685089bc2d970760471c8c",
+    "x_only/preprocessor.pkl": "a3a8224b322ce832ed07834159147f6cf219d916ac456bbc4649c6b089e27734",
+    "x_only/training_features.npy": "536ce343cc1040e4a793153643e85afd53c37a49ce0c0dd0803f23ba018496a3",
+    "x_only/training_record_ids.npy": "d7583ea558e4caa057f6e31ef266c305f51c5a59d302c27fa397cab447d8b114",
+    "x_only/training_utilities.npy": "00ca5a652fac79e3c70779413311a7b6f68734b88850df940659da3a49cb6897",
+    "xy_2d/preprocessor.pkl": "bb621b0456b505c7e6af535f60832487c4b2d8c9e111f2fa2dbf8b4509233d2a",
+    "xy_2d/training_features.npy": "ab46629789c6d564b6bf0b8819dd908751497d3b56ec4451f9c69b3679ca475e",
+    "xy_2d/training_record_ids.npy": "5891ed22ce2170002cffd5193b336cacb3b93f8120a22ce5c380d60dbdeb5d15",
+    "xy_2d/training_utilities.npy": "eb19ededd3bb70dab6b5fc15f56473eb17b4a6587f897f1ea737b36e662c2c7e",
+    "y_only/preprocessor.pkl": "65587eac0ba416534d9d7f04c18e62b9c989552f0a4f8bdbebd588d3cc3c11a0",
+    "y_only/training_features.npy": "7f1b776ee0d9dcf32e4e692b45b598e1115a48e6ab4fa01d7f866e286548bcf1",
+    "y_only/training_record_ids.npy": "23dd15a5fe25011e9b87e26c3c73c39b3387050ea4a1dc4d6e2b2fb2a17edf99",
+    "y_only/training_utilities.npy": "c47a6e7259d33d60c8fb43bc736d0b222a3c3c349b7034ff36bd6d811dfec15e"
+  },
+  "view_manifest": {
+    "x_only": {
+      "n_train": 16013,
+      "distance": "euclidean"
+    },
+    "y_only": {
+      "n_train": 16013,
+      "distance": "euclidean"
+    },
+    "xy_2d": {
+      "n_train": 16013,
+      "distance": "euclidean"
+    }
+  }
+}

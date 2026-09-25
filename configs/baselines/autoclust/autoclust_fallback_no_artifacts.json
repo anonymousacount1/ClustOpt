@@ -1,0 +1,25 @@
+{
+  "method": "AutoClust",
+  "implementation": "ML2DAC_RelatedWork_Reimplementation",
+  "mode": "fallback_no_artifacts_DEBUG_ONLY",
+  "use_landmarking_metafeatures": true,
+  "landmarking_algorithm": "MeanShift",
+  "use_kdtree_algorithm_selection": true,
+  "use_mlp_cvi_to_external_index_objective": true,
+  "use_bayesian_optimization": true,
+  "optimizer": "SMAC",
+  "optimizer_evaluations": 20,
+  "smac_wallclock_limit_sec": null,
+  "random_state": 42,
+  "normalize_input": true,
+  "k_range": null,
+  "record_types": ["1d_x", "1d_y", "2d"],
+  "artifact_policy": "allow_degraded",
+  "fail_on_missing_core_artifacts": false,
+  "fail_on_invalid_clustering": false,
+  "n_jobs": 1,
+  "_notes": {
+    "intent": "DEBUG / fallback ONLY -- NOT for the final comparison. Sets fail_on_missing_core_artifacts=false so the pipeline does not hard-fail if an artifact is absent. The shipped artifacts (kdtree, metafeatures, MLP, offline CSV) are present, so this fallback is NOT expected to be needed; prefer autoclust_full_ml2dac_reimplementation.json.",
+    "warning": "If artifacts are missing, AutoClust cannot run faithfully (it needs the trained MLP + KD-tree). Do not report degraded runs as the AutoClust baseline."
+  }
+}

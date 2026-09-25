@@ -1,0 +1,43 @@
+{
+  "artifact": "split1_knn_utility_context.csv.gz",
+  "provenance": "REGENERATED from the frozen KNN repository using the production KNNUtilityProvider; the authoritative split1_locked_predictions.parquet is unreadable in this environment (no pyarrow/fastparquet anywhere on the machine) and no dependency was installed",
+  "knn_model_dir": "results_analysis/metric_utility_knn/phase_e1/models",
+  "knn_config": {
+    "config_id": "n015__standard__euclidean__inverse_distance",
+    "n_neighbors": 15,
+    "scaler": "standard",
+    "distance": "euclidean",
+    "neighbor_weighting": "inverse_distance"
+  },
+  "knn_train_splits": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "split1_in_training": false,
+  "n_rows": 3165,
+  "expected_rows": 3165,
+  "n_datasets": 1055,
+  "n_views": 3,
+  "n_utility_columns": 60,
+  "metric_order_hash": "8e548d63a9271a7a",
+  "column_order": "canonical 60-metric schema order",
+  "duplicates": 0,
+  "all_finite": true,
+  "file_sha256_16": "bcea5895df452891",
+  "deterministic": "nearest-neighbour lookup over frozen arrays; no randomness, no training, no Split-1 outcome used",
+  "source_commit": "04e5be2e4703504bec6f6dd1d64cd62d7e7ed31f",
+  "runtime_sec": 23.07342219352722
+}

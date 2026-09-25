@@ -1,0 +1,50 @@
+{
+  "check": "autoclust_component_equivalence",
+  "level": "LEVEL A - component equivalence vs the authoritative Stage-3A implementation",
+  "reference": "AutoClust/indomain/phase.py::_cvi_vector over ViewMetricEngine",
+  "data": "INTERNAL / NON_SCIENTIFIC only",
+  "tolerance": {
+    "atol": 1e-08,
+    "justification": "set ABOVE the reference implementation own measured reproducibility floor, not chosen to obtain a pass"
+  },
+  "reference_self_reproducibility": {
+    "bit_reproducible": false,
+    "max_observed_drift": 2.3469646538709643e-10,
+    "example_metric": "orientation_histogram_entropy",
+    "note": "some image-based New46 metrics are not bit-reproducible across repeated calls on identical input; this is a property of the frozen metric layer, discovered here, not an adapter defect"
+  },
+  "views": [
+    "x_only",
+    "xy_2d",
+    "y_only"
+  ],
+  "algorithms_covered": [
+    "agglomerative",
+    "minibatch_kmeans"
+  ],
+  "candidates": 15,
+  "cvi_vectors_compared_per_arm": {
+    "IDB_AutoClust_A0_original_cvis": 15,
+    "IDB_AutoClust_A1_original_plus_established": 15,
+    "IDB_AutoClust_A2_original_plus_new46": 15,
+    "IDB_AutoClust_A3_extended_cvis": 15
+  },
+  "nan_mask_mismatches": 0,
+  "inf_mask_mismatches": 0,
+  "vector_mismatches": 0,
+  "max_finite_abs_error": 2.3469646538709643e-10,
+  "predictor_comparisons_per_arm": {
+    "IDB_AutoClust_A0_original_cvis": 15,
+    "IDB_AutoClust_A1_original_plus_established": 15,
+    "IDB_AutoClust_A2_original_plus_new46": 15,
+    "IDB_AutoClust_A3_extended_cvis": 15
+  },
+  "predictor_max_abs_error_per_arm": {
+    "IDB_AutoClust_A0_original_cvis": 0.0,
+    "IDB_AutoClust_A1_original_plus_established": 0.0,
+    "IDB_AutoClust_A2_original_plus_new46": 7.1277428403959675e-12,
+    "IDB_AutoClust_A3_extended_cvis": 1.4693246619401634e-12
+  },
+  "predictor_mismatches": 0,
+  "overall": "PASS"
+}

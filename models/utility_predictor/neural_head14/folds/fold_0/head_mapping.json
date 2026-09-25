@@ -1,0 +1,56 @@
+{
+  "head_order": [
+    "classic_cvi"
+  ],
+  "heads": {
+    "classic_cvi": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  "metric_to_head": {
+    "silhouette": "classic_cvi",
+    "noise_aware_silhouette": "classic_cvi",
+    "calinski_harabasz": "classic_cvi",
+    "davies_bouldin": "classic_cvi",
+    "s_dbw": "classic_cvi",
+    "dbcv": "classic_cvi",
+    "avg_within_cluster_dispersion": "classic_cvi",
+    "avg_pca_isotropy": "classic_cvi",
+    "min_centroid_distance": "classic_cvi",
+    "min_intercluster_distance": "classic_cvi",
+    "cluster_size_balance_entropy": "classic_cvi",
+    "cluster_size_imbalance_entropy": "classic_cvi",
+    "neighborhood_purity": "classic_cvi",
+    "neighborhood_purity_multi_k": "classic_cvi"
+  },
+  "unmatched": [],
+  "target_columns": [
+    "utility__silhouette",
+    "utility__noise_aware_silhouette",
+    "utility__calinski_harabasz",
+    "utility__davies_bouldin",
+    "utility__s_dbw",
+    "utility__dbcv",
+    "utility__avg_within_cluster_dispersion",
+    "utility__avg_pca_isotropy",
+    "utility__min_centroid_distance",
+    "utility__min_intercluster_distance",
+    "utility__cluster_size_balance_entropy",
+    "utility__cluster_size_imbalance_entropy",
+    "utility__neighborhood_purity",
+    "utility__neighborhood_purity_multi_k"
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "verifier": "stage4_pre_execution",
+  "stage": "4B-5",
+  "n": 30,
+  "n_pass": 30,
+  "n_fail": 0,
+  "gates": [
+    {
+      "gate": "P01",
+      "description": "every closed stage verifier still passes",
+      "status": "PASS",
+      "detail": "gates=0; clustopt=0; autoclust=0; ml2dac=0; common=0"
+    },
+    {
+      "gate": "P02",
+      "description": "the method plan is 14 arms over 6 physical groups",
+      "status": "PASS",
+      "detail": "14 arms / 6 groups"
+    },
+    {
+      "gate": "P03",
+      "description": "planned 900 method physical traces and 2100 scientific outputs",
+      "status": "PASS",
+      "detail": "900 / 2100"
+    },
+    {
+      "gate": "P04",
+      "description": "V2 view semantics with X_full explicit everywhere",
+      "status": "PASS",
+      "detail": "V2, X_full required"
+    },
+    {
+      "gate": "P05",
+      "description": "fixed32 resolves to exactly 32 authoritative configs per view",
+      "status": "PASS",
+      "detail": "{\"x_only\": 32, \"y_only\": 32, \"xy_2d\": 32}"
+    },
+    {
+      "gate": "P06",
+      "description": "the pre- and post-replacement compositions are both recorded",
+      "status": "PASS",
+      "detail": "pre matches the documented enumeration; resolved holds 32"
+    },
+    {
+      "gate": "P07",
+      "description": "one bank per dataset/view, metric-independent, label-free",
+      "status": "PASS",
+      "detail": "3 banks, 96 slots, 0 ground-truth loads"
+    },
+    {
+      "gate": "P08",
+      "description": "failed fixed32 slots are preserved, never resampled",
+      "status": "PASS",
+      "detail": "{'x_only': 0, 'y_only': 0, 'xy_2d': 1}"
+    },
+    {
+      "gate": "P09",
+      "description": "planned 150 fixed32 banks and 4800 candidate slots",
+      "status": "PASS",
+      "detail": "150 / 4800"
+    },
+    {
+      "gate": "P10",
+      "description": "the two track counts are never summed",
+      "status": "PASS",
+      "detail": "900 and 4800 kept as separate task categories"
+    },
+    {
+      "gate": "P11",
+      "description": "metric groups 7 / 10 / 46 / 4 and 67 primary",
+      "status": "PASS",
+      "detail": "{\"Original\": 7, \"Established\": 10, \"New46\": 46, \"Modern\": 4}"
+    },
+    {
+      "gate": "P12",
+      "description": "orientation and metric.space resolved for every primary metric",
+      "status": "PASS",
+      "detail": "0 unresolved orientation, 0 unresolved space"
+    },
+    {
+      "gate": "P13",
+      "description": "diagnostics are separated from the primary family",
+      "status": "PASS",
+      "detail": "67 primary + 2 diagnostics = 69 evaluators"
+    },
+    {
+      "gate": "P14",
+      "description": "both historically dead New46 metrics are retained",
+      "status": "PASS",
+      "detail": "convexity_ratio_image_based, hough_arc_circle_strength"
+    },
+    {
+      "gate": "P15",
+      "description": "the four modern comparators point at the validated implementations",
+      "status": "PASS",
+      "detail": "cdbw/cvnn/cvdd/dcsi wired; cvnn MINIMIZE"
+    },
+    {
+      "gate": "P16",
+      "description": "modern comparators are not learned-model members",
+      "status": "PASS",
+      "detail": "absent from every learned inventory"
+    },
+    {
+      "gate": "P17",
+      "description": "the canonical Stage-3B utility is reused verbatim",
+      "status": "PASS",
+      "detail": "weights unchanged, function reused"
+    },
+    {
+      "gate": "P18",
+      "description": "utility is computed per dataset x view x metric, never pooled",
+      "status": "PASS",
+      "detail": "per dataset x view x metric over the common fixed32 bank"
+    },
+    {
+      "gate": "P19",
+      "description": "the utility ran on a real fixed32 bank in the internal smoke",
+      "status": "PASS",
+      "detail": "55 metric utilities over 31 valid candidates"
+    },
+    {
+      "gate": "P20",
+      "description": "no ground truth before the offline boundary",
+      "status": "PASS",
+      "detail": "0 in both tracks"
+    },
+    {
+      "gate": "P21",
+      "description": "no true-K forcing in fixed32 generation",
+      "status": "PASS",
+      "detail": "the view exposes no true K to force"
+    },
+    {
+      "gate": "P22",
+      "description": "the fixed32 track cannot feed inference",
+      "status": "PASS",
+      "detail": "diagnostic track only"
+    },
+    {
+      "gate": "P23",
+      "description": "no metric implementation or learned artifact changed",
+      "status": "PASS",
+      "detail": "no tracked change in the metric/model/utility layer"
+    },
+    {
+      "gate": "P24",
+      "description": "no external scientific execution has occurred",
+      "status": "PASS",
+      "detail": "internal fixtures only"
+    },
+    {
+      "gate": "P25",
+      "description": "corpus, fingerprint and numerical policy are the frozen ones",
+      "status": "PASS",
+      "detail": "corpus + fingerprint + policy"
+    },
+    {
+      "gate": "P26",
+      "description": "aggregation modes and BestView rules are frozen before outcomes",
+      "status": "PASS",
+      "detail": "dataset macro + source-balanced macro"
+    },
+    {
+      "gate": "P27",
+      "description": "the carried-forward hypotheses are frozen before outcomes",
+      "status": "PASS",
+      "detail": "generalist core, specialists, New46, pattern/image, modern, capture-vs-existence"
+    },
+    {
+      "gate": "P28",
+      "description": "execution phases A-D are frozen and Phase D cannot trigger reruns",
+      "status": "PASS",
+      "detail": "A method, B fixed32, C offline, D analysis"
+    },
+    {
+      "gate": "P29",
+      "description": "storage, runtime and hashing contracts are recorded",
+      "status": "PASS",
+      "detail": "contracts frozen"
+    },
+    {
+      "gate": "P30",
+      "description": "the Stage-4C plan manifest is complete",
+      "status": "PASS",
+      "detail": "11 sections"
+    }
+  ],
+  "external_execution_authorised": true,
+  "status": "PASS"
+}

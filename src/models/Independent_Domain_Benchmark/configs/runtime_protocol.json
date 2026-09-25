@@ -1,0 +1,63 @@
+{
+  "protocol_id": "idb_runtime_v1",
+  "headline": "ONLINE_RUNTIME = T1 - T0",
+  "T0": "immediately before method-specific online inference/search, with the frozen X for one view already materialised in memory",
+  "T1": "when final cluster labels have been selected and materialised",
+  "included": {
+    "ClustOpt": [
+      "method-required meta-feature extraction",
+      "utility inference",
+      "policy inference where applicable",
+      "metric/policy selection",
+      "clustering search",
+      "CVI evaluation",
+      "final J selection",
+      "reranker inference where applicable"
+    ],
+    "AutoClust": [
+      "method-required meta/landmark features",
+      "frozen algorithm-selector inference",
+      "candidate clustering",
+      "CVI vector computation",
+      "frozen ARI-predictor inference",
+      "final selection"
+    ],
+    "ML2DAC": [
+      "method-required meta-feature extraction",
+      "nearest-neighbour lookup",
+      "frozen CVI classifier",
+      "warmstart selection",
+      "clustering search",
+      "selected-CVI evaluation",
+      "final selection"
+    ]
+  },
+  "excluded": [
+    "downloading",
+    "parsing raw files",
+    "imputation/scaling/PCA benchmark preparation",
+    "model-file loading from disk",
+    "offline ground-truth metrics",
+    "result serialization",
+    "plotting"
+  ],
+  "MODEL_INIT_RUNTIME": "separately measured cost of loading frozen artifacts",
+  "TOTAL_COLD_RUNTIME": "model init + online; reported separately, never mixed with the headline",
+  "workers": 8,
+  "worker_policy": "exactly 8; if 8 workers are unsafe on the target machine execution must STOP rather than silently reduce",
+  "thread_policy": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "reason": "prevent nested oversubscription under 8 workers"
+  },
+  "watchdog": {
+    "common_seconds": 1800,
+    "identical_across_methods": true,
+    "purpose": "emergency hang/resource-failure catch ONLY",
+    "evidence": "historical per-(dataset,view) worst cases: AutoClust A2 p95 total-all-views 719 s (~240 s per view); ML2DAC materially faster. 1800 s per (dataset, view) is >7x the observed p95 per-view cost and cannot truncate normal execution",
+    "replaces": "the historical 150 s ClustOpt-only online cap, which was NOT comparable across frameworks and is not carried over",
+    "scientific_budget": "50 evaluations for every method"
+  }
+}

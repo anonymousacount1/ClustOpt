@@ -1,0 +1,78 @@
+# Stage-1 ClustOpt runtime — INTENTIONAL DIRECT PINS
+# ---------------------------------------------------------------------------
+# This is a reproducible RECONSTRUCTION of the ClustOpt runtime, NOT the
+# historical environment. The environment that produced the historical Split-1
+# runs and the frozen Full-60 MLP no longer exists on this machine and was never
+# captured (no requirements/lock/conda-export artifact exists anywhere in the
+#
+# Evidence grades:
+#   VERIFIED      recovered from an immutable historical artifact
+#   RECONSTRUCTED chosen for mutual compatibility; no historical evidence
+#
+# Install (Windows, Python 3.12):
+#   python -m venv .venv_clustopt
+#   .venv_clustopt\Scripts\python.exe -m pip install -r environment\stage1_clustopt_requirements.txt
+#   .venv_clustopt\Scripts\python.exe -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1
+#
+# The exact resolved closure (incl. transitive deps) is in
+#   environment/stage1_clustopt_requirements.lock.txt
+# ---------------------------------------------------------------------------
+
+# VERIFIED — folds/fold_0/x_scaler.pkl embeds _sklearn_version == '1.6.0'.
+# Hard constraint: changing it risks altering how the frozen scaler unpickles.
+scikit-learn==1.6.0
+
+# VERIFIED (major only) — the same pickle references `numpy._core.multiarray`,
+# a module path that exists only in NumPy >= 2.0 (`numpy.core` in 1.x).
+# RECONSTRUCTED (exact) — 2.1.3 chosen as a stable 2.x with cp312 wheels.
+numpy==2.1.3
+
+# RECONSTRUCTED — contemporaneous with scikit-learn 1.6.0 and NumPy-2 compatible.
+scipy==1.14.1
+pandas==2.2.3
+
+# RECONSTRUCTED — >= 2.3 required for NumPy 2; 2.5.1 is conservative and predates
+# the 2.6 `weights_only` default flip (moot here: regressor_predictor.py passes
+# weights_only=False explicitly). CPU-only build; no CUDA requirement exists.
+# NOTE: installed from https://download.pytorch.org/whl/cpu (see header).
+torch==2.5.1
+
+# RECONSTRUCTED — no historical evidence. Version fidelity is NOT required for
+# Stage-1 internal validity: all six arms run in this one frozen environment with
+# a deterministic seed policy. The historical unseeded TPE trajectory is
+# irreproducible in principle (Stage-0 BLOCKER-1) and is not being reproduced.
+optuna==4.1.0
+
+# RECONSTRUCTED — geometry/image stack required by metrics/pattern_base and
+# metrics/image_base.
+shapely==2.0.6
+opencv-python==4.10.0.84
+
+# RECONSTRUCTED — the STANDALONE hdbscan package (ClustOpt calls
+# `hdbscan.HDBSCAN`, not sklearn.cluster.HDBSCAN). 0.8.40 is the first release
+# supporting NumPy 2; a cp312/win_amd64 wheel is published, so no compiler is
+# needed (installed with --only-binary=hdbscan to guarantee this).
+hdbscan==0.8.40
+
+# CDbw comparator (external index analysis only) calls the PyPI package;
+# version fixed by models/Independent_Domain_Benchmark/configs/
+# modern_cvi_provenance.json. MIT, Copyright (c) 2019 Alexander Lashkov.
+cdbw==0.2
+
+# RECONSTRUCTED — required by ClustOpt's search space (skopt.space
+# Categorical/Integer/Real). Unmaintained upstream but a hard import. The
+# historical run paired it with scikit-learn 1.6.0 successfully.
+scikit-optimize==0.10.2
+
+# RECONSTRUCTED — plotting only.
+matplotlib==3.9.2
+
+# Parquet reader for the released per-dataset result tables.
+pyarrow==25.0.1
+
+# Excel export of aggregated results (optional output format).
+openpyxl==3.1.5
+
+# Imported directly (previously only transitive); versions from the lock file.
+networkx==3.6.1
+joblib==1.5.3

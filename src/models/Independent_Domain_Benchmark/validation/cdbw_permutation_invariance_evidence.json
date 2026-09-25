@@ -1,0 +1,110 @@
+{
+  "test": "cdbw_permutation_invariance",
+  "claim_under_test": "paper-faithful CDbw depends only on (X, partition), never on cluster names",
+  "geometries": [
+    "separated_3",
+    "unequal_density_2",
+    "ring_and_core",
+    "separated_4",
+    "elongated_3",
+    "nested_rings_3",
+    "mixed_density_4",
+    "two_moons_2"
+  ],
+  "n_geometries": 8,
+  "random_permutations_per_geometry": 20,
+  "naming_schemes": [
+    "contiguous",
+    "one_based",
+    "sparse",
+    "random_perm x20"
+  ],
+  "negative_labels": "not exercised as cluster ids -- -1 is reserved for noise by the frozen wrapper contract; noise handling is checked separately",
+  "atol": 1e-12,
+  "residual_source": "IEEE-754 summation order inside the reused package compactness reduction",
+  "total_evaluations": 207,
+  "max_abs_diff_overall": 6.661338147750939e-16,
+  "n_fail": 0,
+  "rows": [
+    {
+      "fixture_id": "separated_3",
+      "n_schemes": 23,
+      "n_random_permutations": 20,
+      "base_value": 2.1203374252198004,
+      "base_valid": true,
+      "max_abs_diff": 0.0,
+      "status": "PASS"
+    },
+    {
+      "fixture_id": "unequal_density_2",
+      "n_schemes": 23,
+      "n_random_permutations": 20,
+      "base_value": 1.1855239927612071,
+      "base_valid": true,
+      "max_abs_diff": 0.0,
+      "status": "PASS"
+    },
+    {
+      "fixture_id": "ring_and_core",
+      "n_schemes": 23,
+      "n_random_permutations": 20,
+      "base_value": 0.2533924761194836,
+      "base_valid": true,
+      "max_abs_diff": 0.0,
+      "status": "PASS"
+    },
+    {
+      "fixture_id": "separated_4",
+      "n_schemes": 23,
+      "n_random_permutations": 20,
+      "base_value": 1.5381191280883713,
+      "base_valid": true,
+      "max_abs_diff": 6.661338147750939e-16,
+      "status": "PASS"
+    },
+    {
+      "fixture_id": "elongated_3",
+      "n_schemes": 23,
+      "n_random_permutations": 20,
+      "base_value": 0.03985572078824928,
+      "base_valid": true,
+      "max_abs_diff": 1.3877787807814457e-17,
+      "status": "PASS"
+    },
+    {
+      "fixture_id": "nested_rings_3",
+      "n_schemes": 23,
+      "n_random_permutations": 20,
+      "base_value": 0.022053939864620262,
+      "base_valid": true,
+      "max_abs_diff": 3.469446951953614e-18,
+      "status": "PASS"
+    },
+    {
+      "fixture_id": "mixed_density_4",
+      "n_schemes": 23,
+      "n_random_permutations": 20,
+      "base_value": 1.680158932971929,
+      "base_valid": true,
+      "max_abs_diff": 0.0,
+      "status": "PASS"
+    },
+    {
+      "fixture_id": "two_moons_2",
+      "n_schemes": 23,
+      "n_random_permutations": 20,
+      "base_value": 0.1156822863301898,
+      "base_valid": true,
+      "max_abs_diff": 0.0,
+      "status": "PASS"
+    },
+    {
+      "fixture_id": "separated_3+noise",
+      "scheme": "noise_handling",
+      "n_schemes": 23,
+      "base_value": 1.5924517985141686,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

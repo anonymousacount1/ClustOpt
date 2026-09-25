@@ -1,0 +1,110 @@
+{
+  "suite": "autoclust_physical_layer",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "trace": {
+    "trace_id": "3736ea1e02b9a22c",
+    "dataset_id": "INVENTED_NON_SCIENTIFIC_SMOKE_TEST_DS",
+    "view_id": "xy_2d",
+    "algorithm": "agglomerative",
+    "seed": 108838199,
+    "candidates": 8,
+    "valid": 8,
+    "content_hash": "046b8e18c58064de",
+    "search_space_fingerprint": "8ddf86c79888ebe9"
+  },
+  "external_50_used": false,
+  "labels_used": false,
+  "n": 9,
+  "n_fail": 0,
+  "rows": [
+    {
+      "test": "api_label_free",
+      "status": "PASS",
+      "detail": {
+        "signature": [
+          "X",
+          "dataset_id",
+          "view_id",
+          "repo",
+          "budget"
+        ],
+        "banned_present": []
+      }
+    },
+    {
+      "test": "no_repository_membership",
+      "status": "PASS",
+      "detail": {
+        "dataset_id": "INVENTED_NON_SCIENTIFIC_SMOKE_TEST_DS",
+        "membership_required": false
+      }
+    },
+    {
+      "test": "production_seed_identity",
+      "status": "PASS",
+      "detail": {
+        "seeds": {
+          "IDB_AutoClust_A0_original_cvis": 108838199,
+          "IDB_AutoClust_A1_original_plus_established": 108838199,
+          "IDB_AutoClust_A2_original_plus_new46": 108838199,
+          "IDB_AutoClust_A3_extended_cvis": 108838199
+        },
+        "identity": "autoclust_shared_candidate_slate"
+      }
+    },
+    {
+      "test": "trace_id_arm_independent",
+      "status": "PASS",
+      "detail": {
+        "trace_id": "3736ea1e02b9a22c",
+        "reproducible": true,
+        "depends_on_method_id": false
+      }
+    },
+    {
+      "test": "budget_and_no_resampling",
+      "status": "PASS",
+      "detail": {
+        "budget": 8,
+        "candidates": 8,
+        "failed_kept": 0
+      }
+    },
+    {
+      "test": "immutability",
+      "status": "PASS",
+      "detail": {
+        "metadata": "FrozenInstanceError",
+        "collection": "AttributeError",
+        "configuration": "TypeError",
+        "labels": "ValueError"
+      }
+    },
+    {
+      "test": "four_arm_consumption",
+      "status": "PASS",
+      "detail": {
+        "arms": 4,
+        "hash_stable": true,
+        "availability_identical": true
+      }
+    },
+    {
+      "test": "no_ground_truth_fields",
+      "status": "PASS",
+      "detail": {
+        "forbidden_found": []
+      }
+    },
+    {
+      "test": "sampler_guard",
+      "status": "PASS",
+      "detail": {
+        "constrained_used": true,
+        "native_reachable": false,
+        "checked": "comment-stripped source"
+      }
+    }
+  ],
+  "status": "PASS"
+}

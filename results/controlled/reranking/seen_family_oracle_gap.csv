@@ -1,0 +1,2 @@
+visited_oracle_mean,seen_family_oracle_mean,gap,note
+0.6530632445475737,0.6494437868003771,0.0036194577471966305,seen-family oracle is DIAGNOSTIC ONLY; the authoritative oracle uses all eligible visited candidates

@@ -1,0 +1,134 @@
+{
+  "n_rerankers": 10,
+  "rerankers": [
+    {
+      "reranker_id": "MLP_TOP1",
+      "regime": "mlp__top1",
+      "model_file": "final_models/MLP_TOP1/model.joblib",
+      "model_file_sha256_16": "76d06d41e3fc4675",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "regressor_top1_raw",
+        "regressor_top1_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "MLP_TOP3",
+      "regime": "mlp__top3",
+      "model_file": "final_models/MLP_TOP3/model.joblib",
+      "model_file_sha256_16": "c603cbfd814e8c77",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "regressor_top3_raw",
+        "regressor_top3_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "MLP_TOP5",
+      "regime": "mlp__top5",
+      "model_file": "final_models/MLP_TOP5/model.joblib",
+      "model_file_sha256_16": "27c57c20a71f6390",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "regressor_top5_raw",
+        "regressor_top5_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "MLP_TOP10",
+      "regime": "mlp__top10",
+      "model_file": "final_models/MLP_TOP10/model.joblib",
+      "model_file_sha256_16": "544241d31d2b1e10",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "regressor_top10_raw",
+        "regressor_top10_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "MLP_DYNAMIC",
+      "regime": "mlp__dynamic",
+      "model_file": "final_models/MLP_DYNAMIC/model.joblib",
+      "model_file_sha256_16": "e1f19cf0c6d48479",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "regressor_top_dynamic_predictK_raw",
+        "regressor_top_dynamic_predictK_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "KNN_TOP1",
+      "regime": "knn__top1",
+      "model_file": "final_models/KNN_TOP1/model.joblib",
+      "model_file_sha256_16": "acd9e4ffe3042a4b",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "knn_top1_raw",
+        "knn_top1_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "KNN_TOP3",
+      "regime": "knn__top3",
+      "model_file": "final_models/KNN_TOP3/model.joblib",
+      "model_file_sha256_16": "59ab060f3413e060",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "knn_top3_raw",
+        "knn_top3_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "KNN_TOP5",
+      "regime": "knn__top5",
+      "model_file": "final_models/KNN_TOP5/model.joblib",
+      "model_file_sha256_16": "a3d6b5688f795d1b",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "knn_top5_raw",
+        "knn_top5_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "KNN_TOP10",
+      "regime": "knn__top10",
+      "model_file": "final_models/KNN_TOP10/model.joblib",
+      "model_file_sha256_16": "ad7b0d07a0d86cf6",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "knn_top10_raw",
+        "knn_top10_softmax_t05"
+      ]
+    },
+    {
+      "reranker_id": "KNN_DYNAMIC",
+      "regime": "knn__dynamic",
+      "model_file": "final_models/KNN_DYNAMIC/model.joblib",
+      "model_file_sha256_16": "8b56204b9ae22fc0",
+      "n_features": 347,
+      "n_training_rows": 1161522,
+      "policies_served": [
+        "knn_top_dynamic_predictK_raw",
+        "knn_top_dynamic_predictK_softmax_t05"
+      ]
+    }
+  ],
+  "context": "C2_LOCAL_UTIL",
+  "n_features": 347,
+  "model_config_hash": "8f488cecbc1d4ba5",
+  "eligibility": "ELIGIBLE_CANDIDATE.v1",
+  "target": "T2_SLATE_REGRET",
+  "training_population": "all Splits 2-16",
+  "utility_semantics": "stage2a1 single-exclusion OOF",
+  "split_1_used": false,
+  "source_commit": "04e5be2e4703504bec6f6dd1d64cd62d7e7ed31f"
+}

@@ -1,0 +1,26 @@
+{
+  "field": "timing_summary.json -> runtime_sec",
+  "source": "clustopt_execution.run_clustopt_experiment",
+  "measurement": "t0 = time.perf_counter() immediately BEFORE search_algorithm.search(...); elapsed measured immediately after",
+  "INCLUDES": [
+    "the whole Optuna search loop",
+    "clustering fit/predict per trial",
+    "CVI evaluation of the SELECTED metrics per trial",
+    "objective aggregation",
+    "per-trial logging"
+  ],
+  "EXCLUDES": [
+    "dataset/view loading",
+    "meta-feature extraction",
+    "utility prediction (evaluator.resolve runs BEFORE t0)",
+    "search-space and evaluator construction",
+    "result serialisation"
+  ],
+  "critical_consequence": "the historical runtime does NOT contain utility prediction, so adding reranker overhead to it cannot double-count utility time -- but the resulting total is likewise NOT end-to-end",
+  "case": "B (historical runtime excludes utility prediction)",
+  "companion_fields": {
+    "fit_predict_sec": "profiler total, only when a profiler was attached",
+    "cvi_eval_sec": "profiler total, only when a profiler was attached"
+  },
+  "double_counting_prevention": "the reranker consumes the SAME utility vector the policy resolver already produced for its Top-K mask; no second utility prediction is performed, and none is counted on either side"
+}

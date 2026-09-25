@@ -1,0 +1,40 @@
+{
+  "uniform_full60_comparability": {
+    "table2_cited_value": 0.339,
+    "stage1_factorial_FU_online_mean": 0.3387534205924591,
+    "stage1_factorial_arm_id": "stage1_full60_uniform_fixed50",
+    "stage1_factorial_note": "the factorial arms use the MLP top-5 seeding path; the ClustOpt rows of Table 2 (0.558 / 0.616) come from the end-to-end KNN top-10 replay",
+    "end_to_end_uniform_full60_arm_id": "all_metrics_uniform",
+    "end_to_end_uniform_full60_mean": 0.4698972787607702,
+    "difference": 0.1311438581683111,
+    "verdict": "Table 2 currently mixes protocols. An end-to-end uniform-over-FULL60 arm ALREADY EXISTS on Split 1 under the same search space and 50-evaluation budget and scores 0.469897, not 0.339. Using it, the conditioning margin at the J-max level is +0.088206, not +0.219349."
+  },
+  "best_single_index_on_development": {
+    "definition": "highest mean TRUE utility over splits 2-16",
+    "source": "metric_analysis_existing_domain/clustopt_metric_usage.csv",
+    "ranking_top5": [
+      {
+        "metric_id": "noise_aware_silhouette",
+        "mean_true_utility": 0.6638925640009216
+      },
+      {
+        "metric_id": "silhouette",
+        "mean_true_utility": 0.6622775923830867
+      },
+      {
+        "metric_id": "gridness_fft_acf",
+        "mean_true_utility": 0.6391469285201452
+      },
+      {
+        "metric_id": "cluster_size_balance_entropy",
+        "mean_true_utility": 0.6219245643643256
+      },
+      {
+        "metric_id": "neighborhood_purity_multi_k",
+        "mean_true_utility": 0.6135187367927142
+      }
+    ],
+    "answer_for_TBD_ctrl_best_single_name": "noise_aware_silhouette",
+    "caveat": "the NAME is determinable now; its search ARI is not, because no single-index arm for it was ever run"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "finding": "autoclust_scoring_determinism",
+  "stage": "4B-4",
+  "status": "BLOCKER",
+  "unstable_metric": "orientation_histogram_entropy",
+  "implementation": "models/ClustOpt/.../metrics/image_base/orientation_histogram_entropy.py (space=\"full\")",
+  "mechanism": "the metric rasterises the partition to an image and runs cv2.Sobel / cv2.magnitude in float32. OpenCV float32 SIMD paths are not bit-reproducible run to run, and the downstream histogram entropy amplifies that into a ~1e-10 spread.",
+  "measurements": {
+    "intra_process_spread": "2.102e-10 over 3 repeated evaluations of identical (X, labels), unstable in 15/15 candidate evaluations",
+    "inter_process": "differs between processes even at a fixed PYTHONHASHSEED (0.034425091993483814 vs 0.03442509225790417 at seed 0)",
+    "pythonhashseed_is_not_the_cause": true,
+    "thread_pinning_reduces_but_does_not_remove": "with OMP/OPENBLAS/MKL/NUMEXPR/VECLIB=1 and cv2.setNumThreads(0), 3 of 4 processes agreed but a 4th differed and repeats within a process still differed"
+  },
+  "scientific_consequence": "a ~1e-10 perturbation flips a near-tie in the AutoClust predicted-ARI comparison. Two identical runs of the frozen AutoClust scorer selected DIFFERENT candidates and DIFFERENT configurations on an internal y_only trace, and pre/post-process comparisons differed on xy_2d too. The selected configuration and therefore the final labels are not reproducible.",
+  "blast_radius": {
+    "autoclust_A0": false,
+    "autoclust_A1": false,
+    "autoclust_A2": true,
+    "autoclust_A3": true,
+    "ml2dac_61_class_set": true,
+    "ml2dac_note": "if the frozen classifier predicts this metric as the CVI, the selection is driven DIRECTLY by the unstable value rather than by one of 51/61 predictor features",
+    "clustopt": "the metric is in the ClustOpt registry; ClustOpt exposure was not measured in this audit"
+  },
+  "why_this_blocks_4B4": "sections 19 and 21 require strict resume and idempotence -- a second run must perform zero scientific recomputation and stored results must be reusable only when provenance matches. Both presume that recomputing a scientific arm reproduces it. It does not. Building validity-by-recompute on a non-reproducible output would either falsely invalidate good work or silently accept drift, and section 39 forbids weakening those gates.",
+  "not_caused_by": [
+    "the X_full API hardening",
+    "the V2 view semantics",
+    "PYTHONHASHSEED",
+    "the shared physical trace"
+  ],
+  "earlier_record": "a ~5.7e-11 wobble in this metric was noted during Stage 4B-3A2b and treated as a tolerance question. The new information is that it can change the SELECTED CONFIGURATION, which is a scientific output, not a numeric detail.",
+  "options_for_project_lead": [
+    "A: exclude orientation_histogram_entropy from the frozen inventories -- changes A2/A3 and the ML2DAC 61-class set, so it is a model/inventory decision, not a wiring fix",
+    "B: make the metric deterministic (float64, or a reproducible non-OpenCV gradient) -- changes metric values, so every learned artifact that consumed it would be inconsistent with the new values",
+    "C: quantise/round the metric output to a stable precision before it reaches predictors and scorers -- smallest blast radius, still a semantics change that must be frozen and justified",
+    "D: accept non-reproducibility and weaken resume/idempotence to selection-stability-with-tolerance -- contradicts sections 19/21/39 as written"
+  ],
+  "external_50_used": false,
+  "labels_used": false,
+  "true_ari_inspected": false
+}

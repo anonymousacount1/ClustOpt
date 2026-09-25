@@ -1,0 +1,31 @@
+{
+  "method": "AutoClust",
+  "implementation": "ML2DAC_RelatedWork_Reimplementation",
+  "mode": "full_online_phase",
+  "use_landmarking_metafeatures": true,
+  "landmarking_algorithm": "MeanShift",
+  "use_kdtree_algorithm_selection": true,
+  "use_mlp_cvi_to_external_index_objective": true,
+  "use_bayesian_optimization": true,
+  "optimizer": "SMAC",
+  "optimizer_evaluations": 100,
+  "smac_wallclock_limit_sec": null,
+  "random_state": 42,
+  "normalize_input": true,
+  "k_range": null,
+  "record_types": ["1d_x", "1d_y", "2d"],
+  "artifact_policy": "require_pretrained_or_train_once_if_paper_faithful",
+  "fail_on_missing_core_artifacts": true,
+  "fail_on_invalid_clustering": false,
+  "n_jobs": 1,
+  "_notes": {
+    "intent": "Strongest FAITHFUL AutoClust: the ML2DAC authors' online phase -- MeanShift landmarking -> KD-tree algorithm selection -> SMAC HPO with the learned MLP(CVIs->ARI) objective -- using the shipped trained artifacts (no offline phase, no training).",
+    "optimizer_evaluations": "100 = the value ML2DAC's reimplementation uses (run_online_on_dataset n_loops=100 -> SMAC runcount-limit). The original AutoClust paper (Poulakis et al., ICDM 2020) sets the evaluation budget to 40 trials; per the 'use ML2DAC's value if different' rule we use 100. This is AutoClust's NATIVE budget -- a fixed evaluation count.",
+    "budget": "AutoClust's budget is the evaluation COUNT (optimizer_evaluations), NOT a wall-clock timeout. The method/paper define no wall-clock limit. The earlier hard 150s timeout was OUR addition and has been REMOVED so AutoClust runs faithfully to completion of its evaluations. SMAC's own native ceilings still apply (7200s wallclock, 300s per-config cutoff). 'smac_wallclock_limit_sec': null = use SMAC's native 7200s; set a number only as an explicit safety ceiling (NOT recommended for the faithful comparison).",
+    "k_range": "null = ML2DAC default k-range for build_paramter_space_per_algorithm.",
+    "random_state": "SMACOptimizer fixes random_state=1234 internally; this value is recorded for provenance.",
+    "normalize_input": "SMACOptimizer StandardScales the input internally; the adapter passes the raw partition space.",
+    "fairness": "AutoClust receives ONLY the partition space. No true labels, true K, family metadata, or ClustOpt utilities. true_labels is NOT passed to SMAC (the application-phase MLP objective never uses labels). True labels are used only for external evaluation after prediction.",
+    "selection_quirks": "The online algorithm-selection code in the ML2DAC reimplementation has known quirks (positional distance mapping + descending SMAC-negated ARI sort). We replicate it verbatim for faithfulness; see AUTOCLUST_REPOSITORY_AUDIT.md."
+  }
+}

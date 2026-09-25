@@ -1,0 +1,16 @@
+{
+  "n_rows": 3165,
+  "n_datasets": 1055,
+  "n_views": 3,
+  "input_dim": 373,
+  "meta_source": "results_analysis/clustering_repository/analyzed_data/unified_training_dataset/unified_training_dataset.csv",
+  "meta_columns": 250,
+  "mlp_utility_source": "results_analysis/mlp/20260615_231715__metric_utility_mlp_split1_holdout/artifacts/all_fold_test_predictions.csv",
+  "knn_utility_source": "results_analysis/clustopt_candidate_reranker/stage2b5a_final_models_and_split1_preparation/split1_knn_utility_context.csv.gz",
+  "utility_training_splits": "2-16 only",
+  "contains_ari": false,
+  "contains_policy_outcome": false,
+  "contains_stage2b5_information": false,
+  "feature_hash": "eebbe4040e7495b0",
+  "source_commit": "7a4fd7dc852a81486bb22ed45832e835ae6c9df8"
+}

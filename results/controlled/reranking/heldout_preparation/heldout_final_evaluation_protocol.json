@@ -1,0 +1,29 @@
+{
+  "scope": "Split 1 only, historical online traces, 20 policy runs",
+  "candidate_set": "C(d,v,p) = the ACTUAL eligible visited candidates in the historical trace; eligibility is ELIGIBLE_CANDIDATE.v1 (valid == True)",
+  "no_completion": "no extrapolation to 50, no synthesis, no re-run, no dropping of short runs",
+  "metrics": {
+    "JSelectedARI(d,v,p)": "ARI of the candidate production J originally selected",
+    "RerankedCandidate(d,v,p)": "argmin over c in C(d,v,p) of final reranker predicted regret; ties broken by frozen candidate index",
+    "RerankedARI(d,v,p)": "stored ARI of that candidate, read ONLY after its identity is frozen",
+    "VisitedOracleARI(d,v,p)": "max over c in C(d,v,p) of stored ARI"
+  },
+  "recovery": {
+    "formula": "(RerankedARI - JSelectedARI) / (VisitedOracleARI - JSelectedARI)",
+    "guard": "computed only when the denominator exceeds tolerance; zero-headroom cases reported separately"
+  },
+  "bestview": {
+    "OriginalBestViewARI(d,p)": "max_v JSelectedARI(d,v,p)",
+    "RerankedBestViewARI(d,p)": "max_v RerankedARI(d,v,p)",
+    "VisitedOracleBestViewARI(d,p)": "max_v VisitedOracleARI(d,v,p)"
+  },
+  "best_fixed_reranked_policy": "p* = argmax_p mean_d RerankedBestViewARI(d,p)",
+  "reranker_assisted_vbs": {
+    "RerankedPolicyVBS(d)": "max_p RerankedBestViewARI(d,p)",
+    "RerankedViewPolicyVBS(d)": "max_{v,p} RerankedARI(d,v,p)",
+    "equivalence_note": "these coincide iff the max over v and the max over p commute on the available population; since both maximise the same quantity over the full (v,p) grid when every policy is present for every view, they are equal there -- to be verified empirically, not assumed"
+  },
+  "hybrid_visited_oracle": "HybridVisitedOracle(d) = max_{v,p} VisitedOracleARI(d,v,p)",
+  "reranker_binding": "policy -> reranker via the frozen 20->10 mapping; RAW and SOFTMAX share a reranker but NEVER share a candidate slate",
+  "ari_discipline": "no ARI value is read before the selected candidate id is frozen"
+}

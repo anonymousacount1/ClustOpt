@@ -1,0 +1,495 @@
+{
+  "check": "autoclust_landmark_feature_historical_regression",
+  "extractor": "unified_mkr.metafeatures.extract_autoclust",
+  "label_free": true,
+  "tolerance": {
+    "atol": 1e-09,
+    "rtol": 1e-09,
+    "predeclared": true
+  },
+  "feature_names": [
+    "autoclust_CH",
+    "autoclust_DBI",
+    "autoclust_SIL",
+    "autoclust_DBCV",
+    "autoclust_DI",
+    "autoclust_CJI",
+    "autoclust_COP"
+  ],
+  "records_tested": 12,
+  "n_fail": 0,
+  "n_above_1500_tested": 12,
+  "views_covered": [
+    "x_only",
+    "xy_2d",
+    "y_only"
+  ],
+  "families_covered": [
+    "arcs_circles_rings",
+    "deinterleaving_pri_toa_amp_like",
+    "hollow_topological_components",
+    "hybrid_mixed_geometry"
+  ],
+  "max_abs_diff_overall": 0.0,
+  "feature_order_exact_everywhere": true,
+  "not_scored": [],
+  "rows": [
+    {
+      "dataset_id": "c2e_000001_00751f70",
+      "view": "x_only",
+      "family": "arcs_circles_rings",
+      "n_rows": 2276,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -11543.07218008483,
+        "autoclust_DBI": 0.31728422546387947,
+        "autoclust_SIL": -0.7837257302883042,
+        "autoclust_DBCV": -0.8975989893624131,
+        "autoclust_DI": -0.39611356689858407,
+        "autoclust_CJI": -5.716492250316623,
+        "autoclust_COP": 0.5358747433907106
+      },
+      "recomputed": {
+        "autoclust_CH": -11543.07218008483,
+        "autoclust_DBI": 0.31728422546387947,
+        "autoclust_SIL": -0.7837257302883042,
+        "autoclust_DBCV": -0.8975989893624131,
+        "autoclust_DI": -0.39611356689858407,
+        "autoclust_CJI": -5.716492250316623,
+        "autoclust_COP": 0.5358747433907106
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_0241d737",
+      "view": "x_only",
+      "family": "deinterleaving_pri_toa_amp_like",
+      "n_rows": 2250,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -5411.071103692353,
+        "autoclust_DBI": 0.5027014714952741,
+        "autoclust_SIL": -0.5589470818930877,
+        "autoclust_DBCV": 0.6949910507944137,
+        "autoclust_DI": -0.0009178318933336123,
+        "autoclust_CJI": -3.3350231695526262,
+        "autoclust_COP": 185.95186496863747
+      },
+      "recomputed": {
+        "autoclust_CH": -5411.071103692353,
+        "autoclust_DBI": 0.5027014714952741,
+        "autoclust_SIL": -0.5589470818930877,
+        "autoclust_DBCV": 0.6949910507944137,
+        "autoclust_DI": -0.0009178318933336123,
+        "autoclust_CJI": -3.3350231695526262,
+        "autoclust_COP": 185.95186496863747
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_306c2568",
+      "view": "x_only",
+      "family": "hollow_topological_components",
+      "n_rows": 2371,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -5310.230545863242,
+        "autoclust_DBI": 0.49734429698418986,
+        "autoclust_SIL": -0.5531661381928148,
+        "autoclust_DBCV": 0.6455863825454434,
+        "autoclust_DI": -0.0017776470356924046,
+        "autoclust_CJI": -3.259764833329366,
+        "autoclust_COP": 67.44614666803346
+      },
+      "recomputed": {
+        "autoclust_CH": -5310.230545863242,
+        "autoclust_DBI": 0.49734429698418986,
+        "autoclust_SIL": -0.5531661381928148,
+        "autoclust_DBCV": 0.6455863825454434,
+        "autoclust_DI": -0.0017776470356924046,
+        "autoclust_CJI": -3.259764833329366,
+        "autoclust_COP": 67.44614666803346
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_28b11de6",
+      "view": "x_only",
+      "family": "hybrid_mixed_geometry",
+      "n_rows": 2731,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -39603.4094502075,
+        "autoclust_DBI": 0.15641398018938113,
+        "autoclust_SIL": -0.8883920251495881,
+        "autoclust_DBCV": -0.8816541021933806,
+        "autoclust_DI": -0.7294005690198601,
+        "autoclust_CJI": -12.095032581769546,
+        "autoclust_COP": 0.179710575885132
+      },
+      "recomputed": {
+        "autoclust_CH": -39603.4094502075,
+        "autoclust_DBI": 0.15641398018938113,
+        "autoclust_SIL": -0.8883920251495881,
+        "autoclust_DBCV": -0.8816541021933806,
+        "autoclust_DI": -0.7294005690198601,
+        "autoclust_CJI": -12.095032581769546,
+        "autoclust_COP": 0.179710575885132
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_00751f70",
+      "view": "y_only",
+      "family": "arcs_circles_rings",
+      "n_rows": 2276,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -2413.179231597363,
+        "autoclust_DBI": 0.5036834325467163,
+        "autoclust_SIL": -0.6185975605067054,
+        "autoclust_DBCV": 0.7476029234739705,
+        "autoclust_DI": -0.003911507181450959,
+        "autoclust_CJI": -3.9670624281761317,
+        "autoclust_COP": 46.32976722179374
+      },
+      "recomputed": {
+        "autoclust_CH": -2413.179231597363,
+        "autoclust_DBI": 0.5036834325467163,
+        "autoclust_SIL": -0.6185975605067054,
+        "autoclust_DBCV": 0.7476029234739705,
+        "autoclust_DI": -0.003911507181450959,
+        "autoclust_CJI": -3.9670624281761317,
+        "autoclust_COP": 46.32976722179374
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_0241d737",
+      "view": "y_only",
+      "family": "deinterleaving_pri_toa_amp_like",
+      "n_rows": 2250,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -5740.082155924325,
+        "autoclust_DBI": 0.25129661890927396,
+        "autoclust_SIL": -0.7535324246155997,
+        "autoclust_DBCV": -0.839084859653228,
+        "autoclust_DI": -0.4100923801721429,
+        "autoclust_CJI": -4.649527046562636,
+        "autoclust_COP": 0.4565695921825646
+      },
+      "recomputed": {
+        "autoclust_CH": -5740.082155924325,
+        "autoclust_DBI": 0.25129661890927396,
+        "autoclust_SIL": -0.7535324246155997,
+        "autoclust_DBCV": -0.839084859653228,
+        "autoclust_DI": -0.4100923801721429,
+        "autoclust_CJI": -4.649527046562636,
+        "autoclust_COP": 0.4565695921825646
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_306c2568",
+      "view": "y_only",
+      "family": "hollow_topological_components",
+      "n_rows": 2371,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -9455.47349557685,
+        "autoclust_DBI": 0.3575061178024107,
+        "autoclust_SIL": -0.759893037813819,
+        "autoclust_DBCV": -0.8251369813200684,
+        "autoclust_DI": -0.44072259510742606,
+        "autoclust_CJI": -5.252562265915433,
+        "autoclust_COP": 0.583996223440538
+      },
+      "recomputed": {
+        "autoclust_CH": -9455.47349557685,
+        "autoclust_DBI": 0.3575061178024107,
+        "autoclust_SIL": -0.759893037813819,
+        "autoclust_DBCV": -0.8251369813200684,
+        "autoclust_DI": -0.44072259510742606,
+        "autoclust_CJI": -5.252562265915433,
+        "autoclust_COP": 0.583996223440538
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_28b11de6",
+      "view": "y_only",
+      "family": "hybrid_mixed_geometry",
+      "n_rows": 2731,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -15999.889861614134,
+        "autoclust_DBI": 0.24508735056270645,
+        "autoclust_SIL": -0.8203615689886347,
+        "autoclust_DBCV": -0.8008010432861367,
+        "autoclust_DI": -0.06721217713764029,
+        "autoclust_CJI": -8.134059610236054,
+        "autoclust_COP": 1.8273547476720833
+      },
+      "recomputed": {
+        "autoclust_CH": -15999.889861614134,
+        "autoclust_DBI": 0.24508735056270645,
+        "autoclust_SIL": -0.8203615689886347,
+        "autoclust_DBCV": -0.8008010432861367,
+        "autoclust_DI": -0.06721217713764029,
+        "autoclust_CJI": -8.134059610236054,
+        "autoclust_COP": 1.8273547476720833
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_00751f70",
+      "view": "xy_2d",
+      "family": "arcs_circles_rings",
+      "n_rows": 2276,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -9397.861898106508,
+        "autoclust_DBI": 0.364595068933773,
+        "autoclust_SIL": -0.7519772706774596,
+        "autoclust_DBCV": -0.7710605466589606,
+        "autoclust_DI": -0.38625078806920893,
+        "autoclust_CJI": -4.919247952542087,
+        "autoclust_COP": 0.6148093204459709
+      },
+      "recomputed": {
+        "autoclust_CH": -9397.861898106508,
+        "autoclust_DBI": 0.364595068933773,
+        "autoclust_SIL": -0.7519772706774596,
+        "autoclust_DBCV": -0.7710605466589606,
+        "autoclust_DI": -0.38625078806920893,
+        "autoclust_CJI": -4.919247952542087,
+        "autoclust_COP": 0.6148093204459709
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_0241d737",
+      "view": "xy_2d",
+      "family": "deinterleaving_pri_toa_amp_like",
+      "n_rows": 2250,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -2853.657494732632,
+        "autoclust_DBI": 0.6717980055334495,
+        "autoclust_SIL": -0.5293966105484547,
+        "autoclust_DBCV": 0.7137974092347599,
+        "autoclust_DI": -0.011884101603629054,
+        "autoclust_CJI": -2.908214449086041,
+        "autoclust_COP": 23.258524906248514
+      },
+      "recomputed": {
+        "autoclust_CH": -2853.657494732632,
+        "autoclust_DBI": 0.6717980055334495,
+        "autoclust_SIL": -0.5293966105484547,
+        "autoclust_DBCV": 0.7137974092347599,
+        "autoclust_DI": -0.011884101603629054,
+        "autoclust_CJI": -2.908214449086041,
+        "autoclust_COP": 23.258524906248514
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_306c2568",
+      "view": "xy_2d",
+      "family": "hollow_topological_components",
+      "n_rows": 2371,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -4348.864807324312,
+        "autoclust_DBI": 0.5835710591290807,
+        "autoclust_SIL": -0.6292515266233398,
+        "autoclust_DBCV": -0.6545305654561326,
+        "autoclust_DI": -0.437983250590358,
+        "autoclust_CJI": -3.3077093398637536,
+        "autoclust_COP": 0.8981342467592661
+      },
+      "recomputed": {
+        "autoclust_CH": -4348.864807324312,
+        "autoclust_DBI": 0.5835710591290807,
+        "autoclust_SIL": -0.6292515266233398,
+        "autoclust_DBCV": -0.6545305654561326,
+        "autoclust_DI": -0.437983250590358,
+        "autoclust_CJI": -3.3077093398637536,
+        "autoclust_COP": 0.8981342467592661
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    },
+    {
+      "dataset_id": "c2e_000001_28b11de6",
+      "view": "xy_2d",
+      "family": "hybrid_mixed_geometry",
+      "n_rows": 2731,
+      "n_above_1500": true,
+      "stored": {
+        "autoclust_CH": -22034.31179266703,
+        "autoclust_DBI": 0.22854195587363021,
+        "autoclust_SIL": -0.8384353874470519,
+        "autoclust_DBCV": -0.8327749164829672,
+        "autoclust_DI": -0.6302766661393577,
+        "autoclust_CJI": -8.620811172615431,
+        "autoclust_COP": 0.24625975967537905
+      },
+      "recomputed": {
+        "autoclust_CH": -22034.31179266703,
+        "autoclust_DBI": 0.22854195587363021,
+        "autoclust_SIL": -0.8384353874470519,
+        "autoclust_DBCV": -0.8327749164829672,
+        "autoclust_DI": -0.6302766661393577,
+        "autoclust_CJI": -8.620811172615431,
+        "autoclust_COP": 0.24625975967537905
+      },
+      "per_feature_abs_diff": {
+        "autoclust_CH": 0.0,
+        "autoclust_DBI": 0.0,
+        "autoclust_SIL": 0.0,
+        "autoclust_DBCV": 0.0,
+        "autoclust_DI": 0.0,
+        "autoclust_CJI": 0.0,
+        "autoclust_COP": 0.0
+      },
+      "max_abs_diff": 0.0,
+      "feature_order_exact": true,
+      "n_features": 7,
+      "status": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

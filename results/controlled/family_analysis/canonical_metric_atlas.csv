@@ -1,0 +1,64 @@
+metric_id,canonical_name,group,subgroup,head_group,implementation_subpackage,implementation_source,direction,is_live,used_by_ml2dac,used_by_autoclust,used_by_clustopt,has_clustopt_utility,clustopt_utility_na_reason,requires_ground_truth
+avg_pca_isotropy,avg_pca_isotropy,Established,,classic_cvi,NA,clustopt,clustopt_utility,True,False,False,True,True,,False
+avg_within_cluster_dispersion,avg_within_cluster_dispersion,Established,,classic_cvi,structure_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+cluster_size_balance_entropy,cluster_size_balance_entropy,Established,,classic_cvi,NA,clustopt,clustopt_utility,True,False,False,True,True,,False
+cluster_size_imbalance_entropy,cluster_size_imbalance_entropy,Established,,classic_cvi,NA,clustopt,clustopt_utility,True,False,False,True,True,,False
+min_centroid_distance,min_centroid_distance,Established,,classic_cvi,structure_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+min_intercluster_distance,min_intercluster_distance,Established,,classic_cvi,structure_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+neighborhood_purity,neighborhood_purity,Established,,classic_cvi,NA,clustopt,clustopt_utility,True,False,False,True,True,,False
+neighborhood_purity_multi_k,neighborhood_purity_multi_k,Established,,classic_cvi,NA,clustopt,clustopt_utility,True,False,False,True,True,,False
+noise_aware_silhouette,noise_aware_silhouette,Established,,classic_cvi,NA,clustopt,clustopt_utility,True,False,False,True,True,,False
+s_dbw,s_dbw,Established,,classic_cvi,NA,clustopt,clustopt_utility,True,False,False,True,True,,False
+blobness_log_dog,blobness_log_dog,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+circularity_compactness,circularity_compactness,New46,New46-Image,geometry_shape,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+connected_components_count,connected_components_count,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+contour_graph_connectivity,contour_graph_connectivity,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+convexity_ratio_image_based,convexity_ratio_image_based,New46,New46-Image,NA,image_base,clustopt,clustopt_utility,False,False,False,True,False,dead: all-NaN on the training repository,False
+corner_junction_density,corner_junction_density,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+edge_coherence,edge_coherence,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+ellipse_fit_score,ellipse_fit_score,New46,New46-Image,geometry_shape,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+euler_holes_count,euler_holes_count,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+fractal_dimension,fractal_dimension,New46,New46-Image,texture_frequency,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+glcm_haralick,glcm_haralick,New46,New46-Image,texture_frequency,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+gridness_fft_acf,gridness_fft_acf,New46,New46-Image,texture_frequency,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+hough_arc_circle_strength,hough_arc_circle_strength,New46,New46-Image,NA,image_base,clustopt,clustopt_utility,False,False,False,True,False,dead: all-NaN on the training repository,False
+hough_line_strength,hough_line_strength,New46,New46-Image,curves_lines_arcs,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+lbp_stationarity,lbp_stationarity,New46,New46-Image,texture_frequency,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+morphological_band_count,morphological_band_count,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+orientation_histogram_entropy,orientation_histogram_entropy,New46,New46-Image,texture_frequency,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+peak_to_background_hough,peak_to_background_hough,New46,New46-Image,texture_frequency,NA,clustopt,clustopt_utility,True,False,False,True,True,,False
+polygonality,polygonality,New46,New46-Image,geometry_shape,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+rectangularity,rectangularity,New46,New46-Image,geometry_shape,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+ridge_strength,ridge_strength,New46,New46-Image,texture_frequency,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+skeleton_connectivity,skeleton_connectivity,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+symmetry_score,symmetry_score,New46,New46-Image,topology_connectivity_neighborhood,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+thickness_uniformity,thickness_uniformity,New46,New46-Image,image_morphology,image_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+alpha_shape_compactness,alpha_shape_compactness,New46,New46-Pattern,geometry_shape,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+arc_circle_fit,arc_circle_fit,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+axial_symmetry,axial_symmetry,New46,New46-Pattern,topology_connectivity_neighborhood,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+bimodality_anti_thickness,bimodality_anti_thickness,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+connectivity_components,connectivity_components,New46,New46-Pattern,topology_connectivity_neighborhood,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+convexity_ratio,convexity_ratio,New46,New46-Pattern,geometry_shape,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+corner_sharpness,corner_sharpness,New46,New46-Pattern,geometry_shape,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+curvature_consistency,curvature_consistency,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+direction_entropy,direction_entropy,New46,New46-Pattern,topology_connectivity_neighborhood,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+eccentricity_ratio,eccentricity_ratio,New46,New46-Pattern,geometry_shape,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+gridness_2d,gridness_2d,New46,New46-Pattern,texture_frequency,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+hollow_score,hollow_score,New46,New46-Pattern,topology_connectivity_neighborhood,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+ladderness,ladderness,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+line_straightness,line_straightness,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+mst_smoothness,mst_smoothness,New46,New46-Pattern,topology_connectivity_neighborhood,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+parabolicity,parabolicity,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+parallel_bands,parallel_bands,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+periodicity_1d,periodicity_1d,New46,New46-Pattern,texture_frequency,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+piecewise_linearity,piecewise_linearity,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+radial_uniformity,radial_uniformity,New46,New46-Pattern,geometry_shape,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+ribbon_thickness,ribbon_thickness,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+turning_points_count,turning_points_count,New46,New46-Pattern,curves_lines_arcs,pattern_base,clustopt,clustopt_utility,True,False,False,True,True,,False
+calinski_harabasz,calinski_harabasz,Original,,classic_cvi,core_cvi,clustopt,maximize,True,True,True,True,True,,False
+coggins_jain_index,coggins_jain_index,Original,,NA,NA,ml2dac,maximize,True,True,True,False,False,"ML2DAC-side CVI; not part of the ClustOpt Full-60 utility vocabulary, so no canonical utility exists",False
+cop,cop,Original,,NA,NA,ml2dac,minimize,True,True,True,False,False,"ML2DAC-side CVI; not part of the ClustOpt Full-60 utility vocabulary, so no canonical utility exists",False
+davies_bouldin,davies_bouldin,Original,,classic_cvi,core_cvi,clustopt,minimize,True,True,True,True,True,,False
+dbcv,dbcv,Original,,classic_cvi,NA,clustopt,maximize,True,True,True,True,True,,False
+dunn_index,dunn_index,Original,,NA,NA,ml2dac,maximize,True,True,True,False,False,"ML2DAC-side CVI; not part of the ClustOpt Full-60 utility vocabulary, so no canonical utility exists",False
+silhouette,silhouette,Original,,classic_cvi,NA,clustopt,maximize,True,True,True,True,True,,False

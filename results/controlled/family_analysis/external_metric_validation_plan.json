@@ -1,0 +1,155 @@
+{
+  "stage": "3B (prepared, NOT executed)",
+  "created_at": "2026-09-09T09:47:55",
+  "source_commit": "cd9c7f44d579a1af78ac8232a04ece01daeb3c0b",
+  "external_experiment_executed": false,
+  "external_datasets_downloaded": false,
+  "metrics_to_evaluate": {
+    "policy": "ALL 46 designed metrics, including the 2 dead here",
+    "designed": 46,
+    "live_on_existing_domain": 44,
+    "dead_here_but_retained_for_external_evaluation": [
+      "convexity_ratio_image_based",
+      "hough_arc_circle_strength"
+    ],
+    "all_new46_ids": [
+      "alpha_shape_compactness",
+      "arc_circle_fit",
+      "axial_symmetry",
+      "bimodality_anti_thickness",
+      "blobness_log_dog",
+      "circularity_compactness",
+      "connected_components_count",
+      "connectivity_components",
+      "contour_graph_connectivity",
+      "convexity_ratio",
+      "convexity_ratio_image_based",
+      "corner_junction_density",
+      "corner_sharpness",
+      "curvature_consistency",
+      "direction_entropy",
+      "eccentricity_ratio",
+      "edge_coherence",
+      "ellipse_fit_score",
+      "euler_holes_count",
+      "fractal_dimension",
+      "glcm_haralick",
+      "gridness_2d",
+      "gridness_fft_acf",
+      "hollow_score",
+      "hough_arc_circle_strength",
+      "hough_line_strength",
+      "ladderness",
+      "lbp_stationarity",
+      "line_straightness",
+      "morphological_band_count",
+      "mst_smoothness",
+      "orientation_histogram_entropy",
+      "parabolicity",
+      "parallel_bands",
+      "peak_to_background_hough",
+      "periodicity_1d",
+      "piecewise_linearity",
+      "polygonality",
+      "radial_uniformity",
+      "rectangularity",
+      "ribbon_thickness",
+      "ridge_strength",
+      "skeleton_connectivity",
+      "symmetry_score",
+      "thickness_uniformity",
+      "turning_points_count"
+    ],
+    "comparators_already_available": [
+      "avg_pca_isotropy",
+      "avg_within_cluster_dispersion",
+      "calinski_harabasz",
+      "cluster_size_balance_entropy",
+      "cluster_size_imbalance_entropy",
+      "coggins_jain_index",
+      "cop",
+      "davies_bouldin",
+      "dbcv",
+      "dunn_index",
+      "min_centroid_distance",
+      "min_intercluster_distance",
+      "neighborhood_purity",
+      "neighborhood_purity_multi_k",
+      "noise_aware_silhouette",
+      "s_dbw",
+      "silhouette"
+    ]
+  },
+  "focal_shortlist": {
+    "metrics": [
+      "gridness_fft_acf",
+      "connected_components_count",
+      "contour_graph_connectivity",
+      "axial_symmetry",
+      "connectivity_components",
+      "convexity_ratio",
+      "alpha_shape_compactness",
+      "ribbon_thickness",
+      "parallel_bands",
+      "glcm_haralick"
+    ],
+    "selection_rule": "PREDECLARED: top 10 live New46 metrics by existing-domain oracle-win frequency",
+    "status": "HYPOTHESIS-GENERATING ONLY; not externally validated",
+    "does_not_replace_full_set": true
+  },
+  "comparator_plan": {
+    "already_present": [
+      "dbcv",
+      "s_dbw",
+      "silhouette",
+      "noise_aware_silhouette",
+      "calinski_harabasz",
+      "davies_bouldin",
+      "dunn_index",
+      "cop",
+      "coggins_jain_index"
+    ],
+    "to_consider_adding": [
+      "CDbw",
+      "CVNN",
+      "CVDD",
+      "DCSI"
+    ],
+    "rule": "no comparison may be claimed against a metric not evaluated"
+  },
+  "planned_per_index_statistics": [
+    "mean/median canonical utility with dataset-level bootstrap CI",
+    "rank and Top-k coverage among all evaluated metrics",
+    "difference vs the best established+modern comparator",
+    "oracle-win frequency and unique-win coverage",
+    "per-geometry/per-family breakdown",
+    "runtime per metric per record"
+  ],
+  "multiplicity_plan": {
+    "method": "Benjamini-Hochberg",
+    "families": [
+      "per-index vs comparator pool",
+      "per-geometry alignment",
+      "group-level contrasts"
+    ],
+    "report": "raw p and adjusted q for every test"
+  },
+  "predeclared_hypotheses": {
+    "H1": "a minority of New46 metrics, not the group mean, carries the existing-domain benefit; this should reproduce out of domain",
+    "H2": "Pattern metrics align with curve/line/lattice geometries and Image metrics with texture/morphology geometries",
+    "H3": "New46 raises the achievable oracle ceiling even where the average New46 metric is weaker than the average classic CVI",
+    "H4": "benefit depends on the consuming mechanism: full-vector consumers gain, single-index selectors do not"
+  },
+  "runtime_fields_to_capture": [
+    "per-metric wall time",
+    "per-record total",
+    "peak memory",
+    "failure/NaN rate"
+  ],
+  "inferential_unit": "dataset",
+  "forbidden_until_executed": [
+    "any claim of external validation",
+    "any claim that a focal metric is validated",
+    "any single-metric causal ARI claim"
+  ]
+}

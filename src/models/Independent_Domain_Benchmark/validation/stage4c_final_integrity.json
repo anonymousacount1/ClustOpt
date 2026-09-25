@@ -1,0 +1,142 @@
+{
+  "suite": "stage4c_final_integrity",
+  "run_id": "stage4c_v2_323194df26",
+  "amendment_id": "1a8d6de73b9c15fd",
+  "n_gates": 22,
+  "n_fail": 0,
+  "gates": [
+    {
+      "gate": "F01",
+      "name": "phase A arms intact and integral",
+      "status": "PASS",
+      "detail": "2100 records, 2100 success, 0 integrity failures"
+    },
+    {
+      "gate": "F02",
+      "name": "14 methods x 150 arms unchanged",
+      "status": "PASS",
+      "detail": "14 methods"
+    },
+    {
+      "gate": "F03",
+      "name": "150 banks intact, 4800 slots, 4776 valid",
+      "status": "PASS",
+      "detail": "150 banks, 4800 slots, 4776 valid"
+    },
+    {
+      "gate": "F04",
+      "name": "candidate labels still reproduce their hashes",
+      "status": "PASS",
+      "detail": "0 banks with a label mismatch"
+    },
+    {
+      "gate": "F05",
+      "name": "150 original metric records preserved and integral",
+      "status": "PASS",
+      "detail": "150 records, 329544 rows, 0 bad"
+    },
+    {
+      "gate": "F06",
+      "name": "150 corrected metric records written additively",
+      "status": "PASS",
+      "detail": "150 v2 records alongside 150 v1"
+    },
+    {
+      "gate": "F07",
+      "name": "corrected records carry exactly the frozen repair set",
+      "status": "PASS",
+      "detail": "['cdbw', 'convexity_ratio_image_based', 'cvdd', 'cvnn', 'dcsi', 'hough_arc_circle_strength']"
+    },
+    {
+      "gate": "F08",
+      "name": "corrected row count is 4776 x 6",
+      "status": "PASS",
+      "detail": "28656 rows (expected 28656)"
+    },
+    {
+      "gate": "F09",
+      "name": "no TypeError and no CVI_CLASS_UNKNOWN remain",
+      "status": "PASS",
+      "detail": "{\"TypeError\": 0, \"CVI_CLASS_UNKNOWN\": 0}"
+    },
+    {
+      "gate": "F10",
+      "name": "candidate ARI table unchanged",
+      "status": "PASS",
+      "detail": "4776 rows"
+    },
+    {
+      "gate": "F11",
+      "name": "method ARI table unchanged",
+      "status": "PASS",
+      "detail": "2100 rows, 2100 scored"
+    },
+    {
+      "gate": "F12",
+      "name": "untouched 61 utilities reproduce exactly",
+      "status": "PASS",
+      "detail": "9102 identical, 0 deviating"
+    },
+    {
+      "gate": "F13",
+      "name": "repaired utility has no computation errors",
+      "status": "PASS",
+      "detail": "842 valid, 58 insufficient"
+    },
+    {
+      "gate": "F14",
+      "name": "original Phase D package preserved",
+      "status": "PASS",
+      "detail": "phase_d/ intact alongside phase_d_corrected/"
+    },
+    {
+      "gate": "F15",
+      "name": "corrected analysis covers all 67 primary metrics",
+      "status": "PASS",
+      "detail": "67 of 67"
+    },
+    {
+      "gate": "F16",
+      "name": "declared inventory matches observed",
+      "status": "PASS",
+      "detail": "{\"Established\": 10, \"Modern\": 4, \"New46\": 46, \"Original\": 7}"
+    },
+    {
+      "gate": "F17",
+      "name": "method track not recomputed by the amendment",
+      "status": "PASS",
+      "detail": "method tables referenced"
+    },
+    {
+      "gate": "F18",
+      "name": "modern comparator analysis is populated",
+      "status": "PASS",
+      "detail": "4 modern comparators"
+    },
+    {
+      "gate": "F19",
+      "name": "external/ml2dac still at c946b9e",
+      "status": "PASS",
+      "detail": "c946b9eaf58d"
+    },
+    {
+      "gate": "F20",
+      "name": "metric registry hash unchanged",
+      "status": "PASS",
+      "detail": "8d6b44f45f9cf240"
+    },
+    {
+      "gate": "F21",
+      "name": "canonical utility source unchanged",
+      "status": "PASS",
+      "detail": "7f65fa2b1a794b26"
+    },
+    {
+      "gate": "F22",
+      "name": "no metric implementation modified",
+      "status": "PASS",
+      "detail": "clean"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,92 @@
+{
+  "run_name": "metric_utility_mlp_baseline_combined",
+  "repo_root": ".",
+  "output_subdir": "results_analysis/mlp",
+  "debug": false,
+  "data": {
+    "csv_path": "results_analysis\\clustering_repository\\analyzed_data\\unified_training_dataset\\unified_training_dataset.csv",
+    "n_id_columns": 19,
+    "n_feature_columns": 250,
+    "n_target_columns": 60,
+    "target_prefix": "utility__",
+    "split_group_column": "dataset_id",
+    "id_columns": [
+      "dataset_id",
+      "record_id",
+      "view_mode",
+      "view_dim",
+      "source_dataset_dir",
+      "family_id",
+      "family_name",
+      "subfamily_id",
+      "difficulty",
+      "cluster_count_from_generator",
+      "dataset_seed",
+      "family_seed",
+      "n_points",
+      "feature_names_original",
+      "selected_features",
+      "has_labels",
+      "has_rendering",
+      "has_structural_ground_truth",
+      "extraction_status"
+    ],
+    "group_columns": {
+      "family": "family_name",
+      "subfamily": "subfamily_id",
+      "view_id": "view_mode",
+      "view_dim": "view_dim",
+      "difficulty": "difficulty",
+      "cluster_count": "cluster_count_from_generator"
+    },
+    "strict_column_counts": true,
+    "limit_rows": null
+  },
+  "model": {
+    "type": "multi_head_mlp",
+    "input_dim": 250,
+    "output_dim": 60,
+    "hidden_dims": [512, 512, 256, 256],
+    "dropout": [0.15, 0.15, 0.1, 0.1],
+    "activation": "gelu",
+    "batch_norm": true,
+    "output_activation": "sigmoid",
+    "head_hidden_dim": 128,
+    "head_dropout": 0.05
+  },
+  "loss": {
+    "mode": "combined",
+    "mse_weight": 0.6,
+    "pairwise_rank_weight": 0.25,
+    "topk_mse_weight": 0.15,
+    "topk": 10,
+    "pairwise_margin": 0.05,
+    "max_pairs_per_sample": 256,
+    "tie_epsilon": 0.0001,
+    "topk_extra_weight": 2.0
+  },
+  "training": {
+    "n_splits": 5,
+    "inner_val_ratio": 0.15,
+    "batch_size": 512,
+    "epochs": 300,
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "reduce_on_plateau",
+    "scheduler_factor": 0.5,
+    "scheduler_patience": 8,
+    "scheduler_min_lr": 1e-06,
+    "early_stopping_patience": 25,
+    "gradient_clip_norm": 1.0,
+    "seed": 42,
+    "device": "auto",
+    "num_workers": 0,
+    "folds_to_run": null
+  },
+  "evaluation": {
+    "topk_list": [3, 5, 10],
+    "ndcg_list": [3, 5, 10],
+    "ndcg_all": true
+  }
+}

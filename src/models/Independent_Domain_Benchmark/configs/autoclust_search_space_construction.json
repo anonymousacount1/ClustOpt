@@ -1,0 +1,79 @@
+{
+  "search_space_construction": {
+    "executor": "unified_mkr.clustering.run_configuration(search_space, spec, X_decision)",
+    "instantiation_object": "models.ClustOpt.search_space.Clustering_Search_Space.ClusteringSearchSpace.from_dict(resolve_view_configurations(config_root, view_type).search_space_config)",
+    "config_root": "models/ClustOpt/configs/utilities_maps",
+    "authoritative_caller": "experiments/external_baselines/AutoClust/indomain/dataset.py (the Stage-3A runner)",
+    "constrain_space_for_sampler": "models.ClustOpt.configs.experiments.generate_experiment_configs.build_search_space(view_type)",
+    "two_distinct_objects": "ClusteringSearchSpace instantiates estimators; the raw phaseE2 dict constrains the SAMPLER. They are not interchangeable.",
+    "per_view": {
+      "x_only": {
+        "n_algorithms": 11,
+        "algorithms": [
+          "agglomerative",
+          "birch",
+          "dbscan",
+          "gmm",
+          "hdbscan",
+          "hdbscan_constrained-2",
+          "hdbscan_constrained-3",
+          "hdbscan_constrained-4",
+          "hdbscan_constrained-5",
+          "kmeans",
+          "minibatch_kmeans"
+        ]
+      },
+      "y_only": {
+        "n_algorithms": 11,
+        "algorithms": [
+          "agglomerative",
+          "birch",
+          "dbscan",
+          "gmm",
+          "hdbscan",
+          "hdbscan_constrained-2",
+          "hdbscan_constrained-3",
+          "hdbscan_constrained-4",
+          "hdbscan_constrained-5",
+          "kmeans",
+          "minibatch_kmeans"
+        ]
+      },
+      "xy_2d": {
+        "n_algorithms": 11,
+        "algorithms": [
+          "agglomerative",
+          "birch",
+          "dbscan",
+          "gmm",
+          "hdbscan",
+          "hdbscan_constrained-2",
+          "hdbscan_constrained-3",
+          "hdbscan_constrained-4",
+          "hdbscan_constrained-5",
+          "kmeans",
+          "minibatch_kmeans"
+        ]
+      }
+    },
+    "constrain_space_fingerprint": "8ddf86c79888ebe9",
+    "fingerprint_matches_frozen": true,
+    "ambiguity": "none"
+  },
+  "historical_seed_caveat": {
+    "finding": "the Stage-3A AutoClust runner calls run_view with seed = seed + (hash(view_type) % 1000)",
+    "why_it_matters": "Python str hashing is salted per process unless PYTHONHASHSEED is fixed, so the historical AutoClust candidate seed is not reproducible across processes",
+    "scope": "affects Stage-4B-3A2 historical candidate-trace replay, NOT the Stage-4 external path",
+    "stage4_path": "the external adapter uses the IDB derive_seed(dataset_id, view_id, method_id), which already varies by view and is fully deterministic; it must NOT replicate the hash(view_type) term",
+    "action": "flagged for Stage 4B-3A2; historical CVI/predictor regression should replay PERSISTED traces rather than regenerate them from a seed"
+  },
+  "canonical_hash_convention": {
+    "rule": "UTF-8 bytes with CRLF normalised to LF, otherwise byte-preserving",
+    "no_reformatting": true,
+    "binary_artifacts": "raw byte SHA only",
+    "convention_version": 1,
+    "example": {
+      "benchmark_protocol.json_canonical": "5ec678d649fcf57f"
+    }
+  }
+}

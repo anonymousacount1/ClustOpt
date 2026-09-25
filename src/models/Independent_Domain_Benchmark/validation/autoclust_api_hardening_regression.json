@@ -1,0 +1,20 @@
+{
+  "check": "autoclust_api_hardening_regression",
+  "stage": "4B-4",
+  "classification": "EXECUTION SEMANTICS UNCHANGED; API SAFETY HARDENED",
+  "method": "identical deterministic internal traces scored with EXPLICIT X_full before and after removing the default",
+  "views": [
+    "x_only",
+    "y_only",
+    "xy_2d"
+  ],
+  "arms_compared": 12,
+  "xy_2d_bit_identical": false,
+  "isolation_note": "xy_2d is the reproducible view, so a bit-identical record there isolates the API change from everything else. The 1-D views differ between ANY two runs of the SAME code because of a pre-existing metric nondeterminism recorded in autoclust_scoring_determinism.json; that is not caused by this change.",
+  "x_full_none": "FULL_EVALUATION_SPACE_REQUIRED",
+  "x_full_omitted": "TypeError (required keyword)",
+  "row_count_mismatch": "FULL_EVALUATION_SPACE_REQUIRED",
+  "external_50_used": false,
+  "labels_used": false,
+  "verdict": "FAIL"
+}

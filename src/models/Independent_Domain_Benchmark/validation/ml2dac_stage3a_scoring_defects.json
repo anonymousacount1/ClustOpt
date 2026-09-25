@@ -1,0 +1,77 @@
+{
+  "audit": "ml2dac_stage3a_scoring_defects",
+  "stage": "4B-3B3",
+  "true_ari_inspected": false,
+  "historical_sample": {
+    "keys": 324,
+    "records_per_arm": {
+      "M0": 324,
+      "M1": 324,
+      "M2": 324,
+      "M3": 324
+    }
+  },
+  "defect_1_unevaluable_predicted_cvi": {
+    "source": "experiments/external_baselines/ML2DAC/indomain/phase.py::_selected_cvi_value",
+    "behaviour": "gates on CLUSTOPT_CVIS = {calinski_harabasz, davies_bouldin, silhouette, dbcv} and ML2DAC_ONLY_CVIS = {dunn_index, coggins_jain_index, cop}, and returns float(\"nan\") for every other class. 54 of the 61 classifier classes fall through to that NaN branch.",
+    "consequence": "_oriented maps NaN to -inf, so every candidate ties at -inf; the strict \"oriented > best\" comparison never fires and the incumbent stays the FIRST valid candidate, which is the top-ranked warmstart of the nearest neighbour. The predicted CVI has no influence on selection at all.",
+    "computability": "not a limitation of the metrics: ViewMetricEngine._clustopt_raw builds a GenericCVIEvaluator for an arbitrary metric list, so all 58 ClustOpt classes were computable. The gate set was simply never widened when the M1/M2/M3 variants were added.",
+    "per_arm": {
+      "M0": {},
+      "M1": {
+        "defect1_unevaluable_cvi": 158,
+        "defect1_all_candidate_values_nan": 158,
+        "defect1_incumbent_is_first_valid_candidate": 158,
+        "defect1_first_valid_is_top_warmstart": 158
+      },
+      "M2": {
+        "defect1_unevaluable_cvi": 216,
+        "defect1_all_candidate_values_nan": 216,
+        "defect1_incumbent_is_first_valid_candidate": 216,
+        "defect1_first_valid_is_top_warmstart": 216
+      },
+      "M3": {
+        "defect1_unevaluable_cvi": 230,
+        "defect1_all_candidate_values_nan": 230,
+        "defect1_incumbent_is_first_valid_candidate": 230,
+        "defect1_first_valid_is_top_warmstart": 230
+      }
+    }
+  },
+  "defect_2_default_direction": {
+    "source": "experiments/external_baselines/ML2DAC/indomain/phase.py::_oriented",
+    "behaviour": "returns value if CVI_DIRECTION.get(cvi) == 'maximize' else -value; CVI_DIRECTION holds only the 7 original CVIs, so any of the other 54 classes is silently treated as MINIMIZE",
+    "status": "latent in Stage 3A because defect 1 made every value NaN first; it would fire the moment defect 1 is fixed"
+  },
+  "defect_3_sign_inverted_ml2dac_cvis": {
+    "source": "external/ml2dac/src/ClusterValidityIndices/CVIHandler.py::CVI.score_cvi negates MAXIMIZE-objective scores; unified_mkr/ml2dac_cvi_adapter.compute_ml2dac_only passes the negated value through; ML2DAC/indomain/mkr.py CVI_DIRECTION then marks dunn_index and coggins_jain_index as maximize",
+    "consequence": "maximising a negated score minimises the true index, so the WORSE partition is preferred",
+    "behavioural_demonstration": {
+      "well_separated": {
+        "dunn_index": -2.2071741401359066,
+        "coggins_jain_index": -12.635434273127764,
+        "cop": 0.09640026507280375
+      },
+      "overlapping": {
+        "dunn_index": -0.004196915640073215,
+        "coggins_jain_index": -0.1844506974415495,
+        "cop": 42.21903024118444
+      },
+      "expected": "a well-separated partition should score better",
+      "observed": {
+        "dunn_index": "OVERLAPPING preferred",
+        "coggins_jain_index": "OVERLAPPING preferred",
+        "cop": "well-separated preferred"
+      }
+    },
+    "cop_is_correct": true,
+    "per_arm_historical_incidence": {
+      "M0": 14,
+      "M1": 8,
+      "M2": 0,
+      "M3": 0
+    }
+  },
+  "scope_note": "These are Stage-3A implementation defects in the ML2DAC selection path. They do not affect the Stage-4 physical layer, which contains no scoring, and they do not affect AutoClust or ClustOpt.",
+  "bearing_on_stage3b": "the Stage-3B statement that ML2DAC CVI selection collapses coincides exactly with the arms whose predicted CVI was never evaluated (M1 158/324, M2 216/324, M3 230/324, M0 0/324). Whether that collapse is a property of ML2DAC meta-learning or an artefact of defect 1 cannot be settled without a decision on Stage-4 scoring semantics, and no Stage-3 replay is proposed here."
+}

@@ -1,0 +1,82 @@
+{
+  "family_id": "deinterleaving_pri_toa_amp_like",
+  "family_name": "Deinterleaving (PRI / TOA / AMP-like)",
+  "family_seed": 121093011,
+  "n_features": 2,
+  "feature_names": ["toa", "amp"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "pri_parallel_trains",
+      "cluster_budget": {"2": 48, "3": 72, "4": 72, "5": 48},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-0.05, 0.05], "spacing": [0.08, 0.20], "thickness": [0.003, 0.010], "n_bands": [2, 4]}
+    },
+    {
+      "subfamily_id": "pri_with_jitter",
+      "cluster_budget": {"2": 48, "3": 72, "4": 72, "5": 48},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-0.10, 0.10], "spacing": [0.06, 0.18], "thickness": [0.005, 0.015], "n_bands": [2, 4]}
+    },
+    {
+      "subfamily_id": "missing_pulses",
+      "cluster_budget": {"2": 48, "3": 72, "4": 72, "5": 48},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-0.10, 0.10], "spacing": [0.06, 0.18], "thickness": [0.004, 0.012], "n_bands": [2, 4]}
+    },
+    {
+      "subfamily_id": "spurious_pulses_noise",
+      "cluster_budget": {"2": 48, "3": 72, "4": 72, "5": 48},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-0.10, 0.10], "spacing": [0.06, 0.18], "thickness": [0.006, 0.018], "n_bands": [2, 5]}
+    },
+    {
+      "subfamily_id": "amp_arc_trends",
+      "cluster_budget": {"2": 50, "3": 75, "4": 75, "5": 50},
+      "component_strategy": {"component_type": "arch_chain", "components_per_cluster": 1},
+      "parameter_ranges": {"amp_min": [0.08, 0.14], "amp_max_extra": [0.05, 0.18], "thickness": [0.004, 0.014], "n_segments": [2, 4]}
+    },
+    {
+      "subfamily_id": "pri_amp_coupled",
+      "cluster_budget": {"2": 52, "3": 78, "4": 78, "5": 52},
+      "component_strategy": {"component_type": "arch_chain", "components_per_cluster": 1},
+      "parameter_ranges": {"amp_min": [0.06, 0.14], "amp_max_extra": [0.06, 0.20], "thickness": [0.005, 0.015], "n_segments": [2, 5]}
+    },
+    {
+      "subfamily_id": "hybrid_deinterleaving_scene",
+      "cluster_budget": {"2": 53, "3": 79, "4": 79, "5": 52},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "parallel_bands", "weight": 1.0, "parameter_ranges": {"slope": [-0.10, 0.10], "spacing": [0.06, 0.18], "thickness": [0.004, 0.014], "n_bands": [2, 4]}},
+          {"type": "arch_chain",     "weight": 1.0, "parameter_ranges": {"amp_min": [0.08, 0.14], "amp_max_extra": [0.05, 0.18], "thickness": [0.005, 0.015]}}
+        ]
+      }
+    }
+  ]
+}

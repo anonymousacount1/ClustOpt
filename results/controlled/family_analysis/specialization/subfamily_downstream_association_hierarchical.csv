@@ -1,0 +1,6 @@
+signal,n_subfamilies,n_family_blocks,spearman,ci_low,ci_high,resampling,evidence_level
+new46_selection_share,86,12,0.19243360535874335,-0.15365011179521987,0.5026018401267405,family-block bootstrap (families resampled whole),2 (association only)
+n_tier_a,86,12,0.11737344885437444,-0.07223702627102291,0.2900351256780657,family-block bootstrap (families resampled whole),2 (association only)
+n_tier_b,86,12,0.21709611771606172,0.0696818279700787,0.3545185897473236,family-block bootstrap (families resampled whole),2 (association only)
+max_new46_utility_uplift,86,12,0.10729751403368083,-0.08543704536157759,0.31426646087241533,family-block bootstrap (families resampled whole),2 (association only)
+new46_oracle_win_rate,86,12,0.16469800178101518,-0.1834586857328391,0.5089836610258317,family-block bootstrap (families resampled whole),2 (association only)

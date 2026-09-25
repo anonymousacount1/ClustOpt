@@ -1,0 +1,150 @@
+{
+  "family_id": "hybrid_mixed_geometry",
+  "family_name": "Hybrid / mixed geometry",
+  "family_seed": 110979010,
+  "n_features": 2,
+  "feature_names": ["x", "y"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "bands_plus_blobs",
+      "cluster_budget": {"2": 50, "3": 75, "4": 75, "5": 50},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "parallel_bands", "weight": 1.0, "parameter_ranges": {"slope": [-0.5, 0.5], "spacing": [0.08, 0.18], "thickness": [0.005, 0.015], "n_bands": [2, 4]}},
+          {"type": "blob",           "weight": 1.0, "parameter_ranges": {"sigma_min": 0.035, "sigma_max": 0.08}}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "arcs_plus_blobs",
+      "cluster_budget": {"2": 50, "3": 75, "4": 75, "5": 50},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "circle", "weight": 1.0, "parameter_ranges": {"radius": [0.06, 0.12], "thickness": [0.004, 0.012], "angle_high": [2.5, 6.283]}},
+          {"type": "blob",   "weight": 1.0, "parameter_ranges": {"sigma_min": 0.035, "sigma_max": 0.08}}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "bands_plus_arcs",
+      "cluster_budget": {"2": 54, "3": 81, "4": 81, "5": 54},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "parallel_bands", "weight": 1.0, "parameter_ranges": {"slope": [-1.0, 1.0], "spacing": [0.08, 0.18], "thickness": [0.005, 0.015], "n_bands": [2, 4]}},
+          {"type": "circle",         "weight": 1.0, "parameter_ranges": {"radius": [0.06, 0.12], "thickness": [0.004, 0.012], "angle_high": [2.0, 6.283]}}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "polygons_plus_rings",
+      "cluster_budget": {"2": 50, "3": 75, "4": 75, "5": 50},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "polygon",      "weight": 1.0, "parameter_ranges": {"n_sides": [3, 6], "radius": [0.06, 0.12], "boundary_thickness": [0.005, 0.013]}},
+          {"type": "ring_annulus", "weight": 1.0, "parameter_ranges": {"inner_radius": [0.04, 0.08], "thickness": [0.012, 0.028]}}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "curves_plus_ladders",
+      "cluster_budget": {"2": 52, "3": 78, "4": 78, "5": 52},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "parabola", "weight": 1.0, "parameter_ranges": {"a": [0.5, 1.4], "thickness": [0.005, 0.014], "sign": [-1.0, 1.0]}},
+          {"type": "ladder",   "weight": 1.0, "parameter_ranges": {"n_rungs": [4, 7], "rung_spacing": [0.06, 0.10], "segment_x_len": [0.06, 0.10], "thickness": [0.004, 0.012]}}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "topology_plus_texture",
+      "cluster_budget": {"2": 54, "3": 81, "4": 81, "5": 54},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "ring_annulus",      "weight": 1.0, "parameter_ranges": {"inner_radius": [0.04, 0.08], "thickness": [0.012, 0.030]}},
+          {"type": "micro_blob_texture","weight": 1.0}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "full_mixed_scene",
+      "cluster_budget": {"2": 57, "3": 85, "4": 85, "5": 56},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "blob",           "weight": 1.0},
+          {"type": "ellipse",        "weight": 1.0},
+          {"type": "polygon",        "weight": 1.0},
+          {"type": "ring_annulus",   "weight": 1.0},
+          {"type": "circle",         "weight": 1.0},
+          {"type": "parabola",       "weight": 1.0}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "fragmented_band_with_overlapping_clouds",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "assignment": {"mode": "primary_first"},
+        "component_types": [
+          {
+            "type": "band",
+            "parameter_ranges": {
+              "slope": [-0.25, 0.25],
+              "thickness": [0.010, 0.028],
+              "x_span_full_bounds": true,
+              "interval_generation": {
+                "n_windows": 6,
+                "coverage": 0.62,
+                "min_gap": 0.015,
+                "edge_margin": 0.02,
+                "length_jitter": 0.35,
+                "start_jitter": 0.01
+              }
+            }
+          },
+          {
+            "type": "blob",
+            "parameter_ranges": {
+              "sigma_min": 0.035,
+              "sigma_max": 0.090,
+              "anisotropy": 0.6
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

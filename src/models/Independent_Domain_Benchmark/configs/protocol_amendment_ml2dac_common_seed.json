@@ -1,0 +1,158 @@
+{
+  "amendment": "ML2DAC COMMON CANDIDATE-SLATE SEED IDENTITY",
+  "date": "2026-09-10",
+  "authorised_by": "supervisor (Stage 4B-3B2 brief, section 6)",
+  "stage": "4B-3B2",
+  "pre_scientific_execution": true,
+  "no_external_result_inspected_before_amendment": true,
+  "outcome_driven": false,
+  "seed_identity_string": "ml2dac_shared_candidate_slate",
+  "method_id_mapping": {
+    "IDB_ML2DAC_M0_original_cvis": "ml2dac_shared_candidate_slate",
+    "IDB_ML2DAC_M1_original_plus_established": "ml2dac_shared_candidate_slate",
+    "IDB_ML2DAC_M2_original_plus_new46": "ml2dac_shared_candidate_slate",
+    "IDB_ML2DAC_M3_extended_cvis": "ml2dac_shared_candidate_slate"
+  },
+  "method_ids_unchanged": true,
+  "method_ids_source": "models/Independent_Domain_Benchmark/configs/method_registry.json (read, not guessed)",
+  "old_state": {
+    "seed_identity": "fallback to the full scientific METHOD_ID",
+    "per_arm_identity": {
+      "M0": "IDB_ML2DAC_M0_original_cvis",
+      "M1": "IDB_ML2DAC_M1_original_plus_established",
+      "M2": "IDB_ML2DAC_M2_original_plus_new46",
+      "M3": "IDB_ML2DAC_M3_extended_cvis"
+    },
+    "trace_group": "ml2dac_per_arm",
+    "example_seeds_c2e_000008_9cbad322_xy_2d": {
+      "M0": 475517272,
+      "M1": 386512636,
+      "M2": 544492555,
+      "M3": 1482277917
+    },
+    "hashes": {
+      "protocol.py": {
+        "raw_sha256_16": "a19f8e5e01a02e60",
+        "canonical_text_sha256_16": "21ee2a7bbcfa0028"
+      },
+      "benchmark_protocol.json": {
+        "raw_sha256_16": "61208638cbcd74de",
+        "canonical_text_sha256_16": "5ec678d649fcf57f"
+      },
+      "method_registry.json": {
+        "raw_sha256_16": "4db39c8bdbc847a6",
+        "canonical_text_sha256_16": "2914631c5d8f1fe5"
+      }
+    }
+  },
+  "new_state": {
+    "seed_identity": "ml2dac_shared_candidate_slate",
+    "trace_group": "ml2dac_shared_candidate_slate",
+    "common_example_seed_c2e_000008_9cbad322_xy_2d": 8881127,
+    "hashes": {
+      "protocol.py": {
+        "raw_sha256_16": "7ccf1d0f8bdc9929",
+        "canonical_text_sha256_16": "491abecfab1ad319"
+      },
+      "benchmark_protocol.json": {
+        "raw_sha256_16": "6d3f7f4db95dae04",
+        "canonical_text_sha256_16": "138a3ec8a7db2f02"
+      },
+      "method_registry.json": {
+        "raw_sha256_16": "4db39c8bdbc847a6",
+        "canonical_text_sha256_16": "2914631c5d8f1fe5"
+      }
+    }
+  },
+  "hash_conventions": {
+    "raw_sha256_16": "SHA-256 of the file bytes exactly as stored on disk, first 16 hex chars",
+    "canonical_text_sha256_16": "SHA-256 after CRLF->LF normalisation (the project text convention tracked by configs/config_hashes.json), first 16 hex chars",
+    "note": "BOTH are recorded deliberately. The AutoClust amendment manifest quoted the raw value while config_hashes.json tracks the canonical value; recording one alone caused an unreproducible digest earlier in Stage 4B-3B1."
+  },
+  "rationale": "common random numbers for the ML2DAC CVI-inventory decomposition. M0-M3 differ only in the CVI inventory their classifier can predict from; the physical candidate chain is arm-independent, so four independent slates would inject Monte-Carlo variation into the M1-M0, M2-M0, M3-M1, M3-M2 and M3-M0 contrasts for no scientific gain.",
+  "evidence_available_before_amendment": [
+    "authoritative 52-feature schema identical across M0-M3, ordered hash f33a72e081fff983 (6b6ddb6)",
+    "meta-feature extraction label-free under permutation and deletion of the label column, max |diff| 0.0 (6b6ddb6)",
+    "historical meta-feature regression 30/30 bitwise exact (6b6ddb6)",
+    "imputer.pkl and nearest_neighbor_index.pkl byte-identical across arms (5f0b055)",
+    "warmstart repository semantically identical across arms, bb3a1306b4562217 (6b6ddb6)",
+    "historical nearest neighbour identical 324/324 and warmstarts identical 324/324 (6b6ddb6)",
+    "predicted CVI not consumed by candidate generation; consumed only by scoring (source audit, 5f0b055)",
+    "historical predicted-CVI regression 1296/1296 exact (6b6ddb6)",
+    "equal-seed candidate-plan identity 15/15 records, 50 configs each, dry proof (6b6ddb6)",
+    "historical pairing H3 NOT PAIRED attributable to the process-salted seed at ML2DAC/indomain/dataset.py:266 (6b6ddb6)"
+  ],
+  "seed_resolver_test": {
+    "keys_tested": 36,
+    "datasets": 12,
+    "views": [
+      "x_only",
+      "y_only",
+      "xy_2d"
+    ],
+    "within_key_mismatches": 0,
+    "cross_key_collisions": 0,
+    "sample_keys": [
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view_id": "x_only",
+        "common_seed": 999322446
+      },
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view_id": "y_only",
+        "common_seed": 748538643
+      },
+      {
+        "dataset_id": "c2e_000008_9cbad322",
+        "view_id": "xy_2d",
+        "common_seed": 8881127
+      },
+      {
+        "dataset_id": "c2e_000208_04419bc6",
+        "view_id": "x_only",
+        "common_seed": 2081336149
+      },
+      {
+        "dataset_id": "c2e_000208_04419bc6",
+        "view_id": "y_only",
+        "common_seed": 1328677407
+      },
+      {
+        "dataset_id": "c2e_000208_04419bc6",
+        "view_id": "xy_2d",
+        "common_seed": 1736926731
+      }
+    ]
+  },
+  "scope": {
+    "changed": [
+      "ML2DAC seed identity (TRACE_IDENTITY entries for the four METHOD_IDs)",
+      "benchmark_protocol.json seed/trace grouping label ml2dac_per_arm -> ml2dac_shared_candidate_slate",
+      "benchmark_protocol.json trace_reuse.physical_reuse_status.ml2dac"
+    ],
+    "unchanged": [
+      "corpus manifest 709712107424ad4e",
+      "search-space fingerprint 8ddf86c79888ebe9",
+      "the four scientific METHOD_IDs",
+      "method_registry.json",
+      "model artifacts",
+      "metric registries",
+      "derive_seed formula and BASE_SEED",
+      "budget, k range and search space",
+      "the ClustOpt and AutoClust seed identities"
+    ]
+  },
+  "status_distinction": {
+    "common_seed_identity": "AUTHORISED",
+    "physical_trace_reuse": "PENDING EMPIRICAL VALIDATION",
+    "note": "a shared seed identity is a necessary condition for physical reuse, not a demonstration of it. Physical reuse is declared only after status, raw-label and canonical-partition identity have been executed for M0-M3."
+  },
+  "git_history_rewritten": false,
+  "provenance_chain": [
+    "Stage 4A original protocol",
+    "authorised pre-run AutoClust amendment 2026-09-09",
+    "authorised pre-run ML2DAC amendment 2026-09-10",
+    "new frozen protocol"
+  ]
+}

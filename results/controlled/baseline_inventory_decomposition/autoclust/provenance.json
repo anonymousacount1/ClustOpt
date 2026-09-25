@@ -1,0 +1,205 @@
+{
+  "baseline": "autoclust",
+  "stage": "3A-1/3A-2",
+  "created_at": "2026-09-09T07:38:18",
+  "source_commit": "f206a96b9eb6013436864242efe1486932320935",
+  "analysis_only": true,
+  "mechanism": "AutoClust feeds the COMPLETE CVI vector to a learned ARI-predictor MLP on every trial, so enlarging the inventory widens the regression input rather than a label space",
+  "metric_dependent_components": [
+    "ARI-predictor MLP (60,30,10)"
+  ],
+  "authoritative_sources": {
+    "dataset_level_frame": "results_analysis\\clustering_repository\\paper_analysis_v2\\13_raw_and_reproducibility\\canonical_dataset_level_frame.parquet",
+    "per_dataset_pattern": "results_analysis/clustering_repository/analyzed_data/<family>/subfamilies/<subfamily>/<dataset_id>/experiments/split_01/<METHOD_ID>/{1d_x,1d_y,2d}/result.json",
+    "standard_aggregate_root": "results_analysis\\clustering_repository\\paper_analysis_v2"
+  },
+  "split_1_status": "common external-baseline evaluation split for all four arms; Split-1 results have informed earlier project decisions, so this is a controlled matched Split-1 replay, NOT a pristine untouched final holdout. All metric partitions were frozen independently of the A1/A2 outcomes.",
+  "arms": [
+    {
+      "arm": "A0",
+      "semantic_variant": "Original",
+      "method_id": "AutoClust_Original_InDomain_same_search_space",
+      "requested_metric_count": 7,
+      "live_metric_count": 7,
+      "metric_manifest_hash": null,
+      "metric_manifest_path": "historical build (no Stage-3A1 spec)",
+      "derived_repository": "experiments\\external_baselines\\Unified_MKR\\derived\\autoclust_split1\\original_cvis",
+      "model_artifacts": [
+        "ari_predictor.pkl",
+        "algorithm_selector.pkl",
+        "ari_regression_dataset.parquet",
+        "algorithm_labels.parquet"
+      ],
+      "train_splits": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "heldout_split": 1,
+      "random_seed": 1234,
+      "leakage_free": true,
+      "all_checks_pass": true,
+      "search_space_identifier": "clustopt_phaseE2_map",
+      "search_budget": {
+        "n_evaluations": 50,
+        "total": 50
+      },
+      "workers_used_for_evaluation": 8,
+      "evaluated_datasets": 1055,
+      "success_count": 1055,
+      "failure_count": 0
+    },
+    {
+      "arm": "A1",
+      "semantic_variant": "Original + Established",
+      "method_id": "AutoClust_OriginalPlusEstablished_InDomain_same_search_space",
+      "requested_metric_count": 17,
+      "live_metric_count": 17,
+      "metric_manifest_hash": "19ca1f763bf6ed35",
+      "metric_manifest_path": "experiments\\external_baselines\\Unified_MKR\\variant_specs\\original_plus_established.json",
+      "derived_repository": "experiments\\external_baselines\\Unified_MKR\\derived\\autoclust_split1\\original_plus_established",
+      "model_artifacts": [
+        "ari_predictor.pkl",
+        "algorithm_selector.pkl",
+        "ari_regression_dataset.parquet",
+        "algorithm_labels.parquet"
+      ],
+      "train_splits": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "heldout_split": 1,
+      "random_seed": 1234,
+      "leakage_free": true,
+      "all_checks_pass": true,
+      "search_space_identifier": "clustopt_phaseE2_map",
+      "search_budget": {
+        "n_evaluations": 50,
+        "total": 50
+      },
+      "workers_used_for_evaluation": 8,
+      "evaluated_datasets": 1055,
+      "success_count": 1055,
+      "failure_count": 0
+    },
+    {
+      "arm": "A2",
+      "semantic_variant": "Original + New46",
+      "method_id": "AutoClust_OriginalPlusNew46_InDomain_same_search_space",
+      "requested_metric_count": 53,
+      "live_metric_count": 51,
+      "metric_manifest_hash": "c37021694443d1ae",
+      "metric_manifest_path": "experiments\\external_baselines\\Unified_MKR\\variant_specs\\original_plus_new46.json",
+      "derived_repository": "experiments\\external_baselines\\Unified_MKR\\derived\\autoclust_split1\\original_plus_new46",
+      "model_artifacts": [
+        "ari_predictor.pkl",
+        "algorithm_selector.pkl",
+        "ari_regression_dataset.parquet",
+        "algorithm_labels.parquet"
+      ],
+      "train_splits": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "heldout_split": 1,
+      "random_seed": 1234,
+      "leakage_free": true,
+      "all_checks_pass": true,
+      "search_space_identifier": "clustopt_phaseE2_map",
+      "search_budget": {
+        "n_evaluations": 50,
+        "total": 50
+      },
+      "workers_used_for_evaluation": 8,
+      "evaluated_datasets": 1055,
+      "success_count": 1055,
+      "failure_count": 0
+    },
+    {
+      "arm": "A3",
+      "semantic_variant": "Extended",
+      "method_id": "AutoClust_Extended_InDomain_same_search_space",
+      "requested_metric_count": 63,
+      "live_metric_count": 61,
+      "metric_manifest_hash": null,
+      "metric_manifest_path": "historical build (no Stage-3A1 spec)",
+      "derived_repository": "experiments\\external_baselines\\Unified_MKR\\derived\\autoclust_split1\\extended_cvis",
+      "model_artifacts": [
+        "ari_predictor.pkl",
+        "algorithm_selector.pkl",
+        "ari_regression_dataset.parquet",
+        "algorithm_labels.parquet"
+      ],
+      "train_splits": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "heldout_split": 1,
+      "random_seed": 1234,
+      "leakage_free": true,
+      "all_checks_pass": true,
+      "search_space_identifier": "clustopt_phaseE2_map",
+      "search_budget": {
+        "n_evaluations": 50,
+        "total": 50
+      },
+      "workers_used_for_evaluation": 8,
+      "evaluated_datasets": 1055,
+      "success_count": 1055,
+      "failure_count": 0
+    }
+  ],
+  "identical_dataset_set": true,
+  "n_datasets": 1055
+}

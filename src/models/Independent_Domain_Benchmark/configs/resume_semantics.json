@@ -1,0 +1,19 @@
+{
+  "complete_iff_all_hold": [
+    "result.json readable",
+    "status == success",
+    "dataset representation checksum matches",
+    "METHOD_ID matches",
+    "all model artifact hashes match",
+    "view matches",
+    "search-space hash matches",
+    "budget matches",
+    "seed matches",
+    "benchmark-protocol hash matches",
+    "code/protocol provenance matches"
+  ],
+  "directory_existence_is_not_completion": true,
+  "compatible_success_never_overwritten": true,
+  "incomplete_or_incompatible": "may be rerun ONLY under the frozen configuration",
+  "lineage": "mirrors the strict predicate added to AutoClust in Stage 3A-2, which replaced a predicate that silently reused FAILED units"
+}

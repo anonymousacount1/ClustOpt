@@ -1,0 +1,4746 @@
+{
+  "manifest": "stage4_external_corpus_publication_manifest",
+  "archive_contract": "stage4_corpus_archive_v1",
+  "version": 1,
+  "n_datasets": 50,
+  "frozen_corpus_manifest_hash": "709712107424ad4e",
+  "preparation_environment": "unpinned_blas",
+  "preparation_environment_note": "the frozen manifest checksums were produced with multi-threaded BLAS. Preparation is outside the T0..T1 runtime boundary, so it is archived once here and never recomputed during scientific execution; scientific workers run with numeric threads pinned and load the archived array instead of re-running PCA.",
+  "view_definitions": {
+    "x_only": "X_full[:, [0]]",
+    "y_only": "X_full[:, [1]]",
+    "xy_2d": "X_full"
+  },
+  "checksums_match_frozen_manifest": 50,
+  "pca_reduced_datasets": 29,
+  "redistribution_summary": {
+    "REDISTRIBUTION_ALLOWED": 22,
+    "REDISTRIBUTION_RESTRICTED": 28
+  },
+  "manual_review_required": [
+    "real_analcatdata_authorship",
+    "real_balance_scale",
+    "real_banknote",
+    "real_blood_transfusion",
+    "real_breast_cancer_wdbc",
+    "real_car_evaluation",
+    "real_cardiotocography_3c",
+    "real_churn",
+    "real_climate_model_crashes",
+    "real_cmc",
+    "real_credit_approval",
+    "real_diabetes_pima",
+    "real_german_credit",
+    "real_haberman",
+    "real_hill_valley",
+    "real_ilpd_liver",
+    "real_ionosphere",
+    "real_kc1_software",
+    "real_kc2_software",
+    "real_madelon",
+    "real_ozone_level_8hr",
+    "real_pc1_software",
+    "real_pc3_software",
+    "real_pc4_software",
+    "real_pollen",
+    "real_qsar_biodeg",
+    "real_seeds",
+    "real_sonar"
+  ],
+  "contains_outcome_information": false,
+  "entries": [
+    {
+      "dataset_id": "fcps_atom",
+      "source_group": "fcps",
+      "source_identity": {
+        "retrieval": "http",
+        "retrieval_url": "021f84015dbfc3ee51f2ca173a1c6040e20d7d5aa8144d1cc62e400c4944ab71",
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": "atom.arff",
+        "raw_bytes_sha256_16": "021f84015dbfc3ee"
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:00Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "MIT (deric/clustering-benchmark); FCPS suite by Ultsch, Univ. Marburg",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "08c12a671301607d",
+        "shape": [
+          800,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "20b522e15e6ffb3c",
+        "shape": [
+          800
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw.arff",
+        "hash": "021f84015dbfc3ee",
+        "bytes": 25074
+      },
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "476104ea2221c3a6",
+        "shape": [
+          800,
+          3
+        ]
+      },
+      "representation_checksum": "00a531cc15f46bd3",
+      "frozen_representation_checksum": "00a531cc15f46bd3",
+      "n_samples": 800,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.34610673216988475,
+          0.33489259106421193
+        ],
+        "explained_variance_total": 0.6809993232340967,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 3,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          1.0396197211611056,
+          1.0059351921828652
+        ],
+        "explained_variance_ratio": [
+          0.34610673216988463,
+          0.3348925910642121
+        ],
+        "singular_values": [
+          28.821106106597007,
+          28.350347767780722
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "fcps_chainlink",
+      "source_group": "fcps",
+      "source_identity": {
+        "retrieval": "http",
+        "retrieval_url": "562ce698d1cf72ebe67036de638d20f6e44c4b274b3e3d6fb2d63b8131d35d16",
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": "chainlink.arff",
+        "raw_bytes_sha256_16": "562ce698d1cf72eb"
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:02Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "MIT (deric/clustering-benchmark); FCPS suite by Ultsch, Univ. Marburg",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "fe9adeb7a08eceac",
+        "shape": [
+          1000,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "3674d4e4336fb7d2",
+        "shape": [
+          1000
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw.arff",
+        "hash": "562ce698d1cf72eb",
+        "bytes": 33832
+      },
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "9f64a141f6d1b573",
+        "shape": [
+          1000,
+          3
+        ]
+      },
+      "representation_checksum": "94a9e7bf4c4bac78",
+      "frozen_representation_checksum": "94a9e7bf4c4bac78",
+      "n_samples": 1000,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.33955692661580933,
+          0.33465970605946027
+        ],
+        "explained_variance_total": 0.6742166326752697,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 3,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          1.0196904703177463,
+          1.004984102280662
+        ],
+        "explained_variance_ratio": [
+          0.33955692661580933,
+          0.33465970605946027
+        ],
+        "singular_values": [
+          31.9166223126356,
+          31.685629521573045
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "fcps_engytime",
+      "source_group": "fcps",
+      "source_identity": {
+        "retrieval": "http",
+        "retrieval_url": "1eaa0a41523992dfc3c107b57339dc5d7e4bcb12a1761d0eb4bae0015add2d4c",
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": "engytime.arff",
+        "raw_bytes_sha256_16": "1eaa0a41523992df"
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:02Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "MIT (deric/clustering-benchmark); FCPS suite by Ultsch, Univ. Marburg",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "fd7f00fcfece5539",
+        "shape": [
+          4096,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "67e84ce3f3031b95",
+        "shape": [
+          4096
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw.arff",
+        "hash": "1eaa0a41523992df",
+        "bytes": 83065
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "96f09b35a5c77e2d",
+      "frozen_representation_checksum": "96f09b35a5c77e2d",
+      "n_samples": 4096,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "fcps_lsun",
+      "source_group": "fcps",
+      "source_identity": {
+        "retrieval": "http",
+        "retrieval_url": "0b94cd27fd78376f45274c18249d3a46c6e902d1b3298a1e98fa0bb222b2a7bf",
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": "lsun.arff",
+        "raw_bytes_sha256_16": "0b94cd27fd78376f"
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:03Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "MIT (deric/clustering-benchmark); FCPS suite by Ultsch, Univ. Marburg",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "a8a882301de46e38",
+        "shape": [
+          400,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "b19c73bfb2bf83df",
+        "shape": [
+          400
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw.arff",
+        "hash": "0b94cd27fd78376f",
+        "bytes": 8481
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "3ae873c72dbfc430",
+      "frozen_representation_checksum": "3ae873c72dbfc430",
+      "n_samples": 400,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "fcps_tetra",
+      "source_group": "fcps",
+      "source_identity": {
+        "retrieval": "http",
+        "retrieval_url": "0e14d88e1522204d99fbd004b2de35fc5c2b3d7984b472ae508c1c361d64340c",
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": "tetra.arff",
+        "raw_bytes_sha256_16": "0e14d88e1522204d"
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:03Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "MIT (deric/clustering-benchmark); FCPS suite by Ultsch, Univ. Marburg",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "e3fbf01e5595730e",
+        "shape": [
+          400,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "9ba27e5e1263fe25",
+        "shape": [
+          400
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw.arff",
+        "hash": "0e14d88e1522204d",
+        "bytes": 12727
+      },
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "f81e75d1123707f6",
+        "shape": [
+          400,
+          3
+        ]
+      },
+      "representation_checksum": "792dc578b3a325af",
+      "frozen_representation_checksum": "792dc578b3a325af",
+      "n_samples": 400,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.3459413980168841,
+          0.3308634785300488
+        ],
+        "explained_variance_total": 0.676804876546933,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 3,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          1.0404252571936354,
+          0.99507813091744
+        ],
+        "explained_variance_ratio": [
+          0.3459413980168839,
+          0.33086347853004894
+        ],
+        "singular_values": [
+          20.37473135087333,
+          19.925766590925896
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "fcps_twodiamonds",
+      "source_group": "fcps",
+      "source_identity": {
+        "retrieval": "http",
+        "retrieval_url": "99ee82db27c77ca9fbe16533ffeddf61cb48a665679011cf5ffc709db74e5824",
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": "twodiamonds.arff",
+        "raw_bytes_sha256_16": "99ee82db27c77ca9"
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:04Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "MIT (deric/clustering-benchmark); FCPS suite by Ultsch, Univ. Marburg",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "d83015de187c5569",
+        "shape": [
+          800,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "20b522e15e6ffb3c",
+        "shape": [
+          800
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw.arff",
+        "hash": "99ee82db27c77ca9",
+        "bytes": 14531
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "2fcc2fd4621863f3",
+      "frozen_representation_checksum": "2fcc2fd4621863f3",
+      "n_samples": 800,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "fcps_wingnut",
+      "source_group": "fcps",
+      "source_identity": {
+        "retrieval": "http",
+        "retrieval_url": "7e667daa70285efbbf87768191f067e71f30c7227f0b73cb770b616ee31da915",
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": "wingnut.arff",
+        "raw_bytes_sha256_16": "7e667daa70285efb"
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:04Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "MIT (deric/clustering-benchmark); FCPS suite by Ultsch, Univ. Marburg",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "49a17280be135a81",
+        "shape": [
+          1016,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "393582fdfe7f8a87",
+        "shape": [
+          1016
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw.arff",
+        "hash": "7e667daa70285efb",
+        "bytes": 19814
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "34ccfe98f59a446f",
+      "frozen_representation_checksum": "34ccfe98f59a446f",
+      "n_samples": 1016,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_analcatdata_authorship",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=458)",
+        "retrieval_url": null,
+        "openml_data_id": 458,
+        "openml_name": "analcatdata_authorship",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:06Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "4f43de035dfdae71",
+        "shape": [
+          841,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "51308b56e8777f1b",
+        "shape": [
+          841
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "04eb5b3a5517138e",
+        "shape": [
+          841,
+          70
+        ]
+      },
+      "representation_checksum": "cf3f872024a77df3",
+      "frozen_representation_checksum": "cf3f872024a77df3",
+      "n_samples": 841,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.15428026344309254,
+          0.10748595371291526
+        ],
+        "explained_variance_total": 0.2617662171560078,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 70,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          10.812475129636741,
+          7.532973922713482
+        ],
+        "explained_variance_ratio": [
+          0.15428026344309254,
+          0.10748595371291526
+        ],
+        "singular_values": [
+          95.30204147286071,
+          79.54682957277005
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_balance_scale",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=11)",
+        "retrieval_url": null,
+        "openml_data_id": 11,
+        "openml_name": "balance-scale",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "07e9b3ab1710199d",
+        "shape": [
+          625,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "29f01094dbaf23c7",
+        "shape": [
+          625
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "25e8635d539233e7",
+        "shape": [
+          625,
+          4
+        ]
+      },
+      "representation_checksum": "c3c0f14c6291d116",
+      "frozen_representation_checksum": "c3c0f14c6291d116",
+      "n_samples": 625,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.25000000000000006,
+          0.25000000000000006
+        ],
+        "explained_variance_total": 0.5000000000000001,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 4,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          1.0016025641025639,
+          1.0016025641025639
+        ],
+        "explained_variance_ratio": [
+          0.25000000000000006,
+          0.25000000000000006
+        ],
+        "singular_values": [
+          24.999999999999996,
+          24.999999999999996
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_banknote",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1462)",
+        "retrieval_url": null,
+        "openml_data_id": 1462,
+        "openml_name": "banknote-authentication",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "948f18bf9b623334",
+        "shape": [
+          1372,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "f322c0a693161d1f",
+        "shape": [
+          1372
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "aa279a5b147083b9",
+        "shape": [
+          1372,
+          4
+        ]
+      },
+      "representation_checksum": "aa23d1bee4f12c8c",
+      "frozen_representation_checksum": "aa23d1bee4f12c8c",
+      "n_samples": 1372,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.5449760184289707,
+          0.3232887249531781
+        ],
+        "explained_variance_total": 0.8682647433821489,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 4,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          2.181494083981175,
+          1.2940981200168065
+        ],
+        "explained_variance_ratio": [
+          0.5449760184289707,
+          0.3232887249531781
+        ],
+        "singular_values": [
+          54.68846669214809,
+          42.12135470925694
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_blood_transfusion",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1464)",
+        "retrieval_url": null,
+        "openml_data_id": 1464,
+        "openml_name": "blood-transfusion-service-center",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "46199f267f5eea98",
+        "shape": [
+          748,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "41f224c6d89752e6",
+        "shape": [
+          748
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "e341afa3f38c6422",
+        "shape": [
+          748,
+          4
+        ]
+      },
+      "representation_checksum": "71d606998db0b047",
+      "frozen_representation_checksum": "71d606998db0b047",
+      "n_samples": 748,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.6352610230044177,
+          0.275340469855193
+        ],
+        "explained_variance_total": 0.9106014928596107,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 4,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          2.544445757468832,
+          1.1028362594467704
+        ],
+        "explained_variance_ratio": [
+          0.6352610230044177,
+          0.275340469855193
+        ],
+        "singular_values": [
+          43.597029495473855,
+          28.702241825452198
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_breast_cancer_wdbc",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.load_breast_cancer",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": "bundled with scikit-learn",
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "BSD-3-Clause (scikit-learn bundled)",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "25311a12d936df35",
+        "shape": [
+          569,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "179c7a0438ee62fc",
+        "shape": [
+          569
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "f401a43fbac95080",
+        "shape": [
+          569,
+          30
+        ]
+      },
+      "representation_checksum": "e4bc97b1e367b07b",
+      "frozen_representation_checksum": "e4bc97b1e367b07b",
+      "n_samples": 569,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.4427202560752635,
+          0.1897118204403308
+        ],
+        "explained_variance_total": 0.6324320765155943,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 30,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          13.304990794374568,
+          5.701374603726136
+        ],
+        "explained_variance_ratio": [
+          0.44272025607526394,
+          0.18971182044033072
+        ],
+        "singular_values": [
+          86.93235744649259,
+          56.90677266298314
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_car_evaluation",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=21)",
+        "retrieval_url": null,
+        "openml_data_id": 21,
+        "openml_name": "car",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "df48ebc086bf2994",
+        "shape": [
+          1728,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "b9e64c839715fc4b",
+        "shape": [
+          1728
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "a6ddf7b8deb0e165",
+        "shape": [
+          1728,
+          21
+        ]
+      },
+      "representation_checksum": "c96e6ef9d05446af",
+      "frozen_representation_checksum": "c96e6ef9d05446af",
+      "n_samples": 1728,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.07142857142857152,
+          0.07142857142857151
+        ],
+        "explained_variance_total": 0.14285714285714302,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 21,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          1.5008685581933991,
+          1.500868558193399
+        ],
+        "explained_variance_ratio": [
+          0.07142857142857152,
+          0.07142857142857151
+        ],
+        "singular_values": [
+          50.91168824543143,
+          50.91168824543142
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_cardiotocography_3c",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1560)",
+        "retrieval_url": null,
+        "openml_data_id": 1560,
+        "openml_name": "cardiotocography",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "3fb9922b18a06ba3",
+        "shape": [
+          2126,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "bebea89fc1c16ea7",
+        "shape": [
+          2126
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "897e50a1a4dab402",
+        "shape": [
+          2126,
+          35
+        ]
+      },
+      "representation_checksum": "a7bc7136453c1d9f",
+      "frozen_representation_checksum": "a7bc7136453c1d9f",
+      "n_samples": 2126,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.20426828326826937,
+          0.12030772269376629
+        ],
+        "explained_variance_total": 0.3245760059620357,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 35,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          7.152754333172667,
+          4.212751833243833
+        ],
+        "explained_variance_ratio": [
+          0.20426828326826937,
+          0.12030772269376629
+        ],
+        "singular_values": [
+          123.2866698308942,
+          94.61552539431965
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_churn",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=40701)",
+        "retrieval_url": null,
+        "openml_data_id": 40701,
+        "openml_name": "churn",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "f102b2c33915eaa6",
+        "shape": [
+          5000,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "0da9f44ea8c5a39c",
+        "shape": [
+          5000
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "31773d3a7ed4c9b1",
+        "shape": [
+          5000,
+          16
+        ]
+      },
+      "representation_checksum": "5d9917223f541780",
+      "frozen_representation_checksum": "5d9917223f541780",
+      "n_samples": 5000,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.1292944868336754,
+          0.1256819939335443
+        ],
+        "explained_variance_total": 0.2549764807672197,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 16,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          2.069125614461699,
+          2.0113141657698628
+        ],
+        "explained_variance_ratio": [
+          0.1292944868336754,
+          0.1256819939335443
+        ],
+        "singular_values": [
+          101.7032887702951,
+          100.27242649244879
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_climate_model_crashes",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1467)",
+        "retrieval_url": null,
+        "openml_data_id": 1467,
+        "openml_name": "climate-model-simulation-crashes",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "1439667299a60d91",
+        "shape": [
+          540,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "62205f05886b0ee3",
+        "shape": [
+          540
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "a4d336d74cf80615",
+        "shape": [
+          540,
+          20
+        ]
+      },
+      "representation_checksum": "c769a38658f68923",
+      "frozen_representation_checksum": "c769a38658f68923",
+      "n_samples": 540,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.10052938146724465,
+          0.06042899543023257
+        ],
+        "explained_variance_total": 0.16095837689747722,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 20,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          2.014317847581154,
+          1.2108221718859213
+        ],
+        "explained_variance_ratio": [
+          0.10052938146724465,
+          0.06042899543023257
+        ],
+        "singular_values": [
+          32.950224883090584,
+          25.5466857076708
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_cmc",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=23)",
+        "retrieval_url": null,
+        "openml_data_id": 23,
+        "openml_name": "cmc",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "4066d48395e403ea",
+        "shape": [
+          1473,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "a3e6b9cbeed2793a",
+        "shape": [
+          1473
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "b0027095d8c8fffe",
+      "frozen_representation_checksum": "b0027095d8c8fffe",
+      "n_samples": 1473,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_credit_approval",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=29)",
+        "retrieval_url": null,
+        "openml_data_id": 29,
+        "openml_name": "credit-approval",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:40Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "5c20de0f2762a377",
+        "shape": [
+          690,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "7d0eca689cab6e60",
+        "shape": [
+          690
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "f2902340624c9033",
+        "shape": [
+          690,
+          6
+        ],
+        "note": "post-column-selection, post-imputation numeric matrix -- exactly what prepare() feeds to StandardScaler and PCA"
+      },
+      "representation_checksum": "1063bf3306d4eda3",
+      "frozen_representation_checksum": "1063bf3306d4eda3",
+      "n_samples": 690,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.3205180114297501,
+          0.17704568884680452
+        ],
+        "explained_variance_total": 0.4975637002765546,
+        "dropped_columns": 0,
+        "n_imputed_cells": 25,
+        "dim_after_cleaning": 6,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          1.9258992268783266,
+          1.0638158952478494
+        ],
+        "explained_variance_ratio": [
+          0.3205180114297507,
+          0.17704568884680405
+        ],
+        "singular_values": [
+          36.42725033980972,
+          27.0734030337113
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_diabetes_pima",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=37)",
+        "retrieval_url": null,
+        "openml_data_id": 37,
+        "openml_name": "diabetes",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "e523d4f03e9a2102",
+        "shape": [
+          768,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "ef261f3ed7bd6e39",
+        "shape": [
+          768
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "43d79d86985e7f74",
+        "shape": [
+          768,
+          8
+        ]
+      },
+      "representation_checksum": "618aa9140fb74c12",
+      "frozen_representation_checksum": "618aa9140fb74c12",
+      "n_samples": 768,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.26179749316110074,
+          0.21640126757746506
+        ],
+        "explained_variance_total": 0.4781987607385658,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 8,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          2.0971105579945277,
+          1.7334672594471252
+        ],
+        "explained_variance_ratio": [
+          0.26179749316110074,
+          0.21640126757746506
+        ],
+        "singular_values": [
+          40.1059072703985,
+          36.46326079762951
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_german_credit",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=31)",
+        "retrieval_url": null,
+        "openml_data_id": 31,
+        "openml_name": "credit-g",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "fb61fe2413627e45",
+        "shape": [
+          1000,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "a9c14bf31f1582d9",
+        "shape": [
+          1000
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "b2d058f9576d62a7",
+        "shape": [
+          1000,
+          7
+        ]
+      },
+      "representation_checksum": "fce34db0626d0304",
+      "frozen_representation_checksum": "fce34db0626d0304",
+      "n_samples": 1000,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.23697182754985083,
+          0.2017930841226962
+        ],
+        "explained_variance_total": 0.43876491167254705,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 7,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          1.6604632561050612,
+          1.413965554413287
+        ],
+        "explained_variance_ratio": [
+          0.23697182754985083,
+          0.2017930841226962
+        ],
+        "singular_values": [
+          40.72840277802404,
+          37.58392726763495
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_haberman",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=43)",
+        "retrieval_url": null,
+        "openml_data_id": 43,
+        "openml_name": "haberman",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "a66a58f21186df51",
+        "shape": [
+          306,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "b8bf8060b43c50a1",
+        "shape": [
+          306
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "91dfb7cb42ba96be",
+      "frozen_representation_checksum": "91dfb7cb42ba96be",
+      "n_samples": 306,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_hill_valley",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1479)",
+        "retrieval_url": null,
+        "openml_data_id": 1479,
+        "openml_name": "hill-valley",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:06Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "aeb22dea6289ef39",
+        "shape": [
+          1212,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "312e1439f107d3ae",
+        "shape": [
+          1212
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "156d00bfa0175890",
+        "shape": [
+          1212,
+          100
+        ]
+      },
+      "representation_checksum": "b8d7b1c9d04ecb0a",
+      "frozen_representation_checksum": "b8d7b1c9d04ecb0a",
+      "n_samples": 1212,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.9920753849947296,
+          0.0014973471160941668
+        ],
+        "explained_variance_total": 0.9935727321108238,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 100,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          99.28946049658235,
+          0.14985835711859044
+        ],
+        "explained_variance_ratio": [
+          0.9920753849947296,
+          0.0014973471160941668
+        ],
+        "singular_values": [
+          346.7557305386044,
+          13.471394525831876
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_ilpd_liver",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1480)",
+        "retrieval_url": null,
+        "openml_data_id": 1480,
+        "openml_name": "ilpd",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:06Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "99e1b551d090b914",
+        "shape": [
+          583,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "94d43e50da4cd250",
+        "shape": [
+          583
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "d9924ed8d8cf06d4",
+        "shape": [
+          583,
+          9
+        ]
+      },
+      "representation_checksum": "dfddb517a3be59b4",
+      "frozen_representation_checksum": "dfddb517a3be59b4",
+      "n_samples": 583,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.3062079640194323,
+          0.22511540786046652
+        ],
+        "explained_variance_total": 0.5313233718798989,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 9,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          2.760606850876223,
+          2.0295198368451346
+        ],
+        "explained_variance_ratio": [
+          0.3062079640194323,
+          0.22511540786046652
+        ],
+        "singular_values": [
+          40.08332804558476,
+          34.36830727638282
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_ionosphere",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=59)",
+        "retrieval_url": null,
+        "openml_data_id": 59,
+        "openml_name": "ionosphere",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "628a9550be7dff11",
+        "shape": [
+          351,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "87bc9640733f66a0",
+        "shape": [
+          351
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "ba90fb6d3a9279b3",
+        "shape": [
+          351,
+          34
+        ]
+      },
+      "representation_checksum": "75681f21129aa57e",
+      "frozen_representation_checksum": "75681f21129aa57e",
+      "n_samples": 351,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.267034612314765,
+          0.12844377497159035
+        ],
+        "explained_variance_total": 0.3954783872863553,
+        "dropped_columns": 1,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 33,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          8.837319755548348,
+          4.250754987131231
+        ],
+        "explained_variance_ratio": [
+          0.267034612314765,
+          0.12844377497159037
+        ],
+        "singular_values": [
+          55.61530288007,
+          38.571547097516465
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_kc1_software",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1067)",
+        "retrieval_url": null,
+        "openml_data_id": 1067,
+        "openml_name": "kc1",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "f24432d1a3e225d3",
+        "shape": [
+          2109,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "6ba5734e8622d9d1",
+        "shape": [
+          2109
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "a582618cab10a02e",
+        "shape": [
+          2109,
+          21
+        ]
+      },
+      "representation_checksum": "ff6d939ec859abb7",
+      "frozen_representation_checksum": "ff6d939ec859abb7",
+      "n_samples": 2109,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.761617917369884,
+          0.05424335262514157
+        ],
+        "explained_variance_total": 0.8158612699950256,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 21,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          16.001563540035477,
+          1.139650780082967
+        ],
+        "explained_variance_ratio": [
+          0.761617917369884,
+          0.05424335262514157
+        ],
+        "singular_values": [
+          183.66081765688287,
+          49.01411882728174
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_kc2_software",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1063)",
+        "retrieval_url": null,
+        "openml_data_id": 1063,
+        "openml_name": "kc2",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "892351606f9ae40c",
+        "shape": [
+          522,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "d7e2451cdfb22f32",
+        "shape": [
+          522
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "cff5600861121e67",
+        "shape": [
+          522,
+          21
+        ]
+      },
+      "representation_checksum": "2ab0b219885329a5",
+      "frozen_representation_checksum": "2ab0b219885329a5",
+      "n_samples": 522,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.808809155444176,
+          0.08454324236911408
+        ],
+        "explained_variance_total": 0.89335239781329,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 21,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          17.017593017234283,
+          1.7788157828219364
+        ],
+        "explained_variance_ratio": [
+          0.808809155444176,
+          0.08454324236911408
+        ],
+        "singular_values": [
+          94.16032052823026,
+          30.442782771130318
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_madelon",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1485)",
+        "retrieval_url": null,
+        "openml_data_id": 1485,
+        "openml_name": "madelon",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "f0743cd3298dfa5b",
+        "shape": [
+          2600,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "33fcae720979eda8",
+        "shape": [
+          2600
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "d11ff60b12ef3363",
+        "shape": [
+          2600,
+          500
+        ]
+      },
+      "representation_checksum": "32c52259eeace2fc",
+      "frozen_representation_checksum": "32c52259eeace2fc",
+      "n_samples": 2600,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.012909298462137663,
+          0.009974969207603882
+        ],
+        "explained_variance_total": 0.022884267669741547,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 500,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          6.457132743662549,
+          4.989403605188553
+        ],
+        "explained_variance_ratio": [
+          0.012909298462137663,
+          0.009974969207603882
+        ],
+        "singular_values": [
+          129.54569850357427,
+          113.8747556304076
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_ozone_level_8hr",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1487)",
+        "retrieval_url": null,
+        "openml_data_id": 1487,
+        "openml_name": "ozone-level-8hr",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "5eeb7ebcde52c5f8",
+        "shape": [
+          2534,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "192cff1351ca169b",
+        "shape": [
+          2534
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "656804cbb6e6461d",
+        "shape": [
+          2534,
+          72
+        ]
+      },
+      "representation_checksum": "df7dbb63642be5dd",
+      "frozen_representation_checksum": "df7dbb63642be5dd",
+      "n_samples": 2534,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.41833556954980655,
+          0.20336147246470104
+        ],
+        "explained_variance_total": 0.6216970420145076,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 72,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          30.132052109444576,
+          14.64780652516375
+        ],
+        "explained_variance_ratio": [
+          0.41833556954980655,
+          0.20336147246470104
+        ],
+        "singular_values": [
+          276.2688690265755,
+          192.62111495949705
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_pc1_software",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1068)",
+        "retrieval_url": null,
+        "openml_data_id": 1068,
+        "openml_name": "pc1",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "d634e335784bc7f8",
+        "shape": [
+          1109,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "71dcf5620bd62630",
+        "shape": [
+          1109
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "1d6b7043df10d746",
+        "shape": [
+          1109,
+          21
+        ]
+      },
+      "representation_checksum": "fb79323bc4e57658",
+      "frozen_representation_checksum": "fb79323bc4e57658",
+      "n_samples": 1109,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.6807719047954446,
+          0.07332661304020467
+        ],
+        "explained_variance_total": 0.7540985178356493,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 21,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          14.309112717311484,
+          1.5412486381708739
+        ],
+        "explained_variance_ratio": [
+          0.6807719047954446,
+          0.07332661304020467
+        ],
+        "singular_values": [
+          125.91464128837886,
+          41.32436921591579
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_pc3_software",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1050)",
+        "retrieval_url": null,
+        "openml_data_id": 1050,
+        "openml_name": "pc3",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "cb137fdc77f9606a",
+        "shape": [
+          1563,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "484a0139bd86fc00",
+        "shape": [
+          1563
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "6d036c3b6454c3c1",
+        "shape": [
+          1563,
+          37
+        ]
+      },
+      "representation_checksum": "8c4c60849da5f09f",
+      "frozen_representation_checksum": "8c4c60849da5f09f",
+      "n_samples": 1563,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.49730211764465965,
+          0.10647013948836032
+        ],
+        "explained_variance_total": 0.60377225713302,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 37,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          18.411958236561013,
+          3.9419171810187983
+        ],
+        "explained_variance_ratio": [
+          0.49730211764465965,
+          0.10647013948836032
+        ],
+        "singular_values": [
+          169.58619862921717,
+          78.46830338902048
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_pc4_software",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1049)",
+        "retrieval_url": null,
+        "openml_data_id": 1049,
+        "openml_name": "pc4",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "6ebc0985bd47e9fd",
+        "shape": [
+          1458,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "9f89624d60716237",
+        "shape": [
+          1458
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "74427333091ce34f",
+        "shape": [
+          1458,
+          37
+        ]
+      },
+      "representation_checksum": "2073d5968f745b42",
+      "frozen_representation_checksum": "2073d5968f745b42",
+      "n_samples": 1458,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.4121270095629374,
+          0.11607044160810835
+        ],
+        "explained_variance_total": 0.5281974511710458,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 37,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          15.259165173563643,
+          4.29755390733769
+        ],
+        "explained_variance_ratio": [
+          0.4121270095629374,
+          0.11607044160810835
+        ],
+        "singular_values": [
+          149.10601482798145,
+          79.12986821037309
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_pollen",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=871)",
+        "retrieval_url": null,
+        "openml_data_id": 871,
+        "openml_name": "pollen",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "5354baa634a3654f",
+        "shape": [
+          3848,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "a1e4f0143847b6a8",
+        "shape": [
+          3848
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "f5be5f2a0d9c96fe",
+        "shape": [
+          3848,
+          5
+        ]
+      },
+      "representation_checksum": "d8bd402510700d27",
+      "frozen_representation_checksum": "d8bd402510700d27",
+      "n_samples": 3848,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.4415705566938466,
+          0.2646135296603915
+        ],
+        "explained_variance_total": 0.7061840863542381,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 5,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          2.2084266989315324,
+          1.3234115702276918
+        ],
+        "explained_variance_ratio": [
+          0.4415705566938466,
+          0.2646135296603915
+        ],
+        "singular_values": [
+          92.17275904945889,
+          71.35239526929654
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_qsar_biodeg",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1494)",
+        "retrieval_url": null,
+        "openml_data_id": 1494,
+        "openml_name": "qsar-biodeg",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "76d0eca6add946bd",
+        "shape": [
+          1055,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "c545231ba7ec2ae9",
+        "shape": [
+          1055
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "20d7324433ae257f",
+        "shape": [
+          1055,
+          41
+        ]
+      },
+      "representation_checksum": "ddd593a5bcf29754",
+      "frozen_representation_checksum": "ddd593a5bcf29754",
+      "n_samples": 1055,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.18047684003091805,
+          0.12266371626432289
+        ],
+        "explained_variance_total": 0.30314055629524095,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 41,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          7.406570887606603,
+          5.033983915572377
+        ],
+        "explained_variance_ratio": [
+          0.18047684003091805,
+          0.12266371626432289
+        ],
+        "singular_values": [
+          88.35454552844104,
+          72.84105330796147
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_seeds",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=1499)",
+        "retrieval_url": null,
+        "openml_data_id": 1499,
+        "openml_name": "seeds",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "e3cd452c24c01f8e",
+        "shape": [
+          210,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "8a956f3ecbebe4ae",
+        "shape": [
+          210
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "a145f87999708de8",
+        "shape": [
+          210,
+          7
+        ]
+      },
+      "representation_checksum": "0c4d4a13371291ea",
+      "frozen_representation_checksum": "0c4d4a13371291ea",
+      "n_samples": 210,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.7187430265675431,
+          0.17108183528158005
+        ],
+        "explained_variance_total": 0.8898248618491231,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 7,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          5.05527391892004,
+          1.2033028605929317
+        ],
+        "explained_variance_ratio": [
+          0.7187430265675431,
+          0.17108183528158005
+        ],
+        "singular_values": [
+          32.50464965284641,
+          15.858445632025944
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "real_sonar",
+      "source_group": "real_pca",
+      "source_identity": {
+        "retrieval": "sklearn.datasets.fetch_openml(data_id=40)",
+        "retrieval_url": null,
+        "openml_data_id": 40,
+        "openml_name": "sonar",
+        "version": null,
+        "generator": null,
+        "difficulty": null,
+        "generator_params": null,
+        "seed": null,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_RESTRICTED",
+        "basis": "Public",
+        "prepared_redistribution": "LICENSE_UNCLEAR",
+        "manual_review_required": true,
+        "note": "redistribution of a derived 2-D PCA representation is a separate question from redistribution of the source and is flagged for manual review rather than asserted here"
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "8e022378ba0fd9c9",
+        "shape": [
+          208,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "aa2204c477ac51cc",
+        "shape": [
+          208
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": null,
+      "prepared_pre_pca_artifact": {
+        "path": "prepared_pre_pca.npy",
+        "hash": "84554837112b2e26",
+        "shape": [
+          208,
+          60
+        ]
+      },
+      "representation_checksum": "707f911b60295253",
+      "frozen_representation_checksum": "707f911b60295253",
+      "n_samples": 208,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": true,
+        "pca_seed": 1234,
+        "explained_variance_ratio": [
+          0.20346556650556138,
+          0.18897216365403205
+        ],
+        "explained_variance_total": 0.39243773015959343,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 60,
+        "labels_used": false
+      },
+      "pca_state": {
+        "explained_variance": [
+          12.266909516857037,
+          11.393104359431499
+        ],
+        "explained_variance_ratio": [
+          0.20346556650556138,
+          0.18897216365403205
+        ],
+        "singular_values": [
+          50.39097409248413,
+          48.563078592716096
+        ],
+        "n_components": 2,
+        "random_state": 1234,
+        "svd_solver": "auto"
+      },
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_aniso_blobs_easy",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "aniso_blobs",
+        "difficulty": "easy",
+        "generator_params": {
+          "cluster_std": 0.5,
+          "shear": 0.3
+        },
+        "seed": 1234,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "963c407869d6a263",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "8dd65d8f0987c9a0",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "3fb4abf0e4014ef3",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "96ccc183ed8f82c3",
+      "frozen_representation_checksum": "96ccc183ed8f82c3",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_aniso_blobs_hard",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "aniso_blobs",
+        "difficulty": "hard",
+        "generator_params": {
+          "cluster_std": 1.2,
+          "shear": 0.85
+        },
+        "seed": 1236,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "927e5a6d9b5794d7",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "d052ae778690eb40",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "b0ba425b2013b5d9",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "1c3dc7b94ae6866d",
+      "frozen_representation_checksum": "1c3dc7b94ae6866d",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_aniso_blobs_medium",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "aniso_blobs",
+        "difficulty": "medium",
+        "generator_params": {
+          "cluster_std": 0.85,
+          "shear": 0.6
+        },
+        "seed": 1235,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "4cb73222e408664e",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "041d840b44ef0e45",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "72c35ec8a4631e84",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "bf948367f5330617",
+      "frozen_representation_checksum": "bf948367f5330617",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_blobs_easy",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "blobs",
+        "difficulty": "easy",
+        "generator_params": {
+          "cluster_std": 0.6,
+          "center_box": [
+            -10.0,
+            10.0
+          ]
+        },
+        "seed": 1334,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "adc69fec8c48c4ce",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "90853aded2de8cf3",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "f44287e87896e49f",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "cac7e19aadcb87c4",
+      "frozen_representation_checksum": "cac7e19aadcb87c4",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_blobs_hard",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "blobs",
+        "difficulty": "hard",
+        "generator_params": {
+          "cluster_std": 2.2,
+          "center_box": [
+            -6.0,
+            6.0
+          ]
+        },
+        "seed": 1336,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "ba2e29ccc26afc0b",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "e8497ecb5ade6d41",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "a42336b45db2c889",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "287559f13dd0cb15",
+      "frozen_representation_checksum": "287559f13dd0cb15",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_blobs_medium",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "blobs",
+        "difficulty": "medium",
+        "generator_params": {
+          "cluster_std": 1.4,
+          "center_box": [
+            -8.0,
+            8.0
+          ]
+        },
+        "seed": 1335,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "cb6996a746d78c8e",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "d16aebfcb010252f",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "9d846712b12c5672",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "dcbec0f407439e9c",
+      "frozen_representation_checksum": "dcbec0f407439e9c",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_circles_easy",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "circles",
+        "difficulty": "easy",
+        "generator_params": {
+          "noise": 0.03,
+          "factor": 0.5
+        },
+        "seed": 1434,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "4db16d94be5df523",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "6cd0d5353fd3de8b",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "0846b0bd3a4021c1",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "ec92e4654f43aaa7",
+      "frozen_representation_checksum": "ec92e4654f43aaa7",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_circles_hard",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "circles",
+        "difficulty": "hard",
+        "generator_params": {
+          "noise": 0.11,
+          "factor": 0.72
+        },
+        "seed": 1436,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "d5192120c9a117e3",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "09f7ae2f9315b07e",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "edd94e42fe2118a1",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "94df3f08873f5990",
+      "frozen_representation_checksum": "94df3f08873f5990",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_circles_medium",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "circles",
+        "difficulty": "medium",
+        "generator_params": {
+          "noise": 0.07,
+          "factor": 0.6
+        },
+        "seed": 1435,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "2ad43cb7edfe6bfd",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "c3bcb0a804af9654",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "46fdcc3f6b8c1e09",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "a67c1aa2ef0a9b3b",
+      "frozen_representation_checksum": "a67c1aa2ef0a9b3b",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_moons_easy",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "moons",
+        "difficulty": "easy",
+        "generator_params": {
+          "noise": 0.04
+        },
+        "seed": 1534,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "46aebe35d1b17660",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "e3ebf8d3f629d61a",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "53f9ae7c67d96464",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "8cc0cd5ce1e71e1e",
+      "frozen_representation_checksum": "8cc0cd5ce1e71e1e",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_moons_hard",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "moons",
+        "difficulty": "hard",
+        "generator_params": {
+          "noise": 0.15
+        },
+        "seed": 1536,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "1721490796cad017",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "9d22470d37bbe0e5",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "388b8a6a31c82049",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "f9b506300460cadd",
+      "frozen_representation_checksum": "f9b506300460cadd",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_moons_medium",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "moons",
+        "difficulty": "medium",
+        "generator_params": {
+          "noise": 0.09
+        },
+        "seed": 1535,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "edf3d4dde393dfc9",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "67d9ff97c112922f",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "6537ad6fae8f2c90",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "efe3dd02389fe557",
+      "frozen_representation_checksum": "efe3dd02389fe557",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_varied_blobs_easy",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "varied_blobs",
+        "difficulty": "easy",
+        "generator_params": {
+          "cluster_std": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "seed": 1634,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "ea56618dfddf689d",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "3ff81e0e682e8cbb",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "b94de61f21fcaa95",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "9e382ca088f3e839",
+      "frozen_representation_checksum": "9e382ca088f3e839",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_varied_blobs_hard",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "varied_blobs",
+        "difficulty": "hard",
+        "generator_params": {
+          "cluster_std": [
+            1.0,
+            3.0,
+            0.3
+          ]
+        },
+        "seed": 1636,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "3193f68b5d554607",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "c9f5bd465b0682cc",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "6860466e7abc5127",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "6d16fdb4c9cd7b11",
+      "frozen_representation_checksum": "6d16fdb4c9cd7b11",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    },
+    {
+      "dataset_id": "sk_varied_blobs_medium",
+      "source_group": "sklearn_shapes",
+      "source_identity": {
+        "retrieval": "generated",
+        "retrieval_url": null,
+        "openml_data_id": null,
+        "openml_name": null,
+        "version": null,
+        "generator": "varied_blobs",
+        "difficulty": "medium",
+        "generator_params": {
+          "cluster_std": [
+            1.0,
+            2.0,
+            0.5
+          ]
+        },
+        "seed": 1635,
+        "original_filename": null,
+        "raw_bytes_sha256_16": null
+      },
+      "acquisition_provenance": {
+        "retrieved_at": "2026-09-11T06:02:05Z"
+      },
+      "redistribution": {
+        "raw_redistribution": "REDISTRIBUTION_ALLOWED",
+        "basis": "generated deterministically from frozen parameters; no third-party data is redistributed",
+        "prepared_redistribution": "REDISTRIBUTION_ALLOWED",
+        "manual_review_required": false
+      },
+      "prepared_artifact": {
+        "path": "stage4_X_full_2d.npy",
+        "hash": "200d9d7a66489f53",
+        "shape": [
+          1500,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ground_truth_artifact": {
+        "path": "ground_truth.npy",
+        "hash": "e5a74ae85d31be6a",
+        "shape": [
+          1500
+        ],
+        "dtype": "int64",
+        "separate_file": true,
+        "never_returned_by_the_scientific_loader": true
+      },
+      "source_raw_artifact": {
+        "path": "source_raw_X.npy",
+        "hash": "8cb59b228bb00173",
+        "shape": [
+          1500,
+          2
+        ],
+        "note": "deterministically generated pre-preparation X"
+      },
+      "prepared_pre_pca_artifact": null,
+      "representation_checksum": "215387ee452c64ee",
+      "frozen_representation_checksum": "215387ee452c64ee",
+      "n_samples": 1500,
+      "prepared_dimensionality": 2,
+      "preparation": {
+        "protocol_id": "idb_prep_v1",
+        "environment": "unpinned_blas",
+        "pca_applied": false,
+        "pca_seed": 1234,
+        "explained_variance_ratio": null,
+        "explained_variance_total": null,
+        "dropped_columns": 0,
+        "n_imputed_cells": 0,
+        "dim_after_cleaning": 2,
+        "labels_used": false
+      },
+      "pca_state": null,
+      "view_definitions": {
+        "x_only": "X_full[:, [0]]",
+        "y_only": "X_full[:, [1]]",
+        "xy_2d": "X_full"
+      },
+      "library_versions": {
+        "numpy": "2.1.3",
+        "scipy": "1.14.1",
+        "sklearn": "1.6.0"
+      }
+    }
+  ],
+  "failures": [],
+  "wall_clock_seconds": 1.9
+}

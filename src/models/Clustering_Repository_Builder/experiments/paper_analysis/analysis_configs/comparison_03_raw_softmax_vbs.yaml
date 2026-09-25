@@ -1,0 +1,108 @@
+# Comparison Suite 3 - Raw vs Softmax weighting, through VBS analysis.
+#
+# Every number here is an oracle upper bound. No operational runtime claim may be
+# made for a VBS without showing the full portfolio cost alongside it.
+comparison_id: comparison_03
+title: Raw vs Softmax utility weighting (VBS envelope analysis)
+section: 04_comparison_03_raw_softmax_vbs
+
+portfolios:
+  source: frozen_portfolio_manifest
+  primary: [raw_only_vbs, softmax_only_vbs, raw_softmax_union_vbs]
+  optional_matched: [deployable_raw_vbs, deployable_softmax_vbs,
+                     deployable_raw_softmax_union_vbs]
+  note: >-
+    raw_only_vbs and softmax_only_vbs are one-to-one matched (17 members each);
+    the registry validator enforces that every raw member has exactly one softmax
+    counterpart with the same utility source, metric-count policy and dynamic-K
+    source. The deployable_* pair repeats the analysis with real-utility and
+    Dynamic Real-K members removed (10 each).
+
+research_questions:
+  RQ3-A:
+    question: Does softmax improve the portfolio upper bound over raw-normalized
+              utility weights?
+    kind: paired_portfolio_delta
+    a: raw_only_vbs
+    b: softmax_only_vbs
+    pair_on: dataset_id
+  RQ3-B:
+    question: Does softmax contribute unique wins even if its average is lower?
+    kind: win_tie_loss
+    a: raw_only_vbs
+    b: softmax_only_vbs
+    measures: [raw_wins, softmax_wins, ties, mean_paired_delta,
+               median_paired_delta]
+  RQ3-C:
+    question: Does combining raw and softmax enlarge the solution envelope?
+    kind: union_headroom
+    union: raw_softmax_union_vbs
+    components: [raw_only_vbs, softmax_only_vbs]
+    baseline: better_of_components
+    note: Headroom is measured over the BETTER of the two separate portfolios, not
+          over their mean.
+  RQ3-D:
+    question: Which utility sources and metric-count policies account for
+              softmax-only wins?
+    kind: winner_composition
+    portfolio: raw_softmax_union_vbs
+    by: [winning_weighting_mode, winning_utility_source, winning_k_policy,
+         winning_method_name]
+    restrict_to: datasets_where_softmax_strictly_wins
+
+grouping_levels: [global, family, subfamily]
+primary_metrics: [best_view_mean_ari, best_view_median_ari, best_view_std_ari,
+                  best_view_k_accuracy]
+runtime_metrics: [selected_member_total_all_views_runtime_median_sec,
+                  portfolio_total_execution_runtime_median_sec,
+                  portfolio_total_execution_runtime_total_sec]
+
+pairwise_hypotheses:
+  primary:
+    - {id: c3_raw_vs_softmax_vbs, a: raw_only_vbs, b: softmax_only_vbs,
+       family: comparison_03_weighting, direction: two-sided, kind: portfolio,
+       rationale: RQ3-A, the predeclared weighting-envelope test}
+  exploratory:
+    - {kind: matched_variant_weighting_deltas,
+       family: comparison_03_variant_weighting,
+       rationale: per-variant raw-vs-softmax deltas across all 17 matched pairs}
+
+required_capabilities: [primary_ari, best_view, vbs]
+optional_capabilities: [k_analysis, runtime_total_all_views]
+
+runtime_disclosure_required: true
+runtime_disclosure_text: >-
+  A VBS is not a single executable method: it selects the best member only after
+  every member has been evaluated. Each portfolio therefore reports
+  selected_member_total_all_views_runtime (the cost of the method the oracle
+  picked -- a DIAGNOSTIC) and portfolio_total_execution_runtime (the cost of
+  running every member across all required views, which is what realising the
+  VBS requires). The selected-member runtime is never presented as the cost of
+  obtaining the VBS result, and no VBS point appears in an operational
+  accuracy-runtime Pareto plot.
+
+tables:
+  - {name: comparison_03_vbs_summary.csv, importance: paper_main}
+  - {name: comparison_03_dataset_winners.csv, importance: appendix}
+  - {name: comparison_03_raw_vs_softmax_deltas.csv, importance: paper_main}
+  - {name: comparison_03_union_headroom.csv, importance: paper_main}
+  - {name: comparison_03_winner_composition.csv, importance: paper_main}
+  - {name: comparison_03_family_summary.csv, importance: paper_supplement}
+  - {name: comparison_03_runtime_diagnostics.csv, importance: paper_supplement}
+  - {name: comparison_03_capability_warnings.csv, importance: appendix}
+  - {name: comparison_03_research_questions.csv, importance: paper_main}
+
+plots:
+  - {name: comparison_03_vbs_ari_bar, kind: bar, importance: paper_main}
+  - {name: comparison_03_raw_vs_softmax_delta_boxplot, kind: paired_delta_boxplot,
+     importance: paper_main}
+  - {name: comparison_03_family_delta_heatmap, kind: heatmap, importance: paper_main}
+  - {name: comparison_03_winner_composition, kind: stacked_bar, importance: paper_main}
+  - {name: comparison_03_topk_winner_distribution, kind: bar, importance: paper_supplement}
+  - {name: comparison_03_utility_source_winner_distribution, kind: bar,
+     importance: paper_supplement}
+  - {name: comparison_03_union_headroom, kind: bar, importance: paper_main}
+
+reports: [README.md, METHODS_AND_DEFINITIONS.md, RESULTS.md, LIMITATIONS.md,
+          PAPER_CANDIDATES.md]
+workbook: 04_comparison_03_raw_softmax_vbs.xlsx

@@ -1,0 +1,88 @@
+{
+  "provenance": {
+    "run_id": "stage4c_v2_323194df26",
+    "method_source": "phase_c/method_ari.csv.gz (Phase-A layer, unchanged)",
+    "metric_source": "phase_d_canonical_utility/",
+    "candidate_basis_version": "canonical_fixed32_candidate_basis_v1",
+    "utility_basis_amendment_id": "6d59078460ec24d3",
+    "dispatch_amendment_id": "1a8d6de73b9c15fd",
+    "metric_registry_hash": "8d6b44f45f9cf240",
+    "corpus_publication_manifest_hash": "4718a9e6dc7d63d7",
+    "statistics": {
+      "inferential_unit": "dataset",
+      "bootstrap": "percentile, group-aware, 10000 resamples",
+      "dependence_groups": "one sklearn generator (easy/medium/hard) is one group; FCPS and real-PCA datasets stand alone",
+      "n_dependence_groups": 40,
+      "seed": 1234,
+      "test": "Wilcoxon signed-rank where valid",
+      "effect_size": "matched-pairs rank-biserial correlation",
+      "no_view_pseudo_replication": true
+    }
+  },
+  "metrics": [
+    {
+      "metric_id": "cvdd",
+      "available_case_utility_macro": 0.5456825797655626,
+      "available_case_utility_source_balanced": 0.5480472909085204,
+      "coverage": 0.68,
+      "units_with_valid_utility": 102,
+      "units_total": 150,
+      "available_case_macro_rank": 1.0,
+      "full_coverage": false,
+      "utility_fcps": 0.5803770933034772,
+      "utility_sklearn_shapes": 0.5751302352799251,
+      "utility_real_pca": 0.48863454414215884
+    },
+    {
+      "metric_id": "cvnn",
+      "available_case_utility_macro": 0.4703858252787971,
+      "available_case_utility_source_balanced": 0.4881457598460794,
+      "coverage": 0.9866666666666668,
+      "units_with_valid_utility": 148,
+      "units_total": 150,
+      "available_case_macro_rank": 10.0,
+      "full_coverage": false,
+      "utility_fcps": 0.5219335654183026,
+      "utility_sklearn_shapes": 0.5034812781177597,
+      "utility_real_pca": 0.4390224360021759
+    },
+    {
+      "metric_id": "dcsi",
+      "available_case_utility_macro": 0.3863625455536554,
+      "available_case_utility_source_balanced": 0.39861695152644,
+      "coverage": 0.9666666666666668,
+      "units_with_valid_utility": 145,
+      "units_total": 150,
+      "available_case_macro_rank": 44.0,
+      "full_coverage": false,
+      "utility_fcps": 0.364098807093962,
+      "utility_sklearn_shapes": 0.5097622822069545,
+      "utility_real_pca": 0.3219897652784036
+    },
+    {
+      "metric_id": "cdbw",
+      "available_case_utility_macro": 0.3829101586331676,
+      "available_case_utility_source_balanced": 0.4035978100892312,
+      "coverage": 0.98,
+      "units_with_valid_utility": 147,
+      "units_total": 150,
+      "available_case_macro_rank": 46.0,
+      "full_coverage": false,
+      "utility_fcps": 0.41585267789890557,
+      "utility_sklearn_shapes": 0.4676476071853666,
+      "utility_real_pca": 0.3272931451834213
+    }
+  ],
+  "invalid_reason_distribution": {
+    "cvdd :: METRIC_EVALUATION_FAILED:CVDD_DUPLICATE_POINT_MST_AMBIGUITY": 1451,
+    "dcsi :: METRIC_EVALUATION_FAILED:dcsi_pair_undefined:dcsi_no_core_points": 560,
+    "cdbw :: METRIC_EVALUATION_FAILED:fewer_than_two_clusters": 392,
+    "cvnn :: METRIC_EVALUATION_FAILED:fewer_than_two_clusters": 392,
+    "cvdd :: METRIC_EVALUATION_FAILED:fewer_than_two_clusters": 392,
+    "dcsi :: METRIC_EVALUATION_FAILED:fewer_than_two_clusters": 392,
+    "cdbw :: METRIC_EVALUATION_FAILED:cdbw_cluster_with_single_representative": 239,
+    "cdbw :: METRIC_EVALUATION_FAILED:reference_error:QhullError": 124,
+    "cvnn :: METRIC_EVALUATION_FAILED:non_finite_value": 64
+  },
+  "cvdd_statement": "CVDD is valid on 102 of 150 dataset x view units (coverage 0.68). Its rank is an AVAILABLE-CASE rank over the units where it is defined and does not establish that it is globally best; the full-coverage-only slice excludes it by construction."
+}

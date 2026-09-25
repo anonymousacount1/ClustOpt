@@ -1,0 +1,46 @@
+{
+  "policy": "numerical_reproducibility_policy",
+  "version": 1,
+  "stage": "4B-4",
+  "decision_made_before_external_50_execution": true,
+  "external_outcome_inspected": false,
+  "statements": [
+    "deterministic seeds and thread controls are used wherever they are available",
+    "floating-point numerical kernels are NOT assumed bitwise reproducible",
+    "an atomically persisted, provenance-valid COMPLETE scientific output is authoritative",
+    "resume never recomputes a valid COMPLETE output, not even to verify reproducibility",
+    "a corrupted COMPLETE output is never silently regenerated; it stops the run",
+    "no metric implementation, inventory or learned model was altered in response to numerical jitter"
+  ],
+  "documented_limitation": {
+    "metric": "orientation_histogram_entropy",
+    "observed_spread": "approximately 1e-10 under identical floating-point evaluation",
+    "mechanism": "cv2.Sobel / cv2.magnitude in float32; SIMD paths are not bit-reproducible and the histogram entropy amplifies the difference",
+    "consequence": "in a rare near-tie this was sufficient to change predicted-score ordering, hence the selected candidate and the final labels",
+    "status": "DOCUMENTED NUMERICAL IMPLEMENTATION LIMITATION - the metric is unmodified",
+    "not_a_modified_metric": true,
+    "evidence": "validation/autoclust_scoring_determinism.json"
+  },
+  "frozen_statement": "floating-point CVI evaluation is not guaranteed bitwise reproducible for every metric; rare near-tie selections may therefore be numerically sensitive",
+  "withdrawn_requirement": "the earlier Stage-4B-4 requirement that a recomputed scientific arm reproduce a bit-identical final selection is WITHDRAWN; integrity now rests on immutable persisted COMPLETE results rather than on bit-exact recomputation",
+  "unchanged": [
+    "metric mathematical definitions",
+    "metric implementations",
+    "learned artifacts",
+    "metric inventories",
+    "selection and tie semantics",
+    "corpus 709712107424ad4e",
+    "search-space fingerprint 8ddf86c79888ebe9"
+  ],
+  "environment_controls": {
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "cv2.setNumThreads": 0,
+    "purpose": "reduce uncontrolled variation and oversubscription; NOT an attempt to obtain bit identity"
+  },
+  "hash_conventions_version": "v1"
+}

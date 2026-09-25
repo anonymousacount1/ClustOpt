@@ -1,0 +1,76 @@
+{
+  "existing_inventory": {
+    "original": 7,
+    "established": 10,
+    "new46_designed": 46,
+    "new46_live_internally": 44,
+    "extended_live_internally": 61,
+    "internally_dead": [
+      "convexity_ratio_image_based",
+      "hough_arc_circle_strength"
+    ],
+    "internally_dead_external_policy": "ATTEMPTED externally as ANALYSIS metrics: dead on the internal repository does not imply dead on a different corpus. They are NOT added to any frozen learned baseline model."
+  },
+  "utility_definition": {
+    "reuse": "EXACT canonical ClustOpt utility from Stage 3B",
+    "source": "models/ClustOpt/external_evaluation/compute_metric_utility.py",
+    "function": "compute_metric_utilities",
+    "invented_for_stage4": false
+  },
+  "fixed32": {
+    "reuse_source": "models/Clustering_Repository_Builder/experiments/experiment_execution/offline_method_runner.py (EXECUTION_MODE = 'offline_fixed32')",
+    "n_candidates": 32,
+    "per": "(dataset, view)",
+    "independent_of_method_search": true,
+    "purpose": "prevents metric-quality analysis being confounded by any method's search policy",
+    "executed_in_stage4a": false
+  },
+  "endpoints": [
+    "global utility",
+    "rank",
+    "top1",
+    "top3",
+    "top5",
+    "top10",
+    "oracle_win_frequency",
+    "best_established_comparator_difference",
+    "best_modern_comparator_difference",
+    "complementarity_unique_win_coverage",
+    "source_level_utility",
+    "challenge_tag_utility",
+    "runtime_cost_where_available"
+  ],
+  "multiplicity": {
+    "method": "Benjamini-Hochberg",
+    "families": [
+      "per-index vs established comparator pool",
+      "per-index vs modern comparator pool",
+      "structural-tag uplift",
+      "group contrasts"
+    ],
+    "report": [
+      "raw p",
+      "adjusted q",
+      "test family"
+    ],
+    "family_membership_rule": "the 'per-index vs modern comparator pool' family contains exactly the four primary comparators; dcsi_author_compat is excluded from every family"
+  },
+  "modern_comparators": {
+    "registry": "configs/modern_cvi_registry.json",
+    "frozen_in_stage": "4B-1",
+    "primary_ids": [
+      "cdbw",
+      "cvnn",
+      "cvdd",
+      "dcsi"
+    ],
+    "count": 4,
+    "set_is_closed": true,
+    "diagnostic_variants_not_in_this_set": [
+      "dcsi_author_compat"
+    ],
+    "diagnostic_variant_policy": "a diagnostic variant never counts as a comparator, never enters a primary FDR family, and never appears in a headline claim; it is reported only in its predeclared sensitivity analysis (configs/dcsi_sensitivity_analysis_plan.json)",
+    "all_four_validated_against_external_references": true,
+    "validation_artifacts": "models/Independent_Domain_Benchmark/validation/"
+  }
+}

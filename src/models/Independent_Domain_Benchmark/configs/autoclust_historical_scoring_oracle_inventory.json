@@ -1,0 +1,75 @@
+{
+  "audit": "AutoClust historical Stage-3A scoring oracle inventory",
+  "audit_only": true,
+  "comparison_performed": false,
+  "true_ari_inspected": false,
+  "source_paths": {
+    "per_run_raw": "<dataset>/experiments/split_01/AutoClust_*_InDomain_same_search_space/<1d_x|1d_y|2d>/raw_result.json",
+    "per_run_result": ".../result.json",
+    "final_labels": ".../labels.npy"
+  },
+  "arms_covered": [
+    "A0",
+    "A1",
+    "A2",
+    "A3"
+  ],
+  "views_covered": [
+    "1d_x",
+    "1d_y",
+    "2d"
+  ],
+  "keys_with_all_four_arms": 324,
+  "fields": {
+    "candidate_configurations": {
+      "available": true,
+      "path": "raw_result.json::config_history[].algorithm/hyperparameters",
+      "granularity": "per candidate",
+      "notes": "50 entries per run"
+    },
+    "candidate_labels": {
+      "available": false,
+      "path": null,
+      "granularity": null,
+      "notes": "only the FINAL selected partition is persisted (labels.npy); per-candidate label arrays were never written, so historical CVI vectors cannot be recomputed from persisted evidence"
+    },
+    "per_candidate_cvi_values": {
+      "available": false,
+      "path": null,
+      "notes": "raw_result.json stores cvi_columns (the schema) but not the computed per-candidate vectors"
+    },
+    "ordered_predictor_input_vectors": {
+      "available": false,
+      "path": null,
+      "notes": "not persisted"
+    },
+    "predicted_ari_scores": {
+      "available": true,
+      "path": "raw_result.json::config_history[].predicted_ari",
+      "granularity": "per candidate",
+      "notes": "THE strongest available scoring oracle: the frozen predictor output per candidate"
+    },
+    "selected_candidate_index": {
+      "available": false,
+      "path": null,
+      "notes": "not stored as an index; the incumbent is stored by configuration instead"
+    },
+    "selected_configuration": {
+      "available": true,
+      "path": "raw_result.json::incumbent + result.json::best_configuration",
+      "granularity": "per run"
+    },
+    "selected_algorithm": {
+      "available": true,
+      "path": "result.json::selected_algorithm",
+      "granularity": "per run"
+    },
+    "final_selected_labels": {
+      "available": true,
+      "path": "labels.npy",
+      "granularity": "per run"
+    }
+  },
+  "consequence": "historical fidelity in Stage 4B-3A2b must be validated at the SELECTION level (predicted_ari per candidate, incumbent configuration, final labels) rather than at the CVI-vector level, because per-candidate labels were never persisted and must not be regenerated from salted historical seeds",
+  "forbidden": "do not regenerate historical candidate slates from nominal seeds"
+}

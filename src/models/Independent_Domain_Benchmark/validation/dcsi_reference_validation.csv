@@ -1,0 +1,13 @@
+fixture_id,n,K,core_points_identical,connectedness_identical,separation_is_exactly_double,pairwise_matches_author_compat,aggregate_ref,aggregate_paper,aggregate_author_compat,aggregate_matches_author_compat,paper_aggregate_matches_reference,status
+separated_3,120,3,True,True,True,True,0.9795647179754358,0.9599481076183339,0.9795647179754359,True,False,PASS
+overlapping_3,120,3,True,True,True,True,0.08519262171182354,0.044500830065615914,0.08519262171182353,True,False,PASS
+anisotropic_2,80,2,True,True,True,True,0.9172027142222992,0.8470677995498795,0.9172027142222992,True,False,PASS
+unequal_density_2,90,2,True,True,True,True,0.8858549546525558,0.7950984105272428,0.8858549546525558,True,False,PASS
+ring_and_core,100,2,True,True,True,True,0.8920116365769388,0.8050731090903558,0.8920116365769388,True,False,PASS
+duplicates_2,80,2,True,True,True,True,0.9783022705853356,0.9575261277577759,0.9783022705853356,True,False,PASS
+separated_4,100,4,True,True,True,True,0.9684453424645515,0.9388848369089707,0.9684453424645514,True,False,PASS
+touching_2,80,2,True,True,True,True,0.16660379256115654,0.09087167950123183,0.16660379256115654,True,False,PASS
+elongated_3,120,3,True,True,True,True,0.7464196193169296,0.6000297775158293,0.7464196193169297,True,False,PASS
+nested_rings_3,180,3,True,True,True,True,0.857525264937359,0.7526862582465913,0.857525264937359,True,False,PASS
+mixed_density_4,145,4,True,True,True,True,0.9528745254799639,0.910615095503922,0.9528745254799639,True,False,PASS
+two_moons_2,90,2,True,True,True,True,0.7404420949905814,0.587858717765774,0.7404420949905814,True,False,PASS

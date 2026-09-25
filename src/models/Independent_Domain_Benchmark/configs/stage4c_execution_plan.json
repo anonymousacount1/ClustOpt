@@ -1,0 +1,218 @@
+{
+  "manifest": "stage4c_execution_plan",
+  "stage": "4B-5 (final pre-outcome freeze)",
+  "version": 1,
+  "corpus": {
+    "manifest_sha256_16": "709712107424ad4e",
+    "datasets": 50,
+    "views": 3,
+    "view_ids": [
+      "x_only",
+      "y_only",
+      "xy_2d"
+    ],
+    "sources": {
+      "FCPS": 7,
+      "sklearn_shapes": 15,
+      "real_pca": 28
+    }
+  },
+  "search_space_fingerprint": "8ddf86c79888ebe9",
+  "track_a_method_benchmark": {
+    "method_ids": [
+      "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR",
+      "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+      "IDB_ClustOpt_C2_PPv1_noR",
+      "IDB_ClustOpt_C3_MLP_TOP5_RAW_R",
+      "IDB_ClustOpt_C4_KNN_TOP10_RAW_R",
+      "IDB_ClustOpt_C5_PPv2_R",
+      "IDB_ML2DAC_M0_original_cvis",
+      "IDB_ML2DAC_M1_original_plus_established",
+      "IDB_ML2DAC_M2_original_plus_new46",
+      "IDB_ML2DAC_M3_extended_cvis",
+      "IDB_AutoClust_A0_original_cvis",
+      "IDB_AutoClust_A1_original_plus_established",
+      "IDB_AutoClust_A2_original_plus_new46",
+      "IDB_AutoClust_A3_extended_cvis"
+    ],
+    "n_methods": 14,
+    "physical_groups": {
+      "autoclust_shared_candidate_slate": {
+        "family": "AutoClust",
+        "method_ids": [
+          "IDB_AutoClust_A0_original_cvis",
+          "IDB_AutoClust_A1_original_plus_established",
+          "IDB_AutoClust_A2_original_plus_new46",
+          "IDB_AutoClust_A3_extended_cvis"
+        ],
+        "validated_sharing": true
+      },
+      "clustopt_knn_top10": {
+        "family": "ClustOpt",
+        "method_ids": [
+          "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+          "IDB_ClustOpt_C4_KNN_TOP10_RAW_R"
+        ],
+        "validated_sharing": true
+      },
+      "clustopt_mlp_top5": {
+        "family": "ClustOpt",
+        "method_ids": [
+          "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR",
+          "IDB_ClustOpt_C3_MLP_TOP5_RAW_R"
+        ],
+        "validated_sharing": true
+      },
+      "clustopt_ppv1": {
+        "family": "ClustOpt",
+        "method_ids": [
+          "IDB_ClustOpt_C2_PPv1_noR"
+        ],
+        "validated_sharing": false
+      },
+      "clustopt_ppv2": {
+        "family": "ClustOpt",
+        "method_ids": [
+          "IDB_ClustOpt_C5_PPv2_R"
+        ],
+        "validated_sharing": false
+      },
+      "ml2dac_shared_candidate_slate": {
+        "family": "ML2DAC",
+        "method_ids": [
+          "IDB_ML2DAC_M0_original_cvis",
+          "IDB_ML2DAC_M1_original_plus_established",
+          "IDB_ML2DAC_M2_original_plus_new46",
+          "IDB_ML2DAC_M3_extended_cvis"
+        ],
+        "validated_sharing": true
+      }
+    },
+    "n_physical_groups_per_dataset_view": 6,
+    "physical_traces_total": 900,
+    "scientific_outputs_total": 2100
+  },
+  "track_b_fixed32_metric_benchmark": {
+    "fixed32_version": "idb_fixed32_v1",
+    "fixed32_config_hash": "fd57447fbbe415f4",
+    "authoritative_source": "unified_mkr/configuration.py::resolve_view_configurations",
+    "composition": {
+      "enumerated_total": 32,
+      "pre_replacement": {
+        "agglomerative": 4,
+        "birch": 4,
+        "constrained": 4,
+        "dbscan": 4,
+        "gmm": 6,
+        "hdbscan": 2,
+        "kmeans": 4,
+        "minibatch_kmeans": 4
+      },
+      "resolved_total": 32,
+      "post_replacement": {
+        "agglomerative": 5,
+        "birch": 5,
+        "dbscan": 5,
+        "gmm": 7,
+        "hdbscan": 2,
+        "kmeans": 4,
+        "minibatch_kmeans": 4
+      },
+      "replacement_policy": "configuration.replace_constrained: the 4 constrained-HDBSCAN configs are swapped for extra non-constrained configs by fair round-robin, holding the bank at exactly 32"
+    },
+    "banks_total": 150,
+    "candidate_slots_total": 4800,
+    "primary_metric_count": 67,
+    "group_counts": {
+      "Original": 7,
+      "Established": 10,
+      "New46": 46,
+      "Modern": 4
+    },
+    "diagnostics": [
+      "dcsi_author_compat",
+      "cdbw_package_compat"
+    ],
+    "metric_registry_hash": "8d6b44f45f9cf240",
+    "diagnostic_track": true,
+    "never_feeds_inference": true
+  },
+  "count_separation_rule": "the two tracks are separate task categories. 900 method physical traces and 4800 fixed32 candidate slots are NOT added together and must never be reported as 5700 of anything",
+  "view_space_semantics": {
+    "contract": "V2",
+    "decision_metrics": "X_decision(view)",
+    "full_metrics": "X_full",
+    "x_full_explicit_required": true,
+    "audit_commit": "4ef3f57"
+  },
+  "canonical_utility": {
+    "source": "models/ClustOpt/external_evaluation/compute_metric_utility.py",
+    "function": "compute_metric_utilities",
+    "reused_verbatim": true,
+    "weights": {
+      "spearman_pos": 0.18,
+      "kendall_pos": 0.12,
+      "pairwise_accuracy": 0.2,
+      "ndcg_all": 0.2,
+      "topk_overlap": 0.05,
+      "bottomk_overlap": 0.05,
+      "ndcg_topk": 0.1,
+      "ndcg_bottomk": 0.1
+    },
+    "source_hash": "7f65fa2b1a794b26",
+    "unit": "per dataset x view x metric over the common fixed32 bank",
+    "pooling_forbidden": "candidates are never pooled into one inferential sample; the dataset is the inferential unit"
+  },
+  "aggregation_modes": {
+    "dataset_macro": "mean over datasets",
+    "source_balanced_macro": "mean within each of FCPS / sklearn shapes / real PCA, then the three source means averaged equally",
+    "frozen_before_outcomes": true
+  },
+  "bestview_rule": {
+    "method_track": "best successful final method output across the three views",
+    "fixed32_track": "utility stays per dataset x view x metric; any view-maximised metric summary is secondary/descriptive only"
+  },
+  "numerical_reproducibility_policy": {
+    "file": "numerical_reproducibility_policy.json",
+    "version": 1,
+    "canonical_hash": "353a3777e9f8400e"
+  },
+  "runtime_and_resume": {
+    "runtime_contract": "idb_stage4_runtime_v1",
+    "store_contract": "idb_stage4_store_v1",
+    "shared_work_rule": "method_runtime_equivalent = full physical_trace_runtime + arm scoring runtime",
+    "complete_results_authoritative": true
+  },
+  "execution_phases": {
+    "A": "end-to-end method execution (14 arms over 6 physical groups) - label-free",
+    "B": "fixed32 metric execution (150 banks, 67 primary CVIs, diagnostics separately) - label-free",
+    "C": "offline ground-truth evaluation (method ARI and fixed32 candidate ARI)",
+    "D": "analysis (method comparison, canonical utility, generalist/specialist, modern comparators, joint pipeline)",
+    "phase_d_may_not_trigger_reruns_or_model_changes": true
+  },
+  "carried_forward_hypotheses": {
+    "generalist_core": [
+      "noise_aware_silhouette",
+      "silhouette",
+      "gridness_fft_acf"
+    ],
+    "specialist_tail": "family/subfamily specialists",
+    "new46_generalization": "do designed metrics retain utility externally",
+    "pattern_vs_image": "descriptive comparison",
+    "modern_comparators": [
+      "cdbw",
+      "cvnn",
+      "cvdd",
+      "dcsi"
+    ],
+    "capture_vs_existence": "a useful metric existing is not the same as a method exploiting it",
+    "frozen_before_outcomes": true
+  },
+  "joint_pipeline_chain": [
+    "useful metric exists",
+    "model identifies/weights/selects it",
+    "search exploits it",
+    "final clustering quality"
+  ],
+  "no_external_execution_yet": true
+}

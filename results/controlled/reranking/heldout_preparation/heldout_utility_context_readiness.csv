@@ -1,0 +1,4 @@
+source,artifact,format,exists,readable_in_locked_env,n_rows,expected_rows,n_prediction_columns,trained_on,split_1_in_training,ready
+MLP,results_analysis/mlp/20260615_231715__metric_utility_mlp_split1_holdout/artifacts/all_fold_test_predictions.csv,csv,True,True,3165.0,3165,60,Splits 2-16 (split-1 holdout run),False,True
+KNN,results_analysis/metric_utility_knn/phase_e1/predictions/split1_locked_predictions.parquet,parquet,True,False,,3165,60,"splits [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]",False,False
+KNN_REGENERATED,split1_knn_utility_context.csv.gz,csv.gz,True,True,3165.0,3165,60,"splits [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]",False,True

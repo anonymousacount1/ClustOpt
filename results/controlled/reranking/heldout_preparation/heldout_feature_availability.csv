@@ -1,0 +1,2 @@
+runs_with_trial_log,with_config_str,with_partition_descriptors,with_norm_columns,with_selected_metrics_json,with_timing_summary,with_best_result,ari_column_present_for_later_lookup,mean_metric_columns,note
+63300,63300,63300,63300,63300,63300,63300,63300,4.745466034755134,ARI presence is verified structurally; no ARI value was read

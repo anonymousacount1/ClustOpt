@@ -1,0 +1,87 @@
+{
+  "stage": "4B",
+  "question": "do Policy Predictor prediction MAGNITUDES influence any downstream behaviour, or only the selected policy class?",
+  "method": "static audit of every consumer of the PP prediction array in the repository, plus a runtime determinism probe",
+  "consumers_of_the_prediction_array": [
+    {
+      "site": "models/ClustOpt_Policy_Predictor/training/target_transforms.py:select_policy",
+      "uses": "pred.argmax(axis=1) for target CENTERED (argmin for REGRET)",
+      "magnitude_dependent_decision": false,
+      "note": "pure argmax; ties resolved by numpy argmax to the lowest index, which is deterministic and does not compare magnitudes against any threshold"
+    },
+    {
+      "site": "models/ClustOpt_Policy_Predictor/stage2c/run_final_v2_split1_replay.py:272-289",
+      "uses": "select_policy(P) -> index; plus a diagnostic raw_softmax_tie flag and a score_vector_hash column",
+      "magnitude_dependent_decision": false,
+      "note": "the selected index drives everything; the tie flag and hash are written to the frame for reporting"
+    },
+    {
+      "site": "models/ClustOpt_Policy_Predictor/training/train_fold.py:106",
+      "uses": "sel = select_policy(pred, target); sel_ari = ari_te[range, sel]",
+      "magnitude_dependent_decision": false,
+      "note": "the index is used to look up an ARI; magnitudes are discarded"
+    }
+  ],
+  "magnitude_derived_columns": [
+    {
+      "column": "raw_softmax_tie",
+      "definition": "np.isclose(top1, top2, atol=0.0) on the sorted prediction row",
+      "reads_magnitudes": true,
+      "drives_a_decision": false,
+      "consumers": [
+        "stage2c/analyze_split1_replay.py:267 -- aggregates a reporting rate",
+        "stage2c/verify_stage2c3_gates.py:138 -- asserts that reported rate equals 1.0 as an integrity check"
+      ],
+      "reproduced_in_materialisation": "yes, 0 mismatches on all 3,165 rows for both arms",
+      "assessment": "this is the only magnitude-derived quantity anywhere in the path. It is diagnostic, it feeds no policy choice, weighting, threshold, interpolation or candidate score, and it reproduced exactly."
+    }
+  ],
+  "external_consumers_outside_the_pp_package": {
+    "searched": "repository-wide for policy_selections / selected_policy_id / select_policy / predict_proba",
+    "found": [
+      "PP-internal analysis and gate scripts only",
+      "models/Independent_Domain_Benchmark/runners/freeze_stage4a_configs.py (reads manifests, not scores)"
+    ],
+    "any_magnitude_consumer": false
+  },
+  "checked_for_and_absent": [
+    "confidence scores", "probability thresholding", "score-based weighting",
+    "policy interpolation or blending", "magnitude-based tie-breaking",
+    "candidate scoring from PP outputs", "calibration"
+  ],
+  "runtime_determinism_probe": {
+    "same_model_object_two_predict_calls_n_jobs_4": {
+      "rows_with_differing_score_vector_hash": 3143,
+      "rows_total": 3165,
+      "max_absolute_difference": 2.7755575615628914e-17,
+      "argmax_identical": true
+    },
+    "same_model_object_two_predict_calls_n_jobs_1": {
+      "rows_with_differing_score_vector_hash": 0,
+      "rows_total": 3165
+    },
+    "serial_vs_parallel": {
+      "max_absolute_difference": 2.7755575615628914e-17,
+      "argmax_identical": true
+    },
+    "cause": "scikit-learn accumulates per-tree contributions across threads during forest prediction; floating-point addition is non-associative, so the low bits depend on thread scheduling"
+  },
+  "conclusion": {
+    "downstream_depends_only_on_selected_policy": true,
+    "stop_condition_triggered": false,
+    "decision": "freeze PP inference at n_jobs=1 for all Stage-4 execution",
+    "rationale": "serial prediction is bit-stable (0/3165 variation) and yields an identical argmax, so freezing it removes the nondeterminism at no scientific cost",
+    "one_ulp_issue_classification": "non-scientific numerical nondeterminism (floating-point reduction order), not a model or behaviour difference"
+  },
+  "frozen_pp_inference_policy": {
+    "n_jobs": 1,
+    "applies_to": ["IDB_ClustOpt_C2_PPv1_noR", "IDB_ClustOpt_C5_PPv2_R"],
+    "note": "the outer benchmark worker count remains 8; this setting is internal to the PP estimator only"
+  },
+  "pp_replay_result": {
+    "v1_rows": 3165, "v1_mismatches": 0,
+    "v2_rows": 3165, "v2_mismatches": 0,
+    "pp_v1_sha256_16": "aa977443caa97bda",
+    "pp_v2_sha256_16": "4a668514b93f237e"
+  }
+}

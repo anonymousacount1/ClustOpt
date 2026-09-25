@@ -1,0 +1,30 @@
+{
+  "audit": "repository-wide static search for scientific seed derivation using Python built-in hash()",
+  "scope": [
+    "experiments/external_baselines",
+    "models/ClustOpt",
+    "models/Independent_Domain_Benchmark"
+  ],
+  "sites_found": 2,
+  "sites": [
+    {
+      "path": "experiments/external_baselines/AutoClust/indomain/dataset.py:308",
+      "code": "seed=seed + (hash(view_type) % 1000)",
+      "classification": "HISTORICAL-ONLY",
+      "stage4_reachable": false,
+      "effect": "per-process salted string hash makes the historical AutoClust candidate seed irreproducible across processes; established empirically as the cause of H3 non-pairing"
+    },
+    {
+      "path": "experiments/external_baselines/ML2DAC/indomain/dataset.py:266",
+      "code": "seed=seed + (hash(view_type) % 1000)",
+      "classification": "HISTORICAL-ONLY",
+      "stage4_reachable": false,
+      "effect": "the SAME defect in the ML2DAC in-domain runner; M0-M3 are therefore likely to show the same historical non-pairing",
+      "flagged_for": "Stage 4B-3B -- must be audited there before any ML2DAC matched-slate claim; no ML2DAC work done in this session"
+    }
+  ],
+  "stage4_reachable_sites": 0,
+  "stage4_path": "the external adapters use models/Independent_Domain_Benchmark/search/protocol.py::derive_seed, a SHA256-based resolver with no built-in hash() and no process salt",
+  "immediate_blocker": false,
+  "no_code_refactored": true
+}

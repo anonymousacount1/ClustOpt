@@ -1,0 +1,157 @@
+{
+  "audit": "ML2DAC Stage-4 trace-sharing dependency matrix (partial 3B1)",
+  "status": "Stage 4B-3B1 decisive gates complete",
+  "authoritative_path": {
+    "module": "experiments/external_baselines/ML2DAC/indomain/phase.py::run_view",
+    "mkr": "experiments/external_baselines/ML2DAC/indomain/mkr.py::InDomainMKR",
+    "not_used": "upstream SMAC ApplicationPhase",
+    "submodule_modified": false
+  },
+  "generation_chain": "feats -> nearest_neighbor(feats) -> warmstart_configs(nn_record) -> select_warmstarts -> ws_algorithms -> sample_optimizer_configs_constrained(ws_algorithms, space, n, k_range, seed, avoid); plan = warmstarts + opt_specs",
+  "key_source_finding": "selected_cvi = mkr.predict_cvi(feats) is computed BEFORE generation but is never read by it. It is consumed only by _selected_cvi_value/_oriented during SCORING. Candidate generation therefore does not depend on the predicted CVI.",
+  "per_arm_artifact_identity": {
+    "imputer.pkl": {
+      "distinct_file_hashes": 1,
+      "hash": "953dc6215b21535c",
+      "arm_independent": true
+    },
+    "nearest_neighbor_index.pkl": {
+      "distinct_file_hashes": 1,
+      "hash": "d06053c3abf4168d",
+      "arm_independent": true,
+      "consequence": "KDTree, train_record_ids and feature_columns are byte-identical across M0-M3, so neighbour lookup is arm-independent"
+    },
+    "warmstart_repository.parquet": {
+      "distinct_file_hashes": 2,
+      "file_hashes": {
+        "M0": "a80195e383770bf5",
+        "M1": "842ef0ccd66d4539",
+        "M2": "842ef0ccd66d4539",
+        "M3": "a80195e383770bf5"
+      },
+      "order_invariant_content_hash": {
+        "status": "SUPERSEDED - convention not persisted, value not reproducible; see warmstart_repository_provenance_freeze"
+      },
+      "shape": [
+        1537248,
+        10
+      ],
+      "arm_independent": true,
+      "finding": "the two distinct FILE hashes are a parquet serialisation/row-order artifact, not a scientific difference: order-invariant content hashes are identical for all four arms and the per-record ranked warmstart lists match exactly. Inferring a scientific difference from the file hash alone would have been wrong."
+    },
+    "cvi_classifier.pkl": {
+      "distinct_file_hashes": 4,
+      "hashes": {
+        "M0": "0129b6f742cdca9d",
+        "M1": "da20428d6d940238",
+        "M2": "285cedcfdc59d98b",
+        "M3": "6a27d794cc911349"
+      },
+      "arm_independent": false,
+      "expected": true
+    },
+    "cvi_candidates.parquet": {
+      "distinct_file_hashes": 4,
+      "arm_independent": false,
+      "expected": true
+    }
+  },
+  "dependency_matrix": {
+    "meta_feature_extractor": "arm-independent (pymfe over X; identical feature_columns via the shared NN index)",
+    "imputer": "arm-independent (identical artifact)",
+    "predicted_cvi": "ARM-DEPENDENT (four distinct classifiers) -- but consumed only by scoring",
+    "kdtree": "arm-independent (identical artifact)",
+    "neighbour_ids": "arm-independent (identical inputs and identical KDTree)",
+    "warmstart_configs": "arm-independent (content-identical repository, identical neighbour)",
+    "candidate_sampler": "arm-independent given seed (same constrained sampler proven pre-sampled and non-adaptive in Stage 4B-3A1)",
+    "candidate_configurations": "arm-independent",
+    "candidate_partitions": "expected arm-independent -- NOT YET EXECUTED",
+    "final_candidate_scoring": "ARM-DEPENDENT (predicted CVI and its orientation)"
+  },
+  "preliminary_classification": {
+    "class": "T1 (PROVISIONAL)",
+    "reason": "every candidate-generation input is arm-independent: identical imputer, identical KDTree/NN index, content-identical warmstart repository, and the predicted CVI is not read by generation. The arms diverge only at scoring.",
+    "not_yet_confirmed": [
+      "empirical M0-M3 candidate configuration/partition identity under a common seed",
+      "historical pairing classification from persisted traces",
+      "meta-feature label-free audit and historical regression",
+      "classifier historical predicted-CVI regression",
+      "direction registry completeness"
+    ],
+    "amendment_recommended_but_NOT_implemented": "a formal pre-run common-seed amendment analogous to AutoClust 607909c, ONLY after the outstanding confirmations above"
+  },
+  "true_ari_inspected": false,
+  "submodule_untouched": true,
+  "final_classification": {
+    "class": "T1",
+    "status": "CONFIRMED for common-trace eligibility; the direction registry and the external adapter remain OUT OF SCOPE for Stage 4B-3B1 and are not claimed",
+    "evidence": {
+      "A_metafeature_fidelity": "PASS",
+      "B_historical_pairing": "H3_NOT_PAIRED (324/324 historical config traces differ across M0-M3)",
+      "C_predicted_cvi_regression": "PASS",
+      "neighbour_and_warmstart_identity": "324/324 identical across M0-M3 on historical data",
+      "warmstart_repository": "content-identical across all four arms (2 raw file hashes, 1 semantic content hash)",
+      "common_seed_dry_proof": "PASS"
+    },
+    "attribution_of_H3": "every arm-independent generation input (meta-features, imputer, KDTree, nearest neighbour, warmstart repository, warmstart selection, ClustOpt-grid projection) agrees across arms on the historical data, and the constrained sampler depends only on those plus the seed. The historical divergence is therefore attributable to the process-salted seed at experiments/external_baselines/ML2DAC/indomain/dataset.py:266 (seed + hash(view_type) % 1000), the same defect already recorded for AutoClust.",
+    "consequence": "ML2DAC M0-M3 are eligible for the AutoClust-style single shared physical candidate trace: one slate, four arm-specific scorings. A formal pre-run common-seed protocol amendment is REQUIRED before the Stage-4 run and has NOT been made.",
+    "not_yet_done_by_design": [
+      "ML2DAC seed protocol amendment",
+      "external ML2DAC adapter implementation",
+      "CVI direction registry completeness",
+      "stage verifier and report"
+    ]
+  },
+  "warmstart_repository_provenance_freeze": {
+    "convention_id": "ml2dac_warmstart_semantic_content_hash_v1",
+    "definition": "columns sorted by name; each row rendered as the ASCII-0x1F join of repr() of its values and hashed with SHA-256; the resulting MULTISET of row hashes is sorted (duplicate multiplicity preserved, no de-duplication) and joined with '\n'; the sorted-column-name list is appended after '|'; SHA-256 of that, first 16 hex chars.",
+    "why_multiplicity_preserving": "a set-based hash would call two repositories identical when one contains a duplicated warmstart row and the other does not; multiplicity is scientifically meaningful because warmstart rows are ranked per record.",
+    "per_arm": {
+      "M0": {
+        "raw_file_hash": "a80195e383770bf5",
+        "semantic_content_hash_v1": "bb3a1306b4562217",
+        "rows": 1537248,
+        "distinct_rows": 1537248,
+        "cross_check_pandas_multiset": "86c551552c19c439",
+        "cross_check_pandas_multiset_colsorted": "304a805e49bf5d3a",
+        "cross_check_pandas_rowsorted": "65e20d080cce88f3"
+      },
+      "M1": {
+        "raw_file_hash": "842ef0ccd66d4539",
+        "semantic_content_hash_v1": "bb3a1306b4562217",
+        "rows": 1537248,
+        "distinct_rows": 1537248,
+        "cross_check_pandas_multiset": "86c551552c19c439",
+        "cross_check_pandas_multiset_colsorted": "304a805e49bf5d3a",
+        "cross_check_pandas_rowsorted": "65e20d080cce88f3"
+      },
+      "M2": {
+        "raw_file_hash": "842ef0ccd66d4539",
+        "semantic_content_hash_v1": "bb3a1306b4562217",
+        "rows": 1537248,
+        "distinct_rows": 1537248,
+        "cross_check_pandas_multiset": "86c551552c19c439",
+        "cross_check_pandas_multiset_colsorted": "304a805e49bf5d3a",
+        "cross_check_pandas_rowsorted": "65e20d080cce88f3"
+      },
+      "M3": {
+        "raw_file_hash": "a80195e383770bf5",
+        "semantic_content_hash_v1": "bb3a1306b4562217",
+        "rows": 1537248,
+        "distinct_rows": 1537248,
+        "cross_check_pandas_multiset": "86c551552c19c439",
+        "cross_check_pandas_multiset_colsorted": "304a805e49bf5d3a",
+        "cross_check_pandas_rowsorted": "65e20d080cce88f3"
+      }
+    },
+    "distinct_raw_file_hashes": 2,
+    "distinct_semantic_content_hashes": 1,
+    "conclusion": "the warmstart repository is content-identical across M0-M3; the two distinct raw file hashes (M0+M3 vs M1+M2) are a parquet serialisation artefact.",
+    "correction_to_earlier_evidence": {
+      "earlier_value": "d1865d9c7006bd37 (reported in this file as order_invariant_content_hash at commit 5f0b055)",
+      "status": "NOT REPRODUCIBLE - the hashing convention behind that number was never persisted alongside it, and three independent reconstructions of a plausible convention produced 86c551552c19c439, 304a805e49bf5d3a and 65e20d080cce88f3 instead.",
+      "impact_on_the_finding": "none - every convention tried, including the frozen v1 above, yields a single identical value across all four arms, so the content-identity conclusion is independently confirmed four times over. Only the specific digit string is retired.",
+      "action": "the earlier number is superseded by semantic_content_hash_v1 under the frozen convention; do not cite d1865d9c7006bd37 in the report."
+    }
+  }
+}

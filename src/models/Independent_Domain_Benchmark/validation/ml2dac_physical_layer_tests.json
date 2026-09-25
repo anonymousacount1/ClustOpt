@@ -1,0 +1,178 @@
+{
+  "suite": "ml2dac_physical_layer",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "trace": {
+    "trace_id": "c81f4ef55b798858",
+    "dataset_id": "INVENTED_NON_SCIENTIFIC_SMOKE_TEST_DS",
+    "view_id": "xy_2d",
+    "seed": 171512944,
+    "nearest_neighbor": "c2vh_000575_ebe80561__xy_2d",
+    "candidates": 8,
+    "valid": 8,
+    "content_hash": "d3e8dee1f062717f",
+    "search_space_fingerprint": "8ddf86c79888ebe9",
+    "budget_is_non_scientific": true
+  },
+  "external_50_used": false,
+  "labels_used": false,
+  "n": 15,
+  "n_fail": 0,
+  "rows": [
+    {
+      "test": "api_label_free",
+      "status": "PASS",
+      "detail": {
+        "signature": [
+          "X",
+          "dataset_id",
+          "view_id",
+          "repo",
+          "budget"
+        ],
+        "banned_present": []
+      }
+    },
+    {
+      "test": "no_repository_membership",
+      "status": "PASS",
+      "detail": {
+        "dataset_id": "INVENTED_NON_SCIENTIFIC_SMOKE_TEST_DS",
+        "membership_required": false
+      }
+    },
+    {
+      "test": "production_seed_identity",
+      "status": "PASS",
+      "detail": {
+        "seeds": {
+          "IDB_ML2DAC_M0_original_cvis": 171512944,
+          "IDB_ML2DAC_M1_original_plus_established": 171512944,
+          "IDB_ML2DAC_M2_original_plus_new46": 171512944,
+          "IDB_ML2DAC_M3_extended_cvis": 171512944
+        },
+        "identity": "ml2dac_shared_candidate_slate"
+      }
+    },
+    {
+      "test": "trace_id_arm_independent",
+      "status": "PASS",
+      "detail": {
+        "trace_id": "c81f4ef55b798858",
+        "reproducible": true,
+        "depends_on_method_id": false
+      }
+    },
+    {
+      "test": "metafeature_schema_and_env",
+      "status": "PASS",
+      "detail": {
+        "n_features": 52,
+        "schema_hash": "f33a72e081fff983",
+        "env": {
+          "python": "3.12.2",
+          "pymfe": "0.4.4",
+          "numpy": "2.4.6",
+          "pandas": "3.0.3"
+        }
+      }
+    },
+    {
+      "test": "common_generation_state",
+      "status": "PASS",
+      "detail": {
+        "imputer": "953dc6215b21535c",
+        "nn_index": "d06053c3abf4168d",
+        "warmstart_semantic": "bb3a1306b4562217",
+        "neighbour": "c2vh_000575_ebe80561__xy_2d"
+      }
+    },
+    {
+      "test": "budget_and_no_resampling",
+      "status": "PASS",
+      "detail": {
+        "budget": 8,
+        "warmstart_slots": 4,
+        "sampled_slots": 4,
+        "failed_kept": 0
+      }
+    },
+    {
+      "test": "only_reachable_algorithms",
+      "status": "PASS",
+      "detail": {
+        "generated": [
+          "agglomerative",
+          "gmm",
+          "kmeans",
+          "minibatch_kmeans"
+        ],
+        "outside_reachable_set": []
+      }
+    },
+    {
+      "test": "immutability",
+      "status": "PASS",
+      "detail": {
+        "metadata": "FrozenInstanceError",
+        "collection": "AttributeError",
+        "warmstarts": "AttributeError",
+        "meta_feature_vector": "ValueError",
+        "configuration": "TypeError",
+        "warmstart_config": "TypeError",
+        "labels": "ValueError"
+      }
+    },
+    {
+      "test": "four_arm_consumption",
+      "status": "PASS",
+      "detail": {
+        "arms": 4,
+        "hash_stable": true,
+        "availability_identical": true
+      }
+    },
+    {
+      "test": "no_ground_truth_fields",
+      "status": "PASS",
+      "detail": {
+        "forbidden_found": []
+      }
+    },
+    {
+      "test": "no_arm_scoring_state",
+      "status": "PASS",
+      "detail": {
+        "scoring_fields_present": []
+      }
+    },
+    {
+      "test": "failure_kinds_frozen",
+      "status": "PASS",
+      "detail": {
+        "kinds": 12
+      }
+    },
+    {
+      "test": "environment_gate_enforced",
+      "status": "PASS",
+      "detail": {
+        "raised": "METAFEATURE_ENV_MISMATCH"
+      }
+    },
+    {
+      "test": "behavioural_guards",
+      "status": "PASS",
+      "detail": {
+        "classifier": 0,
+        "fallback": 0,
+        "native": 0,
+        "constrained": 1,
+        "mfenv_subprocess": 1,
+        "classifier_artifact_loaded": 0,
+        "trace_id": "5201318fbd9f5a73",
+        "candidates": 8
+      }
+    }
+  ],
+  "status": "PASS"
+}

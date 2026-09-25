@@ -1,0 +1,82 @@
+{
+  "family_id": "radial_spiral_meander",
+  "family_name": "Radial / spiral / meander",
+  "family_seed": 100861009,
+  "n_features": 2,
+  "feature_names": ["x", "y"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "radial_spokes",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "junction", "components_per_cluster": 1},
+      "parameter_ranges": {"n_arms": [4, 8], "arm_length": [0.08, 0.14], "thickness": [0.004, 0.011]}
+    },
+    {
+      "subfamily_id": "clean_spirals",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "spiral", "components_per_cluster": 1},
+      "parameter_ranges": {"r_start": [0.01, 0.03], "r_end_extra": [0.07, 0.12], "turns": [2.0, 3.5], "thickness": [0.004, 0.010]}
+    },
+    {
+      "subfamily_id": "broken_spirals",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "spiral", "components_per_cluster": 1},
+      "parameter_ranges": {"r_start": [0.01, 0.03], "r_end_extra": [0.07, 0.12], "turns": [1.5, 3.0], "thickness": [0.005, 0.012]}
+    },
+    {
+      "subfamily_id": "meander_curves",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "meander_curve", "components_per_cluster": 1},
+      "parameter_ranges": {"amplitude": [0.04, 0.10], "frequency": [1.5, 3.0], "thickness": [0.004, 0.011]}
+    },
+    {
+      "subfamily_id": "rotational_symmetry_patterns",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {"component_type": "spiral", "components_per_cluster": 2},
+      "parameter_ranges": {"r_start": [0.01, 0.03], "r_end_extra": [0.05, 0.10], "turns": [1.8, 2.8], "thickness": [0.004, 0.010]}
+    },
+    {
+      "subfamily_id": "radial_arc_mixture",
+      "cluster_budget": {"2": 36, "3": 54, "4": 54, "5": 36},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "junction", "weight": 1.0, "parameter_ranges": {"n_arms": [3, 5], "arm_length": [0.06, 0.12]}},
+          {"type": "circle",   "weight": 1.0, "parameter_ranges": {"radius": [0.06, 0.11], "thickness": [0.004, 0.012], "angle_high": [2.0, 3.5]}}
+        ]
+      }
+    },
+    {
+      "subfamily_id": "noisy_meanders",
+      "cluster_budget": {"2": 38, "3": 56, "4": 56, "5": 37},
+      "component_strategy": {"component_type": "meander_curve", "components_per_cluster": 1},
+      "parameter_ranges": {"amplitude": [0.05, 0.12], "frequency": [1.8, 3.5], "thickness": [0.008, 0.018]}
+    }
+  ]
+}

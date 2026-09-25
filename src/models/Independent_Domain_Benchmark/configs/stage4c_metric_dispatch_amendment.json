@@ -1,0 +1,96 @@
+{
+  "amendment": "stage4c_fixed32_metric_dispatch_repair",
+  "amendment_id": "1a8d6de73b9c15fd",
+  "version": 1,
+  "metric_evaluation_semantics": "fixed32_metric_evaluation_v2",
+  "parent_run_id": "stage4c_v2_323194df26",
+  "parent_metric_evaluation_semantics": "fixed32_metric_evaluation_v1",
+  "discovered_post_unblinding": true,
+  "post_unblinding_statement": "The defect was discovered AFTER Phase D results were visible. The repair scope was defined and frozen BEFORE any corrected metric value was inspected. The repair set is closed: it is exactly the six primary metrics that produced zero valid values across the whole corpus because of an evaluation-harness dispatch fault, and it may not be widened on the basis of how a corrected metric performs.",
+  "justification": "The frozen pre-run protocol required 67 primary metrics including CDbw, CVNN, CVDD, DCSI and all 46 New46. The v1 harness failed to execute that contract for six of them. This amendment restores the pre-frozen analysis contract; it does not change it.",
+  "repair_set": [
+    "cdbw",
+    "convexity_ratio_image_based",
+    "cvdd",
+    "cvnn",
+    "dcsi",
+    "hough_arc_circle_strength"
+  ],
+  "repair_set_size": 6,
+  "defects_repaired": [
+    {
+      "defect": "modern_comparator_result_extraction",
+      "affected": [
+        "cdbw",
+        "cvdd",
+        "dcsi",
+        "cvnn"
+      ],
+      "v1_behaviour": "float(MetricResult) -> TypeError on every candidate",
+      "v2_behaviour": "read MetricResult.value and honour MetricResult.valid / invalid_reason, per the Stage-4B-1 result contract",
+      "metric_implementation_changed": false
+    },
+    {
+      "defect": "cvnn_is_bank_level_not_single_candidate",
+      "affected": [
+        "cvnn"
+      ],
+      "v1_behaviour": "called per candidate; implementation reported cvnn_requires_a_comparison_set_for_normalisation",
+      "v2_behaviour": "evaluated once per dataset x view bank via the frozen external_cvis.cvnn_index over that bank's candidate partitions, which is the comparison set fpc assumes. Degenerate partitions remain in the normalisation set and are judged invalid separately, preserving the validated K=1 rule.",
+      "metric_implementation_changed": false
+    },
+    {
+      "defect": "clustopt_registry_metrics_routed_to_ml2dac_engine",
+      "affected": [
+        "convexity_ratio_image_based",
+        "hough_arc_circle_strength"
+      ],
+      "v1_behaviour": "all non-modern metrics were sent to the ML2DAC engine; these two are outside the ML2DAC 61-class collection and raised CVI_CLASS_UNKNOWN",
+      "v2_behaviour": "dispatch honours the declared implementation kind generically, so every clustopt_registry metric resolves through the authoritative ClustOpt METRIC_REGISTRY",
+      "metric_implementation_changed": false
+    }
+  ],
+  "dispatch_table": {
+    "clustopt_registry": "cluster_validity_indices.metrics.metrics_registry.METRIC_REGISTRY[id].evaluate(X_space, labels)",
+    "ml2dac_cvi_collection": "ml2dac_scoring.canonical_raw_value",
+    "modern_comparator": "metric_validation.external_cvis.<id> -> MetricResult.value"
+  },
+  "route_equivalence_evidence": {
+    "claim": "the generic dispatch does not change the value of any metric outside the repair set, so v1 records for the other 61 metrics remain composable with v2 records for the six",
+    "method": "58 clustopt_registry metrics evaluated by BOTH routes on 4 real dataset x view banks x 4 real candidate partitions",
+    "finite_and_equal": 885,
+    "both_non_finite_hence_invalid_either_way": 43,
+    "material_disagreements": 0
+  },
+  "explicitly_not_recomputed": [
+    "Phase A method outputs (2100 scientific arms)",
+    "fixed32 candidate banks (150)",
+    "candidate clusterings and labels (4800 slots, 4776 valid)",
+    "candidate ARIs",
+    "the 61 already-correct primary metric values",
+    "canonical utility implementation, weights, thresholds and orientation"
+  ],
+  "invariants": {
+    "metric_implementations_changed": false,
+    "metric_inventory_changed": false,
+    "utility_definition_changed": false,
+    "candidate_banks_regenerated": false,
+    "clustering_reruns": 0,
+    "ground_truth_used_in_metric_evaluation": false,
+    "original_records_preserved": true,
+    "original_records_overwritten": false
+  },
+  "record_layout": {
+    "original_metric_records": "evaluation/metrics__<dataset>__<view>",
+    "corrected_metric_records": "evaluation/metrics_v2__<dataset>__<view>",
+    "rule": "v2 records carry ONLY the repaired six metrics; the final 67-metric view composes v1 for the other 61 with v2 for the six"
+  },
+  "final_analysis_composition": {
+    "metrics_from_v1": 61,
+    "metrics_from_v2": 6,
+    "total_primary": 67,
+    "documented": true
+  },
+  "internal_gates": "validation/stage4c_metric_dispatch_gates.json (21/21 PASS)",
+  "repair_set_hash": "4783eb7305351062"
+}

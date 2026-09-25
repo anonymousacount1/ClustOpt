@@ -1,0 +1,15 @@
+method_id,units,method_ari_mean,best_available_metric_utility_mean,note
+IDB_AutoClust_A0_original_cvis,150,0.25855020775469634,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_AutoClust_A1_original_plus_established,150,0.21921022421015118,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_AutoClust_A2_original_plus_new46,150,0.25425100228967296,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_AutoClust_A3_extended_cvis,150,0.24885715114499513,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ClustOpt_C0_MLP_TOP5_RAW_noR,150,0.19608825565433788,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ClustOpt_C1_KNN_TOP10_RAW_noR,150,0.17956306192562713,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ClustOpt_C2_PPv1_noR,150,0.18736269902338906,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ClustOpt_C3_MLP_TOP5_RAW_R,150,0.2350419891212799,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ClustOpt_C4_KNN_TOP10_RAW_R,150,0.25000669890720917,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ClustOpt_C5_PPv2_R,150,0.2513378568313975,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ML2DAC_M0_original_cvis,150,0.17548783650389016,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ML2DAC_M1_original_plus_established,150,0.200508645523833,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ML2DAC_M2_original_plus_new46,150,0.1752039210386494,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal
+IDB_ML2DAC_M3_extended_cvis,150,0.18288728518551056,0.7618828798029679,metric availability vs method capture: a high available utility with low method ARI indicates the method did not exploit an available signal

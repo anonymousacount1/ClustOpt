@@ -1,0 +1,9 @@
+{
+  "development_selected_policy": "knn_top10_raw",
+  "development_selected_online": 0.6160307817072919,
+  "stage2b5_hindsight_best_policy": "knn_top10_raw",
+  "stage2b5_hindsight_reference": 0.6160307817072919,
+  "hindsight_reconstructed_online": 0.6160307817072919,
+  "same_policy": true,
+  "note": "the hindsight policy's 'best' identity was established USING Split-1 outcomes; it is a diagnostic upper benchmark among fixed policies, never a deployable baseline"
+}

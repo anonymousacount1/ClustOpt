@@ -1,0 +1,197 @@
+{
+  "suite": "ml2dac_scoring_layer",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "scoring_semantics_id": "ml2dac_corrected_cvi_scoring_v1",
+  "trace_id": "512ac2b0d6a275a9",
+  "budget": 10,
+  "budget_is_non_scientific": true,
+  "external_50_used": false,
+  "labels_used": false,
+  "arm_results": {
+    "IDB_ML2DAC_M0_original_cvis": {
+      "status": "success",
+      "predicted_cvi": "silhouette",
+      "direction": "MAXIMIZE",
+      "selected": 4
+    },
+    "IDB_ML2DAC_M1_original_plus_established": {
+      "status": "success",
+      "predicted_cvi": "min_centroid_distance",
+      "direction": "MAXIMIZE",
+      "selected": 0
+    },
+    "IDB_ML2DAC_M2_original_plus_new46": {
+      "status": "success",
+      "predicted_cvi": "blobness_log_dog",
+      "direction": "MAXIMIZE",
+      "selected": 0
+    },
+    "IDB_ML2DAC_M3_extended_cvis": {
+      "status": "success",
+      "predicted_cvi": "blobness_log_dog",
+      "direction": "MAXIMIZE",
+      "selected": 0
+    }
+  },
+  "selection_rule": "maximise the oriented predicted-CVI score over eligible candidates; strict improvement only, so the lowest candidate index wins a tie; non-finite scores are ineligible; if no candidate is eligible the arm fails with NO_ELIGIBLE_CANDIDATE",
+  "n": 31,
+  "n_fail": 0,
+  "rows": [
+    {
+      "test": "registry_61_classes_no_default",
+      "status": "PASS",
+      "detail": "61 entries, 57 MAXIMIZE"
+    },
+    {
+      "test": "unknown_class_raises_not_defaults",
+      "status": "PASS",
+      "detail": "CVI_CLASS_UNKNOWN"
+    },
+    {
+      "test": "no_modern_comparator_in_class_set",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "ml2dac_only_sign_corrected",
+      "status": "PASS",
+      "detail": "{'dunn_index': (1.3538, 0.0017, True), 'coggins_jain_index': (9.9849, 0.2403, True), 'cop': (0.1378, 96.3396, True)}"
+    },
+    {
+      "test": "selection_unique_max",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_tie_lowest_index",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_skips_ineligible_first",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_skips_ineligible_last",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_skips_non_finite",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "selection_all_invalid_none",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "orientation_applied_exactly_once",
+      "status": "PASS",
+      "detail": "sil 0.70 dbi -0.70"
+    },
+    {
+      "test": "scoring_executes_under_guards",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "behavioural_no_legacy_scorer",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "test": "behavioural_no_training",
+      "status": "PASS",
+      "detail": "fit=0 predict=4"
+    },
+    {
+      "test": "behavioural_no_modern_comparator",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "test": "trace_unchanged_after_four_arms",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "four_arm_results",
+      "status": "PASS",
+      "detail": "['IDB_ML2DAC_M0_original_cvis', 'IDB_ML2DAC_M1_original_plus_established', 'IDB_ML2DAC_M2_original_plus_new46', 'IDB_ML2DAC_M3_extended_cvis']"
+    },
+    {
+      "test": "one_shared_trace_id",
+      "status": "PASS",
+      "detail": "512ac2b0d6a275a9"
+    },
+    {
+      "test": "semantics_id_on_every_result",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "arm_specific_decision_not_in_trace",
+      "status": "PASS",
+      "detail": "['avoid_set_hash', 'budget', 'candidate_count', 'candidates', 'dataset_id', 'imputer_artifact_hash']"
+    },
+    {
+      "test": "no_evaluation_outcome_fields",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "scoring_api_label_free",
+      "status": "PASS",
+      "detail": "(trace, method_id, X_decision, X_full, repo, engine)"
+    },
+    {
+      "test": "failure_kinds_frozen",
+      "status": "PASS",
+      "detail": "10 kinds"
+    },
+    {
+      "test": "applicability_61_of_61_both_dims",
+      "status": "PASS",
+      "detail": "1d=61 2d=61"
+    },
+    {
+      "test": "is_applicable_true_for_every_class",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "structural_inapplicability_fails_early",
+      "status": "PASS",
+      "detail": "PREDICTED_CVI_INAPPLICABLE_FOR_VIEW / 0 scores"
+    },
+    {
+      "test": "structural_failure_scores_no_candidate",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "candidate_level_failure_is_no_eligible_candidate",
+      "status": "PASS",
+      "detail": "NO_ELIGIBLE_CANDIDATE / 10 scores"
+    },
+    {
+      "test": "two_failure_kinds_are_distinct",
+      "status": "PASS",
+      "detail": "PREDICTED_CVI_INAPPLICABLE_FOR_VIEW vs NO_ELIGIBLE_CANDIDATE"
+    },
+    {
+      "test": "no_fallback_after_either_failure",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "x_full_is_required",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "status": "PASS"
+}

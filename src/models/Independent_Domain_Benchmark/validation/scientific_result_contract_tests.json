@@ -1,0 +1,58 @@
+{
+  "suite": "scientific_result_contract",
+  "stage": "4C amendment",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "contract": "scientific_arm_result_v2",
+  "external_50_used": false,
+  "external_ari_inspected": false,
+  "n": 9,
+  "n_fail": 0,
+  "rows": [
+    {
+      "test": "arms_persisted",
+      "status": "PASS",
+      "detail": "8 records"
+    },
+    {
+      "test": "contract_version_is_v2",
+      "status": "PASS",
+      "detail": "scientific_arm_result_v2"
+    },
+    {
+      "test": "every_success_has_final_labels",
+      "status": "PASS",
+      "detail": "8 successes"
+    },
+    {
+      "test": "label_vector_covers_every_sample",
+      "status": "PASS",
+      "detail": "180"
+    },
+    {
+      "test": "stored_labels_match_stored_hashes",
+      "status": "PASS",
+      "detail": "raw and canonical both verified"
+    },
+    {
+      "test": "offline_evaluation_needs_no_re_execution",
+      "status": "PASS",
+      "detail": "8 ARIs computed, 0 execution calls. "
+    },
+    {
+      "test": "success_without_labels_is_refused",
+      "status": "PASS",
+      "detail": "RunnerContractError raised"
+    },
+    {
+      "test": "wrong_length_label_vector_is_refused",
+      "status": "PASS",
+      "detail": "sample-count invariant enforced"
+    },
+    {
+      "test": "no_ground_truth_in_arm_records",
+      "status": "PASS",
+      "detail": "clean"
+    }
+  ],
+  "status": "PASS"
+}

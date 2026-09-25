@@ -1,0 +1,4 @@
+metric_id,B_U_top3,B_S_top3,B_U_top5,B_S_top5,B_U_top10,B_S_top10,H_selection,H_utility,selection_specificity,metric_group,subgroup,global_selection_rate,is_core_candidate
+noise_aware_silhouette,11,9,12,12,12,12,0.9920168177355161,0.9984127862804892,0.007983182264483912,Established,,0.44567954540252686,True
+silhouette,10,9,11,11,12,12,0.985338724000792,0.9978732383882634,0.014661275999207968,Original,,0.4807136058807373,True
+gridness_fft_acf,7,10,9,11,12,12,0.9933415539527919,0.9993150675951444,0.006658446047208111,New46,New46-Image,0.4334395229816437,True

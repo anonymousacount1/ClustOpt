@@ -1,0 +1,132 @@
+{
+  "offline_fixed32": {
+    "source": "results_analysis\\clustering_repository\\stage1_2x3_aggregation\\offline_fixed32\\offline_2x3_overall_summary.csv",
+    "arms": {
+      "HU": {
+        "method_id": "stage1_head14_uniform_fixed50",
+        "metric_inventory": "head14",
+        "utility_strategy": "uniform",
+        "deployable": true,
+        "mean": 0.5013743865060218,
+        "ci_low": 0.4826596546465065,
+        "ci_high": 0.5196591692523626,
+        "n_datasets": 1055
+      },
+      "HP": {
+        "method_id": "stage1_head14_mlp_top5_raw_fixed50",
+        "metric_inventory": "head14",
+        "utility_strategy": "predicted",
+        "deployable": true,
+        "mean": 0.5890133859269097,
+        "ci_low": 0.5721993431351603,
+        "ci_high": 0.6057855240645179,
+        "n_datasets": 1055
+      },
+      "HO": {
+        "method_id": "stage1_head14_oracle_top5_raw_fixed50",
+        "metric_inventory": "head14",
+        "utility_strategy": "oracle",
+        "deployable": false,
+        "mean": 0.5996658140169525,
+        "ci_low": 0.5828665155127355,
+        "ci_high": 0.6164871697897087,
+        "n_datasets": 1055
+      },
+      "FU": {
+        "method_id": "stage1_full60_uniform_fixed50",
+        "metric_inventory": "full60",
+        "utility_strategy": "uniform",
+        "deployable": true,
+        "mean": 0.5021485193202283,
+        "ci_low": 0.4855625730422029,
+        "ci_high": 0.5189752818372793,
+        "n_datasets": 1055
+      },
+      "FP": {
+        "method_id": "stage1_full60_mlp_top5_raw_fixed50",
+        "metric_inventory": "full60",
+        "utility_strategy": "predicted",
+        "deployable": true,
+        "mean": 0.5966239458628076,
+        "ci_low": 0.5796350037801034,
+        "ci_high": 0.6130223265589416,
+        "n_datasets": 1055
+      },
+      "FO": {
+        "method_id": "stage1_full60_oracle_top5_raw_fixed50",
+        "metric_inventory": "full60",
+        "utility_strategy": "oracle",
+        "deployable": false,
+        "mean": 0.6249548734961646,
+        "ci_low": 0.6091965447038902,
+        "ci_high": 0.6413865021981365,
+        "n_datasets": 1055
+      }
+    }
+  },
+  "online_fixed50": {
+    "source": "results_analysis\\clustering_repository\\stage1_2x3_aggregation\\online_fixed50\\online_2x3_overall_summary.csv",
+    "arms": {
+      "HU": {
+        "method_id": "stage1_head14_uniform_fixed50",
+        "metric_inventory": "head14",
+        "utility_strategy": "uniform",
+        "deployable": true,
+        "mean": 0.3969185492512235,
+        "ci_low": 0.3776203568450529,
+        "ci_high": 0.4156593148930158,
+        "n_datasets": 1055
+      },
+      "HP": {
+        "method_id": "stage1_head14_mlp_top5_raw_fixed50",
+        "metric_inventory": "head14",
+        "utility_strategy": "predicted",
+        "deployable": true,
+        "mean": 0.551302546360679,
+        "ci_low": 0.5334203621228896,
+        "ci_high": 0.5682536307619964,
+        "n_datasets": 1055
+      },
+      "HO": {
+        "method_id": "stage1_head14_oracle_top5_raw_fixed50",
+        "metric_inventory": "head14",
+        "utility_strategy": "oracle",
+        "deployable": false,
+        "mean": 0.5505550278346772,
+        "ci_low": 0.5330340331836952,
+        "ci_high": 0.5686380034959604,
+        "n_datasets": 1055
+      },
+      "FU": {
+        "method_id": "stage1_full60_uniform_fixed50",
+        "metric_inventory": "full60",
+        "utility_strategy": "uniform",
+        "deployable": true,
+        "mean": 0.3387534205924591,
+        "ci_low": 0.3207130527788538,
+        "ci_high": 0.3562045405662436,
+        "n_datasets": 1055
+      },
+      "FP": {
+        "method_id": "stage1_full60_mlp_top5_raw_fixed50",
+        "metric_inventory": "full60",
+        "utility_strategy": "predicted",
+        "deployable": true,
+        "mean": 0.5779366586864856,
+        "ci_low": 0.5610471347346881,
+        "ci_high": 0.5950854475834059,
+        "n_datasets": 1055
+      },
+      "FO": {
+        "method_id": "stage1_full60_oracle_top5_raw_fixed50",
+        "metric_inventory": "full60",
+        "utility_strategy": "oracle",
+        "deployable": false,
+        "mean": 0.5971475756164428,
+        "ci_low": 0.58113850174937,
+        "ci_high": 0.6136218102495488,
+        "n_datasets": 1055
+      }
+    }
+  }
+}

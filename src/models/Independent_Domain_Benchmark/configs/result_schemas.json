@@ -1,0 +1,67 @@
+{
+  "method_view_result": {
+    "file": "experiments/external_validation/<METHOD_ID>/<view>/result.json",
+    "fields": [
+      "dataset_id",
+      "source",
+      "view",
+      "method_id",
+      "status",
+      "failure_kind",
+      "labels_artifact",
+      "selected_algorithm",
+      "best_configuration",
+      "n_evaluations",
+      "seed",
+      "search_space_id",
+      "search_space_hash",
+      "model_artifact_hashes",
+      "online_runtime_sec",
+      "init_runtime_sec",
+      "environment",
+      "protocol_hash",
+      "code_commit",
+      "created_at"
+    ],
+    "must_not_contain": [
+      "labels",
+      "ground_truth_k",
+      "any ARI or offline score"
+    ]
+  },
+  "offline_evaluation": {
+    "file": "evaluation/offline_metrics.json",
+    "separate_from_execution": true,
+    "written_only_after": "predictions are persisted",
+    "fields": [
+      "dataset_id",
+      "method_id",
+      "view",
+      "ari",
+      "nmi",
+      "ami",
+      "fmi",
+      "purity",
+      "predicted_k",
+      "true_k",
+      "k_error",
+      "k_correct"
+    ]
+  },
+  "metric_validation": {
+    "file": "metric_validation/fixed32/<view>/candidates.json",
+    "separate_schema": true,
+    "fields": [
+      "dataset_id",
+      "view",
+      "candidate_id",
+      "algorithm",
+      "hyperparameters",
+      "predicted_k",
+      "labels_artifact",
+      "cvi_values",
+      "runtime_sec"
+    ],
+    "ari_added_offline": true
+  }
+}

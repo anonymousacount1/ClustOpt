@@ -1,0 +1,73 @@
+{
+  "amendment_id": "6d59078460ec24d3",
+  "candidate_basis_version": "canonical_fixed32_candidate_basis_v1",
+  "ranking_basis": "available_case",
+  "modern_primary": [
+    {
+      "metric_id": "cdbw",
+      "available_case_utility_macro": 0.38291015863316763,
+      "available_case_utility_source_balanced": 0.4035978100892312,
+      "coverage": 0.98,
+      "units_with_valid_utility": 147,
+      "units_total": 150,
+      "available_case_macro_rank": 46.0
+    },
+    {
+      "metric_id": "cvdd",
+      "available_case_utility_macro": 0.5456825797655626,
+      "available_case_utility_source_balanced": 0.5480472909085204,
+      "coverage": 0.68,
+      "units_with_valid_utility": 102,
+      "units_total": 150,
+      "available_case_macro_rank": 1.0
+    },
+    {
+      "metric_id": "cvnn",
+      "available_case_utility_macro": 0.4703858252787971,
+      "available_case_utility_source_balanced": 0.4881457598460794,
+      "coverage": 0.9866666666666667,
+      "units_with_valid_utility": 148,
+      "units_total": 150,
+      "available_case_macro_rank": 10.0
+    },
+    {
+      "metric_id": "dcsi",
+      "available_case_utility_macro": 0.38636254555365546,
+      "available_case_utility_source_balanced": 0.39861695152644,
+      "coverage": 0.9666666666666667,
+      "units_with_valid_utility": 145,
+      "units_total": 150,
+      "available_case_macro_rank": 44.0
+    }
+  ],
+  "comparison_groups": {
+    "Established": {
+      "n": 10,
+      "available_case_utility_macro_mean": 0.43372419134948004,
+      "best_metric": [
+        "noise_aware_silhouette"
+      ]
+    },
+    "New46": {
+      "n": 46,
+      "available_case_utility_macro_mean": 0.4013214035295108,
+      "best_metric": [
+        "gridness_fft_acf"
+      ]
+    },
+    "Original": {
+      "n": 7,
+      "available_case_utility_macro_mean": 0.424937752103061,
+      "best_metric": [
+        "silhouette"
+      ]
+    }
+  },
+  "diagnostics_excluded": [
+    "cdbw_package_compat",
+    "dcsi_author_compat"
+  ],
+  "mode_shopping": false,
+  "coverage_caveat": "utility is an available-case macro over the units where a metric is defined. A metric with partial coverage is NOT thereby superior to a full-coverage metric; no coverage-adjusted score is introduced here and none is implied. metric_rank_table_full_coverage_only.csv gives the restricted comparison.",
+  "cvnn_note": "CVNN is normalised across each fixed32 bank, the comparison set fpc assumes, so its value is bank-relative by design."
+}

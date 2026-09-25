@@ -1,0 +1,244 @@
+{
+  "artifact_table": {
+    "A0": {
+      "variant_dir": "experiments/external_baselines/Unified_MKR/derived/autoclust_split1/original_cvis",
+      "selector_sha256_16": "5efade154b6f76d8",
+      "predictor_sha256_16": "c1f4e857e0a7a7ad",
+      "feature_columns_sha256_16": "e07ad6605ff15652",
+      "cvi_candidates_sha256_16": "dbabeeb5a2e6ff7c",
+      "n_cvi_features": 7,
+      "n_landmark_features": 7,
+      "train_split_ids": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "predictor_architecture": {
+        "pipeline": [
+          "SimpleImputer",
+          "StandardScaler",
+          "MLPRegressor"
+        ],
+        "imputer_strategy": "median",
+        "imputer_n_features_in": 7,
+        "scaler_n_features_in": 7,
+        "hidden_layer_sizes": [
+          60,
+          30,
+          10
+        ],
+        "activation": "relu",
+        "max_iter": 300,
+        "early_stopping": true,
+        "n_iter_no_change": 10,
+        "validation_fraction": 0.1,
+        "random_state": 1234,
+        "n_features_in": 7,
+        "n_outputs": 1
+      },
+      "predictor_metadata_arch": {
+        "hidden_layer_sizes": [
+          60,
+          30,
+          10
+        ],
+        "activation": "relu",
+        "note": "matches AutoClust MLPRegressor((60,30,10), relu)"
+      }
+    },
+    "A1": {
+      "variant_dir": "experiments/external_baselines/Unified_MKR/derived/autoclust_split1/original_plus_established",
+      "selector_sha256_16": "b4a0d76bc9b97218",
+      "predictor_sha256_16": "6c0975fb360c3481",
+      "feature_columns_sha256_16": "6a3d5f0b2ad4f96d",
+      "cvi_candidates_sha256_16": "efc43b00eee7098b",
+      "n_cvi_features": 17,
+      "n_landmark_features": 7,
+      "train_split_ids": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "predictor_architecture": {
+        "pipeline": [
+          "SimpleImputer",
+          "StandardScaler",
+          "MLPRegressor"
+        ],
+        "imputer_strategy": "median",
+        "imputer_n_features_in": 17,
+        "scaler_n_features_in": 17,
+        "hidden_layer_sizes": [
+          60,
+          30,
+          10
+        ],
+        "activation": "relu",
+        "max_iter": 300,
+        "early_stopping": true,
+        "n_iter_no_change": 10,
+        "validation_fraction": 0.1,
+        "random_state": 1234,
+        "n_features_in": 17,
+        "n_outputs": 1
+      },
+      "predictor_metadata_arch": {
+        "hidden_layer_sizes": [
+          60,
+          30,
+          10
+        ],
+        "activation": "relu",
+        "note": "matches AutoClust MLPRegressor((60,30,10), relu)"
+      }
+    },
+    "A2": {
+      "variant_dir": "experiments/external_baselines/Unified_MKR/derived/autoclust_split1/original_plus_new46",
+      "selector_sha256_16": "b4a0d76bc9b97218",
+      "predictor_sha256_16": "751aaec7d687ccb4",
+      "feature_columns_sha256_16": "448d0502f7862831",
+      "cvi_candidates_sha256_16": "baba9432559a8a80",
+      "n_cvi_features": 51,
+      "n_landmark_features": 7,
+      "train_split_ids": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "predictor_architecture": {
+        "pipeline": [
+          "SimpleImputer",
+          "StandardScaler",
+          "MLPRegressor"
+        ],
+        "imputer_strategy": "median",
+        "imputer_n_features_in": 51,
+        "scaler_n_features_in": 51,
+        "hidden_layer_sizes": [
+          60,
+          30,
+          10
+        ],
+        "activation": "relu",
+        "max_iter": 300,
+        "early_stopping": true,
+        "n_iter_no_change": 10,
+        "validation_fraction": 0.1,
+        "random_state": 1234,
+        "n_features_in": 51,
+        "n_outputs": 1
+      },
+      "predictor_metadata_arch": {
+        "hidden_layer_sizes": [
+          60,
+          30,
+          10
+        ],
+        "activation": "relu",
+        "note": "matches AutoClust MLPRegressor((60,30,10), relu)"
+      }
+    },
+    "A3": {
+      "variant_dir": "experiments/external_baselines/Unified_MKR/derived/autoclust_split1/extended_cvis",
+      "selector_sha256_16": "5efade154b6f76d8",
+      "predictor_sha256_16": "252e4fca8d7399b9",
+      "feature_columns_sha256_16": "ac32fe0d95bfae06",
+      "cvi_candidates_sha256_16": "619523a0cf716db2",
+      "n_cvi_features": 61,
+      "n_landmark_features": 7,
+      "train_split_ids": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "predictor_architecture": {
+        "pipeline": [
+          "SimpleImputer",
+          "StandardScaler",
+          "MLPRegressor"
+        ],
+        "imputer_strategy": "median",
+        "imputer_n_features_in": 61,
+        "scaler_n_features_in": 61,
+        "hidden_layer_sizes": [
+          60,
+          30,
+          10
+        ],
+        "activation": "relu",
+        "max_iter": 300,
+        "early_stopping": true,
+        "n_iter_no_change": 10,
+        "validation_fraction": 0.1,
+        "random_state": 1234,
+        "n_features_in": 61,
+        "n_outputs": 1
+      },
+      "predictor_metadata_arch": {
+        "hidden_layer_sizes": [
+          60,
+          30,
+          10
+        ],
+        "activation": "relu",
+        "note": "matches AutoClust MLPRegressor((60,30,10), relu)"
+      }
+    }
+  },
+  "expected_feature_counts": {
+    "A0": 7,
+    "A1": 17,
+    "A2": 51,
+    "A3": 61
+  },
+  "counts_match": true,
+  "ambiguity": "none - exactly one artifact of each kind per variant directory"
+}

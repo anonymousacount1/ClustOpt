@@ -1,0 +1,12 @@
+{
+  "stage": "3C",
+  "experiment": "family/subfamily metric specialization",
+  "created_at": "2026-09-09T14:00:03",
+  "source_commit": "67ea3f2a5a82e8283332bf07fbc147b1086e57fb",
+  "n_families": 12,
+  "n_subfamilies": 86,
+  "n_live_metrics": 61,
+  "n_metrics_utility_space": 60,
+  "verdict": "SUPPORTED",
+  "core_size": 3
+}

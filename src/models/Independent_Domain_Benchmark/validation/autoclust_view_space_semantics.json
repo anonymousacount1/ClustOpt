@@ -1,0 +1,188 @@
+{
+  "audit": "autoclust_view_space_semantics",
+  "stage": "pre-4B4",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "frozen_design": "AutoML4Clust/utils/dataset_loader.py::LoadedDataset.get_record returns (partition_space, evaluation_space) and documents that the evaluation space is ALWAYS the full 2-D space. AutoClust/indomain/dataset.py builds ViewMetricEngine(config_root, partition, evaluation), so historically the decision space is the view and the evaluation space is the full 2-D matrix.",
+  "central_routing": "ViewMetricEngine._clustopt_raw calls evaluator.evaluate(labels, X_decision, X_full, ...) and GenericCVIEvaluator dispatches per metric on metric.space. Routing is CENTRAL, not metric-specific.",
+  "metric_space_counts": {
+    "decision": 12,
+    "full": 48
+  },
+  "poisoned_routing": {
+    "x_only": {
+      "X_view_shape": [
+        120,
+        1
+      ],
+      "X_full_shape": [
+        120,
+        2
+      ],
+      "per_metric": {
+        "silhouette": "X_full",
+        "davies_bouldin": "X_view",
+        "calinski_harabasz": "X_view",
+        "avg_pca_isotropy": "X_full",
+        "neighborhood_purity": "X_view",
+        "s_dbw": "X_view",
+        "arc_circle_fit": "X_full",
+        "gridness_fft_acf": "X_full",
+        "blobness_log_dog": "X_full",
+        "lbp_stationarity": "X_full",
+        "parallel_bands": "X_full",
+        "connectivity_components": "X_full"
+      }
+    },
+    "y_only": {
+      "X_view_shape": [
+        120,
+        1
+      ],
+      "X_full_shape": [
+        120,
+        2
+      ],
+      "per_metric": {
+        "silhouette": "X_full",
+        "davies_bouldin": "X_view",
+        "calinski_harabasz": "X_view",
+        "avg_pca_isotropy": "X_full",
+        "neighborhood_purity": "X_view",
+        "s_dbw": "X_view",
+        "arc_circle_fit": "X_full",
+        "gridness_fft_acf": "X_full",
+        "blobness_log_dog": "X_full",
+        "lbp_stationarity": "X_full",
+        "parallel_bands": "X_full",
+        "connectivity_components": "X_full"
+      }
+    },
+    "xy_2d": {
+      "X_view_shape": [
+        120,
+        2
+      ],
+      "X_full_shape": [
+        120,
+        2
+      ],
+      "per_metric": {
+        "silhouette": "X_full",
+        "davies_bouldin": "X_view",
+        "calinski_harabasz": "X_view",
+        "avg_pca_isotropy": "X_full",
+        "neighborhood_purity": "X_view",
+        "s_dbw": "X_view",
+        "arc_circle_fit": "X_full",
+        "gridness_fft_acf": "X_full",
+        "blobness_log_dog": "X_full",
+        "lbp_stationarity": "X_full",
+        "parallel_bands": "X_full",
+        "connectivity_components": "X_full"
+      }
+    }
+  },
+  "central_invariant_holds": true,
+  "x_full_default_probe": {
+    "omitted": {
+      "decision": [
+        120,
+        1
+      ],
+      "full": [
+        120,
+        1
+      ],
+      "identical": true
+    },
+    "identical": {
+      "decision": [
+        120,
+        1
+      ],
+      "full": [
+        120,
+        1
+      ],
+      "identical": true
+    },
+    "different": {
+      "decision": [
+        120,
+        1
+      ],
+      "full": [
+        120,
+        2
+      ],
+      "identical": false
+    }
+  },
+  "row_count_invariant": true,
+  "families_probed": [
+    "silhouette",
+    "davies_bouldin",
+    "calinski_harabasz",
+    "avg_pca_isotropy",
+    "neighborhood_purity",
+    "s_dbw",
+    "arc_circle_fit",
+    "gridness_fft_acf",
+    "blobness_log_dog",
+    "lbp_stationarity",
+    "parallel_bands",
+    "connectivity_components"
+  ],
+  "external_50_used": false,
+  "labels_used": false,
+  "landmark_routing": {
+    "extractor": "unified_mkr.metafeatures.extract_autoclust",
+    "x_only": "X_view (180,1)",
+    "y_only": "X_view (180,1)",
+    "xy_2d": "X_view (180,2)",
+    "alternate_or_full_space_access": false,
+    "verdict": "VIEW-PURE - the landmark stage never sees another representation"
+  },
+  "candidate_scoring_routing": {
+    "mechanism": "central: ViewMetricEngine -> GenericCVIEvaluator dispatches on metric.space",
+    "decision_space_metrics_receive": "X_view",
+    "full_space_metrics_receive": "the evaluation space",
+    "metric_specific_bypass": false,
+    "note": "proven by poisoning X_view and X_full to disjoint widths and value ranges and reading the matrix off wrapped metric objects"
+  },
+  "x_full_default_semantics": {
+    "autoclust_scoring.score_trace": "X_full=None, aliased to X_decision inside the function",
+    "autoclust_scoring.score_all_arms": "X_full=None, forwarded",
+    "ml2dac_scoring.score_trace": "REQUIRED (fixed at 6b32cd1)",
+    "ml2dac_scoring.score_all_arms": "REQUIRED (fixed at 6b32cd1)",
+    "clustopt_adapter.run_search": "X_view and X_full both explicit and required",
+    "caller_can_silently_cross_view": true,
+    "realised_in_committed_evidence": false,
+    "why_not_realised": "there is no Stage-4 AutoClust execution layer yet. The scoring-layer tests use an xy_2d fixture where X_view == X_full, and the component-equivalence evidence compared adapter against reference over the SAME engine, so its result is matrix-agnostic and its claim stands as written"
+  },
+  "classification": {
+    "value": "V2",
+    "label": "INTENTIONAL AUXILIARY-SPACE SEMANTICS",
+    "evidence": "AutoML4Clust/utils/dataset_loader.py::get_record documents that the evaluation space is ALWAYS the full 2-D space, and AutoClust/indomain/dataset.py passes (partition, evaluation) into ViewMetricEngine. Candidate partitions are generated in the view space; metrics declaring space=\"full\" are then evaluated on the full 2-D evaluation space by frozen design. This is a documented mixture, not accidental cross-view scoring.",
+    "secondary_finding": "the Stage-4 autoclust_scoring API defaults X_full to X_decision, which would silently degrade this V2 design into V3 cross-view scoring on 1-D views if a caller omits it. No committed evidence is affected; the hazard is latent and matters for the Stage 4B-4 common runner.",
+    "scientific_semantic_change_required": false,
+    "autoclust_remains_closed": true
+  },
+  "ml2dac_cross_check": {
+    "x_full": "REQUIRED, no aliasing",
+    "meta_features": "decision space via pymfe_worker",
+    "candidate_clustering": "decision space",
+    "verdict": "consistent; no mismatch found; ML2DAC not reopened"
+  },
+  "clustopt_cross_check": {
+    "contract": "clustopt_adapter.run_search(X_view, X_full, ...) - both explicit and required",
+    "verdict": "the view-specific decision matrix is unambiguous; already guaranteed, no new machinery added",
+    "cited_evidence": "Stage 4B-2 verifier, 44/44"
+  },
+  "proposed_common_runner_invariant": "every physical trace and scorer must receive an explicit scientific view identity AND the two matrices bound to it (view/decision and full/evaluation). ClustOpt already satisfies this; ML2DAC now requires X_full; AutoClust still defaults it.",
+  "row_and_sample_invariants": {
+    "same_sample_count_checked": true,
+    "same_row_order": "preserved - all matrices are views of the same row set",
+    "note": "a feature-space difference must never hide a row mismatch; the poisoned fixtures keep identical row counts and order"
+  }
+}

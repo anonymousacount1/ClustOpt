@@ -1,0 +1,67 @@
+{
+  "amendment": "AUTOCLUST COMMON CANDIDATE-SLATE SEED IDENTITY",
+  "date": "2026-09-09",
+  "authorised_by": "supervisor (Option 2)",
+  "stage": "4B-3A1",
+  "pre_scientific_execution": true,
+  "no_external_result_inspected_before_amendment": true,
+  "outcome_driven": false,
+  "seed_identity_string": "autoclust_shared_candidate_slate",
+  "method_id_mapping": {
+    "IDB_AutoClust_A0_original_cvis": "autoclust_shared_candidate_slate",
+    "IDB_AutoClust_A1_original_plus_established": "autoclust_shared_candidate_slate",
+    "IDB_AutoClust_A2_original_plus_new46": "autoclust_shared_candidate_slate",
+    "IDB_AutoClust_A3_extended_cvis": "autoclust_shared_candidate_slate"
+  },
+  "method_ids_unchanged": true,
+  "old_state": {
+    "seed_identity": "fallback to the full scientific METHOD_ID",
+    "trace_group": "autoclust_per_arm",
+    "example_seeds_c2e_000008_9cbad322_xy_2d": {
+      "A0": 1374348284,
+      "A1": 1506482300,
+      "A2": 851195134,
+      "A3": 693788497
+    },
+    "hashes": {
+      "benchmark_protocol.json": "0119dc0d91c2ef12",
+      "protocol.py": "eed829fc42a3a338",
+      "config_hashes.benchmark_protocol": "be6865e2dc20e504"
+    }
+  },
+  "new_state": {
+    "seed_identity": "autoclust_shared_candidate_slate",
+    "hashes": {
+      "benchmark_protocol.json": "61208638cbcd74de",
+      "protocol.py": "a19f8e5e01a02e60"
+    }
+  },
+  "rationale": "common random numbers for the CVI-inventory decomposition: four independent candidate slates would inject Monte-Carlo variation into the A1-A0, A2-A0, A3-A1, A3-A2 and A3-A0 contrasts, which is avoidable because candidate generation was proven pre-sampled and inventory-independent",
+  "evidence_available_before_amendment": [
+    "landmark features historically exact on both n branches (df5af99)",
+    "four selectors scientifically identical fitted state (df5af99)",
+    "historical selected-algorithm fidelity 15/15 (df5af99)",
+    "candidate generation pre-sampled and non-adaptive (3990cfb)",
+    "candidate generation independent of CVI inventory and scores (3990cfb)",
+    "equal-seed configuration-list identity, 300 configs (3990cfb)",
+    "seven-algorithm seed semantics (fc48709)",
+    "seed-identity conflict discovered and escalated (923bf68)"
+  ],
+  "scope": {
+    "changed": [
+      "AutoClust seed identity",
+      "seed/trace grouping labels"
+    ],
+    "unchanged": [
+      "corpus manifest 709712107424ad4e",
+      "search-space fingerprint 8ddf86c79888ebe9",
+      "the four scientific METHOD_IDs",
+      "model artifacts",
+      "metric registries",
+      "budget 50",
+      "K range 2..5",
+      "ClustOpt and ML2DAC seed identities"
+    ]
+  },
+  "physical_reuse_status": "PENDING EMPIRICAL VALIDATION"
+}

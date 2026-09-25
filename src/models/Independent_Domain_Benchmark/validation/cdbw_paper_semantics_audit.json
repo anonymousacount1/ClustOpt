@@ -1,0 +1,298 @@
+{
+  "metric": "CDbw",
+  "package": "PyPI cdbw==0.2 (MIT)",
+  "definition_sources": {
+    "primary_publication": "Halkidi & Vazirgiannis (2008), 'A density-based cluster validity approach using multi-representatives', Pattern Recognition Letters 29, 773-786",
+    "primary_pdf_obtained": false,
+    "primary_pdf_limitation": "the article is paywalled and no open-access copy was reachable, so the full equation set could not be quoted verbatim from the source PDF",
+    "quoted_definitions_recovered": {
+      "neighbourhood_radius": "'the neighborhood of a data point is defined to be a hypersphere centered at it with a radius equal to the average standard deviation of the considered clusters, stdev'",
+      "compactness": "Compactness(C) = sum_s Intra_dens(C, s) / n_s",
+      "intra_change": "Intra_change(C) = sum_i |Intra_dens(C, s_i) - Intra_dens(C, s_{i-1})| / (n_s - 1)"
+    },
+    "corroborating_implementation": "CRAN fpc::cdbw, maintained by Christian Hennig, co-author of Halkidi, Vazirgiannis & Hennig (2015), the authoritative restatement of the index",
+    "evidence_level_per_correction": {
+      "C1_stdev": "paper text + package docstring + fpc",
+      "C2_separation_distance": "required by permutation invariance + fpc",
+      "C3_inter_density": "fpc only -- the primary equation could not be quoted; this correction does NOT affect permutation invariance and is flagged for project_lead review"
+    }
+  },
+  "permutation_invariance_of_the_published_definition": {
+    "answer": "YES",
+    "argument": "CDbw is built from per-cluster quantities and from quantities defined on UNORDERED cluster pairs, aggregated by sums, means, minima over all other clusters and maxima over all other clusters. Every such aggregation is symmetric under a bijective renaming of clusters, so the index is a function of the partition alone.",
+    "corroboration": "fpc::cdbw implements exactly these symmetric aggregations"
+  },
+  "root_cause": {
+    "minimal_example": {
+      "n": 120,
+      "K": 3,
+      "d": 2,
+      "construction": "three Gaussian clusters with deliberately different spreads (0.10 / 0.50 / 0.90)",
+      "per_cluster_standard_deviation": [
+        0.10880013535576788,
+        0.497847587432165,
+        0.8346207477256361
+      ],
+      "package_stdev_under_each_ordering": {
+        "[0, 1, 2]": 0.8346207477256361,
+        "[2, 1, 0]": 0.10880013535576788,
+        "[1, 2, 0]": 0.497847587432165,
+        "[0, 2, 1]": 0.497847587432165
+      },
+      "package_value_equals": "the standard deviation of the HIGHEST-INDEXED cluster",
+      "paper_value_should_be": 0.480422823504523
+    },
+    "first_differing_quantity": "stdev, returned by prep()",
+    "why": "prep() assigns `stdev` inside `for i: for j:` without accumulating, so only the final iteration (i=j=K-1) survives. The docstring of that same function says 'Average standard deviation of the considered clusters', so the intended semantics and the implemented semantics disagree.",
+    "second_defect": {
+      "quantity": "dist_m inside separation()",
+      "code": "dist_mmm[i] = min(dist_mm[nums[i]:nums[i+1]]) over j<i only, then dist_m = sum(dist_mmm)/K",
+      "consequence": "each cluster is compared only with LOWER-indexed clusters, so cluster 0 contributes 0 to a sum that is nonetheless divided by K"
+    },
+    "third_deviation": {
+      "quantity": "inter_dens inside separation()",
+      "code": "inter_dens = max(dens_mean) / K, a single global maximum",
+      "expected": "the mean over clusters of each cluster's maximum pairwise inter-density",
+      "label_invariant": true,
+      "note": "a faithfulness deviation, not a cause of the ordering defect"
+    },
+    "components_affected": {
+      "compactness": [
+        "stdev"
+      ],
+      "cohesion": [
+        "stdev"
+      ],
+      "separation": [
+        "stdev",
+        "dist_m",
+        "inter_dens"
+      ]
+    }
+  },
+  "classification": {
+    "class": "A",
+    "label": "PACKAGE IMPLEMENTATION DEFECT",
+    "statement": "the published algorithm aggregates over clusters symmetrically and is permutation-invariant; PyPI cdbw 0.2 introduces order-dependent artefacts that its own docstrings contradict",
+    "evidence": [
+      "prep() documents 'Average standard deviation of the considered clusters' but returns the last cluster's standard deviation",
+      "the published neighbourhood radius is 'a radius equal to the average standard deviation of the considered clusters, stdev'",
+      "the independent CRAN implementation fpc::cdbw computes mean(sqrt(wvar)) over clusters and takes min over ALL j != i, and is permutation-invariant",
+      "no ordering of clusters is meaningful for an unordered partition, and none is referenced anywhere in the package or its docs"
+    ],
+    "not_class_B": "nothing in the definition or in either implementation prescribes a cluster ordering",
+    "not_class_C": "the aggregations are not under-specified: the paper text, the package's own docstring and the independent fpc implementation agree on what they should be"
+  },
+  "ranking_impact": {
+    "what_was_varied": "ONLY the integer names of the clusters; the partitions themselves are identical throughout",
+    "data": "non-scientific deterministic fixtures; the frozen external corpus was not touched",
+    "rows": [
+      {
+        "fixture_id": "separated_3",
+        "n_candidates": 4,
+        "n_orderings": 24,
+        "max_score_spread": 0.0496606660761818,
+        "max_relative_spread": 0.034274968465160545,
+        "distinct_winners": [
+          0,
+          2
+        ],
+        "winner_changes": true,
+        "distinct_full_rankings": 2,
+        "ranking_changes": true
+      },
+      {
+        "fixture_id": "separated_4",
+        "n_candidates": 4,
+        "n_orderings": 24,
+        "max_score_spread": 0.3543795071554974,
+        "max_relative_spread": 3.7886675830221024,
+        "distinct_winners": [
+          0
+        ],
+        "winner_changes": false,
+        "distinct_full_rankings": 1,
+        "ranking_changes": false
+      },
+      {
+        "fixture_id": "mixed_density_4",
+        "n_candidates": 4,
+        "n_orderings": 24,
+        "max_score_spread": 0.9310579578451365,
+        "max_relative_spread": 2.4194874493103145,
+        "distinct_winners": [
+          0
+        ],
+        "winner_changes": false,
+        "distinct_full_rankings": 2,
+        "ranking_changes": true
+      },
+      {
+        "fixture_id": "nested_rings_3",
+        "n_candidates": 4,
+        "n_orderings": 24,
+        "max_score_spread": 0.023712531792020188,
+        "max_relative_spread": 0.8996618297278502,
+        "distinct_winners": [
+          0
+        ],
+        "winner_changes": false,
+        "distinct_full_rankings": 2,
+        "ranking_changes": true
+      },
+      {
+        "fixture_id": "elongated_3",
+        "n_candidates": 4,
+        "n_orderings": 24,
+        "max_score_spread": 0.019240279391997024,
+        "max_relative_spread": 0.5221413824924696,
+        "distinct_winners": [
+          0
+        ],
+        "winner_changes": false,
+        "distinct_full_rankings": 1,
+        "ranking_changes": false
+      }
+    ],
+    "any_winner_change": true,
+    "any_ranking_change": true,
+    "max_score_spread_overall": 0.9310579578451365,
+    "verdict": "MATERIAL -- arbitrary cluster naming can change which candidate partition is selected as best"
+  },
+  "algebraic_validation": {
+    "rationale": "validates the correction against the MIT package on inputs where the defects' effect is exactly predictable, so the corrected implementation is not validated only against itself",
+    "rows": [
+      {
+        "case": "two_copies_far",
+        "K": 2,
+        "per_cluster_sd_all_equal": false,
+        "stdev_package": 0.25711992191232563,
+        "stdev_paper": 0.2571199219123257,
+        "compactness_ours": 0.7332829959825391,
+        "compactness_package": 0.7332829959825391,
+        "compactness_abs_diff": 0.0,
+        "cohesion_ours": 0.5326112183986723,
+        "cohesion_package": 0.5326112183986723,
+        "cohesion_abs_diff": 0.0,
+        "inter_dens": 0.0,
+        "separation_ours": 18.955155806483248,
+        "separation_package": 9.477577903241624,
+        "separation_ratio": 2.0,
+        "cdbw_ours": 7.403026135720133,
+        "cdbw_package": 3.7015130678600663,
+        "cdbw_ratio": 2.0,
+        "compactness_identical": true,
+        "cohesion_identical": true,
+        "separation_is_exactly_double": true
+      },
+      {
+        "case": "two_copies_farther",
+        "K": 2,
+        "per_cluster_sd_all_equal": false,
+        "stdev_package": 0.31121044458784775,
+        "stdev_paper": 0.3112104445878477,
+        "compactness_ours": 0.554669840363668,
+        "compactness_package": 0.554669840363668,
+        "compactness_abs_diff": 0.0,
+        "cohesion_ours": 0.4161682532176663,
+        "cohesion_package": 0.4161682532176663,
+        "cohesion_abs_diff": 0.0,
+        "inter_dens": 0.0,
+        "separation_ours": 58.72000493130754,
+        "separation_package": 29.36000246565377,
+        "separation_ratio": 2.0,
+        "cdbw_ours": 13.554689800345237,
+        "cdbw_package": 6.7773449001726185,
+        "cdbw_ratio": 2.0,
+        "compactness_identical": true,
+        "cohesion_identical": true,
+        "separation_is_exactly_double": true
+      },
+      {
+        "case": "three_copies_far",
+        "K": 3,
+        "per_cluster_sd_all_equal": false,
+        "stdev_package": 0.2542218014005915,
+        "stdev_paper": 0.25422180140059153,
+        "compactness_ours": 0.7164722149688667,
+        "compactness_package": 0.7164722149688668,
+        "compactness_abs_diff": 1.1102230246251565e-16,
+        "cohesion_ours": 0.4848733564965513,
+        "cohesion_package": 0.4848733564965514,
+        "cohesion_abs_diff": 1.1102230246251565e-16,
+        "inter_dens": 0.0,
+        "separation_ours": 29.026392012906097,
+        "separation_package": 19.35092800860406,
+        "separation_ratio": 1.5000000000000002,
+        "cdbw_ours": 10.083718883638475,
+        "cdbw_package": 6.7224792557589845,
+        "cdbw_ratio": 1.4999999999999998,
+        "compactness_identical": true,
+        "cohesion_identical": true,
+        "separation_is_exactly_double": false
+      }
+    ],
+    "compactness_and_cohesion_identical_everywhere": true,
+    "separation_exactly_double_on_isolated_K2": true
+  },
+  "fpc_cross_check": {
+    "available": true,
+    "implementation": "CRAN fpc::cdbw (independent of the Python package)",
+    "note": "fpc uses a different representative construction (r border representatives) and a different set of shrink factors, so it is NOT a numeric oracle for our value. It is evidence about whether a faithful implementation is permutation-invariant.",
+    "rows": [
+      {
+        "fixture_id": "separated_3",
+        "n_orderings": 6,
+        "values": [
+          27.2799364458957,
+          27.2799364458957,
+          27.2799364458957,
+          27.2799364458957,
+          27.2799364458957,
+          27.2799364458957
+        ],
+        "max_abs_diff": 0.0
+      },
+      {
+        "fixture_id": "separated_4",
+        "n_orderings": 6,
+        "values": [
+          12.5078205206669,
+          12.5078205206669,
+          12.5078205206669,
+          12.5078205206669,
+          12.5078205206669,
+          12.5078205206669
+        ],
+        "max_abs_diff": 0.0
+      },
+      {
+        "fixture_id": "mixed_density_4",
+        "n_orderings": 6,
+        "values": [
+          3.73834069972563,
+          3.73834069972563,
+          3.73834069972563,
+          3.73834069972563,
+          3.73834069972563,
+          3.73834069972563
+        ],
+        "max_abs_diff": 0.0
+      }
+    ],
+    "fpc_is_permutation_invariant": true
+  },
+  "resolution": {
+    "primary_metric_id": "cdbw",
+    "implementation": "paper-faithful correction layer over the MIT package: representatives, shrunk representatives, per-cluster density and mutually closest representative pairs are the package's own code, reused with attribution; three aggregations are replaced",
+    "corrections": {
+      "C1_stdev": "the neighbourhood radius must be the AVERAGE standard deviation over the considered clusters. prep() overwrites a scalar inside a double loop, so it returns the standard deviation of the HIGHEST-INDEXED cluster only. Affects compactness, cohesion and separation, and is the first internal quantity that changes under a label permutation.",
+      "C2_separation_distance": "Sep aggregates, for each cluster, the distance to its CLOSEST OTHER cluster. separation() minimises over lower-indexed clusters only, so cluster 0 contributes 0 to a sum divided by K.",
+      "C3_inter_density": "Inter_dens is the mean over clusters of each cluster's maximum pairwise inter-density. separation() uses the single global maximum over all pairs divided by K. This one is label-invariant, so it is a faithfulness correction rather than a cause of the ordering defect."
+    },
+    "label_ordering_convention_used": false,
+    "why_no_convention": "the corrected index is permutation-invariant by construction, so no ordering needs to be invented. Labels are only made contiguous so the reused helpers can index by label, and that step is now provably neutral.",
+    "diagnostic_metric_id": "cdbw_package_compat",
+    "diagnostic_role": "reproduces the raw package under a canonical ordering; NOT a comparator, not in the primary registry"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "method": "AutoML4Clust",
+  "optimizer": "SMAC",
+  "time_budget_sec": 30,
+  "n_loops": 10,
+  "max_iterations": null,
+  "metric": "silhouette",
+  "random_state": 42,
+  "use_warmstarting": false,
+  "fail_on_invalid_clustering": false,
+  "enforce_wallclock_timeout": false,
+  "n_jobs": 1,
+  "normalize_input": true,
+  "k_range": [2, 8],
+  "algorithms": null,
+  "record_types": ["1d_x", "1d_y", "2d"],
+  "_notes": {
+    "purpose": "Tiny, fast configuration for the smoke test and quick local validation. NOT for the paper-level comparison (use automl4clust_smac_*.json for that)."
+  }
+}

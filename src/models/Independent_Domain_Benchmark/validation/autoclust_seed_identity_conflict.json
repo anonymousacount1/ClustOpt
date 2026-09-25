@@ -1,0 +1,63 @@
+{
+  "finding": "STOP -- the frozen Stage-4A seed protocol gives A0-A3 FOUR DIFFERENT candidate-generation seeds, so physical trace sharing is not available under the protocol as frozen",
+  "question_asked": "does the benchmark derive the candidate-generation seed from the full METHOD_ID, a shared seed_identity, or something else?",
+  "answer": "A -- the full scientific METHOD_ID",
+  "mechanism": {
+    "entrypoint": "models/Independent_Domain_Benchmark/search/protocol.py::derive_seed(dataset_id, view_id, method_id, base_seed=1234)",
+    "formula": "int(sha256(f\"{base_seed}|{dataset_id}|{view_id}|{seed_identity(method_id)}\").hexdigest()[:8],16) % 2**31",
+    "seed_identity": "TRACE_IDENTITY.get(method_id, method_id)",
+    "TRACE_IDENTITY_contains_autoclust": false,
+    "consequence": "seed_identity falls back to the METHOD_ID itself for every AutoClust arm"
+  },
+  "frozen_protocol_evidence": {
+    "trace_groups.autoclust_per_arm": [
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "trace_reuse.shared": [
+      [
+        "C0",
+        "C3"
+      ],
+      [
+        "C1",
+        "C4"
+      ]
+    ],
+    "autoclust_in_shared_list": false,
+    "reading": "Stage 4A deliberately froze AutoClust as PER-ARM seed identity; only the two ClustOpt pairs are listed as sharing a trace"
+  },
+  "resolved_seeds_example": {
+    "dataset_id": "c2e_000008_9cbad322",
+    "view_id": "xy_2d",
+    "seeds": {
+      "IDB_AutoClust_A0_original_cvis": 1374348284,
+      "IDB_AutoClust_A1_original_plus_established": 1506482300,
+      "IDB_AutoClust_A2_original_plus_new46": 851195134,
+      "IDB_AutoClust_A3_extended_cvis": 693788497
+    },
+    "distinct_seeds": 4,
+    "all_equal": false
+  },
+  "prior_300_config_harness": {
+    "seed_used": "derive_seed(dataset_id, view_id, \"IDB_AutoClust_A0\") -- ONE seed passed for all four arms",
+    "was_it_the_production_resolver": false,
+    "additional_defect": "the literal \"IDB_AutoClust_A0\" is not even a registry METHOD_ID; the real id is IDB_AutoClust_A0_original_cvis",
+    "what_it_actually_proved": "the sampler is a deterministic function of its seed -- identical seed gives an identical configuration list",
+    "what_it_did_NOT_prove": "that the frozen benchmark supplies the same seed to A0-A3. It does not."
+  },
+  "verdict": {
+    "configuration_trace_sharing_given_equal_seed": "PROVEN",
+    "benchmark_supplies_equal_seed": "NO",
+    "physical_trace_sharing_under_frozen_protocol": "NOT AVAILABLE",
+    "upgrade_permitted": false
+  },
+  "decision_required_from_project_lead": [
+    "OPTION 1 -- accept four separate physical AutoClust traces per dataset/view, consistent with the frozen autoclust_per_arm protocol. No protocol change; ~4x candidate execution cost for AutoClust.",
+    "OPTION 2 -- a formal PRE-RUN protocol amendment adding an autoclust shared seed identity to TRACE_IDENTITY and trace_reuse.shared, mirroring the ClustOpt C0/C3 and C1/C4 groups. Scientifically defensible because candidate generation was proven independent of the CVI inventory, but it IS a change to a frozen protocol and must be authorised, dated and recorded before any external run."
+  ],
+  "not_decided_automatically": true,
+  "no_protocol_file_was_modified": true
+}

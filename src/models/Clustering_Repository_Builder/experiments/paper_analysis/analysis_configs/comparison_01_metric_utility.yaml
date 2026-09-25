@@ -1,0 +1,153 @@
+# Comparison Suite 1 - Metric inventory and utility-selection ablation.
+#
+# Question behind the suite: does the expanded metric inventory contain useful
+# information, and can utility-based selection exploit it -- before any learned
+# predictor is involved?
+comparison_id: comparison_01
+title: Metric inventory and utility-selection ablation
+section: 02_comparison_01_metric_utility
+
+candidate_pools:
+  real_raw:
+    - real_top1_raw
+    - real_top3_raw
+    - real_top5_raw
+    - real_top10_raw
+    - real_top_dynamic_raw
+  baselines:
+    - all_metrics_uniform
+    - uniform_classic_cvi
+    - silhouette_single
+    - dbcv_single
+    - davies_bouldin_single
+    - calinski_harabasz_single
+  # Presentation order for every bar/box/heatmap in this suite.
+  display_order:
+    - silhouette_single
+    - calinski_harabasz_single
+    - davies_bouldin_single
+    - dbcv_single
+    - uniform_classic_cvi
+    - all_metrics_uniform
+    - real_top1_raw
+    - real_top3_raw
+    - real_top5_raw
+    - real_top10_raw
+    - real_top_dynamic_raw
+
+# Representative ids consumed from the FROZEN selection manifest. Placeholders
+# below use these ids verbatim -- no local aliasing, so a config can never point
+# at a representative the preliminary stage did not freeze.
+representative_ids:
+  - c1_best_observed_real_fixed_raw
+
+research_questions:
+  RQ1-A:
+    question: Does a uniform ensemble of classic CVIs outperform single classic CVIs?
+    reference: uniform_classic_cvi
+    comparisons: [silhouette_single, calinski_harabasz_single,
+                  davies_bouldin_single, dbcv_single]
+    clean: true
+    note: Same metric inventory family, same search space and budget; only the
+          number of pooled classic indices changes.
+  RQ1-B:
+    question: Does the expanded metric inventory add value without learned selection?
+    reference: all_metrics_uniform
+    comparisons: [uniform_classic_cvi]
+    clean: true
+    note: >-
+      The cleanest available inventory-level comparison: BOTH arms use uniform
+      weighting, so the only difference is which metrics are in the objective
+      (60 vs 4).
+  RQ1-C:
+    question: Does real-utility selection improve over uniform use of all metrics?
+    reference: all_metrics_uniform
+    comparisons: [real_top1_raw, real_top3_raw, real_top5_raw, real_top10_raw,
+                  real_top_dynamic_raw]
+    clean: false
+    note: >-
+      Estimates the UPPER BOUND benefit of utility-based metric selection and
+      weighting with no utility-prediction error. The real arms are utility
+      oracles, so this is a diagnostic bound, not a deployable result.
+  RQ1-D:
+    question: Does a dynamic metric count improve over the best fixed count?
+    reference: real_top_dynamic_raw
+    comparisons: ["@representative:c1_best_observed_real_fixed_raw"]
+    clean: true
+    note: >-
+      Both arms are real-utility raw, so the metric count is the only difference.
+      The fixed arm is the frozen retrospective representative, which makes this
+      test post-selection exploratory.
+
+# Warning that MUST appear in the generated report (12.3).
+causal_caveat: >-
+  Differences between Real Top-K and the classic baselines must NOT be attributed
+  solely to the newly designed metrics. Those comparisons change the metric
+  inventory, the metric selection, the utility weighting and possibly the metric
+  count simultaneously. The report separates an INVENTORY effect (RQ1-B, uniform
+  vs uniform), a SELECTION/WEIGHTING effect (RQ1-C, same inventory, uniform vs
+  utility-weighted) and a COMBINED SYSTEM effect (real Top-K vs single classic
+  CVIs). No clean classic-only real-utility Top-K experiment exists, so the
+  isolated effect of the new metrics alone cannot be identified from the existing
+  runs; this limitation is stated explicitly rather than glossed.
+
+grouping_levels: [global, family, subfamily, difficulty, cluster_count]
+primary_metrics: [best_view_mean_ari, best_view_median_ari, best_view_std_ari,
+                  best_view_k_accuracy, total_runtime_all_views_median_sec]
+secondary_metrics: [all_views_mean_ari, view_gap, success_rate,
+                    mean_selected_metric_count, mean_metric_weight_entropy]
+
+pairwise_hypotheses:
+  primary:
+    - {id: c1_all_vs_classic_uniform, a: all_metrics_uniform, b: uniform_classic_cvi,
+       family: comparison_01_inventory, direction: a_greater,
+       rationale: RQ1-B inventory effect with weighting held uniform}
+    - {id: c1_classic_uniform_vs_silhouette, a: uniform_classic_cvi,
+       b: silhouette_single, family: comparison_01_ensemble, direction: a_greater,
+       rationale: RQ1-A ensemble vs the strongest single classic CVI}
+    - {id: c1_real_dynamic_vs_best_fixed, a: real_top_dynamic_raw,
+       b: "@representative:c1_best_observed_real_fixed_raw",
+       family: comparison_01_metric_count, direction: two-sided,
+       rationale: RQ1-D dynamic vs best fixed metric count}
+  exploratory_grid:
+    references: [all_metrics_uniform, uniform_classic_cvi]
+    methods: [real_top1_raw, real_top3_raw, real_top5_raw, real_top10_raw,
+              real_top_dynamic_raw]
+
+required_capabilities: [primary_ari, best_view, k_analysis,
+                        runtime_total_all_views]
+optional_capabilities: [metric_selection, metric_category_usage,
+                        new_metric_usage, trace_best_gap, metric_entropy]
+
+tables:
+  - {name: comparison_01_summary.csv, grouping: global, importance: paper_main}
+  - {name: comparison_01_family_summary.csv, grouping: family, importance: paper_main}
+  - {name: comparison_01_subfamily_summary.csv, grouping: subfamily, importance: appendix}
+  - {name: comparison_01_pairwise_deltas.csv, kind: paired_deltas, importance: paper_main}
+  - {name: comparison_01_winrates.csv, kind: winrates, importance: paper_supplement}
+  - {name: comparison_01_metric_usage.csv, kind: metric_usage, importance: paper_supplement}
+  - {name: comparison_01_metric_category_usage.csv, kind: category_usage,
+     importance: paper_main}
+  - {name: comparison_01_gap_summary.csv, kind: gaps, importance: paper_supplement}
+  - {name: comparison_01_runtime_summary.csv, kind: runtime, importance: paper_supplement}
+  - {name: comparison_01_capability_warnings.csv, kind: capability, importance: appendix}
+  - {name: comparison_01_research_questions.csv, kind: research_questions,
+     importance: paper_main}
+
+plots:
+  - {name: comparison_01_best_view_ari_bar, kind: bar, importance: paper_main}
+  - {name: comparison_01_best_view_ari_boxplot, kind: boxplot, importance: paper_main}
+  - {name: comparison_01_family_heatmap, kind: heatmap, importance: paper_main}
+  - {name: comparison_01_pairwise_delta_boxplots, kind: paired_delta_boxplot,
+     importance: paper_main}
+  - {name: comparison_01_k_accuracy, kind: bar, importance: paper_supplement}
+  - {name: comparison_01_runtime_boxplot, kind: boxplot_log, importance: paper_supplement}
+  - {name: comparison_01_metric_category_weight_share, kind: stacked_bar,
+     importance: paper_main}
+  - {name: comparison_01_metric_selection_heatmap, kind: heatmap,
+     importance: paper_supplement}
+  - {name: comparison_01_trace_gap, kind: bar, importance: paper_supplement}
+
+reports: [README.md, METHODS_AND_DEFINITIONS.md, RESULTS.md, LIMITATIONS.md,
+          PAPER_CANDIDATES.md]
+workbook: 02_comparison_01_metric_utility.xlsx

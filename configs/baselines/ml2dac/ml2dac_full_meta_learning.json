@@ -1,0 +1,33 @@
+{
+  "method": "ML2DAC",
+  "mode": "full_meta_learning",
+  "use_meta_cvi_selection": true,
+  "use_warmstarting": true,
+  "use_algorithm_reduction": true,
+  "optimizer": "SMAC",
+  "time_budget_sec": 120,
+  "max_iterations": null,
+  "n_loops": null,
+  "n_optimizer_loops": 100,
+  "n_warmstarts": 25,
+  "n_similar_datasets": 1,
+  "mf_set_index": 4,
+  "random_state": 42,
+  "normalize_input": true,
+  "record_types": ["1d_x", "1d_y", "2d"],
+  "mkr_path": null,
+  "artifact_policy": "require_pretrained_or_fail",
+  "fail_on_missing_mkr": true,
+  "fail_on_invalid_clustering": false,
+  "enforce_wallclock_timeout": false,
+  "n_jobs": 1,
+  "_notes": {
+    "intent": "Strongest faithful ML2DAC: full application phase with meta-learning CVI selection (cvi='predict'), warmstart configurations, and algorithm/search-space reduction (limit_cs). Optimizer = SMAC Bayesian optimization. This is the paper-level setup, NOT an ablation.",
+    "budget": "SMAC enforces BOTH runcount-limit=n_optimizer_loops (100, includes the n_warmstarts=25) AND wallclock-limit=time_budget_sec (120s). Whichever is hit first stops optimization. time_budget_sec maps directly to a real wall-clock limit.",
+    "mf_set_index": "4 = ['statistical','info-theory','general'] -> the paper-strongest meta-feature set; trained CVI classifier present at models/RandomForestClassifier/statistical+info-theory+general/None.",
+    "random_state": "ML2DAC fixes random_state=1234 internally (SMAC rng + clustering algos); the config value is recorded for provenance but ML2DAC's internal seed governs determinism.",
+    "normalize_input": "ML2DAC StandardScales the input internally; the adapter passes the raw partition space (no double scaling).",
+    "mkr_path": "null = use the shipped MetaKnowledgeRepository at external/ml2dac/src/MetaKnowledgeRepository. Set to a path to use a user-provided MKR.",
+    "fairness": "ML2DAC receives only the partition space. No true labels, no true K, no metric utilities, no family metadata (true_labels=None passed internally)."
+  }
+}

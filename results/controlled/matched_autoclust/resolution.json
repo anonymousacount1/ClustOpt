@@ -1,0 +1,112 @@
+{
+  "frozen_checks": {
+    "best_reranked_policy_matches": true,
+    "best_reranked_mean_matches": true,
+    "best_original_policy_matches": true,
+    "best_original_mean_matches": true,
+    "vbs_matches": true,
+    "hybrid_oracle_matches": true,
+    "per_dataset_vector_mean_matches": true,
+    "n_datasets_1055": true,
+    "n_policies_20": true
+  },
+  "frozen_hashes": {
+    "per_dataset_policy_results.csv.gz": "753ddb9911ddf67096bae7debe7d7b86be626b08aff8d2edf4ae45784ec9ff21",
+    "per_policy_results.csv": "609276b2f9bd1f71d6a3bfe2bc2db3f746ad58c4e0e9ab2f0add0f86ce6467ce",
+    "per_run_reranker_results.csv.gz": "ae76c61476bf02fac159ee15203a7b9b97c3478e6c345ed2106b4b3f6665c5a9",
+    "reranker_assisted_vbs.json": "527c9829fd2554a77ee5287127a0ef4a12a2423adc88cc195c77e34307b6303a",
+    "hybrid_visited_oracle.json": "6425857f46892c2cfdcbc45b830cca1dbfcb9349fd551c3dcd62c56061e10d1d",
+    "best_fixed_reranked_policy.json": "d552c7c30a55f679c7422549e7df1c01c92a869f5f2ed7b1c8635306cba0cac2",
+    "best_fixed_original_policy.json": "fe551b7c26233fbb0c66edb94f390558461e9255c1f1b4f55fe099fc8f6d833a"
+  },
+  "reranked_vector_sha256": "bfb68a7c66740f790a5d2da16a236eb6dcb098cbef524bc802c51924094e3bbd",
+  "arm_means": {
+    "AutoClust_Extended_InDomain_same_search_space": 0.6144995191007991,
+    "AutoClust_Original_InDomain_same_search_space": 0.5810259338513559,
+    "AutoClust_Extended_InDomain": 0.6170597383643214,
+    "AutoClust_Original_InDomain": 0.5779473952731331
+  },
+  "primary": {
+    "method": "AutoClust Extended (Matched Search Space)",
+    "directory_id": "AutoClust_Extended_InDomain_same_search_space",
+    "search_space_role": "matched",
+    "primary_comparator": true,
+    "autoclust_mean_bestview": 0.6144995191007991,
+    "clustopt_mean_bestview": 0.6160307817072919,
+    "mean_delta": 0.0015312626064926602,
+    "median_delta": 0.0,
+    "ci": [
+      -0.0036497897096453577,
+      0.006568809527294081
+    ],
+    "wilcoxon_p": 0.9775403855937943,
+    "cohens_dz": 0.017159170002456762,
+    "rank_biserial": -0.0018986076876956897,
+    "wins_clustopt": 425,
+    "wins_autoclust": 436,
+    "ties": 194,
+    "interpretation": "CASE_B: numerically exceeds but is statistically indistinguishable (CI includes zero)"
+  },
+  "secondary_native": {
+    "method": "AutoClust Extended (Native Search Space)",
+    "directory_id": "AutoClust_Extended_InDomain",
+    "search_space_role": "native",
+    "primary_comparator": false,
+    "autoclust_mean_bestview": 0.6170597383643214,
+    "clustopt_mean_bestview": 0.6160307817072919,
+    "mean_delta": -0.001028956657029606,
+    "median_delta": 0.0,
+    "ci": [
+      -0.006281441391248417,
+      0.004220037320800693
+    ],
+    "wilcoxon_p": 0.13973298613417837,
+    "cohens_dz": -0.011407997975903502,
+    "rank_biserial": -0.056744696590068484,
+    "wins_clustopt": 426,
+    "wins_autoclust": 474,
+    "ties": 155,
+    "interpretation": "CASE_C: numerically below but statistically indistinguishable (CI includes zero)"
+  },
+  "primary_original_pair": {
+    "method": "AutoClust Original (Matched Search Space)",
+    "directory_id": "AutoClust_Original_InDomain_same_search_space",
+    "search_space_role": "matched",
+    "primary_comparator": true,
+    "autoclust_mean_bestview": 0.5810259338513559,
+    "clustopt_mean_bestview": 0.6160307817072919,
+    "mean_delta": 0.03500484785593578,
+    "median_delta": 0.0036013803030636726,
+    "ci": [
+      0.028461393891907046,
+      0.041285461654860064
+    ],
+    "wilcoxon_p": 1.2718134410404702e-25,
+    "cohens_dz": 0.3182891417966179,
+    "rank_biserial": 0.39917576597916304,
+    "wins_clustopt": 571,
+    "wins_autoclust": 325,
+    "ties": 159,
+    "interpretation": "CASE_A: statistically outperforms (CI entirely above zero, paired test significant)"
+  },
+  "policy_headroom_motivation": {
+    "best_fixed_reranked_bestview": 0.6160307817072919,
+    "reranker_assisted_vbs": 0.6567603388046713,
+    "policy_headroom": 0.040729557097379465,
+    "gap_to_primary_matched_autoclust_extended": -0.0015312626064927226,
+    "gap_to_secondary_native_autoclust_extended": 0.0010289566570295117,
+    "already_exceeds_primary_matched_comparator": true,
+    "fraction_of_headroom_needed_to_exceed_SECONDARY_native": 0.025263143779575118,
+    "fraction_of_headroom_needed_to_exceed_PRIMARY_matched": 0.0,
+    "label_note": "the ~2.5% figure refers to the SECONDARY native-search-space arm and must be labelled as such; against the PRIMARY matched comparator the best fixed reranked policy already has a positive mean advantage"
+  },
+  "rewritten_artifacts": [
+    "autoclust_performance_comparison.csv",
+    "statistical_comparisons.csv",
+    "stage2b5_final_summary.json",
+    "stage2b5c_authoritative_values.json"
+  ],
+  "backup_dir": "results_analysis\\clustering_repository\\autoclust_extended_result_provenance_audit\\stage2b5_pre_5d_backup",
+  "source_commit": "032a7de6c7d7e456fa07ed3cafb158c5f1115a09",
+  "runtime_sec": 23.052325963974
+}

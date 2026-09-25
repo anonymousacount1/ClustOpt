@@ -1,0 +1,9 @@
+{
+  "hybrid_visited_oracle_mean": 0.673114272109875,
+  "ci": [
+    0.6576422191245345,
+    0.6887783725194813
+  ],
+  "gap_over_reranked_vbs": 0.016353933305203627,
+  "gap_over_best_fixed_reranked": 0.05708349040258309
+}

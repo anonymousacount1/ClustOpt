@@ -1,0 +1,87 @@
+family_dir,subfamily_id,n_datasets,n_points_min,n_points_max,k_min,k_max,difficulties,family
+arcs_circles_rings,annuli_variable_thickness,200,1602,3293,2,5,easy/medium/hard/very_hard,Arcs & rings
+arcs_circles_rings,broken_rings,220,1526,3323,2,5,easy/medium/hard/very_hard,Arcs & rings
+arcs_circles_rings,clean_arcs,200,1557,3308,2,5,easy/medium/hard/very_hard,Arcs & rings
+arcs_circles_rings,full_rings,200,1577,3375,2,5,easy/medium/hard/very_hard,Arcs & rings
+arcs_circles_rings,nested_arcs,200,1662,3535,2,5,easy/medium/hard/very_hard,Arcs & rings
+arcs_circles_rings,nested_overlapping_arc_pairs,200,1422,3477,2,5,easy/medium/hard/very_hard,Arcs & rings
+arcs_circles_rings,noisy_overlapping_arcs,280,1660,3373,2,5,easy/medium/hard/very_hard,Arcs & rings
+arcs_circles_rings,partial_circles,200,1505,3245,2,5,easy/medium/hard/very_hard,Arcs & rings
+deinterleaving_pri_toa_amp_like,amp_arc_trends,250,1325,3324,2,5,easy/medium/hard/very_hard,De-interleaving
+deinterleaving_pri_toa_amp_like,hybrid_deinterleaving_scene,263,1607,3334,2,5,easy/medium/hard/very_hard,De-interleaving
+deinterleaving_pri_toa_amp_like,missing_pulses,240,1650,3309,2,5,easy/medium/hard/very_hard,De-interleaving
+deinterleaving_pri_toa_amp_like,pri_amp_coupled,260,1630,3344,2,5,easy/medium/hard/very_hard,De-interleaving
+deinterleaving_pri_toa_amp_like,pri_parallel_trains,240,1753,3494,2,5,easy/medium/hard/very_hard,De-interleaving
+deinterleaving_pri_toa_amp_like,pri_with_jitter,240,1358,3412,2,5,easy/medium/hard/very_hard,De-interleaving
+deinterleaving_pri_toa_amp_like,spurious_pulses_noise,240,1648,3362,2,5,easy/medium/hard/very_hard,De-interleaving
+hollow_topological_components,bridged_components,200,1486,3304,2,5,easy/medium/hard/very_hard,Hollow shapes
+hollow_topological_components,broken_hollow_shapes,200,1702,3339,2,5,easy/medium/hard/very_hard,Hollow shapes
+hollow_topological_components,disconnected_components,200,1545,3493,2,5,easy/medium/hard/very_hard,Hollow shapes
+hollow_topological_components,hollow_mixed_shapes,210,1355,3279,2,5,easy/medium/hard/very_hard,Hollow shapes
+hollow_topological_components,multi_hole_shapes,200,1803,3366,2,5,easy/medium/hard/very_hard,Hollow shapes
+hollow_topological_components,single_hole_rings,190,1620,3364,2,5,easy/medium/hard/very_hard,Hollow shapes
+hollow_topological_components,topological_noise,200,1606,3202,2,5,easy/medium/hard/very_hard,Hollow shapes
+hybrid_mixed_geometry,arcs_plus_blobs,250,1634,3376,2,5,easy/medium/hard/very_hard,Hybrid mixed
+hybrid_mixed_geometry,bands_plus_arcs,270,1710,3340,2,5,easy/medium/hard/very_hard,Hybrid mixed
+hybrid_mixed_geometry,bands_plus_blobs,250,1666,3536,2,5,easy/medium/hard/very_hard,Hybrid mixed
+hybrid_mixed_geometry,curves_plus_ladders,260,1603,3298,2,5,easy/medium/hard/very_hard,Hybrid mixed
+hybrid_mixed_geometry,fragmented_band_with_overlapping_clouds,200,1800,3365,2,5,easy/medium/hard/very_hard,Hybrid mixed
+hybrid_mixed_geometry,full_mixed_scene,283,1599,3290,2,5,easy/medium/hard/very_hard,Hybrid mixed
+hybrid_mixed_geometry,polygons_plus_rings,250,1784,3222,2,5,easy/medium/hard/very_hard,Hybrid mixed
+hybrid_mixed_geometry,topology_plus_texture,270,1707,3510,2,5,easy/medium/hard/very_hard,Hybrid mixed
+ladder_grid_lattice,distorted_grid,200,1382,3363,2,5,easy/medium/hard/very_hard,Ladder & grid
+ladder_grid_lattice,grid_with_noise_and_gaps,194,1614,3448,2,5,easy/medium/hard/very_hard,Ladder & grid
+ladder_grid_lattice,missing_rungs_ladder,200,1765,3330,2,5,easy/medium/hard/very_hard,Ladder & grid
+ladder_grid_lattice,regular_grid,190,1615,3293,2,5,easy/medium/hard/very_hard,Ladder & grid
+ladder_grid_lattice,rotated_ladder,180,1652,3362,2,5,easy/medium/hard/very_hard,Ladder & grid
+ladder_grid_lattice,simple_ladder,190,1732,3306,2,5,easy/medium/hard/very_hard,Ladder & grid
+ladder_grid_lattice,sparse_lattice,180,1519,3223,2,5,easy/medium/hard/very_hard,Ladder & grid
+linear_bands_parallel_stripes,clean_parallel_bands,220,1631,3376,2,5,easy/medium/hard/very_hard,Bands & stripes
+linear_bands_parallel_stripes,crossing_or_near_crossing_bands,220,1470,3284,2,5,easy/medium/hard/very_hard,Bands & stripes
+linear_bands_parallel_stripes,fragmented_bands,220,1702,3311,2,5,easy/medium/hard/very_hard,Bands & stripes
+linear_bands_parallel_stripes,noisy_interleaved_bands,240,1774,3445,2,5,easy/medium/hard/very_hard,Bands & stripes
+linear_bands_parallel_stripes,rotated_parallel_bands,200,1469,3285,2,5,easy/medium/hard/very_hard,Bands & stripes
+linear_bands_parallel_stripes,thick_ribbons,200,1759,3443,2,5,easy/medium/hard/very_hard,Bands & stripes
+linear_bands_parallel_stripes,variable_spacing_bands,200,1728,3286,2,5,easy/medium/hard/very_hard,Bands & stripes
+parabolic_curved_chains,arc_parabola_mixture,180,1706,3329,2,5,easy/medium/hard/very_hard,Curved chains
+parabolic_curved_chains,clean_parabolas,180,1742,3283,2,5,easy/medium/hard/very_hard,Curved chains
+parabolic_curved_chains,curves_with_density_drift,177,1832,3392,2,5,easy/medium/hard/very_hard,Curved chains
+parabolic_curved_chains,fragmented_curves,180,1827,3384,2,5,easy/medium/hard/very_hard,Curved chains
+parabolic_curved_chains,noisy_curved_ribbons,190,1799,3217,2,5,easy/medium/hard/very_hard,Curved chains
+parabolic_curved_chains,opposite_direction_parabolas,180,1751,3371,2,5,easy/medium/hard/very_hard,Curved chains
+parabolic_curved_chains,variable_curvature_chains,180,1749,3259,2,5,easy/medium/hard/very_hard,Curved chains
+piecewise_polylines_corners,branching_trees,220,1744,3361,2,5,easy/medium/hard/very_hard,Polylines
+piecewise_polylines_corners,broken_piecewise_lines,200,1480,3259,2,5,easy/medium/hard/very_hard,Polylines
+piecewise_polylines_corners,multi_segment_polylines,200,1611,3306,2,5,easy/medium/hard/very_hard,Polylines
+piecewise_polylines_corners,noisy_corner_junctions,200,1839,3249,2,5,easy/medium/hard/very_hard,Polylines
+piecewise_polylines_corners,sharp_corners,190,1710,3552,2,5,easy/medium/hard/very_hard,Polylines
+piecewise_polylines_corners,two_segment_polylines,190,1810,3168,2,5,easy/medium/hard/very_hard,Polylines
+piecewise_polylines_corners,y_junctions,200,1782,3359,2,5,easy/medium/hard/very_hard,Polylines
+polygons_rectangles_frames,noisy_polygons,170,1822,3251,2,5,easy/medium/hard/very_hard,Polygons
+polygons_rectangles_frames,open_frames,170,1559,3369,2,5,easy/medium/hard/very_hard,Polygons
+polygons_rectangles_frames,overlapping_polygons,170,1644,3302,2,5,easy/medium/hard/very_hard,Polygons
+polygons_rectangles_frames,polygon_blob_mixture,177,1711,3347,2,5,easy/medium/hard/very_hard,Polygons
+polygons_rectangles_frames,rectangles,160,1668,3379,2,5,easy/medium/hard/very_hard,Polygons
+polygons_rectangles_frames,rotated_rectangles,160,1440,3304,2,5,easy/medium/hard/very_hard,Polygons
+polygons_rectangles_frames,triangles_and_quadrilaterals,160,1505,3335,2,5,easy/medium/hard/very_hard,Polygons
+radial_spiral_meander,broken_spirals,180,1466,3337,2,5,easy/medium/hard/very_hard,Radial & spiral
+radial_spiral_meander,clean_spirals,180,1725,3432,2,5,easy/medium/hard/very_hard,Radial & spiral
+radial_spiral_meander,meander_curves,180,1659,3376,2,5,easy/medium/hard/very_hard,Radial & spiral
+radial_spiral_meander,noisy_meanders,187,1691,3302,2,5,easy/medium/hard/very_hard,Radial & spiral
+radial_spiral_meander,radial_arc_mixture,180,1656,3232,2,5,easy/medium/hard/very_hard,Radial & spiral
+radial_spiral_meander,radial_spokes,180,1561,3369,2,5,easy/medium/hard/very_hard,Radial & spiral
+radial_spiral_meander,rotational_symmetry_patterns,180,1608,3357,2,5,easy/medium/hard/very_hard,Radial & spiral
+standard_clustering_blobs,anisotropic_ellipses,150,1635,3386,2,5,easy/medium/hard/very_hard,Isotropic blobs
+standard_clustering_blobs,density_imbalanced_blobs,150,1575,3289,2,5,easy/medium/hard/very_hard,Isotropic blobs
+standard_clustering_blobs,imbalanced_cluster_sizes,150,1454,3509,2,5,easy/medium/hard/very_hard,Isotropic blobs
+standard_clustering_blobs,isotropic_blobs,150,1648,3278,2,5,easy/medium/hard/very_hard,Isotropic blobs
+standard_clustering_blobs,mixed_blob_ellipse,100,1751,3325,2,5,easy/medium/hard/very_hard,Isotropic blobs
+standard_clustering_blobs,outliers_and_noise_blobs,150,1854,3326,2,5,easy/medium/hard/very_hard,Isotropic blobs
+standard_clustering_blobs,overlapping_blobs,150,1847,3437,2,5,easy/medium/hard/very_hard,Isotropic blobs
+texture_density_fields,anisotropic_grain,180,1273,3211,2,5,easy/medium/hard/very_hard,Texture fields
+texture_density_fields,density_patchwork,187,1521,3330,2,5,easy/medium/hard/very_hard,Texture fields
+texture_density_fields,fractal_dust,180,1410,3291,2,5,easy/medium/hard/very_hard,Texture fields
+texture_density_fields,micro_blobs_texture,180,1550,3386,2,5,easy/medium/hard/very_hard,Texture fields
+texture_density_fields,oriented_texture,180,1347,3240,2,5,easy/medium/hard/very_hard,Texture fields
+texture_density_fields,speckle_fields,180,1705,3193,2,5,easy/medium/hard/very_hard,Texture fields
+texture_density_fields,texture_plus_structure,180,1749,3435,2,5,easy/medium/hard/very_hard,Texture fields

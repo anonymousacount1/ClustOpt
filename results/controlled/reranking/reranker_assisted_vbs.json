@@ -1,0 +1,11 @@
+{
+  "reranked_policy_vbs_mean": 0.6567603388046713,
+  "ci": [
+    0.6406500618289492,
+    0.6726556101084472
+  ],
+  "reranked_view_policy_vbs_mean": 0.6567603388046713,
+  "definitions_equal": true,
+  "equivalence_note": "verified empirically, not assumed",
+  "headroom_over_best_fixed_reranked": 0.040729557097379465
+}

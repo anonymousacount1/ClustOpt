@@ -1,0 +1,338 @@
+{
+  "search_space": {
+    "kmeans": {
+      "n_clusters": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "init": {
+        "type": "categorical",
+        "choices": [
+          "k-means++"
+        ]
+      },
+      "n_init": {
+        "type": "int",
+        "low": 10,
+        "high": 10
+      },
+      "random_state": {
+        "type": "int",
+        "low": 42,
+        "high": 42
+      }
+    },
+    "minibatch_kmeans": {
+      "n_clusters": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "init": {
+        "type": "categorical",
+        "choices": [
+          "k-means++"
+        ]
+      },
+      "batch_size": {
+        "type": "categorical",
+        "choices": [
+          100,
+          256
+        ]
+      },
+      "random_state": {
+        "type": "int",
+        "low": 42,
+        "high": 42
+      }
+    },
+    "gmm": {
+      "n_components": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "covariance_type": {
+        "type": "categorical",
+        "choices": [
+          "full",
+          "diag"
+        ]
+      },
+      "random_state": {
+        "type": "int",
+        "low": 42,
+        "high": 42
+      }
+    },
+    "agglomerative": {
+      "n_clusters": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "linkage": {
+        "type": "categorical",
+        "choices": [
+          "ward",
+          "average",
+          "complete"
+        ]
+      }
+    },
+    "birch": {
+      "n_clusters": {
+        "type": "int",
+        "low": 2,
+        "high": 5
+      },
+      "threshold": {
+        "type": "categorical",
+        "choices": [
+          0.05,
+          0.1,
+          0.2,
+          0.35
+        ]
+      },
+      "branching_factor": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      }
+    },
+    "dbscan": {
+      "eps": {
+        "type": "categorical",
+        "choices": [
+          0.03,
+          0.05,
+          0.08,
+          0.12,
+          0.2
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      }
+    },
+    "hdbscan": {
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          10,
+          25,
+          50,
+          100
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      }
+    },
+    "optics": {
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "xi": {
+        "type": "categorical",
+        "choices": [
+          0.03,
+          0.05,
+          0.1
+        ]
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          0.02,
+          0.05,
+          0.1
+        ]
+      }
+    },
+    "hdbscan_constrained-2": {
+      "n_components": {
+        "type": "int",
+        "low": 2,
+        "high": 2
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.0,
+          0.02,
+          0.05
+        ]
+      }
+    },
+    "hdbscan_constrained-3": {
+      "n_components": {
+        "type": "int",
+        "low": 3,
+        "high": 3
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.0,
+          0.02,
+          0.05
+        ]
+      }
+    },
+    "hdbscan_constrained-4": {
+      "n_components": {
+        "type": "int",
+        "low": 4,
+        "high": 4
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.0,
+          0.02,
+          0.05
+        ]
+      }
+    },
+    "hdbscan_constrained-5": {
+      "n_components": {
+        "type": "int",
+        "low": 5,
+        "high": 5
+      },
+      "min_cluster_size": {
+        "type": "categorical",
+        "choices": [
+          25,
+          50
+        ]
+      },
+      "min_samples": {
+        "type": "categorical",
+        "choices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "persistence_thresh": {
+        "type": "categorical",
+        "choices": [
+          0.0,
+          0.02,
+          0.05
+        ]
+      }
+    }
+  },
+  "search_algorithm": {
+    "type": "optuna",
+    "params": {
+      "n_trials": 50,
+      "timeout": 150
+    }
+  },
+  "cvi": {
+    "type": "regressor_dynamic",
+    "params": {
+      "model_run_dir": "results_analysis/mlp/20260615_231715__metric_utility_mlp_split1_holdout",
+      "checkpoint_policy": "fold_ensemble",
+      "top_k": 1,
+      "weighting": "softmax",
+      "softmax_temperature": 0.5,
+      "metric_name_prefix": "utility__",
+      "feature_source": "features/features_records.csv",
+      "view_aware": true,
+      "fallback_on_error": true,
+      "fallback_metrics": {
+        "silhouette": 1.0
+      }
+    },
+    "params_generic": {
+      "remove_noise": true,
+      "noise_label": -1,
+      "min_clusters": 2
+    }
+  },
+  "phaseD": {
+    "phase": "ClustOpt_PhaseD_Ablation",
+    "method_name": "regressor_top1_softmax_t05",
+    "utility_source": "regressor",
+    "metric_ranking_source": "regressor",
+    "dynamic_k_source": "none",
+    "weighting_mode": "softmax_t05",
+    "softmax_temperature": 0.5,
+    "top_k_config": 1,
+    "dynamic_topk_policy": null,
+    "regressor_path": "results_analysis/mlp/20260615_231715__metric_utility_mlp_split1_holdout",
+    "real_utility_path": null,
+    "optuna_trials_requested": 50,
+    "early_stopping_enabled": false
+  }
+}

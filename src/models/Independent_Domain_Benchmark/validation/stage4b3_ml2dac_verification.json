@@ -1,0 +1,277 @@
+{
+  "verifier": "stage4b3_ml2dac_adapters",
+  "stage": "4B-3B3",
+  "scoring_semantics_id": "ml2dac_corrected_cvi_scoring_v1",
+  "n": 44,
+  "n_pass": 42,
+  "n_fail": 0,
+  "n_unavailable_by_artifact_design": 2,
+  "gates": [
+    {
+      "gate": "F01",
+      "description": "the Stage 4B-3B2 physical-layer verifier passes in full",
+      "status": "PASS",
+      "detail": "57/57"
+    },
+    {
+      "gate": "F02",
+      "description": "physical trace reuse is validated and recorded truthfully",
+      "status": "PASS",
+      "detail": "ml2dac + autoclust VALIDATED"
+    },
+    {
+      "gate": "F03",
+      "description": "the frozen physical plan is 4 + 1 + 1 = 6 per dataset/view, 900 total",
+      "status": "PASS",
+      "detail": "900 physical / 2100 scientific; runtime deferred"
+    },
+    {
+      "gate": "F04",
+      "description": "the authoritative 52-feature schema is frozen and label-free",
+      "status": "PASS",
+      "detail": "52 features, label-free"
+    },
+    {
+      "gate": "F05",
+      "description": "scoring consumes the frozen trace vector and never re-extracts",
+      "status": "PASS",
+      "detail": "extract=0 fallback=0"
+    },
+    {
+      "gate": "F06",
+      "description": "the four frozen classifier artifacts and class counts are exact",
+      "status": "PASS",
+      "detail": "classes {\"M0\": 7, \"M1\": 17, \"M2\": 51, \"M3\": 61} | sha16 {\"M0\": \"0129b6f742cdca9d\", \"M1\": \"da20428d6d940238\", \"M2\": \"285cedcfdc59d98b\", \"M3\": \"6a27d794cc911349\"}"
+    },
+    {
+      "gate": "F07",
+      "description": "the historical predicted-CVI regression remains 1296/1296 exact",
+      "status": "PASS",
+      "detail": "1296/1296"
+    },
+    {
+      "gate": "F08",
+      "description": "no training occurs anywhere in the scoring path",
+      "status": "PASS",
+      "detail": "fit calls 0"
+    },
+    {
+      "gate": "F09",
+      "description": "the direction registry covers all 61 classes with no default",
+      "status": "PASS",
+      "detail": "61 classes, 57 MAXIMIZE, 4 MINIMIZE"
+    },
+    {
+      "gate": "F10",
+      "description": "an unknown class raises instead of defaulting",
+      "status": "PASS",
+      "detail": "CVI_CLASS_UNKNOWN"
+    },
+    {
+      "gate": "F11",
+      "description": "all 61 classes resolve to their intended implementation",
+      "status": "PASS",
+      "detail": "61 resolved, 61 reached, finite on >=1 fixture: 61"
+    },
+    {
+      "gate": "F12",
+      "description": "the canonical metric id is used, never the abbreviation",
+      "status": "PASS",
+      "detail": "ids=['blobness_log_dog', 'calinski_harabasz', 'dbcv', 'neighborhood_purity_multi_k'] abbrevs=['CH', 'DBCV']"
+    },
+    {
+      "gate": "F13",
+      "description": "Original-7 ordering matches the upstream intended semantics",
+      "status": "PASS",
+      "detail": "7 metrics x 6 fixtures, 0 ordering / 0 winner mismatches"
+    },
+    {
+      "gate": "F14",
+      "description": "Dunn, Coggins-Jain and COP now prefer the better partition",
+      "status": "PASS",
+      "detail": "{'dunn_index': (1.3538, 0.0017, True), 'coggins_jain_index': (9.9849, 0.2403, True), 'cop': (0.1378, 96.3396, "
+    },
+    {
+      "gate": "F15",
+      "description": "LEVEL B: raw values match the frozen canonical implementation",
+      "status": "PASS",
+      "detail": "288 comparisons, max |err| 0.0e+00"
+    },
+    {
+      "gate": "F16",
+      "description": "LEVEL C: orientation and selection follow the registry direction",
+      "status": "PASS",
+      "detail": "0 mismatches, max oriented |err| 0.0e+00"
+    },
+    {
+      "gate": "F17",
+      "description": "the legacy defective scorer is behaviourally unreachable",
+      "status": "PASS",
+      "detail": "legacy calls 0"
+    },
+    {
+      "gate": "F18",
+      "description": "the legacy scorer source is preserved unmodified",
+      "status": "PASS",
+      "detail": "phase.py untouched"
+    },
+    {
+      "gate": "F19",
+      "description": "no modern comparator is reachable from a learned class",
+      "status": "PASS",
+      "detail": "0 invocations"
+    },
+    {
+      "gate": "F20",
+      "description": "the legacy defect manifest is frozen",
+      "status": "PASS",
+      "detail": "3 defects, replay=False"
+    },
+    {
+      "gate": "F21",
+      "description": "one shared physical trace serves four scientific outputs",
+      "status": "PASS",
+      "detail": "4 arms on trace 78e842a60296e78a"
+    },
+    {
+      "gate": "F22",
+      "description": "scoring reruns no physical stage and mutates no trace",
+      "status": "PASS",
+      "detail": "{\"extract\": 0, \"fallback\": 0, \"warmstart\": 0, \"sampler\": 0, \"cluster\": 0, \"fit\": 0, \"legacy\": 0, \"modern\": 0, \"predict\": 4}"
+    },
+    {
+      "gate": "F23",
+      "description": "repeated scoring never changes the selection",
+      "status": "PASS",
+      "detail": "5 repetitions, spread 0.0e+00"
+    },
+    {
+      "gate": "F24",
+      "description": "every result carries the corrected scoring-semantics id",
+      "status": "PASS",
+      "detail": "ml2dac_corrected_cvi_scoring_v1"
+    },
+    {
+      "gate": "F25",
+      "description": "results carry no evaluation-outcome field",
+      "status": "PASS",
+      "detail": "no ARI/NMI/AMI/FMI/true_k/CVI*"
+    },
+    {
+      "gate": "F26",
+      "description": "arm-specific decision state is kept out of the physical trace",
+      "status": "PASS",
+      "detail": "ML2DACArmDecision holds it instead"
+    },
+    {
+      "gate": "F27",
+      "description": "the scoring failure semantics are frozen with no fallback",
+      "status": "PASS",
+      "detail": "10 kinds; NO_ELIGIBLE_CANDIDATE fails the arm rather than substituting a CVI"
+    },
+    {
+      "gate": "F28",
+      "description": "the full scoring test suite passes",
+      "status": "PASS",
+      "detail": "31 tests"
+    },
+    {
+      "gate": "F29",
+      "description": "the corrected-scoring gate passes end to end",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "gate": "F30",
+      "description": "historical corrected final-selection replay",
+      "status": "UNAVAILABLE_BY_ARTIFACT_DESIGN",
+      "detail": "UNAVAILABLE_BY_ARTIFACT_DESIGN: the Stage-3A traces persist configurations and a final choice but not candidate label arrays, and the historical slates were process-salted (H3), so a corrected replay would require regenerating historical partitions. Explicitly declared, never counted as a pass."
+    },
+    {
+      "gate": "F31",
+      "description": "legacy Stage-3 scorer equality",
+      "status": "UNAVAILABLE_BY_ARTIFACT_DESIGN",
+      "detail": "INTENTIONALLY NOT PRESERVED: the corrected scorer differs from the legacy scorer exactly where the legacy scorer was defective. This is a design decision, not a failed regression."
+    },
+    {
+      "gate": "F32",
+      "description": "the withdrawn 1-D evaluability projection is retired, not left standing",
+      "status": "PASS",
+      "detail": "superseded and documented"
+    },
+    {
+      "gate": "F33",
+      "description": "corpus manifest unchanged",
+      "status": "PASS",
+      "detail": "709712107424ad4e"
+    },
+    {
+      "gate": "F34",
+      "description": "search-space fingerprint unchanged",
+      "status": "PASS",
+      "detail": "8ddf86c79888ebe9"
+    },
+    {
+      "gate": "F35",
+      "description": "external/ml2dac is clean at c946b9e",
+      "status": "PASS",
+      "detail": "c946b9eaf58d"
+    },
+    {
+      "gate": "F36",
+      "description": "no external scientific dataset was executed",
+      "status": "PASS",
+      "detail": "internal fixtures and internal traces only"
+    },
+    {
+      "gate": "F37",
+      "description": "the AutoClust, 4B-1 and 4B-2 verifiers still pass",
+      "status": "PASS",
+      "detail": "gates=0; clustopt=0; autoclus=0"
+    },
+    {
+      "gate": "F38",
+      "description": "the scoring-semantics amendment is recorded and pre-outcome",
+      "status": "PASS",
+      "detail": "amendment + record present"
+    },
+    {
+      "gate": "F39",
+      "description": "all 61 classes are structurally applicable on 1-D and 2-D views",
+      "status": "PASS",
+      "detail": "1-D 61/61, 2-D 61/61, structural exceptions: none"
+    },
+    {
+      "gate": "F40",
+      "description": "every frozen CVI* training target is applicable to its own view",
+      "status": "PASS",
+      "detail": "192156 targets audited, 0 inapplicable, 0 outside class sets"
+    },
+    {
+      "gate": "F41",
+      "description": "no historical Split-1 prediction is inapplicable to its view",
+      "status": "PASS",
+      "detail": "0 inapplicable predictions across all arms and views"
+    },
+    {
+      "gate": "F42",
+      "description": "structural and candidate-level failures are distinct, with no fallback",
+      "status": "PASS",
+      "detail": "PREDICTED_CVI_INAPPLICABLE_FOR_VIEW vs NO_ELIGIBLE_CANDIDATE"
+    },
+    {
+      "gate": "F43",
+      "description": "X_full is required and never defaults to the view",
+      "status": "PASS",
+      "detail": "46 of 61 classes are full-space metrics"
+    },
+    {
+      "gate": "F44",
+      "description": "no applicability-masked ML2DAC arm was added",
+      "status": "PASS",
+      "detail": "4 ML2DAC arms of 14 total; no masked argmax"
+    }
+  ],
+  "closure_requires": "0 FAIL",
+  "status": "PASS"
+}

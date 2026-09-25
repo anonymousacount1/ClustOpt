@@ -1,0 +1,79 @@
+{
+  "kind": "FROZEN DEVELOPMENT-INFORMED ONLINE REPLAY",
+  "four_level": [
+    {
+      "level": "A",
+      "name": "Development-selected Fixed Policy + Reranker",
+      "mean_bestview": 0.6160307817072919,
+      "ci_lo": 0.5998509101055179,
+      "ci_hi": 0.6321591659200615,
+      "delta_vs_fixed": 0.0,
+      "recovery_of_fixed_to_vbs": 0.0
+    },
+    {
+      "level": "B",
+      "name": "Final Policy Predictor v1 + Reranker",
+      "mean_bestview": 0.607818173603085,
+      "ci_lo": 0.5916402725566474,
+      "ci_hi": 0.6239808090990986,
+      "delta_vs_fixed": -0.008212608104206875,
+      "recovery_of_fixed_to_vbs": -0.20163754996332317
+    },
+    {
+      "level": "C",
+      "name": "Final Policy Predictor v2 + Reranker",
+      "mean_bestview": 0.6170763693848712,
+      "ci_lo": 0.6007124957279752,
+      "ci_hi": 0.6332462808012217,
+      "delta_vs_fixed": 0.0010455876775793405,
+      "recovery_of_fixed_to_vbs": 0.025671471827681952
+    },
+    {
+      "level": "D",
+      "name": "Reranker-assisted online policy VBS",
+      "mean_bestview": 0.6567603388046713,
+      "ci_lo": 0.6406500618289492,
+      "ci_hi": 0.6726556101084472,
+      "delta_vs_fixed": 0.040729557097379465,
+      "recovery_of_fixed_to_vbs": 1.0
+    }
+  ],
+  "v2_vs_fixed": {
+    "comparison": "v2_minus_fixed",
+    "arm_a": "v2+R",
+    "arm_b": "Fixed+R",
+    "n": 1055,
+    "mean_a": 0.6170763693848712,
+    "mean_b": 0.6160307817072919,
+    "mean_delta": 0.0010455876775792626,
+    "median_delta": 0.0,
+    "ci_lo": -0.002122108463564178,
+    "ci_hi": 0.004163755230260837,
+    "wins_a": 228,
+    "wins_b": 225,
+    "ties": 602,
+    "cohens_dz": 0.019561068017839606,
+    "wilcoxon_p": 0.8699325781346255
+  },
+  "v2_vs_v1": {
+    "comparison": "v2_minus_v1",
+    "arm_a": "v2+R",
+    "arm_b": "v1+R",
+    "n": 1055,
+    "mean_a": 0.6170763693848712,
+    "mean_b": 0.607818173603085,
+    "mean_delta": 0.00925819578178607,
+    "median_delta": 0.0,
+    "ci_lo": 0.005183724694944055,
+    "ci_hi": 0.013564527184826019,
+    "wins_a": 423,
+    "wins_b": 337,
+    "ties": 295,
+    "cohens_dz": 0.13224705913723853,
+    "wilcoxon_p": 1.7598153900489585e-05
+  },
+  "development_fixed_policy": "knn_top10_raw",
+  "post_replay_tuning": false,
+  "source_commit": "7a4fd7dc852a81486bb22ed45832e835ae6c9df8",
+  "runtime_sec": 1.4690649509429932
+}

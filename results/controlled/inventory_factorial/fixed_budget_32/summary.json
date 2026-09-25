@@ -1,0 +1,232 @@
+{
+  "population": {
+    "records": 18990,
+    "dataset_view_keys": 3165,
+    "datasets": 1055
+  },
+  "partition": {
+    "head14": 14,
+    "new46": 46,
+    "full60": 60
+  },
+  "fo_fp_overlap": {
+    "mean_overlap": 2.392733017377567,
+    "exact_match_rate": 0.029067930489731438,
+    "mean_fo_only_new46": 1.8657187993680884
+  },
+  "tie_plateau": {
+    "tied_records": 3738,
+    "tie_rate": 0.19684044233807266,
+    "pct_spread_zero": 1.0,
+    "pct_spread_positive": 0.0,
+    "mean_headroom_per_tied_record": 0.0,
+    "total_headroom_ari_units": 0.0,
+    "mean_headroom_per_record_overall": 0.0
+  },
+  "group_quality": [
+    {
+      "partition": "HEAD_14",
+      "n_metrics": 14,
+      "mae": 0.07827439264942104,
+      "rmse": 0.10558102408474321,
+      "abs_rank_err": 7.539923267885354,
+      "true_top5_rate": 0.14712254570074476,
+      "pred_top5_rate": 0.17912435116226583,
+      "oracle_sel": 0.14714511396975852,
+      "pred_sel": 0.17912435116226583
+    },
+    {
+      "partition": "NEW_46",
+      "n_metrics": 46,
+      "mae": 0.08456111710041697,
+      "rmse": 0.11184108211653716,
+      "abs_rank_err": 8.813613572360739,
+      "true_top5_rate": 0.06391922522151247,
+      "pred_top5_rate": 0.05417954529844082,
+      "oracle_sel": 0.06391235661789958,
+      "pred_sel": 0.05417954529844082
+    }
+  ],
+  "top_new46_opportunities": [
+    {
+      "metric": "axial_symmetry",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.19083728278041073,
+      "pred_selection_rate": 0.15165876777251186,
+      "oracle_miss_rate": 0.11469194312796209,
+      "true_utility_when_missed": 0.7708192989038789,
+      "pred_utility_when_missed": 0.6229669958681443,
+      "underprediction_when_missed": 0.14785230303573466,
+      "assoc_FO_minus_FP_ari_when_missed": 0.05235233244000476,
+      "opportunity_score": 0.006004390734825191
+    },
+    {
+      "metric": "connectivity_components",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.1943127962085308,
+      "pred_selection_rate": 0.16208530805687205,
+      "oracle_miss_rate": 0.11437598736176935,
+      "true_utility_when_missed": 0.7693099126334433,
+      "pred_utility_when_missed": 0.6304419444493168,
+      "underprediction_when_missed": 0.13886796818412656,
+      "assoc_FO_minus_FP_ari_when_missed": 0.0384987603517361,
+      "opportunity_score": 0.004403333727433955
+    },
+    {
+      "metric": "parallel_bands",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.12480252764612954,
+      "pred_selection_rate": 0.11279620853080569,
+      "oracle_miss_rate": 0.07424960505529225,
+      "true_utility_when_missed": 0.7488751641030105,
+      "pred_utility_when_missed": 0.5800500286386369,
+      "underprediction_when_missed": 0.1688251354643737,
+      "assoc_FO_minus_FP_ari_when_missed": 0.0569593494889834,
+      "opportunity_score": 0.004229209203763381
+    },
+    {
+      "metric": "radial_uniformity",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.08151658767772511,
+      "pred_selection_rate": 0.05181674565560822,
+      "oracle_miss_rate": 0.061611374407582936,
+      "true_utility_when_missed": 0.7670191389611897,
+      "pred_utility_when_missed": 0.5938185085088779,
+      "underprediction_when_missed": 0.17320063045231182,
+      "assoc_FO_minus_FP_ari_when_missed": 0.05676578828907471,
+      "opportunity_score": 0.003497418235819769
+    },
+    {
+      "metric": "connected_components_count",
+      "registry_category": "image_base",
+      "oracle_selection_rate": 0.18704581358609795,
+      "pred_selection_rate": 0.19652448657187993,
+      "oracle_miss_rate": 0.10552922590837283,
+      "true_utility_when_missed": 0.7647769990189999,
+      "pred_utility_when_missed": 0.60626222978452,
+      "underprediction_when_missed": 0.15851476923447977,
+      "assoc_FO_minus_FP_ari_when_missed": 0.030087150882858824,
+      "opportunity_score": 0.003175073742456508
+    },
+    {
+      "metric": "alpha_shape_compactness",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.11879936808846761,
+      "pred_selection_rate": 0.07930489731437598,
+      "oracle_miss_rate": 0.08783570300157978,
+      "true_utility_when_missed": 0.7584866173655248,
+      "pred_utility_when_missed": 0.5999953793428785,
+      "underprediction_when_missed": 0.15849123802264636,
+      "assoc_FO_minus_FP_ari_when_missed": 0.03610076055559109,
+      "opportunity_score": 0.0031709356822920455
+    },
+    {
+      "metric": "contour_graph_connectivity",
+      "registry_category": "image_base",
+      "oracle_selection_rate": 0.17282780410742496,
+      "pred_selection_rate": 0.1513428120063191,
+      "oracle_miss_rate": 0.10868878357030015,
+      "true_utility_when_missed": 0.7797238861157058,
+      "pred_utility_when_missed": 0.6144279650044303,
+      "underprediction_when_missed": 0.16529592111127547,
+      "assoc_FO_minus_FP_ari_when_missed": 0.0274387287570218,
+      "opportunity_score": 0.0029822820513161134
+    },
+    {
+      "metric": "convexity_ratio",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.12701421800947868,
+      "pred_selection_rate": 0.134913112164297,
+      "oracle_miss_rate": 0.08025276461295419,
+      "true_utility_when_missed": 0.7594298329033154,
+      "pred_utility_when_missed": 0.6169672006462502,
+      "underprediction_when_missed": 0.14246263225706512,
+      "assoc_FO_minus_FP_ari_when_missed": 0.034042542937454005,
+      "opportunity_score": 0.0027320081851858824
+    },
+    {
+      "metric": "morphological_band_count",
+      "registry_category": "image_base",
+      "oracle_selection_rate": 0.07045813586097946,
+      "pred_selection_rate": 0.004739336492890996,
+      "oracle_miss_rate": 0.0679304897314376,
+      "true_utility_when_missed": 0.7601613121171917,
+      "pred_utility_when_missed": 0.5926035339056059,
+      "underprediction_when_missed": 0.16755777821158582,
+      "assoc_FO_minus_FP_ari_when_missed": 0.040094953651447086,
+      "opportunity_score": 0.002723669837302093
+    },
+    {
+      "metric": "gridness_fft_acf",
+      "registry_category": "image_base",
+      "oracle_selection_rate": 0.3165876777251185,
+      "pred_selection_rate": 0.4382306477093207,
+      "oracle_miss_rate": 0.0707740916271722,
+      "true_utility_when_missed": 0.7987847551508577,
+      "pred_utility_when_missed": 0.6417319614972387,
+      "underprediction_when_missed": 0.15705279365361896,
+      "assoc_FO_minus_FP_ari_when_missed": 0.038027401433796085,
+      "opportunity_score": 0.0026913547934187434
+    },
+    {
+      "metric": "ribbon_thickness",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.12575039494470774,
+      "pred_selection_rate": 0.14218009478672985,
+      "oracle_miss_rate": 0.05845181674565561,
+      "true_utility_when_missed": 0.7408689721891679,
+      "pred_utility_when_missed": 0.5784643754765794,
+      "underprediction_when_missed": 0.1624045967125885,
+      "assoc_FO_minus_FP_ari_when_missed": 0.0423626367876039,
+      "opportunity_score": 0.002476173082371792
+    },
+    {
+      "metric": "hollow_score",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.05181674565560822,
+      "pred_selection_rate": 0.03380726698262243,
+      "oracle_miss_rate": 0.03665086887835703,
+      "true_utility_when_missed": 0.7765570547452806,
+      "pred_utility_when_missed": 0.5412358360300804,
+      "underprediction_when_missed": 0.23532121871520023,
+      "assoc_FO_minus_FP_ari_when_missed": 0.05859810197585081,
+      "opportunity_score": 0.002147671352037502
+    },
+    {
+      "metric": "symmetry_score",
+      "registry_category": "image_base",
+      "oracle_selection_rate": 0.04454976303317536,
+      "pred_selection_rate": 0.008846761453396525,
+      "oracle_miss_rate": 0.04170616113744076,
+      "true_utility_when_missed": 0.7371879289196891,
+      "pred_utility_when_missed": 0.49163111287987593,
+      "underprediction_when_missed": 0.24555681603981314,
+      "assoc_FO_minus_FP_ari_when_missed": 0.04194925438645406,
+      "opportunity_score": 0.0017495423630369468
+    },
+    {
+      "metric": "curvature_consistency",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.054976303317535544,
+      "pred_selection_rate": 0.054344391785150076,
+      "oracle_miss_rate": 0.030963665086887835,
+      "true_utility_when_missed": 0.7779574086903485,
+      "pred_utility_when_missed": 0.5639470222653175,
+      "underprediction_when_missed": 0.21401038642503095,
+      "assoc_FO_minus_FP_ari_when_missed": 0.0544995209574966,
+      "opportunity_score": 0.0016875049143237491
+    },
+    {
+      "metric": "direction_entropy",
+      "registry_category": "pattern_base",
+      "oracle_selection_rate": 0.07488151658767772,
+      "pred_selection_rate": 0.009794628751974723,
+      "oracle_miss_rate": 0.07140600315955767,
+      "true_utility_when_missed": 0.8145460250572372,
+      "pred_utility_when_missed": 0.6726245443641612,
+      "underprediction_when_missed": 0.141921480693076,
+      "assoc_FO_minus_FP_ari_when_missed": 0.021971109767099335,
+      "opportunity_score": 0.0015688691334484832
+    }
+  ]
+}

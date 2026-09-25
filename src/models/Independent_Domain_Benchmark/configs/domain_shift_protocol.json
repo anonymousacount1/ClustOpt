@@ -1,0 +1,24 @@
+{
+  "protocol_id": "idb_ood_v1",
+  "single_score_declared_in_advance": true,
+  "reference_population": "Unified_MKR master metafeatures.parquet, training splits 2-16 only",
+  "external_features": "the same label-free meta-feature extractor the training repository used, applied to the frozen 2-D external representation",
+  "score": {
+    "name": "standardized_nn_distance",
+    "definition": "z-score each meta-feature using the TRAINING mean/std, then take the Euclidean distance from the external row to its nearest training row in that standardized space",
+    "aggregate": "median over the dataset's three views",
+    "reported_alongside": [
+      "fraction_of_metafeatures_outside_training_range",
+      "per_feature_percentile"
+    ]
+  },
+  "only_one_ood_score": "exactly one aggregate score is declared here; additional descriptive quantities are reported but no alternative aggregate may be introduced later and chosen for being favourable",
+  "must_not_affect": [
+    "dataset acceptance",
+    "model selection",
+    "hyperparameters",
+    "method execution",
+    "any design decision"
+  ],
+  "analysis_only": true
+}

@@ -1,0 +1,131 @@
+{
+  "variants_audited": [
+    "AutoClust_Extended_InDomain",
+    "AutoClust_Extended_InDomain_same_search_space",
+    "AutoClust_Original_InDomain",
+    "AutoClust_Original_InDomain_same_search_space"
+  ],
+  "aggregations": [
+    {
+      "method": "AutoClust_Extended_InDomain",
+      "n_rows": 3165,
+      "n_with_ari": 3165,
+      "n_datasets": 1055,
+      "n_success": 3165,
+      "A_dataset_bestview_mean": 0.6170597383643214,
+      "B_all_row_mean": 0.46080788104034787,
+      "E_mean_of_three_view_means": 0.4608078810403479,
+      "H_bestview_complete_only": 0.6170597383643214,
+      "C_x_only_mean": 0.34748187842717615,
+      "C_xy_2d_mean": 0.5909246812175114,
+      "C_y_only_mean": 0.44401708347635604,
+      "D_best_global_view": 0.5909246812175114,
+      "F_subfamily_macro_bestview": 0.6269001651816603,
+      "G_family_macro_bestview": 0.6252485710603303
+    },
+    {
+      "method": "AutoClust_Extended_InDomain_same_search_space",
+      "n_rows": 3165,
+      "n_with_ari": 3165,
+      "n_datasets": 1055,
+      "n_success": 3165,
+      "A_dataset_bestview_mean": 0.6144995191007991,
+      "B_all_row_mean": 0.4576624842552394,
+      "E_mean_of_three_view_means": 0.4576624842552394,
+      "H_bestview_complete_only": 0.6144995191007991,
+      "C_x_only_mean": 0.34582337026848237,
+      "C_xy_2d_mean": 0.5874076471433521,
+      "C_y_only_mean": 0.4397564353538837,
+      "D_best_global_view": 0.5874076471433521,
+      "F_subfamily_macro_bestview": 0.6246208733235442,
+      "G_family_macro_bestview": 0.6226873810365082
+    },
+    {
+      "method": "AutoClust_Original_InDomain",
+      "n_rows": 3165,
+      "n_with_ari": 3165,
+      "n_datasets": 1055,
+      "n_success": 3165,
+      "A_dataset_bestview_mean": 0.5779473952731331,
+      "B_all_row_mean": 0.43195480997549157,
+      "E_mean_of_three_view_means": 0.43195480997549157,
+      "H_bestview_complete_only": 0.5779473952731331,
+      "C_x_only_mean": 0.33282939842463033,
+      "C_xy_2d_mean": 0.5400419162168077,
+      "C_y_only_mean": 0.4229931152850367,
+      "D_best_global_view": 0.5400419162168077,
+      "F_subfamily_macro_bestview": 0.5872332509540431,
+      "G_family_macro_bestview": 0.5851494746663684
+    },
+    {
+      "method": "AutoClust_Original_InDomain_same_search_space",
+      "n_rows": 3165,
+      "n_with_ari": 3165,
+      "n_datasets": 1055,
+      "n_success": 3165,
+      "A_dataset_bestview_mean": 0.5810259338513559,
+      "B_all_row_mean": 0.43134556517262923,
+      "E_mean_of_three_view_means": 0.43134556517262923,
+      "H_bestview_complete_only": 0.5810259338513559,
+      "C_x_only_mean": 0.3309142521860329,
+      "C_xy_2d_mean": 0.5431285780668665,
+      "C_y_only_mean": 0.41999386526498833,
+      "D_best_global_view": 0.5431285780668665,
+      "F_subfamily_macro_bestview": 0.589943890003445,
+      "G_family_macro_bestview": 0.5879995075476506
+    }
+  ],
+  "historical_matches": {
+    "manuscript_0.6145": [
+      {
+        "method": "AutoClust_Extended_InDomain_same_search_space",
+        "aggregation": "A_dataset_bestview_mean",
+        "value": 0.6144995191007991
+      },
+      {
+        "method": "AutoClust_Extended_InDomain_same_search_space",
+        "aggregation": "H_bestview_complete_only",
+        "value": 0.6144995191007991
+      }
+    ],
+    "stage2b5_0.61706": [
+      {
+        "method": "AutoClust_Extended_InDomain",
+        "aggregation": "A_dataset_bestview_mean",
+        "value": 0.6170597383643214
+      },
+      {
+        "method": "AutoClust_Extended_InDomain",
+        "aggregation": "H_bestview_complete_only",
+        "value": 0.6170597383643214
+      }
+    ],
+    "manuscript_orig_0.5810": [
+      {
+        "method": "AutoClust_Original_InDomain_same_search_space",
+        "aggregation": "A_dataset_bestview_mean",
+        "value": 0.5810259338513559
+      },
+      {
+        "method": "AutoClust_Original_InDomain_same_search_space",
+        "aggregation": "H_bestview_complete_only",
+        "value": 0.5810259338513559
+      }
+    ],
+    "stage2b5_orig_0.57795": [
+      {
+        "method": "AutoClust_Original_InDomain",
+        "aggregation": "A_dataset_bestview_mean",
+        "value": 0.5779473952731331
+      },
+      {
+        "method": "AutoClust_Original_InDomain",
+        "aggregation": "H_bestview_complete_only",
+        "value": 0.5779473952731331
+      }
+    ]
+  },
+  "identical_population": true,
+  "source_commit": "032a7de6c7d7e456fa07ed3cafb158c5f1115a09",
+  "runtime_sec": 96.75832486152649
+}

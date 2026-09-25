@@ -1,0 +1,17 @@
+{
+  "fixed_online": 0.6160307817072919,
+  "vbs_online": 0.6567603388046713,
+  "hybrid_visited_oracle_reference": 0.673114272109875,
+  "policy_headroom": 0.040729557097379465,
+  "v2_online": 0.6170763693848712,
+  "v1_online": 0.607818173603085,
+  "v2_recovery": 0.025671471827681952,
+  "v1_recovery": -0.20163754996332317,
+  "v2_gap_to_vbs": 0.039683969419800125,
+  "vbs_reconstructed_vs_stage2b5_reference": {
+    "reconstructed": 0.6567603388046713,
+    "stage2b5_reference": 0.6567603388046713,
+    "abs_diff": 0.0
+  },
+  "aggregation": "ratio of aggregate means, not mean of per-dataset ratios"
+}

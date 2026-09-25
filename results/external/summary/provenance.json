@@ -1,0 +1,20 @@
+{
+  "run_id": "stage4c_v2_323194df26",
+  "method_source": "phase_c/method_ari.csv.gz (Phase-A layer, unchanged)",
+  "metric_source": "phase_d_canonical_utility/",
+  "candidate_basis_version": "canonical_fixed32_candidate_basis_v1",
+  "utility_basis_amendment_id": "6d59078460ec24d3",
+  "dispatch_amendment_id": "1a8d6de73b9c15fd",
+  "metric_registry_hash": "8d6b44f45f9cf240",
+  "corpus_publication_manifest_hash": "4718a9e6dc7d63d7",
+  "statistics": {
+    "inferential_unit": "dataset",
+    "bootstrap": "percentile, group-aware, 10000 resamples",
+    "dependence_groups": "one sklearn generator (easy/medium/hard) is one group; FCPS and real-PCA datasets stand alone",
+    "n_dependence_groups": 40,
+    "seed": 1234,
+    "test": "Wilcoxon signed-rank where valid",
+    "effect_size": "matched-pairs rank-biserial correlation",
+    "no_view_pseudo_replication": true
+  }
+}

@@ -1,0 +1,1192 @@
+{
+  "registry": "ml2dac_direction_registry",
+  "stage": "4B-3B3",
+  "primary_key": "canonical_metric_id",
+  "n_classes": 61,
+  "maximize": 57,
+  "minimize": 4,
+  "unresolved": 0,
+  "class_counts_per_arm": {
+    "M0": 7,
+    "M1": 17,
+    "M2": 51,
+    "M3": 61
+  },
+  "m3_is_superset_of_all_arms": true,
+  "no_modern_comparator_present": true,
+  "entries": [
+    {
+      "canonical_metric_id": "alpha_shape_compactness",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.alpha_shape_compactness",
+      "implementation_class": "AlphaShapeCompactnessMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "arc_circle_fit",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.arc_circle_fit",
+      "implementation_class": "ArcCircleFitMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "avg_pca_isotropy",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Average_cluster_compactness",
+      "implementation_class": "AvgPCAIsotropyMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_structure",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "avg_within_cluster_dispersion",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MINIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.avg_within_cluster_dispersion",
+      "implementation_class": "AvgWithinClusterDispersionMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_structure",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "axial_symmetry",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.axial_symmetry",
+      "implementation_class": "AxialSymmetryMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "bimodality_anti_thickness",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.bimodality_anti_thickness",
+      "implementation_class": "BimodalityAntiThicknessMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "blobness_log_dog",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.blobness_log_dog",
+      "implementation_class": "BlobnessLogDogMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "calinski_harabasz",
+      "arms": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.calinski_harabasz",
+      "implementation_class": "CalinskiHarabaszMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "original_or_established",
+      "stored_value_is_negated": false,
+      "historical_abbrev": "CH",
+      "ml2dac_cvi_direction_entry": "maximize",
+      "stage3a_evaluable": true
+    },
+    {
+      "canonical_metric_id": "circularity_compactness",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.circularity_compactness",
+      "implementation_class": "CircularityCompactnessMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "cluster_size_balance_entropy",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Entropy_cluster_sizes",
+      "implementation_class": "ClusterSizeBalanceEntropyMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_structure",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "cluster_size_imbalance_entropy",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Entropy_cluster_sizes",
+      "implementation_class": "ClusterSizeImbalanceEntropyMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_structure",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "coggins_jain_index",
+      "arms": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "external/ml2dac/src/ClusterValidityIndices/CVIHandler.py -- explicit MetricObjective on the CVI declaration",
+      "implementation_module": "experiments/external_baselines/Unified_MKR/unified_mkr/ml2dac_cvi_adapter.py",
+      "implementation_callable": "compute_ml2dac_only",
+      "engine_entrypoint": "ViewMetricEngine._ml2dac",
+      "provenance": "vendored ML2DAC CVICollection (submodule c946b9e, unmodified)",
+      "group": "original",
+      "stored_value_is_negated": true,
+      "note": "CVIHandler.score_cvi negates MAXIMIZE-objective scores and compute_ml2dac_only passes that through, so the stored value is -raw for dunn_index and coggins_jain_index",
+      "historical_abbrev": "CJI",
+      "ml2dac_cvi_direction_entry": "maximize",
+      "stage3a_evaluable": true
+    },
+    {
+      "canonical_metric_id": "connected_components_count",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.connected_components_count",
+      "implementation_class": "ConnectedComponentsCountMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "connectivity_components",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.connectivity_components",
+      "implementation_class": "ConnectivityComponentsMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "contour_graph_connectivity",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.contour_graph_connectivity",
+      "implementation_class": "ContourGraphConnectivityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "convexity_ratio",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.convexity_ratio",
+      "implementation_class": "ConvexityRatioMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "cop",
+      "arms": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "orientation": "MINIMIZE",
+      "orientation_source": "external/ml2dac/src/ClusterValidityIndices/CVIHandler.py -- explicit MetricObjective on the CVI declaration",
+      "implementation_module": "experiments/external_baselines/Unified_MKR/unified_mkr/ml2dac_cvi_adapter.py",
+      "implementation_callable": "compute_ml2dac_only",
+      "engine_entrypoint": "ViewMetricEngine._ml2dac",
+      "provenance": "vendored ML2DAC CVICollection (submodule c946b9e, unmodified)",
+      "group": "original",
+      "stored_value_is_negated": false,
+      "note": "MINIMIZE objective is not negated by score_cvi, so the stored value is raw",
+      "historical_abbrev": "COP",
+      "ml2dac_cvi_direction_entry": "minimize",
+      "stage3a_evaluable": true
+    },
+    {
+      "canonical_metric_id": "corner_junction_density",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.corner_junction_density",
+      "implementation_class": "CornerJunctionDensityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "corner_sharpness",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.corner_sharpness",
+      "implementation_class": "CornerSharpnessMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "curvature_consistency",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.curvature_consistency",
+      "implementation_class": "CurvatureConsistencyMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "davies_bouldin",
+      "arms": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "orientation": "MINIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.davies_bouldin",
+      "implementation_class": "DaviesBouldinMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "original_or_established",
+      "stored_value_is_negated": false,
+      "historical_abbrev": "DBI",
+      "ml2dac_cvi_direction_entry": "minimize",
+      "stage3a_evaluable": true
+    },
+    {
+      "canonical_metric_id": "dbcv",
+      "arms": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.Density_Based_Clustering_Validation_Index",
+      "implementation_class": "DBCVMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "original_or_established",
+      "stored_value_is_negated": false,
+      "historical_abbrev": "DBCV",
+      "ml2dac_cvi_direction_entry": "maximize",
+      "stage3a_evaluable": true
+    },
+    {
+      "canonical_metric_id": "direction_entropy",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.direction_entropy",
+      "implementation_class": "DirectionEntropyMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "dunn_index",
+      "arms": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "external/ml2dac/src/ClusterValidityIndices/CVIHandler.py -- explicit MetricObjective on the CVI declaration",
+      "implementation_module": "experiments/external_baselines/Unified_MKR/unified_mkr/ml2dac_cvi_adapter.py",
+      "implementation_callable": "compute_ml2dac_only",
+      "engine_entrypoint": "ViewMetricEngine._ml2dac",
+      "provenance": "vendored ML2DAC CVICollection (submodule c946b9e, unmodified)",
+      "group": "original",
+      "stored_value_is_negated": true,
+      "note": "CVIHandler.score_cvi negates MAXIMIZE-objective scores and compute_ml2dac_only passes that through, so the stored value is -raw for dunn_index and coggins_jain_index",
+      "historical_abbrev": "DI",
+      "ml2dac_cvi_direction_entry": "maximize",
+      "stage3a_evaluable": true
+    },
+    {
+      "canonical_metric_id": "eccentricity_ratio",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.eccentricity_ratio",
+      "implementation_class": "EccentricityRatioMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "edge_coherence",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.edge_coherence",
+      "implementation_class": "EdgeCoherenceStructureTensorMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "ellipse_fit_score",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.ellipse_fit_score",
+      "implementation_class": "EllipseFitScoreMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "euler_holes_count",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.euler_holes_count",
+      "implementation_class": "EulerHolesCountMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "fractal_dimension",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.fractal_dimension",
+      "implementation_class": "FractalDimensionMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "glcm_haralick",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.glcm_haralick",
+      "implementation_class": "GLCMHaralickMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "gridness_2d",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.gridness_2d",
+      "implementation_class": "Gridness2DMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "gridness_fft_acf",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.gridness_fft_acf",
+      "implementation_class": "GridnessFFTACFMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "hollow_score",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.hollow_score",
+      "implementation_class": "HollowScoreMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "hough_line_strength",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.hough_line_strength",
+      "implementation_class": "HoughLineStrengthMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "ladderness",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.ladderness",
+      "implementation_class": "LaddernessMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "lbp_stationarity",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.lbp_stationarity",
+      "implementation_class": "LBPStationarityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "line_straightness",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.line_straightness",
+      "implementation_class": "LineStraightnessMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "min_centroid_distance",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.min_centroid_distance",
+      "implementation_class": "MinCentroidDistanceMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_structure",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "min_intercluster_distance",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.min_intercluster_distance",
+      "implementation_class": "MinInterclusterDistanceMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_structure",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "morphological_band_count",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.morphological_band_count",
+      "implementation_class": "MorphologicalBandCountMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "mst_smoothness",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.mst_smoothness",
+      "implementation_class": "MSTSmoothnessMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "neighborhood_purity",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Local_Neighborhood_Purity",
+      "implementation_class": "NeighborhoodPurityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_structure",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "neighborhood_purity_multi_k",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.structure_base.Local_Neighborhood_Purity",
+      "implementation_class": "NeighborhoodPurityMultiKMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_structure",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "noise_aware_silhouette",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.Noise_Aware_Silhouette",
+      "implementation_class": "NoiseAwareSilhouetteMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "original_or_established",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "orientation_histogram_entropy",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.orientation_histogram_entropy",
+      "implementation_class": "OrientationHistogramEntropyMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "parabolicity",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.parabolicity",
+      "implementation_class": "ParabolicityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "parallel_bands",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.parallel_bands",
+      "implementation_class": "ParallelBandsMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "peak_to_background_hough",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.peak_to_background_line_ratio",
+      "implementation_class": "PeakToBackgroundHoughMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "periodicity_1d",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.periodicity_1d",
+      "implementation_class": "Periodicity1DMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "piecewise_linearity",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.piecewise_linearity",
+      "implementation_class": "PiecewiseLinearityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "polygonality",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.polygonality",
+      "implementation_class": "PolygonalityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "radial_uniformity",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.radial_uniformity",
+      "implementation_class": "RadialUniformityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "rectangularity",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.rectangularity",
+      "implementation_class": "RectangularityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "ribbon_thickness",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.ribbon_thickness",
+      "implementation_class": "RibbonThicknessMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "ridge_strength",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.ridge_strength",
+      "implementation_class": "RidgeStrengthMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "s_dbw",
+      "arms": [
+        "M1",
+        "M3"
+      ],
+      "orientation": "MINIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.S_Dbw_Index",
+      "implementation_class": "SDbwMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "original_or_established",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "silhouette",
+      "arms": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.core_cvi.Silhouette",
+      "implementation_class": "SilhouetteMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "original_or_established",
+      "stored_value_is_negated": false,
+      "historical_abbrev": "SIL",
+      "ml2dac_cvi_direction_entry": "maximize",
+      "stage3a_evaluable": true
+    },
+    {
+      "canonical_metric_id": "skeleton_connectivity",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.skeleton_connectivity",
+      "implementation_class": "SkeletonConnectivityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "symmetry_score",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.symmetry_score",
+      "implementation_class": "SymmetryScoreMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "thickness_uniformity",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.image_base.thickness_uniformity",
+      "implementation_class": "ThicknessUniformityMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_image",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    },
+    {
+      "canonical_metric_id": "turning_points_count",
+      "arms": [
+        "M2",
+        "M3"
+      ],
+      "orientation": "MAXIMIZE",
+      "orientation_source": "monotonicity of the metric class frozen normalize() over a raw grid -- ClustOpt normalises every metric to higher-is-better, so an increasing normalize means the raw metric is MAXIMIZE and a decreasing one means MINIMIZE. Not inferred from names, signs or outcomes.",
+      "implementation_module": "models.ClustOpt.cluster_validity_indices.metrics.pattern_base.turning_points_count",
+      "implementation_class": "TurningPointsCountMetric",
+      "implementation_callable": "GenericCVIEvaluator(metrics=[id]).evaluate",
+      "engine_entrypoint": "ViewMetricEngine._clustopt_raw",
+      "provenance": "ClustOpt frozen metric registry",
+      "group": "new46_pattern",
+      "stored_value_is_negated": false,
+      "historical_abbrev": null,
+      "ml2dac_cvi_direction_entry": null,
+      "stage3a_evaluable": false
+    }
+  ]
+}

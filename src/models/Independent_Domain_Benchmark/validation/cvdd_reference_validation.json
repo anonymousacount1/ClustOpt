@@ -1,0 +1,25 @@
+{
+  "metric": "cvdd",
+  "reference": "hulianyu/CVDD @ 32cabe0cf876ccd4e04e44dda84b0ad96be88bbc (MIT)",
+  "reference_runtime": "docker gnuoctave/octave:9.2.0",
+  "shims_supplied": [
+    "std2 -> std(A(:))",
+    "pdist2 -> euclidean matrix",
+    "minspantree(graph(W)) -> Prim MST edge list"
+  ],
+  "algorithm_altered": false,
+  "tolerance": {
+    "atol": 1e-08,
+    "rtol": 1e-08
+  },
+  "cases_compared": 12,
+  "n_pass": 12,
+  "n_fail": 0,
+  "max_abs_diff": 2.808064891723916e-11,
+  "max_rel_diff": 3.129163954605391e-14,
+  "non_compared": {
+    "EXPECTED_INVALID": 2
+  },
+  "overall": "PASS_WITH_PREDECLARED_APPLICABILITY_CAVEAT",
+  "applicability_caveat": "CVDD is INVALID on inputs containing exact duplicate points (CVDD_DUPLICATE_POINT_MST_AMBIGUITY): the reference MST is non-unique there and the published procedure defines no implementation-independent tie-break, so no canonical value exists"
+}

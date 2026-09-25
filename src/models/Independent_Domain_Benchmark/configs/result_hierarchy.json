@@ -1,0 +1,32 @@
+{
+  "root": "results_analysis/independent_domain_benchmark",
+  "not_reusing": "results_analysis/clustering_repository/analyzed_data",
+  "layout": {
+    "manifests/": [
+      "dataset_manifest.json",
+      "method_manifest.json",
+      "metric_manifest.json",
+      "benchmark_protocol.json",
+      "provenance.json"
+    ],
+    "datasets/<source>/<dataset_id>/": [
+      "dataset_metadata.json",
+      "preparation/preparation_report.json",
+      "experiments/external_validation/<METHOD_ID>/{1d_x,1d_y,2d}/result.json",
+      "experiments/external_validation/<METHOD_ID>/dataset_summary.json",
+      "metric_validation/fixed32/{1d_x,1d_y,2d}/",
+      "evaluation/offline_metrics.json"
+    ],
+    "aggregations/": [
+      "per_dataset/",
+      "per_source/",
+      "global/",
+      "paired/",
+      "runtime/",
+      "metric_validation/",
+      "domain_shift/"
+    ],
+    "reports/": []
+  },
+  "authoritative_results_created_in_stage4a": false
+}

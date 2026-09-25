@@ -1,0 +1,125 @@
+{
+  "suite": "stage4c_metric_dispatch_repair",
+  "semantics": "fixed32_metric_evaluation_v2",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "external_50_used": false,
+  "external_ari_inspected": false,
+  "repair_set": [
+    "cdbw",
+    "cvdd",
+    "cvnn",
+    "dcsi",
+    "convexity_ratio_image_based",
+    "hough_arc_circle_strength"
+  ],
+  "n": 21,
+  "n_fail": 0,
+  "gates": [
+    {
+      "gate": "fixture_bank_built",
+      "status": "PASS",
+      "detail": "32 slots, 30 valid"
+    },
+    {
+      "gate": "every_declared_kind_is_dispatchable",
+      "status": "PASS",
+      "detail": "declared ['clustopt_registry', 'ml2dac_cvi_collection', 'modern_comparator']"
+    },
+    {
+      "gate": "primary_inventory_is_67",
+      "status": "PASS",
+      "detail": "67 entries"
+    },
+    {
+      "gate": "ml2dac_route_used_for_exactly_its_metrics",
+      "status": "PASS",
+      "detail": "called 3 ids, expected 3"
+    },
+    {
+      "gate": "clustopt_route_used_for_exactly_its_metrics",
+      "status": "PASS",
+      "detail": "called 60 ids, expected 60"
+    },
+    {
+      "gate": "modern_route_used_for_exactly_its_metrics",
+      "status": "PASS",
+      "detail": "called ['cdbw', 'cvdd', 'dcsi']"
+    },
+    {
+      "gate": "two_new46_reach_clustopt_registry",
+      "status": "PASS",
+      "detail": "both observed in the ClustOpt registry"
+    },
+    {
+      "gate": "two_new46_never_reach_ml2dac_resolver",
+      "status": "PASS",
+      "detail": "ml2dac resolver invocations = 0 for these ids"
+    },
+    {
+      "gate": "modern_cdbw_yields_values",
+      "status": "PASS",
+      "detail": "30 valid of 30 valid candidates"
+    },
+    {
+      "gate": "modern_cvdd_yields_values",
+      "status": "PASS",
+      "detail": "30 valid of 30 valid candidates"
+    },
+    {
+      "gate": "modern_dcsi_yields_values",
+      "status": "PASS",
+      "detail": "28 valid of 30 valid candidates"
+    },
+    {
+      "gate": "cvnn_uses_bank_level_index",
+      "status": "PASS",
+      "detail": "cvnn_index called 2 time(s)"
+    },
+    {
+      "gate": "cvnn_yields_bank_normalised_values",
+      "status": "PASS",
+      "detail": "30 valid of 30 rows"
+    },
+    {
+      "gate": "cvnn_matches_validated_implementation_exactly",
+      "status": "PASS",
+      "detail": "30 candidates compared, 0 mismatches"
+    },
+    {
+      "gate": "cvnn_normalisation_set_is_the_whole_bank",
+      "status": "PASS",
+      "detail": "30 partitions in the comparison set"
+    },
+    {
+      "gate": "diagnostics_not_evaluated_as_primary",
+      "status": "PASS",
+      "detail": "diagnostic ids present: []"
+    },
+    {
+      "gate": "compat_variants_not_invoked_during_repair",
+      "status": "PASS",
+      "detail": "cdbw_package_compat and dcsi_author_compat invocations = 0"
+    },
+    {
+      "gate": "only_metrics_restricts_exactly",
+      "status": "PASS",
+      "detail": "['cdbw', 'convexity_ratio_image_based', 'cvdd', 'cvnn', 'dcsi', 'hough_arc_circle_strength']"
+    },
+    {
+      "gate": "v2_metric_space_routing_unchanged",
+      "status": "PASS",
+      "detail": "0 rows with wrong space"
+    },
+    {
+      "gate": "all_67_primary_evaluated",
+      "status": "PASS",
+      "detail": "67 of 67 ids present"
+    },
+    {
+      "gate": "no_metric_implementation_modified",
+      "status": "PASS",
+      "detail": "no tracked file modified, no untracked .py (3 untracked docs)"
+    }
+  ],
+  "status": "PASS"
+}

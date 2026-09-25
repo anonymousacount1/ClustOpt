@@ -1,0 +1,23 @@
+{
+  "metric": "cdbw",
+  "primary_implementation": "paper-faithful correction layer over PyPI cdbw==0.2 (MIT), reused with attribution",
+  "primary_is_validated_by": "validation/cdbw_paper_semantics_audit.json (algebraic identities against the package plus an independent fpc cross-check) and validation/cdbw_permutation_invariance_evidence.json",
+  "why_not_validated_by_agreement_with_the_package": "the package is not a correct oracle for the published index: it is order-dependent and its aggregations contradict its own docstrings, so agreeing with it would be evidence of reproducing a defect",
+  "diagnostic_fidelity": {
+    "metric_id": "cdbw_package_compat",
+    "cases_compared": 13,
+    "n_pass": 13,
+    "n_fail": 0,
+    "max_abs_diff": 0.0
+  },
+  "tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-12
+  },
+  "label_order_policy_primary": "not_required_paper_faithful_is_permutation_invariant",
+  "label_order_policy_diagnostic": "canonical_centroid_lexicographic",
+  "non_compared": {
+    "COMPAT_INVALID:fewer_than_two_clusters": 1
+  },
+  "overall": "PASS"
+}

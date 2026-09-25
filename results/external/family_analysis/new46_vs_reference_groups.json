@@ -1,0 +1,12 @@
+{
+  "best_original_utility": 0.5025781679039826,
+  "best_established_utility": 0.4938707807298598,
+  "new46_beating_best_original_overall": 0,
+  "new46_beating_best_established_overall": 0,
+  "new46_beating_best_original_fcps": 0,
+  "new46_beating_best_established_fcps": 0,
+  "new46_beating_best_original_sklearn_shapes": 0,
+  "new46_beating_best_established_sklearn_shapes": 2,
+  "new46_beating_best_original_real_pca": 0,
+  "new46_beating_best_established_real_pca": 0
+}

@@ -1,0 +1,354 @@
+{
+  "verifier": "stage4b3b2_ml2dac_physical_layer",
+  "stage": "4B-3B2",
+  "scope": "protocol amendment, authoritative meta-feature path, common generation state, classifier independence, constrained sampler, reachable-algorithm determinism, M0-M3 physical trace identity, immutable CandidateTrace, label isolation, integrity",
+  "not_covered": "the M0-M3 scoring layer, the CVI direction registry, historical scoring fidelity and the final ML2DAC verifier",
+  "n": 57,
+  "n_pass": 57,
+  "n_fail": 0,
+  "gates": [
+    {
+      "gate": "P01",
+      "description": "the four ML2DAC METHOD_IDs come from the frozen registry",
+      "status": "PASS",
+      "detail": "IDB_ML2DAC_M0_original_cvis, IDB_ML2DAC_M1_original_plus_established, IDB_ML2DAC_M2_original_plus_new46, IDB_ML2DAC_M3_extended_cvis"
+    },
+    {
+      "gate": "P02",
+      "description": "all four map to the common seed identity",
+      "status": "PASS",
+      "detail": "['ml2dac_shared_candidate_slate']"
+    },
+    {
+      "gate": "P03",
+      "description": "production seeds are equal within every dataset/view key",
+      "status": "PASS",
+      "detail": "36 keys, 0 within-key mismatches"
+    },
+    {
+      "gate": "P04",
+      "description": "different dataset/view keys give different seeds",
+      "status": "PASS",
+      "detail": "120 keys, 0 collisions"
+    },
+    {
+      "gate": "P05",
+      "description": "the amendment manifest records old and new state in both hash conventions",
+      "status": "PASS",
+      "detail": "old->new protocol.py a19f8e5e01a02e60 -> 7ccf1d0f8bdc9929"
+    },
+    {
+      "gate": "P06",
+      "description": "the amendment record document exists",
+      "status": "PASS",
+      "detail": "missing: none"
+    },
+    {
+      "gate": "P07",
+      "description": "corpus manifest and search-space fingerprint are unchanged",
+      "status": "PASS",
+      "detail": "corpus 709712107424ad4e"
+    },
+    {
+      "gate": "P08",
+      "description": "method_registry.json was not touched by the amendment",
+      "status": "PASS",
+      "detail": "4db39c8bdbc847a6"
+    },
+    {
+      "gate": "P09",
+      "description": "ClustOpt and AutoClust seed identities are untouched",
+      "status": "PASS",
+      "detail": "clustopt 4, autoclust 1"
+    },
+    {
+      "gate": "P10",
+      "description": "the Stage-4A freeze script still shows the ORIGINAL per-arm groups",
+      "status": "PASS",
+      "detail": "provenance chain not rewritten"
+    },
+    {
+      "gate": "P11",
+      "description": "seed identity and physical reuse are recorded as separate facts",
+      "status": "PASS",
+      "detail": "SEED IDENTITY AUTHORISED 2026-09-10 (ml2dac_shared_candidate_slate); P"
+    },
+    {
+      "gate": "M01",
+      "description": "the frozen 52-feature schema is recorded and matches the artifacts",
+      "status": "PASS",
+      "detail": "f33a72e081fff983"
+    },
+    {
+      "gate": "M02",
+      "description": "the isolated .mfenv interpreter resolves and matches the frozen env",
+      "status": "PASS",
+      "detail": "{\"python\": \"3.12.2\", \"pymfe\": \"0.4.4\", \"numpy\": \"2.4.6\", \"pandas\": \"3.0.3\"}"
+    },
+    {
+      "gate": "M03",
+      "description": "the authoritative extractor is pymfe_worker, not the fallback",
+      "status": "PASS",
+      "detail": "experiments/external_baselines/Unified_MKR/unified_mkr/pymfe_worker.py"
+    },
+    {
+      "gate": "M04",
+      "description": "the fallback extractor is behaviourally unreachable",
+      "status": "PASS",
+      "detail": "fallback=0 mfenv_subprocess=1"
+    },
+    {
+      "gate": "M05",
+      "description": "a wrong extraction environment is refused, not tolerated",
+      "status": "PASS",
+      "detail": "{'raised': 'METAFEATURE_ENV_MISMATCH'}"
+    },
+    {
+      "gate": "M06",
+      "description": "meta-feature extraction is label-free (static and behavioural)",
+      "status": "PASS",
+      "detail": "permutation 0.0 / removal 0.0"
+    },
+    {
+      "gate": "M07",
+      "description": "extraction from X reproduces the frozen master parquet exactly",
+      "status": "PASS",
+      "detail": "30/30 exact, max|diff|=0.0e+00"
+    },
+    {
+      "gate": "N01",
+      "description": "imputer and KDTree artifacts are the frozen arm-independent ones",
+      "status": "PASS",
+      "detail": "imputer 953dc6215b21535c nn d06053c3abf4168d"
+    },
+    {
+      "gate": "N02",
+      "description": "the warmstart repository semantic hash is the frozen one",
+      "status": "PASS",
+      "detail": "bb3a1306b4562217 across 4 arms"
+    },
+    {
+      "gate": "N03",
+      "description": "the superseded d1865d9c7006bd37 digest is retired, not cited",
+      "status": "PASS",
+      "detail": "retired and not cited in the report"
+    },
+    {
+      "gate": "N04",
+      "description": "historical neighbours and warmstarts agreed across M0-M3",
+      "status": "PASS",
+      "detail": "324 cases, 0 disagreements"
+    },
+    {
+      "gate": "A01",
+      "description": "the reachable algorithm set is derived, not assumed",
+      "status": "PASS",
+      "detail": "agglomerative, birch, dbscan, gmm, hdbscan, kmeans, minibatch_kmeans"
+    },
+    {
+      "gate": "A02",
+      "description": "algorithms in the space but unreachable by ML2DAC are recorded",
+      "status": "PASS",
+      "detail": "hdbscan_constrained-2, hdbscan_constrained-3, hdbscan_constrained-4, hdbscan_constrained-5, optics, spectral"
+    },
+    {
+      "gate": "A03",
+      "description": "every reachable algorithm is deterministic on repeated execution",
+      "status": "PASS",
+      "detail": "3 repeats x 7 algorithms x 3 views, 0 mismatches"
+    },
+    {
+      "gate": "A04",
+      "description": "determinism was judged on RAW labels, not canonicalised partitions",
+      "status": "PASS",
+      "detail": "relabelling not tolerated"
+    },
+    {
+      "gate": "T01",
+      "description": "the proof covered all three views and multiple families",
+      "status": "PASS",
+      "detail": "30 keys, 10 families, 3 views"
+    },
+    {
+      "gate": "T02",
+      "description": "the proof covered every reachable clustering algorithm",
+      "status": "PASS",
+      "detail": "7/7 algorithms"
+    },
+    {
+      "gate": "T03",
+      "description": "each arm was replayed through its OWN artifacts, nothing shared",
+      "status": "PASS",
+      "detail": "each arm replayed through ITS OWN imputer, KDTree, warmstart"
+    },
+    {
+      "gate": "T04",
+      "description": "production seed mismatches across M0-M3 = 0",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "gate": "T05",
+      "description": "nearest-neighbour mismatches = 0",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "gate": "T06",
+      "description": "warmstart mismatches = 0",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "gate": "T07",
+      "description": "configuration mismatches = 0",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "gate": "T08",
+      "description": "execution status mismatches = 0",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "gate": "T09",
+      "description": "raw-label mismatches = 0",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "gate": "T10",
+      "description": "canonical-partition mismatches = 0",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "gate": "T11",
+      "description": "the proof executed a substantial number of candidates",
+      "status": "PASS",
+      "detail": "6000 candidate executions"
+    },
+    {
+      "gate": "T12",
+      "description": "the rare warmstart algorithm set is covered by a TARGETED fixture, clearly distinguished from natural coverage",
+      "status": "PASS",
+      "detail": "6 algorithms, 200 executions, 0 mismatches"
+    },
+    {
+      "gate": "T13",
+      "description": "PHYSICAL TRACE REUSE verdict",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "gate": "C01",
+      "description": "the public API has no ground-truth parameter",
+      "status": "PASS",
+      "detail": "X, dataset_id, view_id, repo, budget"
+    },
+    {
+      "gate": "C02",
+      "description": "the trace id is arm-independent and reproducible",
+      "status": "PASS",
+      "detail": "{'trace_id': 'c81f4ef55b798858', 'reproducible': True, 'depends_on_met"
+    },
+    {
+      "gate": "C03",
+      "description": "the trace carries no predicted CVI, classifier hash or selection",
+      "status": "PASS",
+      "detail": "no scoring state"
+    },
+    {
+      "gate": "C04",
+      "description": "meta-features, warmstarts, configs and labels are immutable",
+      "status": "PASS",
+      "detail": "{\"metadata\": \"FrozenInstanceError\", \"collection\": \"AttributeError\", \"warmstarts\": \"Attribu"
+    },
+    {
+      "gate": "C05",
+      "description": "failed candidates keep their slot; no resampling or replacement",
+      "status": "PASS",
+      "detail": "{\"budget\": 8, \"warmstart_slots\": 4, \"sampled_slots\": 4, \"failed_kept\": 0}"
+    },
+    {
+      "gate": "C06",
+      "description": "the budget is the matched 25 warmstart + 25 sampled protocol",
+      "status": "PASS",
+      "detail": "50 = 25 + 25 on 30 proof keys"
+    },
+    {
+      "gate": "C07",
+      "description": "only reachable algorithms are ever generated",
+      "status": "PASS",
+      "detail": "{\"generated\": [\"agglomerative\", \"gmm\", \"kmeans\", \"minibatch_kmeans\"], "
+    },
+    {
+      "gate": "C08",
+      "description": "the physical failure kinds are frozen",
+      "status": "PASS",
+      "detail": "12 kinds"
+    },
+    {
+      "gate": "G01",
+      "description": "the CVI classifier is never invoked in the physical layer",
+      "status": "PASS",
+      "detail": "predict calls 0"
+    },
+    {
+      "gate": "G02",
+      "description": "cvi_classifier.pkl is never even loaded in the physical layer",
+      "status": "PASS",
+      "detail": "loads 0"
+    },
+    {
+      "gate": "G03",
+      "description": "the constrained sampler is used",
+      "status": "PASS",
+      "detail": "calls 1"
+    },
+    {
+      "gate": "G04",
+      "description": "the native sampler and _sample_params are behaviourally unreachable",
+      "status": "PASS",
+      "detail": "calls 0"
+    },
+    {
+      "gate": "G05",
+      "description": "the physical-layer test suite passes in full",
+      "status": "PASS",
+      "detail": "15 tests, 0 fail"
+    },
+    {
+      "gate": "I01",
+      "description": "the external/ml2dac submodule is clean at c946b9e",
+      "status": "PASS",
+      "detail": "c946b9eaf58d"
+    },
+    {
+      "gate": "I02",
+      "description": "no frozen external scientific dataset was executed",
+      "status": "PASS",
+      "detail": "internal split-1 records and invented fixtures only"
+    },
+    {
+      "gate": "I03",
+      "description": "no ground-truth labels were used anywhere in this stage",
+      "status": "PASS",
+      "detail": "label-free"
+    },
+    {
+      "gate": "I04",
+      "description": "no training, tuning or reserialisation occurred",
+      "status": "PASS",
+      "detail": "{\"cvi_classifier.pkl\": \"0129b6f742cdca9d\", \"imputer.pkl\": \"953dc6215b21535c\", \"nearest_neighbor_index.pkl\": \"d06053c3abf4168d\"}"
+    },
+    {
+      "gate": "I05",
+      "description": "the Stage 4B-2 and Stage 4B-3 verifiers still pass",
+      "status": "PASS",
+      "detail": "clustopt rc=0; autoclust rc=0"
+    }
+  ],
+  "status": "PASS"
+}

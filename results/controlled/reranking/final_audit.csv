@@ -1,0 +1,34 @@
+check_id,description,status,detail
+Q01,"1,055/1,055 dataset result files complete",PASS,"1055 datasets, 0 problems"
+Q02,20 policies per dataset,PASS,
+Q03,3 views per policy,PASS,
+Q04,"63,300 run references",PASS,63300
+Q05,86/86 subfamily summaries,PASS,86/86
+Q06,"family dataset counts sum to 1,055",PASS,"12 families, 1055"
+Q07,20-policy table has exactly 20 unique policies,PASS,
+Q08,20-policy table reconstructs from dataset outputs,PASS,max |delta| 1.11e-16
+Q09,best original policy reconstructs,PASS,regressor_top5_raw 0.57843
+Q10,best reranked policy reconstructs,PASS,knn_top10_raw 0.61603
+Q11,reranked VBS reconstructs,PASS,0.656760
+Q12,hybrid visited oracle reconstructs,PASS,0.673114
+Q13,VBS headroom arithmetic exact,PASS,0.040730
+Q14,hybrid gaps arithmetic exact,PASS,
+Q15,two VBS formulations identical dataset-by-dataset,PASS,verified during aggregation
+Q16,AutoClust Extended comparison reconstructs,PASS,0.616031 vs 0.617060 = -0.001029
+Q17,AutoClust Extended difference CI crosses zero,PASS,"[-0.00628, 0.00422] p=0.140"
+Q18,"+0.038083 is the AutoClust ORIGINAL comparison, not Extended",PASS,knn_top10_raw - AutoClust_Original_InDomain
+Q19,domain-shift counts reconstruct,PASS,unseen 0.12792
+Q20,unseen-family selection rates present,PASS,original_J=0.2209 reranker=0.0523 visited_oracle=0.0761
+Q21,"9,589 partial runs retained",PASS,9589
+Q22,no zero-eligible run,PASS,
+Q23,runtime components sum to the incremental total,PASS,max residual 1.42e-14
+Q24,runtime statistics reconstruct,PASS,mean 19.6426 p95 28.7812
+Q25,overhead percentage definitions distinguished,PASS,ratio_of_means=0.02394% mean_of_ratios=0.03412%
+Q26,three-view dataset-policy overhead reconstructs,PASS,58.9279 ms
+Q27,all required global artifacts present,PASS,36 files in the global root
+Q28,no candidate selection changed post exposure,PASS,aggregation-only correction; per-run selections untouched
+Q29,no model prediction changed post exposure,PASS,
+Q30,"no reranker/utility retraining, no clustering, no Optuna",PASS,
+Q31,"no dataset removal, no candidate synthesis",PASS,
+Q32,no eligibility / feature-schema / policy-set change,PASS,
+Q33,recovery-correction provenance documented,PASS,recovery_aggregation_post_exposure_audit.json

@@ -1,0 +1,260 @@
+{
+  "protocol_id": "idb_bench_v1",
+  "source_commit": "e481db10597e4aee8776537003fb79c0147fc09a",
+  "search": {
+    "budget_evaluations": 50,
+    "k_min": 2,
+    "k_max": 5,
+    "search_space_source": "clustopt_phaseE2_map",
+    "externally_tuned": false,
+    "note": "the same previously frozen matched-search-space protocol and common budget; this does NOT claim every framework can instantiate every identical candidate"
+  },
+  "reachable_portfolio_differences": {
+    "ClustOpt": "full phaseE2 grid incl. hdbscan_constrained variants",
+    "AutoClust": "kmeans, minibatch_kmeans, gmm, agglomerative, birch, hdbscan (observed selected-algorithm support in Stage 3A)",
+    "ML2DAC": "warmstart-driven; algorithm reduction may exclude families per dataset by design",
+    "policy": "differences are recorded, never equalised by modification"
+  },
+  "density_methods": {
+    "DBSCAN_HDBSCAN": "prior behaviour preserved",
+    "ground_truth_K_forced": false,
+    "note": "ground-truth K is evaluation metadata only"
+  },
+  "views": {
+    "1d_x": "x_only",
+    "1d_y": "y_only",
+    "2d": "xy_2d"
+  },
+  "seed_protocol": {
+    "scheme": "SHA256-based, reusing the project convention",
+    "formula": "seed = int(sha256(f'{base_seed}|{dataset_id}|{view_id}|{seed_identity}').hexdigest()[:8], 16) % 2**31",
+    "base_seed": 1234,
+    "seed_identity": "the SEARCH identity, not the method id: arms that share a search trace share seed_identity so their traces are bit-identical",
+    "trace_groups": {
+      "clustopt_mlp_top5": [
+        "C0",
+        "C3"
+      ],
+      "clustopt_knn_top10": [
+        "C1",
+        "C4"
+      ],
+      "clustopt_ppv1": [
+        "C2"
+      ],
+      "clustopt_ppv2": [
+        "C5"
+      ],
+      "autoclust_shared_candidate_slate": [
+        "A0",
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "ml2dac_shared_candidate_slate": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ]
+    },
+    "derived_from_outcomes": false,
+    "seed_groups": {
+      "clustopt_mlp_top5": [
+        "C0",
+        "C3"
+      ],
+      "clustopt_knn_top10": [
+        "C1",
+        "C4"
+      ],
+      "clustopt_ppv1": [
+        "C2"
+      ],
+      "clustopt_ppv2": [
+        "C5"
+      ],
+      "autoclust_shared_candidate_slate": [
+        "A0",
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "ml2dac_shared_candidate_slate": [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ]
+    },
+    "amendment_note": "AutoClust moved from autoclust_per_arm to the common identity 'autoclust_shared_candidate_slate' by the pre-run amendment of 2026-09-09; ML2DAC moved from ml2dac_per_arm to 'ml2dac_shared_candidate_slate' by the pre-run amendment of 2026-09-10. Both are SEED-IDENTITY groupings: the scientific METHOD_IDs are unchanged and each arm still produces its own scientific output."
+  },
+  "trace_reuse": {
+    "shared": [
+      [
+        "C0",
+        "C3"
+      ],
+      [
+        "C1",
+        "C4"
+      ],
+      [
+        "A0",
+        "A1",
+        "A2",
+        "A3"
+      ],
+      [
+        "M0",
+        "M1",
+        "M2",
+        "M3"
+      ]
+    ],
+    "justification": "the reranker changes only FINAL candidate selection; the utility source, K, weighting, search space, budget and seed are identical, so the visited slate is identical by construction",
+    "not_shared": [
+      [
+        "C2"
+      ],
+      [
+        "C5"
+      ]
+    ],
+    "not_shared_reason": "PP v1 and PP v2 may select different policies, so their searches legitimately differ",
+    "runtime_rule": "a reranker arm's reported runtime = the shared search cost + its own final-selection cost; NEVER the incremental reranker time alone",
+    "physical_traces_for_six_outputs": 4,
+    "physical_reuse_status": {
+      "clustopt": "VALIDATED in Stage 4B-2",
+      "autoclust": "SEED IDENTITY AUTHORISED 2026-09-09 (autoclust_shared_candidate_slate); PHYSICAL EXECUTION REUSE VALIDATED in Stage 4B-3A1 -- see validation/autoclust_physical_trace_validation.json",
+      "ml2dac": "SEED IDENTITY AUTHORISED 2026-09-10 (ml2dac_shared_candidate_slate); PHYSICAL EXECUTION REUSE VALIDATED in Stage 4B-3B2 -- 30 internal keys, 6000 candidate executions, zero seed/neighbour/warmstart/configuration/status/raw-label/partition mismatches; see validation/ml2dac_physical_trace_identity.json"
+    },
+    "seed_identity_is_not_physical_reuse": "a shared seed identity is a necessary condition for physical reuse, not a demonstration of it; AutoClust is listed here only once status/partition identity has been executed",
+    "physical_plan": {
+      "per_dataset_view": {
+        "ClustOpt": 4,
+        "AutoClust": 1,
+        "ML2DAC": 1,
+        "total": 6
+      },
+      "across_corpus": {
+        "datasets": 50,
+        "views": 3,
+        "unique_physical_candidate_traces": 900
+      },
+      "scientific_outputs": {
+        "methods": 14,
+        "total": 2100
+      },
+      "status": "FROZEN physical candidate-trace plan",
+      "explicitly_not": "a runtime-accounting conclusion; runtime attribution and timing semantics are deferred to Stage 4B-4"
+    }
+  },
+  "endpoints": {
+    "P1": "BestView ARI (historical continuity)",
+    "P2": "xy_2d ARI (deployable external representation)",
+    "both_always_reported": true,
+    "secondary": [
+      "NMI",
+      "AMI",
+      "FMI",
+      "purity",
+      "k_error"
+    ]
+  },
+  "primary_comparisons": {
+    "headline": [
+      [
+        "IDB_ClustOpt_C5_PPv2_R",
+        "IDB_AutoClust_A3_extended_cvis"
+      ],
+      [
+        "IDB_ClustOpt_C5_PPv2_R",
+        "IDB_ML2DAC_M3_extended_cvis"
+      ]
+    ],
+    "clustopt_mechanism": [
+      [
+        "C3",
+        "C0"
+      ],
+      [
+        "C4",
+        "C1"
+      ],
+      [
+        "C5",
+        "C2"
+      ]
+    ],
+    "autoclust_metric_transfer": [
+      [
+        "A1",
+        "A0"
+      ],
+      [
+        "A2",
+        "A0"
+      ],
+      [
+        "A3",
+        "A1"
+      ],
+      [
+        "A3",
+        "A2"
+      ],
+      [
+        "A3",
+        "A0"
+      ]
+    ],
+    "ml2dac_metric_transfer": [
+      [
+        "M1",
+        "M0"
+      ],
+      [
+        "M2",
+        "M0"
+      ],
+      [
+        "M3",
+        "M1"
+      ],
+      [
+        "M3",
+        "M2"
+      ],
+      [
+        "M3",
+        "M0"
+      ]
+    ],
+    "exhaustive_pairwise_is_primary": false
+  },
+  "reporting": {
+    "per_source": [
+      "fcps",
+      "sklearn_shapes",
+      "real_pca"
+    ],
+    "dataset_macro": true,
+    "source_balanced_macro": "(mean_fcps + mean_sklearn + mean_real)/3",
+    "both_macros_always_shown": true
+  },
+  "statistics": {
+    "inferential_unit": "dataset",
+    "bootstrap": "percentile, group-aware",
+    "grouping": "sklearn easy/medium/hard from one generator are one dependence group; bootstrap resamples generator groups, not the 15 rows",
+    "test": "Wilcoxon signed-rank where valid",
+    "report": [
+      "mean paired delta",
+      "median",
+      "95% CI",
+      "wins/losses/ties",
+      "effect size"
+    ],
+    "no_view_pseudo_replication": true
+  }
+}

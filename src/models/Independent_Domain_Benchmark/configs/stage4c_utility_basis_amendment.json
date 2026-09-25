@@ -1,0 +1,93 @@
+{
+  "amendment": "stage4c_utility_candidate_basis_correction",
+  "amendment_id": "6d59078460ec24d3",
+  "version": 1,
+  "candidate_basis_version": "canonical_fixed32_candidate_basis_v1",
+  "parent_run_id": "stage4c_v2_323194df26",
+  "supersedes_utility_layers": [
+    "phase_c (v1 union basis)",
+    "phase_c_v2 (six metrics on the v1 union basis)"
+  ],
+  "prior_amendment": "stage4c_fixed32_metric_dispatch_repair (1a8d6de73b9c15fd)",
+  "discovered_post_unblinding": true,
+  "determined_by": "a structural isolation invariant, not metric performance. The audit compared candidate bases and found the original frame removed valid clustering partitions from every metric's comparison universe; no utility magnitude or ranking was used to reach that conclusion.",
+  "defect": {
+    "layer": "candidate-frame assembly for metric utility",
+    "mechanism": "candidate-universe coupling",
+    "detail": "Phase C created a candidate row only when at least one metric produced a valid value, so the utility universe was the union over metrics of their valid candidates. 392 valid fixed32 clustering partitions -- including K=1 partitions on which every one of the 61 CVIs is undefined -- were therefore absent from every metric's comparison universe.",
+    "why_it_matters": "the frozen Stage-3B utility is frame-relative by design: k_top and k_bottom are 10 percent of len(frame), the eligibility guard is 20 percent of len(frame), and a metric's invalid candidates are ranked worst rather than dropped. The candidate basis is part of the measurement.",
+    "affected_cells": 6822,
+    "cells_checked": 9102
+  },
+  "canonical_basis": {
+    "definition": "every candidate in the frozen Fixed32CandidateBank with a valid clustering partition and an available candidate ARI",
+    "derived_from": "bank record candidate status only",
+    "metric_independent": true,
+    "expected_candidates": 4776,
+    "total_slots": 4800,
+    "failed_clustering_slots": 24,
+    "excluded": "only slots whose clustering itself failed",
+    "not_derived_from": [
+      "metric-value dataframe row presence",
+      "union of valid metric rows",
+      "intersection of valid metric rows"
+    ],
+    "per_metric_rule": "left-join each metric's evaluation onto the canonical candidate ids; a metric being invalid or non-finite on a candidate affects only that metric's value and status, and never deletes the candidate row",
+    "k1_candidates_retained": true,
+    "invalid_values_imputed": false
+  },
+  "utility_definition_changed": false,
+  "utility_definition_statement": "The mathematical utility definition is UNCHANGED. Formula, component weights, Spearman and Kendall handling, pairwise accuracy, NDCG, top-k and bottom-k, invalid-value treatment, orientation and minimum-valid semantics are all exactly as frozen. Only the candidate-frame assembly that feeds the function is corrected. This is not a post-hoc redesign of the utility function.",
+  "utility_source": "models/ClustOpt/external_evaluation/compute_metric_utility.py",
+  "utility_source_hash": "7f65fa2b1a794b26",
+  "utility_weights": {
+    "spearman_pos": 0.18,
+    "kendall_pos": 0.12,
+    "pairwise_accuracy": 0.2,
+    "ndcg_all": 0.2,
+    "topk_overlap": 0.05,
+    "bottomk_overlap": 0.05,
+    "ndcg_topk": 0.1,
+    "ndcg_bottomk": 0.1
+  },
+  "unchanged_scientific_objects": [
+    "Phase A method outputs (2100 arms)",
+    "fixed32 candidate banks (150)",
+    "fixed32 candidate partitions and labels (4800 slots, 4776 valid)",
+    "metric raw values",
+    "metric validity statuses",
+    "candidate ARIs",
+    "metric definitions and implementations",
+    "the utility formula and its weights",
+    "models",
+    "search",
+    "the corpus and its frozen representation checksums"
+  ],
+  "changed_layer": "candidate-frame assembly for metric utility only",
+  "metric_value_sources": {
+    "61_unaffected_primary_metrics": "original v1 metric-evaluation records",
+    "6_repaired_primary_metrics": "fixed32_metric_evaluation_v2 records from amendment 1a8d6de73b9c15fd",
+    "resolution_rule": "exactly one authoritative status/value per logical candidate x metric combination; the superseded v1 rows for the repaired six are ignored, never merged",
+    "metric_recomputations": 0,
+    "metric_implementations_invoked": false
+  },
+  "expected_scale": {
+    "units": 150,
+    "primary_metrics": 67,
+    "utility_cells": 10050,
+    "logical_candidate_metric_combinations": 319992
+  },
+  "preserved_artifacts": [
+    "phase_c/",
+    "phase_c_v2/",
+    "phase_d/",
+    "phase_d_corrected/",
+    "evaluation/metrics__*",
+    "evaluation/metrics_v2__*"
+  ],
+  "new_layer": {
+    "utility": "phase_c_canonical/",
+    "analysis": "phase_d_canonical_utility/"
+  },
+  "publication_authoritative": "phase_d_canonical_utility/"
+}

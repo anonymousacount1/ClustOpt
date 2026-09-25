@@ -1,0 +1,23 @@
+{
+  "method": "AutoML4Clust",
+  "optimizer": "SMAC",
+  "time_budget_sec": 120,
+  "n_loops": 100,
+  "max_iterations": null,
+  "metric": "silhouette",
+  "random_state": 42,
+  "use_warmstarting": false,
+  "fail_on_invalid_clustering": false,
+  "enforce_wallclock_timeout": false,
+  "n_jobs": 1,
+  "normalize_input": true,
+  "k_range": null,
+  "algorithms": null,
+  "record_types": ["2d"],
+  "_notes": {
+    "budget": "AutoML4Clust's native budget is the optimizer iteration count (n_loops -> SMAC runcount-limit). time_budget_sec is recorded for provenance/fairness alignment with ClustOpt's 120s philosophy but is NOT wall-clock enforced unless enforce_wallclock_timeout=true (best-effort thread timeout).",
+    "k_range": "null = AutoML4Clust default [2, n/10], clamped for tiny datasets.",
+    "algorithms": "null = AutoML4Clust default 4 k-center algorithms (KMeans, GMM, KMedoids, MBKMeans).",
+    "fairness": "AutoML4Clust receives only the partition space. No true labels, no true K, no metric utilities, no family metadata."
+  }
+}

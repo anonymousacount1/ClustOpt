@@ -1,0 +1,38 @@
+{
+  "AutoClust_Extended_InDomain": {
+    "n_datasets": 1055,
+    "n_trials_values": [
+      50
+    ],
+    "search_space_values": [],
+    "selected_algorithms": [],
+    "mean_runtime_sec": 281.5864488868244
+  },
+  "AutoClust_Extended_InDomain_same_search_space": {
+    "n_datasets": 1055,
+    "n_trials_values": [
+      50
+    ],
+    "search_space_values": [],
+    "selected_algorithms": [],
+    "mean_runtime_sec": 195.50920665096368
+  },
+  "AutoClust_Original_InDomain": {
+    "n_datasets": 1055,
+    "n_trials_values": [
+      50
+    ],
+    "search_space_values": [],
+    "selected_algorithms": [],
+    "mean_runtime_sec": 152.87963247308068
+  },
+  "AutoClust_Original_InDomain_same_search_space": {
+    "n_datasets": 1055,
+    "n_trials_values": [
+      50
+    ],
+    "search_space_values": [],
+    "selected_algorithms": [],
+    "mean_runtime_sec": 132.60386841238545
+  }
+}

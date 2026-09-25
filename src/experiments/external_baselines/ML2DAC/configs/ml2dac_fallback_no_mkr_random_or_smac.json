@@ -1,0 +1,29 @@
+{
+  "method": "ML2DAC",
+  "mode": "ablation_no_meta_learning",
+  "use_meta_cvi_selection": false,
+  "cvi": "SIL",
+  "use_warmstarting": false,
+  "use_algorithm_reduction": false,
+  "optimizer": "SMAC",
+  "time_budget_sec": 120,
+  "n_optimizer_loops": 100,
+  "n_warmstarts": 0,
+  "n_similar_datasets": 1,
+  "mf_set_index": 4,
+  "random_state": 42,
+  "normalize_input": true,
+  "record_types": ["1d_x", "1d_y", "2d"],
+  "mkr_path": null,
+  "artifact_policy": "require_pretrained_or_fail",
+  "fail_on_missing_mkr": true,
+  "fail_on_invalid_clustering": false,
+  "enforce_wallclock_timeout": false,
+  "n_jobs": 1,
+  "_notes": {
+    "purpose": "DEBUG / ABLATION ONLY -- do NOT use for the final comparison unless explicitly approved.",
+    "what_it_is": "Disables ML2DAC's three meta-learning components: no meta CVI selection (fixed cvi=SIL), no warmstarting (n_warmstarts=0), no algorithm/search-space reduction (limit_cs=false). This degenerates ML2DAC to plain SMAC over the full 9-algorithm config space.",
+    "important": "This still requires the shipped MKR (the application phase reads evaluated_configs.csv / meta-features even when components are disabled). A TRUE no-MKR fallback is not provided because ML2DAC's ApplicationPhase cannot run without the MKR -- removing meta-learning entirely would mean running AutoML4Clust-style plain SMAC, which is a different baseline.",
+    "naming": "Filename matches the requested module structure; the realistic fallback here is 'SMAC without meta-learning', not 'random'."
+  }
+}

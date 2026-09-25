@@ -1,0 +1,47 @@
+{
+  "test": "dcsi_variant_ranking",
+  "claim_under_test": "PAPER and AUTHOR_COMPAT DCSI are universally ranking-equivalent",
+  "verdict": "REFUTED for K>=3; holds only for K=2",
+  "pairwise_k2": {
+    "f_strictly_increasing": true,
+    "g_strictly_increasing": true,
+    "conclusion": "for K=2 the two modes rank candidates identically"
+  },
+  "analytic_k3_counterexample": {
+    "q_A": [
+      0.05,
+      0.05,
+      0.5
+    ],
+    "q_B": [
+      0.1,
+      0.2,
+      0.2
+    ],
+    "paper_mean_A": 0.14285714285714285,
+    "paper_mean_B": 0.1414141414141414,
+    "compat_mean_A": 0.2272727272727273,
+    "compat_mean_B": 0.24603174603174605,
+    "paper_order": "A>B",
+    "compat_order": "A<B",
+    "order_reverses": true
+  },
+  "empirical_k3_counterexample": {
+    "found": true,
+    "n_candidates": 400,
+    "candidate_i": {
+      "trial": 1,
+      "paper": 0.9473707161658173,
+      "author_compat": 0.9727475861674155
+    },
+    "candidate_j": {
+      "trial": 111,
+      "paper": 0.9472199155880912,
+      "author_compat": 0.9728305104867663
+    },
+    "paper_order": "i>j",
+    "compat_order": "i<j",
+    "note": "produced by external_cvis.dcsi on K=3 data, not by hand-chosen q values"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,50 @@
+{
+  "check": "dcsi_publication_value_reproduction",
+  "question": "which separation mode do the authors' own published DCSI values correspond to?",
+  "source_of_published_values": "results/experiments_rawData/<case>.rds in JanaGauss/dcsi @ 15ba6f7bd89151e64b009dc4329f678f416ddc6c, which stores the raw data together with the computed measure table used by the paper's synthetic experiments",
+  "author_data_committed": false,
+  "published_value_precision": "8 decimals as stored",
+  "tolerance": 1e-07,
+  "cases": [
+    {
+      "case": "E1_572",
+      "n": 1000,
+      "K": 2,
+      "published_DCSI": 0.810476981255203,
+      "published_Sep": 2.21539182835011,
+      "published_Conn": 0.518050181217006,
+      "our_sep_paper": 2.2153918283501137,
+      "our_sep_author_compat": 4.4307836567002274,
+      "our_conn": 0.5180501812170043,
+      "our_dcsi_paper": 0.8104769812552031,
+      "our_dcsi_author_compat": 0.8953187360529706,
+      "abs_diff_paper": 1.1102230246251565e-16,
+      "abs_diff_author_compat": 0.08484175479776768,
+      "sep_abs_diff_paper": 3.552713678800501e-15,
+      "conn_abs_diff": 1.6653345369377348e-15,
+      "reproduced_by": "PAPER"
+    },
+    {
+      "case": "E3_42",
+      "n": 1050,
+      "K": 2,
+      "published_DCSI": 0.959732688660188,
+      "published_Sep": 6.25930232351486,
+      "published_Conn": 0.262620288345959,
+      "our_sep_paper": 6.259302323514865,
+      "our_sep_author_compat": 12.51860464702973,
+      "our_conn": 0.2626202883459589,
+      "our_dcsi_paper": 0.9597326886601881,
+      "our_dcsi_author_compat": 0.9794526510820506,
+      "abs_diff_paper": 1.1102230246251565e-16,
+      "abs_diff_author_compat": 0.01971996242186258,
+      "sep_abs_diff_paper": 4.440892098500626e-15,
+      "conn_abs_diff": 1.1102230246251565e-16,
+      "reproduced_by": "PAPER"
+    }
+  ],
+  "verdict": "PAPER",
+  "finding": "the repository contains two DCSI routines: the two-class calc_DCSI, which produced these published values, and the multiclass real-world calc_DCSI_RW. calc_DCSI matches Definition 3.2. The doubling is confined to calc_DCSI_RW, whose separation matrix is filled on both triangles inside the loop and then symmetrised by adding its transpose.",
+  "consequence": "the paper-faithful mode is the one that reproduces the authors' own published numbers, so freezing `dcsi` as paper-faithful is consistent with the publication as well as with the definition; `dcsi_author_compat` reproduces calc_DCSI_RW and remains a diagnostic only.",
+  "scope_limit": "two synthetic K=2 cases were recomputable end to end. The real-world multiclass tables were not reproduced here, so no claim is made about which routine produced those."
+}

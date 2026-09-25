@@ -1,0 +1,82 @@
+{
+  "family_id": "standard_clustering_blobs",
+  "family_name": "Standard clustering blobs",
+  "family_seed": 10010001,
+  "n_features": 2,
+  "feature_names": ["x", "y"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "isotropic_blobs",
+      "cluster_budget": {"2": 30, "3": 45, "4": 45, "5": 30},
+      "component_strategy": {"component_type": "blob", "components_per_cluster": 1},
+      "parameter_ranges": {"sigma_min": 0.035, "sigma_max": 0.07, "anisotropy": 0.0}
+    },
+    {
+      "subfamily_id": "anisotropic_ellipses",
+      "cluster_budget": {"2": 30, "3": 45, "4": 45, "5": 30},
+      "component_strategy": {"component_type": "ellipse", "components_per_cluster": 1},
+      "parameter_ranges": {"rx": [0.05, 0.13], "ry_ratio": [0.35, 0.8], "thickness": [0.004, 0.014], "fill": true}
+    },
+    {
+      "subfamily_id": "overlapping_blobs",
+      "cluster_budget": {"2": 30, "3": 45, "4": 45, "5": 30},
+      "component_strategy": {"component_type": "blob", "components_per_cluster": 1},
+      "parameter_ranges": {"sigma_min": 0.07, "sigma_max": 0.12, "anisotropy": 0.3}
+    },
+    {
+      "subfamily_id": "imbalanced_cluster_sizes",
+      "cluster_budget": {"2": 30, "3": 45, "4": 45, "5": 30},
+      "component_strategy": {"component_type": "blob", "components_per_cluster": 1},
+      "parameter_ranges": {"sigma_min": 0.04, "sigma_max": 0.09, "anisotropy": 0.2}
+    },
+    {
+      "subfamily_id": "density_imbalanced_blobs",
+      "cluster_budget": {"2": 30, "3": 45, "4": 45, "5": 30},
+      "component_strategy": {"component_type": "blob", "components_per_cluster": 1},
+      "parameter_ranges": {"sigma_min": 0.04, "sigma_max": 0.10, "anisotropy": 0.2}
+    },
+    {
+      "subfamily_id": "outliers_and_noise_blobs",
+      "cluster_budget": {"2": 30, "3": 45, "4": 45, "5": 30},
+      "component_strategy": {"component_type": "blob", "components_per_cluster": 1},
+      "parameter_ranges": {"sigma_min": 0.04, "sigma_max": 0.09}
+    },
+    {
+      "subfamily_id": "mixed_blob_ellipse",
+      "cluster_budget": {"2": 20, "3": 30, "4": 30, "5": 20},
+      "component_strategy": {
+        "components_per_cluster": 1,
+        "component_types": [
+          {"type": "blob",    "weight": 1.0, "parameter_ranges": {"sigma_min": 0.035, "sigma_max": 0.085}},
+          {"type": "ellipse", "weight": 1.0, "parameter_ranges": {"rx": [0.06, 0.11], "ry_ratio": [0.4, 0.85], "thickness": [0.005, 0.014], "fill": true}}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+view_id,expected,found,with_log,coverage_pct
+x_only,21100,21100,21100,100.0
+xy_2d,21100,21100,21100,100.0
+y_only,21100,21100,21100,100.0

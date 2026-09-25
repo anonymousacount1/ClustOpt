@@ -1,0 +1,59 @@
+{
+  "rule": "seeding.derive_seed(base_seed, dataset_id, view_id)",
+  "formula": "int.from_bytes(sha256('<base_seed>|<dataset_id>|<view_id>').digest()[:4], 'big') % 2**31",
+  "source": "models/Clustering_Repository_Builder/experiments/experiment_execution/seeding.py",
+  "base_seed": 42,
+  "default_base_seed_in_module": 42,
+  "seed_modulus": 2147483648,
+  "arm_id_in_payload": false,
+  "design_statement": "shared sampler initialisation / paired dataset-view seed -- NOT a shared candidate slate. TPE is adaptive, so an arm with a different objective explores a different trajectory from the same seed.",
+  "reused_from": "the established Stage-1 derivation; the Stage-1 seeded sweep (split_01_online_fixed50) uses the identical rule and base seed, which is why its arms are paired-comparable with the new E1 arms",
+  "n_dataset_view_pairs_checked": 3165,
+  "all_arms_share_seed": true,
+  "seed_mismatches": [],
+  "n_seed_mismatches": 0,
+  "example_seeds": [
+    {
+      "dataset_id": "c2e_000808_1feb31de",
+      "view_id": "x_only",
+      "derived_seed": 1299133433,
+      "arms_observed": 5,
+      "all_arms_share_seed": true
+    },
+    {
+      "dataset_id": "c2e_000808_1feb31de",
+      "view_id": "y_only",
+      "derived_seed": 989745585,
+      "arms_observed": 5,
+      "all_arms_share_seed": true
+    },
+    {
+      "dataset_id": "c2e_000808_1feb31de",
+      "view_id": "xy_2d",
+      "derived_seed": 1681130821,
+      "arms_observed": 5,
+      "all_arms_share_seed": true
+    },
+    {
+      "dataset_id": "c2h_000827_30b7ac26",
+      "view_id": "x_only",
+      "derived_seed": 1937563841,
+      "arms_observed": 5,
+      "all_arms_share_seed": true
+    },
+    {
+      "dataset_id": "c2h_000827_30b7ac26",
+      "view_id": "y_only",
+      "derived_seed": 747908215,
+      "arms_observed": 5,
+      "all_arms_share_seed": true
+    },
+    {
+      "dataset_id": "c2h_000827_30b7ac26",
+      "view_id": "xy_2d",
+      "derived_seed": 1993996220,
+      "arms_observed": 5,
+      "all_arms_share_seed": true
+    }
+  ]
+}

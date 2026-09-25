@@ -1,0 +1,111 @@
+# Metric taxonomy contract.
+#
+# The taxonomy itself is DERIVED at import time in metric_registry.py -- category
+# comes from each metric's implementation package, subcategory from the MLP
+# utility model's head groups. This file records the derivation rules, the audit
+# thresholds and the two separately-named "classic" notions, so the contract is
+# reviewable without reading the code.
+section: 07_metric_selection
+
+category_derivation:
+  source: models.ClustOpt.cluster_validity_indices.metrics.metrics_registry.METRIC_REGISTRY
+  rule: implementation_package_of_the_metric_class
+  mapping:
+    metrics/core_cvi: core_cvi
+    metrics/structure_base: structural
+    metrics/pattern_base: pattern
+    metrics/image_base: image
+  rationale: >-
+    Deriving the category from the implementation package is verifiable and
+    cannot drift from the code. Guessing a category from a metric's name is
+    explicitly forbidden.
+
+subcategory_derivation:
+  source: models.metric_utility_mlp.head_groups.METRIC_HEAD_GROUPS
+  rule: the head group the utility predictor was trained with
+  groups: [classic_cvi, geometry_shape, curves_lines_arcs, image_morphology,
+           texture_frequency, topology_connectivity_neighborhood]
+
+# The recorded selected_metrics.json files use the utility-vector (head-group)
+# spelling for two metrics while the implementation registry uses another. The
+# mapping is explicit, applied at lookup time, and reported in the audit.
+name_aliases:
+  convexity_solidity_image: convexity_ratio_image_based
+  hough_circle_arc_strength: hough_arc_circle_strength
+
+classic_definitions:
+  is_classic_baseline_metric:
+    definition: member of the 4-metric uniform_classic_cvi baseline objective
+    metrics: [silhouette, calinski_harabasz, davies_bouldin, dbcv]
+    used_by: RQ1-B (inventory effect)
+  is_classic_head_group:
+    definition: member of the classic_cvi MLP head group (6 core CVIs + 8
+                structural indices)
+    used_by: reporting the classic/new split of the inventory
+  is_new:
+    definition: NOT a member of the classic_cvi head group
+    used_by: new-metric-usage analysis
+
+audit_requirements:
+  all_utility_metrics_mapped: true
+  max_unknown_metrics: 0
+  max_duplicate_mappings: 0
+  ambiguous_metrics_action: list_in_preflight_clarification_report
+  fail_run_on_unknown_selected_metric: true
+
+normalisation_rules:
+  # A Top-10 method fills ten selection slots per run and a Top-1 method fills
+  # one, so raw counts are not comparable across metric-count policies.
+  policy_comparable: [selection_rate_per_run, mean_unconditional_weight_mass,
+                      dataset_coverage]
+  composition_only: [share_of_selected_slots, weight_mass_share,
+                     selected_slot_share, top_metric_share]
+  not_comparable_across_topk: [selection_count, top_metric_count,
+                               total_weight_mass, selected_slot_count]
+
+per_metric_measures: [selection_count, selection_rate_per_run,
+                      share_of_selected_slots, top_metric_count,
+                      top_metric_rate, mean_weight_when_selected,
+                      median_weight_when_selected, total_weight_mass,
+                      mean_unconditional_weight_mass, dataset_coverage]
+
+per_category_measures: [selected_slot_share, weight_mass_share,
+                        top_metric_share, dataset_coverage,
+                        mean_selected_count_per_run,
+                        median_selected_count_per_run]
+
+new_metric_measures: [new_metric_count, new_metric_fraction,
+                      new_metric_weight_mass, new_metric_weight_share,
+                      has_new_metric, top_metric_is_new]
+
+new_metric_vs_gain:
+  reference_method: uniform_classic_cvi
+  statistics: [pearson_r, spearman_rho]
+  interpretation: association_only
+  interpretation_note: >-
+    Runs differ simultaneously in metric inventory, selection, weighting and
+    count, so this correlation cannot isolate a causal contribution of the new
+    metrics. It is reported as an association and labelled as such in every
+    table and caption.
+
+applies_to_methods: [clustopt_mlp, clustopt_knn, clustopt_real, clustopt_fixed]
+excluded_methods: [external_same_search_space, external_own_search_space,
+                   external_original_code]
+exclusion_reason: >-
+  The external adapters write no metric-selection record; the capability
+  preflight skips these analyses for them and the omission is stated.
+
+tables: [metric_registry.csv, metric_selection_by_method.csv,
+         metric_selection_by_family.csv, metric_selection_by_subfamily.csv,
+         metric_category_usage_by_method.csv,
+         metric_category_usage_by_family.csv, new_metric_usage_by_method.csv,
+         new_metric_usage_by_family.csv, metric_entropy_by_method.csv,
+         new_metric_usage_vs_ari_gain.csv, metric_usage_audit.csv]
+
+plots: [metric_selection_frequency, metric_selection_rate, metric_weight_mass,
+        metric_category_weight_share, metric_category_selection_share,
+        metric_selection_family_heatmap, new_metric_weight_mass_by_method,
+        new_metric_usage_vs_ari_gain]
+
+reports: [metric_registry_audit.md, METRIC_SELECTION_RESULTS.md]
+workbook: 07_metric_selection.xlsx

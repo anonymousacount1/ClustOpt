@@ -1,0 +1,185 @@
+{
+  "gate": "ml2dac_corrected_scoring",
+  "stage": "4B-3B3",
+  "smoke_tag": "NON_SCIENTIFIC_SMOKE_TEST",
+  "scoring_semantics_id": "ml2dac_corrected_cvi_scoring_v1",
+  "selection_rule": "maximise the oriented predicted-CVI score over eligible candidates; strict improvement only, so the lowest candidate index wins a tie; non-finite scores are ineligible; if no candidate is eligible the arm fails with NO_ELIGIBLE_CANDIDATE",
+  "predeclared_tolerance": 1e-12,
+  "tolerance_rationale": "both sides call the SAME frozen callable, so the expected difference is exactly zero; the tolerance is a floating-point guard, not a fitted allowance",
+  "trace": {
+    "trace_id": "78e842a60296e78a",
+    "candidates": 50,
+    "valid": 49,
+    "budget_is_production": true
+  },
+  "arms": {
+    "IDB_ML2DAC_M0_original_cvis": {
+      "status": "success",
+      "failure_kind": null,
+      "predicted_cvi_metric_id": "dbcv",
+      "predicted_cvi_abbrev": "DBCV",
+      "direction": "MAXIMIZE",
+      "classifier_class_order_hash": "4f7b9078a5524c4c",
+      "selected_candidate_index": 43,
+      "selected_algorithm": "dbscan",
+      "final_labels_hash": "c576649aadebb82b",
+      "n_eligible": 49,
+      "score_vector_hash": "5efa74e7585562cc",
+      "inventory": "original",
+      "shared_physical_trace_id": "78e842a60296e78a"
+    },
+    "IDB_ML2DAC_M1_original_plus_established": {
+      "status": "success",
+      "failure_kind": null,
+      "predicted_cvi_metric_id": "neighborhood_purity_multi_k",
+      "predicted_cvi_abbrev": null,
+      "direction": "MAXIMIZE",
+      "classifier_class_order_hash": "4a957c42ed01a6ec",
+      "selected_candidate_index": 0,
+      "selected_algorithm": "kmeans",
+      "final_labels_hash": "c8db7f5ed47d6434",
+      "n_eligible": 49,
+      "score_vector_hash": "16f8aac97c23d505",
+      "inventory": "original_plus_established",
+      "shared_physical_trace_id": "78e842a60296e78a"
+    },
+    "IDB_ML2DAC_M2_original_plus_new46": {
+      "status": "success",
+      "failure_kind": null,
+      "predicted_cvi_metric_id": "blobness_log_dog",
+      "predicted_cvi_abbrev": null,
+      "direction": "MAXIMIZE",
+      "classifier_class_order_hash": "f86564eb316f6712",
+      "selected_candidate_index": 0,
+      "selected_algorithm": "kmeans",
+      "final_labels_hash": "c8db7f5ed47d6434",
+      "n_eligible": 45,
+      "score_vector_hash": "ed1aec7609bf5293",
+      "inventory": "original_plus_new46",
+      "shared_physical_trace_id": "78e842a60296e78a"
+    },
+    "IDB_ML2DAC_M3_extended_cvis": {
+      "status": "success",
+      "failure_kind": null,
+      "predicted_cvi_metric_id": "calinski_harabasz",
+      "predicted_cvi_abbrev": "CH",
+      "direction": "MAXIMIZE",
+      "classifier_class_order_hash": "84d17b6b59ff8024",
+      "selected_candidate_index": 27,
+      "selected_algorithm": "dbscan",
+      "final_labels_hash": "1029c2863daca933",
+      "n_eligible": 49,
+      "score_vector_hash": "2e8e8dcbcc2a75b8",
+      "inventory": "extended",
+      "shared_physical_trace_id": "78e842a60296e78a"
+    }
+  },
+  "one_shared_trace": true,
+  "level_b_c_xy_2d": {
+    "comparisons": 192,
+    "max_raw_abs_error": 0.0,
+    "max_oriented_abs_error": 0.0,
+    "eligibility_mismatches": 0,
+    "direction_selection_mismatches": 0
+  },
+  "level_b_c_other_views": {
+    "x_only": {
+      "trace_id": "fe6e0826e9f84d50",
+      "arm_status": {
+        "IDB_ML2DAC_M0_original_cvis": "success",
+        "IDB_ML2DAC_M1_original_plus_established": "success",
+        "IDB_ML2DAC_M2_original_plus_new46": "success",
+        "IDB_ML2DAC_M3_extended_cvis": "success"
+      },
+      "arm_failure_kind": {
+        "IDB_ML2DAC_M0_original_cvis": null,
+        "IDB_ML2DAC_M1_original_plus_established": null,
+        "IDB_ML2DAC_M2_original_plus_new46": null,
+        "IDB_ML2DAC_M3_extended_cvis": null
+      },
+      "cvis": {
+        "IDB_ML2DAC_M0_original_cvis": "silhouette",
+        "IDB_ML2DAC_M1_original_plus_established": "silhouette",
+        "IDB_ML2DAC_M2_original_plus_new46": "gridness_fft_acf",
+        "IDB_ML2DAC_M3_extended_cvis": "blobness_log_dog"
+      },
+      "directions": {
+        "IDB_ML2DAC_M0_original_cvis": "MAXIMIZE",
+        "IDB_ML2DAC_M1_original_plus_established": "MAXIMIZE",
+        "IDB_ML2DAC_M2_original_plus_new46": "MAXIMIZE",
+        "IDB_ML2DAC_M3_extended_cvis": "MAXIMIZE"
+      },
+      "component": {
+        "comparisons": 48,
+        "max_raw_abs_error": 0.0,
+        "max_oriented_abs_error": 0.0,
+        "eligibility_mismatches": 0,
+        "direction_selection_mismatches": 0
+      }
+    },
+    "y_only": {
+      "trace_id": "4223071d4b8b9770",
+      "arm_status": {
+        "IDB_ML2DAC_M0_original_cvis": "success",
+        "IDB_ML2DAC_M1_original_plus_established": "success",
+        "IDB_ML2DAC_M2_original_plus_new46": "success",
+        "IDB_ML2DAC_M3_extended_cvis": "success"
+      },
+      "arm_failure_kind": {
+        "IDB_ML2DAC_M0_original_cvis": null,
+        "IDB_ML2DAC_M1_original_plus_established": null,
+        "IDB_ML2DAC_M2_original_plus_new46": null,
+        "IDB_ML2DAC_M3_extended_cvis": null
+      },
+      "cvis": {
+        "IDB_ML2DAC_M0_original_cvis": "silhouette",
+        "IDB_ML2DAC_M1_original_plus_established": "avg_pca_isotropy",
+        "IDB_ML2DAC_M2_original_plus_new46": "silhouette",
+        "IDB_ML2DAC_M3_extended_cvis": "blobness_log_dog"
+      },
+      "directions": {
+        "IDB_ML2DAC_M0_original_cvis": "MAXIMIZE",
+        "IDB_ML2DAC_M1_original_plus_established": "MAXIMIZE",
+        "IDB_ML2DAC_M2_original_plus_new46": "MAXIMIZE",
+        "IDB_ML2DAC_M3_extended_cvis": "MAXIMIZE"
+      },
+      "component": {
+        "comparisons": 48,
+        "max_raw_abs_error": 0.0,
+        "max_oriented_abs_error": 0.0,
+        "eligibility_mismatches": 0,
+        "direction_selection_mismatches": 0
+      }
+    }
+  },
+  "repeatability": {
+    "repetitions": 5,
+    "predicted_cvi_changes": 0,
+    "selected_index_changes": 0,
+    "selected_config_changes": 0,
+    "final_label_changes": 0,
+    "ranking_changes": 0,
+    "max_oriented_score_spread": 0.0
+  },
+  "guarded_run": {
+    "succeeded": true,
+    "error": "",
+    "calls": {
+      "extract": 0,
+      "fallback": 0,
+      "warmstart": 0,
+      "sampler": 0,
+      "cluster": 0,
+      "fit": 0,
+      "legacy": 0,
+      "modern": 0,
+      "predict": 4
+    },
+    "trace_unchanged": true
+  },
+  "guarded_matches_unguarded": true,
+  "external_50_used": false,
+  "labels_used": false,
+  "failures": [],
+  "verdict": "PASS"
+}

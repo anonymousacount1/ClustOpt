@@ -1,0 +1,100 @@
+level,key,n_datasets,new46_best_frac,new46_best_n
+global,ALL,16013,0.5427465184537563,8691
+family,Arcs / circles / rings,1584,0.5321969696969697,843
+family,Deinterleaving (PRI / TOA / AMP-like),1631,0.776824034334764,1267
+family,Linear bands / parallel stripes,1402,0.8074179743223966,1132
+family,Hybrid / mixed geometry,1908,0.5917190775681341,1129
+family,Standard clustering blobs,949,0.4731296101159115,449
+family,Hollow / topological components,1309,0.4637127578304049,607
+family,Radial / spiral / meander,1194,0.46817420435510887,559
+family,Ladder / grid / lattice,1251,0.3701039168665068,463
+family,Piecewise polylines / corners,1309,0.5362872421695951,702
+family,Texture / density fields,1188,0.47558922558922556,565
+family,Polygons / rectangles / frames,1100,0.5363636363636364,590
+family,Parabolic / curved chains,1188,0.32407407407407407,385
+subfamily,clean_arcs,188,0.44680851063829785,84
+subfamily,pri_parallel_trains,228,0.9122807017543859,208
+subfamily,clean_parallel_bands,206,0.8300970873786407,171
+subfamily,bands_plus_blobs,234,0.7735042735042735,181
+subfamily,isotropic_blobs,142,0.4225352112676056,60
+subfamily,single_hole_rings,178,0.5337078651685393,95
+subfamily,radial_spokes,170,0.47058823529411764,80
+subfamily,simple_ladder,179,0.36312849162011174,65
+subfamily,two_segment_polylines,177,0.536723163841808,95
+subfamily,micro_blobs_texture,168,0.39880952380952384,67
+subfamily,triangles_and_quadrilaterals,151,0.48344370860927155,73
+subfamily,clean_parabolas,168,0.2857142857142857,48
+subfamily,anisotropic_ellipses,144,0.5208333333333334,75
+subfamily,rectangles,151,0.5695364238410596,86
+subfamily,opposite_direction_parabolas,169,0.2603550295857988,44
+subfamily,oriented_texture,168,0.5238095238095238,88
+subfamily,clean_spirals,170,0.43529411764705883,74
+subfamily,rotated_ladder,170,0.4411764705882353,75
+subfamily,multi_segment_polylines,185,0.5891891891891892,109
+subfamily,multi_hole_shapes,185,0.4918918918918919,91
+subfamily,nested_arcs,186,0.44623655913978494,83
+subfamily,rotated_parallel_bands,187,0.7967914438502673,149
+subfamily,pri_with_jitter,227,0.9030837004405287,205
+subfamily,arcs_plus_blobs,235,0.5319148936170213,125
+subfamily,overlapping_blobs,141,0.425531914893617,60
+subfamily,rotated_rectangles,151,0.5496688741721855,83
+subfamily,variable_curvature_chains,169,0.31952662721893493,54
+subfamily,speckle_fields,170,0.5764705882352941,98
+subfamily,broken_spirals,168,0.5,84
+subfamily,missing_rungs_ladder,191,0.3717277486910995,71
+subfamily,broken_hollow_shapes,186,0.46236559139784944,86
+subfamily,sharp_corners,177,0.5932203389830508,105
+subfamily,partial_circles,186,0.45161290322580644,84
+subfamily,variable_spacing_bands,187,0.7647058823529411,143
+subfamily,imbalanced_cluster_sizes,145,0.45517241379310347,66
+subfamily,open_frames,162,0.5617283950617284,91
+subfamily,missing_pulses,225,0.9377777777777778,211
+subfamily,bands_plus_arcs,253,0.7035573122529645,178
+subfamily,meander_curves,169,0.5029585798816568,85
+subfamily,anisotropic_grain,169,0.42011834319526625,71
+subfamily,noisy_curved_ribbons,178,0.2247191011235955,40
+subfamily,regular_grid,177,0.3107344632768362,55
+subfamily,y_junctions,189,0.5026455026455027,95
+subfamily,bridged_components,190,0.4263157894736842,81
+subfamily,full_rings,185,0.5243243243243243,97
+subfamily,density_imbalanced_blobs,141,0.44680851063829785,63
+subfamily,fragmented_bands,207,0.8840579710144928,183
+subfamily,noisy_polygons,160,0.55,88
+subfamily,fractal_dust,169,0.48520710059171596,82
+subfamily,rotational_symmetry_patterns,171,0.38011695906432746,65
+subfamily,spurious_pulses_noise,225,0.8844444444444445,199
+subfamily,fragmented_curves,168,0.31547619047619047,53
+subfamily,outliers_and_noise_blobs,142,0.5704225352112676,81
+subfamily,distorted_grid,184,0.3423913043478261,63
+subfamily,polygons_plus_rings,235,0.4553191489361702,107
+subfamily,branching_trees,209,0.4880382775119617,102
+subfamily,disconnected_components,188,0.3617021276595745,68
+subfamily,annuli_variable_thickness,185,0.518918918918919,96
+subfamily,overlapping_polygons,160,0.5,80
+subfamily,thick_ribbons,185,0.7783783783783784,144
+subfamily,mixed_blob_ellipse,94,0.46808510638297873,44
+subfamily,radial_arc_mixture,168,0.49404761904761907,83
+subfamily,texture_plus_structure,169,0.47928994082840237,81
+subfamily,arc_parabola_mixture,170,0.3941176470588235,67
+subfamily,amp_arc_trends,237,0.5316455696202531,126
+subfamily,sparse_lattice,168,0.38095238095238093,64
+subfamily,polygon_blob_mixture,165,0.5393939393939394,89
+subfamily,topological_noise,187,0.48128342245989303,90
+subfamily,broken_rings,206,0.5145631067961165,106
+subfamily,broken_piecewise_lines,188,0.5585106382978723,105
+subfamily,curves_plus_ladders,245,0.43673469387755104,107
+subfamily,noisy_interleaved_bands,225,0.7688888888888888,173
+subfamily,noisy_meanders,178,0.4943820224719101,88
+subfamily,density_patchwork,175,0.44571428571428573,78
+subfamily,curves_with_density_drift,166,0.4759036144578313,79
+subfamily,grid_with_noise_and_gaps,182,0.38461538461538464,70
+subfamily,hollow_mixed_shapes,195,0.49230769230769234,96
+subfamily,noisy_corner_junctions,184,0.4945652173913043,91
+subfamily,pri_amp_coupled,241,0.5352697095435685,129
+subfamily,noisy_overlapping_arcs,260,0.4115384615384615,107
+subfamily,topology_plus_texture,252,0.5476190476190477,138
+subfamily,crossing_or_near_crossing_bands,205,0.824390243902439,169
+subfamily,hybrid_deinterleaving_scene,248,0.7620967741935484,189
+subfamily,nested_overlapping_arc_pairs,188,0.9893617021276596,186
+subfamily,full_mixed_scene,265,0.5245283018867924,139
+subfamily,fragmented_band_with_overlapping_clouds,189,0.8148148148148148,154

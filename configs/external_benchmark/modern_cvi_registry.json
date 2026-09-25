@@ -1,0 +1,158 @@
+{
+  "registry": "MODERN EXTERNAL CVI COMPARATORS",
+  "stage_frozen": "4B-1b",
+  "scope": "EXTERNAL METRIC-VALIDATION COMPARATORS ONLY",
+  "must_not_be_added_to": [
+    "ClustOpt learned inventory",
+    "AutoClust learned inventories",
+    "ML2DAC learned CVI classes"
+  ],
+  "primary_comparators": {
+    "count": 4,
+    "ids": [
+      "cdbw",
+      "cvnn",
+      "cvdd",
+      "dcsi"
+    ],
+    "closed": true,
+    "note": "this set is exactly the set audited in Stage 4A. Nothing was added or removed during validation."
+  },
+  "entries": {
+    "cdbw": {
+      "direction": "maximize",
+      "implementation": "paper-faithful correction layer over PyPI cdbw==0.2 (MIT), whose geometry is reused with attribution",
+      "definition_audit": "configs/cdbw_definition_audit.json",
+      "frozen_parameters": {
+        "metric": "euclidean",
+        "alg_noise": "comb",
+        "intra_dens_inf": false,
+        "s": 3,
+        "multipliers": false
+      },
+      "package_code_reused": [
+        "prep",
+        "rep",
+        "art_rep",
+        "closest_rep",
+        "compactness",
+        "comb_noise_lab",
+        "gen_dist_func"
+      ],
+      "aggregations_corrected": {
+        "C1_stdev": "average standard deviation over the considered clusters (the package returns the highest-indexed one)",
+        "C2_separation_distance": "for each cluster, the minimum distance over ALL other clusters (the package minimises over lower-indexed clusters only)",
+        "C3_inter_density": "mean over clusters of each maximum pairwise inter-density (the package uses a single global maximum divided by K)"
+      },
+      "label_order_policy": null,
+      "label_order_policy_note": "none is required: the corrected index is permutation-invariant by construction. Labels are made contiguous only so the reused helpers can index by label, and that is provably neutral.",
+      "permutation_invariance_evidence": "validation/cdbw_permutation_invariance_evidence.json (8 geometries x 23 relabellings, max residual ~1e-16)",
+      "why_the_correction_exists": "the reference package is not invariant to cluster naming; the spread over orderings reaches 0.93 absolute and can change which candidate partition scores best",
+      "invalid_when": {
+        "fewer_than_two_clusters": "K<2",
+        "cdbw_cluster_with_single_representative": "a cluster has one representative, so the shrunk-representative construction is undefined; the package silently returns 0 here",
+        "cdbw_no_mutual_representative_pair": "a cluster pair has no mutually closest representatives",
+        "cdbw_non_finite_density": "the density terms are not finite"
+      },
+      "validation": [
+        "validation/cdbw_paper_semantics_audit.json",
+        "validation/cdbw_reference_validation.json",
+        "validation/cdbw_permutation_invariance_evidence.json"
+      ]
+    },
+    "cvnn": {
+      "direction": "minimize",
+      "implementation": "independent Python implementation; CRAN fpc::cvnn used as oracle only (no GPL source incorporated)",
+      "frozen_parameters": {
+        "k": 5
+      },
+      "set_relative": true,
+      "set_relative_note": "the separation and compactness terms are normalised across the compared candidate set, so a CVNN value is meaningful only within a fixed candidate bank; fixed32 provides that bank. K=1 candidates are INCLUDED in the normalisers, as in fpc.",
+      "invalid_when": {
+        "fewer_than_two_clusters": "K<2 for the scored candidate",
+        "all_points_are_noise": "no real cluster remains"
+      },
+      "validation": "validation/cvnn_reference_validation.json"
+    },
+    "cvdd": {
+      "direction": "maximize",
+      "implementation": "port under MIT licence with attribution (hulianyu/CVDD)",
+      "frozen_parameters": {
+        "K": 7
+      },
+      "frozen_applicability_rule": "if X contains two or more EXACTLY identical rows, CVDD is INVALID with reason CVDD_DUPLICATE_POINT_MST_AMBIGUITY",
+      "why_the_rule_exists": "the density-involved distance rests on a minimax path distance from a minimum spanning tree; exact duplicates create zero-weight edges, the MST is then non-unique, and the published procedure defines no implementation-independent tie-break",
+      "rule_scope": "invalidates CVDD ONLY -- never the dataset, view, another CVI, a method run, or fixed32 candidate generation",
+      "invalid_when": {
+        "fewer_than_two_clusters": "K<2",
+        "CVDD_DUPLICATE_POINT_MST_AMBIGUITY": "exact duplicate rows present"
+      },
+      "validation": "validation/cvdd_reference_validation.json"
+    },
+    "dcsi": {
+      "direction": "maximize",
+      "implementation": "independent Python implementation from arXiv:2310.12806v4 (CC BY 4.0); the author repository declares no licence and is used as an oracle only",
+      "separation_mode": "PAPER",
+      "frozen_parameters": {
+        "MinPts": 5,
+        "distance": "euclidean",
+        "epsilon_rule": "per-class median distance to the (2*MinPts)-th within-class nearest neighbour",
+        "multi_class": "mean pairwise"
+      },
+      "edge_case_semantics": {
+        "fewer_than_two_clusters": "INVALID(fewer_than_two_clusters)",
+        "class_with_zero_core_points": "the affected PAIR is undefined",
+        "any_undefined_pair": "INVALID(dcsi_pair_undefined:<reason>) for the whole partition -- the paper aggregates over ALL K(K-1)/2 pairs, so a mean over the survivors is a different estimand and the paper is silent on substituting it",
+        "zero_connectedness_positive_separation": "VALID 1.0, the mathematical limit",
+        "zero_separation": "VALID 0.0",
+        "both_zero": "INVALID(dcsi_indeterminate_zero_over_zero)",
+        "duplicate_observations": "permitted -- DCSI uses only the MAXIMUM MST edge, which is identical across all minimum spanning trees even when the MST is non-unique",
+        "noise_label": "label -1 is excluded from the class set; it is not a class in the paper's sense",
+        "class_smaller_than_2_MinPts_plus_1": "the largest available within-class neighbour distance is used as the continuous extension, and this is documented rather than silently imputed"
+      },
+      "validation": "validation/dcsi_reference_validation.json"
+    }
+  },
+  "diagnostic_variants": {
+    "dcsi_author_compat": {
+      "separation_mode": "AUTHOR_COMPAT",
+      "definition": "Sep = 2 x the paper separation, reproducing the author's multiclass routine calc_DCSI_RW",
+      "role": "AUTHOR-IMPLEMENTATION-COMPATIBILITY diagnostic and predeclared sensitivity variant",
+      "is_a_primary_comparator": false,
+      "is_a_fifth_cvi": false,
+      "excluded_from": [
+        "the primary comparator set and its count",
+        "primary FDR test families",
+        "headline comparisons and claims",
+        "oracle coverage counts",
+        "ClustOpt / AutoClust / ML2DAC learned inventories"
+      ],
+      "permitted_use": "reported only in the predeclared DCSI sensitivity analysis and in implementation-provenance discussion",
+      "ranking_caveat": "dcsi and dcsi_author_compat are NOT interchangeable rankers. They agree for K=2 and can disagree for K>=3; see validation/dcsi_variant_ranking_evidence.json"
+    },
+    "cdbw_package_compat": {
+      "definition": "the raw PyPI cdbw 0.2 value under a canonical centroid-lexicographic cluster ordering",
+      "role": "PACKAGE-COMPATIBILITY diagnostic",
+      "is_a_primary_comparator": false,
+      "is_an_additional_cvi": false,
+      "why_an_ordering_is_imposed": "the raw package has no single value for a partition without one; the ordering exists solely to make this diagnostic reproducible",
+      "excluded_from": [
+        "the primary comparator set and its count",
+        "primary FDR test families",
+        "headline comparisons and claims",
+        "the best-modern comparator pool",
+        "oracle coverage counts",
+        "ClustOpt / AutoClust / ML2DAC learned inventories"
+      ],
+      "permitted_use": "implementation-provenance discussion and sensitivity reporting only"
+    }
+  },
+  "shared_rules": {
+    "invalidity_is_explicit": "every comparator returns either a finite value or an explicit INVALID with a reason; no comparator silently substitutes a default",
+    "invalidity_is_metric_local": "an INVALID comparator never invalidates the dataset, the view, another CVI, a method run, or candidate generation",
+    "no_edge_behaviour_flattening": "published indices legitimately differ on noise, singletons and degenerate partitions; their edge behaviour is not harmonised, because that would misrepresent them",
+    "parameters_frozen_before_outcomes": true,
+    "no_tuning_on_the_external_corpus": true
+  },
+  "diagnostic_variants_are_never_comparators": "dcsi_author_compat and cdbw_package_compat are diagnostics. Neither adds a primary comparator; the primary set stays at exactly four."
+}

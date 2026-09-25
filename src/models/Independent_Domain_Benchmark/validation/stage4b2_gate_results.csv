@@ -1,0 +1,45 @@
+gate,description,status,detail
+S01,Stage 4B-1 gates still pass,PASS,79/79
+S02,the modern-CVI comparator set is untouched,PASS,"['cdbw', 'cvnn', 'cvdd', 'dcsi']"
+S03,modern-CVI configs are byte-identical to their frozen hashes,PASS,changed: none
+S04,the ClustOpt source audit resolves every entrypoint,PASS,18 entrypoints
+S05,no frozen artifact is ambiguous,PASS,ambiguities: none
+S06,"registry pointer defects are recorded, not silently reinterpreted",PASS,"6 disagreements, amendment recorded"
+S07,the KNN artifact directory is the one the frozen config names,PASS,results_analysis/metric_utility_knn/phase_e1/models
+S08,"exactly six ClustOpt METHOD_IDs, matching the registry",PASS,6 arms
+S09,every arm resolves its artifacts and their hashes,PASS,17 artifact hashes
+S10,the frozen PP artifact hashes are the ones in use,PASS,aa977443caa97bda / 4a668514b93f237e
+S11,all ten final rerankers resolve; no OOF fold model is used,PASS,10 rerankers
+S12,"MLP, KNN, PP and reranker feature schemas are exact",PASS,mlp 250->60 | pp 373 | reranker 347
+S13,"all 20 policies resolve to a source, K, weighting and reranker",PASS,"20 policies, 0 unresolved"
+S14,both PP arms still replay their history exactly,PASS,0/3165 both arms
+S15,PP inference is pinned to n_jobs=1,PASS,n_jobs=1
+S16,MLP Top-5 RAW reproduces the historical metric selection,PASS,"12 records, 0 fail, views ['x_only', 'xy_2d', 'y_only']"
+S17,KNN Top-10 RAW reproduces the historical metric selection,PASS,"12 records, 0 fail, views ['x_only', 'xy_2d', 'y_only']"
+S18,the regression set spans several families and all three views,PASS,"MLP families 4 | views ['x_only', 'xy_2d', 'y_only']"
+S19,KNN utilities equal the persisted split-1 context,PASS,"6 records, max abs diff 1.1102230246251565e-16"
+S20,C0 and C3 execute one identical candidate trace,PASS,"8 candidates, mismatches {0}"
+S21,C1 and C4 execute one identical candidate trace,PASS,"8 candidates, mismatches {0}"
+S22,only the FINAL selection differs within a shared pair,PASS,selector-only
+S23,C2 and C5 are kept as separate traces,PASS,separate
+S24,the reranker scores a persisted historical trace at 347 dims,PASS,6 traces scored
+S25,the reranker only ever selects an eligible candidate,PASS,6 selections
+S26,the reranker consults no ARI,PASS,no ARI in the selection path
+S27,the adapter API carries no evaluation label,PASS,"run(X, seed, k_min, k_max, budget, dataset_id, view_id, dataset_dir)"
+S28,the adapter never attaches ground truth to the search,PASS,y_true=None
+S29,the search objective is documented as CVI-only,PASS,objective is CVI-only
+S30,all six arms emit a valid output schema,PASS,"6 arms, 0 fail"
+S31,no output carries a ground-truth field,PASS,forbidden fields: none
+S32,"every failure kind is an explicit enum, with no silent fallback",PASS,10 failure kinds
+S33,the seed function matches the frozen formula,PASS,base_seed=1234
+S34,shared arms share a seed identity; PP arms do not,PASS,3 pairs
+S35,the frozen search protocol is unchanged,PASS,"budget 50, K 2..5, not externally tuned"
+S36,the search space is pinned by hash as well as by source,PASS,8ddf86c79888ebe9 over 3 views
+S37,the external corpus manifest is unchanged,PASS,709712107424ad4e
+S38,no external scientific execution took place,PASS,smoke marked non-scientific
+S39,the internal regression set is not the external corpus,PASS,INTERNAL synthetic domain only
+S40,"nothing was trained, tuned or retrained",PASS,"6 arms, none retrained"
+S41,"no PP or reranker binary is tracked, and none is staged here",PASS,tracked pre-existing: 3 | forbidden: none | staged: none
+S41b,results_analysis is not staged,PASS,staged under results_analysis: none
+S42,the Stage 4B-2 report exists with its required sections,PASS,missing sections: none
+S43,the report does not present smoke results as scientific,PASS,flagged: none

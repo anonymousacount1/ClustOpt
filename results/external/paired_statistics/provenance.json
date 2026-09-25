@@ -1,0 +1,61 @@
+{
+  "n_datasets": 50,
+  "n_dependence_groups": 40,
+  "method_ari_source": "results_analysis/independent_domain_benchmark/stage4c_v2_323194df26/phase_c/method_ari.csv.gz",
+  "dataset_manifest": "models/Independent_Domain_Benchmark/configs/dataset_manifest.json",
+  "dependence_group_rule": "one sklearn generator (easy/medium/hard) = one group; FCPS and real-PCA datasets stand alone -- copied from runners/build_stage4_scientific_review.py",
+  "circle_moon_groups": [
+    "skgen_circles",
+    "skgen_moons"
+  ],
+  "circle_moon_datasets": [
+    "sk_circles_easy",
+    "sk_circles_hard",
+    "sk_circles_medium",
+    "sk_moons_easy",
+    "sk_moons_hard",
+    "sk_moons_medium"
+  ],
+  "n_remaining": 44,
+  "corpus_composition": {
+    "total": 50,
+    "fcps": 7,
+    "real_pca": 28,
+    "sklearn_shapes": 15,
+    "real_pca_applied_true": 26,
+    "real_pca_applied_false_native_2d": 2,
+    "fcps_pca_applied_true": 3,
+    "fcps_pca_applied_false": 4,
+    "sklearn_shapes_pca_applied_true": 0,
+    "sklearn_shapes_pca_applied_false": 15,
+    "all_sources_pca_applied_true": 29,
+    "manifest_sha256_16": "709712107424ad4e",
+    "accepted_by_source": {
+      "fcps": 7,
+      "sklearn_shapes": 15,
+      "real_pca": 28
+    }
+  },
+  "runtime_audit": {
+    "n_records": 2100,
+    "metafeature_runtime_all_zero": true,
+    "metafeature_runtime_max": 0.0,
+    "model_init_runtime_all_zero": true,
+    "method_runtime_equivalent_median_by_arm": {
+      "IDB_AutoClust_A0_original_cvis": 16.2273,
+      "IDB_AutoClust_A1_original_plus_established": 17.491997,
+      "IDB_AutoClust_A2_original_plus_new46": 43.9984645,
+      "IDB_AutoClust_A3_extended_cvis": 44.8652285,
+      "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR": 12.945636499999999,
+      "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR": 15.387516,
+      "IDB_ClustOpt_C2_PPv1_noR": 18.0537755,
+      "IDB_ClustOpt_C3_MLP_TOP5_RAW_R": 14.193083000000001,
+      "IDB_ClustOpt_C4_KNN_TOP10_RAW_R": 16.0834045,
+      "IDB_ClustOpt_C5_PPv2_R": 17.006394999999998,
+      "IDB_ML2DAC_M0_original_cvis": 6.7753405,
+      "IDB_ML2DAC_M1_original_plus_established": 6.4630695,
+      "IDB_ML2DAC_M2_original_plus_new46": 6.302786,
+      "IDB_ML2DAC_M3_extended_cvis": 6.185950500000001
+    }
+  }
+}

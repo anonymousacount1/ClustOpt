@@ -1,0 +1,1472 @@
+{
+  "suite": "stage4b2_clustopt_adapters",
+  "internal_regression_set": {
+    "source": "split1_trace_coverage.csv.gz + the persisted split-1 dataset folders",
+    "domain": "INTERNAL synthetic domain only",
+    "is_part_of_external_corpus": false,
+    "purpose": "adapter fidelity; no scientific claim is drawn from it"
+  },
+  "smoke_marking": "NON_SCIENTIFIC_SMOKE_TEST",
+  "n_sections": 11,
+  "n_fail": 0,
+  "sections": [
+    {
+      "section": "A_artifacts",
+      "rows": [
+        {
+          "method_id": "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR",
+          "n_artifacts": 17,
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+          "n_artifacts": 17,
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C2_PPv1_noR",
+          "n_artifacts": 17,
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C3_MLP_TOP5_RAW_R",
+          "n_artifacts": 17,
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C4_KNN_TOP10_RAW_R",
+          "n_artifacts": 17,
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C5_PPv2_R",
+          "n_artifacts": 17,
+          "status": "PASS"
+        }
+      ],
+      "n_artifact_hashes": 17,
+      "registry_ids_match_implementation": true,
+      "registry_ids": [
+        "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR",
+        "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+        "IDB_ClustOpt_C2_PPv1_noR",
+        "IDB_ClustOpt_C3_MLP_TOP5_RAW_R",
+        "IDB_ClustOpt_C4_KNN_TOP10_RAW_R",
+        "IDB_ClustOpt_C5_PPv2_R"
+      ],
+      "pp_v1_hash": "aa977443caa97bda",
+      "pp_v2_hash": "4a668514b93f237e",
+      "n_rerankers": 10,
+      "status": "PASS"
+    },
+    {
+      "section": "B_feature_schemas",
+      "checks": {
+        "mlp_n_features": 250,
+        "mlp_n_targets": 60,
+        "mlp_target_order_is_metric_names": true,
+        "knn_available": true,
+        "pp_n_features": 373,
+        "pp_width_note": "META + 120 utilities + the 3-way view one-hot",
+        "pp_meta_cols": 250,
+        "pp_util_cols": 120,
+        "pp_expected": 373,
+        "reranker_expected_dim": 347,
+        "reranker_expected_is_347": true,
+        "n_metric_names": 60
+      },
+      "status": "PASS"
+    },
+    {
+      "section": "C_policy",
+      "n_policies": 20,
+      "n_unresolved": 0,
+      "all_20_resolve": true,
+      "historical_replay": {
+        "V1": {
+          "rows_compared": 3165,
+          "policy_mismatches": 0,
+          "bit_exact": true
+        },
+        "V2": {
+          "rows_compared": 3165,
+          "policy_mismatches": 0,
+          "bit_exact": true
+        }
+      },
+      "n_jobs": 1,
+      "policy_table": [
+        {
+          "policy_index": 0,
+          "policy_id": "regressor_top1_raw",
+          "short_label": "MLP T1-R",
+          "source": "mlp",
+          "top_k": 1,
+          "weighting": "normalized_positive",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top1",
+          "reranker_id": "MLP_TOP1"
+        },
+        {
+          "policy_index": 1,
+          "policy_id": "regressor_top1_softmax_t05",
+          "short_label": "MLP T1-S",
+          "source": "mlp",
+          "top_k": 1,
+          "weighting": "softmax",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top1",
+          "reranker_id": "MLP_TOP1"
+        },
+        {
+          "policy_index": 2,
+          "policy_id": "regressor_top3_raw",
+          "short_label": "MLP T3-R",
+          "source": "mlp",
+          "top_k": 3,
+          "weighting": "normalized_positive",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top3",
+          "reranker_id": "MLP_TOP3"
+        },
+        {
+          "policy_index": 3,
+          "policy_id": "regressor_top3_softmax_t05",
+          "short_label": "MLP T3-S",
+          "source": "mlp",
+          "top_k": 3,
+          "weighting": "softmax",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top3",
+          "reranker_id": "MLP_TOP3"
+        },
+        {
+          "policy_index": 4,
+          "policy_id": "regressor_top5_raw",
+          "short_label": "MLP T5-R",
+          "source": "mlp",
+          "top_k": 5,
+          "weighting": "normalized_positive",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top5",
+          "reranker_id": "MLP_TOP5"
+        },
+        {
+          "policy_index": 5,
+          "policy_id": "regressor_top5_softmax_t05",
+          "short_label": "MLP T5-S",
+          "source": "mlp",
+          "top_k": 5,
+          "weighting": "softmax",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top5",
+          "reranker_id": "MLP_TOP5"
+        },
+        {
+          "policy_index": 6,
+          "policy_id": "regressor_top10_raw",
+          "short_label": "MLP T10-R",
+          "source": "mlp",
+          "top_k": 10,
+          "weighting": "normalized_positive",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top10",
+          "reranker_id": "MLP_TOP10"
+        },
+        {
+          "policy_index": 7,
+          "policy_id": "regressor_top10_softmax_t05",
+          "short_label": "MLP T10-S",
+          "source": "mlp",
+          "top_k": 10,
+          "weighting": "softmax",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top10",
+          "reranker_id": "MLP_TOP10"
+        },
+        {
+          "policy_index": 8,
+          "policy_id": "regressor_top_dynamic_predictK_raw",
+          "short_label": "MLP Dyn-R",
+          "source": "mlp",
+          "top_k": "dynamic",
+          "weighting": "normalized_positive",
+          "k_policy": "dynamic_predict",
+          "softmax_temperature": 0.5,
+          "k_mode": "dynamic",
+          "reranker_id": "MLP_DYNAMIC"
+        },
+        {
+          "policy_index": 9,
+          "policy_id": "regressor_top_dynamic_predictK_softmax_t05",
+          "short_label": "MLP Dyn-S",
+          "source": "mlp",
+          "top_k": "dynamic",
+          "weighting": "softmax",
+          "k_policy": "dynamic_predict",
+          "softmax_temperature": 0.5,
+          "k_mode": "dynamic",
+          "reranker_id": "MLP_DYNAMIC"
+        },
+        {
+          "policy_index": 10,
+          "policy_id": "knn_top1_raw",
+          "short_label": "KNN T1-R",
+          "source": "knn",
+          "top_k": 1,
+          "weighting": "normalized_positive",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top1",
+          "reranker_id": "KNN_TOP1"
+        },
+        {
+          "policy_index": 11,
+          "policy_id": "knn_top1_softmax_t05",
+          "short_label": "KNN T1-S",
+          "source": "knn",
+          "top_k": 1,
+          "weighting": "softmax",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top1",
+          "reranker_id": "KNN_TOP1"
+        },
+        {
+          "policy_index": 12,
+          "policy_id": "knn_top3_raw",
+          "short_label": "KNN T3-R",
+          "source": "knn",
+          "top_k": 3,
+          "weighting": "normalized_positive",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top3",
+          "reranker_id": "KNN_TOP3"
+        },
+        {
+          "policy_index": 13,
+          "policy_id": "knn_top3_softmax_t05",
+          "short_label": "KNN T3-S",
+          "source": "knn",
+          "top_k": 3,
+          "weighting": "softmax",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top3",
+          "reranker_id": "KNN_TOP3"
+        },
+        {
+          "policy_index": 14,
+          "policy_id": "knn_top5_raw",
+          "short_label": "KNN T5-R",
+          "source": "knn",
+          "top_k": 5,
+          "weighting": "normalized_positive",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top5",
+          "reranker_id": "KNN_TOP5"
+        },
+        {
+          "policy_index": 15,
+          "policy_id": "knn_top5_softmax_t05",
+          "short_label": "KNN T5-S",
+          "source": "knn",
+          "top_k": 5,
+          "weighting": "softmax",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top5",
+          "reranker_id": "KNN_TOP5"
+        },
+        {
+          "policy_index": 16,
+          "policy_id": "knn_top10_raw",
+          "short_label": "KNN T10-R",
+          "source": "knn",
+          "top_k": 10,
+          "weighting": "normalized_positive",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top10",
+          "reranker_id": "KNN_TOP10"
+        },
+        {
+          "policy_index": 17,
+          "policy_id": "knn_top10_softmax_t05",
+          "short_label": "KNN T10-S",
+          "source": "knn",
+          "top_k": 10,
+          "weighting": "softmax",
+          "k_policy": "fixed",
+          "softmax_temperature": 0.5,
+          "k_mode": "top10",
+          "reranker_id": "KNN_TOP10"
+        },
+        {
+          "policy_index": 18,
+          "policy_id": "knn_top_dynamic_predictK_raw",
+          "short_label": "KNN Dyn-R",
+          "source": "knn",
+          "top_k": "dynamic",
+          "weighting": "normalized_positive",
+          "k_policy": "dynamic_predict",
+          "softmax_temperature": 0.5,
+          "k_mode": "dynamic",
+          "reranker_id": "KNN_DYNAMIC"
+        },
+        {
+          "policy_index": 19,
+          "policy_id": "knn_top_dynamic_predictK_softmax_t05",
+          "short_label": "KNN Dyn-S",
+          "source": "knn",
+          "top_k": "dynamic",
+          "weighting": "softmax",
+          "k_policy": "dynamic_predict",
+          "softmax_temperature": 0.5,
+          "k_mode": "dynamic",
+          "reranker_id": "KNN_DYNAMIC"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "policy_id": "regressor_top5_raw",
+      "n_records": 12,
+      "n_fail": 0,
+      "views_covered": [
+        "x_only",
+        "xy_2d",
+        "y_only"
+      ],
+      "families_covered": [
+        "hybrid_mixed_geometry",
+        "ladder_grid_lattice",
+        "polygons_rectangles_frames",
+        "radial_spiral_meander"
+      ],
+      "rows": [
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "x_only",
+          "family": "hybrid_mixed_geometry",
+          "historical_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "noise_aware_silhouette",
+            "gridness_fft_acf"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "noise_aware_silhouette",
+            "gridness_fft_acf"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "1bf5d63156157190",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "xy_2d",
+          "family": "hybrid_mixed_geometry",
+          "historical_metrics": [
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "blobness_log_dog",
+            "silhouette",
+            "min_centroid_distance"
+          ],
+          "our_metrics": [
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "blobness_log_dog",
+            "silhouette",
+            "min_centroid_distance"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "9c7188cffe003164",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "y_only",
+          "family": "hybrid_mixed_geometry",
+          "historical_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "noise_aware_silhouette",
+            "neighborhood_purity",
+            "davies_bouldin"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "noise_aware_silhouette",
+            "neighborhood_purity",
+            "davies_bouldin"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "c98fb5afcf435df4",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "x_only",
+          "family": "radial_spiral_meander",
+          "historical_metrics": [
+            "gridness_fft_acf",
+            "min_centroid_distance",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "noise_aware_silhouette"
+          ],
+          "our_metrics": [
+            "gridness_fft_acf",
+            "min_centroid_distance",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "noise_aware_silhouette"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "e8d7fc03cfe17f9b",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "xy_2d",
+          "family": "radial_spiral_meander",
+          "historical_metrics": [
+            "noise_aware_silhouette",
+            "gridness_fft_acf",
+            "calinski_harabasz",
+            "min_centroid_distance",
+            "avg_pca_isotropy"
+          ],
+          "our_metrics": [
+            "noise_aware_silhouette",
+            "gridness_fft_acf",
+            "calinski_harabasz",
+            "min_centroid_distance",
+            "avg_pca_isotropy"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "344099d8380670ec",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "y_only",
+          "family": "radial_spiral_meander",
+          "historical_metrics": [
+            "silhouette",
+            "gridness_fft_acf",
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "neighborhood_purity_multi_k"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "gridness_fft_acf",
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "neighborhood_purity_multi_k"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "43356549de0f70b4",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000654_2295d965",
+          "view_id": "x_only",
+          "family": "polygons_rectangles_frames",
+          "historical_metrics": [
+            "silhouette",
+            "avg_pca_isotropy",
+            "neighborhood_purity_multi_k",
+            "gridness_fft_acf",
+            "min_centroid_distance"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "avg_pca_isotropy",
+            "neighborhood_purity_multi_k",
+            "gridness_fft_acf",
+            "min_centroid_distance"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "252536d758090896",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000654_2295d965",
+          "view_id": "xy_2d",
+          "family": "polygons_rectangles_frames",
+          "historical_metrics": [
+            "hollow_score",
+            "neighborhood_purity_multi_k",
+            "arc_circle_fit",
+            "neighborhood_purity",
+            "blobness_log_dog"
+          ],
+          "our_metrics": [
+            "hollow_score",
+            "neighborhood_purity_multi_k",
+            "arc_circle_fit",
+            "neighborhood_purity",
+            "blobness_log_dog"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "c592875144176bf1",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000654_2295d965",
+          "view_id": "y_only",
+          "family": "polygons_rectangles_frames",
+          "historical_metrics": [
+            "silhouette",
+            "avg_pca_isotropy",
+            "gridness_fft_acf",
+            "neighborhood_purity_multi_k",
+            "arc_circle_fit"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "avg_pca_isotropy",
+            "gridness_fft_acf",
+            "neighborhood_purity_multi_k",
+            "arc_circle_fit"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "2e5fb878674603e3",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000766_5bdb4a5a",
+          "view_id": "x_only",
+          "family": "ladder_grid_lattice",
+          "historical_metrics": [
+            "silhouette",
+            "cluster_size_balance_entropy",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "min_centroid_distance"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "cluster_size_balance_entropy",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "min_centroid_distance"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "0ef1e1b5b4683b0e",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000766_5bdb4a5a",
+          "view_id": "xy_2d",
+          "family": "ladder_grid_lattice",
+          "historical_metrics": [
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "gridness_fft_acf",
+            "blobness_log_dog",
+            "morphological_band_count"
+          ],
+          "our_metrics": [
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "gridness_fft_acf",
+            "blobness_log_dog",
+            "morphological_band_count"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "17475d4cea6cf955",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000766_5bdb4a5a",
+          "view_id": "y_only",
+          "family": "ladder_grid_lattice",
+          "historical_metrics": [
+            "silhouette",
+            "min_centroid_distance",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "cluster_size_balance_entropy"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "min_centroid_distance",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "cluster_size_balance_entropy"
+          ],
+          "metrics_identical": true,
+          "n_selected": 5,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "172ffddc562d37c3",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS",
+      "section": "D_mlp_top5_raw"
+    },
+    {
+      "policy_id": "knn_top10_raw",
+      "n_records": 12,
+      "n_fail": 0,
+      "views_covered": [
+        "x_only",
+        "xy_2d",
+        "y_only"
+      ],
+      "families_covered": [
+        "hybrid_mixed_geometry",
+        "ladder_grid_lattice",
+        "polygons_rectangles_frames",
+        "radial_spiral_meander"
+      ],
+      "rows": [
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "x_only",
+          "family": "hybrid_mixed_geometry",
+          "historical_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "curvature_consistency",
+            "gridness_fft_acf",
+            "ladderness",
+            "blobness_log_dog",
+            "davies_bouldin"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "curvature_consistency",
+            "gridness_fft_acf",
+            "ladderness",
+            "blobness_log_dog",
+            "davies_bouldin"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "0b37adcdc19135b6",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "xy_2d",
+          "family": "hybrid_mixed_geometry",
+          "historical_metrics": [
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "blobness_log_dog",
+            "noise_aware_silhouette",
+            "silhouette",
+            "min_centroid_distance",
+            "davies_bouldin",
+            "dbcv",
+            "min_intercluster_distance",
+            "direction_entropy"
+          ],
+          "our_metrics": [
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "blobness_log_dog",
+            "noise_aware_silhouette",
+            "silhouette",
+            "min_centroid_distance",
+            "davies_bouldin",
+            "dbcv",
+            "min_intercluster_distance",
+            "direction_entropy"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "a3c70e8ec7d1e60a",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "y_only",
+          "family": "hybrid_mixed_geometry",
+          "historical_metrics": [
+            "silhouette",
+            "noise_aware_silhouette",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "min_centroid_distance",
+            "davies_bouldin",
+            "dbcv",
+            "blobness_log_dog",
+            "min_intercluster_distance",
+            "direction_entropy"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "noise_aware_silhouette",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "min_centroid_distance",
+            "davies_bouldin",
+            "dbcv",
+            "blobness_log_dog",
+            "min_intercluster_distance",
+            "direction_entropy"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "d76fe04316df9590",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "x_only",
+          "family": "radial_spiral_meander",
+          "historical_metrics": [
+            "gridness_fft_acf",
+            "neighborhood_purity_multi_k",
+            "silhouette",
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "neighborhood_purity",
+            "direction_entropy",
+            "hough_line_strength",
+            "blobness_log_dog",
+            "morphological_band_count"
+          ],
+          "our_metrics": [
+            "gridness_fft_acf",
+            "neighborhood_purity_multi_k",
+            "silhouette",
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "neighborhood_purity",
+            "direction_entropy",
+            "hough_line_strength",
+            "blobness_log_dog",
+            "morphological_band_count"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "fc4d2985f4f2b3c3",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "xy_2d",
+          "family": "radial_spiral_meander",
+          "historical_metrics": [
+            "gridness_fft_acf",
+            "noise_aware_silhouette",
+            "calinski_harabasz",
+            "avg_pca_isotropy",
+            "silhouette",
+            "min_centroid_distance",
+            "cluster_size_balance_entropy",
+            "polygonality",
+            "alpha_shape_compactness",
+            "convexity_ratio"
+          ],
+          "our_metrics": [
+            "gridness_fft_acf",
+            "noise_aware_silhouette",
+            "calinski_harabasz",
+            "avg_pca_isotropy",
+            "silhouette",
+            "min_centroid_distance",
+            "cluster_size_balance_entropy",
+            "polygonality",
+            "alpha_shape_compactness",
+            "convexity_ratio"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "c2fd74a8da476210",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "y_only",
+          "family": "radial_spiral_meander",
+          "historical_metrics": [
+            "silhouette",
+            "gridness_fft_acf",
+            "neighborhood_purity_multi_k",
+            "min_centroid_distance",
+            "noise_aware_silhouette",
+            "neighborhood_purity",
+            "min_intercluster_distance",
+            "direction_entropy",
+            "morphological_band_count",
+            "axial_symmetry"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "gridness_fft_acf",
+            "neighborhood_purity_multi_k",
+            "min_centroid_distance",
+            "noise_aware_silhouette",
+            "neighborhood_purity",
+            "min_intercluster_distance",
+            "direction_entropy",
+            "morphological_band_count",
+            "axial_symmetry"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "32f0cdf614811bd9",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000654_2295d965",
+          "view_id": "x_only",
+          "family": "polygons_rectangles_frames",
+          "historical_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "gridness_fft_acf",
+            "min_centroid_distance",
+            "noise_aware_silhouette",
+            "neighborhood_purity",
+            "blobness_log_dog",
+            "cluster_size_balance_entropy",
+            "direction_entropy",
+            "min_intercluster_distance"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "gridness_fft_acf",
+            "min_centroid_distance",
+            "noise_aware_silhouette",
+            "neighborhood_purity",
+            "blobness_log_dog",
+            "cluster_size_balance_entropy",
+            "direction_entropy",
+            "min_intercluster_distance"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "30879dee2c549de1",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000654_2295d965",
+          "view_id": "xy_2d",
+          "family": "polygons_rectangles_frames",
+          "historical_metrics": [
+            "arc_circle_fit",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "hollow_score",
+            "blobness_log_dog",
+            "ladderness",
+            "bimodality_anti_thickness",
+            "dbcv",
+            "polygonality",
+            "min_centroid_distance"
+          ],
+          "our_metrics": [
+            "arc_circle_fit",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "hollow_score",
+            "blobness_log_dog",
+            "ladderness",
+            "bimodality_anti_thickness",
+            "dbcv",
+            "polygonality",
+            "min_centroid_distance"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "da4835c34ee687f4",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000654_2295d965",
+          "view_id": "y_only",
+          "family": "polygons_rectangles_frames",
+          "historical_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "gridness_fft_acf",
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "avg_pca_isotropy",
+            "axial_symmetry",
+            "min_intercluster_distance",
+            "blobness_log_dog"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "gridness_fft_acf",
+            "noise_aware_silhouette",
+            "min_centroid_distance",
+            "avg_pca_isotropy",
+            "axial_symmetry",
+            "min_intercluster_distance",
+            "blobness_log_dog"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "c27881d3b9950349",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000766_5bdb4a5a",
+          "view_id": "x_only",
+          "family": "ladder_grid_lattice",
+          "historical_metrics": [
+            "noise_aware_silhouette",
+            "silhouette",
+            "cluster_size_balance_entropy",
+            "connectivity_components",
+            "gridness_fft_acf",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "min_intercluster_distance",
+            "min_centroid_distance",
+            "parallel_bands"
+          ],
+          "our_metrics": [
+            "noise_aware_silhouette",
+            "silhouette",
+            "cluster_size_balance_entropy",
+            "connectivity_components",
+            "gridness_fft_acf",
+            "neighborhood_purity_multi_k",
+            "neighborhood_purity",
+            "min_intercluster_distance",
+            "min_centroid_distance",
+            "parallel_bands"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "1675556b7a53593b",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000766_5bdb4a5a",
+          "view_id": "xy_2d",
+          "family": "ladder_grid_lattice",
+          "historical_metrics": [
+            "gridness_fft_acf",
+            "noise_aware_silhouette",
+            "calinski_harabasz",
+            "min_centroid_distance",
+            "morphological_band_count",
+            "silhouette",
+            "axial_symmetry",
+            "cluster_size_balance_entropy",
+            "hollow_score",
+            "avg_pca_isotropy"
+          ],
+          "our_metrics": [
+            "gridness_fft_acf",
+            "noise_aware_silhouette",
+            "calinski_harabasz",
+            "min_centroid_distance",
+            "morphological_band_count",
+            "silhouette",
+            "axial_symmetry",
+            "cluster_size_balance_entropy",
+            "hollow_score",
+            "avg_pca_isotropy"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "aab14fef8d129718",
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000766_5bdb4a5a",
+          "view_id": "y_only",
+          "family": "ladder_grid_lattice",
+          "historical_metrics": [
+            "silhouette",
+            "connectivity_components",
+            "neighborhood_purity_multi_k",
+            "gridness_fft_acf",
+            "min_centroid_distance",
+            "neighborhood_purity",
+            "axial_symmetry",
+            "cluster_size_balance_entropy",
+            "ribbon_thickness",
+            "noise_aware_silhouette"
+          ],
+          "our_metrics": [
+            "silhouette",
+            "connectivity_components",
+            "neighborhood_purity_multi_k",
+            "gridness_fft_acf",
+            "min_centroid_distance",
+            "neighborhood_purity",
+            "axial_symmetry",
+            "cluster_size_balance_entropy",
+            "ribbon_thickness",
+            "noise_aware_silhouette"
+          ],
+          "metrics_identical": true,
+          "n_selected": 10,
+          "weights_sum_to_one": true,
+          "utility_vector_hash": "5f49c8cea966d5d0",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS",
+      "section": "E_knn_top10_raw"
+    },
+    {
+      "section": "E2_knn_utility_context",
+      "oracle": "split1_knn_utility_context.csv.gz",
+      "n_records": 6,
+      "n_fail": 0,
+      "rows": [
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "x_only",
+          "n_compared": 60,
+          "max_abs_diff": 1.1102230246251565e-16,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "xy_2d",
+          "n_compared": 60,
+          "max_abs_diff": 1.1102230246251565e-16,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "y_only",
+          "n_compared": 60,
+          "max_abs_diff": 1.1102230246251565e-16,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "x_only",
+          "n_compared": 60,
+          "max_abs_diff": 5.551115123125783e-17,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "xy_2d",
+          "n_compared": 60,
+          "max_abs_diff": 8.326672684688674e-17,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "y_only",
+          "n_compared": 60,
+          "max_abs_diff": 5.551115123125783e-17,
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "section": "F_trace_sharing",
+      "mlp_pair": {
+        "pair": [
+          "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR",
+          "IDB_ClustOpt_C3_MLP_TOP5_RAW_R"
+        ],
+        "budget": 8,
+        "same_seed_identity": true,
+        "n_candidates": 8,
+        "same_fingerprint": true,
+        "per_column_mismatches": {
+          "candidate_index": 0,
+          "algorithm": 0,
+          "config_str": 0,
+          "aggregate_score": 0,
+          "valid": 0,
+          "partition_hash": 0
+        },
+        "candidate_trace_identical": true,
+        "selection_differs_only": true,
+        "arms": {
+          "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR": {
+            "seed": 376229098,
+            "trace_id": "clustopt_mlp_top5|SMOKE_TRACE_NON_SCIENTIFIC_SMOKE_TEST|xy_2d",
+            "fingerprint": "03cce66958784d63",
+            "n_candidates": 8,
+            "selected_index": 3,
+            "selector": "J",
+            "labels_hash": "ca6d2ca7e81ea554"
+          },
+          "IDB_ClustOpt_C3_MLP_TOP5_RAW_R": {
+            "seed": 376229098,
+            "trace_id": "clustopt_mlp_top5|SMOKE_TRACE_NON_SCIENTIFIC_SMOKE_TEST|xy_2d",
+            "fingerprint": "03cce66958784d63",
+            "n_candidates": 8,
+            "selected_index": 4,
+            "selector": "RERANKER",
+            "labels_hash": "4eca77d823923a99"
+          }
+        },
+        "status": "PASS"
+      },
+      "knn_pair": {
+        "pair": [
+          "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+          "IDB_ClustOpt_C4_KNN_TOP10_RAW_R"
+        ],
+        "budget": 8,
+        "same_seed_identity": true,
+        "n_candidates": 8,
+        "same_fingerprint": true,
+        "per_column_mismatches": {
+          "candidate_index": 0,
+          "algorithm": 0,
+          "config_str": 0,
+          "aggregate_score": 0,
+          "valid": 0,
+          "partition_hash": 0
+        },
+        "candidate_trace_identical": true,
+        "selection_differs_only": true,
+        "arms": {
+          "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR": {
+            "seed": 1311768043,
+            "trace_id": "clustopt_knn_top10|SMOKE_TRACE_NON_SCIENTIFIC_SMOKE_TEST|xy_2d",
+            "fingerprint": "48b1cc89c27d287e",
+            "n_candidates": 8,
+            "selected_index": 3,
+            "selector": "J",
+            "labels_hash": "4eca77d823923a99"
+          },
+          "IDB_ClustOpt_C4_KNN_TOP10_RAW_R": {
+            "seed": 1311768043,
+            "trace_id": "clustopt_knn_top10|SMOKE_TRACE_NON_SCIENTIFIC_SMOKE_TEST|xy_2d",
+            "fingerprint": "48b1cc89c27d287e",
+            "n_candidates": 8,
+            "selected_index": 3,
+            "selector": "RERANKER",
+            "labels_hash": "4eca77d823923a99"
+          }
+        },
+        "status": "PASS"
+      },
+      "c2_c5_kept_separate": true,
+      "note": "NON_SCIENTIFIC_SMOKE_TEST",
+      "status": "PASS"
+    },
+    {
+      "section": "G_reranker",
+      "n_records": 6,
+      "n_scored": 6,
+      "n_fail": 0,
+      "final_artifacts_only": true,
+      "oof_models_used": false,
+      "rows": [
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "x_only",
+          "n_candidates": 50,
+          "feature_dim": 347,
+          "dim_is_347": true,
+          "n_eligible": 47,
+          "selected_index": 7,
+          "selected_is_eligible": true,
+          "ari_consulted": false,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "xy_2d",
+          "n_candidates": 50,
+          "feature_dim": 347,
+          "dim_is_347": true,
+          "n_eligible": 48,
+          "selected_index": 30,
+          "selected_is_eligible": true,
+          "ari_consulted": false,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000255_b996994a",
+          "view_id": "y_only",
+          "n_candidates": 50,
+          "feature_dim": 347,
+          "dim_is_347": true,
+          "n_eligible": 44,
+          "selected_index": 5,
+          "selected_is_eligible": true,
+          "ari_consulted": false,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "x_only",
+          "n_candidates": 50,
+          "feature_dim": 347,
+          "dim_is_347": true,
+          "n_eligible": 39,
+          "selected_index": 17,
+          "selected_is_eligible": true,
+          "ari_consulted": false,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "xy_2d",
+          "n_candidates": 50,
+          "feature_dim": 347,
+          "dim_is_347": true,
+          "n_eligible": 39,
+          "selected_index": 9,
+          "selected_is_eligible": true,
+          "ari_consulted": false,
+          "status": "PASS"
+        },
+        {
+          "dataset_id": "c2e_000364_2cfe9e46",
+          "view_id": "y_only",
+          "n_candidates": 50,
+          "feature_dim": 347,
+          "dim_is_347": true,
+          "n_eligible": 41,
+          "selected_index": 29,
+          "selected_is_eligible": true,
+          "ari_consulted": false,
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "section": "H_label_safety",
+      "run_signature": [
+        "X",
+        "seed",
+        "k_min",
+        "k_max",
+        "budget",
+        "dataset_id",
+        "view_id",
+        "dataset_dir"
+      ],
+      "banned_parameters_present": [],
+      "adapter_calls_set_ground_truth": false,
+      "adapter_passes_y_true_none": true,
+      "objective_is_cvi_only": true,
+      "status": "PASS"
+    },
+    {
+      "section": "I_output_schema",
+      "n_arms": 6,
+      "n_fail": 0,
+      "required_fields": [
+        "method_id",
+        "dataset_id",
+        "view",
+        "search_trace_id",
+        "search_seed",
+        "final_selection_mechanism",
+        "selected_metric_ids",
+        "selected_metric_weights",
+        "artifact_hashes",
+        "final_labels_hash"
+      ],
+      "forbidden_fields": [
+        "ari",
+        "ARI",
+        "nmi",
+        "NMI",
+        "ami",
+        "AMI",
+        "true_k",
+        "y_true",
+        "labels_true",
+        "evaluation_labels"
+      ],
+      "note": "NON_SCIENTIFIC_SMOKE_TEST",
+      "rows": [
+        {
+          "method_id": "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR",
+          "n_evaluations": 8,
+          "selected_algorithm": "agglomerative",
+          "selector": "J",
+          "policy_id": null,
+          "n_selected_metrics": 5,
+          "labels_hash": "ca6d2ca7e81ea554",
+          "missing_fields": [],
+          "forbidden_fields": [],
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+          "n_evaluations": 8,
+          "selected_algorithm": "hdbscan_constrained-3",
+          "selector": "J",
+          "policy_id": null,
+          "n_selected_metrics": 10,
+          "labels_hash": "4eca77d823923a99",
+          "missing_fields": [],
+          "forbidden_fields": [],
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C2_PPv1_noR",
+          "n_evaluations": 8,
+          "selected_algorithm": "dbscan",
+          "selector": "J",
+          "policy_id": "regressor_top10_softmax_t05",
+          "n_selected_metrics": 10,
+          "labels_hash": "4eca77d823923a99",
+          "missing_fields": [],
+          "forbidden_fields": [],
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C3_MLP_TOP5_RAW_R",
+          "n_evaluations": 8,
+          "selected_algorithm": "gmm",
+          "selector": "RERANKER",
+          "policy_id": null,
+          "n_selected_metrics": 5,
+          "labels_hash": "4eca77d823923a99",
+          "missing_fields": [],
+          "forbidden_fields": [],
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C4_KNN_TOP10_RAW_R",
+          "n_evaluations": 8,
+          "selected_algorithm": "hdbscan_constrained-4",
+          "selector": "RERANKER",
+          "policy_id": null,
+          "n_selected_metrics": 10,
+          "labels_hash": "4eca77d823923a99",
+          "missing_fields": [],
+          "forbidden_fields": [],
+          "status": "PASS"
+        },
+        {
+          "method_id": "IDB_ClustOpt_C5_PPv2_R",
+          "n_evaluations": 8,
+          "selected_algorithm": "agglomerative",
+          "selector": "RERANKER",
+          "policy_id": "regressor_top10_raw",
+          "n_selected_metrics": 10,
+          "labels_hash": "4eca77d823923a99",
+          "missing_fields": [],
+          "forbidden_fields": [],
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "section": "J_seeds",
+      "base_seed": 1234,
+      "formula": "sha256(base|dataset|view|seed_identity)[:8] % 2**31",
+      "checks": [
+        {
+          "dataset_id": "D1",
+          "view_id": "x_only",
+          "method_id": "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR",
+          "expected": 1225927893,
+          "actual": 1225927893,
+          "match": true
+        },
+        {
+          "dataset_id": "D2",
+          "view_id": "xy_2d",
+          "method_id": "IDB_ClustOpt_C5_PPv2_R",
+          "expected": 1435183971,
+          "actual": 1435183971,
+          "match": true
+        }
+      ],
+      "pairs": [
+        {
+          "a": "IDB_ClustOpt_C0_MLP_TOP5_RAW_noR",
+          "b": "IDB_ClustOpt_C3_MLP_TOP5_RAW_R",
+          "same_seed": true,
+          "expected_same": true,
+          "status": "PASS"
+        },
+        {
+          "a": "IDB_ClustOpt_C1_KNN_TOP10_RAW_noR",
+          "b": "IDB_ClustOpt_C4_KNN_TOP10_RAW_R",
+          "same_seed": true,
+          "expected_same": true,
+          "status": "PASS"
+        },
+        {
+          "a": "IDB_ClustOpt_C2_PPv1_noR",
+          "b": "IDB_ClustOpt_C5_PPv2_R",
+          "same_seed": false,
+          "expected_same": false,
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

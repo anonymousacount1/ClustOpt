@@ -1,0 +1,17 @@
+{
+  "stage": "3B",
+  "experiment": "existing-domain metric attribution atlas",
+  "created_at": "2026-09-09T09:47:55",
+  "source_commit": "cd9c7f44d579a1af78ac8232a04ece01daeb3c0b",
+  "parts": [
+    "atlas+utility+structure+clustopt",
+    "ml2dac+autoclust",
+    "summaries+publication+external plan"
+  ],
+  "n_live_metrics": 61,
+  "n_dead_metrics": 2,
+  "n_designed_new46": 46,
+  "n_live_new46": 44,
+  "recommendation": "ONE INTEGRATED PAPER",
+  "next_step": "independent-domain metric validation (NOT started)"
+}

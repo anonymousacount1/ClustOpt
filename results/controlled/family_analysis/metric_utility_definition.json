@@ -1,0 +1,57 @@
+{
+  "name": "ClustOpt metric utility_score",
+  "authoritative_source": "models\\ClustOpt\\external_evaluation\\compute_metric_utility.py",
+  "function": "compute_metric_utilities",
+  "invented_for_stage3b": false,
+  "definition": "Per (dataset, view), over that record's evaluated clustering configurations, each metric's vector of values is compared with the vector of ARI values. utility_score is a fixed weighted sum of eight bounded ranking-agreement terms.",
+  "formula": "0.18*spearman_pos + 0.12*kendall_pos + 0.20*pairwise_accuracy + 0.20*ndcg_all + 0.05*topk_overlap + 0.05*bottomk_overlap + 0.10*topk_ndcg + 0.10*bottomk_ndcg",
+  "weights": {
+    "w_spearman": 0.18,
+    "w_kendall": 0.12,
+    "w_pairwise": 0.2,
+    "w_ndcg_all": 0.2,
+    "w_top_overlap": 0.05,
+    "w_bottom_overlap": 0.05,
+    "w_top_ndcg": 0.1,
+    "w_bottom_ndcg": 0.1
+  },
+  "candidate_unit": "one evaluated clustering configuration of that record",
+  "orientation": "POSITIVE-ONLY. spearman_pos = max(0, spearman_signed) and likewise for Kendall: a metric that anti-correlates with ARI is misleading the search and is NOT rewarded. abs() is deliberately not used. Metric columns are expected normalised to higher = better before this step.",
+  "range": "[0, 1], clipped; NaN/inf mapped to 0",
+  "higher_is_better": true,
+  "nan_handling": "only finite (metric, ARI) pairs are used; a metric is skipped for a record unless at least max(10, 0.2*n_valid_configs) finite pairs remain; records with fewer than 10 valid configurations produce no utilities at all",
+  "min_valid_candidates": "max(10, 0.2 * n_valid_configs)",
+  "view_semantics": "computed independently per view (x_only, y_only, xy_2d); a metric may be useful on one projection and useless on another",
+  "distinct_notions_kept_separate": {
+    "true_utility": "the canonical quantity defined above (true_<metric>)",
+    "predicted_utility": "cross-fitted out-of-fold prediction of the same quantity by the deployed utility model (pred_<metric>) -- NEVER mixed with true",
+    "raw_correlation": "spearman_signed / kendall_signed are retained by the source for diagnosis and are NOT the utility",
+    "downstream_ari": "Stage-1/Stage-3A arm ARIs are a different quantity entirely and are never compared numerically with a utility"
+  },
+  "population_used_in_stage3b": {
+    "table": "results_analysis/clustering_repository/stage2/oof_utility_splits2_16/combined/oof_mlp_utilities.csv.gz",
+    "splits": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "datasets": 16013,
+    "records": 48039,
+    "split_1_present": false,
+    "n_metrics_with_utility": 60
+  },
+  "inferential_unit": "dataset (views averaged); view level reported descriptively",
+  "created_at": "2026-09-09T09:23:33"
+}

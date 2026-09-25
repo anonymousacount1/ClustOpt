@@ -1,0 +1,40 @@
+{
+  "alignment_check": {
+    "n_datasets": 1055,
+    "max_abs_residual_reranker_original_vs_canonical_unreranked": 1.1102230246251565e-16,
+    "n_disagreeing_gt_1e-9": 0,
+    "verdict": "IDENTICAL"
+  },
+  "xy_alignment_check": {
+    "max_abs_residual_reranker_xy_original_vs_canonical_xy": 1.1102230246251565e-16,
+    "verdict": "IDENTICAL"
+  },
+  "family_summary": {
+    "n_families": 12,
+    "n_positive": 4,
+    "n_negative": 8,
+    "n_within_pm_0.01": 6,
+    "max_abs_delta": 0.03103156479454583,
+    "max_abs_delta_family": "standard_clustering_blobs",
+    "deinterleaving_delta": 0.013057338426592346,
+    "bands_stripes_delta": 0.020328942092216085,
+    "arcs_rings_delta": 0.030104693128825466,
+    "blobs_delta": -0.03103156479454583
+  },
+  "sources": {
+    "canonical_best_view_frame": "results_analysis/clustering_repository/paper_analysis_v2/13_raw_and_reproducibility/canonical_best_view_frame.parquet",
+    "canonical_run_frame": "results_analysis/clustering_repository/paper_analysis_v2/13_raw_and_reproducibility/canonical_run_frame.parquet",
+    "per_dataset_policy_results": "results_analysis/clustering_repository/candidate_reranker_split1_online_final/per_dataset_policy_results.csv.gz",
+    "per_run_reranker_results": "results_analysis/clustering_repository/candidate_reranker_split1_online_final/per_run_reranker_results.csv.gz",
+    "method_label_map": "results_analysis/clustering_repository/paper_analysis_v2/00_protocol_and_definitions/method_label_map.csv"
+  },
+  "blockers": [
+    {
+      "item": "B4 controlled AMI for any RERANKED arm",
+      "status": "BLOCKED",
+      "reason": "The reranker returns a different candidate from the search slate. The per-trial trace analyzed_data/<...>/experiments/split_01/knn_top10_raw/<view>/clustopt_results.csv stores per-trial ARI and metric values but NOT per-trial labels and NOT per-trial AMI; external_metrics.json holds AMI only for the run's own J-maximiser. The Stage-2B reranker packages store slate selections and ARI only. Computing AMI for the reranked candidate therefore requires re-instantiating and re-running that clustering configuration, which this task forbids.",
+      "what_is_available": "AMI for the UNRERANKED fixed policy and for AutoClust/ML2DAC, at Best-View and xy_2d.",
+      "unblocks_with": "E-series re-execution that persists per-trial labels or AMI"
+    }
+  ]
+}

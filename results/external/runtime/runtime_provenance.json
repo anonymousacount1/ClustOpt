@@ -1,0 +1,57 @@
+{
+  "run_id": "stage4c_v2_323194df26",
+  "runtime_contract_version": [
+    "idb_stage4_runtime_v1"
+  ],
+  "frozen_definition": "method_runtime_equivalent = full physical_trace_runtime + arm_scoring_runtime",
+  "identity_holds_on_all_records": true,
+  "identity_max_residual_s": 1.0000000116860974e-06,
+  "identity_tolerance_note": "records are persisted rounded to 6 decimals; the residual is bounded by that rounding",
+  "shared_cost_not_divided": true,
+  "records": 2100,
+  "field_availability": {
+    "method_runtime_equivalent": {
+      "non_null": 2100,
+      "non_zero": 2100,
+      "sum": 49997.048352
+    },
+    "physical_trace_runtime": {
+      "non_null": 2100,
+      "non_zero": 2100,
+      "sum": 25907.055917
+    },
+    "arm_scoring_runtime": {
+      "non_null": 2100,
+      "non_zero": 2100,
+      "sum": 24089.992429
+    },
+    "actual_wall_clock_runtime": {
+      "non_null": 2100,
+      "non_zero": 2100,
+      "sum": 117595.814133
+    },
+    "preparation_runtime": {
+      "non_null": 2100,
+      "non_zero": 2100,
+      "sum": 12.488702
+    },
+    "model_init_runtime": {
+      "non_null": 2100,
+      "non_zero": 0,
+      "sum": 0.0
+    },
+    "metafeature_runtime": {
+      "non_null": 2100,
+      "non_zero": 0,
+      "sum": 0.0
+    },
+    "persistence_runtime": {
+      "non_null": 2100,
+      "non_zero": 0,
+      "sum": 0.0
+    }
+  },
+  "total_sum_method_runtime_equivalent_s": 49997.048352,
+  "total_deduplicated_wall_clock_s": 38083.655417,
+  "total_saved_by_physical_reuse_s": 11913.392935
+}

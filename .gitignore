@@ -1,0 +1,11 @@
+# local outputs of the release scripts
+analysis/output/
+.smoke/
+smoke_test_report.json
+# local workspace: reconstructed external data, links to released models, run outputs
+src/results_analysis/
+src/external/
+# Python
+__pycache__/
+*.pyc
+.venv/

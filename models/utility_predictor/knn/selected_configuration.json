@@ -1,0 +1,36 @@
+{
+  "selection": {
+    "raw_best_configuration": {
+      "config_id": "n015__standard__euclidean__inverse_distance",
+      "n_neighbors": 15,
+      "scaler": "standard",
+      "distance": "euclidean",
+      "neighbor_weighting": "inverse_distance",
+      "mean_composite_score": 0.8536789209054835,
+      "std_composite_score": 0.03471175371424277,
+      "standard_error": 0.00896253627019438,
+      "worst_fold_score": 0.8147591991341991,
+      "best_fold_score": 0.9347647794913421
+    },
+    "one_se_selected_configuration": {
+      "config_id": "n015__standard__euclidean__inverse_distance",
+      "n_neighbors": 15,
+      "scaler": "standard",
+      "distance": "euclidean",
+      "neighbor_weighting": "inverse_distance",
+      "mean_composite_score": 0.8536789209054835,
+      "std_composite_score": 0.03471175371424277,
+      "standard_error": 0.00896253627019438,
+      "worst_fold_score": 0.8147591991341991,
+      "best_fold_score": 0.9347647794913421
+    },
+    "one_se_threshold": 0.8447163846352891,
+    "n_candidates_within_one_se": 2,
+    "candidate_config_ids": [
+      "n015__standard__euclidean__inverse_distance",
+      "n020__standard__euclidean__inverse_distance"
+    ],
+    "selection_rule": "within one SE of best mean composite; then smallest n_neighbors, then lower query time, then simplicity (standard/euclidean/uniform)"
+  },
+  "dynamic_topk_heuristic": "dynamic_topk_relsoft_a092_k5_ceil"
+}

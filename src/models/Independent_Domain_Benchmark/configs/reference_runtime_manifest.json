@@ -1,0 +1,67 @@
+{
+  "manifest": "EXTERNAL REFERENCE RUNTIMES USED AS VALIDATION ORACLES",
+  "stage_frozen": "4B-1",
+  "purpose": "Three of the four modern comparators have their maintained reference implementation in a language this project does not run. Each was executed inside a pinned container so the comparison is reproducible and so no external toolchain was installed into a Git-controlled path.",
+  "why_containers": "the native R and Octave installers require UAC elevation that a non-interactive session cannot grant (winget reported 'You cancelled the installation' / 0x800704c7). Containers removed the dependency on an elevated shell entirely.",
+  "installed_outside_git": true,
+
+  "runtimes": [
+    {
+      "id": "idb-r-oracle:1",
+      "image_digest": "sha256:b9f758c864e0f97fd5cfcae79df7eda99d4d239c5bf2bde2c70b5e791e683ec7",
+      "base": "r-base:4.4.2",
+      "r_version": "R version 4.4.2 (2024-10-31)",
+      "packages": {"fpc": "2.2.15"},
+      "used_for": ["CVNN"],
+      "size_bytes": 877753813
+    },
+    {
+      "id": "idb-dcsi-oracle:2",
+      "image_digest": "sha256:ce386ced78b9a9f55068a49d70fc96dd97519936087cfb4a3a0bcc85a916086c",
+      "base": "idb-r-oracle:1",
+      "r_version": "R version 4.4.2 (2024-10-31)",
+      "packages": {"fpc": "2.2.15", "igraph": "2.3.3", "cccd": "1.6",
+                   "matrixcalc": "1.0.6", "pegas": "1.4", "proxy": "0.4.29",
+                   "dplyr": "1.2.1", "stringr": "1.6.0"},
+      "added_for": "the dependency set of the author's DCSI code path",
+      "used_for": ["DCSI"],
+      "size_bytes": 1048824685
+    },
+    {
+      "id": "gnuoctave/octave:9.2.0",
+      "image_digest": "sha256:4d7ae3029bcf30a58cf35e0872d375e38adb02c5b7b77ffa45d9463db8ec0834",
+      "role": "MATLAB-compatible runtime for the author's CVDD .m sources",
+      "used_for": ["CVDD"],
+      "size_bytes": 4292845354
+    }
+  ],
+
+  "author_sources": {
+    "policy": "fetched to a temporary scratch checkout OUTSIDE the repository, mounted read-only, never committed",
+    "entries": [
+      {"metric": "CVDD", "repository": "github.com/hulianyu/CVDD",
+       "commit": "32cabe0cf876ccd4e04e44dda84b0ad96be88bbc", "licence": "MIT",
+       "relationship": "port under licence with attribution"},
+      {"metric": "DCSI", "repository": "github.com/JanaGauss/dcsi",
+       "commit": "15ba6f7bd89151e64b009dc4329f678f416ddc6c", "licence": null,
+       "relationship": "oracle only -- no source copied, vendored or translated; no author data committed"}
+    ]
+  },
+
+  "project_runtime": {
+    "environment": ".venv_clustopt",
+    "python": "3.12.2",
+    "numpy": "2.1.3", "scipy": "1.14.1", "pandas": "2.2.3",
+    "scikit-learn": "1.6.0",
+    "cdbw": "0.2"
+  },
+
+  "reproduction": {
+    "cdbw": "python models/Independent_Domain_Benchmark/runners/validate_cdbw_reference.py",
+    "cvnn": "python models/Independent_Domain_Benchmark/runners/validate_cvnn_against_fpc.py",
+    "cvdd": "python models/Independent_Domain_Benchmark/runners/validate_cvdd_against_author.py",
+    "dcsi": "python models/Independent_Domain_Benchmark/runners/validate_dcsi_against_author.py",
+    "dcsi_published_values": "python models/Independent_Domain_Benchmark/runners/reproduce_dcsi_published_values.py",
+    "prerequisite": "the author checkouts must be present in the scratch directory; the containers must be built or pulled. Both live outside this repository by design."
+  }
+}

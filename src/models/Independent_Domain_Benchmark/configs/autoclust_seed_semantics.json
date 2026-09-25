@@ -1,0 +1,144 @@
+{
+  "audit": "AUTOCLUST PER-ALGORITHM SEED SEMANTICS",
+  "scope": "the seven algorithms the frozen selector can emit",
+  "seed_propagation": "benchmark seed -> derive_seed(dataset_id,view_id,method_id) -> sample_optimizer_configs_constrained(seed) -> np.random.default_rng(seed) -> sample_from_space draws every parameter, INCLUDING random_state, from the frozen ClustOpt grid",
+  "critical_distinction": "the ML2DAC-native sampler sample_optimizer_configs draws random_state = rng.integers(0,10000); the CONSTRAINED sampler used by the *_same_search_space runs does NOT -- it takes random_state from the grid, where it is pinned. The external adapter must use the constrained path.",
+  "per_algorithm": {
+    "agglomerative": {
+      "x_only": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "y_only": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "xy_2d": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      }
+    },
+    "birch": {
+      "x_only": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "y_only": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "xy_2d": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      }
+    },
+    "dbscan": {
+      "x_only": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "y_only": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "xy_2d": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      }
+    },
+    "gmm": {
+      "x_only": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "y_only": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "xy_2d": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      }
+    },
+    "hdbscan": {
+      "x_only": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "y_only": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "xy_2d": {
+        "has_random_state": false,
+        "random_state_low": null,
+        "random_state_high": null
+      }
+    },
+    "kmeans": {
+      "x_only": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "y_only": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "xy_2d": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      }
+    },
+    "minibatch_kmeans": {
+      "x_only": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "y_only": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      },
+      "xy_2d": {
+        "has_random_state": true,
+        "random_state_low": null,
+        "random_state_high": null
+      }
+    }
+  },
+  "summary": {
+    "carry_grid_random_state": [
+      "gmm",
+      "kmeans",
+      "minibatch_kmeans"
+    ],
+    "deterministic_by_construction": [
+      "agglomerative",
+      "birch",
+      "dbscan",
+      "hdbscan"
+    ]
+  },
+  "deterministic_rationale": "algorithms without a random_state parameter (agglomerative, birch, dbscan, hdbscan) are deterministic functions of X and their hyperparameters in the frozen sklearn/hdbscan implementations: linkage, CF-tree construction and density-reachability involve no sampling or random initialisation",
+  "caveat": "determinism is asserted from the absence of stochastic initialisation in these implementations, not from an executed repeat-run experiment; the physical partition-trace proof that would demonstrate it empirically is NOT yet done",
+  "no_new_seed_policy": true,
+  "grid_values_unchanged": true
+}

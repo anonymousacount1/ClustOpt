@@ -1,0 +1,77 @@
+{
+  "family_id": "linear_bands_parallel_stripes",
+  "family_name": "Linear bands / parallel stripes",
+  "family_seed": 20314001,
+  "n_features": 2,
+  "feature_names": ["x", "y"],
+  "bounds": {"low": [0.0, 0.0], "high": [1.0, 1.0]},
+  "n_points_policy": {
+    "min_total_points": 2000,
+    "max_total_points": 5000,
+    "difficulty_ranges": {
+      "easy":      [2200, 3000],
+      "medium":    [2600, 3600],
+      "hard":      [3000, 4200],
+      "very_hard": [3500, 5000]
+    }
+  },
+  "difficulty_policy": {"easy": 0.20, "medium": 0.35, "hard": 0.30, "very_hard": 0.15},
+  "default_rendering": {
+    "enabled": true,
+    "image_size": [256, 256],
+    "render_mode": "gaussian_splat",
+    "sigma_px": 1.2,
+    "threshold": 0.15,
+    "normalize": "minmax",
+    "per_cluster_masks": true,
+    "distance_transform": true,
+    "skeletonize": true,
+    "local_thickness": true,
+    "gradient_orientation": true,
+    "cluster_id_raster": true
+  },
+  "subfamilies": [
+    {
+      "subfamily_id": "clean_parallel_bands",
+      "cluster_budget": {"2": 44, "3": 66, "4": 66, "5": 44},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-0.4, 0.4], "spacing": [0.10, 0.20], "thickness": [0.004, 0.012], "n_bands": [2, 4]}
+    },
+    {
+      "subfamily_id": "rotated_parallel_bands",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-1.2, 1.2], "spacing": [0.08, 0.20], "thickness": [0.004, 0.014], "n_bands": [2, 4]}
+    },
+    {
+      "subfamily_id": "variable_spacing_bands",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-0.5, 0.5], "spacing": [0.05, 0.25], "thickness": [0.005, 0.016], "n_bands": [3, 5]}
+    },
+    {
+      "subfamily_id": "fragmented_bands",
+      "cluster_budget": {"2": 44, "3": 66, "4": 66, "5": 44},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-0.6, 0.6], "spacing": [0.08, 0.18], "thickness": [0.005, 0.015], "n_bands": [2, 4]}
+    },
+    {
+      "subfamily_id": "thick_ribbons",
+      "cluster_budget": {"2": 40, "3": 60, "4": 60, "5": 40},
+      "component_strategy": {"component_type": "band", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-1.0, 1.0], "thickness": [0.020, 0.045]}
+    },
+    {
+      "subfamily_id": "noisy_interleaved_bands",
+      "cluster_budget": {"2": 48, "3": 72, "4": 72, "5": 48},
+      "component_strategy": {"component_type": "parallel_bands", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-1.0, 1.0], "spacing": [0.06, 0.16], "thickness": [0.008, 0.020], "n_bands": [3, 6]}
+    },
+    {
+      "subfamily_id": "crossing_or_near_crossing_bands",
+      "cluster_budget": {"2": 44, "3": 66, "4": 66, "5": 44},
+      "component_strategy": {"component_type": "band", "components_per_cluster": 1},
+      "parameter_ranges": {"slope": [-1.5, 1.5], "thickness": [0.005, 0.020]}
+    }
+  ]
+}
